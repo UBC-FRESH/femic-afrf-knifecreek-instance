@@ -1,0 +1,91 @@
+# Legal boundary provenance: Knife Creek SUP S15382
+
+## Source
+
+The legal boundary is the provincial **Forest Tenure Special Use Permit
+Polygon** for Special Use Permit **S15382**.
+
+| Field | Value |
+| --- | --- |
+| Dataset | Forest Tenure Special Use Permit Polygon |
+| Publisher | Government of British Columbia, Forest Tenures Branch |
+| Catalogue page | https://catalogue.data.gov.bc.ca/dataset/forest-tenure-special-use-permit-polygon |
+| WFS type | `pub:WHSE_FOREST_TENURE.FTEN_SPEC_USE_PERMIT_POLY_SVW` |
+| Licence | Open Government Licence - British Columbia |
+| Access | Public |
+| Forest file ID | `S15382` |
+| Special use code | `30` |
+| Special use description | Research or Educational |
+| Life-cycle status | ACTIVE |
+| Permit block area | 3,533.1341 ha |
+| Administrative district | Cariboo-Chilcotin Natural Resource District |
+
+The polygon is stored at:
+
+- `data/boundaries/knife_creek_sup_S15382.gpkg`
+- layer `knife_creek_sup_S15382`
+- CRS `EPSG:3005`
+- SHA-256 `e79189b10d5da590d0adae658fc59607ca63e242362c9ee8963c76bea731f480`
+
+## How it was found
+
+1. `femic data bcdc-resolve` on the FADM and research-forest keywords. The
+   FADM TSA layer confirms the block is in **Williams Lake TSA (TSA 29)**, but
+   it is a timber-supply-area boundary, not the research-forest boundary.
+2. `femic data bcdc-resolve "Forest Tenure Special Use Permit Polygon"`. The
+   exact match exposes a public, WFS-queryable layer with type
+   `pub:WHSE_FOREST_TENURE.FTEN_SPEC_USE_PERMIT_POLY_SVW`.
+3. `femic data bcdc-fetch` over a 30 km box around the Knife Creek reference
+   point (EPSG:3005 `1265275,775982,1295275,805982`). Nine SUP polygons came
+   back; `S15382` is the one that contains the Knife Creek point.
+4. The selected feature was written to the instance boundary file above.
+
+Reproduce with repository-relative paths:
+
+```bash
+femic data bcdc-fetch \
+  "Forest Tenure Special Use Permit Polygon" \
+  --bbox 1265275,775982,1295275,805982 \
+  --output-format gpkg \
+  --download-root data/downloads/bcdc \
+  --manifest-path metadata/boundary_fetch_manifest.json
+
+# Then select FOREST_FILE_ID == "S15382" and write:
+#   data/boundaries/knife_creek_sup_S15382.gpkg
+```
+
+## Why this is the right layer
+
+The AFRF Management and Working Plan names Special Use Permit **15382** as the
+instrument that designates the research-forest land area. The provincial SUP
+polygon carries that file ID, the code for "Research or Educational", an active
+life-cycle status, and the Cariboo-Chilcotin district. The Knife Creek point
+falls inside it; the Gavin Lake point does not. The polygon is the legal
+Knife Creek block, not the whole AFRF.
+
+## Area reconciliation
+
+- SUP permit block area: **3,533.1341 ha**
+- Published Knife Creek area in the AFRF Management and Working Plan #2:
+  **3,487 ha**
+- Difference: **46.13 ha** (about 1.3 percent)
+
+The difference is recorded, not resolved. The SUP polygon is the legal gross
+boundary; the published figure may be a net or rounded area, or a different
+version of the permit. The model should use the SUP polygon as the legal
+boundary and the VRI/forest-cover join for the net forested area.
+
+## Publication boundary
+
+The layer is public under the Open Government Licence - British Columbia. The
+single selected polygon is committed with this provenance. The raw nine-feature
+fetch is not committed; it can be regenerated with the command above.
+
+## What this does not provide
+
+- The VRI, BEC, site index, or disturbance layers.
+- The mule-deer winter-range designation.
+- A tree list or CFI plots.
+- A net-area calculation.
+
+Those remain Phase 1 tasks.

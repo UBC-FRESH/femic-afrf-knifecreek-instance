@@ -4,24 +4,35 @@ Data Acquisition
 Status
 ------
 
-No source data is committed yet. This page is the acquisition and acceptance
-checklist for Phase 1.
+The legal boundary is acquired. The inventory, BEC, site index, disturbance,
+mule-deer, and stem-list inputs are still required.
 
-Boundary
---------
+Boundary acquired
+-----------------
 
-The legal boundary is the first requirement. It must:
+The legal Knife Creek block is Provincial Special Use Permit **S15382**:
 
-- identify the Knife Creek block, not the whole AFRF;
-- carry a CRS that can be transformed to EPSG:3005;
-- join cleanly to the VRI and BEC layers; and
-- be stored with a checksum and a provenance note.
+- dataset: Forest Tenure Special Use Permit Polygon;
+- WFS type: ``pub:WHSE_FOREST_TENURE.FTEN_SPEC_USE_PERMIT_POLY_SVW``;
+- special use: code 30, "Research or Educational", ACTIVE;
+- area: 3,533.1341 ha;
+- CRS: EPSG:3005;
+- licence: Open Government Licence - British Columbia;
+- path: ``data/boundaries/knife_creek_sup_S15382.gpkg``; and
+- SHA-256:
+  ``e79189b10d5da590d0adae658fc59607ca63e242362c9ee8963c76bea731f480``.
 
-The public location reference is UTM zone 10U, NAD83, approximately
-575165 E, 5767955 N. The block is described in the AFRF Management and Working
-Plan as 3,487 ha, located near the San Jose Valley, south-east of Williams Lake.
-The gross area is not the net operable area; do not use the published figure as
-a model area without the boundary.
+The FADM_TSA layer confirms the block is in **Williams Lake TSA (TSA 29)**.
+The TSA boundary is not the research-forest boundary; the SUP polygon is.
+
+The AFRF Management and Working Plan #2 describes the block as 3,487 ha. The
+SUP permit block area is 3,533.1341 ha, a 46.13 ha difference. The SUP polygon
+is the legal gross boundary; the published figure may be a net or rounded area.
+Use the SUP polygon for the legal boundary and the VRI join for the net forested
+area.
+
+The full provenance, the fetch command, and the area reconciliation are in
+``metadata/boundary_source.yaml``.
 
 Inventory
 ---------

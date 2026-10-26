@@ -13,6 +13,13 @@ instance:
   region: Cariboo
   crs: EPSG:3005
   published_gross_area_ha: 3487
+  legal_boundary_path: data/boundaries/knife_creek_sup_S15382.gpkg
+  legal_boundary_layer: knife_creek_sup_S15382
+  legal_boundary_id: S15382
+  legal_boundary_area_ha: 3533.1341
+  tsa: "29"
+  tsa_name: Williams Lake TSA
+  forest_district: Cariboo-Chilcotin Natural Resource District
   dominant_bec:
     - IDFdk3
     - IDFxm
@@ -20,5 +27,5 @@ instance:
   silviculture: uneven-aged continuous cover selection
   growth_engine: fresh-fvsbc
   estate_engine: ws4
-  status: phase-0
+  status: phase-1
   merged_instance_reserved: femic-afrf-instance

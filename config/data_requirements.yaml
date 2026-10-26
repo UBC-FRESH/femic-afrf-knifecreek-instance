@@ -6,9 +6,15 @@
 sources:
   - id: boundary
     description: Knife Creek legal boundary and block identifier.
-    status: required
-    public_release: TBD
-    notes: Must join to VRI and BEC; transform to EPSG:3005.
+    status: acquired
+    public_release: "yes (Open Government Licence - British Columbia)"
+    path: data/boundaries/knife_creek_sup_S15382.gpkg
+    sha256: e79189b10d5da590d0adae658fc59607ca63e242362c9ee8963c76bea731f480
+    notes: >-
+      Provincial Special Use Permit S15382, "Research or Educational",
+      ACTIVE, 3,533.1341 ha. WFS type
+      pub:WHSE_FOREST_TENURE.FTEN_SPEC_USE_PERMIT_POLY_SVW. See
+      metadata/boundary_source.yaml. FADM_TSA confirms Williams Lake TSA 29.
   - id: vri
     description: VRI or AFRF forest-cover inventory.
     status: required

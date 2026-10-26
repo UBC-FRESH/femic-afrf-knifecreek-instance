@@ -15,6 +15,9 @@ Location and area
   575165 E, 5767955 N.
 - The gross area is not the net operable area. Use the legal boundary and the
   inventory join for the model area.
+- The legal boundary is Special Use Permit **S15382**, "Research or
+  Educational", ACTIVE, 3,533.1341 ha, in the public Forest Tenure Special Use
+  Permit Polygon layer. It is in Williams Lake TSA (TSA 29).
 
 Biogeoclimatic setting
 ----------------------

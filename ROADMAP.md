@@ -13,7 +13,7 @@ after its parent issue exists and the maintainer approves it.
 | Phase | Parent issue | Branch | Status |
 | --- | --- | --- | --- |
 | P0 Bootstrap and growth-engine contract | #1 | `feature/p0-bootstrap` | complete |
-| P1 Data acquisition and stem lists | #7 | `feature/p1-data-acquisition` | planned |
+| P1 Data acquisition and stem lists | #7 | `feature/p1-data-acquisition` | active |
 | P2 FVS-BC state-transition library | TBD | `feature/p2-state-library` | planned |
 | P3 ws4 instance assembly | TBD | `feature/p3-ws4-assembly` | planned |
 | P4 Verification and scenarios | TBD | `feature/p4-verification` | planned |
@@ -68,16 +68,30 @@ Acceptance criteria:
 
 Parent issue: #7
 Branch: `feature/p1-data-acquisition`
-Status: planned
+Status: active
 
 Goal: acquire and verify the Knife Creek boundary, inventory, BEC, site index,
 disturbance, and mule-deer constraints, then construct reviewed stem lists.
 
-- [ ] P1.1 Acquire and checksum the legal boundary and block identifier (#8)
+- [x] P1.1 Acquire and checksum the legal boundary and block identifier (#8)
 - [ ] P1.2 Acquire VRI, BEC, site-series, and disturbance source data (#9)
 - [ ] P1.3 Acquire or reconstruct tree-level tallies and CFI plot data (#10)
 - [ ] P1.4 Build AU strata and nemora stem populations (#11)
 - [ ] P1.5 Record the data-quality and coverage audit (#12)
+
+Findings:
+
+- FADM_TSA confirms the block is in Williams Lake TSA (TSA 29). The TSA
+  boundary is not the research-forest boundary.
+- The legal boundary is Special Use Permit S15382, "Research or Educational",
+  ACTIVE, in the public Forest Tenure Special Use Permit Polygon layer. It is
+  3,533.1341 ha and is stored at
+  `data/boundaries/knife_creek_sup_S15382.gpkg`.
+- The SUP polygon is OGL-BC and public. The raw fetch is reproducible with
+  `femic data bcdc-fetch`; see `metadata/boundary_source.yaml`.
+- The published Management and Working Plan area is 3,487 ha, a 46.13 ha
+  difference from the SUP permit block area. The SUP polygon is the legal gross
+  boundary; the net area waits on the VRI join.
 
 Acceptance criteria:
 
@@ -187,9 +201,11 @@ Acceptance criteria:
 
 ## Detailed Next Steps Notes
 
-1. Phase 0 is active under parent issue #1. The bootstrap commit is on `main`;
-   the task issues #2-#6 record the completed surfaces.
-2. Phase 1 is planned under parent issue #7. Activate it only after Phase 0 is
-   approved and the Phase 0 pull request or bootstrap closeout is accepted.
-3. Keep the legacy archive out of Git; commit the sanitized package and its
-   hash.
+1. Phase 0 is complete under parent issue #1.
+2. Phase 1 is active under parent issue #7. P1.1 is complete: the legal boundary
+   is Special Use Permit S15382, 3,533.1341 ha, in
+   `data/boundaries/knife_creek_sup_S15382.gpkg`.
+3. The next bounded move is P1.2: acquire VRI, BEC, site-series, site-index,
+   and disturbance source data.
+4. Do not start the FVS-BC pilot until the inventory and a stem-list basis are
+   acquired and reviewed.

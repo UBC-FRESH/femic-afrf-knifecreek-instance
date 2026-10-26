@@ -2,15 +2,16 @@
 
 Provenance ledgers for the Knife Creek instance.
 
-Planned files:
+Files:
 
-| File | Purpose |
-| --- | --- |
-| `data_sources.csv` | Source, owner, licence, status, checksum |
-| `stem_lists.csv` | AU, source, method, generator, hash, synthetic flag |
-| `fvsbc_runs.csv` | State, regime, run id, keyword hash, commit, status |
-| `state_library.csv` | State, regime, residual state, cycle, curve ids |
-| `ws4_builds.csv` | Dataset, source hashes, targets, command, status |
+| File | Purpose | Status |
+| --- | --- | --- |
+| `data_sources.csv` | Source, owner, licence, status, checksum | boundary row recorded |
+| `boundary_source.yaml` | Boundary provenance, fetch command, area reconciliation | recorded |
+| `stem_lists.csv` | AU, source, method, generator, hash, synthetic flag | planned |
+| `fvsbc_runs.csv` | State, regime, run id, keyword hash, commit, status | planned |
+| `state_library.csv` | State, regime, residual state, cycle, curve ids | planned |
+| `ws4_builds.csv` | Dataset, source hashes, targets, command, status | planned |
 
 Rules:
 
