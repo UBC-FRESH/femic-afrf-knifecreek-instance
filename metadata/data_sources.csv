@@ -1,0 +1,2 @@
+id,path,source,dataset_url,license,access,status,sha256,notes
+knife_creek_sup_S15382,data/boundaries/knife_creek_sup_S15382.gpkg,Forest Tenure Special Use Permit Polygon (SUP S15382),https://catalogue.data.gov.bc.ca/dataset/forest-tenure-special-use-permit-polygon,Open Government Licence - British Columbia,public,acquired,e79189b10d5da590d0adae658fc59607ca63e242362c9ee8963c76bea731f480,"Legal gross boundary; 3,533.1341 ha; WFS pub:WHSE_FOREST_TENURE.FTEN_SPEC_USE_PERMIT_POLY_SVW; see metadata/boundary_source.yaml"
