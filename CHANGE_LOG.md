@@ -39,3 +39,20 @@ status and the GitHub issue comments.
   (3,533.1341 ha) and the published Management and Working Plan area (3,487 ha).
   The SUP polygon is the legal gross boundary; the net area waits on the VRI
   join.
+- Completed P1.2: acquired the public VRI 2025 R1, BEC map, historical fire
+  perimeters, consolidated-cutblock harvest history, and Cariboo mule-deer
+  stand structure habitat classes. All layers are clipped to the SUP S15382
+  boundary in EPSG:3005.
+- Recorded coverage: VRI 183 polygons over 3,533.13 ha (160 FDI-leading, 174
+  with site index); BEC IDFdk3 3,051.80 ha and IDFxm 481.33 ha; fire 2013
+  6.04 ha, 1938 62.11 ha, 1937 0.66 ha; harvest 60 openings over 2,478.73 ha,
+  1956-2023; mule-deer High 1,327.68 ha, Moderate 1,135.66 ha, Low 1,020.53 ha,
+  Nil 6.15 ha.
+- Added `metadata/layer_sources.yaml`, `metadata/data_sources.csv`, and the
+  clipped layers under `data/inventory/` and `data/habitat/`. The raw
+  consolidated-cutblock polygons are not committed because the catalogue records
+  them as Access Only; a derived harvest-history table is committed instead.
+- Opened P1.2a (#15) for the two authoritative layers that are not available
+  from the public BCDC pass: the AFRF site-series / ecosystem map and the
+  approved UWR boundary plus legal mule-deer objectives. They are not inferred
+  from BEC or the public habitat classes.

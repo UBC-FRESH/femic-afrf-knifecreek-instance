@@ -74,7 +74,8 @@ Goal: acquire and verify the Knife Creek boundary, inventory, BEC, site index,
 disturbance, and mule-deer constraints, then construct reviewed stem lists.
 
 - [x] P1.1 Acquire and checksum the legal boundary and block identifier (#8)
-- [ ] P1.2 Acquire VRI, BEC, site-series, and disturbance source data (#9)
+- [x] P1.2 Acquire VRI, BEC, site-series, and disturbance source data (#9)
+- [ ] P1.2a Acquire the AFRF site-series map and legal UWR order (#15)
 - [ ] P1.3 Acquire or reconstruct tree-level tallies and CFI plot data (#10)
 - [ ] P1.4 Build AU strata and nemora stem populations (#11)
 - [ ] P1.5 Record the data-quality and coverage audit (#12)
@@ -92,6 +93,16 @@ Findings:
 - The published Management and Working Plan area is 3,487 ha, a 46.13 ha
   difference from the SUP permit block area. The SUP polygon is the legal gross
   boundary; the net area waits on the VRI join.
+- VRI 2025 R1: 183 clipped polygons over 3,533.13 ha; 160 FDI-leading; 174 of
+  183 carry a site index.
+- BEC map: IDFdk3 3,051.80 ha and IDFxm 481.33 ha. No SBPSmk polygon inside
+  the SUP in the current map.
+- Fire: 2013 6.04 ha, 1938 62.11 ha, 1937 0.66 ha.
+- Harvest history: 60 openings over 2,478.73 ha, 1956-2023.
+- Mule-deer habitat classes: High 1,327.68 ha, Moderate 1,135.66 ha, Low
+  1,020.53 ha, Nil 6.15 ha. The legal UWR order is still blocked.
+- The AFRF site-series map and the legal UWR order are P1.2a. They are not
+  inferred from BEC or the public habitat classes.
 
 Acceptance criteria:
 
@@ -202,10 +213,10 @@ Acceptance criteria:
 ## Detailed Next Steps Notes
 
 1. Phase 0 is complete under parent issue #1.
-2. Phase 1 is active under parent issue #7. P1.1 is complete: the legal boundary
-   is Special Use Permit S15382, 3,533.1341 ha, in
-   `data/boundaries/knife_creek_sup_S15382.gpkg`.
-3. The next bounded move is P1.2: acquire VRI, BEC, site-series, site-index,
-   and disturbance source data.
-4. Do not start the FVS-BC pilot until the inventory and a stem-list basis are
-   acquired and reviewed.
+2. Phase 1 is active under parent issue #7. P1.1 (boundary) and P1.2 (public
+   layers) are complete.
+3. P1.2a (#15) is blocked on the AFRF site-series map and the legal UWR order.
+4. P1.3 (#10) and P1.4 (#11) are the next model-preparation tasks: establish a
+   stem-list basis and build AU strata / nemora populations.
+5. Do not start the FVS-BC pilot until the site-series/UWR gaps are resolved or
+   explicitly accepted, and the stem-list basis is reviewed.

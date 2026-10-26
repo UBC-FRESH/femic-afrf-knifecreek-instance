@@ -34,6 +34,63 @@ area.
 The full provenance, the fetch command, and the area reconciliation are in
 ``metadata/boundary_source.yaml``.
 
+Layers acquired
+---------------
+
+The public-data pass acquired the following layers. All are clipped to the SUP
+boundary and stored in EPSG:3005. Source, WFS type, fetch or derivation, and
+checksum for each are in ``metadata/layer_sources.yaml``.
+
+VRI 2025 R1
+~~~~~~~~~~~
+
+- 183 polygons over 3,533.13 ha.
+- Leading species: FDI 160, AT 7, SX 5, PLI 2.
+- ``SITE_INDEX`` present on 174 of 183 polygons.
+- Path: ``data/inventory/vri_2025_kc.gpkg``.
+
+BEC map
+~~~~~~~
+
+- ``IDFdk3``: 3,051.80 ha.
+- ``IDFxm``: 481.33 ha.
+- The current map has no SBPSmk polygon inside the SUP.
+- Path: ``data/inventory/bec_kc.gpkg``.
+
+Historical fire perimeters
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- 2013 (`C20393`): 6.04 ha.
+- 1938 (`59`): 62.11 ha.
+- 1937 (`29`): 0.66 ha.
+- Path: ``data/inventory/fire_perimeters_kc.gpkg``.
+
+Harvest history
+~~~~~~~~~~~~~~~
+
+- 60 openings over 2,478.73 ha, harvest years 1956–2023.
+- Derived table: ``data/inventory/harvest_history_kc.csv``.
+- The raw cutblock polygons are not committed because the catalogue records
+  the layer as ``Access Only``. The WFS fetch is reproducible.
+
+Mule-deer stand structure habitat classes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- High: 1,327.68 ha.
+- Moderate: 1,135.66 ha.
+- Low: 1,020.53 ha.
+- Nil: 6.15 ha.
+- Path: ``data/habitat/mule_deer_stand_structure_kc.gpkg``.
+- This is the public habitat-class layer, not the legal UWR order.
+
+Site index
+~~~~~~~~~~
+
+- VRI ``SITE_INDEX`` on 174 of 183 polygons.
+- ``EST_SITE_INDEX`` and ``EST_SITE_INDEX_SPECIES_CD`` are also carried.
+- The Provincial Site Productivity Layer is an alternative, but the catalogue
+  marks it ``Access Only`` and its direct resource is a raster folder.
+
 Inventory
 ---------
 

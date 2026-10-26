@@ -6,8 +6,10 @@ Files:
 
 | File | Purpose | Status |
 | --- | --- | --- |
-| `data_sources.csv` | Source, owner, licence, status, checksum | boundary row recorded |
+| `data_sources.csv` | Source, owner, licence, status, checksum | boundary and layer rows recorded |
 | `boundary_source.yaml` | Boundary provenance, fetch command, area reconciliation | recorded |
+| `layer_sources.yaml` | Layer provenance, WFS types, coverage, and remaining gaps | recorded |
+| `layer_checksums.json` | SHA-256 for every committed layer | recorded |
 | `stem_lists.csv` | AU, source, method, generator, hash, synthetic flag | planned |
 | `fvsbc_runs.csv` | State, regime, run id, keyword hash, commit, status | planned |
 | `state_library.csv` | State, regime, residual state, cycle, curve ids | planned |
