@@ -136,3 +136,26 @@ resource is a raster folder, not an AOI vector layer. It is not fetched here.
 - Approved UWR boundary and legal mule-deer objectives.
 - Tree-level tallies or CFI plots for a stem list.
 - A net THLB / operability classification.
+
+## Klinka et al. 2004 site-unit report
+
+| Field | Value |
+| --- | --- |
+| Citation | Klinka et al. 2004, Site Units of the UBC Alex Fraser Research Forest |
+| Path | `reference/AFRF-site-unit-report-2004.pdf` |
+| Pages | 108 |
+| Licence | UBC AFRF publication; not OGL |
+| SHA-256 | `94459a7bc6002932bc9a2150deb6d81879fbd48d776b86e4666e75addc7f5705` |
+| Catalog | `config/site_series.yaml` |
+| Context note | `notes/reference/site-series-klinka-2004.md` |
+
+The report provides the IDFxm and IDFdk3 site-series classification, the nine
+site groups, keys, edatopic grids, descriptions, and vegetation/soil/foliar
+appendices. The **georeferenced site-series polygons are not in the PDF**: the
+report's site maps are folded map pockets and a CD-ROM. The spatial site map
+remains the P1.2a gap.
+
+The report gives the Knife Creek block as 3,484 ha, Douglas-fir ~3,000 ha
+(87%), elevation 720-1,020 m. The VRI 2025 gives SUP area 3,533.13 ha and
+FDI-leading 3,416.8 ha (96.7%); these are different vintages, not a reason to
+force agreement.

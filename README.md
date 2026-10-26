@@ -22,8 +22,10 @@ Phase 0 (bootstrap and growth-engine contract) is complete. Phase 1 (data
 acquisition and stem lists) is active under issue #7. The legal boundary and the
 public inventory layers are acquired: SUP S15382 (3,533.1341 ha), VRI 2025,
 BEC, historical fire perimeters, harvest history, and mule-deer habitat classes.
-The AFRF site-series map and the legal UWR order are blocked under P1.2a (#15).
-A stem-list basis is still required. The repository does **not** yet carry a
+The Klinka et al. 2004 site-unit report is acquired and the IDFxm/IDFdk3
+site-series classification is extracted; the georeferenced site-series map and
+the legal UWR order are blocked under P1.2a (#15). A stem-list basis is still
+required. The repository does **not** yet carry a
 calibrated FVS-BC library or a runnable ws4 dataset. See `ROADMAP.md` and
 `CHANGE_LOG.md`.
 

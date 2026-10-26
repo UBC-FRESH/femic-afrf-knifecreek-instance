@@ -1,0 +1,157 @@
+# Site-series catalog for the IDF units of the AFRF.
+#
+# Source: Klinka, K., P. Varga, C. Trethewey, C. Koot, M. Rau, J. Macku, and
+# T. Kusbach. 2004. Site Units of the University of British Columbia Alex
+# Fraser Research Forest. UBC Alex Fraser Research Forest, Williams Lake, BC.
+#
+# This catalog is extracted from Tables 6.3.1 and 6.3.2 and the site-unit
+# descriptions. It is a classification, not a spatial map. The georeferenced
+# site-series polygons are in the report's map pockets / CD-ROM.
+
+schema_version: "1"
+source:
+  citation: "Klinka et al. 2004, Site Units of the UBC Alex Fraser Research Forest"
+  path: reference/AFRF-site-unit-report-2004.pdf
+  sha256: 94459a7bc6002932bc9a2150deb6d81879fbd48d776b86e4666e75addc7f5705
+  map_status: "classification acquired; spatial site-series map not in the PDF"
+
+zonal_units:
+  IDFxm:
+    description: "Interior Douglas-fir, very dry mild"
+    site_series:
+      - code: "01"
+        name: "Calamagrostis"
+        common_name: "Pine grass"
+        bcfs_name: "IDFxm/Fd-Pinegrass-Feathermoss"
+        site_group: "Near-zonal and zonal"
+        notes: "Zonal site series."
+      - code: "02"
+        name: "Juniperus"
+        common_name: "Common and Rocky Mountain junipers"
+        bcfs_name: "IDFxm/Fd-Elymus-Penstemon"
+        site_group: "Rocky sites"
+      - code: "03"
+        name: "Arctostaphylos"
+        common_name: "Kinnikinnick"
+        bcfs_name: "IDFxm/Fd-Juniper-Cladonia"
+        site_group: "Water-shedding, crest sites"
+      - code: "04"
+        name: "Allium"
+        common_name: "Nodding onion"
+        bcfs_name: "IDFxm/Fd-Bluebunch wheatgrass-Pasture sage"
+        site_group: "Water-shedding, warm-slope sites"
+      - code: "05"
+        name: "Hylocomium"
+        common_name: "Step moss"
+        bcfs_name: "IDFxm/Fd-Feathermoss-Step moss"
+        site_group: "Water-shedding, cool-slope sites"
+      - code: "06"
+        name: "Oryzopsis"
+        common_name: "Rough-leaved rice grass"
+        bcfs_name: "IDFxm/Fd-Ricegrass-Feathermoss"
+        site_group: "Water-enriched, poorly drained sites"
+      - code: "07"
+        name: "Aralia"
+        common_name: "Sarsaparilla"
+        bcfs_name: "IDFxm/Fd-Prickly rose-Sasparilla"
+        site_group: "Inherently rich and intermittent seepage sites"
+      - code: "08"
+        name: "Cornus"
+        common_name: "Red-osier dogwood"
+        bcfs_name: "IDFxm/Sxw-Snowberry-Prickly rose"
+        site_group: "Water-receiving (seepage) sites"
+      - code: "09"
+        name: "Equisetum"
+        common_name: "Horsetail"
+        bcfs_name: "IDFxm/Sxw-Horsetail"
+        site_group: "Water-collecting (waterlogged) sites"
+
+  IDFdk3:
+    description: "Interior Douglas-fir, dry cool, Fraser variant"
+    site_series:
+      - code: "01"
+        name: "Calamagrostis"
+        common_name: "Pine grass"
+        bcfs_name: "IDFdk3/FdPl-Pinegrass-Feathermoss"
+        site_group: "Near-zonal and zonal"
+        notes: "Zonal site series."
+      - code: "02"
+        name: "Arctostaphylos"
+        common_name: "Kinnikinnick"
+        bcfs_name: "IDFdk3/Fd-Juniper-Kinnikinnick"
+        site_group: "Water-shedding, crest sites"
+      - code: "03"
+        name: "Juniper"
+        common_name: "Common and Rocky Mountain junipers"
+        bcfs_name: "IDFdk3/Fd-Juniper-Peltigera"
+        site_group: "Rocky sites"
+      - code: "04"
+        name: "Allium"
+        common_name: "Nodding onion"
+        bcfs_name: "IDFdk3/Fd-Bluebunch wheatgrass-Needlegrass"
+        site_group: "Water-shedding, warm-slope sites"
+        notes: "The original IDFdk3/06 (Fd-Pinegrass-Aster) is combined with this series."
+      - code: "05"
+        name: "Hylocomium"
+        common_name: "Step moss"
+        bcfs_name: "IDFdk3/Fd-Feathermoss-Step moss"
+        site_group: "Water-shedding, cool-slope sites"
+      - code: "07"
+        name: "Lonicera"
+        common_name: "Black twinberry"
+        bcfs_name: "IDFdk3/SxwFd-Prickly rose-Sedge"
+        site_group: "Water-enriched, poorly drained sites"
+      - code: "08"
+        name: "Aralia"
+        common_name: "Sarsaparilla"
+        bcfs_name: "IDFdk3/SxwFd-Prickly rose-Sarsaparilla"
+        site_group: "Inherently rich and intermittent seepage sites"
+      - code: "09"
+        name: "Equisetum"
+        common_name: "Horsetail"
+        bcfs_name: "IDFdk3/Sxw-Horsetail-Glow moss"
+        site_group: "Water-collecting (waterlogged) sites"
+      - code: "10"
+        name: "Cornus"
+        common_name: "Red-osier dogwood"
+        bcfs_name: "no equivalent BCFS site series"
+        site_group: "Water-receiving (seepage) sites"
+        notes: "Newly recognized in this project."
+
+transition_units:
+  IDFdk3-SBPSmk:
+    description: "IDFdk3 transition to the Sub-boreal Pine-Spruce zone"
+    site_series:
+      - "Same 01-10 codes as IDFdk3; the report treats the transition series with the IDFdk3 column in Tables 6.3.1 and 6.3.2."
+
+site_groups:
+  - name: "Rocky sites"
+    idf_series: ["IDFxm/02", "IDFdk3/03"]
+  - name: "Water-shedding, crest sites"
+    idf_series: ["IDFxm/03", "IDFdk3/02"]
+  - name: "Water-shedding, warm-slope sites"
+    idf_series: ["IDFxm/04", "IDFdk3/04"]
+  - name: "Water-shedding, cool-slope sites"
+    idf_series: ["IDFxm/05", "IDFdk3/05"]
+  - name: "Near-zonal and zonal sites"
+    idf_series: ["IDFxm/01", "IDFdk3/01"]
+  - name: "Water-enriched, poorly drained sites"
+    idf_series: ["IDFxm/06", "IDFdk3/07"]
+  - name: "Inherently rich and intermittent seepage sites"
+    idf_series: ["IDFxm/07", "IDFdk3/08"]
+  - name: "Water-receiving (seepage) sites"
+    idf_series: ["IDFxm/08", "IDFdk3/10"]
+  - name: "Water-collecting (waterlogged) sites"
+    idf_series: ["IDFxm/09", "IDFdk3/09"]
+
+boundary:
+  block: Knife Creek
+  report_area_ha: 3484
+  report_douglas_fir_ha: 3000
+  report_douglas_fir_pct: 87
+  report_elevation_m: [720, 1020]
+  sup_area_ha: 3533.1341
+  notes: >-
+    The report area is 3,484 ha. The SUP S15382 permit block is 3,533.1341 ha.
+    The 49.13 ha difference is a gross-boundary / report-vintage difference, not
+    a site-series classification decision.
