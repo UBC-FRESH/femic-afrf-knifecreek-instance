@@ -12,7 +12,7 @@ after its parent issue exists and the maintainer approves it.
 
 | Phase | Parent issue | Branch | Status |
 | --- | --- | --- | --- |
-| P0 Bootstrap and growth-engine contract | #1 | `feature/p0-bootstrap` | active |
+| P0 Bootstrap and growth-engine contract | #1 | `feature/p0-bootstrap` | complete |
 | P1 Data acquisition and stem lists | #7 | `feature/p1-data-acquisition` | planned |
 | P2 FVS-BC state-transition library | TBD | `feature/p2-state-library` | planned |
 | P3 ws4 instance assembly | TBD | `feature/p3-ws4-assembly` | planned |
@@ -44,7 +44,7 @@ after its parent issue exists and the maintainer approves it.
 
 Parent issue: #1
 Branch: `feature/p0-bootstrap`
-Status: active
+Status: complete
 
 Goal: adapt the workflow surfaces, state why Knife Creek needs uneven-aged
 continuous cover, and record the FVS-BC growth-engine and ws4 state-transition

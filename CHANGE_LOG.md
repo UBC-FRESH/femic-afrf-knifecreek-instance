@@ -26,3 +26,4 @@ status and the GitHub issue comments.
   submodule of `UBC-FRESH/femic` at
   `external/femic-afrf-knifecreek-instance`.
 - Linked Phase 0 to parent issue #1 and child issues #2-#6. Phase 1 (data acquisition and stem lists) is planned under parent issue #7 and is not active.
+- Merged Phase 0 in pull request #13 (commit `beafb5a`). P0 is complete; P1 remains planned under parent issue #7.
