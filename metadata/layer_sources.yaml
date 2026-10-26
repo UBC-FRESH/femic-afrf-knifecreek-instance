@@ -1,0 +1,138 @@
+# Knife Creek layer provenance
+
+All layers are clipped to the SUP S15382 legal boundary
+(`data/boundaries/knife_creek_sup_S15382.gpkg`, EPSG:3005). The fetch AOI was
+the expanded boundary bbox `1278155,785051,1291760,794881` in EPSG:3005.
+
+## VRI 2025 R1
+
+| Field | Value |
+| --- | --- |
+| Dataset | VRI - 2025 - Forest Vegetation Composite Rank 1 Layer (R1) |
+| WFS type | `pub:WHSE_FOREST_VEGETATION.VEG_COMP_LYR_R1_POLY` |
+| Catalogue | https://catalogue.data.gov.bc.ca/dataset/vri-2025-forest-vegetation-composite-rank-1-layer-r1- |
+| Licence | Open Government Licence - British Columbia |
+| Fetched features | 768 |
+| Clipped features | 183 |
+| Clipped area | 3,533.13 ha |
+| Path | `data/inventory/vri_2025_kc.gpkg` |
+| SHA-256 | `9d05220b18c073902c47755088adfa532fe288e312b4d0418e7bb67a073837b5` |
+
+Coverage notes:
+
+- All 183 polygons are in the IDF zone.
+- Leading species: FDI 160, AT 7, SX 5, PLI 2.
+- `SITE_INDEX` is present on 174 of 183 polygons.
+- `NON_PRODUCTIVE_CD` is empty on every clipped polygon; the VRI join does not
+  itself define the net THLB.
+
+## BEC map
+
+| Field | Value |
+| --- | --- |
+| Dataset | BEC Map |
+| WFS type | `pub:WHSE_FOREST_VEGETATION.BEC_BIOGEOCLIMATIC_POLY` |
+| Catalogue | https://catalogue.data.gov.bc.ca/dataset/bec-map |
+| Licence | Open Government Licence - British Columbia |
+| Fetched features | 4 |
+| Clipped features | 2 |
+| Clipped area | 3,533.13 ha |
+| Path | `data/inventory/bec_kc.gpkg` |
+| SHA-256 | `12f3bf192dd326a6fcf8a12a4d615da7decbca8e158afafaa9abad56d29dc145` |
+
+BEC units inside the boundary:
+
+- `IDFdk3`: 3,051.80 ha
+- `IDFxm`: 481.33 ha
+
+The current BEC map does not show an SBPSmk polygon inside the SUP, although
+the management plan describes an eastern transition. The map is the spatial
+authority; the plan text is context.
+
+## Historical fire perimeters
+
+| Field | Value |
+| --- | --- |
+| Dataset | BC Wildfire Fire Perimeters - Historical |
+| WFS type | `pub:WHSE_LAND_AND_NATURAL_RESOURCE.PROT_HISTORICAL_FIRE_POLYS_SP` |
+| Catalogue | https://catalogue.data.gov.bc.ca/dataset/bc-wildfire-fire-perimeters-historical |
+| Licence | Open Government Licence - British Columbia |
+| Fetched features | 14 |
+| Clipped features | 3 |
+| Path | `data/inventory/fire_perimeters_kc.gpkg` |
+| SHA-256 | `4fc1f232ee3958ce91ab489c5cc5502537b4603698413e6227e6f625d76b2cd5` |
+
+Clipped fire area by year:
+
+- 2013 (`C20393`, lightning): 6.04 ha
+- 1938 (`59`, person): 62.11 ha
+- 1937 (`29`): 0.66 ha
+
+The 2013 Knife Creek fire is a 6.04 ha intersection in this layer. The public
+2013 report describes the fire study area; do not assume the layer is the full
+report footprint without checking the report figure.
+
+## Harvest history (derived)
+
+| Field | Value |
+| --- | --- |
+| Dataset | Harvested Areas of BC (Consolidated Cutblocks) |
+| WFS type | `pub:WHSE_FOREST_VEGETATION.VEG_CONSOLIDATED_CUT_BLOCKS_SP` |
+| Catalogue | https://catalogue.data.gov.bc.ca/dataset/harvested-areas-of-bc-consolidated-cutblocks- |
+| Licence | Catalogue `Access Only`; public WFS access |
+| Fetched features | 188 |
+| Clipped features | 60 |
+| Harvested area | 2,478.73 ha |
+| Harvest years | 1956-2023 |
+| Committed file | `data/inventory/harvest_history_kc.csv` |
+| SHA-256 | `798618cdf443672bcac7800017f50481fc92ed9886dfa4a9b396ab99a2de8a14` |
+
+The raw cutblock polygons are **not** committed because the catalogue records
+the layer as `Access Only`. The derived table keeps the opening ID, harvest
+dates, clearcut/partial percentages, source area, and clipped area. The raw
+fetch is reproducible from the WFS type above.
+
+Major harvest years include 1965 (319.23 ha), 1966 (618.91 ha), 1970
+(171.70 ha), 1980 (162.09 ha), and 2009 (133.83 ha). The block has a long
+history of partial and clearcut harvesting; the VRI and cutblock layer should
+be reconciled before assigning origin.
+
+## Mule-deer stand structure habitat classes
+
+| Field | Value |
+| --- | --- |
+| Dataset | Stand Structure Habitat Classes in Mule Deer Winter Range - Cariboo Region |
+| WFS type | `pub:REG_LAND_AND_NATURAL_RESOURCE.WLD_MULE_DEER_STND_STRC_CAR_SP` |
+| Catalogue | https://catalogue.data.gov.bc.ca/dataset/stand-structure-habitat-classes-in-mule-deer-winter-range-cariboo-region |
+| Licence | Open Government Licence - British Columbia |
+| Fetched features | 170 |
+| Clipped features | 83 |
+| Path | `data/habitat/mule_deer_stand_structure_kc.gpkg` |
+| SHA-256 | `5a2165eff5df62021b0da0db70f512443edb592f548da1cfe1975813e11dc535` |
+
+Clipped area by class:
+
+- High: 1,327.68 ha
+- Moderate: 1,135.66 ha
+- Low: 1,020.53 ha
+- Nil: 6.15 ha
+
+This is the public **habitat class** layer, not the legal UWR order. The
+approved Ungulate Winter Range boundary and the Cariboo long-term objective
+maps are catalogue `Access Only` / Government. The legal constraint must come
+from AFRF or the province before a scenario can claim compliance.
+
+## Site index
+
+Site index comes from the VRI `SITE_INDEX` and `EST_SITE_INDEX` fields (174 of
+183 polygons have `SITE_INDEX`). The Provincial Site Productivity Layer is an
+alternative source, but the catalogue marks it `Access Only` and its direct
+resource is a raster folder, not an AOI vector layer. It is not fetched here.
+
+## Remaining gaps
+
+- AFRF site-series / ecosystem map. The public BEC map gives zone/subzone/
+  variant only.
+- Approved UWR boundary and legal mule-deer objectives.
+- Tree-level tallies or CFI plots for a stem list.
+- A net THLB / operability classification.

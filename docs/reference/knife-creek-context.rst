@@ -46,6 +46,21 @@ Disturbance
 - Harvest history also shapes the current structure; the block has logging
   records going back to the 1940s.
 
+Current inventory snapshot
+--------------------------
+
+- VRI 2025 R1: 183 polygons over 3,533.13 ha; 160 polygons are FDI-leading;
+  174 of 183 carry a site index.
+- BEC map: IDFdk3 3,051.80 ha and IDFxm 481.33 ha. The current map does not
+  show an SBPSmk polygon inside the SUP, despite the management-plan context.
+- Harvest history: 60 openings over 2,478.73 ha, 1956-2023. The block has been
+  heavily harvested for decades.
+- Fire history: 2013 C20393 intersects 6.04 ha; the 1938 fire intersects
+  62.11 ha; the 1937 fire 0.66 ha.
+- Mule-deer habitat classes: High 1,327.68 ha, Moderate 1,135.66 ha, Low
+  1,020.53 ha, Nil 6.15 ha. Almost the whole block is in a winter-range class.
+- The legal UWR order and the AFRF site-series map are still required.
+
 Model implications
 ------------------
 

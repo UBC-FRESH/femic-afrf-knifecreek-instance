@@ -19,12 +19,13 @@ a state-transition library for ws4.
 ## Status
 
 Phase 0 (bootstrap and growth-engine contract) is complete. Phase 1 (data
-acquisition and stem lists) is active under issue #7. The legal Knife Creek
-boundary is acquired: Special Use Permit S15382, 3,533.1341 ha, in
-`data/boundaries/knife_creek_sup_S15382.gpkg`. The inventory, BEC, site index,
-disturbance, mule-deer constraints, and stem-list basis are still required. The
-repository does **not** yet carry a calibrated FVS-BC library or a runnable ws4
-dataset. See `ROADMAP.md` and `CHANGE_LOG.md`.
+acquisition and stem lists) is active under issue #7. The legal boundary and the
+public inventory layers are acquired: SUP S15382 (3,533.1341 ha), VRI 2025,
+BEC, historical fire perimeters, harvest history, and mule-deer habitat classes.
+The AFRF site-series map and the legal UWR order are blocked under P1.2a (#15).
+A stem-list basis is still required. The repository does **not** yet carry a
+calibrated FVS-BC library or a runnable ws4 dataset. See `ROADMAP.md` and
+`CHANGE_LOG.md`.
 
 ## The modelling chain
 

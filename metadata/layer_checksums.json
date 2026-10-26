@@ -1,0 +1,9 @@
+{
+  "data/habitat/mule_deer_stand_structure_kc.gpkg": "5a2165eff5df62021b0da0db70f512443edb592f548da1cfe1975813e11dc535",
+  "data/inventory/bec_kc.gpkg": "12f3bf192dd326a6fcf8a12a4d615da7decbca8e158afafaa9abad56d29dc145",
+  "data/inventory/coverage.json": "40b19d2c0a82f372ea2ab708f6b6b0b93938fe6f48debe068abc758b9fd06846",
+  "data/inventory/fire_history_kc.csv": "ab13d18c9c604f04829f023a191ed681b0da9a1e8c2a4be77dbdc2eb238d6a4b",
+  "data/inventory/fire_perimeters_kc.gpkg": "4fc1f232ee3958ce91ab489c5cc5502537b4603698413e6227e6f625d76b2cd5",
+  "data/inventory/harvest_history_kc.csv": "798618cdf443672bcac7800017f50481fc92ed9886dfa4a9b396ab99a2de8a14",
+  "data/inventory/vri_2025_kc.gpkg": "9d05220b18c073902c47755088adfa532fe288e312b4d0418e7bb67a073837b5"
+}
