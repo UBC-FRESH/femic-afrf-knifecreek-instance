@@ -1,0 +1,24 @@
+# Knife Creek instance identity.
+#
+# These are the stable instance-level facts. Model parameters belong in the
+# regime, target, and run files, not here.
+
+instance:
+  id: afrf-knifecreek
+  label: AFRF Knife Creek
+  parent_forest: UBC Alex Fraser Research Forest
+  block: Knife Creek
+  country: CA
+  province: BC
+  region: Cariboo
+  crs: EPSG:3005
+  published_gross_area_ha: 3487
+  dominant_bec:
+    - IDFdk3
+    - IDFxm
+    - SBPSmk
+  silviculture: uneven-aged continuous cover selection
+  growth_engine: fresh-fvsbc
+  estate_engine: ws4
+  status: phase-0
+  merged_instance_reserved: femic-afrf-instance

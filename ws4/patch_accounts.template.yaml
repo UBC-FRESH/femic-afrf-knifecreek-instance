@@ -1,0 +1,20 @@
+# ws4 patch accounts template
+#
+# TEMPLATE ONLY. The Knife Creek opening and retention policy is not reviewed.
+#
+# A selection-opening account should describe the disturbed area, not a
+# clearcut opening. The membership criterion, threshold, size classes, and
+# search distance depend on the mule-deer and operational constraints.
+#
+# Example shape (commented out):
+#
+# accounts:
+#   - name: patch.selection
+#     criteria: product.area.managed.total
+#     threshold: 0.0
+#     size_classes: [1.0, 5.0, 20.0, .inf]
+#     search_distance: 0.0
+#
+# Do not copy the Gavin Lake or MKRF opening-size classes into this instance
+# without a documented policy decision.
+accounts: []

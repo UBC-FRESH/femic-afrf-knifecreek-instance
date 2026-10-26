@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this model instance, please cite the repository and the growth-engine dependencies described in config/toolchain.yaml."
+title: "AFRF Knife Creek Instance"
+abstract: "A ws4 forest-estate model instance for the Knife Creek block of the UBC Alex Fraser Research Forest, built as an uneven-aged continuous-cover selection model with FVS-BC."
+authors:
+  - name: "UBC FRESH Lab"
+repository-code: "https://github.com/UBC-FRESH/femic-afrf-knifecreek-instance"
+url: "https://github.com/UBC-FRESH/femic-afrf-knifecreek-instance"
+license: "MIT"
+version: "0.1.0"
+date-released: "2026-10-26"

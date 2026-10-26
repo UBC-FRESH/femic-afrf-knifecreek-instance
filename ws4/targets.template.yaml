@@ -1,0 +1,28 @@
+# ws4 targets template
+#
+# TEMPLATE ONLY. Do not run this as a scenario.
+#
+# A Knife Creek target set is a selection-only target set. It should include:
+#   - a harvest or entry target by period;
+#   - a growing-stock or residual-structure target;
+#   - mule-deer habitat floors;
+#   - a maximum disturbed area or opening constraint where applicable; and
+#   - a flow shape (even or non-declining) if the scenario uses one.
+#
+# Example shape (commented out):
+#
+# targets:
+#   - account: product.yield.managed.total
+#     period: 1
+#     minimum: 0
+#     period_width: 10
+#     min_weight: 1.0
+#   - account: feature.habitat.large_tree_ba
+#     period: 1
+#     minimum: 0
+#     period_width: 10
+#     min_weight: 1.0
+#
+# The values must come from the reviewed management objectives, not from a
+# template default.
+targets: []

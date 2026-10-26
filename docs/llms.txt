@@ -1,0 +1,16 @@
+# AFRF Knife Creek Instance
+
+> Agent-facing index for the Knife Creek ws4 instance. Read the linked pages before you change the project.
+
+## Start here
+
+- [Home](index.html): the documentation home for the instance.
+- [Instance contract](guides/instance-contract.html): scope, inputs, outputs, and reproducibility.
+- [Data acquisition](guides/data-acquisition.html): the boundary, inventory, BEC, disturbance, and mule-deer checklist.
+- [Growth engine](guides/growth-engine.html): why FVS-BC, the fresh-fvsbc pin, and the selection-cut surface.
+- [State-transition design](guides/state-transition-design.html): states, regimes, residual states, and the ws4 bridge.
+- [ws4 workflow](guides/ws4-workflow.html): the planned assembly, baseline, and optimization.
+- [Data publication boundary](reference/data-publication-boundary.html): what is public and what is excluded.
+- [Knife Creek context](reference/knife-creek-context.html): location, BEC, disturbance, and the modelling implications.
+- [Growth-engine crosswalk](reference/growth-engine-crosswalk.html): FVS-BC tables to ws4 tables.
+- [API reference](api/index.html): the workflow validator and dashboard.

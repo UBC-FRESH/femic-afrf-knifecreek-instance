@@ -1,0 +1,42 @@
+# Data requirements for the Knife Creek model.
+#
+# Status values: required, optional, acquired, reviewed, blocked.
+# A source is not acquired until its checksum and provenance are recorded.
+
+sources:
+  - id: boundary
+    description: Knife Creek legal boundary and block identifier.
+    status: required
+    public_release: TBD
+    notes: Must join to VRI and BEC; transform to EPSG:3005.
+  - id: vri
+    description: VRI or AFRF forest-cover inventory.
+    status: required
+    public_release: TBD
+    notes: Polygon-level species, age, site index, density.
+  - id: bec
+    description: BEC and site-series mapping.
+    status: required
+    public_release: TBD
+  - id: site_index
+    description: Site index by species and polygon.
+    status: required
+    public_release: TBD
+  - id: disturbance
+    description: Harvest history and the 2013 wildfire perimeter and severity.
+    status: required
+    public_release: TBD
+  - id: mule_deer
+    description: Mule-deer winter-range designation and constraints.
+    status: required
+    public_release: TBD
+    notes: Do not infer constraint values; record the source and review.
+  - id: cfi_plots
+    description: Continuous forest inventory or research plot tallies.
+    status: optional
+    public_release: TBD
+    notes: Preferred stem-list basis if AFRF can release it.
+  - id: forest_cover_attributes
+    description: Height, diameter, density, and species attributes beyond VRI.
+    status: optional
+    public_release: TBD

@@ -1,0 +1,40 @@
+# FVS-BC selection regimes.
+#
+# These are TEMPLATES, not reviewed policy. The residual basal-area targets are
+# illustrative and must be reconciled with the mule-deer winter-range
+# constraints and the FVS-BC pilot before any scenario uses them.
+#
+# The keyword sequence is not yet reviewed. A regime becomes runnable only when
+# it names the reviewed keyword order and the state key it produces.
+
+regimes:
+  - id: SEL_BA18
+    label: Selection, retain 18 m2/ha
+    status: template
+    residual_basal_area_m2_ha: 18.0
+    cutting_cycle_years: 20
+    max_dbh_cm: null
+    species_preference: null
+    keywords:
+      - THINBTA
+    notes: Illustrative low-retention selection regime.
+  - id: SEL_BA25
+    label: Selection, retain 25 m2/ha
+    status: template
+    residual_basal_area_m2_ha: 25.0
+    cutting_cycle_years: 20
+    max_dbh_cm: null
+    species_preference: null
+    keywords:
+      - THINBTA
+    notes: Illustrative moderate-retention selection regime.
+  - id: SEL_BA30
+    label: Selection, retain 30 m2/ha
+    status: template
+    residual_basal_area_m2_ha: 30.0
+    cutting_cycle_years: 20
+    max_dbh_cm: null
+    species_preference: null
+    keywords:
+      - THINBTA
+    notes: Illustrative high-retention selection regime.

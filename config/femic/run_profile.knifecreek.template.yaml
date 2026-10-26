@@ -1,0 +1,23 @@
+# FEMIC data-prep template for Knife Creek.
+#
+# This is a TEMPLATE. It is not runnable until the boundary and inventory exist.
+# FEMIC is used here for boundary, inventory, BEC, and strata preparation. The
+# growth curves do not come from VDYP or TIPSY for this instance.
+
+selection:
+  boundary_path: "data/boundaries/knifecreek.gpkg"
+  boundary_layer: null
+  boundary_code: "knifecreek"
+  strata:
+    - "KNIFE_CREEK"
+
+modes:
+  resume: true
+  dry_run: false
+  verbose: true
+  skip_checks: false
+  debug_rows: null
+
+run:
+  run_id: "knifecreek_data_prep"
+  log_dir: "vdyp_io/profile_logs"
