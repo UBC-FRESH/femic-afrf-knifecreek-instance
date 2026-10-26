@@ -18,7 +18,7 @@ a state-transition library for ws4.
 
 ## Status
 
-Phase 0 (bootstrap and growth-engine contract) is in progress. The repository
+Phase 0 (bootstrap and growth-engine contract) is complete pending maintainer closeout. The repository
 records the instance contract, the data requirements, the uneven-aged growth
 architecture, and the ws4 state-transition contract. It does **not** yet carry
 field data, a calibrated FVS-BC library, or a runnable ws4 dataset. See

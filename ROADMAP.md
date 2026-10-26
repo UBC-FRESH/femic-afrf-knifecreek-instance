@@ -12,8 +12,8 @@ after its parent issue exists and the maintainer approves it.
 
 | Phase | Parent issue | Branch | Status |
 | --- | --- | --- | --- |
-| P0 Bootstrap and growth-engine contract | TBD | `feature/p0-bootstrap` | planned |
-| P1 Data acquisition and stem lists | TBD | `feature/p1-data-acquisition` | planned |
+| P0 Bootstrap and growth-engine contract | #1 | `feature/p0-bootstrap` | active |
+| P1 Data acquisition and stem lists | #7 | `feature/p1-data-acquisition` | planned |
 | P2 FVS-BC state-transition library | TBD | `feature/p2-state-library` | planned |
 | P3 ws4 instance assembly | TBD | `feature/p3-ws4-assembly` | planned |
 | P4 Verification and scenarios | TBD | `feature/p4-verification` | planned |
@@ -42,19 +42,19 @@ after its parent issue exists and the maintainer approves it.
 
 ## Phase 0: Bootstrap and growth-engine contract
 
-Parent issue: TBD
+Parent issue: #1
 Branch: `feature/p0-bootstrap`
-Status: planned
+Status: active
 
 Goal: adapt the workflow surfaces, state why Knife Creek needs uneven-aged
 continuous cover, and record the FVS-BC growth-engine and ws4 state-transition
 contracts.
 
-- [ ] P0.1 Adapt `AGENTS.md`, `README.md`, and the roadmap to Knife Creek
-- [ ] P0.2 Record the uneven-aged growth-engine decision and the FVS-BC pin
-- [ ] P0.3 Record the data acquisition and publication boundary
-- [ ] P0.4 Scaffold the FVS-BC regime and ws4 state-transition templates
-- [ ] P0.5 Confirm the green dashboard and the docs build
+- [x] P0.1 Adapt `AGENTS.md`, `README.md`, and the roadmap to Knife Creek (#2)
+- [x] P0.2 Record the uneven-aged growth-engine decision and the FVS-BC pin (#3)
+- [x] P0.3 Record the data acquisition and publication boundary (#4)
+- [x] P0.4 Scaffold the FVS-BC regime and ws4 state-transition templates (#5)
+- [x] P0.5 Confirm the green dashboard and the docs build (#6)
 
 Acceptance criteria:
 
@@ -66,18 +66,18 @@ Acceptance criteria:
 
 ## Phase 1: Data acquisition and stem lists
 
-Parent issue: TBD
+Parent issue: #7
 Branch: `feature/p1-data-acquisition`
 Status: planned
 
 Goal: acquire and verify the Knife Creek boundary, inventory, BEC, site index,
 disturbance, and mule-deer constraints, then construct reviewed stem lists.
 
-- [ ] P1.1 Acquire and checksum the legal boundary and block identifier
-- [ ] P1.2 Acquire VRI, BEC, site-series, and disturbance source data
-- [ ] P1.3 Acquire or reconstruct tree-level tallies and CFI plot data
-- [ ] P1.4 Build AU strata and nemora stem populations
-- [ ] P1.5 Record the data-quality and coverage audit
+- [ ] P1.1 Acquire and checksum the legal boundary and block identifier (#8)
+- [ ] P1.2 Acquire VRI, BEC, site-series, and disturbance source data (#9)
+- [ ] P1.3 Acquire or reconstruct tree-level tallies and CFI plot data (#10)
+- [ ] P1.4 Build AU strata and nemora stem populations (#11)
+- [ ] P1.5 Record the data-quality and coverage audit (#12)
 
 Acceptance criteria:
 
@@ -187,9 +187,9 @@ Acceptance criteria:
 
 ## Detailed Next Steps Notes
 
-1. Create the GitHub repository and the Phase 0 parent issue. This needs
-   maintainer approval.
-2. Activate Phase 0 by setting its parent issue number and its status to
-   `active`, here and in the tracker map.
-3. Do not start the FVS-BC pilot until the boundary, inventory, and stem-list
-   basis are acquired and reviewed.
+1. Phase 0 is active under parent issue #1. The bootstrap commit is on `main`;
+   the task issues #2-#6 record the completed surfaces.
+2. Phase 1 is planned under parent issue #7. Activate it only after Phase 0 is
+   approved and the Phase 0 pull request or bootstrap closeout is accepted.
+3. Keep the legacy archive out of Git; commit the sanitized package and its
+   hash.
