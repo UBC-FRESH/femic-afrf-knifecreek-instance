@@ -85,13 +85,28 @@ sources:
       classes are acquired, but the legal constraint must come from AFRF or the
       province before a scenario can claim compliance.
 
-  - id: site_series
-    description: AFRF site-series / ecosystem map.
+  - id: site_series_classification
+    description: AFRF site-series classification and identification tools.
+    status: acquired
+    public_release: "public report; UBC AFRF copyright, not OGL"
+    path: reference/AFRF-site-unit-report-2004.pdf
+    sha256: 94459a7bc6002932bc9a2150deb6d81879fbd48d776b86e4666e75addc7f5705
+    catalog_path: config/site_series.yaml
+    notes: >-
+      Klinka et al. 2004, Site Units of the UBC Alex Fraser Research Forest.
+      IDFxm 01-09 and IDFdk3 01-10 site series, nine site groups, keys,
+      edatopic grids, descriptions, and appendices. The report is a UBC AFRF
+      publication, not MIT-licensed.
+
+  - id: site_series_map
+    description: Georeferenced AFRF site-series polygon map.
     status: blocked
     public_release: TBD
     notes: >-
-      The public BEC map gives zone/subzone/variant only. The AFRF site-series
-      map is an AFRF product and is not in the public BCC catalogue pass.
+      The Klinka report's site maps are folded map pockets and a CD-ROM; the
+      PDF contains the classification and tools but not the GIS polygons. The
+      spatial map is still required for a site-series assignment. Do not infer
+      site series from BEC alone.
 
   - id: cfi_plots
     description: Continuous forest inventory or research plot tallies.

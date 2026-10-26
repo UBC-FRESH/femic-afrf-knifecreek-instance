@@ -110,6 +110,26 @@ The VRI is a polygon-level inventory. It does not contain a tree list. A tree
 list must come from measured plots, a reviewed reconstruction, or `nemora`.
 The source and method must travel with every stem list.
 
+Site series (Klinka et al. 2004)
+--------------------------------
+
+The AFRF site-unit report is acquired:
+
+- citation: Klinka et al. 2004, *Site Units of the UBC Alex Fraser Research
+  Forest*;
+- path: ``reference/AFRF-site-unit-report-2004.pdf``;
+- SHA-256:
+  ``94459a7bc6002932bc9a2150deb6d81879fbd48d776b86e4666e75addc7f5705``; and
+- extracted catalog: ``config/site_series.yaml``.
+
+The report gives nine site groups and the IDFxm 01-09 and IDFdk3 01-10 site
+series, with BCFS codes, names, keys, edatopic grids, and descriptions. The
+Knife Creek block is in the IDFxm / IDFdk3 / IDFdk3-SBPSmk transition set.
+
+The **georeferenced site-series map is not in the PDF**. The report's site maps
+are folded map pockets and a CD-ROM. The spatial map is still P1.2a. Do not
+infer site series from BEC zone/subzone alone.
+
 BEC and site index
 ------------------
 

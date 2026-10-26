@@ -101,6 +101,12 @@ Findings:
 - Harvest history: 60 openings over 2,478.73 ha, 1956-2023.
 - Mule-deer habitat classes: High 1,327.68 ha, Moderate 1,135.66 ha, Low
   1,020.53 ha, Nil 6.15 ha. The legal UWR order is still blocked.
+- The Klinka et al. 2004 site-unit report is acquired. It gives the IDFxm
+  01-09 and IDFdk3 01-10 site-series classification, nine site groups, keys,
+  edatopic grids, and descriptions. The Knife Creek block is 3,484 ha,
+  Douglas-fir ~3,000 ha (87%), elevation 720-1,020 m.
+- The georeferenced site-series map is **not** in the PDF; it is in the
+  report's map pockets/CD-ROM. The spatial site-series map is still P1.2a.
 - The AFRF site-series map and the legal UWR order are P1.2a. They are not
   inferred from BEC or the public habitat classes.
 

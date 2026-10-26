@@ -46,6 +46,21 @@ Disturbance
 - Harvest history also shapes the current structure; the block has logging
   records going back to the 1940s.
 
+Site series
+-----------
+
+- Klinka et al. 2004 maps nine site groups and the IDFxm 01-09 and IDFdk3
+  01-10 site series for the AFRF.
+- The Knife Creek block is in the IDFxm / IDFdk3 / IDFdk3-SBPSmk transition
+  set.
+- The report gives the block as 3,484 ha, Douglas-fir ~3,000 ha (87%), and
+  elevation 720-1,020 m.
+- The classification and keys are in `config/site_series.yaml` and
+  `reference/AFRF-site-unit-report-2004.pdf`.
+- The georeferenced site-series polygons are in the report's map pockets /
+  CD-ROM, not the PDF. The spatial map is still required.
+- Do not infer site series from BEC zone/subzone alone.
+
 Current inventory snapshot
 --------------------------
 

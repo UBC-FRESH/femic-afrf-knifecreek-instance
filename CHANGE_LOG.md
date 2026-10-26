@@ -56,3 +56,13 @@ status and the GitHub issue comments.
   from the public BCDC pass: the AFRF site-series / ecosystem map and the
   approved UWR boundary plus legal mule-deer objectives. They are not inferred
   from BEC or the public habitat classes.
+- Acquired the Klinka et al. 2004 AFRF site-unit report
+  (`reference/AFRF-site-unit-report-2004.pdf`, SHA-256 `94459a7b…f5705`). It
+  gives the IDFxm 01-09 and IDFdk3 01-10 site-series classification, nine site
+  groups, keys, edatopic grids, and descriptions. The extract is
+  `config/site_series.yaml`; the context note is
+  `notes/reference/site-series-klinka-2004.md`.
+- Recorded that the report's georeferenced site-series maps are in the map
+  pockets/CD-ROM, not the PDF. The spatial site-series map remains blocked under
+  P1.2a (#15). The report gives Knife Creek as 3,484 ha, Douglas-fir ~3,000 ha
+  (87%), elevation 720-1,020 m.
