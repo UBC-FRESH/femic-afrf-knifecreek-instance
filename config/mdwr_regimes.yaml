@@ -1,0 +1,136 @@
+# Knife Creek mule-deer winter-range management contract.
+#
+# Source: Alex Fraser Research Forest Management and Working Plan #3
+# (January 1, 2007), Tables 29, 32 and 35, and Appendix 9. This is a public
+# management plan, not the legal Ungulate Winter Range order.
+#
+# Table 29 is the authoritative residual-structure target. The recovered
+# Figure 11 distribution is a shape benchmark, not a replacement for these
+# values. See notes/reference/mwp3-kc-management-direction.md.
+
+source:
+  document: Alex Fraser Research Forest Management and Working Plan #3
+  date: 2007-01-01
+  pdf: reference/AFRF-management-working-plan-3-2007.pdf
+  sha256: 9bfd8b8f0449f45fb97fcf529236640ace09b73ba74f77001f677eee7307ff6a
+  table29_page_pdf: 97
+  table29_page_printed: 89
+  table34_page_pdf: 108
+  table32_page_pdf: 107
+  table35_page_pdf: 109
+  table36_page_pdf: 114
+  appendix9_page_pdf: 162
+  appendix9_page_printed: 150
+
+working_circle:
+  name: Knife Creek Mule Deer Winter Range
+  gross_area_table26_ha: 3333
+  reserves_table26_ha: 152
+  net_productive_area_table32_ha: 3117
+  appendix9_gross_area_ha: 3485.6
+  appendix9_net_area_ha: 3162.3
+  sup_legal_boundary_area_ha: 3533.1341
+  primary_objective: mule-deer winter habitat
+  silvicultural_system: single-tree selection
+  retention_pattern: small groups of 2-5 trees at the maximum diameter
+  cutting_cycle_years: 30
+  harvest_constraints:
+    - no conventional clearcut
+    - no even-aged silviculture
+    - single-tree selection with small groups at the maximum diameter
+    - concentrate removals on trees below 37.5 cm DBH
+    - retain the maximum-diameter class in groups of 2-5 trees
+    - typical thinning yield about 50 m3/ha
+  aac:
+    single_tree_selection_ha_per_year: 82.0
+    salvage_ha_per_year: 11.2
+    total_ha_per_year: 93.2
+    period: 2001-2005 comparison in Table 35
+    actual_2001_2005:
+      partial_cut_ha_per_year: 44.3
+      salvage_ha_per_year: 31.2
+      total_ha_per_year: 76.1
+  cclup:
+    conventional_harvest_pct: 45
+    modified_harvest_pct: 50
+    no_harvest_pct: 5
+  plan_outcome:
+    conventional_harvest_pct: 0
+    modified_harvest_pct: 95
+    no_harvest_pct: 5
+  note: >-
+    The area figures differ by vintage and boundary. Table 32 net productive
+    area is 3,117 ha; Appendix 9 net area is 3,162.3 ha; the legal SUP is
+    3,533.1341 ha. Record the differences; do not force agreement.
+
+habitat_classes:
+  - id: HIGH
+    label: High
+    residual_basal_area_m2_ha: 29.0
+    max_dbh_cm: 60.0
+    q_factor: 1.25
+    q_class_width_cm: 5.0
+    cutting_cycle_years: 30
+    fvsbc_thinqfa:
+      min_dbh_in: 0.0
+      max_dbh_in: 23.62
+      q_factor: 1.25
+      class_width_in: 1.97
+      residual_density: 126.32
+      supplemental_units: 0
+      supplemental_units_label: basal_area_ft2_per_acre
+  - id: MODERATE
+    label: Moderate
+    residual_basal_area_m2_ha: 22.0
+    max_dbh_cm: 55.0
+    q_factor: 1.25
+    q_class_width_cm: 5.0
+    cutting_cycle_years: 30
+    fvsbc_thinqfa:
+      min_dbh_in: 0.0
+      max_dbh_in: 21.65
+      q_factor: 1.25
+      class_width_in: 1.97
+      residual_density: 95.83
+      supplemental_units: 0
+      supplemental_units_label: basal_area_ft2_per_acre
+  - id: LOW
+    label: Low
+    residual_basal_area_m2_ha: 16.0
+    max_dbh_cm: 50.0
+    q_factor: 1.30
+    q_class_width_cm: 5.0
+    cutting_cycle_years: 30
+    fvsbc_thinqfa:
+      min_dbh_in: 0.0
+      max_dbh_in: 19.69
+      q_factor: 1.30
+      class_width_in: 1.97
+      residual_density: 69.70
+      supplemental_units: 0
+      supplemental_units_label: basal_area_ft2_per_acre
+
+unit_conversions:
+  basal_area_m2_ha_to_ft2_ac: 4.356
+  cm_to_in: 0.3937007874
+  five_cm_class_in: 1.97
+
+open_items:
+  - id: legal_uwr_order
+    description: Approved UWR boundary and legal mule-deer objectives.
+    status: blocked
+    reason: Access Only / AFRF-held; public habitat classes are not the legal order.
+  - id: transition_strategy_2003
+    description: >-
+      CCLUP Mule Deer Strategy Committee (2003), Transition period harvest
+      opportunities, Knife Creek.
+    status: blocked
+    reason: Cited by MWP #3 but not acquired.
+  - id: site_series_map
+    description: Georeferenced AFRF site-series polygons.
+    status: blocked
+    reason: Folded map pockets / CD-ROM; not in the PDF.
+  - id: stem_list
+    description: CFI tallies or an approved synthetic VRI + nemora reconstruction.
+    status: blocked
+    reason: No tree list has been released yet.

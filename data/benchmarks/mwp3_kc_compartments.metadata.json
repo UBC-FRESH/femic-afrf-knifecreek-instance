@@ -1,0 +1,18 @@
+{
+  "dataset": "mwp3_kc_compartments",
+  "title": "Knife Creek Block compartments and planned harvest units: area table",
+  "source_document": "Alex Fraser Research Forest Management and Working Plan #3 (January 1, 2007), Appendix 9",
+  "source_pdf": "reference/AFRF-management-working-plan-3-2007.pdf",
+  "source_pdf_sha256": "9bfd8b8f0449f45fb97fcf529236640ace09b73ba74f77001f677eee7307ff6a",
+  "source_page_pdf": 162,
+  "source_page_printed": 150,
+  "source_figure": "Appendix 9 map and area table",
+  "transcription": "Manual transcription from the published map table; checked against a 250 dpi render and reconciled to the printed totals.",
+  "notes": [
+    "This is a public planning-map table, not a legal spatial layer.",
+    "The map on page 162 is schematic: it has a north arrow and scale bar but no coordinate grid. It was not georeferenced for this table.",
+    "Compartment rows KC01-KC11 are MDWR (mule-deer winter range) management units; RD05 is a reserve; RD06 and RD07 are OGMAs.",
+    "The printed total net area is 3162.3 ha. Table 32 of the same plan states 3117 ha net productive area; both are recorded and are not forced to agree.",
+    "The SUP legal boundary is 3533.1341 ha; the plan table gross area is 3485.6 ha. Different vintages/boundaries; record, do not reconcile silently."
+  ]
+}

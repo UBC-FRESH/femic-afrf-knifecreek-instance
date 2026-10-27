@@ -42,14 +42,24 @@ A regime is a selection rule:
 - minimum retained structure; and
 - the post-cut state key.
 
-The first regimes are templates:
+The first regimes come from AFRF MWP #3 Table 29 and are reviewed policy
+targets, not placeholders:
 
-- `SEL_BA18` — retain 18 m²/ha;
-- `SEL_BA25` — retain 25 m²/ha; and
-- `SEL_BA30` — retain 30 m²/ha.
+- `SEL_MDWR_HIGH` — B 29 m²/ha, D 60 cm, q 1.25, 30-year cycle;
+- `SEL_MDWR_MODERATE` — B 22 m²/ha, D 55 cm, q 1.25, 30-year cycle; and
+- `SEL_MDWR_LOW` — B 16 m²/ha, D 50 cm, q 1.30, 30-year cycle.
 
-The numbers are illustrative until the mule-deer constraints and the FVS-BC
-pilot are reviewed. They are not policy.
+The FVS-BC keyword is `THINQFA` (BDq: q-factor, maximum DBH, residual
+basal-area density). `THINBTA` is not a basal-area target; it is a
+thin-from-below to a trees-per-acre target. The regimes are not yet runnable:
+the `THINQFA` supplemental-record support and the entry-year alignment must be
+settled in the pilot. See `config/fvsbc/regimes.yaml` and
+`config/mdwr_regimes.yaml`.
+
+A design variant, `SEL_MDWR_SMALL_TREE`, thins only the 0–37.5 cm component to
+match the plan's operational wording. Its residual density is computed per
+state as Table 29 B minus the retained large-tree basal area. Compare it with
+the full-range BDq regime in the pilot.
 
 Transition
 ----------
@@ -129,14 +139,17 @@ not describe a constraint as met when it is only reported.
 Open questions
 --------------
 
-1. What is the authoritative mule-deer constraint layer, and what are its
-   spatial classes?
-2. Which stem-list source is available: CFI plots, research plots, or a
-   nemora reconstruction?
+1. The public mule-deer habitat-class layer is acquired; the legal UWR order is
+   still blocked. Do not treat the public classes as the legal constraint.
+2. The stem-list source is still unresolved: AFRF CFI/research plots or an
+   approved VRI + `nemora` synthetic reconstruction.
 3. How many states are needed before the graph is stable enough to optimize?
 4. Does the block-level spatial constraint need a maximum selection-opening
    size, or is the stand-level retention enough?
-5. Which FVS-BC keywords encode the reviewed regimes, and in what order?
+5. `THINQFA` is the selected keyword; the wrapper's supplemental-record support
+   and the entry-year alignment are open. See `config/fvsbc/regimes.yaml`.
 6. Should the first public baseline be a single regime or a regime portfolio?
+   The plan's AAC is area-based, so start with the High/Moderate/Low portfolio
+   and report the area and volume by class.
 
 See `planning/fvsbc-state-transition-design.md` for the working plan.

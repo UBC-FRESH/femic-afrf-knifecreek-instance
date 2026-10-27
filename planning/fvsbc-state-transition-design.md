@@ -44,11 +44,23 @@ The classes are reviewed after the pilot. They are not policy.
 ## Regime key
 
 ```text
-regime_id = SEL_BA<residual>_CY<cycle>[_<species>][_<maxdbh>]
+regime_id = SEL_MDWR_<HABITAT>
 ```
 
-The first templates are `SEL_BA18`, `SEL_BA25`, and `SEL_BA30` with a 20-year
-cycle. They are illustrative.
+The first regimes come from AFRF MWP #3 Table 29:
+
+- `SEL_MDWR_HIGH`: B 29 m2/ha, D 60 cm, q 1.25, 30-year cycle;
+- `SEL_MDWR_MODERATE`: B 22 m2/ha, D 55 cm, q 1.25, 30-year cycle; and
+- `SEL_MDWR_LOW`: B 16 m2/ha, D 50 cm, q 1.30, 30-year cycle.
+
+The FVS-BC keyword is `THINQFA` (BDq). `THINBTA` is a trees-per-acre target,
+not a basal-area target. A design variant, `SEL_MDWR_SMALL_TREE`, thins only
+the 0-37.5 cm component and computes its residual density per state as Table 29
+B minus the retained large-tree basal area.
+
+The regimes are reviewed policy, but they are not yet runnable. `fresh-fvsbc`
+0.11.0 does not model the `THINQFA` supplemental residual-density-units record,
+and the entry-year/cycle semantics need a controlled pilot.
 
 ## Run sequence
 
@@ -122,22 +134,35 @@ The first library is acceptable when:
 - the ws4 export validates; and
 - the run manifest records the FVS-BC commit, keyword hash, and stem-list hash.
 
+## Public benchmark
+
+MWP #3 Figure 11 was recovered with `figrecover` into
+`data/benchmarks/mwp3_figure11_target_stand_structure.csv`. Use Table 29 for
+the residual B/D/q target and Figure 11 for the relative 5 cm diameter
+distribution. The recovered basal-area sums are 17.02/22.96/30.17 m2/ha for
+Low/Moderate/High; report the difference from the 16/22/29 targets rather than
+rescaling.
+
 ## Open questions
 
 1. Which stem-list source is available?
 2. How many basal-area and QMD classes are enough?
 3. Does the mule-deer constraint act on basal area, canopy cover, large-tree
-   density, or a combination?
+   density, or a combination? The plan's Table 29 is the public starting point.
 4. Should the state include a years-since-entry dimension, or is the offset
    clock enough?
 5. How should a regime portfolio be represented: one treatment per regime, or
    a nested choice?
 6. How should the model handle the 2013 burn area as a distinct origin?
+7. Do we use the full-range BDq cut or the 0-37.5 cm small-tree variant?
 
 ## Next experiments
 
-1. Build one synthetic FD stand and run a single `THINBTA` selection cut.
-2. Confirm the cut list and after-treatment list are populated.
-3. Build a two-cycle graph from the residual state.
-4. Export the two-state graph to ws4 and validate the dataset.
-5. Add a mule-deer feature account and report it.
+1. Add `THINQFA` supplemental-record support to `fresh-fvsbc`.
+2. Build one synthetic FD stand and run a single `THINQFA` selection cut.
+3. Confirm the cut list and after-treatment list are populated.
+4. Compare the residual B, D, q and 5 cm distribution with Table 29 and
+   Figure 11.
+5. Build a two-cycle graph from the residual state.
+6. Export the two-state graph to ws4 and validate the dataset.
+7. Add a mule-deer feature account and report it.

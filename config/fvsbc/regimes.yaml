@@ -1,40 +1,168 @@
-# FVS-BC selection regimes.
+# FVS-BC selection regimes for the Knife Creek mule-deer winter range.
 #
-# These are TEMPLATES, not reviewed policy. The residual basal-area targets are
-# illustrative and must be reconciled with the mule-deer winter-range
-# constraints and the FVS-BC pilot before any scenario uses them.
+# Policy source: config/mdwr_regimes.yaml, interpreted from AFRF MWP #3
+# Table 29. These are reviewed policy targets. They are not yet runnable: the
+# state-transition pilot and the fresh-fvsbc THINQFA supplemental-record support
+# are still outstanding.
 #
-# The keyword sequence is not yet reviewed. A regime becomes runnable only when
-# it names the reviewed keyword order and the state key it produces.
+# THINQFA implements the BDq target: it thins an uneven-aged stand through a
+# diameter range to a q-factor distribution and a residual density. FVS expects
+# inches, square feet per acre, and a supplemental record that selects the
+# residual-density unit. The numeric fields below are converted from Table 29.
 
 regimes:
-  - id: SEL_BA18
-    label: Selection, retain 18 m2/ha
-    status: template
-    residual_basal_area_m2_ha: 18.0
-    cutting_cycle_years: 20
-    max_dbh_cm: null
+  - id: SEL_MDWR_HIGH
+    label: Single-tree selection, MDWR High
+    status: reviewed-policy-pending-pilot
+    habitat_class: High
+    residual_basal_area_m2_ha: 29.0
+    max_dbh_cm: 60.0
+    q_factor: 1.25
+    cutting_cycle_years: 30
     species_preference: null
     keywords:
-      - THINBTA
-    notes: Illustrative low-retention selection regime.
-  - id: SEL_BA25
-    label: Selection, retain 25 m2/ha
-    status: template
-    residual_basal_area_m2_ha: 25.0
-    cutting_cycle_years: 20
-    max_dbh_cm: null
+      - THINQFA
+    fvsbc_keyword:
+      name: THINQFA
+      fields:
+        year_or_cycle: 1
+        min_dbh_in: 0.0
+        max_dbh_in: 23.62
+        species_code: 0
+        q_factor: 1.25
+        class_width_in: 1.97
+        residual_density: 126.32
+      supplemental_record:
+        units: 0
+        units_label: basal_area_ft2_per_acre
+      notes: >-
+        Full-range BDq target. The pilot must establish whether the entry is
+        applied at year 0 or at the end of the 30-year cycle under the chosen
+        TIMEINT/NUMCYCLE settings.
+    notes: >-
+      Table 29 High: B 29 m2/ha, D 60 cm, q 1.25, 30-year cycle. The policy
+      direction is single-tree selection with groups of 2-5 trees at the
+      maximum diameter. FVS-BC is distance-independent and cannot enforce the
+      spatial grouping.
+
+  - id: SEL_MDWR_MODERATE
+    label: Single-tree selection, MDWR Moderate
+    status: reviewed-policy-pending-pilot
+    habitat_class: Moderate
+    residual_basal_area_m2_ha: 22.0
+    max_dbh_cm: 55.0
+    q_factor: 1.25
+    cutting_cycle_years: 30
     species_preference: null
     keywords:
-      - THINBTA
-    notes: Illustrative moderate-retention selection regime.
-  - id: SEL_BA30
-    label: Selection, retain 30 m2/ha
-    status: template
-    residual_basal_area_m2_ha: 30.0
-    cutting_cycle_years: 20
-    max_dbh_cm: null
+      - THINQFA
+    fvsbc_keyword:
+      name: THINQFA
+      fields:
+        year_or_cycle: 1
+        min_dbh_in: 0.0
+        max_dbh_in: 21.65
+        species_code: 0
+        q_factor: 1.25
+        class_width_in: 1.97
+        residual_density: 95.83
+      supplemental_record:
+        units: 0
+        units_label: basal_area_ft2_per_acre
+      notes: >-
+        Full-range BDq target. Pilot the entry-year alignment before use.
+    notes: >-
+      Table 29 Moderate: B 22 m2/ha, D 55 cm, q 1.25, 30-year cycle.
+
+  - id: SEL_MDWR_LOW
+    label: Single-tree selection, MDWR Low
+    status: reviewed-policy-pending-pilot
+    habitat_class: Low
+    residual_basal_area_m2_ha: 16.0
+    max_dbh_cm: 50.0
+    q_factor: 1.30
+    cutting_cycle_years: 30
     species_preference: null
     keywords:
-      - THINBTA
-    notes: Illustrative high-retention selection regime.
+      - THINQFA
+    fvsbc_keyword:
+      name: THINQFA
+      fields:
+        year_or_cycle: 1
+        min_dbh_in: 0.0
+        max_dbh_in: 19.69
+        species_code: 0
+        q_factor: 1.30
+        class_width_in: 1.97
+        residual_density: 69.70
+      supplemental_record:
+        units: 0
+        units_label: basal_area_ft2_per_acre
+      notes: >-
+        Full-range BDq target. Pilot the entry-year alignment before use.
+    notes: >-
+      Table 29 Low: B 16 m2/ha, D 50 cm, q 1.30, 30-year cycle.
+
+design_variants:
+  - id: SEL_MDWR_SMALL_TREE
+    label: Small-tree thinning below 37.5 cm DBH
+    status: design-only
+    description: >-
+      The plan says harvest opportunities concentrate on trees below 37.5 cm
+      DBH and that the maximum-diameter class is retained in groups of 2-5
+      trees. A full-range THINQFA removes some trees above 37.5 cm to reach
+      the BDq target. This variant instead thins only the 0-37.5 cm component.
+    fvsbc_keyword:
+      name: THINQFA
+      fields:
+        year_or_cycle: 1
+        min_dbh_in: 0.0
+        max_dbh_in: 14.76
+        species_code: 0
+        q_factor: 1.25
+        class_width_in: 1.97
+        residual_density: computed-per-state
+      supplemental_record:
+        units: 0
+        units_label: basal_area_ft2_per_acre
+    residual_density_rule: >-
+      Table 29 residual B minus the basal area retained above 37.5 cm DBH in
+      the current state, floored at zero. The pilot must compute this per state,
+      not use a fixed number.
+    notes: >-
+      This is closer to the operational wording but it does not guarantee the
+      full-stand q target. Compare it with the full-range regime in the pilot
+      and report which one better matches Figure 11 and Table 29.
+
+wrapper_gaps:
+  - id: thinqfa_supplemental_record
+    description: >-
+      fresh-fvsbc 0.11.0 models keyword parameters but not THINQFA's
+      supplemental residual-density-units record. The wrapper must support a
+      one-line supplemental record without an END terminator before these
+      regimes can run.
+    status: blocked
+    target_repository: UBC-FRESH/fresh-fvsbc
+  - id: entry_year_semantics
+    description: >-
+      The pilot must confirm whether THINQFA field 1 is applied at the start of
+      the named cycle or at the end of the 30-year growth period under the
+      chosen TIMEINT/NUMCYCLE settings.
+    status: open
+  - id: spatial_grouping
+    description: >-
+      The 2-5 tree maximum-diameter groups are a spatial constraint. FVS-BC
+      cannot model it. Enforce or report it in ws4/post-processing.
+    status: open
+
+benchmark:
+  figure11_table: data/benchmarks/mwp3_figure11_target_stand_structure.csv
+  figure11_metadata: data/benchmarks/mwp3_figure11_target_stand_structure.metadata.json
+  figure11_review: data/benchmarks/mwp3_figure11_review.jsonl
+  acceptance:
+    - compare residual basal area by habitat class with Table 29 (29/22/16 m2/ha)
+    - compare maximum DBH with Table 29 (60/55/50 cm)
+    - compare the residual 5 cm diameter distribution with Figure 11
+    - report the recovered Figure 11 sums (17.02/22.96/30.17 m2/ha) as a shape check, not a target
+    - compare thinning yield with the plan's ~50 m3/ha expectation
+    - compare treated area with the 82.0 ha/year selection AAC

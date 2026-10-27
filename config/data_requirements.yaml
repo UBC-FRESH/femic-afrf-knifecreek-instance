@@ -82,8 +82,69 @@ sources:
     notes: >-
       The approved UWR layer and the Cariboo long-term objective maps are
       catalogue Access Only / Government. The public stand structure habitat
-      classes are acquired, but the legal constraint must come from AFRF or the
-      province before a scenario can claim compliance.
+      classes are acquired, and MWP #3 gives the public management direction
+      (single-tree selection, BDq, 30-year cycle, 95% modified harvest), but the
+      legal constraint must come from AFRF or the province before a scenario can
+      claim compliance.
+
+  - id: mwp3_management_plan
+    description: AFRF Management and Working Plan #3, including the Knife Creek MDWR direction.
+    status: acquired
+    public_release: "public UBC AFRF planning document; UBC copyright, not OGL"
+    path: reference/AFRF-management-working-plan-3-2007.pdf
+    sha256: 9bfd8b8f0449f45fb97fcf529236640ace09b73ba74f77001f677eee7307ff6a
+    notes: >-
+      January 1, 2007. Table 29 gives the MDWR target structures (High
+      29 m2/ha, D 60 cm, q 1.25; Moderate 22/55/1.25; Low 16/50/1.30; 30-year
+      cycle). Table 35 gives the KC AAC (82.0 ha/yr selection, 11.2 ha/yr
+      salvage). The plan is public management direction, not the legal UWR
+      order. Extracted contract: config/mdwr_regimes.yaml.
+
+  - id: mwp3_transition_strategy_2003
+    description: CCLUP Mule Deer Strategy Committee (2003), Transition period harvest opportunities, Knife Creek.
+    status: blocked
+    public_release: TBD
+    notes: >-
+      Cited by MWP #3 as the Knife Creek-specific transition strategy. Not
+      acquired. The public plan gives the long-term Table 29 structure but not
+      the transition-period order.
+
+  - id: mwp3_figure11_targets
+    description: Recovered Figure 11 target stand structure by MDWR habitat class.
+    status: reviewed
+    public_release: "derived from a public UBC AFRF planning document"
+    path: data/benchmarks/mwp3_figure11_target_stand_structure.csv
+    metadata_path: data/benchmarks/mwp3_figure11_target_stand_structure.metadata.json
+    review_path: data/benchmarks/mwp3_figure11_review.jsonl
+    notes: >-
+      figrecover 0.1.0a1 recovery of MWP #3 Figure 11 (PDF page 97). Recovered
+      basal-area sums 17.02/22.96/30.17 m2/ha for Low/Moderate/High versus
+      Table 29 targets 16/22/29. Use Table 29 for the target and Figure 11 for
+      the shape. See notes/reference/mwp3-figure11-recovery.md.
+
+  - id: mwp3_kc_compartments
+    description: Knife Creek compartment and planned harvest-unit area table.
+    status: acquired
+    public_release: "public UBC AFRF planning document"
+    path: data/benchmarks/mwp3_kc_compartments.csv
+    metadata_path: data/benchmarks/mwp3_kc_compartments.metadata.json
+    notes: >-
+      Appendix 9, PDF page 162 (printed 150). Gross 3,485.6 ha, net 3,162.3 ha,
+      with 48.3 ha non-productive, 125.5 ha ESA, 64.4 ha reserve, and 84.1 ha
+      permanent OGMA. The source map is schematic and has no coordinate grid;
+      this is a table transcription, not a GIS layer.
+
+  - id: site_index_table
+    description: Klinka 2004 site-index estimates by site series and species.
+    status: acquired
+    public_release: "public UBC AFRF report; UBC copyright, not OGL"
+    path: data/site_index/klinka_2004_site_index.csv
+    metadata_path: data/site_index/klinka_2004_site_index.metadata.json
+    notes: >-
+      Tables 8.2.1-8.2.4, PDF pages 62-63 (printed 53-54). 105 rows covering
+      IDFxm, IDFdk3, SBSdw1 and ICHmk3. Site index in metres at 50 years breast
+      height, with the report's 5-class scale and limited/non-viable flags.
+      Direct table transcription, not figure recovery.
 
   - id: site_series_classification
     description: AFRF site-series classification and identification tools.
@@ -113,8 +174,10 @@ sources:
     status: optional
     public_release: TBD
     notes: >-
-      Preferred stem-list basis if AFRF can release it. Without it, the stem
-      list must be reconstructed from VRI and nemora and labelled synthetic.
+      Preferred stem-list basis. An AFRF data dump has been requested from
+      Ionut Aron (AFRF data manager). If measured tallies are released, use
+      them and record the plot design. Otherwise reconstruct from VRI and
+      nemora and label the result synthetic.
 
   - id: forest_cover_attributes
     description: Height, diameter, density, and species attributes beyond VRI.

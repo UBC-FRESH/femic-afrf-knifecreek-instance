@@ -76,6 +76,7 @@ disturbance, and mule-deer constraints, then construct reviewed stem lists.
 - [x] P1.1 Acquire and checksum the legal boundary and block identifier (#8)
 - [x] P1.2 Acquire VRI, BEC, site-series, and disturbance source data (#9)
 - [ ] P1.2a Acquire the AFRF site-series map and legal UWR order (#15)
+- [x] P1.2b Recover public figure and table benchmarks (#18)
 - [ ] P1.3 Acquire or reconstruct tree-level tallies and CFI plot data (#10)
 - [ ] P1.4 Build AU strata and nemora stem populations (#11)
 - [ ] P1.5 Record the data-quality and coverage audit (#12)
@@ -109,6 +110,25 @@ Findings:
   report's map pockets/CD-ROM. The spatial site-series map is still P1.2a.
 - The AFRF site-series map and the legal UWR order are P1.2a. They are not
   inferred from BEC or the public habitat classes.
+- The AFRF Management and Working Plan #3 (2007) is acquired. It gives the
+  Knife Creek MDWR contract: single-tree selection, 30-year cycle, Table 29
+  residual structures (High 29 m²/ha, D 60 cm, q 1.25; Moderate 22/55/1.25;
+  Low 16/50/1.30), and Table 35 AAC (82.0 ha/year selection, 11.2 ha/year
+  salvage). The plan outcome is 0% conventional harvest, 95% modified harvest,
+  5% no harvest.
+- MWP #3 Figure 11 was recovered with `figrecover` 0.1.0a1. The reviewed table
+  is `data/benchmarks/mwp3_figure11_target_stand_structure.csv`; recovered BA
+  sums are 17.02/22.96/30.17 m²/ha vs Table 29 targets 16/22/29. Use Table 29
+  for the target and Figure 11 for the shape.
+- The Klinka 2004 site-index tables are transcribed as
+  `data/site_index/klinka_2004_site_index.csv` (105 rows; IDFxm, IDFdk3,
+  SBSdw1, ICHmk3).
+- MWP #3 Appendix 9 gives the KC01–KC11 and RD05–RD07 compartment table (gross
+  3,485.6 ha, net 3,162.3 ha). The map is schematic and has no coordinate grid;
+  it is not a georeferenced GIS layer.
+- `THINQFA` is the correct FVS-BC keyword for the Table 29 BDq targets.
+  `THINBTA` is a trees-per-acre target, not a basal-area target. The wrapper
+  does not yet support `THINQFA`'s supplemental record.
 
 Acceptance criteria:
 
@@ -221,8 +241,13 @@ Acceptance criteria:
 1. Phase 0 is complete under parent issue #1.
 2. Phase 1 is active under parent issue #7. P1.1 (boundary) and P1.2 (public
    layers) are complete.
-3. P1.2a (#15) is blocked on the AFRF site-series map and the legal UWR order.
-4. P1.3 (#10) and P1.4 (#11) are the next model-preparation tasks: establish a
+3. P1.2a (#15) is blocked on the AFRF site-series map, the legal UWR order and
+   the 2003 transition strategy.
+4. P1.2b (#18) is complete: public benchmarks from MWP #3 Figure 11, the
+   Appendix 9 compartment table, and the Klinka 2004 site-index tables are
+   reviewed and committed.
+5. P1.3 (#10) and P1.4 (#11) are the next model-preparation tasks: establish a
    stem-list basis and build AU strata / nemora populations.
-5. Do not start the FVS-BC pilot until the site-series/UWR gaps are resolved or
-   explicitly accepted, and the stem-list basis is reviewed.
+6. Do not start the FVS-BC pilot until the site-series/UWR gaps are resolved or
+   explicitly accepted, the stem-list basis is reviewed, and `THINQFA`
+   supplemental-record support is added to `fresh-fvsbc`.
