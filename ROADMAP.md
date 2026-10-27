@@ -129,7 +129,8 @@ Findings:
   it is not a georeferenced GIS layer.
 - `THINQFA` is the correct FVS-BC keyword for the Table 29 BDq targets.
   `THINBTA` is a trees-per-acre target, not a basal-area target. The wrapper
-  does not yet support `THINQFA`'s supplemental record.
+  now supports `THINQFA`'s supplemental record at pin `d86e78b` (P1.2c);
+  the entry-year/cycle semantics remain a pilot question.
 
 Acceptance criteria:
 
@@ -250,5 +251,5 @@ Acceptance criteria:
 5. P1.3 (#10) and P1.4 (#11) are the next model-preparation tasks: establish a
    stem-list basis and build AU strata / nemora populations.
 6. Do not start the FVS-BC pilot until the site-series/UWR gaps are resolved or
-   explicitly accepted, the stem-list basis is reviewed, and `THINQFA`
-   supplemental-record support is added to `fresh-fvsbc`.
+   explicitly accepted, the stem-list basis is reviewed, and the `THINQFA`
+   entry-year/cycle semantics are settled in a controlled pilot.
