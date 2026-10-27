@@ -102,8 +102,8 @@ conditional lists. The three-stand FVS-BC pilot results are in
 
 | Stand | Target QMD | Year 30 pre | Year 30 post | Removed TPH |
 | --- | ---: | ---: | ---: | ---: |
-| PSP-REG-003 | 22 | 41 | 35 | 195 |
-| PSP-REG-004 | 24 | 40 | 38 | 88 |
+| PSP-REG-003 | 22 | 41 | 35 | 197 |
+| PSP-REG-004 | 24 | 41 | 38 | 91 |
 
 Again the residual is above the 29 m²/ha target because of the q deficit in the
 grown stand.

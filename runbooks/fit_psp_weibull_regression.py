@@ -196,7 +196,7 @@ def main() -> None:
             draws = np.concatenate([draws, extra[(extra >= LOWER_CM) & (extra <= 150.0)]])[:n]
         qmd_draw = float(np.sqrt(np.mean(draws**2)))
         scale = float(t["qmd_cm"]) / qmd_draw
-        draws = np.sort(draws * scale)
+        draws = np.sort(np.maximum(draws * scale, LOWER_CM))
         for j, dbh in enumerate(draws, start=1):
             b = int(dbh // 2 * 2 + 1)
             sub = comp[comp.dbh_bin == b]

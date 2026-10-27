@@ -1,176 +1,176 @@
 [
   {
     "stand_id": "PSP-REG-001",
-    "dbh_cm": 8.8,
-    "height_m": 11.7,
+    "dbh_cm": 9.1,
+    "height_m": 11.9,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-001",
-    "dbh_cm": 8.8,
+    "dbh_cm": 9.1,
+    "height_m": 11.8,
+    "crown_ratio": 0.3
+  },
+  {
+    "stand_id": "PSP-REG-001",
+    "dbh_cm": 9.1,
     "height_m": 11.5,
-    "crown_ratio": 0.3
-  },
-  {
-    "stand_id": "PSP-REG-001",
-    "dbh_cm": 8.8,
-    "height_m": 11.3,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-001",
-    "dbh_cm": 8.8,
-    "height_m": 8.1,
+    "dbh_cm": 9.1,
+    "height_m": 8.3,
     "crown_ratio": 0.55
   },
   {
     "stand_id": "PSP-REG-001",
-    "dbh_cm": 8.8,
-    "height_m": 7.1,
+    "dbh_cm": 9.1,
+    "height_m": 7.3,
     "crown_ratio": 0.55
   },
   {
     "stand_id": "PSP-REG-001",
-    "dbh_cm": 8.8,
-    "height_m": 9.1,
+    "dbh_cm": 9.1,
+    "height_m": 9.2,
     "crown_ratio": 0.55
   },
   {
     "stand_id": "PSP-REG-001",
-    "dbh_cm": 8.8,
-    "height_m": 7.4,
+    "dbh_cm": 9.1,
+    "height_m": 7.5,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-001",
-    "dbh_cm": 8.8,
-    "height_m": 10.2,
+    "dbh_cm": 9.1,
+    "height_m": 10.4,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-001",
-    "dbh_cm": 8.9,
-    "height_m": 7.6,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-001",
-    "dbh_cm": 8.9,
-    "height_m": 7.8,
-    "crown_ratio": 0.3
-  },
-  {
-    "stand_id": "PSP-REG-001",
-    "dbh_cm": 8.9,
-    "height_m": 5.8,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-001",
-    "dbh_cm": 8.9,
-    "height_m": 10.7,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-001",
-    "dbh_cm": 8.9,
-    "height_m": 9.6,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-001",
-    "dbh_cm": 8.9,
-    "height_m": 8.8,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-001",
-    "dbh_cm": 8.9,
-    "height_m": 10.7,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-001",
-    "dbh_cm": 8.9,
-    "height_m": 7.9,
-    "crown_ratio": 0.3
-  },
-  {
-    "stand_id": "PSP-REG-001",
-    "dbh_cm": 8.9,
-    "height_m": 8.7,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-001",
-    "dbh_cm": 8.9,
-    "height_m": 6.7,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-001",
-    "dbh_cm": 8.9,
-    "height_m": 6.8,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-001",
-    "dbh_cm": 8.9,
-    "height_m": 8.9,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-001",
-    "dbh_cm": 8.9,
-    "height_m": 8.1,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-001",
-    "dbh_cm": 9.0,
-    "height_m": 7.1,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-001",
-    "dbh_cm": 9.0,
+    "dbh_cm": 9.1,
     "height_m": 7.7,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-001",
-    "dbh_cm": 9.0,
-    "height_m": 12.9,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-001",
-    "dbh_cm": 9.0,
-    "height_m": 14.0,
+    "dbh_cm": 9.1,
+    "height_m": 8.0,
     "crown_ratio": 0.3
   },
   {
     "stand_id": "PSP-REG-001",
-    "dbh_cm": 9.0,
+    "dbh_cm": 9.1,
+    "height_m": 5.9,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-001",
+    "dbh_cm": 9.1,
+    "height_m": 10.9,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-001",
+    "dbh_cm": 9.1,
+    "height_m": 9.8,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-001",
+    "dbh_cm": 9.1,
+    "height_m": 9.0,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-001",
+    "dbh_cm": 9.1,
+    "height_m": 10.8,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-001",
+    "dbh_cm": 9.1,
+    "height_m": 8.0,
+    "crown_ratio": 0.3
+  },
+  {
+    "stand_id": "PSP-REG-001",
+    "dbh_cm": 9.1,
+    "height_m": 8.9,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-001",
+    "dbh_cm": 9.1,
+    "height_m": 6.8,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-001",
+    "dbh_cm": 9.1,
+    "height_m": 6.9,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-001",
+    "dbh_cm": 9.1,
+    "height_m": 9.0,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-001",
+    "dbh_cm": 9.1,
+    "height_m": 8.2,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-001",
+    "dbh_cm": 9.1,
+    "height_m": 7.2,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-001",
+    "dbh_cm": 9.1,
+    "height_m": 7.8,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-001",
+    "dbh_cm": 9.1,
+    "height_m": 13.0,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-001",
+    "dbh_cm": 9.1,
+    "height_m": 14.1,
+    "crown_ratio": 0.3
+  },
+  {
+    "stand_id": "PSP-REG-001",
+    "dbh_cm": 9.1,
     "height_m": 11.3,
     "crown_ratio": 0.55
   },
   {
     "stand_id": "PSP-REG-001",
-    "dbh_cm": 9.0,
-    "height_m": 8.4,
+    "dbh_cm": 9.1,
+    "height_m": 8.5,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-001",
-    "dbh_cm": 9.0,
+    "dbh_cm": 9.1,
     "height_m": 7.5,
     "crown_ratio": 0.45
   },
   {
     "stand_id": "PSP-REG-001",
-    "dbh_cm": 9.0,
-    "height_m": 11.9,
+    "dbh_cm": 9.1,
+    "height_m": 12.0,
     "crown_ratio": 0.55
   },
   {
@@ -194,7 +194,7 @@
   {
     "stand_id": "PSP-REG-001",
     "dbh_cm": 9.1,
-    "height_m": 11.3,
+    "height_m": 11.4,
     "crown_ratio": 0.65
   },
   {
@@ -5401,206 +5401,206 @@
   },
   {
     "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.6,
-    "height_m": 12.1,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.6,
-    "height_m": 8.2,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.6,
-    "height_m": 6.1,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.6,
-    "height_m": 10.2,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.6,
-    "height_m": 13.1,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.6,
-    "height_m": 8.1,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.6,
-    "height_m": 7.3,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.7,
-    "height_m": 7.8,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.7,
-    "height_m": 7.4,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.7,
-    "height_m": 9.4,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.7,
-    "height_m": 10.3,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.8,
-    "height_m": 9.5,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.8,
-    "height_m": 7.6,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.8,
-    "height_m": 7.9,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.8,
-    "height_m": 6.6,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.8,
-    "height_m": 7.3,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.8,
-    "height_m": 7.3,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.8,
-    "height_m": 10.2,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.9,
-    "height_m": 5.6,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.9,
+    "dbh_cm": 9.1,
     "height_m": 12.4,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.9,
-    "height_m": 6.0,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.9,
-    "height_m": 7.2,
+    "dbh_cm": 9.1,
+    "height_m": 8.6,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.9,
-    "height_m": 7.8,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.9,
-    "height_m": 9.7,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.9,
-    "height_m": 8.9,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.9,
-    "height_m": 6.7,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 8.9,
-    "height_m": 10.9,
-    "crown_ratio": 0.3
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 9.0,
-    "height_m": 11.1,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 9.0,
-    "height_m": 10.7,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 9.0,
-    "height_m": 8.1,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 9.0,
-    "height_m": 8.7,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 9.0,
-    "height_m": 8.1,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-002",
-    "dbh_cm": 9.0,
+    "dbh_cm": 9.1,
     "height_m": 6.4,
     "crown_ratio": 0.55
   },
   {
     "stand_id": "PSP-REG-002",
-    "dbh_cm": 9.0,
-    "height_m": 11.6,
+    "dbh_cm": 9.1,
+    "height_m": 10.7,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 13.5,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 8.5,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 7.6,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 8.1,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 7.7,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 9.8,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 10.6,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 9.7,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 7.8,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 8.1,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 6.7,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 7.5,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 7.4,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 10.4,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 5.7,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 12.5,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 6.1,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 7.3,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 7.9,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 9.8,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 9.0,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 6.8,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 11.0,
+    "crown_ratio": 0.3
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 11.1,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 10.8,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 8.2,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 8.8,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 8.2,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 6.4,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-002",
+    "dbh_cm": 9.1,
+    "height_m": 11.7,
     "crown_ratio": 0.55
   },
   {
@@ -5612,7 +5612,7 @@
   {
     "stand_id": "PSP-REG-002",
     "dbh_cm": 9.1,
-    "height_m": 9.3,
+    "height_m": 9.4,
     "crown_ratio": 0.65
   },
   {
@@ -10201,247 +10201,247 @@
   },
   {
     "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.3,
-    "height_m": 7.6,
+    "dbh_cm": 9.1,
+    "height_m": 8.2,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.4,
-    "height_m": 8.6,
+    "dbh_cm": 9.1,
+    "height_m": 9.1,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.5,
-    "height_m": 9.5,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.5,
-    "height_m": 6.8,
-    "crown_ratio": 0.3
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.5,
-    "height_m": 7.2,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.5,
-    "height_m": 7.8,
-    "crown_ratio": 0.3
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.5,
-    "height_m": 6.3,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.5,
-    "height_m": 7.3,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.5,
+    "dbh_cm": 9.1,
     "height_m": 10.1,
     "crown_ratio": 0.55
   },
   {
     "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.6,
-    "height_m": 6.2,
+    "dbh_cm": 9.1,
+    "height_m": 7.2,
+    "crown_ratio": 0.3
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 7.6,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 8.2,
+    "crown_ratio": 0.3
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 6.7,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.6,
-    "height_m": 7.5,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.6,
-    "height_m": 7.7,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.6,
-    "height_m": 8.1,
+    "dbh_cm": 9.1,
+    "height_m": 7.6,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.6,
-    "height_m": 9.0,
+    "dbh_cm": 9.1,
+    "height_m": 10.6,
     "crown_ratio": 0.55
   },
   {
     "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.6,
-    "height_m": 8.1,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.6,
-    "height_m": 9.1,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.6,
-    "height_m": 8.9,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.7,
-    "height_m": 8.4,
+    "dbh_cm": 9.1,
+    "height_m": 6.4,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.7,
+    "dbh_cm": 9.1,
     "height_m": 7.8,
     "crown_ratio": 0.55
   },
   {
     "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.7,
-    "height_m": 12.0,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.7,
-    "height_m": 8.7,
+    "dbh_cm": 9.1,
+    "height_m": 8.1,
     "crown_ratio": 0.55
   },
   {
     "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.8,
-    "height_m": 8.6,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.8,
-    "height_m": 7.2,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.9,
-    "height_m": 10.4,
-    "crown_ratio": 0.3
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.9,
-    "height_m": 8.4,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.9,
+    "dbh_cm": 9.1,
     "height_m": 8.5,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.9,
+    "dbh_cm": 9.1,
+    "height_m": 9.4,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 8.5,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 9.4,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 9.3,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 8.8,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 8.1,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 12.3,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 9.0,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 8.8,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 7.4,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 10.6,
+    "crown_ratio": 0.3
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 8.5,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 8.7,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 8.9,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 8.4,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 10.8,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 7.9,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 6.4,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 7.9,
+    "crown_ratio": 0.3
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 7.1,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 9.3,
+    "crown_ratio": 0.3
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
+    "height_m": 8.3,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-003",
+    "dbh_cm": 9.1,
     "height_m": 8.7,
     "crown_ratio": 0.55
   },
   {
     "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.9,
-    "height_m": 8.2,
+    "dbh_cm": 9.1,
+    "height_m": 10.1,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.9,
-    "height_m": 10.7,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.9,
-    "height_m": 7.8,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.9,
-    "height_m": 6.3,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.9,
-    "height_m": 7.8,
-    "crown_ratio": 0.3
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 8.9,
-    "height_m": 7.0,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 9.0,
-    "height_m": 9.2,
-    "crown_ratio": 0.3
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 9.0,
-    "height_m": 8.2,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 9.0,
-    "height_m": 8.7,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 9.0,
-    "height_m": 10.0,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-003",
-    "dbh_cm": 9.0,
+    "dbh_cm": 9.1,
     "height_m": 7.3,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-003",
-    "dbh_cm": 9.0,
-    "height_m": 9.5,
+    "dbh_cm": 9.1,
+    "height_m": 9.6,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-003",
-    "dbh_cm": 9.0,
-    "height_m": 10.2,
+    "dbh_cm": 9.1,
+    "height_m": 10.3,
     "crown_ratio": 0.3
   },
   {
     "stand_id": "PSP-REG-003",
-    "dbh_cm": 9.0,
+    "dbh_cm": 9.1,
     "height_m": 7.6,
     "crown_ratio": 0.65
   },
@@ -14701,260 +14701,260 @@
   },
   {
     "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.1,
-    "height_m": 7.4,
+    "dbh_cm": 9.1,
+    "height_m": 8.1,
     "crown_ratio": 0.55
   },
   {
     "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.1,
-    "height_m": 7.6,
+    "dbh_cm": 9.1,
+    "height_m": 8.3,
     "crown_ratio": 0.3
   },
   {
     "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.1,
-    "height_m": 6.7,
+    "dbh_cm": 9.1,
+    "height_m": 7.3,
     "crown_ratio": 0.3
   },
   {
     "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.2,
-    "height_m": 6.3,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.2,
-    "height_m": 9.6,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.2,
+    "dbh_cm": 9.1,
     "height_m": 6.8,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.2,
-    "height_m": 6.3,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.2,
-    "height_m": 10.2,
+    "dbh_cm": 9.1,
+    "height_m": 10.4,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 7.3,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 6.8,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 11.1,
     "crown_ratio": 0.45
   },
   {
     "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.2,
-    "height_m": 9.2,
+    "dbh_cm": 9.1,
+    "height_m": 9.9,
     "crown_ratio": 0.55
   },
   {
     "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.2,
-    "height_m": 13.7,
+    "dbh_cm": 9.1,
+    "height_m": 14.4,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.3,
-    "height_m": 9.1,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.3,
-    "height_m": 7.6,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.4,
-    "height_m": 7.5,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.4,
-    "height_m": 8.5,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.4,
-    "height_m": 6.7,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.4,
-    "height_m": 7.2,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.4,
+    "dbh_cm": 9.1,
     "height_m": 9.8,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.4,
-    "height_m": 8.0,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.4,
-    "height_m": 7.1,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.4,
-    "height_m": 5.7,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.4,
-    "height_m": 5.4,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.5,
-    "height_m": 7.7,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.5,
-    "height_m": 6.9,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.6,
-    "height_m": 6.9,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.6,
-    "height_m": 7.5,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.6,
-    "height_m": 9.0,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.6,
-    "height_m": 7.7,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.6,
+    "dbh_cm": 9.1,
     "height_m": 8.1,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.6,
-    "height_m": 7.0,
+    "dbh_cm": 9.1,
+    "height_m": 8.1,
     "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.6,
-    "height_m": 5.3,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.6,
-    "height_m": 7.9,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.7,
-    "height_m": 9.4,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.8,
-    "height_m": 5.6,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.8,
-    "height_m": 8.4,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.8,
-    "height_m": 7.3,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.8,
-    "height_m": 9.4,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.8,
-    "height_m": 7.6,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.9,
-    "height_m": 8.5,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 8.9,
-    "height_m": 11.4,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 9.0,
-    "height_m": 6.1,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 9.0,
-    "height_m": 9.5,
-    "crown_ratio": 0.3
-  },
-  {
-    "stand_id": "PSP-REG-004",
-    "dbh_cm": 9.0,
-    "height_m": 6.4,
-    "crown_ratio": 0.55
   },
   {
     "stand_id": "PSP-REG-004",
     "dbh_cm": 9.1,
     "height_m": 9.0,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 7.1,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 7.7,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 10.4,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 8.5,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 7.5,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 6.1,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 5.8,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 8.2,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 7.3,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 7.2,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 7.9,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 9.4,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 8.1,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 8.4,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 7.3,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 5.5,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 8.3,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 9.6,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 5.8,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 8.6,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 7.5,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 9.6,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 7.7,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 8.7,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 11.6,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 6.2,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 9.6,
+    "crown_ratio": 0.3
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 6.5,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-004",
+    "dbh_cm": 9.1,
+    "height_m": 9.1,
     "crown_ratio": 0.65
   },
   {
@@ -14966,13 +14966,13 @@
   {
     "stand_id": "PSP-REG-004",
     "dbh_cm": 9.1,
-    "height_m": 10.1,
+    "height_m": 10.2,
     "crown_ratio": 0.55
   },
   {
     "stand_id": "PSP-REG-004",
     "dbh_cm": 9.1,
-    "height_m": 9.5,
+    "height_m": 9.6,
     "crown_ratio": 0.65
   },
   {
@@ -18601,247 +18601,247 @@
   },
   {
     "stand_id": "PSP-REG-005",
-    "dbh_cm": 7.7,
-    "height_m": 7.4,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 7.7,
-    "height_m": 5.2,
-    "crown_ratio": 0.3
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 7.8,
-    "height_m": 6.9,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 7.8,
-    "height_m": 7.6,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 7.8,
-    "height_m": 8.1,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 7.8,
-    "height_m": 5.3,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 7.8,
-    "height_m": 7.7,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 7.9,
-    "height_m": 6.5,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 7.9,
-    "height_m": 8.4,
-    "crown_ratio": 0.45
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.0,
-    "height_m": 10.5,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.0,
-    "height_m": 9.7,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.0,
-    "height_m": 9.9,
-    "crown_ratio": 0.3
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.1,
-    "height_m": 9.0,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.1,
-    "height_m": 6.7,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.1,
-    "height_m": 6.3,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.1,
-    "height_m": 9.4,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.2,
-    "height_m": 7.3,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.3,
-    "height_m": 11.4,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.3,
-    "height_m": 8.1,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.3,
-    "height_m": 6.3,
-    "crown_ratio": 0.3
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.4,
-    "height_m": 11.3,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.4,
+    "dbh_cm": 9.1,
     "height_m": 8.5,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.4,
-    "height_m": 9.3,
     "crown_ratio": 0.55
   },
   {
     "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.4,
-    "height_m": 10.3,
+    "dbh_cm": 9.1,
+    "height_m": 5.9,
+    "crown_ratio": 0.3
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
+    "height_m": 7.8,
     "crown_ratio": 0.55
   },
   {
     "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.5,
-    "height_m": 7.2,
+    "dbh_cm": 9.1,
+    "height_m": 8.6,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.6,
+    "dbh_cm": 9.1,
+    "height_m": 9.1,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
     "height_m": 6.0,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.6,
-    "height_m": 11.7,
+    "dbh_cm": 9.1,
+    "height_m": 8.7,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
+    "height_m": 7.3,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
+    "height_m": 9.3,
+    "crown_ratio": 0.45
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
+    "height_m": 11.2,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
+    "height_m": 10.7,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.6,
-    "height_m": 7.6,
+    "dbh_cm": 9.1,
+    "height_m": 10.5,
+    "crown_ratio": 0.3
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
+    "height_m": 9.6,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.8,
-    "height_m": 6.8,
+    "dbh_cm": 9.1,
+    "height_m": 7.4,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.8,
-    "height_m": 7.6,
-    "crown_ratio": 0.65
+    "dbh_cm": 9.1,
+    "height_m": 6.9,
+    "crown_ratio": 0.55
   },
   {
     "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.8,
+    "dbh_cm": 9.1,
+    "height_m": 10.3,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
     "height_m": 7.9,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.8,
-    "height_m": 9.0,
-    "crown_ratio": 0.55
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.8,
-    "height_m": 8.2,
+    "dbh_cm": 9.1,
+    "height_m": 12.2,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.8,
-    "height_m": 11.5,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.9,
-    "height_m": 7.5,
+    "dbh_cm": 9.1,
+    "height_m": 8.7,
     "crown_ratio": 0.55
   },
   {
     "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.9,
+    "dbh_cm": 9.1,
+    "height_m": 6.7,
+    "crown_ratio": 0.3
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
+    "height_m": 11.8,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
+    "height_m": 9.1,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
+    "height_m": 9.9,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
+    "height_m": 10.7,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
+    "height_m": 7.6,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
+    "height_m": 6.3,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
+    "height_m": 12.0,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
+    "height_m": 7.9,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
+    "height_m": 7.1,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
+    "height_m": 7.8,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
     "height_m": 8.1,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-005",
-    "dbh_cm": 8.9,
-    "height_m": 10.6,
-    "crown_ratio": 0.65
-  },
-  {
-    "stand_id": "PSP-REG-005",
-    "dbh_cm": 9.0,
-    "height_m": 10.4,
+    "dbh_cm": 9.1,
+    "height_m": 9.2,
     "crown_ratio": 0.55
   },
   {
     "stand_id": "PSP-REG-005",
-    "dbh_cm": 9.0,
+    "dbh_cm": 9.1,
+    "height_m": 8.5,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
+    "height_m": 11.8,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
+    "height_m": 7.7,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
+    "height_m": 8.3,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
+    "height_m": 10.7,
+    "crown_ratio": 0.65
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
+    "height_m": 10.5,
+    "crown_ratio": 0.55
+  },
+  {
+    "stand_id": "PSP-REG-005",
+    "dbh_cm": 9.1,
     "height_m": 5.8,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-005",
-    "dbh_cm": 9.0,
-    "height_m": 6.9,
+    "dbh_cm": 9.1,
+    "height_m": 7.0,
     "crown_ratio": 0.65
   },
   {
     "stand_id": "PSP-REG-005",
-    "dbh_cm": 9.0,
+    "dbh_cm": 9.1,
     "height_m": 9.8,
     "crown_ratio": 0.65
   },
