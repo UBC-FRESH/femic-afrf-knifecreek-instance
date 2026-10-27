@@ -1,14 +1,16 @@
 # Data directory
 
-No source data is committed yet.
-
-Planned layout:
+Public source and derived data are committed with provenance. Restricted or
+Access Only sources are represented by a checksum, schema, or derived summary.
 
 | Path | Purpose | Git |
 | --- | --- | --- |
-| `boundaries/` | Knife Creek legal boundary | Public only, with permission |
-| `inventory/` | VRI, BEC, site index, disturbance | Public only, with permission |
-| `habitat/` | Mule-deer winter-range layers | Public only, with permission |
+| `boundaries/` | Knife Creek legal boundary | Public, with permission |
+| `inventory/` | VRI, BEC, site index, disturbance | Public, with permission |
+| `habitat/` | Mule-deer winter-range layers | Public, with permission |
+| `benchmarks/` | Reviewed public figure/table benchmarks | Derived, reviewed |
+| `site_index/` | Klinka 2004 site-index tables | Derived, transcribed |
+| `psp/` | Public FAIB PSP-derived IDF Cariboo stem-list analog | Derived, public |
 | `fvsbc/populations/` | Stem-population JSON per AU | Reviewed derived data |
 | `downloads/` | Local downloads | Ignored |
 | `raw/` | Local raw source copies | Ignored |

@@ -174,10 +174,26 @@ sources:
     status: optional
     public_release: TBD
     notes: >-
-      Preferred stem-list basis. An AFRF data dump has been requested from
+      Preferred KC stem-list basis. An AFRF data dump has been requested from
       Ionut Aron (AFRF data manager). If measured tallies are released, use
-      them and record the plot design. Otherwise reconstruct from VRI and
-      nemora and label the result synthetic.
+      them and record the plot design. The public IDF Cariboo PSP analog below
+      is acquired for an interim FVS-BC structural pilot; it is not KC data.
+
+  - id: psp_idf_cariboo_stemlists
+    description: Public FAIB PSP-derived IDF Cariboo stem lists.
+    status: acquired
+    public_release: "yes (Open Government Licence - British Columbia)"
+    path: data/psp/idf_cariboo_psp_stemlist_sample.csv
+    population_path: data/psp/idf_cariboo_psp_stemlist_population.json
+    plot_path: data/psp/idf_cariboo_psp_plots.csv
+    fit_path: data/psp/idf_cariboo_psp_pooled_weibull.json
+    raw_source: https://www.for.gov.bc.ca/ftp/HTS/external/!publish/ground_plot_compilations/psp/
+    notes: >-
+      First-measurement, Douglas-fir-leading, mature IDF PSPs in the Williams
+      Lake and 100 Mile House TSAs. 51 selected plots, 4,553 live trees >=9.1 cm,
+      45 stable Weibull fits, 24 synthetic one-hectare stem lists (22,178
+      trees). This is a regional IDF analog, not Knife Creek data. Raw PSP
+      files are not committed; see notes/reference/psp-idf-cariboo-stemlists.md.
 
   - id: forest_cover_attributes
     description: Height, diameter, density, and species attributes beyond VRI.

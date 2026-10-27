@@ -1,0 +1,4 @@
+stand_id,source_plot,source_age,source_ba_m2_ha,trees,year0_ba_m2_ha,year30_pre_ba_m2_ha,year30_post_ba_m2_ha,removed_tph,removed_m3_ha,year60_ba_m2_ha
+PSP-IDF-004,4026689-PSP1,129.0,28.78,999,28,45,31,407.0,106.0,41
+PSP-IDF-008,4025005-PSP1,84.0,38.54,999,38,53,34,429.0,151.0,43
+PSP-IDF-015,4024798-PSP1,178.0,20.82,686,20,34,30,130.0,28.0,41

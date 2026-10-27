@@ -126,7 +126,7 @@ a target, not a validated command. See
 
 ## Data status
 
-No field data or stem list is committed yet. Acquired inputs and remaining gaps
+No Knife Creek field data or stem list is committed yet. A public IDF Cariboo PSP-derived stem-list analog is committed under `data/psp/` for the interim FVS-BC structural pilot. Acquired inputs and remaining gaps
 are listed in `config/data_requirements.yaml` and
 `docs/guides/data-acquisition.rst`:
 
@@ -138,8 +138,8 @@ are listed in `config/data_requirements.yaml` and
 - disturbance history, including the 2013 wildfire — acquired;
 - public mule-deer habitat classes and MWP #3 management direction — acquired;
   the legal UWR order is blocked; and
-- tree-level tallies or a reviewed synthetic stem-population basis — still
-  required.
+- tree-level tallies or a reviewed synthetic stem-population basis — a public
+  IDF Cariboo PSP analog is available; the KC CFI is still preferred.
 
 ## Related repositories
 

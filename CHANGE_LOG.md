@@ -146,3 +146,22 @@ status and the GitHub issue comments.
 - Removed the remaining "inches" wording from the KC README, growth-engine
   guide, regime templates and pin note. The regimes remain not runnable until a
   KC stem list exists.
+
+## 2026-10-27
+
+- P1.3 interim: acquired the public FAIB PSP compilation and built an IDF
+  Cariboo stem-list analog instead of waiting for the KC CFI. The source is the
+  FAIB Forest Inventory Ground Plot Data FTP, Open Government Licence - BC.
+- Filtered to first-measurement, Douglas-fir-leading, mature IDF PSPs in the
+  Williams Lake and 100 Mile House TSAs: 51 plots, 4,553 live trees >=9.1 cm,
+  45 stable per-plot Weibull fits.
+- Fit the pooled lower-truncated Weibull: a=1.0200, beta=7.8411, lower bound
+  9.1 cm, KS=0.0109. Added `runbooks/build_psp_stemlists.py` and generated 24
+  synthetic one-hectare stem lists (22,178 trees) by inverse-CDF sampling,
+  calibrated to each source plot's BA. Files are in `data/psp/`.
+- Ran three PSP-derived stands through FVS-BC with the corrected cycle-2
+  THINQFA. Residual BA was 30-34 m2/ha against the 29 m2/ha target; the
+  structural caveat is recorded. This is a regional IDF analog, not KC data.
+- Recorded the source hashes, selection, fitting and caveats in
+  `notes/reference/psp-idf-cariboo-stemlists.md`. Raw PSP files are not
+  committed.
