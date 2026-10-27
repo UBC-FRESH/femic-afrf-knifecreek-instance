@@ -18,6 +18,11 @@ the stand-structure logic.
 - Licence: Open Government Licence - British Columbia.
 - Retrieved: 2026-10-27.
 - Data dictionary: `PSP_data_dictionary_2026Apr20.xlsx`.
+- Fitting/sampling: `nemora` `2e8776c0ffce15cb4b18e2fbd70bdd4c1c4467d9`
+  (`0.0.1-alpha`), grouped Weibull fit and inverse-CDF sampling. Nemora's
+  current surface does not include a covariate regression for PDF parameters;
+  the per-plot fits are retained for that next step. The generator uses the
+  pooled PDF shape and calibrates each stand to its source plot's BA.
 
 Raw files and SHA-256:
 

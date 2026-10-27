@@ -165,3 +165,7 @@ status and the GitHub issue comments.
 - Recorded the source hashes, selection, fitting and caveats in
   `notes/reference/psp-idf-cariboo-stemlists.md`. Raw PSP files are not
   committed.
+- P1.3b: pinned `nemora` at `2e8776c0ffce15cb4b18e2fbd70bdd4c1c4467d9`
+  (`0.0.1-alpha`) for the PSP stem-list fit and inverse-CDF sampling. The note
+  records that nemora has grouped PDF fitting, not a covariate regression;
+  the per-plot fits are retained for that next step.
