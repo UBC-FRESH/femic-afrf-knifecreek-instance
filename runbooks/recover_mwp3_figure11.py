@@ -29,6 +29,7 @@ import hashlib
 import json
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 from PIL import Image, ImageDraw
 
@@ -172,6 +173,16 @@ def _series_value(values: dict[tuple[str, int], float], habitat: str, dbh_class:
     return values.get((habitat, dbh_class), 0.0)
 
 
+def _implied_q(table: pd.DataFrame, column: str, max_dbh: int) -> float:
+    """Estimate the q-factor implied by a decreasing density distribution."""
+    subset = table[table["dbh_class_cm"] <= max_dbh]
+    dbh = subset["dbh_class_cm"].to_numpy(dtype=float)
+    density = subset[column].to_numpy(dtype=float)
+    positive = density > 0
+    slope, _ = np.polyfit(dbh[positive], np.log(density[positive]), 1)
+    return float(np.exp(-slope * 5.0))
+
+
 def build_table(image: Path) -> tuple[pd.DataFrame, object, object]:
     """Build the wide target table and return the two digitization results."""
     density_result = _digitize(
@@ -265,6 +276,10 @@ def write_outputs(
         }
         for habitat, column in (("Low", "low"), ("Moderate", "moderate"), ("High", "high"))
     }
+    q_factors = {
+        habitat: round(_implied_q(table, f"tpha_{column}", MAX_DBH[habitat.lower()]), 3)
+        for habitat, column in (("Low", "low"), ("Moderate", "moderate"), ("High", "high"))
+    }
     source_sha = hashlib.sha256(PDF_PATH.read_bytes()).hexdigest()
     metadata = {
         "dataset": "mwp3_figure11_target_stand_structure",
@@ -330,6 +345,7 @@ def write_outputs(
             },
         },
         "recovered_sums": sums,
+        "recovered_q_factor": q_factors,
         "caveats": [
             "Figure 11 is a target diagram, not observed plot data.",
             (
@@ -340,6 +356,12 @@ def write_outputs(
                 "versus Table 29 targets of 16, 22 and 29 m2/ha. Do not force the "
                 "figure to close; use Table 29 as the policy target and Figure 11 as "
                 "the relative diameter-distribution shape."
+            ),
+            (
+                "The recovered density distribution implies q-factors of "
+                f"{q_factors['Low']}, {q_factors['Moderate']} and {q_factors['High']} "
+                "for Low, Moderate and High, versus Table 29 values of 1.30, 1.25 and "
+                "1.25. This is a shape check, not a recalibration."
             ),
             (
                 "The figure has no uncertainty bands; recovered values are approximate "
@@ -362,7 +384,9 @@ def write_outputs(
         f"published figure sums to {sums['Low']['basal_area_m2_ha']}/"
         f"{sums['Moderate']['basal_area_m2_ha']}/"
         f"{sums['High']['basal_area_m2_ha']} m2/ha versus Table 29 targets 16/22/29; "
-        "the difference is recorded, not corrected."
+        "the difference is recorded, not corrected. The recovered density distribution "
+        f"implies q {q_factors['Low']}/{q_factors['Moderate']}/{q_factors['High']} "
+        "versus Table 29 1.30/1.25/1.25."
     )
     entries = []
     for result, label in ((density_result, "density"), (basal_area_result, "basal area")):

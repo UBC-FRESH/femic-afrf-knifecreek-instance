@@ -88,7 +88,9 @@ Figure 11 on the same page gives the relative diameter distribution by 5 cm
 class. It was recovered with ``figrecover``; the reviewed table is
 ``data/benchmarks/mwp3_figure11_target_stand_structure.csv``. Its basal-area
 sums are 17.02/22.96/30.17 m²/ha for Low/Moderate/High, slightly above the Table
-29 targets. Use Table 29 for the target and Figure 11 for the shape.
+29 targets. The recovered density distribution implies q 1.306/1.254/1.253,
+close to the Table 29 values 1.30/1.25/1.25. Use Table 29 for the target and
+Figure 11 for the shape.
 
 Disturbance
 -----------

@@ -18,9 +18,10 @@ reproduction script is `../../runbooks/recover_mwp3_figure11.py`; the method not
 is `../../notes/reference/mwp3-figure11-recovery.md`.
 
 The recovered basal-area sums are 17.02/22.96/30.17 m²/ha for
-Low/Moderate/High, versus Table 29 targets of 16/22/29. Use Table 29 for the
-residual B/D/q contract and Figure 11 for the relative diameter distribution.
-Do not rescale the figure silently.
+Low/Moderate/High, versus Table 29 targets of 16/22/29. The recovered density
+distribution implies q-factors of 1.306/1.254/1.253, versus Table 29 values of
+1.30/1.25/1.25. Use Table 29 for the residual B/D/q contract and Figure 11 for
+the relative diameter distribution. Do not rescale the figure silently.
 
 ## MWP #3 Appendix 9 — compartment table
 

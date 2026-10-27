@@ -81,9 +81,15 @@
       "basal_area_m2_ha": 30.17
     }
   },
+  "recovered_q_factor": {
+    "Low": 1.306,
+    "Moderate": 1.254,
+    "High": 1.253
+  },
   "caveats": [
     "Figure 11 is a target diagram, not observed plot data.",
     "The recovered per-class basal areas sum to about 17.02, 22.96 and 30.17 m2/ha for Low, Moderate and High, versus Table 29 targets of 16, 22 and 29 m2/ha. Do not force the figure to close; use Table 29 as the policy target and Figure 11 as the relative diameter-distribution shape.",
+    "The recovered density distribution implies q-factors of 1.306, 1.254 and 1.253 for Low, Moderate and High, versus Table 29 values of 1.30, 1.25 and 1.25. This is a shape check, not a recalibration.",
     "The figure has no uncertainty bands; recovered values are approximate to the plotted line and bar resolution.",
     "The map on MWP #3 page 162 is schematic and was not used to georeference this table."
   ]
