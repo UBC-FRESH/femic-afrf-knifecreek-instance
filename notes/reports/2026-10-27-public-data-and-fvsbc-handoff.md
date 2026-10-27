@@ -135,6 +135,23 @@ MWP #3 Table 29:
 - **Finite information:** 45 plots / 4,553 trees. `--stands N` can generate more
   stands, but that is Monte Carlo replication, not new independent plots.
 
+### State-transition library v0
+
+`ws4/state_library_v0/` is a provisional transition library from eight
+PSP-derived stands × three Table 29 regimes × two 30-year entries:
+
+- 8 initial states, 6 residual states, 48 transitions, 192 curves;
+- mean residual BA: High 33.31, Moderate 29.19, Low 25.94 m²/ha against
+  29/22/16;
+- mean residual q: 1.284/1.255/1.296 against 1.25/1.25/1.30;
+- mean residual maximum DBH about 73.6 cm against 60/55/50;
+- the graph is not closed and the residual states are terminal;
+- it is not a compiled ws4 dataset and not KC-calibrated.
+
+The residual BA and maximum DBH exceed the targets because the source stands
+contain trees above the Table 29 maximum DBH and because q deficits limit the
+removal. Record the gap; do not claim the target is met.
+
 ### Maps
 
 MWP #3 landscape appendices, KC pages: 150 forest cover, 158 seral, 162

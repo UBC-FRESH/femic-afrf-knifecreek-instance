@@ -1,0 +1,4 @@
+regime,n,target_post_ba_m2_ha,mean_post_ba_m2_ha,mean_abs_ba_error_m2_ha,within_2_m2_ha,target_q,mean_post_q,target_max_dbh_cm,mean_post_max_dbh_cm,mean_cut_m3_ha,mean_cut_tph
+SEL_MDWR_HIGH,16,29.0,33.3125,4.3125,6,1.25,1.283959852816656,60.0,73.64455509999999,66.875,202.0625
+SEL_MDWR_LOW,16,16.0,25.9375,9.9375,0,1.3,1.2956651161217847,50.0,73.63592006249999,83.6875,259.5625
+SEL_MDWR_MODERATE,16,22.0,29.1875,7.1875,3,1.25,1.2548319557823278,55.0,73.63802911249999,73.3125,239.0625
