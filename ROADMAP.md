@@ -168,8 +168,10 @@ Status: planned
 
 A provisional structural library exists at `ws4/state_library_v0/` (8 initial
 states, 6 residual states, 48 transitions, 192 curves) from the PSP-derived
-IDF Cariboo analog. It is not a closed graph and not a compiled ws4 dataset;
-Phase 2 has not been opened as a formal phase.
+IDF Cariboo analog. A veteran/large-tree retention policy pilot is at
+`ws4/policy_pilot_v0/` (4 policies × 3 regimes × 2 stands, 24 transitions).
+It is not a closed graph and not a compiled ws4 dataset; Phase 2 has not been
+opened as a formal phase.
 
 Goal: run FVS-BC selection-cut regimes and build the state-transition library
 that ws4 will consume.
