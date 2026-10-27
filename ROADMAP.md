@@ -175,6 +175,13 @@ ws4 dataset; Phase 2 has not been opened as a formal phase. The public PSP stem
 maps are too sparse for empirical clump geometry; the clump scenarios are
 explicit geometric assumptions, not observations.
 
+The 2007 shallow/moderate GWM order and the 2003 Knife Creek transition plan
+have been acquired. GWM 10 requires clumps of 4–10 or more mature trees with
+interlocking crowns, BA >37.5 cm ≥16/11/6 m²/ha, and Table 2 D ≥70/60/50 for
+High/Moderate/Low. The AFRF Table 29 uses lower D (60/55/50); it is an AFRF
+interpretation, not the legal curve. See
+`notes/reference/mdwr-canopy-clump-requirements.md`.
+
 Goal: run FVS-BC selection-cut regimes and build the state-transition library
 that ws4 will consume.
 

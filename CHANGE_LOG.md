@@ -205,3 +205,12 @@ status and the GitHub issue comments.
   scenarios are explicit geometry, not observations. Corrected the pilot to
   treat a canceled treatment with no after-treatment tree list as missing
   large-tree metrics rather than zero.
+- P2.3 MDWR source correction: acquired the 2007 Shallow/Moderate GWM order,
+  the 2003 Knife Creek transition plan, Part 1a/1b (LMH 60/59), Extension Note
+  25A and LMH 13. GWM 10 requires clumps of 4–10 or more mature trees with
+  interlocking crowns; the 2–5 figure in MWP #3 is only the maximum-diameter
+  subgroup. Legal stand-level targets use BA >37.5 cm ≥16/11/6 m²/ha and Table
+  2 D ≥70/60/50 for High/Moderate/Low; MWP #3 Table 29 uses D 60/55/50 and is
+  an AFRF interpretation, not the legal curve. Added the source index, updated
+  the clump scenarios to 4–10 trees, and recorded the Knife Creek HMZ matrix
+  and the north-facing >20% slope, >10 ha exemption. No legal-compliance claim.

@@ -9,16 +9,35 @@
 # diameter distribution, but it cannot make spatial clumps. Clump size and
 # clump cover are post-processed from the after-treatment tree list and must be
 # reviewed spatially in ws4.
+#
+# Legal basis: GWM 10 of the 2007 Shallow/Moderate Snowpack order requires
+# clumps of 4-10 or more mature trees with interlocking crowns, a 37.5 cm
+# large-tree threshold, and D >= 70/60/50 for High/Moderate/Low. The pilot
+# policy definitions below use a 50 cm threshold and the AFRF Table 29 D
+# values; they are a structural policy axis, not a legal-compliance set.
+
+policy_basis:
+  id: AFRF_MWP3_TABLE29
+  legal: false
+  note: >-
+    These policies use the AFRF Table 29 B/D/q values and a 50 cm large-tree
+    threshold. They are structural scenarios, not the legal GWM 2007 basis.
+    The legal basis is in config/mdwr_regimes.yaml legal_gwm_2007.
 
 policy_axes:
   large_tree_min_dbh_cm:
     description: DBH threshold that defines a veteran / large tree for retention.
-    candidate_values: [50.0, 60.0]
+    candidate_values: [37.5, 50.0, 60.0]
   large_tree_residual_ba_m2_ha:
     description: Residual basal area in trees at or above large_tree_min_dbh_cm.
     candidate_values: [4.0, 6.0, 8.0, 12.0]
   clump_size:
-    description: Number of retained large trees per clump.
+    description: >-
+      Mature trees per clump with interlocking crowns. The legal GWM range is
+      4-10 or more; 2-5 refers only to the maximum-diameter subgroup.
+    candidate_values: [4, 6, 8, 10]
+  max_dbh_group_size:
+    description: Number of maximum-diameter trees grouped within a clump.
     candidate_values: [2, 3, 4, 5]
   method:
     description: How the large-tree target is enforced in FVS-BC.
@@ -37,7 +56,7 @@ policies:
     method: full_range_bdq
     large_tree_min_dbh_cm: null
     large_tree_residual_ba_m2_ha: null
-    clump_size: 3
+    clump_size: 6
     description: >-
       Current v0 method. THINQFA runs over the full range up to the habitat
       maximum DBH; trees above that diameter are not removed. This retains the
@@ -47,7 +66,7 @@ policies:
     method: split_large_small
     large_tree_min_dbh_cm: 50.0
     large_tree_residual_ba_m2_ha: 4.0
-    clump_size: 3
+    clump_size: 6
     description: >-
       Remove surplus large trees above 50 cm to 4 m²/ha, then thin the 0-50 cm
       component to the Table 29 B minus 4, with the Table 29 q.
@@ -56,7 +75,7 @@ policies:
     method: split_large_small
     large_tree_min_dbh_cm: 50.0
     large_tree_residual_ba_m2_ha: 6.0
-    clump_size: 3
+    clump_size: 6
     description: >-
       Remove surplus large trees above 50 cm to 6 m²/ha, then thin the 0-50 cm
       component to the Table 29 B minus 6, with the Table 29 q.
@@ -65,7 +84,7 @@ policies:
     method: split_large_small
     large_tree_min_dbh_cm: 50.0
     large_tree_residual_ba_m2_ha: 8.0
-    clump_size: 3
+    clump_size: 6
     description: >-
       Remove surplus large trees above 50 cm to 8 m²/ha, then thin the 0-50 cm
       component to the Table 29 B minus 8, with the Table 29 q.
@@ -80,11 +99,20 @@ clump_metrics:
   - post_canopy_ccf
 
 clump_geometry:
-  clump_sizes: [2, 3, 4, 5]
+  clump_sizes: [4, 6, 8, 10]
   clump_radii_m: [3.0, 5.0, 7.0]
   closed_canopy_threshold: 0.70
   placement: ring
+  legal_basis:
+    min_mature_trees: 4
+    max_mature_trees: 10
+    max_dbh_group_size: [2, 5]
+    interlocking_crowns: true
+    opening_diameter_tree_heights: [0.3, 0.5, 1.0]
   note: >-
     Scenario geometry, not an empirical clump distribution. The public PSP
     stem maps are too sparse to estimate clump size or spacing; use KC CFI or
-    the approved UWR material when available.
+    the approved UWR material when available. GWM 10 requires 4-10 or more
+    mature trees with interlocking crowns and small canopy openings; the
+    earlier 2-5 tree clump scenario was a misreading of the maximum-diameter
+    subgroup.

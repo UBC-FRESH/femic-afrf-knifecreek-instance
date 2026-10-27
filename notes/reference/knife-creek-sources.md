@@ -37,6 +37,17 @@ for the data-acquisition manifest.
   - A 2013 wildfire burned part of the Knife Creek block.
   - The study area is in IDFdk3 and is dominated by interior Douglas-fir.
 
+## Mule-deer legal and management sources
+
+The 2007 shallow/moderate GWM order, the 2003 Knife Creek transition plan,
+Part 1a/1b (LMH 60/59), Extension Note 25A and LMH 13 are now acquired. See
+`mdwr-canopy-clump-requirements.md` and `mdwr-source-index.md`.
+
+Key correction: GWM 10 requires clumps of 4–10 or more mature trees with
+interlocking crowns. MWP #3's 2–5-tree groups refer only to the
+maximum-diameter subgroup. The legal order also uses BA >37.5 cm targets and
+Table 2 D ≥70/60/50, which differ from MWP #3 Table 29.
+
 ## Growth engine
 
 - `fresh-fvsbc` repository: <https://github.com/UBC-FRESH/fresh-fvsbc>

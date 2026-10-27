@@ -7,10 +7,11 @@ The plan is a public UBC AFRF planning document. It is committed at
 `reference/AFRF-management-working-plan-3-2007.pdf` with SHA-256
 `9bfd8b8f0449f45fb97fcf529236640ace09b73ba74f77001f677eee7307ff6a`.
 
-The plan is the best public statement of the Knife Creek mule-deer winter-range
-(MDWR) management direction. It is not the legal Ungulate Winter Range order,
-and it is not the 2003 Knife Creek transition strategy. Those remain outstanding
-in P1.2a.
+The plan is the public AFRF statement of the Knife Creek mule-deer winter-range
+(MDWR) management direction. It is not the legal Ungulate Winter Range order.
+The 2007 shallow/moderate GWM order and the 2003 Knife Creek transition plan
+have since been acquired; see `mdwr-canopy-clump-requirements.md` and
+`mdwr-source-index.md`. The legal spatial UWR/HMZ GIS layer is still missing.
 
 ## Working circle
 
@@ -24,19 +25,28 @@ in P1.2a.
   figures are real vintage/boundary differences; do not reconcile them silently.
 - Primary objective: mule-deer winter habitat on all compartments in the
   working circle.
-- Silvicultural system: uneven-aged single-tree selection, with small groups of
-  2–5 trees at the maximum diameter. Cutting cycle: 30 years.
+- Silvicultural system: uneven-aged clumpy single-tree selection. GWM 10
+  requires clumps of 4–10 or more mature trees with interlocking crowns; the
+  maximum-diameter class is distributed in groups of 2–5 within those clumps.
+  Cutting cycle: 30 years or more.
 - BDq regulation: residual basal area (B), maximum DBH (D), and diminution
   quotient (q) by habitat class.
 - Harvest opportunities are limited to Douglas-fir bark-beetle salvage and
   thinning, concentrating on trees below 37.5 cm DBH. Thinning treatments
   typically produce about 50 m³/ha.
-- The plan intends a clumpy structure: the maximum diameter class is distributed
-  among groups of 2–5 trees. FVS-BC is distance-independent and cannot enforce
-  the spatial grouping; that is a ws4/operability check or a post-processing
-  constraint, not a tree-list keyword.
+- The plan intends a clumpy structure: the maximum diameter class is
+  distributed among groups of 2–5 trees **within** the legal 4–10-tree mature
+  clump. FVS-BC is distance-independent and cannot enforce the spatial
+  grouping; that is a ws4/operability check or a post-processing constraint,
+  not a tree-list keyword.
 
 ## Table 29 target structures
+
+**Table 29 is an AFRF interpretation, not the legal GWM curve.** The legal order
+requires D ≥70/60/50 cm and BA in stems ≥37.5 cm ≥16/11/6 m²/ha for
+High/Moderate/Low. Table 29 uses D 60/55/50 and omits the legal large-tree
+reserve. See `mdwr-canopy-clump-requirements.md` before treating these values
+as compliance targets.
 
 | Habitat class | Residual B (m²/ha) | Maximum DBH (cm) | q (5 cm classes) | Cutting cycle (years) |
 | --- | ---: | ---: | ---: | ---: |
@@ -94,17 +104,14 @@ the AFRF spatial data.
 
 ## What is still missing
 
-1. The approved Ungulate Winter Range boundary and the legal mule-deer
-   objective/order.
-2. The CCLUP Mule Deer Strategy Committee (2003) *Transition period harvest
-   opportunities: Knife Creek* (3 pp), which the plan cites for the transition
-   strategy.
-3. The AFRF site-series map / CD-ROM GIS layer.
-4. The AFRF CFI or an approved VRI plus `nemora` stem-list reconstruction.
+1. The legal UWR boundary, stand-structure habitat classes and HMZ spatial GIS
+   layer. The order and HMZ matrix text are acquired; the spatial layer is not.
+2. The AFRF site-series map / CD-ROM GIS layer.
+3. The AFRF CFI or an approved VRI plus `nemora` stem-list reconstruction.
 
-Until (1) and (2) are obtained, the model may represent the public management
-direction and test structural feasibility, but it must not claim legal policy
-compliance.
+The model may represent the public management direction and test structural
+scenarios, but it must not claim legal policy compliance without (1) and the
+current approved order.
 
 ## Maps at the back of the plan
 

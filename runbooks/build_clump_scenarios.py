@@ -2,8 +2,9 @@
 """Build spatial clump-geometry scenarios from the policy pilot.
 
 The policy pilot gives a non-spatial large-tree TPH and mean crown width. This
-script places those trees in clumps of 2-5 on a ring around a clump centre and
-measures the fraction of the clump footprint covered by crowns. It is a
+script places those trees in clumps of 4-10 on a ring around a clump centre and
+measures the fraction of the clump footprint covered by crowns. The 4-10 range
+is the legal GWM 10 mature-tree clump; 2-5 is only the maximum-diameter subgroup. It is a
 geometry scenario, not an empirical clump distribution and not a snow model.
 
 Usage::
@@ -21,7 +22,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-CLUMP_SIZES = (2, 3, 4, 5)
+CLUMP_SIZES = (4, 6, 8, 10)
 CLUMP_RADII_M = (3.0, 5.0, 7.0)
 CLOSED_THRESHOLD = 0.70
 GRID_M = 0.25
@@ -76,6 +77,7 @@ def main() -> None:
                         "regime": row.regime,
                         "policy": row.policy,
                         "clump_size": clump_size,
+                        "legal_clump_size": 4 <= clump_size <= 10,
                         "clump_radius_m": clump_radius,
                         "crown_radius_m": crown_radius,
                         "clump_footprint_m2": footprint,
@@ -98,6 +100,7 @@ def main() -> None:
             mean_spacing_m=("mean_spacing_m", "mean"),
             mean_clump_closure=("clump_closure", "mean"),
             closed_fraction=("closed_canopy_clump", "mean"),
+            legal_clump_fraction=("legal_clump_size", "mean"),
             mean_total_cover=("total_cover_poisson", "mean"),
         )
         .reset_index()

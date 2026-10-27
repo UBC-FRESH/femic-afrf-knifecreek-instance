@@ -23,9 +23,13 @@ A veteran/large-tree retention policy pilot is in `policy_pilot_v0/`: four
 policies on two PSP-derived conditional stands, showing the trade-off between
 large-tree BA, total Table 29 BA and clump-cover proxies. `build_clump_scenarios.py`
 adds 276 geometric clump scenarios; these are scenario axes, not empirical
-clump statistics. It is not approved policy. Policy definitions are in
+clump statistics. The legal GWM 10 clump is **4–10 or more mature trees with
+interlocking crowns**, not 2–5; the 2–5 figure is the maximum-diameter subgroup.
+It is not approved policy. Policy definitions are in
 `../config/retention_policies.yaml`. The public PSP stem maps are too sparse for
 empirical clump geometry; see `../notes/reference/psp-stem-map-limits.md`.
+The legal order and the AFRF Table 29 differ on D and large-tree BA; see
+`../notes/reference/mdwr-canopy-clump-requirements.md`.
 
 The contract is in `state_transition_contract.md`; the target and
 patch-account files remain templates.

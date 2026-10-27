@@ -341,6 +341,14 @@ def main() -> None:
             "The policy levels are scenario axes, not approved MDWR policy.",
             "The large-tree target is a residual BA above 50 cm, not a legal objective.",
             (
+                "GWM 10 requires clumps of 4-10 or more mature trees with "
+                "interlocking crowns; 2-5 is the maximum-diameter subgroup."
+            ),
+            (
+                "The 50 cm threshold and Table 29 D values are an AFRF "
+                "interpretation; the legal GWM uses BA >37.5 cm and D 70/60/50."
+            ),
+            (
                 "A canceled treatment with no after-treatment tree list has missing "
                 "large-tree metrics, not zero."
             ),

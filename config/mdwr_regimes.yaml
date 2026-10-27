@@ -1,18 +1,32 @@
 # Knife Creek mule-deer winter-range management contract.
 #
 # Source: Alex Fraser Research Forest Management and Working Plan #3
-# (January 1, 2007), Tables 29, 32 and 35, and Appendix 9. This is a public
-# management plan, not the legal Ungulate Winter Range order.
+# (January 1, 2007), Tables 29, 32 and 35, Appendix 9; the Amended Order
+# #U-5-001/2/3 Shallow and Moderate Snowpack (2007); Part 1a (LMH 60);
+# Extension Note 25A; and the 2003 Knife Creek transition plan.
 #
-# Table 29 is the authoritative residual-structure target. The recovered
-# Figure 11 distribution is a shape benchmark, not a replacement for these
-# values. See notes/reference/mwp3-kc-management-direction.md.
+# Table 29 is the AFRF residual-structure interpretation. It is not the legal
+# stand-level GWM curve: the legal order requires D >= 70/60/50 cm and BA in
+# stems >=37.5 cm >= 16/11/6 m2/ha for High/Moderate/Low. Both bases are
+# represented here. See notes/reference/mdwr-canopy-clump-requirements.md.
 
 source:
   document: Alex Fraser Research Forest Management and Working Plan #3
   date: 2007-01-01
   pdf: reference/AFRF-management-working-plan-3-2007.pdf
   sha256: 9bfd8b8f0449f45fb97fcf529236640ace09b73ba74f77001f677eee7307ff6a
+  legal_order:
+    document: Amended Order U-5-001, U-5-002 and U-5-003, Shallow and Moderate Snowpack
+    date: 2007-02
+    local: /srv/shared-data/gep/ws4/sources/afrf-mule-deer/gwm_order_shallow_moderate_2007.pdf
+  part1a:
+    document: Management Strategy for Mule Deer Winter Ranges in the Cariboo-Chilcotin, Part 1a
+    date: 2007
+    local: /srv/shared-data/gep/ws4/sources/afrf-mule-deer/lmh60.pdf
+  transition_2003:
+    document: Transition Period Harvest Opportunities, Knife Creek
+    date: 2003-01
+    local: /srv/shared-data/gep/ws4/sources/afrf-mule-deer/part3_knife_creek.pdf
   table29_page_pdf: 97
   table29_page_printed: 89
   table34_page_pdf: 108
@@ -32,14 +46,20 @@ working_circle:
   sup_legal_boundary_area_ha: 3533.1341
   primary_objective: mule-deer winter habitat
   silvicultural_system: single-tree selection
-  retention_pattern: small groups of 2-5 trees at the maximum diameter
+  retention_pattern: >-
+    clumpy single-tree selection. GWM 10 requires clumps of 4-10 or more
+    mature trees with interlocking crowns. Within those clumps, the maximum
+    diameter class is distributed in groups of 2-5 trees.
   cutting_cycle_years: 30
   harvest_constraints:
     - no conventional clearcut
     - no even-aged silviculture
-    - single-tree selection with small groups at the maximum diameter
+    - single-tree selection with clumpy residual structure
+    - clumps of 4-10 or more mature trees with interlocking crowns
+    - maximum-diameter class grouped in 2-5 trees within the clump
+    - canopy openings 0.3-1.0 mature tree heights, mean 0.5
+    - retain at least 80% of pre-harvest merchantable Douglas-fir basal area before 2026
     - concentrate removals on trees below 37.5 cm DBH
-    - retain the maximum-diameter class in groups of 2-5 trees
     - typical thinning yield about 50 m3/ha
   aac:
     single_tree_selection_ha_per_year: 82.0
@@ -63,7 +83,73 @@ working_circle:
     area is 3,117 ha; Appendix 9 net area is 3,162.3 ha; the legal SUP is
     3,533.1341 ha. Record the differences; do not force agreement.
 
+legal_gwm_2007:
+  # Amended Order U-5-001/2/3, Shallow and Moderate Snowpack, Schedule 1
+  # GWM 10, Tables 1 and 2. Knife Creek is U-5-002 dwl_50, IDFdk3/IDFdw.
+  basis: legal
+  note: >-
+    These are the legal stand-level minima. Table 29 below is the AFRF
+    interpretation and uses lower D for High and Moderate; do not present
+    Table 29 as legal compliance.
+  classes:
+    - id: HIGH
+      total_ba_min_m2_ha: 29.0
+      large_tree_ba_min_m2_ha: 16.0
+      large_tree_dbh_cm: 37.5
+      max_dbh_min_cm: 70.0
+      q_range: [1.20, 1.35]
+      large_tree_reserve_m2_ha: [0.0, 2.9]
+    - id: MODERATE
+      total_ba_min_m2_ha: 22.0
+      large_tree_ba_min_m2_ha: 11.0
+      large_tree_dbh_cm: 37.5
+      max_dbh_min_cm: 60.0
+      q_range: [1.25, 1.35]
+      large_tree_reserve_m2_ha: [0.0, 2.2]
+    - id: LOW
+      total_ba_min_m2_ha: 16.0
+      large_tree_ba_min_m2_ha: 6.0
+      large_tree_dbh_cm: 37.5
+      max_dbh_min_cm: 50.0
+      q_range: [1.25, 1.40]
+      large_tree_reserve_m2_ha: [0.0, 1.6]
+  clump:
+    min_mature_trees: 4
+    max_mature_trees: 10
+    max_dbh_group_size: [2, 5]
+    interlocking_crowns: true
+  canopy_openings:
+    diameter_tree_heights: [0.3, 0.5, 1.0]
+    average_tree_heights: 0.5
+  transition:
+    pre_2026_ba_retention_min: 0.80
+  knife_creek_hmz:
+    uwr: U-5-002
+    unit: dwl_50
+    # L = Low only; M = Low or Moderate; A = all classes.
+    zones:
+      1: M
+      2: L
+      3: M
+      4: M
+      5: A
+    note: >-
+      Legal order Table 3, p. 7. HMZ is spatial; a stand-level BDq run alone
+      cannot establish compliance. The order also has a north-facing >20%
+      slope, >10 ha exemption in the Moderate Snowpack zone; it requires the
+      spatial order/GIS test.
+
+habitat_class_basis:
+  id: AFRF_MWP3_TABLE29
+  legal: false
+  note: >-
+    The habitat_classes block is the AFRF Table 29 interpretation. The legal
+    2007 GWM extraction is in legal_gwm_2007.
+
 habitat_classes:
+  # AFRF MWP #3 Table 29 interpretation. This is NOT the legal GWM curve:
+  # D is 60/55/50 here versus the order Table 2 values 70/60/50, and there is
+  # no large-tree reserve. Use legal_gwm_2007 above for a legal-basis run.
   - id: HIGH
     label: High
     residual_basal_area_m2_ha: 29.0
@@ -124,14 +210,18 @@ unit_conversions:
 open_items:
   - id: legal_uwr_order
     description: Approved UWR boundary and legal mule-deer objectives.
-    status: blocked
-    reason: Access Only / AFRF-held; public habitat classes are not the legal order.
+    status: acquired_text_pending_gis
+    source: /srv/shared-data/gep/ws4/sources/afrf-mule-deer/gwm_order_shallow_moderate_2007.pdf
+    reason: >-
+      The 2007 order and the Knife Creek HMZ matrix are acquired. The legal
+      spatial boundary/stand-structure/HMZ GIS layer is still needed before a
+      compliance claim.
   - id: transition_strategy_2003
     description: >-
       CCLUP Mule Deer Strategy Committee (2003), Transition period harvest
       opportunities, Knife Creek.
-    status: blocked
-    reason: Cited by MWP #3 but not acquired.
+    status: acquired
+    source: /srv/shared-data/gep/ws4/sources/afrf-mule-deer/part3_knife_creek.pdf
   - id: site_series_map
     description: Georeferenced AFRF site-series polygons.
     status: blocked

@@ -34,9 +34,9 @@ The one usable large-tree case is `4024835-PSP1`:
 - pairwise distances (m): 7.93, 14.47, 22.06, 25.84, 29.98, 32.66.
 
 Only one pair is within 10 m. At a 15 m linkage distance there are two pairs,
-not a 3-5 tree clump. At a 10 m linkage distance there is one 2-tree pair. This
+not a 4-10-tree clump. At a 10 m linkage distance there is one 2-tree pair. This
 single 0.1 ha plot cannot estimate a clump-size distribution, and it does not
-show the 2-5 tree clumps the retention objective describes.
+show the 4-10-tree mature clumps the legal GWM requires.
 
 `4024293-PSP1` is fully mapped and has one tree >=50 cm (52.0 cm). The other
 large-tree plot, `4024460-PSP1`, has only 2 mapped trees out of 134, one of them
@@ -50,13 +50,13 @@ The raw FAIB tree detail is not committed.
 
 The public PSP analog can supply diameter distributions and stand-level
 structure, but it cannot supply empirical large-tree clump size, clump spacing,
-or within-clump canopy closure. Do not present the 2-5 tree clump geometry as
+or within-clump canopy closure. Do not present the 4-10 tree clump geometry as
 PSP-derived.
 
 Use two tracks instead:
 
 1. **Explicit geometry scenarios.** `runbooks/build_clump_scenarios.py` places
-   the policy-pilot large-tree TPH into 2-5 tree clumps at 3, 5 or 7 m clump
+   the policy-pilot large-tree TPH into 4-10 tree clumps at 3, 5 or 7 m clump
    radius and reports within-clump crown closure and total cover. These are
    scenario axes, not observations.
 2. **KC-specific data.** When the AFRF CFI/tree lists or stem-mapped UWR

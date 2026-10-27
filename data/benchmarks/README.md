@@ -1,7 +1,9 @@
 # Public benchmarks
 
 This directory holds reviewed public-document benchmarks for the Knife Creek
-model. They are not field data and they are not legal orders.
+model. They are not field data. Most are management-plan benchmarks; the
+`mdwr_gwm2007_*` tables are direct extracts of the 2007 legal order and are
+labelled as such.
 
 ## MWP #3 Figure 11 — target stand structure
 
@@ -34,8 +36,25 @@ Source: MWP #3 Appendix 9, PDF page 162 (printed 150). Gross 3,485.6 ha; net
 3,162.3 ha. The source map is schematic and has no coordinate grid. This is a
 table transcription, not a georeferenced GIS layer.
 
+## 2007 GWM legal targets
+
+| File | Purpose |
+| --- | --- |
+| `mdwr_gwm2007_targets.csv` | Legal stand-level BA >37.5 cm, D, q and large-tree reserve by habitat class. |
+| `mdwr_gwm2007_clump.csv` | Legal clump (4–10+ mature trees), opening, cutting-cycle and 80% retention rules. |
+| `mdwr_gwm2007_knife_creek_hmz.csv` | Knife Creek U-5-002 `dwl_50` HMZ 1–5 harvest classes. |
+
+Source: *Amended Order #U-5-001, U-5-002 and U-5-003, Shallow and Moderate
+Snowpack* (2007), Schedule 1 GWM 10, Tables 1–3. See
+`../../notes/reference/mdwr-canopy-clump-requirements.md`.
+
+The legal targets differ from MWP #3 Table 29: the order uses BA >37.5 cm
+≥16/11/6 m²/ha and Table 2 D ≥70/60/50, while Table 29 uses D 60/55/50 and no
+large-tree reserve. Table 29 is an AFRF interpretation, not the legal curve.
+
 ## Policy contract
 
-`../../config/mdwr_regimes.yaml` is the authoritative Knife Creek MDWR contract
-derived from MWP #3 Tables 29, 32 and 35 and Appendix 9. `../../config/fvsbc/regimes.yaml`
-holds the FVS-BC `THINQFA` templates.
+`../../config/mdwr_regimes.yaml` holds both the AFRF Table 29 interpretation
+(`habitat_classes`) and the legal 2007 GWM extraction (`legal_gwm_2007`).
+`../../config/fvsbc/regimes.yaml` holds the FVS-BC `THINQFA` templates. The
+current `habitat_classes` block is not a legal-compliance set.
