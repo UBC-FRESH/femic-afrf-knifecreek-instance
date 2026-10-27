@@ -230,3 +230,23 @@ priorities, roads, research projects) share the same limitation. See
 Direct transcription of the published tables for IDFxm, IDFdk3, SBSdw1 and
 ICHmk3. The report's figures are photographs and flow diagrams, not
 quantitative charts; the tables are the appropriate source.
+
+
+## FAIB PSP-derived IDF Cariboo stem lists
+
+| Field | Value |
+| --- | --- |
+| Dataset | Forest Inventory Ground Plot Data and Interactive Map (FAIB) |
+| FTP | `https://www.for.gov.bc.ca/ftp/HTS/external/!publish/ground_plot_compilations/psp/` |
+| Licence | Open Government Licence - British Columbia |
+| Selection | First-measurement, FD-leading, mature IDF PSPs in Williams Lake and 100 Mile House TSAs |
+| Plots | 51 selected, 45 stable fits |
+| Trees | 4,553 live trees >= 9.1 cm |
+| Synthetic output | 24 one-hectare stem lists, 22,178 trees |
+| Path | `data/psp/idf_cariboo_psp_stemlist_sample.csv` |
+| Population | `data/psp/idf_cariboo_psp_stemlist_population.json` |
+| Note | `notes/reference/psp-idf-cariboo-stemlists.md` |
+
+The raw 706 MB `faib_tree_detail.csv` and the other FAIB CSVs are not committed.
+The derived stem lists are a regional IDF analog, not Knife Creek data. The
+three-stand FVS-BC pilot used the corrected cycle-2 THINQFA units.

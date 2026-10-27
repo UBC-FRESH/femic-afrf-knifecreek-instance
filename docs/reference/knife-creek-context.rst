@@ -118,6 +118,20 @@ Site series
   CD-ROM, not the PDF. The spatial map is still required.
 - Do not infer site series from BEC zone/subzone alone.
 
+Public PSP analog
+-----------------
+
+The FAIB PSP compilation is public. A regional IDF Cariboo analog was built
+from 51 first-measurement, Douglas-fir-leading, mature IDF PSPs in the Williams
+Lake and 100 Mile House TSAs: 4,553 live trees at least 9.1 cm DBH, 45 stable
+Weibull fits, and 24 synthetic one-hectare stem lists. Three stands ran through
+FVS-BC with the corrected cycle-2 THINQFA; residual BA was 30–34 m²/ha against
+the 29 m²/ha target.
+
+This is **not** Knife Creek data. It is an interim analog for the FVS-BC
+structural pilot and does not replace the KC CFI. See
+`notes/reference/psp-idf-cariboo-stemlists.md`.
+
 Current inventory snapshot
 --------------------------
 

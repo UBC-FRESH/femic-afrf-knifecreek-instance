@@ -80,6 +80,8 @@ disturbance, and mule-deer constraints, then construct reviewed stem lists.
 - [x] P1.2c Pin the THINQFA-capable fresh-fvsbc (#22)
 - [x] P1.2d Correct THINQFA BC units and record the pilot (#25)
 - [ ] P1.3 Acquire or reconstruct tree-level tallies and CFI plot data (#10)
+  - [x] Build a public IDF Cariboo PSP stem-list analog for the interim pilot.
+  - [ ] Acquire the Knife Creek CFI or released tree list.
 - [ ] P1.4 Build AU strata and nemora stem populations (#11)
 - [ ] P1.5 Record the data-quality and coverage audit (#12)
 
@@ -112,6 +114,14 @@ Findings:
   report's map pockets/CD-ROM. The spatial site-series map is still P1.2a.
 - The AFRF site-series map and the legal UWR order are P1.2a. They are not
   inferred from BEC or the public habitat classes.
+- The public FAIB PSP compilation has 338 first-measurement IDF PSPs in the
+  Williams Lake and 100 Mile House TSAs. The selected 51 Douglas-fir-leading,
+  mature IDF plots yielded 4,553 live trees >=9.1 cm, 45 stable Weibull fits,
+  and 24 synthetic one-hectare stem lists (22,178 trees). Three stands ran
+  through FVS-BC with the corrected cycle-2 THINQFA; residual BA was 30-34
+  m²/ha against the 29 m²/ha target. This is a regional analog, not KC data.
+  See `notes/reference/psp-idf-cariboo-stemlists.md`.
+
 - The AFRF Management and Working Plan #3 (2007) is acquired. It gives the
   Knife Creek MDWR contract: single-tree selection, 30-year cycle, Table 29
   residual structures (High 29 m²/ha, D 60 cm, q 1.25; Moderate 22/55/1.25;
@@ -255,8 +265,10 @@ Acceptance criteria:
 4. P1.2b (#18) is complete: public benchmarks from MWP #3 Figure 11, the
    Appendix 9 compartment table, and the Klinka 2004 site-index tables are
    reviewed and committed.
-5. P1.3 (#10) and P1.4 (#11) are the next model-preparation tasks: establish a
-   stem-list basis and build AU strata / nemora populations.
+5. P1.3 (#10) has a public IDF Cariboo PSP stem-list analog for the interim
+   pilot; the KC CFI or released tree list is still the preferred basis. P1.4
+   (#11) is the next model-preparation task: build AU strata and stem
+   populations.
 6. Do not start the KC FVS-BC pilot until the site-series/UWR gaps are resolved
    or explicitly accepted and the stem-list basis is reviewed. The synthetic
    THINQFA pilot and the BC unit check are complete.

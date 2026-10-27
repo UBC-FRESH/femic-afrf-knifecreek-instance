@@ -126,6 +126,26 @@ transcribed at ``data/benchmarks/mwp3_kc_compartments.csv``. The map is
 schematic and has no coordinate grid; it is a planning-map transcription, not a
 georeferenced GIS layer.
 
+PSP-derived IDF Cariboo stem lists
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The FAIB Forest Inventory Ground Plot Data is public under the Open Government
+Licence. The PSP compilation contains 338 first-measurement IDF plots in the
+Williams Lake and 100 Mile House TSAs. A subset of 51 Douglas-fir-leading,
+mature plots (80-180 years, 20-40 m²/ha, QMD 15-25 cm) yielded 4,553 live trees
+at least 9.1 cm DBH. Forty-five per-plot Weibull fits were stable; the pooled
+fit is Weibull a=1.0200, beta=7.8411, lower bound 9.1 cm.
+
+`runbooks/build_psp_stemlists.py` turns that into 24 synthetic one-hectare stem
+lists (22,178 trees) by inverse-CDF sampling, calibrated to each source plot's
+basal area. Files are in `data/psp/`. Three stands ran through FVS-BC with the
+corrected cycle-2 THINQFA; residual BA was 30-34 m²/ha against the 29 m²/ha
+target.
+
+This is a regional IDF analog, not Knife Creek data. The raw PSP files are not
+committed. See `notes/reference/psp-idf-cariboo-stemlists.md` for source hashes,
+selection, fitting and caveats.
+
 Inventory
 ---------
 
