@@ -1,0 +1,44 @@
+[
+  {
+    "regime": "SEL_MDWR_HIGH",
+    "n": 16,
+    "target_post_ba_m2_ha": 29.0,
+    "mean_post_ba_m2_ha": 33.3125,
+    "mean_abs_ba_error_m2_ha": 4.3125,
+    "within_2_m2_ha": 6,
+    "target_q": 1.25,
+    "mean_post_q": 1.283959852816656,
+    "target_max_dbh_cm": 60.0,
+    "mean_post_max_dbh_cm": 73.64455509999999,
+    "mean_cut_m3_ha": 66.875,
+    "mean_cut_tph": 202.0625
+  },
+  {
+    "regime": "SEL_MDWR_LOW",
+    "n": 16,
+    "target_post_ba_m2_ha": 16.0,
+    "mean_post_ba_m2_ha": 25.9375,
+    "mean_abs_ba_error_m2_ha": 9.9375,
+    "within_2_m2_ha": 0,
+    "target_q": 1.3,
+    "mean_post_q": 1.2956651161217847,
+    "target_max_dbh_cm": 50.0,
+    "mean_post_max_dbh_cm": 73.63592006249999,
+    "mean_cut_m3_ha": 83.6875,
+    "mean_cut_tph": 259.5625
+  },
+  {
+    "regime": "SEL_MDWR_MODERATE",
+    "n": 16,
+    "target_post_ba_m2_ha": 22.0,
+    "mean_post_ba_m2_ha": 29.1875,
+    "mean_abs_ba_error_m2_ha": 7.1875,
+    "within_2_m2_ha": 3,
+    "target_q": 1.25,
+    "mean_post_q": 1.2548319557823278,
+    "target_max_dbh_cm": 55.0,
+    "mean_post_max_dbh_cm": 73.63802911249999,
+    "mean_cut_m3_ha": 73.3125,
+    "mean_cut_tph": 239.0625
+  }
+]

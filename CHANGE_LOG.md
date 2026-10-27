@@ -181,3 +181,11 @@ status and the GitHub issue comments.
   standing requirements, public data, Figure 11 recovery, MWP #3 contract,
   THINQFA unit/cycle findings, PSP/regression work, maps, PR/commit index,
   blockers, and the Ionut data request list. Chat is not the durable record.
+- P2.0 v0: built the provisional FVS-BC state-transition library at
+  `ws4/state_library_v0/`. Eight PSP-derived stands × three Table 29 regimes ×
+  two 30-year entries produced 8 initial states, 6 residual states, 48
+  transitions and 192 curves. Mean residual BA was 33.31/29.19/25.94 m²/ha
+  against 29/22/16; mean q was 1.284/1.255/1.296 against 1.25/1.25/1.30;
+  mean residual max DBH was ~73.6 cm against 60/55/50. The residual graph is
+  not closed and no ws4 dataset has been compiled. The gap is recorded as a
+  structural result, not a calibration claim.

@@ -13,15 +13,21 @@ There is no clearcut treatment in the default model.
 
 ## Status
 
-There is no runnable dataset yet. The contract is in
-`state_transition_contract.md`; the target and patch-account files are
-templates.
+The provisional structural library is in `state_library_v0/`: 8 initial
+states, 6 residual states, 48 selection transitions and 192 interval curves,
+built from the PSP-derived IDF Cariboo analog. It is **not** a compiled ws4
+dataset and the residual graph is not closed. See
+`state_library_v0/README.md`.
+
+The contract is in `state_transition_contract.md`; the target and
+patch-account files remain templates.
 
 ## Planned files
 
 | File | Purpose |
 | --- | --- |
 | `state_transition_contract.md` | The table and identifier contract |
+| `state_library_v0/` | Provisional FVS-BC transition library |
 | `targets.template.yaml` | Harvest and habitat target template |
 | `patch_accounts.template.yaml` | Selection-opening patch account template |
 | `topology.csv` | Block topology, once the boundary exists |

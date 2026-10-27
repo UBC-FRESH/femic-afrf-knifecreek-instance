@@ -1,0 +1,339 @@
+{
+  "library": "knife-creek-state-transition-v0",
+  "status": "provisional-one-entry-per-regime",
+  "generated_at": "2026-10-27T19:15:08.985925+00:00",
+  "source_stemlist": "data/psp/idf_cariboo_psp_stemlist_sample.csv",
+  "source_stemlist_sha256": "cc651071a8ce67f3b5c8e7c5b7d9b38dd8194f49c67c6e43cf3e8539d62591ce",
+  "stands": [
+    "PSP-IDF-024",
+    "PSP-IDF-005",
+    "PSP-IDF-015",
+    "PSP-IDF-012",
+    "PSP-IDF-004",
+    "PSP-IDF-013",
+    "PSP-IDF-006",
+    "PSP-IDF-008"
+  ],
+  "regimes": {
+    "SEL_MDWR_HIGH": {
+      "target_ft2_ac": "126.32",
+      "max_dbh_cm": "60.0",
+      "q": "1.25"
+    },
+    "SEL_MDWR_MODERATE": {
+      "target_ft2_ac": "95.83",
+      "max_dbh_cm": "55.0",
+      "q": "1.25"
+    },
+    "SEL_MDWR_LOW": {
+      "target_ft2_ac": "69.70",
+      "max_dbh_cm": "50.0",
+      "q": "1.30"
+    }
+  },
+  "counts": {
+    "states": 14,
+    "initial_states": 8,
+    "residual_states": 6,
+    "transitions": 48,
+    "curves": 192
+  },
+  "runs": [
+    {
+      "stand": "PSP-IDF-024",
+      "regime": "SEL_MDWR_HIGH",
+      "run_id": "PSP-IDF-024__SEL_MDWR_HIGH",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-024__SEL_MDWR_HIGH",
+      "case_id": "42732062-1489-4650-bcce-26cff691197f",
+      "keyword_hash": "sha256:115eb67685b5680470601caf87a2bf6c2aa0881a59aacd8668b4cd05bf1e6604",
+      "treelist_hash": "sha256:eecd5fa06878a3e9f122400c2ecd3603d0d197030428c2439f4dbaca694d0a8c",
+      "initial_ba_m2_ha": 22.0,
+      "initial_qmd_cm": 16.765705108642578,
+      "initial_tph": 998.0
+    },
+    {
+      "stand": "PSP-IDF-024",
+      "regime": "SEL_MDWR_MODERATE",
+      "run_id": "PSP-IDF-024__SEL_MDWR_MODERATE",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-024__SEL_MDWR_MODERATE",
+      "case_id": "aad859bd-0c58-412d-933e-4dc5bf947667",
+      "keyword_hash": "sha256:2f8fda37ab4c25f84a0ba67871c27f313b277eb649591bfa633fa6508483f64e",
+      "treelist_hash": "sha256:eecd5fa06878a3e9f122400c2ecd3603d0d197030428c2439f4dbaca694d0a8c",
+      "initial_ba_m2_ha": 22.0,
+      "initial_qmd_cm": 16.765705108642578,
+      "initial_tph": 998.0
+    },
+    {
+      "stand": "PSP-IDF-024",
+      "regime": "SEL_MDWR_LOW",
+      "run_id": "PSP-IDF-024__SEL_MDWR_LOW",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-024__SEL_MDWR_LOW",
+      "case_id": "d57e7d5e-6785-4bd7-8bf2-9f0a2a415ecd",
+      "keyword_hash": "sha256:1a0565af77f541f4c27a32be2ddd16f055a3c4da7770527523da19bc94f7adad",
+      "treelist_hash": "sha256:eecd5fa06878a3e9f122400c2ecd3603d0d197030428c2439f4dbaca694d0a8c",
+      "initial_ba_m2_ha": 22.0,
+      "initial_qmd_cm": 16.765705108642578,
+      "initial_tph": 998.0
+    },
+    {
+      "stand": "PSP-IDF-005",
+      "regime": "SEL_MDWR_HIGH",
+      "run_id": "PSP-IDF-005__SEL_MDWR_HIGH",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-005__SEL_MDWR_HIGH",
+      "case_id": "00f70795-5a26-42b6-87a4-f5e34dde23d9",
+      "keyword_hash": "sha256:6f556c1ebf248a03d32a8fba22e0cc4f23fb01c823c544f61bfffd1606eaf468",
+      "treelist_hash": "sha256:03eda42b04296749e2f8836d98be904e06773dd031158c7a3ed283212db1e368",
+      "initial_ba_m2_ha": 22.0,
+      "initial_qmd_cm": 17.67609214782715,
+      "initial_tph": 904.0
+    },
+    {
+      "stand": "PSP-IDF-005",
+      "regime": "SEL_MDWR_MODERATE",
+      "run_id": "PSP-IDF-005__SEL_MDWR_MODERATE",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-005__SEL_MDWR_MODERATE",
+      "case_id": "42778a19-08f8-4136-bb6a-9a0e8676c0c9",
+      "keyword_hash": "sha256:c300d29835bb79d3248097872d87624925d04b241d7629fd037d62a8c52a24ad",
+      "treelist_hash": "sha256:03eda42b04296749e2f8836d98be904e06773dd031158c7a3ed283212db1e368",
+      "initial_ba_m2_ha": 22.0,
+      "initial_qmd_cm": 17.67609214782715,
+      "initial_tph": 904.0
+    },
+    {
+      "stand": "PSP-IDF-005",
+      "regime": "SEL_MDWR_LOW",
+      "run_id": "PSP-IDF-005__SEL_MDWR_LOW",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-005__SEL_MDWR_LOW",
+      "case_id": "75cdbd1a-dcf8-4014-86a4-565d20f9a3ee",
+      "keyword_hash": "sha256:8ca4f4f42a54753066d351150ea4cf6812b7d9c57f6b5a3785b3959d43818534",
+      "treelist_hash": "sha256:03eda42b04296749e2f8836d98be904e06773dd031158c7a3ed283212db1e368",
+      "initial_ba_m2_ha": 22.0,
+      "initial_qmd_cm": 17.67609214782715,
+      "initial_tph": 904.0
+    },
+    {
+      "stand": "PSP-IDF-015",
+      "regime": "SEL_MDWR_HIGH",
+      "run_id": "PSP-IDF-015__SEL_MDWR_HIGH",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-015__SEL_MDWR_HIGH",
+      "case_id": "b2e981ab-d5b9-491d-9a96-82c6a90f4601",
+      "keyword_hash": "sha256:b2a972cdacf3b4341e7dee7f668f8b14344576f4ad24a97a6edd00555644425e",
+      "treelist_hash": "sha256:1401236caa705ea826830c94e2422121c5086974de4e482ad750f7685e22ddb4",
+      "initial_ba_m2_ha": 20.0,
+      "initial_qmd_cm": 19.659046173095703,
+      "initial_tph": 686.0
+    },
+    {
+      "stand": "PSP-IDF-015",
+      "regime": "SEL_MDWR_MODERATE",
+      "run_id": "PSP-IDF-015__SEL_MDWR_MODERATE",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-015__SEL_MDWR_MODERATE",
+      "case_id": "b8b4bbc7-c763-41cf-9139-22c36325f109",
+      "keyword_hash": "sha256:8405690f9f9ff9f7b8bcdf78b429d3572fe5045df391780b6af31fe5f5a554c4",
+      "treelist_hash": "sha256:1401236caa705ea826830c94e2422121c5086974de4e482ad750f7685e22ddb4",
+      "initial_ba_m2_ha": 20.0,
+      "initial_qmd_cm": 19.659046173095703,
+      "initial_tph": 686.0
+    },
+    {
+      "stand": "PSP-IDF-015",
+      "regime": "SEL_MDWR_LOW",
+      "run_id": "PSP-IDF-015__SEL_MDWR_LOW",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-015__SEL_MDWR_LOW",
+      "case_id": "9185b38c-9c31-4666-92bf-741691ae2ec6",
+      "keyword_hash": "sha256:3861683642e71bc86eeb722094e6ea9cde19392b3ed30fed1ae891b02d45db23",
+      "treelist_hash": "sha256:1401236caa705ea826830c94e2422121c5086974de4e482ad750f7685e22ddb4",
+      "initial_ba_m2_ha": 20.0,
+      "initial_qmd_cm": 19.659046173095703,
+      "initial_tph": 686.0
+    },
+    {
+      "stand": "PSP-IDF-012",
+      "regime": "SEL_MDWR_HIGH",
+      "run_id": "PSP-IDF-012__SEL_MDWR_HIGH",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-012__SEL_MDWR_HIGH",
+      "case_id": "3bc449b5-1f6a-42e7-a606-a0ae6680c3c7",
+      "keyword_hash": "sha256:158710bfac2db7968868d2e462fb6f4ebba20a8c6394587d84b78ed287c24a73",
+      "treelist_hash": "sha256:0824660c1933acad5964c3ee3101e92d7234d2f69c9a0bd84af4ad5555ec7f12",
+      "initial_ba_m2_ha": 26.0,
+      "initial_qmd_cm": 18.364988327026367,
+      "initial_tph": 998.0
+    },
+    {
+      "stand": "PSP-IDF-012",
+      "regime": "SEL_MDWR_MODERATE",
+      "run_id": "PSP-IDF-012__SEL_MDWR_MODERATE",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-012__SEL_MDWR_MODERATE",
+      "case_id": "01be2907-321c-495f-a17f-de745a6d1bc4",
+      "keyword_hash": "sha256:cb067bed32f50130c5a513508ae9df316c1545096ff65fb475bd7d15d027a89c",
+      "treelist_hash": "sha256:0824660c1933acad5964c3ee3101e92d7234d2f69c9a0bd84af4ad5555ec7f12",
+      "initial_ba_m2_ha": 26.0,
+      "initial_qmd_cm": 18.364988327026367,
+      "initial_tph": 998.0
+    },
+    {
+      "stand": "PSP-IDF-012",
+      "regime": "SEL_MDWR_LOW",
+      "run_id": "PSP-IDF-012__SEL_MDWR_LOW",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-012__SEL_MDWR_LOW",
+      "case_id": "707dc9db-5019-482f-b6a0-4f5f43ce08ee",
+      "keyword_hash": "sha256:c020a0fe1cd300615a0529cd2d0a90bdee804175a1fbf13373b89a088630bc79",
+      "treelist_hash": "sha256:0824660c1933acad5964c3ee3101e92d7234d2f69c9a0bd84af4ad5555ec7f12",
+      "initial_ba_m2_ha": 26.0,
+      "initial_qmd_cm": 18.364988327026367,
+      "initial_tph": 998.0
+    },
+    {
+      "stand": "PSP-IDF-004",
+      "regime": "SEL_MDWR_HIGH",
+      "run_id": "PSP-IDF-004__SEL_MDWR_HIGH",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-004__SEL_MDWR_HIGH",
+      "case_id": "08e4405d-9284-4648-a199-53cd14255830",
+      "keyword_hash": "sha256:cf51ee6713c33e87447026244789a1ffce7187c306e9adb858eae0172968881a",
+      "treelist_hash": "sha256:4fd34eeea21e591eadd51da6e065458fd7bde3e63edc67868fb306ac9ecf5406",
+      "initial_ba_m2_ha": 28.0,
+      "initial_qmd_cm": 19.152238845825195,
+      "initial_tph": 998.0
+    },
+    {
+      "stand": "PSP-IDF-004",
+      "regime": "SEL_MDWR_MODERATE",
+      "run_id": "PSP-IDF-004__SEL_MDWR_MODERATE",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-004__SEL_MDWR_MODERATE",
+      "case_id": "697a2239-e24a-49a5-be5c-4371737fe3c6",
+      "keyword_hash": "sha256:140ea38213c978e3c9233becb49032173d5adfbc3649d08a8dc755a29b942f30",
+      "treelist_hash": "sha256:4fd34eeea21e591eadd51da6e065458fd7bde3e63edc67868fb306ac9ecf5406",
+      "initial_ba_m2_ha": 28.0,
+      "initial_qmd_cm": 19.152238845825195,
+      "initial_tph": 998.0
+    },
+    {
+      "stand": "PSP-IDF-004",
+      "regime": "SEL_MDWR_LOW",
+      "run_id": "PSP-IDF-004__SEL_MDWR_LOW",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-004__SEL_MDWR_LOW",
+      "case_id": "0a0cc27f-f401-4179-a8a6-c01ebc8c3b84",
+      "keyword_hash": "sha256:a6f209bf14d644bec21543d0e1370a101352e600887c1226df46ed51e1735f95",
+      "treelist_hash": "sha256:4fd34eeea21e591eadd51da6e065458fd7bde3e63edc67868fb306ac9ecf5406",
+      "initial_ba_m2_ha": 28.0,
+      "initial_qmd_cm": 19.152238845825195,
+      "initial_tph": 998.0
+    },
+    {
+      "stand": "PSP-IDF-013",
+      "regime": "SEL_MDWR_HIGH",
+      "run_id": "PSP-IDF-013__SEL_MDWR_HIGH",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-013__SEL_MDWR_HIGH",
+      "case_id": "6ac080fd-a824-400c-bcea-e0f02cdd4bac",
+      "keyword_hash": "sha256:55b788c336ffbb1dd24e7298130cf1003cf497fe5c41479d4f3a8e8eca6cdf49",
+      "treelist_hash": "sha256:4b9666f0171b82000689f94988592a7704c1c685b425f0a3fea9b2360a7073d9",
+      "initial_ba_m2_ha": 31.0,
+      "initial_qmd_cm": 20.117042541503906,
+      "initial_tph": 998.0
+    },
+    {
+      "stand": "PSP-IDF-013",
+      "regime": "SEL_MDWR_MODERATE",
+      "run_id": "PSP-IDF-013__SEL_MDWR_MODERATE",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-013__SEL_MDWR_MODERATE",
+      "case_id": "1dddcd8d-2385-448b-acb4-ed6c36872c37",
+      "keyword_hash": "sha256:75c1fc5357e15da4e572dc4e823d9b502dde0bf37fa878dccd3715c8e4c43543",
+      "treelist_hash": "sha256:4b9666f0171b82000689f94988592a7704c1c685b425f0a3fea9b2360a7073d9",
+      "initial_ba_m2_ha": 31.0,
+      "initial_qmd_cm": 20.117042541503906,
+      "initial_tph": 998.0
+    },
+    {
+      "stand": "PSP-IDF-013",
+      "regime": "SEL_MDWR_LOW",
+      "run_id": "PSP-IDF-013__SEL_MDWR_LOW",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-013__SEL_MDWR_LOW",
+      "case_id": "7db57647-a850-4fc4-b12f-a19b0e9835e6",
+      "keyword_hash": "sha256:365c631e2548ddebb26bfcf9cb01fc6fba67ab18119a53b7a268d2758a8d1bf8",
+      "treelist_hash": "sha256:4b9666f0171b82000689f94988592a7704c1c685b425f0a3fea9b2360a7073d9",
+      "initial_ba_m2_ha": 31.0,
+      "initial_qmd_cm": 20.117042541503906,
+      "initial_tph": 998.0
+    },
+    {
+      "stand": "PSP-IDF-006",
+      "regime": "SEL_MDWR_HIGH",
+      "run_id": "PSP-IDF-006__SEL_MDWR_HIGH",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-006__SEL_MDWR_HIGH",
+      "case_id": "ad7287b5-ba88-4338-9cdb-2212511340ae",
+      "keyword_hash": "sha256:615a9e8e415bc9e8821ba8d4bd14ace2cb88a4bdadeaa159fb23176466155b1b",
+      "treelist_hash": "sha256:c92961ac4ab53f2ecd722309131030bf77c1909bdb12fa0d55da1b6d18a84ed4",
+      "initial_ba_m2_ha": 35.0,
+      "initial_qmd_cm": 21.191104888916016,
+      "initial_tph": 998.0
+    },
+    {
+      "stand": "PSP-IDF-006",
+      "regime": "SEL_MDWR_MODERATE",
+      "run_id": "PSP-IDF-006__SEL_MDWR_MODERATE",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-006__SEL_MDWR_MODERATE",
+      "case_id": "ad4b95cc-4705-4f8e-9c2e-738dcd0826a1",
+      "keyword_hash": "sha256:8970cdcfc4b3cdc0a144cea41606eb0bfb9b6b006bfc443e0c5bcdf5e75c0ea4",
+      "treelist_hash": "sha256:c92961ac4ab53f2ecd722309131030bf77c1909bdb12fa0d55da1b6d18a84ed4",
+      "initial_ba_m2_ha": 35.0,
+      "initial_qmd_cm": 21.191104888916016,
+      "initial_tph": 998.0
+    },
+    {
+      "stand": "PSP-IDF-006",
+      "regime": "SEL_MDWR_LOW",
+      "run_id": "PSP-IDF-006__SEL_MDWR_LOW",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-006__SEL_MDWR_LOW",
+      "case_id": "2a3f0ae9-c56e-41cf-ab08-4dfe868d6c82",
+      "keyword_hash": "sha256:2a25decbc195c902522938337dd6118ba8d893773105ff124bd38a8208b39778",
+      "treelist_hash": "sha256:c92961ac4ab53f2ecd722309131030bf77c1909bdb12fa0d55da1b6d18a84ed4",
+      "initial_ba_m2_ha": 35.0,
+      "initial_qmd_cm": 21.191104888916016,
+      "initial_tph": 998.0
+    },
+    {
+      "stand": "PSP-IDF-008",
+      "regime": "SEL_MDWR_HIGH",
+      "run_id": "PSP-IDF-008__SEL_MDWR_HIGH",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-008__SEL_MDWR_HIGH",
+      "case_id": "6a6f657c-abff-42f0-b467-8c0070015a5f",
+      "keyword_hash": "sha256:c9588fde83a313b2254c6d2f233e2a85a1c3b4b9ff1b13e3c9a7d23e87083861",
+      "treelist_hash": "sha256:c521400e59dd236f008dc9051e1dcdd350ffcb837813af97308b2c7c1f9a50b3",
+      "initial_ba_m2_ha": 38.0,
+      "initial_qmd_cm": 22.163936614990234,
+      "initial_tph": 998.0
+    },
+    {
+      "stand": "PSP-IDF-008",
+      "regime": "SEL_MDWR_MODERATE",
+      "run_id": "PSP-IDF-008__SEL_MDWR_MODERATE",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-008__SEL_MDWR_MODERATE",
+      "case_id": "7975f335-f9f7-416b-b465-1ba227984d4b",
+      "keyword_hash": "sha256:c37892775812e2538a1e2d30bab0dcb93671bf710e5e0ae61d2b2fa777b56c61",
+      "treelist_hash": "sha256:c521400e59dd236f008dc9051e1dcdd350ffcb837813af97308b2c7c1f9a50b3",
+      "initial_ba_m2_ha": 38.0,
+      "initial_qmd_cm": 22.163936614990234,
+      "initial_tph": 998.0
+    },
+    {
+      "stand": "PSP-IDF-008",
+      "regime": "SEL_MDWR_LOW",
+      "run_id": "PSP-IDF-008__SEL_MDWR_LOW",
+      "run_dir": "runtime/state_library_v0/PSP-IDF-008__SEL_MDWR_LOW",
+      "case_id": "5a8dbb26-4911-48d2-b684-c6bac5db75ff",
+      "keyword_hash": "sha256:ebc70deae7be0d0c6c2735cc980635b080c31a04964f9a013c3cb7ec4ec9f98d",
+      "treelist_hash": "sha256:c521400e59dd236f008dc9051e1dcdd350ffcb837813af97308b2c7c1f9a50b3",
+      "initial_ba_m2_ha": 38.0,
+      "initial_qmd_cm": 22.163936614990234,
+      "initial_tph": 998.0
+    }
+  ],
+  "caveats": [
+    "PSP-derived regional IDF Cariboo analog, not Knife Creek data.",
+    "Not a compiled ws4 dataset; fragments, blocks and topology are not built.",
+    "Two entries per run; residual states are terminal in v0.",
+    "No KC calibration; FVS-BC is used structurally.",
+    "Residual BA may exceed the Table 29 target because of q deficits in the grown stand.",
+    "Habitat assignment is structural, not the legal UWR order."
+  ]
+}

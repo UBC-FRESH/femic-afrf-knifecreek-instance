@@ -1,0 +1,308 @@
+{
+  "nodes": [
+    "PSP_IDF_024__FD__BA20_25__QMD_LT18__natural",
+    "PSP_IDF_005__FD__BA20_25__QMD_LT18__natural",
+    "PSP_IDF_015__FD__BA20_25__QMD18_20__natural",
+    "PSP_IDF_012__FD__BA25_30__QMD18_20__natural",
+    "PSP_IDF_004__FD__BA25_30__QMD18_20__natural",
+    "PSP_IDF_013__FD__BA30_35__QMD20_22__natural",
+    "PSP_IDF_006__FD__BA35_40__QMD20_22__natural",
+    "PSP_IDF_008__FD__BA35_40__QMD22_24__natural",
+    "PSP_IDF__FD__BA20_25__QMD24_PLUS__selection",
+    "PSP_IDF__FD__BA25_30__QMD24_PLUS__selection",
+    "PSP_IDF__FD__BA30_35__QMD24_PLUS__selection",
+    "PSP_IDF__FD__BA35_40__QMD24_PLUS__selection",
+    "PSP_IDF__FD__BA40_PLUS__QMD24_PLUS__selection",
+    "PSP_IDF__FD__BA_LT20__QMD24_PLUS__selection"
+  ],
+  "edges": [
+    {
+      "from": "PSP_IDF_004__FD__BA25_30__QMD18_20__natural",
+      "to": "PSP_IDF__FD__BA30_35__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_HIGH",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_004__FD__BA25_30__QMD18_20__natural",
+      "to": "PSP_IDF__FD__BA35_40__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_HIGH",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_004__FD__BA25_30__QMD18_20__natural",
+      "to": "PSP_IDF__FD__BA20_25__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_LOW",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_004__FD__BA25_30__QMD18_20__natural",
+      "to": "PSP_IDF__FD__BA30_35__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_LOW",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_004__FD__BA25_30__QMD18_20__natural",
+      "to": "PSP_IDF__FD__BA25_30__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_MODERATE",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_004__FD__BA25_30__QMD18_20__natural",
+      "to": "PSP_IDF__FD__BA30_35__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_MODERATE",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_005__FD__BA20_25__QMD_LT18__natural",
+      "to": "PSP_IDF__FD__BA30_35__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_HIGH",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_005__FD__BA20_25__QMD_LT18__natural",
+      "to": "PSP_IDF__FD__BA30_35__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_HIGH",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_005__FD__BA20_25__QMD_LT18__natural",
+      "to": "PSP_IDF__FD__BA_LT20__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_LOW",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_005__FD__BA20_25__QMD_LT18__natural",
+      "to": "PSP_IDF__FD__BA25_30__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_LOW",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_005__FD__BA20_25__QMD_LT18__natural",
+      "to": "PSP_IDF__FD__BA20_25__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_MODERATE",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_005__FD__BA20_25__QMD_LT18__natural",
+      "to": "PSP_IDF__FD__BA30_35__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_MODERATE",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_006__FD__BA35_40__QMD20_22__natural",
+      "to": "PSP_IDF__FD__BA30_35__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_HIGH",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_006__FD__BA35_40__QMD20_22__natural",
+      "to": "PSP_IDF__FD__BA35_40__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_HIGH",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_006__FD__BA35_40__QMD20_22__natural",
+      "to": "PSP_IDF__FD__BA25_30__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_LOW",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_006__FD__BA35_40__QMD20_22__natural",
+      "to": "PSP_IDF__FD__BA30_35__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_LOW",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_006__FD__BA35_40__QMD20_22__natural",
+      "to": "PSP_IDF__FD__BA25_30__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_MODERATE",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_006__FD__BA35_40__QMD20_22__natural",
+      "to": "PSP_IDF__FD__BA35_40__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_MODERATE",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_008__FD__BA35_40__QMD22_24__natural",
+      "to": "PSP_IDF__FD__BA30_35__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_HIGH",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_008__FD__BA35_40__QMD22_24__natural",
+      "to": "PSP_IDF__FD__BA40_PLUS__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_HIGH",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_008__FD__BA35_40__QMD22_24__natural",
+      "to": "PSP_IDF__FD__BA25_30__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_LOW",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_008__FD__BA35_40__QMD22_24__natural",
+      "to": "PSP_IDF__FD__BA35_40__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_LOW",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_008__FD__BA35_40__QMD22_24__natural",
+      "to": "PSP_IDF__FD__BA30_35__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_MODERATE",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_008__FD__BA35_40__QMD22_24__natural",
+      "to": "PSP_IDF__FD__BA35_40__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_MODERATE",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_012__FD__BA25_30__QMD18_20__natural",
+      "to": "PSP_IDF__FD__BA30_35__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_HIGH",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_012__FD__BA25_30__QMD18_20__natural",
+      "to": "PSP_IDF__FD__BA35_40__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_HIGH",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_012__FD__BA25_30__QMD18_20__natural",
+      "to": "PSP_IDF__FD__BA20_25__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_LOW",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_012__FD__BA25_30__QMD18_20__natural",
+      "to": "PSP_IDF__FD__BA25_30__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_LOW",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_012__FD__BA25_30__QMD18_20__natural",
+      "to": "PSP_IDF__FD__BA25_30__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_MODERATE",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_012__FD__BA25_30__QMD18_20__natural",
+      "to": "PSP_IDF__FD__BA30_35__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_MODERATE",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_013__FD__BA30_35__QMD20_22__natural",
+      "to": "PSP_IDF__FD__BA30_35__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_HIGH",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_013__FD__BA30_35__QMD20_22__natural",
+      "to": "PSP_IDF__FD__BA35_40__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_HIGH",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_013__FD__BA30_35__QMD20_22__natural",
+      "to": "PSP_IDF__FD__BA20_25__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_LOW",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_013__FD__BA30_35__QMD20_22__natural",
+      "to": "PSP_IDF__FD__BA30_35__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_LOW",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_013__FD__BA30_35__QMD20_22__natural",
+      "to": "PSP_IDF__FD__BA25_30__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_MODERATE",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_013__FD__BA30_35__QMD20_22__natural",
+      "to": "PSP_IDF__FD__BA35_40__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_MODERATE",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_015__FD__BA20_25__QMD18_20__natural",
+      "to": "PSP_IDF__FD__BA30_35__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_HIGH",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_015__FD__BA20_25__QMD18_20__natural",
+      "to": "PSP_IDF__FD__BA30_35__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_HIGH",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_015__FD__BA20_25__QMD18_20__natural",
+      "to": "PSP_IDF__FD__BA20_25__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_LOW",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_015__FD__BA20_25__QMD18_20__natural",
+      "to": "PSP_IDF__FD__BA25_30__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_LOW",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_015__FD__BA20_25__QMD18_20__natural",
+      "to": "PSP_IDF__FD__BA20_25__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_MODERATE",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_015__FD__BA20_25__QMD18_20__natural",
+      "to": "PSP_IDF__FD__BA30_35__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_MODERATE",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_024__FD__BA20_25__QMD_LT18__natural",
+      "to": "PSP_IDF__FD__BA25_30__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_HIGH",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_024__FD__BA20_25__QMD_LT18__natural",
+      "to": "PSP_IDF__FD__BA30_35__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_HIGH",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_024__FD__BA20_25__QMD_LT18__natural",
+      "to": "PSP_IDF__FD__BA_LT20__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_LOW",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_024__FD__BA20_25__QMD_LT18__natural",
+      "to": "PSP_IDF__FD__BA25_30__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_LOW",
+      "entry_year": 60
+    },
+    {
+      "from": "PSP_IDF_024__FD__BA20_25__QMD_LT18__natural",
+      "to": "PSP_IDF__FD__BA20_25__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_MODERATE",
+      "entry_year": 30
+    },
+    {
+      "from": "PSP_IDF_024__FD__BA20_25__QMD_LT18__natural",
+      "to": "PSP_IDF__FD__BA25_30__QMD24_PLUS__selection",
+      "regime": "SEL_MDWR_MODERATE",
+      "entry_year": 60
+    }
+  ]
+}

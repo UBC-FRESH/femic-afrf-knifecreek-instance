@@ -1,6 +1,6 @@
 # ws4 state-transition contract
 
-Status: design. No dataset yet.
+Status: v0 transition library exists; no compiled ws4 dataset yet.
 
 ## Required tables
 
