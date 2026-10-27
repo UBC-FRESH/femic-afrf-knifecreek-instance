@@ -7,9 +7,11 @@
 # commit d86e78b); the record is not the remaining blocker.
 #
 # THINQFA implements the BDq target: it thins an uneven-aged stand through a
-# diameter range to a q-factor distribution and a residual density. FVS expects
-# inches, square feet per acre, and a supplemental record that selects the
-# residual-density unit. The numeric fields below are converted from Table 29.
+# diameter range to a q-factor distribution and a residual density. The BC
+# variant converts fields 2 (minimum DBH), 3 (maximum DBH) and 6 (class width)
+# from centimetres to inches in canada/bc/initre.f, so those fields are written
+# in centimetres here. The residual-density target is square feet per acre.
+# The supplemental record selects that unit.
 
 regimes:
   - id: SEL_MDWR_HIGH
@@ -26,20 +28,25 @@ regimes:
     fvsbc_keyword:
       name: THINQFA
       fields:
-        year_or_cycle: 1
-        min_dbh_in: 0.0
-        max_dbh_in: 23.62
+        year_or_cycle: 2
+        min_dbh_cm: 0.0
+        max_dbh_cm: 60.0
         species_code: 0
         q_factor: 1.25
-        class_width_in: 1.97
+        class_width_cm: 5.0
         residual_density: 126.32
       supplemental_record:
         units: 0
         units_label: basal_area_ft2_per_acre
+      entry_settings:
+        TIMEINT: ",30"
+        NUMCYCLE: 2
+        note: >-
+          Cycle 2 with a 30-year period applies the cut at year 30, after the
+          first 30-year growth interval. Cycle 1 would apply at year 0.
       notes: >-
-        Full-range BDq target. The pilot must establish whether the entry is
-        applied at year 0 or at the end of the 30-year cycle under the chosen
-        TIMEINT/NUMCYCLE settings.
+        Full-range BDq target. Cycle 2 with TIMEINT=,30 and NUMCYCLE=2 is the
+        reviewed 30-year entry.
     notes: >-
       Table 29 High: B 29 m2/ha, D 60 cm, q 1.25, 30-year cycle. The policy
       direction is single-tree selection with groups of 2-5 trees at the
@@ -60,18 +67,23 @@ regimes:
     fvsbc_keyword:
       name: THINQFA
       fields:
-        year_or_cycle: 1
-        min_dbh_in: 0.0
-        max_dbh_in: 21.65
+        year_or_cycle: 2
+        min_dbh_cm: 0.0
+        max_dbh_cm: 55.0
         species_code: 0
         q_factor: 1.25
-        class_width_in: 1.97
+        class_width_cm: 5.0
         residual_density: 95.83
       supplemental_record:
         units: 0
         units_label: basal_area_ft2_per_acre
+      entry_settings:
+        TIMEINT: ",30"
+        NUMCYCLE: 2
+        note: Cycle 2 applies the cut at year 30.
       notes: >-
-        Full-range BDq target. Pilot the entry-year alignment before use.
+        Full-range BDq target. Cycle 2 with a 30-year period is the reviewed
+        entry.
     notes: >-
       Table 29 Moderate: B 22 m2/ha, D 55 cm, q 1.25, 30-year cycle.
 
@@ -89,18 +101,23 @@ regimes:
     fvsbc_keyword:
       name: THINQFA
       fields:
-        year_or_cycle: 1
-        min_dbh_in: 0.0
-        max_dbh_in: 19.69
+        year_or_cycle: 2
+        min_dbh_cm: 0.0
+        max_dbh_cm: 50.0
         species_code: 0
         q_factor: 1.30
-        class_width_in: 1.97
+        class_width_cm: 5.0
         residual_density: 69.70
       supplemental_record:
         units: 0
         units_label: basal_area_ft2_per_acre
+      entry_settings:
+        TIMEINT: ",30"
+        NUMCYCLE: 2
+        note: Cycle 2 applies the cut at year 30.
       notes: >-
-        Full-range BDq target. Pilot the entry-year alignment before use.
+        Full-range BDq target. Cycle 2 with a 30-year period is the reviewed
+        entry.
     notes: >-
       Table 29 Low: B 16 m2/ha, D 50 cm, q 1.30, 30-year cycle.
 
@@ -116,12 +133,12 @@ design_variants:
     fvsbc_keyword:
       name: THINQFA
       fields:
-        year_or_cycle: 1
-        min_dbh_in: 0.0
-        max_dbh_in: 14.76
+        year_or_cycle: 2
+        min_dbh_cm: 0.0
+        max_dbh_cm: 37.5
         species_code: 0
         q_factor: 1.25
-        class_width_in: 1.97
+        class_width_cm: 5.0
         residual_density: computed-per-state
       supplemental_record:
         units: 0
@@ -146,10 +163,11 @@ wrapper_gaps:
     resolved_by: d86e78b0fc31386684aae1a0a1a9a821c0ee2baf
   - id: entry_year_semantics
     description: >-
-      The pilot must confirm whether THINQFA field 1 is applied at the start of
-      the named cycle or at the end of the 30-year growth period under the
-      chosen TIMEINT/NUMCYCLE settings.
-    status: open
+      Resolved by a synthetic pilot: cycle 1 applies at year 0; with
+      TIMEINT=,30 and NUMCYCLE=2, THINQFA at cycle 2 applies at year 30; with
+      TIMEINT=,10 and NUMCYCLE=4, cycle 4 also applies at year 30.
+    status: resolved
+    evidence: notes/reference/fvsbc-thinqfa-pilot.md
   - id: spatial_grouping
     description: >-
       The 2-5 tree maximum-diameter groups are a spatial constraint. FVS-BC
@@ -160,6 +178,7 @@ benchmark:
   figure11_table: data/benchmarks/mwp3_figure11_target_stand_structure.csv
   figure11_metadata: data/benchmarks/mwp3_figure11_target_stand_structure.metadata.json
   figure11_review: data/benchmarks/mwp3_figure11_review.jsonl
+  thinqfa_pilot: notes/reference/fvsbc-thinqfa-pilot.md
   acceptance:
     - compare residual basal area by habitat class with Table 29 (29/22/16 m2/ha)
     - compare maximum DBH with Table 29 (60/55/50 cm)

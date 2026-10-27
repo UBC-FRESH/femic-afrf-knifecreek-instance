@@ -126,3 +126,23 @@ status and the GitHub issue comments.
 - Updated the README, growth-engine guide, state-transition design, pilot
   runbook and ADR 0002 to name the new pin and to stop calling the supplemental
   record a blocker.
+
+## 2026-10-27
+
+- P1.2d: ran the controlled synthetic `THINQFA` pilot against the built
+  `FVSbc`. Cycle 1 cuts at year 0; cycle 2 with `TIMEINT=,30` and `NUMCYCLE=2`
+  cuts at year 30; cycle 4 with `TIMEINT=,10` also cuts at year 30. The
+  entry-year question is settled.
+- Corrected the BC `THINQFA` units. `canada/bc/initre.f` converts fields 2, 3
+  and 6 (minimum DBH, maximum DBH, class width) from centimetres to inches.
+  The KC templates had stored those fields in inches; passing `23.62` shortened
+  the range to about 23.6 cm and the activity was cancelled. The templates now
+  store `0.0`, `60.0`/`55.0`/`50.0` and `5.0` cm. The residual-density target
+  remains square feet per acre (`126.32`/`95.83`/`69.70`).
+- Added `notes/reference/fvsbc-thinqfa-pilot.md`. The pilot also showed that
+  `THINQFA` does not guarantee the residual BA target from a grown stand with a
+  q deficit; the High Figure 11 shape left 36 m²/ha against a 29 m²/ha target.
+  This is recorded as a structural caveat, not a calibration result.
+- Removed the remaining "inches" wording from the KC README, growth-engine
+  guide, regime templates and pin note. The regimes remain not runnable until a
+  KC stem list exists.

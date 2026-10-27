@@ -108,17 +108,19 @@ python -m fresh_fvsbc data/fvsbc/populations/AU01.json \
   --directory runtime/fvsbc/AU01_sel_mdwr_high \
   --species FD --tree-age 60 \
   --keyword SITECODE=FD,100 \
-  --keyword NUMCYCLE=4 \
-  --keyword THINQFA=1,0.0,23.62,0,1.25,1.97,126.32 \
+  --keyword TIMEINT=,30 \
+  --keyword NUMCYCLE=2 \
+  --keyword THINQFA=2,0.0,60.0,0,1.25,5.0,126.32 \
   --keyword PROCESS \
   --block "DATABASE|DSNOut|FVSOut.db|TreeLIDB|CutLIDB|ATRTLIDB|Summary|StrClass" \
   --keyword STOP
 ```
 
-The exact keyword order and entry-year semantics are not yet validated. The
-`THINQFA` supplemental residual-density-units record is supported by
-`fresh-fvsbc` at the pinned commit `d86e78b`, but this example is still a
-target, not a validated command. See
+The BC variant reads `THINQFA` fields 2, 3 and 6 in **centimetres** and
+converts them to inches; the target density is square feet per acre. The
+supplemental record is supported at the pinned commit `d86e78b`. The cycle-2 /
+30-year entry is the synthetic pilot's reviewed setting; this example is still
+a target, not a validated command. See
 `config/fvsbc/regimes.yaml`, `runbooks/FVSBC_PILOT.md` and
 `planning/fvsbc-state-transition-design.md`.
 

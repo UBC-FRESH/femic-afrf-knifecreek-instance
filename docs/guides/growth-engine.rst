@@ -51,16 +51,22 @@ Selection-cut keywords
 The Knife Creek regimes use `THINQFA` (THIN Q-Factor Approach), because the
 AFRF plan specifies BDq: residual basal area, maximum DBH, and q-factor by
 habitat class. `THINQFA` thins through a diameter range to a q-factor
-distribution and a residual density. The FVS fields are:
+distribution and a residual density. The BC variant's fields are:
 
-- entry year or cycle;
-- minimum DBH (in);
-- maximum DBH (in);
+- entry cycle;
+- minimum DBH (cm);
+- maximum DBH (cm);
 - species code;
 - q-factor;
-- diameter-class width (in); and
-- residual density, with a supplemental record selecting basal area per acre,
-  trees per acre, or SDI.
+- diameter-class width (cm); and
+- residual density (ft²/ac), with a supplemental record selecting basal area
+  per acre, trees per acre, or SDI.
+
+`canada/bc/initre.f` converts fields 2, 3 and 6 from centimetres to inches
+before the cut. Passing inches to the BC variant shortens the diameter range
+and can cancel the activity. A synthetic pilot with `TIMEINT=,30` and
+`NUMCYCLE=2` confirmed that `THINQFA` at cycle 2 cuts at year 30; cycle 1 cuts
+at year 0.
 
 `THINBTA` is **not** a basal-area target; it is a thin-from-below to a
 trees-per-acre target. `THINBBA`, `THINABA`, `THINDBH` and `THINQFA` are the
@@ -69,7 +75,8 @@ relevant alternatives. The plan's values are in
 `config/fvsbc/regimes.yaml`.
 
 `fresh-fvsbc` P42.1 models the `THINQFA` supplemental record; the KC pin is
-`d86e78b`. The entry-year/cycle semantics still need a controlled pilot.
+`d86e78b`. The synthetic pilot recorded the entry-year/cycle semantics in
+`notes/reference/fvsbc-thinqfa-pilot.md`.
 
 A selection regime is a reviewed combination of:
 

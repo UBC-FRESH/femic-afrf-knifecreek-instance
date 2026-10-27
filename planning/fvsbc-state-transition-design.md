@@ -59,8 +59,10 @@ the 0-37.5 cm component and computes its residual density per state as Table 29
 B minus the retained large-tree basal area.
 
 The regimes are reviewed policy, but they are not yet runnable. `fresh-fvsbc`
-P42.1 supports the `THINQFA` supplemental residual-density-units record, but the
-entry-year/cycle semantics need a controlled pilot.
+P42.1 supports the `THINQFA` supplemental residual-density-units record. A
+synthetic pilot settled the entry cycle: cycle 1 is year 0, and cycle 2 with
+`TIMEINT=,30` is year 30. The BC variant reads fields 2, 3 and 6 in centimetres;
+see `notes/reference/fvsbc-thinqfa-pilot.md`.
 
 ## Run sequence
 
@@ -158,7 +160,8 @@ rescaling.
 
 ## Next experiments
 
-1. Build one synthetic FD stand and run a single `THINQFA` selection cut.
+1. Run one real KC AU through a single `THINQFA` selection cut once the stem
+   list exists.
 2. Confirm the cut list and after-treatment list are populated.
 3. Compare the residual B, D, q and 5 cm distribution with Table 29 and
    Figure 11.

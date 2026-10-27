@@ -72,13 +72,15 @@ habitat_classes:
     q_class_width_cm: 5.0
     cutting_cycle_years: 30
     fvsbc_thinqfa:
-      min_dbh_in: 0.0
-      max_dbh_in: 23.62
+      # The BC variant converts fields 2, 3 and 6 from cm to inches in
+      # canada/bc/initre.f. Pass centimetres here, not inches.
+      min_dbh_cm: 0.0
+      max_dbh_cm: 60.0
       q_factor: 1.25
-      class_width_in: 1.97
+      class_width_cm: 5.0
       residual_density: 126.32
+      residual_density_units: basal_area_ft2_per_acre
       supplemental_units: 0
-      supplemental_units_label: basal_area_ft2_per_acre
   - id: MODERATE
     label: Moderate
     residual_basal_area_m2_ha: 22.0
@@ -87,13 +89,13 @@ habitat_classes:
     q_class_width_cm: 5.0
     cutting_cycle_years: 30
     fvsbc_thinqfa:
-      min_dbh_in: 0.0
-      max_dbh_in: 21.65
+      min_dbh_cm: 0.0
+      max_dbh_cm: 55.0
       q_factor: 1.25
-      class_width_in: 1.97
+      class_width_cm: 5.0
       residual_density: 95.83
+      residual_density_units: basal_area_ft2_per_acre
       supplemental_units: 0
-      supplemental_units_label: basal_area_ft2_per_acre
   - id: LOW
     label: Low
     residual_basal_area_m2_ha: 16.0
@@ -102,18 +104,22 @@ habitat_classes:
     q_class_width_cm: 5.0
     cutting_cycle_years: 30
     fvsbc_thinqfa:
-      min_dbh_in: 0.0
-      max_dbh_in: 19.69
+      min_dbh_cm: 0.0
+      max_dbh_cm: 50.0
       q_factor: 1.30
-      class_width_in: 1.97
+      class_width_cm: 5.0
       residual_density: 69.70
+      residual_density_units: basal_area_ft2_per_acre
       supplemental_units: 0
-      supplemental_units_label: basal_area_ft2_per_acre
 
 unit_conversions:
   basal_area_m2_ha_to_ft2_ac: 4.356
   cm_to_in: 0.3937007874
   five_cm_class_in: 1.97
+  note: >-
+    The residual-density target is in square feet per acre. The minimum DBH,
+    maximum DBH and class width are centimetres in the keyword file because
+    canada/bc/initre.f converts those three fields to inches.
 
 open_items:
   - id: legal_uwr_order
