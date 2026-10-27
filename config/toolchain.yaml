@@ -15,8 +15,13 @@ toolchain:
     docs: https://ubc-fresh.github.io/fresh-fvsbc/
   nemora:
     repository: https://github.com/UBC-FRESH/nemora
-    commit: TBD
-    role: synthetic stem-population generation
+    commit: 2e8776c0ffce15cb4b18e2fbd70bdd4c1c4467d9
+    version: 0.0.1-alpha
+    role: DBH PDF fitting and inverse-CDF synthetic stem-population generation
+    note: >-
+      Pinned for the P1.3a IDF Cariboo PSP stem-list analog. The fit and
+      inverse-CDF sampling use the grouped Weibull fit and sample_distribution
+      from this commit.
   ws4:
     repository: https://github.com/UBC-FRESH/ws4
     commit: TBD
