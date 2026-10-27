@@ -194,5 +194,14 @@ status and the GitHub issue comments.
   × three Table 29 regimes: `RETAIN_ABOVE_D`, `LT4_50`, `LT6_50`, `LT8_50`.
   Split policies hit the total BA target (High 27–28 vs 29; Moderate/Low exact)
   while holding large-tree BA at 4/6/8 m²/ha. `RETAIN_ABOVE_D` left 31–37.5
-  m²/ha and 7.3–15.6 m²/ha of large trees. Clump count and crown-cover are
-  post-processing proxies, not spatial snow modelling.
+  m²/ha and 14.5–15.6 m²/ha of large trees in the cases with an after-treatment
+  tree list. Clump count and crown-cover are post-processing proxies, not
+  spatial snow modelling.
+- P2.2 clump geometry and PSP stem-map limits: added
+  `runbooks/build_clump_scenarios.py`, `clump_scenarios.csv`/summary (276
+  scenarios), and `notes/reference/psp-stem-map-limits.md`. Of 45 stable PSP
+  plots, 11 are fully mapped and only one has more than one mapped tree ≥50 cm;
+  the public PSP analog cannot estimate clump size or spacing. The clump
+  scenarios are explicit geometry, not observations. Corrected the pilot to
+  treat a canceled treatment with no after-treatment tree list as missing
+  large-tree metrics rather than zero.

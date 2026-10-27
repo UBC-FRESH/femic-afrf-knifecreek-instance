@@ -1,7 +1,7 @@
 {
   "pilot": "knife-creek-veteran-retention-v0",
   "status": "structural-policy-pilot",
-  "generated_at": "2026-10-27T19:35:48.581950+00:00",
+  "generated_at": "2026-10-27T20:02:42.320942+00:00",
   "source_stemlist": "data/psp/idf_cariboo_psp_conditional_stemlists.csv",
   "policies_file": "config/retention_policies.yaml",
   "stands": [
@@ -35,7 +35,7 @@
       "stand": "PSP-REG-004",
       "regime": "SEL_MDWR_HIGH",
       "policy": "RETAIN_ABOVE_D",
-      "case_id": "d409ae92-8252-4d84-8e4f-6f85929bdbbf",
+      "case_id": "71895482-8d4b-4d42-8441-aab0d185e6e8",
       "keyword_hash": "sha256:6ca870eb02ae23ead250b4f383cda32f0c03dadfe99197d220a65858e60aa98d",
       "treelist_hash": "sha256:5f7d36e8f14fd1f98565401ca06b73bff17b9fbb304891701bda6456f45f2060"
     },
@@ -43,7 +43,7 @@
       "stand": "PSP-REG-004",
       "regime": "SEL_MDWR_HIGH",
       "policy": "LT4_50",
-      "case_id": "08374f80-4ee5-4733-8410-6750f115cfa7",
+      "case_id": "5c448233-12c6-453e-8847-5637fd4bc4d9",
       "keyword_hash": "sha256:b0ba4bce8da09a19411a9678dc4c7ff3a34e1be3df446908d9cdd2a29b4f7c28",
       "treelist_hash": "sha256:5f7d36e8f14fd1f98565401ca06b73bff17b9fbb304891701bda6456f45f2060"
     },
@@ -51,7 +51,7 @@
       "stand": "PSP-REG-004",
       "regime": "SEL_MDWR_HIGH",
       "policy": "LT6_50",
-      "case_id": "0c3bf0fa-65f3-440d-ad6b-537d6974ab93",
+      "case_id": "6a17d460-9f43-476e-b03a-2310ac92897f",
       "keyword_hash": "sha256:df68a5005cb62fdd11530949f5ca0e59a8717e39921a720e62de7c966fd67412",
       "treelist_hash": "sha256:5f7d36e8f14fd1f98565401ca06b73bff17b9fbb304891701bda6456f45f2060"
     },
@@ -59,7 +59,7 @@
       "stand": "PSP-REG-004",
       "regime": "SEL_MDWR_HIGH",
       "policy": "LT8_50",
-      "case_id": "492bebb5-8056-41c6-b113-7d778ebc16bb",
+      "case_id": "336a641f-b983-497d-adfd-a53736f63ee6",
       "keyword_hash": "sha256:e850abac63ba634e1d822f4b021f779be603cb581c31ea3061eb8ce9c85c9596",
       "treelist_hash": "sha256:5f7d36e8f14fd1f98565401ca06b73bff17b9fbb304891701bda6456f45f2060"
     },
@@ -67,7 +67,7 @@
       "stand": "PSP-REG-004",
       "regime": "SEL_MDWR_MODERATE",
       "policy": "RETAIN_ABOVE_D",
-      "case_id": "1a628e02-551e-4870-aaf3-2733994a1303",
+      "case_id": "b3ce2279-cfba-4fa2-84d9-90cd39fe3b24",
       "keyword_hash": "sha256:f853592ec58d2ec920bdd7f073468de0e8b931fc6585aa1ffe711e8457e11633",
       "treelist_hash": "sha256:5f7d36e8f14fd1f98565401ca06b73bff17b9fbb304891701bda6456f45f2060"
     },
@@ -75,7 +75,7 @@
       "stand": "PSP-REG-004",
       "regime": "SEL_MDWR_MODERATE",
       "policy": "LT4_50",
-      "case_id": "970b235c-2bff-4b3d-9702-b86c247f7274",
+      "case_id": "81bae1e6-448d-41d7-9b89-594c152e9ff5",
       "keyword_hash": "sha256:a045c9e5e3985d209c7cedd90251236dab9f7da7baf0c6b526fa0b70123d5105",
       "treelist_hash": "sha256:5f7d36e8f14fd1f98565401ca06b73bff17b9fbb304891701bda6456f45f2060"
     },
@@ -83,7 +83,7 @@
       "stand": "PSP-REG-004",
       "regime": "SEL_MDWR_MODERATE",
       "policy": "LT6_50",
-      "case_id": "1668dab3-457d-46b0-82e2-d944f39e3152",
+      "case_id": "6ee8c841-39a1-449d-8f4c-3a1a2d4cf24d",
       "keyword_hash": "sha256:c7c2e9e904911302db0d3da5863010dc3cb992f9048f18c965d8967ca5758a28",
       "treelist_hash": "sha256:5f7d36e8f14fd1f98565401ca06b73bff17b9fbb304891701bda6456f45f2060"
     },
@@ -91,7 +91,7 @@
       "stand": "PSP-REG-004",
       "regime": "SEL_MDWR_MODERATE",
       "policy": "LT8_50",
-      "case_id": "f050125d-15c0-4d65-91f1-f93ccf3c03f1",
+      "case_id": "f60bba72-0a46-4225-9887-134f3dc1fe5a",
       "keyword_hash": "sha256:87b89b616d7856d48598ee01b694bc9658d0f956080f215a5fc62791e4b55d93",
       "treelist_hash": "sha256:5f7d36e8f14fd1f98565401ca06b73bff17b9fbb304891701bda6456f45f2060"
     },
@@ -99,7 +99,7 @@
       "stand": "PSP-REG-004",
       "regime": "SEL_MDWR_LOW",
       "policy": "RETAIN_ABOVE_D",
-      "case_id": "424c9a85-2c79-496f-89c6-18e486ef7403",
+      "case_id": "098ba037-7535-423a-aa08-c59da3519963",
       "keyword_hash": "sha256:5b9f0d5f51dd85f7f9514852ae5c6bd6827982850cbe4179e067117bc82fb75b",
       "treelist_hash": "sha256:5f7d36e8f14fd1f98565401ca06b73bff17b9fbb304891701bda6456f45f2060"
     },
@@ -107,7 +107,7 @@
       "stand": "PSP-REG-004",
       "regime": "SEL_MDWR_LOW",
       "policy": "LT4_50",
-      "case_id": "5b12c0a8-3c34-4703-b3d7-16d484789c3d",
+      "case_id": "184eb635-077c-4935-a502-70ad96aa070c",
       "keyword_hash": "sha256:8402be701c45e864a0d55702f33fa4e1f8459f44d6813e6392d62ae96a27ff7a",
       "treelist_hash": "sha256:5f7d36e8f14fd1f98565401ca06b73bff17b9fbb304891701bda6456f45f2060"
     },
@@ -115,7 +115,7 @@
       "stand": "PSP-REG-004",
       "regime": "SEL_MDWR_LOW",
       "policy": "LT6_50",
-      "case_id": "8a64cb84-55e4-4731-8daa-652ae7d3f313",
+      "case_id": "4e369034-c217-4385-b74a-3147f275268d",
       "keyword_hash": "sha256:b32d0f5c6383ba268d2797e27ed1a1704e1a9b485a079bfb36f1fd399d55d51c",
       "treelist_hash": "sha256:5f7d36e8f14fd1f98565401ca06b73bff17b9fbb304891701bda6456f45f2060"
     },
@@ -123,7 +123,7 @@
       "stand": "PSP-REG-004",
       "regime": "SEL_MDWR_LOW",
       "policy": "LT8_50",
-      "case_id": "3e409726-7fee-4e44-a7a0-730b7c648c5a",
+      "case_id": "1072d5bf-1568-4651-a57d-25a303987b49",
       "keyword_hash": "sha256:e66776289dcaa62071c4cf980cf6be67dc2bc56f0fdc3190014deafa60455b43",
       "treelist_hash": "sha256:5f7d36e8f14fd1f98565401ca06b73bff17b9fbb304891701bda6456f45f2060"
     },
@@ -131,7 +131,7 @@
       "stand": "PSP-REG-005",
       "regime": "SEL_MDWR_HIGH",
       "policy": "RETAIN_ABOVE_D",
-      "case_id": "33a1de42-1eff-446e-83c7-75420017e270",
+      "case_id": "94295c24-68ee-4908-9f66-1685200d600d",
       "keyword_hash": "sha256:50a0a13dfe8b78da9a0ad9345fafbc0e45625bb1992254e64ee42d0a6cce9d79",
       "treelist_hash": "sha256:a5d86fc14ed317657ba2a50f6a5ef18318906786fa62f09e55ee638e587bc0e6"
     },
@@ -139,7 +139,7 @@
       "stand": "PSP-REG-005",
       "regime": "SEL_MDWR_HIGH",
       "policy": "LT4_50",
-      "case_id": "1a99916b-869a-4679-8825-6f1ef0d4a786",
+      "case_id": "c8913243-659b-4456-9ec5-45d64b6d396a",
       "keyword_hash": "sha256:0f2f8e1e63fbed7a4caa8ca152fc15af6988156fa84d491480d9f9c6e1dcc6ed",
       "treelist_hash": "sha256:a5d86fc14ed317657ba2a50f6a5ef18318906786fa62f09e55ee638e587bc0e6"
     },
@@ -147,7 +147,7 @@
       "stand": "PSP-REG-005",
       "regime": "SEL_MDWR_HIGH",
       "policy": "LT6_50",
-      "case_id": "0f00b07c-0e4f-4cc4-a1a0-6103feec433d",
+      "case_id": "091a749c-4005-4b08-a75b-c375eb2149c6",
       "keyword_hash": "sha256:88fe8f015a7cbe76ec90ec7454d37ea39f5d22c2895ca680c2877466a1c63dcb",
       "treelist_hash": "sha256:a5d86fc14ed317657ba2a50f6a5ef18318906786fa62f09e55ee638e587bc0e6"
     },
@@ -155,7 +155,7 @@
       "stand": "PSP-REG-005",
       "regime": "SEL_MDWR_HIGH",
       "policy": "LT8_50",
-      "case_id": "0d51e270-c824-4fec-a4e9-1bbd010a2dc1",
+      "case_id": "24b2d0a1-6d89-4fec-8331-5a0614a78749",
       "keyword_hash": "sha256:7dc1f71d27bfe55c82cd82670f4c650a3f9c606660ee14da5472fb557ea02d24",
       "treelist_hash": "sha256:a5d86fc14ed317657ba2a50f6a5ef18318906786fa62f09e55ee638e587bc0e6"
     },
@@ -163,7 +163,7 @@
       "stand": "PSP-REG-005",
       "regime": "SEL_MDWR_MODERATE",
       "policy": "RETAIN_ABOVE_D",
-      "case_id": "f811822e-22b6-4998-8230-dcaf1eda2915",
+      "case_id": "ed5d9d59-2112-4faa-9aa5-596fa272eae9",
       "keyword_hash": "sha256:bcbcf101e62006e21a67b11e88d57653c76325cb203e427a23208073b0b2bdaf",
       "treelist_hash": "sha256:a5d86fc14ed317657ba2a50f6a5ef18318906786fa62f09e55ee638e587bc0e6"
     },
@@ -171,7 +171,7 @@
       "stand": "PSP-REG-005",
       "regime": "SEL_MDWR_MODERATE",
       "policy": "LT4_50",
-      "case_id": "57bd94fd-cf73-44f7-b133-5fe043ca57a0",
+      "case_id": "1c0528f0-198d-4c5c-a385-022221b7acc1",
       "keyword_hash": "sha256:03b0108a4949f54de471382ed9f00af43678530b023037ed55363a6349d10226",
       "treelist_hash": "sha256:a5d86fc14ed317657ba2a50f6a5ef18318906786fa62f09e55ee638e587bc0e6"
     },
@@ -179,7 +179,7 @@
       "stand": "PSP-REG-005",
       "regime": "SEL_MDWR_MODERATE",
       "policy": "LT6_50",
-      "case_id": "e3dfb6e5-9733-410c-909d-8174e6f05534",
+      "case_id": "490f50ba-0fa7-4097-b71d-00833463b4f9",
       "keyword_hash": "sha256:ea33eaba2cbaf19bba0ce3c678fe59330cff3a92c5aba5c28ffc5afa3f08ccba",
       "treelist_hash": "sha256:a5d86fc14ed317657ba2a50f6a5ef18318906786fa62f09e55ee638e587bc0e6"
     },
@@ -187,7 +187,7 @@
       "stand": "PSP-REG-005",
       "regime": "SEL_MDWR_MODERATE",
       "policy": "LT8_50",
-      "case_id": "55e2a22c-2a41-4121-87d9-a6fca8697c76",
+      "case_id": "42525ac8-3ed4-4539-b198-5b9e6d6c50bb",
       "keyword_hash": "sha256:ad35247b8cde493d949b7e750a88bf2de0e0f94685fbf38c14adba6a070facfd",
       "treelist_hash": "sha256:a5d86fc14ed317657ba2a50f6a5ef18318906786fa62f09e55ee638e587bc0e6"
     },
@@ -195,7 +195,7 @@
       "stand": "PSP-REG-005",
       "regime": "SEL_MDWR_LOW",
       "policy": "RETAIN_ABOVE_D",
-      "case_id": "2920ec45-e740-469c-a03e-94c57f946f4e",
+      "case_id": "65bb7a70-7da0-4500-b2d0-46d7bbf8bba6",
       "keyword_hash": "sha256:c1ed2e2d0cab915caeea4f5080b01836d346f3476b8872466dc2ae6e63ad6d50",
       "treelist_hash": "sha256:a5d86fc14ed317657ba2a50f6a5ef18318906786fa62f09e55ee638e587bc0e6"
     },
@@ -203,7 +203,7 @@
       "stand": "PSP-REG-005",
       "regime": "SEL_MDWR_LOW",
       "policy": "LT4_50",
-      "case_id": "055a5373-001a-48ce-8235-ddb8d018b148",
+      "case_id": "7b317510-5c2a-43f1-b002-89d3bdc4ebdc",
       "keyword_hash": "sha256:440a4ac22e757e691ae3ab612b5bf8615cfff04a7667f22c0ec8a00e93860baf",
       "treelist_hash": "sha256:a5d86fc14ed317657ba2a50f6a5ef18318906786fa62f09e55ee638e587bc0e6"
     },
@@ -211,7 +211,7 @@
       "stand": "PSP-REG-005",
       "regime": "SEL_MDWR_LOW",
       "policy": "LT6_50",
-      "case_id": "17e95945-cacc-4ab4-a66f-5b7f1199b3d9",
+      "case_id": "deff128b-d4df-4e66-9845-f444d4344d85",
       "keyword_hash": "sha256:a372b6e8759fee996f336b86fee3e5e1aca85d9c8fa67e9575a8129361b4fec7",
       "treelist_hash": "sha256:a5d86fc14ed317657ba2a50f6a5ef18318906786fa62f09e55ee638e587bc0e6"
     },
@@ -219,7 +219,7 @@
       "stand": "PSP-REG-005",
       "regime": "SEL_MDWR_LOW",
       "policy": "LT8_50",
-      "case_id": "b7f2b226-2e0f-411a-826d-bed61373a60c",
+      "case_id": "f9bbb452-0313-4c03-9070-2a92ea762e73",
       "keyword_hash": "sha256:eb0f29ab9ae2c75dad86b9b26deb1d3c8e82fdf3a5672da658f659f12ae7daf6",
       "treelist_hash": "sha256:a5d86fc14ed317657ba2a50f6a5ef18318906786fa62f09e55ee638e587bc0e6"
     }
@@ -229,6 +229,7 @@
     "No physical snow-interception model is used.",
     "The pilot uses two PSP-derived regional IDF Cariboo stands, not KC data.",
     "The policy levels are scenario axes, not approved MDWR policy.",
-    "The large-tree target is a residual BA above 50 cm, not a legal objective."
+    "The large-tree target is a residual BA above 50 cm, not a legal objective.",
+    "A canceled treatment with no after-treatment tree list has missing large-tree metrics, not zero."
   ]
 }

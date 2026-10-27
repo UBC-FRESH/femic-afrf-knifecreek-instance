@@ -17,6 +17,8 @@ These are regional IDF analogs for the Knife Creek model, not KC data.
 | `idf_cariboo_psp_conditional_stemlists.csv` | Five conditional stem lists at target QMD/TPA. |
 | `idf_cariboo_psp_conditional_stemlists_population.json` | FVS-ready conditional populations. |
 | `idf_cariboo_psp_regression_fvs_pilot.csv` | Two-stand FVS-BC pilot on the conditional lists. |
+| `idf_cariboo_psp_stem_map_inventory.csv` | Mapping completeness for the 45 stable plots. |
+| `idf_cariboo_psp_stem_map_cases.csv` | Mapped trees from the two fully mapped plots with large trees. |
 
 Source: FAIB Forest Inventory Ground Plot Data, Open Government Licence -
 British Columbia. The raw 706 MB tree detail is not committed; see

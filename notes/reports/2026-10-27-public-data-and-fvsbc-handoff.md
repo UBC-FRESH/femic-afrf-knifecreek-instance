@@ -156,10 +156,20 @@ The veteran-retention policy pilot is `ws4/policy_pilot_v0/`. It compares
 `RETAIN_ABOVE_D` with split policies that retain 4, 6 or 8 m²/ha at 50 cm+ and
 then thin the 0–50 cm component to the remaining Table 29 B. The split policies
 hit the total BA target (High 27–28 vs 29; Moderate/Low exact) while holding
-large-tree BA at 4/6/8. `RETAIN_ABOVE_D` leaves 31–37.5 m²/ha and 7.3–15.6
-m²/ha of large trees. Clump count and crown-cover proxies scale with the
-large-tree target. These are scenario axes, not approved MDWR policy, and FVS
-does not model spatial clumps or snow interception.
+large-tree BA at 4/6/8. `RETAIN_ABOVE_D` leaves 31–37.5 m²/ha and 14.5–15.6
+m²/ha of large trees in the cases with an after-treatment tree list. Clump
+count and crown-cover proxies scale with the large-tree target.
+
+`ws4/policy_pilot_v0/clump_scenarios.csv` adds 276 geometric clump scenarios:
+the retained large-tree TPH is placed in 2–5 tree clumps at 3, 5 or 7 m radius.
+Tight 3 m clumps of 3+ trees close the clump canopy but cover less of the stand;
+looser clumps raise total cover while losing local closure. These are scenario
+axes, not approved MDWR policy, and not a snow-interception model.
+
+The public PSP stem maps are too sparse for empirical clump geometry: of the 45
+stable plots, 11 are fully mapped, 3 have any mapped tree ≥50 cm, and only one
+has more than one (four trees). See `notes/reference/psp-stem-map-limits.md`.
+Use KC CFI/tree lists or the approved UWR material when available.
 
 ### Maps
 

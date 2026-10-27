@@ -78,3 +78,13 @@ clump_metrics:
   - mean_large_crown_width_m
   - mean_large_crown_ratio
   - post_canopy_ccf
+
+clump_geometry:
+  clump_sizes: [2, 3, 4, 5]
+  clump_radii_m: [3.0, 5.0, 7.0]
+  closed_canopy_threshold: 0.70
+  placement: ring
+  note: >-
+    Scenario geometry, not an empirical clump distribution. The public PSP
+    stem maps are too sparse to estimate clump size or spacing; use KC CFI or
+    the approved UWR material when available.

@@ -21,8 +21,11 @@ dataset and the residual graph is not closed. See
 
 A veteran/large-tree retention policy pilot is in `policy_pilot_v0/`: four
 policies on two PSP-derived conditional stands, showing the trade-off between
-large-tree BA, total Table 29 BA and clump-cover proxies. It is not approved
-policy. Policy definitions are in `../config/retention_policies.yaml`.
+large-tree BA, total Table 29 BA and clump-cover proxies. `build_clump_scenarios.py`
+adds 276 geometric clump scenarios; these are scenario axes, not empirical
+clump statistics. It is not approved policy. Policy definitions are in
+`../config/retention_policies.yaml`. The public PSP stem maps are too sparse for
+empirical clump geometry; see `../notes/reference/psp-stem-map-limits.md`.
 
 The contract is in `state_transition_contract.md`; the target and
 patch-account files remain templates.
