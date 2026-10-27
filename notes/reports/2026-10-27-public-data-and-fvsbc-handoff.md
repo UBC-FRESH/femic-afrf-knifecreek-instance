@@ -152,6 +152,15 @@ The residual BA and maximum DBH exceed the targets because the source stands
 contain trees above the Table 29 maximum DBH and because q deficits limit the
 removal. Record the gap; do not claim the target is met.
 
+The veteran-retention policy pilot is `ws4/policy_pilot_v0/`. It compares
+`RETAIN_ABOVE_D` with split policies that retain 4, 6 or 8 m²/ha at 50 cm+ and
+then thin the 0–50 cm component to the remaining Table 29 B. The split policies
+hit the total BA target (High 27–28 vs 29; Moderate/Low exact) while holding
+large-tree BA at 4/6/8. `RETAIN_ABOVE_D` leaves 31–37.5 m²/ha and 7.3–15.6
+m²/ha of large trees. Clump count and crown-cover proxies scale with the
+large-tree target. These are scenario axes, not approved MDWR policy, and FVS
+does not model spatial clumps or snow interception.
+
 ### Maps
 
 MWP #3 landscape appendices, KC pages: 150 forest cover, 158 seral, 162

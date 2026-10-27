@@ -1,0 +1,80 @@
+# Veteran / large-tree retention policy axes for Knife Creek.
+#
+# These are scenario axes, not approved policy. The MDWR objective requires
+# clumpy, closed-canopy, large-crown trees; the economic objective wants the
+# large-tree cash log value. The model must be able to vary both the residual
+# large-tree target and the spatial clump assumption.
+#
+# FVS-BC is distance-independent. It can control the large-tree basal area and
+# diameter distribution, but it cannot make spatial clumps. Clump size and
+# clump cover are post-processed from the after-treatment tree list and must be
+# reviewed spatially in ws4.
+
+policy_axes:
+  large_tree_min_dbh_cm:
+    description: DBH threshold that defines a veteran / large tree for retention.
+    candidate_values: [50.0, 60.0]
+  large_tree_residual_ba_m2_ha:
+    description: Residual basal area in trees at or above large_tree_min_dbh_cm.
+    candidate_values: [4.0, 6.0, 8.0, 12.0]
+  clump_size:
+    description: Number of retained large trees per clump.
+    candidate_values: [2, 3, 4, 5]
+  method:
+    description: How the large-tree target is enforced in FVS-BC.
+    values:
+      - full_range_bdq
+      - split_large_small
+  snow_interception_proxy:
+    description: >-
+      No physical snow model is used. Report the components that control
+      interception: large-tree BA, large-tree TPH, mean crown width, mean crown
+      ratio, canopy CCF, clump count and clump crown-cover fraction.
+
+policies:
+  - id: RETAIN_ABOVE_D
+    label: Retain all trees above the habitat maximum DBH
+    method: full_range_bdq
+    large_tree_min_dbh_cm: null
+    large_tree_residual_ba_m2_ha: null
+    clump_size: 3
+    description: >-
+      Current v0 method. THINQFA runs over the full range up to the habitat
+      maximum DBH; trees above that diameter are not removed. This retains the
+      most large-tree BA but can leave total BA above Table 29.
+  - id: LT4_50
+    label: Retain 4 m²/ha at 50 cm+
+    method: split_large_small
+    large_tree_min_dbh_cm: 50.0
+    large_tree_residual_ba_m2_ha: 4.0
+    clump_size: 3
+    description: >-
+      Remove surplus large trees above 50 cm to 4 m²/ha, then thin the 0-50 cm
+      component to the Table 29 B minus 4, with the Table 29 q.
+  - id: LT6_50
+    label: Retain 6 m²/ha at 50 cm+
+    method: split_large_small
+    large_tree_min_dbh_cm: 50.0
+    large_tree_residual_ba_m2_ha: 6.0
+    clump_size: 3
+    description: >-
+      Remove surplus large trees above 50 cm to 6 m²/ha, then thin the 0-50 cm
+      component to the Table 29 B minus 6, with the Table 29 q.
+  - id: LT8_50
+    label: Retain 8 m²/ha at 50 cm+
+    method: split_large_small
+    large_tree_min_dbh_cm: 50.0
+    large_tree_residual_ba_m2_ha: 8.0
+    clump_size: 3
+    description: >-
+      Remove surplus large trees above 50 cm to 8 m²/ha, then thin the 0-50 cm
+      component to the Table 29 B minus 8, with the Table 29 q.
+
+clump_metrics:
+  - clump_count_per_ha
+  - clump_crown_cover_fraction
+  - large_tree_ba_m2_ha
+  - large_tree_tph
+  - mean_large_crown_width_m
+  - mean_large_crown_ratio
+  - post_canopy_ccf

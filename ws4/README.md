@@ -19,6 +19,11 @@ built from the PSP-derived IDF Cariboo analog. It is **not** a compiled ws4
 dataset and the residual graph is not closed. See
 `state_library_v0/README.md`.
 
+A veteran/large-tree retention policy pilot is in `policy_pilot_v0/`: four
+policies on two PSP-derived conditional stands, showing the trade-off between
+large-tree BA, total Table 29 BA and clump-cover proxies. It is not approved
+policy. Policy definitions are in `../config/retention_policies.yaml`.
+
 The contract is in `state_transition_contract.md`; the target and
 patch-account files remain templates.
 
@@ -28,6 +33,7 @@ patch-account files remain templates.
 | --- | --- |
 | `state_transition_contract.md` | The table and identifier contract |
 | `state_library_v0/` | Provisional FVS-BC transition library |
+| `policy_pilot_v0/` | Veteran/large-tree retention policy pilot |
 | `targets.template.yaml` | Harvest and habitat target template |
 | `patch_accounts.template.yaml` | Selection-opening patch account template |
 | `topology.csv` | Block topology, once the boundary exists |

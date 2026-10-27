@@ -189,3 +189,10 @@ status and the GitHub issue comments.
   mean residual max DBH was ~73.6 cm against 60/55/50. The residual graph is
   not closed and no ws4 dataset has been compiled. The gap is recorded as a
   structural result, not a calibration claim.
+- P2.0 policy pilot: added `config/retention_policies.yaml` and
+  `ws4/policy_pilot_v0/`. Four policies on two PSP-derived conditional stands
+  × three Table 29 regimes: `RETAIN_ABOVE_D`, `LT4_50`, `LT6_50`, `LT8_50`.
+  Split policies hit the total BA target (High 27–28 vs 29; Moderate/Low exact)
+  while holding large-tree BA at 4/6/8 m²/ha. `RETAIN_ABOVE_D` left 31–37.5
+  m²/ha and 7.3–15.6 m²/ha of large trees. Clump count and crown-cover are
+  post-processing proxies, not spatial snow modelling.
