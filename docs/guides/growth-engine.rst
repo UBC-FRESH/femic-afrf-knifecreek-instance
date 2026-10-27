@@ -68,9 +68,8 @@ relevant alternatives. The plan's values are in
 `config/mdwr_regimes.yaml`; the keyword templates are in
 `config/fvsbc/regimes.yaml`.
 
-`fresh-fvsbc` 0.11.0 does not yet model the `THINQFA` supplemental record. Add
-that wrapper support before running the regimes. The entry-year/cycle semantics
-also need a controlled pilot.
+`fresh-fvsbc` P42.1 models the `THINQFA` supplemental record; the KC pin is
+`d86e78b`. The entry-year/cycle semantics still need a controlled pilot.
 
 A selection regime is a reviewed combination of:
 
@@ -110,12 +109,12 @@ Known limits
 - FVS-BC is distance-independent. It does not model the spatial arrangement of
   retained trees within a stand. The plan's 2–5 tree maximum-diameter groups are
   a ws4/post-processing constraint, not an FVS keyword.
-- `THINQFA` needs a supplemental residual-density-units record that
-  `fresh-fvsbc` 0.11.0 does not yet expose. Do not hand-edit generated keyword
-  files to work around it; add the wrapper support.
-- The wrapper is at package version 0.11.0 and commit
-  `ca33d0e26a079a72add5108f1b182b798b0c4e3e`. Pin it and re-run the pilot when
-  it moves.
+- `THINQFA` needs a supplemental residual-density-units record. `fresh-fvsbc`
+  P42.1 writes it; the KC pin is `d86e78b`. Do not hand-edit generated keyword
+  files.
+- The wrapper is at package version 0.12.0 and commit
+  `d86e78b0fc31386684aae1a0a1a9a821c0ee2baf` (post-v0.12.0 main). Pin it and
+  re-run the pilot when it moves.
 - The FVS-BC build recipe is in the wrapper's ADR 0004. This instance does not
   vendor the build.
 - FVS-BC is not calibrated for Knife Creek. A calibration is a later decision,

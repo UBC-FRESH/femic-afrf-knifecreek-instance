@@ -77,6 +77,7 @@ disturbance, and mule-deer constraints, then construct reviewed stem lists.
 - [x] P1.2 Acquire VRI, BEC, site-series, and disturbance source data (#9)
 - [ ] P1.2a Acquire the AFRF site-series map and legal UWR order (#15)
 - [x] P1.2b Recover public figure and table benchmarks (#18)
+- [x] P1.2c Pin the THINQFA-capable fresh-fvsbc (#22)
 - [ ] P1.3 Acquire or reconstruct tree-level tallies and CFI plot data (#10)
 - [ ] P1.4 Build AU strata and nemora stem populations (#11)
 - [ ] P1.5 Record the data-quality and coverage audit (#12)

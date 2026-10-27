@@ -73,7 +73,7 @@ and optimizes the estate-level objective.
   diameter distribution through repeated selection entries.
 
 `fresh-fvsbc` is pinned in `config/toolchain.yaml`. The current reference is
-commit `ca33d0e26a079a72add5108f1b182b798b0c4e3e` (package version 0.11.0).
+commit `d86e78b0fc31386684aae1a0a1a9a821c0ee2baf` (package version 0.12.0, post-v0.12.0 main).
 FVS itself is a USDA Forest Service model in the U.S. public domain; the
 wrapper is MIT. See the wrapper's own documentation for the build recipe and
 its known limits.
@@ -116,8 +116,9 @@ python -m fresh_fvsbc data/fvsbc/populations/AU01.json \
 ```
 
 The exact keyword order and entry-year semantics are not yet validated. The
-`THINQFA` supplemental residual-density-units record is not yet supported by
-`fresh-fvsbc` 0.11.0, so this example is a target, not a runnable command. See
+`THINQFA` supplemental residual-density-units record is supported by
+`fresh-fvsbc` at the pinned commit `d86e78b`, but this example is still a
+target, not a validated command. See
 `config/fvsbc/regimes.yaml`, `runbooks/FVSBC_PILOT.md` and
 `planning/fvsbc-state-transition-design.md`.
 

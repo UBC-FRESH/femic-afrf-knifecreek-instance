@@ -2,8 +2,9 @@
 #
 # Policy source: config/mdwr_regimes.yaml, interpreted from AFRF MWP #3
 # Table 29. These are reviewed policy targets. They are not yet runnable: the
-# state-transition pilot and the fresh-fvsbc THINQFA supplemental-record support
-# are still outstanding.
+# state-transition pilot and the THINQFA entry-year semantics are still
+# outstanding. The wrapper can now write THINQFA's supplemental record (P42.1,
+# commit d86e78b); the record is not the remaining blocker.
 #
 # THINQFA implements the BDq target: it thins an uneven-aged stand through a
 # diameter range to a q-factor distribution and a residual density. FVS expects
@@ -137,12 +138,12 @@ design_variants:
 wrapper_gaps:
   - id: thinqfa_supplemental_record
     description: >-
-      fresh-fvsbc 0.11.0 models keyword parameters but not THINQFA's
-      supplemental residual-density-units record. The wrapper must support a
-      one-line supplemental record without an END terminator before these
-      regimes can run.
-    status: blocked
+      Resolved in fresh-fvsbc P42.1: Keyword.supplemental and
+      SUPPLEMENTAL_KEYWORDS write THINQFA's one-line residual-density-units
+      record without an END terminator. The KC pin is d86e78b.
+    status: resolved
     target_repository: UBC-FRESH/fresh-fvsbc
+    resolved_by: d86e78b0fc31386684aae1a0a1a9a821c0ee2baf
   - id: entry_year_semantics
     description: >-
       The pilot must confirm whether THINQFA field 1 is applied at the start of

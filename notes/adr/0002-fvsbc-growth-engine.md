@@ -62,3 +62,11 @@ The bridge to ws4 is a state-transition library:
   updating the evidence.
 - The mule-deer constraints are ws4-level constraints, not FVS-BC keywords.
   They must be mapped to accounts and checked in the estate model.
+
+## Pin update
+
+The original pin was `ca33d0e` (0.11.0). `P1.2c` moves it to
+`d86e78b0fc31386684aae1a0a1a9a821c0ee2baf` (0.12.0, post-v0.12.0 main), which
+adds `THINQFA` supplemental-record support from `fresh-fvsbc` P42.1. The
+v0.12.0 tag predates that support. The growth-engine decision is unchanged;
+only the pinned commit and version are.

@@ -16,9 +16,8 @@ They are reviewed policy targets but they are **not yet runnable**. The pilot
 must resolve:
 
 1. the `THINQFA` entry-year/cycle semantics under the chosen
-   `TIMEINT`/`NUMCYCLE` settings;
-2. the `fresh-fvsbc` supplemental-record gap described below; and
-3. whether a full-range BDq cut or the small-tree variant better matches the
+   `TIMEINT`/`NUMCYCLE` settings; and
+2. whether a full-range BDq cut or the small-tree variant better matches the
    plan's “concentrate below 37.5 cm DBH” wording.
 
 `THINQFA` is the right keyword because it encodes BDq directly. `THINBTA` is
@@ -26,15 +25,14 @@ not a basal-area target; it is a thin-from-below to a trees-per-acre target.
 `THINBBA`, `THINABA`, `THINDBH` and `THINQFA` are the relevant alternatives.
 The policy does not justify a clearcut or an even-aged regime.
 
-Known wrapper gap
------------------
+Resolved wrapper gap
+--------------------
 
-`fresh-fvsbc` 0.11.0 validates keyword names and ten-column parameter records,
-but its `Keyword` model does not support `THINQFA`'s supplemental
-residual-density-units record. The FVS keyword is not complete without that
-record. Add a one-line supplemental-record hook (no `END` terminator) to the
-wrapper before running the regimes. This is tracked in `regimes.yaml` under
-`wrapper_gaps`.
+`fresh-fvsbc` P42.1 added `Keyword.supplemental` and
+`SUPPLEMENTAL_KEYWORDS`, so the wrapper now writes `THINQFA`'s one-line
+residual-density-units record with no `END` terminator. The KC pin is
+`d86e78b0fc31386684aae1a0a1a9a821c0ee2baf` (post-v0.12.0 main). The
+supplemental record is no longer the blocker; the entry-year pilot is.
 
 Benchmark
 ---------
@@ -47,8 +45,8 @@ targets; report the difference rather than rescaling the figure.
 
 The growth engine is pinned in `../toolchain.yaml`:
 
-- `fresh-fvsbc` at commit `ca33d0e26a079a72add5108f1b182b798b0c4e3e`;
-- package version 0.11.0.
+- `fresh-fvsbc` at commit `d86e78b0fc31386684aae1a0a1a9a821c0ee2baf`;
+- package version 0.12.0, post-v0.12.0 main (the tag predates P42.1).
 
 The wrapper's keyword and output contracts are at
 <https://ubc-fresh.github.io/fresh-fvsbc/>. Read the keyword page before adding

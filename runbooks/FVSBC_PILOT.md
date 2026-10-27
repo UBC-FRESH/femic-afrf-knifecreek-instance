@@ -5,7 +5,7 @@ Status: Phase 2 procedure. Not yet run for Knife Creek.
 ## Prerequisites
 
 - A pinned `fresh-fvsbc` checkout or install at commit
-  `ca33d0e26a079a72add5108f1b182b798b0c4e3e`.
+  `d86e78b0fc31386684aae1a0a1a9a821c0ee2baf`.
 - A built FVS-BC variant. See the wrapper's ADR 0004 for the build recipe.
 - A stem population for one reviewed AU.
 - A reviewed selection keyword sequence.
