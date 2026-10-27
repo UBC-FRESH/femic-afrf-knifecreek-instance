@@ -78,6 +78,7 @@ disturbance, and mule-deer constraints, then construct reviewed stem lists.
 - [ ] P1.2a Acquire the AFRF site-series map and legal UWR order (#15)
 - [x] P1.2b Recover public figure and table benchmarks (#18)
 - [x] P1.2c Pin the THINQFA-capable fresh-fvsbc (#22)
+- [x] P1.2d Correct THINQFA BC units and record the pilot (#25)
 - [ ] P1.3 Acquire or reconstruct tree-level tallies and CFI plot data (#10)
 - [ ] P1.4 Build AU strata and nemora stem populations (#11)
 - [ ] P1.5 Record the data-quality and coverage audit (#12)
@@ -129,8 +130,14 @@ Findings:
   it is not a georeferenced GIS layer.
 - `THINQFA` is the correct FVS-BC keyword for the Table 29 BDq targets.
   `THINBTA` is a trees-per-acre target, not a basal-area target. The wrapper
-  now supports `THINQFA`'s supplemental record at pin `d86e78b` (P1.2c);
-  the entry-year/cycle semantics remain a pilot question.
+  now supports `THINQFA`'s supplemental record at pin `d86e78b` (P1.2c).
+- A synthetic pilot (P1.2d) settled the entry cycle: cycle 1 is year 0; cycle 2
+  with `TIMEINT=,30` is year 30. The BC variant converts `THINQFA` fields 2, 3
+  and 6 from centimetres to inches, so the KC templates store those fields in
+  centimetres. Passing inches shortened the range and cancelled the activity.
+  The pilot also showed that `THINQFA` does not guarantee the residual BA target
+  from a grown stand with a q deficit. Evidence:
+  `notes/reference/fvsbc-thinqfa-pilot.md`.
 
 Acceptance criteria:
 
@@ -250,6 +257,6 @@ Acceptance criteria:
    reviewed and committed.
 5. P1.3 (#10) and P1.4 (#11) are the next model-preparation tasks: establish a
    stem-list basis and build AU strata / nemora populations.
-6. Do not start the FVS-BC pilot until the site-series/UWR gaps are resolved or
-   explicitly accepted, the stem-list basis is reviewed, and the `THINQFA`
-   entry-year/cycle semantics are settled in a controlled pilot.
+6. Do not start the KC FVS-BC pilot until the site-series/UWR gaps are resolved
+   or explicitly accepted and the stem-list basis is reviewed. The synthetic
+   THINQFA pilot and the BC unit check are complete.

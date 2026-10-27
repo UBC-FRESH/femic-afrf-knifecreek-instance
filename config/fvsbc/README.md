@@ -15,8 +15,7 @@ The three regimes are:
 They are reviewed policy targets but they are **not yet runnable**. The pilot
 must resolve:
 
-1. the `THINQFA` entry-year/cycle semantics under the chosen
-   `TIMEINT`/`NUMCYCLE` settings; and
+1. the KC stem list; and
 2. whether a full-range BDq cut or the small-tree variant better matches the
    plan's “concentrate below 37.5 cm DBH” wording.
 
@@ -32,7 +31,22 @@ Resolved wrapper gap
 `SUPPLEMENTAL_KEYWORDS`, so the wrapper now writes `THINQFA`'s one-line
 residual-density-units record with no `END` terminator. The KC pin is
 `d86e78b0fc31386684aae1a0a1a9a821c0ee2baf` (post-v0.12.0 main). The
-supplemental record is no longer the blocker; the entry-year pilot is.
+supplemental record is no longer the blocker.
+
+A synthetic pilot settled the entry year: cycle 2 with `TIMEINT=,30` and
+`NUMCYCLE=2` applies the cut at year 30. The full-range vs small-tree choice
+and the KC stem list remain.
+
+THINQFA units in BC
+-------------------
+
+`canada/bc/initre.f` option 141 converts `THINQFA` fields 2 (minimum DBH), 3
+(maximum DBH) and 6 (class width) from **centimetres to inches**. The keyword
+guide's inches are the base variant's convention. The KC templates therefore
+store those three fields in centimetres. The residual-density target is square
+feet per acre: 126.32 is 29 m²/ha, 95.83 is 22 m²/ha, and 69.70 is 16 m²/ha.
+
+The synthetic pilot is `../../notes/reference/fvsbc-thinqfa-pilot.md`.
 
 Benchmark
 ---------
