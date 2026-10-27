@@ -105,3 +105,36 @@ the AFRF spatial data.
 Until (1) and (2) are obtained, the model may represent the public management
 direction and test structural feasibility, but it must not claim legal policy
 compliance.
+
+## Maps at the back of the plan
+
+The landscape-format appendix pages are public planning maps. They are useful
+for compartment and harvest-unit context, but they are not georeferenced GIS
+layers.
+
+| PDF pages | Appendix | Content | Knife Creek page |
+| --- | --- | --- | --- |
+| 149–150 | 3 | Forest cover by leading species | 150 |
+| 157–158 | 7 | Seral stage distribution | 158 |
+| 161–162 | 9 | Compartments and planned harvest units | 162 |
+| 163–164 | 10 | Timber harvest priorities | 164 |
+| 165–166 | 11 | Road master plan | 166 |
+| 167–168 | 12 | Research projects | 168 |
+
+The Knife Creek page 162 map shows KC01–KC11, RD05–RD07, the MDWR habitat
+classes (High/Moderate/Low/ESA), deferred areas, and the MDWR management zone.
+It has a north arrow and a 0–3,000 m scale bar, but **no coordinate grid or
+coordinate labels**. It cannot be georeferenced from the page alone without
+control points from a known layer.
+
+A defensible georeference would need at least:
+
+- the SUP S15382 boundary as the outer control;
+- road intersections or the lake shoreline as interior controls;
+- the VRI polygon boundaries or cutblock corners as additional controls; and
+- an explicit error report (control-point residuals and overlay review).
+
+Until then, the page-162 table is transcribed in
+`data/benchmarks/mwp3_kc_compartments.csv` and the map is treated as a
+schematic planning figure. Do not present a warped page-162 raster as a
+compartment or habitat layer.

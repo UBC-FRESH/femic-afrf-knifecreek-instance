@@ -107,3 +107,9 @@ status and the GitHub issue comments.
   q-factors. The log-linear fit gives q 1.306/1.254/1.253 for
   Low/Moderate/High, versus 1.30/1.25/1.25. The basal-area totals remain
   4-6% above Table 29; the q shape agrees closely.
+- Recorded the MWP #3 landscape-map inventory: Appendix 3 (forest cover),
+  Appendix 7 (seral stage), Appendix 9 (compartments), Appendix 10 (harvest
+  priorities), Appendix 11 (roads) and Appendix 12 (research projects). The
+  Knife Creek pages are 150, 158, 162, 164, 166 and 168. They are schematic
+  planning maps with north arrows and scale bars but no coordinate grids; no
+  page was georeferenced.
