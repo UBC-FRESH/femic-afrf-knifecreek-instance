@@ -192,8 +192,9 @@ sources:
       First-measurement, Douglas-fir-leading, mature IDF PSPs in the Williams
       Lake and 100 Mile House TSAs. 51 selected plots, 4,553 live trees >=9.1 cm,
       45 stable Weibull fits, 24 synthetic one-hectare stem lists (22,178
-      trees). This is a regional IDF analog, not Knife Creek data. Raw PSP
-      files are not committed; see notes/reference/psp-idf-cariboo-stemlists.md.
+      trees), and a QMD/TPA regression with five conditional stem lists.
+      This is a regional IDF analog, not Knife Creek data. Raw PSP files are
+      not committed; see notes/reference/psp-idf-cariboo-stemlists.md.
 
   - id: forest_cover_attributes
     description: Height, diameter, density, and species attributes beyond VRI.
