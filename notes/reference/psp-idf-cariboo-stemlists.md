@@ -181,3 +181,9 @@ python runbooks/build_psp_stemlists.py \
 The raw-data directory needs `faib_header.csv`, `faib_sample_byvisit.csv`,
 `faib_compiled_spcsmries_siteage.csv` and `faib_tree_detail.csv` from the FAIB
 PSP FTP directory.
+
+## Stem-map limit
+
+Most of the 45 stable PSP plots are not fully stem-mapped, and only one has more
+than one mapped tree ≥50 cm. The public PSP analog cannot estimate large-tree
+clump size or spacing. See `psp-stem-map-limits.md`.

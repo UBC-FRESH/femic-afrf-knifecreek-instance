@@ -159,19 +159,31 @@ def _extract(
     summary = read_table(result.database, "FVS_Summary_Metric").sort_values("Year")
     try:
         atrt = read_table(result.database, "FVS_ATRTList_Metric")
+        after = atrt[atrt["Year"] == 30].copy()
     except UnknownTableError:
-        atrt = pd.DataFrame(columns=["Year", "DBH", "TPH", "CrWidth", "PctCr"])
+        after = pd.DataFrame()
     row = summary.loc[summary["Year"] == 30].iloc[0]
-    after = atrt[atrt["Year"] == 30].copy()
-    after["ba"] = 0.00007854 * after["DBH"] ** 2 * after["TPH"]
-    large = after[after["DBH"] >= LARGE_THRESHOLD]
-    large_ba = float(large["ba"].sum()) if len(large) else 0.0
-    large_tph = float(large["TPH"].sum()) if len(large) else 0.0
-    mean_width = float(large["CrWidth"].mean()) if len(large) else 0.0
-    mean_crown = float(large["PctCr"].mean()) if len(large) else 0.0
-    clump_count = large_tph / clump_size if clump_size > 0 else 0.0
-    crown_area = large_tph * np.pi * (mean_width / 2.0) ** 2
-    clump_cover = min(1.0, crown_area / 10000.0)
+    if after.empty:
+        large_ba = np.nan
+        large_tph = np.nan
+        mean_width = np.nan
+        mean_crown = np.nan
+        clump_count = np.nan
+        clump_cover = np.nan
+        post_max_dbh = np.nan
+        post_q_factor = np.nan
+    else:
+        after["ba"] = 0.00007854 * after["DBH"] ** 2 * after["TPH"]
+        large = after[after["DBH"] >= LARGE_THRESHOLD]
+        large_ba = float(large["ba"].sum()) if len(large) else 0.0
+        large_tph = float(large["TPH"].sum()) if len(large) else 0.0
+        mean_width = float(large["CrWidth"].mean()) if len(large) else 0.0
+        mean_crown = float(large["PctCr"].mean()) if len(large) else 0.0
+        clump_count = large_tph / clump_size if clump_size > 0 else 0.0
+        crown_area = large_tph * np.pi * (mean_width / 2.0) ** 2
+        clump_cover = min(1.0, crown_area / 10000.0)
+        post_max_dbh = float(after["DBH"].max())
+        post_q_factor = _q_factor(after)
     post_ba = float(row.ATBA)
     post_qmd = float(row.ATQMD)
     post_tph = max(0.0, float(row.Tph) - float(row.RTph))
@@ -197,8 +209,8 @@ def _extract(
         "post_ba_m2_ha": post_ba,
         "post_qmd_cm": post_qmd,
         "post_tph": post_tph,
-        "post_q_factor": _q_factor(after),
-        "post_max_dbh_cm": float(after["DBH"].max()) if len(after) else 0.0,
+        "post_q_factor": post_q_factor,
+        "post_max_dbh_cm": post_max_dbh,
         "post_canopy_ccf": float(row.ATCCF) if hasattr(row, "ATCCF") else float(row.CCF),
         "post_large_ba_m2_ha": large_ba,
         "post_large_tph": large_tph,
@@ -303,6 +315,7 @@ def main() -> None:
             mean_cut_m3_ha=("cut_m3_ha", "mean"),
             mean_cut_tph=("cut_tph", "mean"),
             n_cut=("treatment_applied", "sum"),
+            n_large=("post_large_tph", "count"),
         )
         .reset_index()
     )
@@ -327,6 +340,10 @@ def main() -> None:
             "The pilot uses two PSP-derived regional IDF Cariboo stands, not KC data.",
             "The policy levels are scenario axes, not approved MDWR policy.",
             "The large-tree target is a residual BA above 50 cm, not a legal objective.",
+            (
+                "A canceled treatment with no after-treatment tree list has missing "
+                "large-tree metrics, not zero."
+            ),
         ],
     }
     (args.out_dir / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")

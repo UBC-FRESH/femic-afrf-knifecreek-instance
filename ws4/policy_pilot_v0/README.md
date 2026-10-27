@@ -42,7 +42,7 @@ From `benchmark.csv`:
 
 | Regime | Policy | Mean post BA | Mean post q | Mean large BA | Mean large TPH | Clump count/ha | Clump cover proxy |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| High | RETAIN_ABOVE_D | 37.5 | 1.250 | 7.27 | 23.4 | 7.8 | 12.0% |
+| High | RETAIN_ABOVE_D | 37.5 | 1.250 | 14.54 | 46.7 | 15.6 | 24.0% |
 | High | LT4_50 | 27.0 | 1.322 | 4.00 | 17.9 | 6.0 | 7.9% |
 | High | LT6_50 | 28.0 | 1.240 | 6.00 | 25.4 | 8.5 | 11.3% |
 | High | LT8_50 | 28.0 | 1.270 | 8.00 | 32.2 | 10.7 | 14.8% |
@@ -61,11 +61,42 @@ Interpretation:
   27–28 vs 29) while holding the large-tree BA at 4/6/8.
 - `RETAIN_ABOVE_D` leaves much more total BA, especially at Low, because it
   protects every tree above D. It is the highest large-tree retention and the
-  highest residual BA.
+  highest residual BA. The High mean is from one after-treatment tree list;
+  the second High case had no cut and no after-treatment list, so its large-tree
+  metrics are not in the mean.
 - The q factor is close to Table 29 for all policies; the High LT4 case is
   slightly above at 1.322.
 - Clump count and crown-cover proxy scale with the large-tree target. These are
   **post-processing proxies**, not a spatial clump design or a snow model.
+
+## Clump geometry scenarios
+
+`clump_scenarios.csv` and `clump_scenario_summary.csv` add a spatial geometry
+layer. The large-tree TPH from each transition is placed in 2-5 tree clumps on a
+ring of 3, 5 or 7 m radius; within-clump cover is rasterized at 0.25 m. The
+clump count and spacing follow from the retained large-tree TPH.
+
+High regime, `LT8_50`, three-tree clumps:
+
+| Clump radius | Clumps/ha | Mean spacing | Within-clump closure | Closed clumps | Total cover |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 3 m | 10.7 | 30.5 m | 0.765 | 100% | 14.5% |
+| 5 m | 10.7 | 30.5 m | 0.561 | 0% | 23.1% |
+| 7 m | 10.7 | 30.5 m | 0.373 | 0% | 32.6% |
+
+High regime, `LT8_50`, 3 m clump radius, varying clump size:
+
+| Clump size | Clumps/ha | Mean spacing | Within-clump closure | Closed clumps | Total cover |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 2 | 16.1 | 24.9 m | 0.588 | 0% | 21.0% |
+| 3 | 10.7 | 30.5 m | 0.765 | 100% | 14.5% |
+| 4 | 8.0 | 35.3 m | 0.855 | 100% | 11.1% |
+| 5 | 6.4 | 39.4 m | 0.905 | 100% | 9.0% |
+
+The trade-off is explicit: tight clumps of 3+ trees close the clump canopy but
+cover less of the stand; looser clumps raise total cover while losing local
+closure. A 2-tree clump at 3 m radius does not close. These are geometry
+scenarios, not empirical clump statistics and not a snow-interception model.
 
 ## What this does and does not establish
 
@@ -87,12 +118,16 @@ Does not establish:
 
 ## Files
 
-- `transitions.csv` — 24 policy transitions with large-tree and clump metrics.
+- `transitions.csv` — 24 policy transitions with large-tree metrics.
 - `curves.csv` — 96 growth curves.
-- `benchmark.csv` — the table above.
+- `benchmark.csv` — the policy table above.
+- `clump_scenarios.csv` — 276 clump geometry scenarios.
+- `clump_scenario_summary.csv` — grouped clump geometry table.
 - `manifest.json` — source, policies, run hashes, caveats.
-- Generator: `runbooks/build_policy_pilot.py`.
+- Generators: `runbooks/build_policy_pilot.py` and
+  `runbooks/build_clump_scenarios.py`.
 - Policy definitions: `config/retention_policies.yaml`.
+- PSP stem-map limit note: `notes/reference/psp-stem-map-limits.md`.
 
 ## Reproduction
 
@@ -103,4 +138,7 @@ PYTHONPATH=/path/to/fresh-fvsbc/src \
   --policies config/retention_policies.yaml \
   --out-dir ws4/policy_pilot_v0 \
   --runtime-dir runtime/policy_pilot_v0
+python runbooks/build_clump_scenarios.py \
+  --transitions ws4/policy_pilot_v0/transitions.csv \
+  --out-dir ws4/policy_pilot_v0
 ```
