@@ -176,3 +176,8 @@ status and the GitHub issue comments.
   stem lists span QMD 18-26 and BA 22.9-29.4 m²/ha. Generalized gamma was
   tested; no stable GG fit beat Weibull, so Weibull is retained. Two conditional
   stands ran through FVS-BC; residual BA was 35-38 m²/ha against the 29 target.
+- Added the persistent 2026-10-27 handoff at
+  `notes/reports/2026-10-27-public-data-and-fvsbc-handoff.md`. It records the
+  standing requirements, public data, Figure 11 recovery, MWP #3 contract,
+  THINQFA unit/cycle findings, PSP/regression work, maps, PR/commit index,
+  blockers, and the Ionut data request list. Chat is not the durable record.

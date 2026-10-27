@@ -27,9 +27,12 @@ site-series classification and site-index tables are extracted. The AFRF
 Management and Working Plan #3 is acquired; its Knife Creek MDWR contract is in
 `config/mdwr_regimes.yaml`, and Figure 11 was recovered into
 `data/benchmarks/`. The georeferenced site-series map, the legal UWR order and
-the 2003 transition strategy are blocked under P1.2a (#15). A stem-list basis is
-still required. The repository does **not** yet carry a calibrated FVS-BC
-library or a runnable ws4 dataset. See `ROADMAP.md` and `CHANGE_LOG.md`.
+the 2003 transition strategy are blocked under P1.2a (#15). A public
+PSP-derived IDF Cariboo stem-list analog is committed under `data/psp/` for the
+interim FVS-BC pilot; the KC CFI is still preferred. The repository does **not**
+yet carry a calibrated FVS-BC library or a runnable ws4 dataset. See
+`ROADMAP.md` and `CHANGE_LOG.md`. The persistent session record is
+`notes/reports/2026-10-27-public-data-and-fvsbc-handoff.md`.
 
 ## The modelling chain
 
