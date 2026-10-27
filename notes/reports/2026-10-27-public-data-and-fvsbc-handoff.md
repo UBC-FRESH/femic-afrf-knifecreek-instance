@@ -89,7 +89,8 @@ MWP #3 Table 29:
 
 ### Figure 11
 
-- Recovered with `figrecover 0.1.0a1` from MWP #3 page 97.
+- Recovered with `figrecover 0.1.0a1`
+  (<https://github.com/ubc-fresh/figrecover>) from MWP #3 page 97.
 - BA sums: Low `17.02`, Moderate `22.96`, High `30.17` m²/ha versus Table 29
   `16/22/29`. The difference is recorded, not forced.
 - Recovered density implies q `1.306/1.254/1.253` versus `1.30/1.25/1.25`.
@@ -122,7 +123,7 @@ MWP #3 Table 29:
   QMD 15–25); 4,553 live trees ≥9.1 cm; 45 stable Weibull fits.
 - Pooled shifted Weibull: `a=1.0200`, `beta=7.8411`, lower bound 9.1 cm,
   KS=0.0109.
-- 24 synthetic one-hectare stems lists, 22,178 trees; `data/psp/`.
+- 24 synthetic one-hectare stem lists, 22,178 trees; `data/psp/`.
 - Regression: `log(beta) = -3.863 + 2.049 log(QMD)`, R² 0.471, adj. 0.459,
   LOOCV 0.306. TPA is not significant after QMD (`t=0.86`, VIF 2.71). Shape
   `a` is not predictable; pooled `a` used.
@@ -142,6 +143,10 @@ KC01–KC11, RD05–RD07, habitat classes, deferred areas and the management zon
 but only a north arrow and scale bar — no coordinate grid. It was transcribed as
 an area table, not georeferenced. A defensible overlay needs control points from
 the SUP, roads/lake shoreline and VRI/cutblock corners, plus residual reporting.
+The separate 2014 `KC_General_Map.pdf` is a 1:30,000 general map with roads,
+cutblocks, proposed cutblocks, WTPs, pipeline, contours, wetlands, trails and
+compartment labels. It is not the site-series map and was not georeferenced;
+see `notes/reference/kc-general-map-2014.md`.
 
 ## Pull-request and commit index
 
@@ -219,4 +224,5 @@ the SUP, roads/lake shoreline and VRI/cutblock corners, plus residual reporting.
 - `notes/reference/fvsbc-thinqfa-pilot.md`
 - `notes/reference/psp-idf-cariboo-stemlists.md`
 - `notes/reference/site-series-klinka-2004.md`
+- `notes/reference/kc-general-map-2014.md`
 - `notes/reference/gavin-baseline-findings.md` (Gavin repo)
