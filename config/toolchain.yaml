@@ -6,8 +6,11 @@
 toolchain:
   fresh_fvsbc:
     repository: https://github.com/UBC-FRESH/fresh-fvsbc
-    commit: ca33d0e26a079a72add5108f1b182b798b0c4e3e
-    version: 0.11.0
+    commit: d86e78b0fc31386684aae1a0a1a9a821c0ee2baf
+    version: 0.12.0
+    version_note: >-
+      Post-v0.12.0 main. The v0.12.0 tag predates the P42.1 THINQFA
+      supplemental-record support; this commit includes it.
     role: individual-tree growth and selection-cut engine
     docs: https://ubc-fresh.github.io/fresh-fvsbc/
   nemora:

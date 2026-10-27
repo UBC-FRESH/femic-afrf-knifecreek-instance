@@ -51,9 +51,9 @@ targets, not placeholders:
 
 The FVS-BC keyword is `THINQFA` (BDq: q-factor, maximum DBH, residual
 basal-area density). `THINBTA` is not a basal-area target; it is a
-thin-from-below to a trees-per-acre target. The regimes are not yet runnable:
-the `THINQFA` supplemental-record support and the entry-year alignment must be
-settled in the pilot. See `config/fvsbc/regimes.yaml` and
+thin-from-below to a trees-per-acre target. `fresh-fvsbc` P42.1 supports the
+`THINQFA` supplemental record; the regimes are still not runnable because the
+entry-year alignment must be settled in the pilot. See `config/fvsbc/regimes.yaml` and
 `config/mdwr_regimes.yaml`.
 
 A design variant, `SEL_MDWR_SMALL_TREE`, thins only the 0–37.5 cm component to
@@ -147,7 +147,8 @@ Open questions
 4. Does the block-level spatial constraint need a maximum selection-opening
    size, or is the stand-level retention enough?
 5. `THINQFA` is the selected keyword; the wrapper's supplemental-record support
-   and the entry-year alignment are open. See `config/fvsbc/regimes.yaml`.
+   is in P42.1, and the entry-year alignment remains open. See
+   `config/fvsbc/regimes.yaml`.
 6. Should the first public baseline be a single regime or a regime portfolio?
    The plan's AAC is area-based, so start with the High/Moderate/Low portfolio
    and report the area and volume by class.

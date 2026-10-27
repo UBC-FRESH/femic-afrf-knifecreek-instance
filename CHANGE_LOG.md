@@ -113,3 +113,16 @@ status and the GitHub issue comments.
   Knife Creek pages are 150, 158, 162, 164, 166 and 168. They are schematic
   planning maps with north arrows and scale bars but no coordinate grids; no
   page was georeferenced.
+
+## 2026-10-27
+
+- P1.2c: moved the `fresh-fvsbc` pin from `ca33d0e` (0.11.0) to
+  `d86e78b0fc31386684aae1a0a1a9a821c0ee2baf` (0.12.0, post-v0.12.0 main).
+  The new pin carries P42.1's `THINQFA` supplemental-record support, so the KC
+  `SEL_MDWR_HIGH/MODERATE/LOW` regimes are now expressible.
+- Marked the `THINQFA` supplemental-record wrapper gap resolved in
+  `config/fvsbc/regimes.yaml`. The entry-year/cycle semantics and the stem list
+  remain the blockers to a real FVS-BC run.
+- Updated the README, growth-engine guide, state-transition design, pilot
+  runbook and ADR 0002 to name the new pin and to stop calling the supplemental
+  record a blocker.

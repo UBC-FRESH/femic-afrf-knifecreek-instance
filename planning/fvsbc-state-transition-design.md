@@ -59,8 +59,8 @@ the 0-37.5 cm component and computes its residual density per state as Table 29
 B minus the retained large-tree basal area.
 
 The regimes are reviewed policy, but they are not yet runnable. `fresh-fvsbc`
-0.11.0 does not model the `THINQFA` supplemental residual-density-units record,
-and the entry-year/cycle semantics need a controlled pilot.
+P42.1 supports the `THINQFA` supplemental residual-density-units record, but the
+entry-year/cycle semantics need a controlled pilot.
 
 ## Run sequence
 
@@ -158,11 +158,10 @@ rescaling.
 
 ## Next experiments
 
-1. Add `THINQFA` supplemental-record support to `fresh-fvsbc`.
-2. Build one synthetic FD stand and run a single `THINQFA` selection cut.
-3. Confirm the cut list and after-treatment list are populated.
-4. Compare the residual B, D, q and 5 cm distribution with Table 29 and
+1. Build one synthetic FD stand and run a single `THINQFA` selection cut.
+2. Confirm the cut list and after-treatment list are populated.
+3. Compare the residual B, D, q and 5 cm distribution with Table 29 and
    Figure 11.
-5. Build a two-cycle graph from the residual state.
-6. Export the two-state graph to ws4 and validate the dataset.
-7. Add a mule-deer feature account and report it.
+4. Build a two-cycle graph from the residual state.
+5. Export the two-state graph to ws4 and validate the dataset.
+6. Add a mule-deer feature account and report it.
