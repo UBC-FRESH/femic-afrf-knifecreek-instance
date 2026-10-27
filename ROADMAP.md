@@ -262,6 +262,10 @@ Acceptance criteria:
 
 ## Detailed Next Steps Notes
 
+0. The persistent public-data/FVS-BC session record is
+   `notes/reports/2026-10-27-public-data-and-fvsbc-handoff.md`. Read it before
+   resuming; it indexes the data, decisions, pilots, PRs, blockers and the
+   private-data request list.
 1. Phase 0 is complete under parent issue #1.
 2. Phase 1 is active under parent issue #7. P1.1 (boundary) and P1.2 (public
    layers) are complete.
