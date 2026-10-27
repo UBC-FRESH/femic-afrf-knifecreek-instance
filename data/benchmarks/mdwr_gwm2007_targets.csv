@@ -1,0 +1,4 @@
+habitat_class,total_ba_min_m2_ha,large_tree_ba_min_m2_ha,large_tree_dbh_cm,max_dbh_min_cm,q_min,q_max,large_tree_reserve_min_m2_ha,large_tree_reserve_max_m2_ha,source
+HIGH,29.0,16.0,37.5,70.0,1.20,1.35,0.0,2.9,Amended Order U-5-001/2/3 Schedule 1 GWM 10 Tables 1-2 (IDFdk3/IDFdw)
+MODERATE,22.0,11.0,37.5,60.0,1.25,1.35,0.0,2.2,Amended Order U-5-001/2/3 Schedule 1 GWM 10 Tables 1-2 (IDFdk3/IDFdw)
+LOW,16.0,6.0,37.5,50.0,1.25,1.40,0.0,1.6,Amended Order U-5-001/2/3 Schedule 1 GWM 10 Tables 1-2 (IDFdk3/IDFdw)

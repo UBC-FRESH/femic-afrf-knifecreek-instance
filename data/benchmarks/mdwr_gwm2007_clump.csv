@@ -1,0 +1,11 @@
+attribute,value,source
+min_mature_trees_per_clump,4,Amended Order U-5-001/2/3 Schedule 1 GWM 10 p.5
+max_mature_trees_per_clump,10,Amended Order U-5-001/2/3 Schedule 1 GWM 10 p.5
+interlocking_crowns,true,Amended Order U-5-001/2/3 Schedule 1 GWM 10 p.5
+max_dbh_subgroup_min,2,MWP #3 p.87 (maximum diameter class)
+max_dbh_subgroup_max,5,MWP #3 p.87 (maximum diameter class)
+opening_diameter_tree_heights_min,0.3,Amended Order U-5-001/2/3 Schedule 1 GWM 10 p.5
+opening_diameter_tree_heights_mean,0.5,Amended Order U-5-001/2/3 Schedule 1 GWM 10 p.5
+opening_diameter_tree_heights_max,1.0,Amended Order U-5-001/2/3 Schedule 1 GWM 10 p.5
+min_cutting_cycle_years,30,Amended Order U-5-001/2/3 Schedule 1 GWM 10 p.5
+pre_2026_ba_retention_min,0.80,Amended Order U-5-001/2/3 Schedule 1 GWM 13 p.7

@@ -171,6 +171,18 @@ stable plots, 11 are fully mapped, 3 have any mapped tree ≥50 cm, and only one
 has more than one (four trees). See `notes/reference/psp-stem-map-limits.md`.
 Use KC CFI/tree lists or the approved UWR material when available.
 
+The 2007 shallow/moderate GWM order and the 2003 Knife Creek transition plan
+were located after the first clump pilot. GWM 10 requires clumps of 4–10 or more
+mature trees with interlocking crowns, not 2–5; the 2–5 figure in MWP #3 is the
+maximum-diameter subgroup. The legal stand-level targets are BA >37.5 cm
+≥16/11/6 m²/ha and Table 2 D ≥70/60/50 for High/Moderate/Low. MWP #3 Table 29
+uses lower D (60/55/50) and is an AFRF interpretation, not the legal curve.
+The Knife Creek HMZ matrix is HMZ 1 M, 2 L, 3 M, 4 M, 5 A; the order also has a
+north-facing >20% slope, >10 ha exemption in the Moderate Snowpack zone. Do not
+claim legal compliance without the UWR spatial layer. See
+`notes/reference/mdwr-canopy-clump-requirements.md` and
+`notes/reference/mdwr-source-index.md`.
+
 ### Maps
 
 MWP #3 landscape appendices, KC pages: 150 forest cover, 158 seral, 162

@@ -13,7 +13,8 @@ separates those two concerns and lets the model vary:
   50 cm+);
 - the treatment method: retain every tree above the habitat maximum DBH, or
   remove surplus large trees and then thin the small-tree component;
-- the clump-size assumption (2–5 trees per clump).
+- the clump-size assumption. GWM 10 requires 4–10 or more mature trees with
+  interlocking crowns; the 2–5 figure is only the maximum-diameter subgroup.
 
 ## Policies
 
@@ -35,6 +36,10 @@ large-tree target as an explicit policy variable.
 - One 30-year entry per transition (`TIMEINT=,10`, `NUMCYCLE=4`, cycle 4).
 - Corrected BC THINQFA units; `THINABA` target BA is m²/ha and its DBH fields
   are cm.
+- The policy pilot uses a 50 cm large-tree threshold and Table 29 D values. It
+  is a structural policy axis, not the legal GWM basis. The legal order uses
+  BA >37.5 cm and D ≥70/60/50 for High/Moderate/Low; see
+  `../../notes/reference/mdwr-canopy-clump-requirements.md`.
 
 ## Results
 
@@ -42,18 +47,18 @@ From `benchmark.csv`:
 
 | Regime | Policy | Mean post BA | Mean post q | Mean large BA | Mean large TPH | Clump count/ha | Clump cover proxy |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| High | RETAIN_ABOVE_D | 37.5 | 1.250 | 14.54 | 46.7 | 15.6 | 24.0% |
-| High | LT4_50 | 27.0 | 1.322 | 4.00 | 17.9 | 6.0 | 7.9% |
-| High | LT6_50 | 28.0 | 1.240 | 6.00 | 25.4 | 8.5 | 11.3% |
-| High | LT8_50 | 28.0 | 1.270 | 8.00 | 32.2 | 10.7 | 14.8% |
-| Moderate | RETAIN_ABOVE_D | 34.5 | 1.250 | 15.41 | 48.5 | 16.2 | 25.3% |
-| Moderate | LT4_50 | 22.0 | 1.250 | 4.00 | 17.9 | 6.0 | 7.9% |
-| Moderate | LT6_50 | 22.0 | 1.250 | 6.00 | 25.4 | 8.5 | 11.3% |
-| Moderate | LT8_50 | 22.0 | 1.250 | 8.00 | 32.2 | 10.7 | 14.8% |
-| Low | RETAIN_ABOVE_D | 31.0 | 1.300 | 15.59 | 49.4 | 16.5 | 25.8% |
-| Low | LT4_50 | 16.0 | 1.300 | 4.00 | 17.9 | 6.0 | 7.9% |
-| Low | LT6_50 | 16.0 | 1.300 | 6.00 | 25.4 | 8.5 | 11.3% |
-| Low | LT8_50 | 16.0 | 1.300 | 8.00 | 32.2 | 10.7 | 14.8% |
+| High | RETAIN_ABOVE_D | 37.5 | 1.250 | 14.54 | 46.7 | 7.8 | 24.0% |
+| High | LT4_50 | 27.0 | 1.322 | 4.00 | 17.9 | 3.0 | 7.9% |
+| High | LT6_50 | 28.0 | 1.240 | 6.00 | 25.4 | 4.2 | 11.3% |
+| High | LT8_50 | 28.0 | 1.270 | 8.00 | 32.2 | 5.4 | 14.8% |
+| Moderate | RETAIN_ABOVE_D | 34.5 | 1.250 | 15.41 | 48.5 | 8.1 | 25.3% |
+| Moderate | LT4_50 | 22.0 | 1.250 | 4.00 | 17.9 | 3.0 | 7.9% |
+| Moderate | LT6_50 | 22.0 | 1.250 | 6.00 | 25.4 | 4.2 | 11.3% |
+| Moderate | LT8_50 | 22.0 | 1.250 | 8.00 | 32.2 | 5.4 | 14.8% |
+| Low | RETAIN_ABOVE_D | 31.0 | 1.300 | 15.59 | 49.4 | 8.2 | 25.8% |
+| Low | LT4_50 | 16.0 | 1.300 | 4.00 | 17.9 | 3.0 | 7.9% |
+| Low | LT6_50 | 16.0 | 1.300 | 6.00 | 25.4 | 4.2 | 11.3% |
+| Low | LT8_50 | 16.0 | 1.300 | 8.00 | 32.2 | 5.4 | 14.8% |
 
 Interpretation:
 
@@ -72,31 +77,35 @@ Interpretation:
 ## Clump geometry scenarios
 
 `clump_scenarios.csv` and `clump_scenario_summary.csv` add a spatial geometry
-layer. The large-tree TPH from each transition is placed in 2-5 tree clumps on a
-ring of 3, 5 or 7 m radius; within-clump cover is rasterized at 0.25 m. The
-clump count and spacing follow from the retained large-tree TPH.
+layer. The large-tree TPH from each transition is placed in **4, 6, 8 or 10**
+tree clumps on a ring of 3, 5 or 7 m radius; within-clump cover is rasterized
+at 0.25 m. GWM 10 requires 4–10 or more mature trees with interlocking crowns,
+so 4–10 is the legal clump range. The maximum-diameter subgroup can still be
+2–5 trees within the clump.
 
-High regime, `LT8_50`, three-tree clumps:
+High regime, `LT8_50`, six-tree clumps:
 
 | Clump radius | Clumps/ha | Mean spacing | Within-clump closure | Closed clumps | Total cover |
 | ---: | ---: | ---: | ---: | ---: | ---: |
-| 3 m | 10.7 | 30.5 m | 0.765 | 100% | 14.5% |
-| 5 m | 10.7 | 30.5 m | 0.561 | 0% | 23.1% |
-| 7 m | 10.7 | 30.5 m | 0.373 | 0% | 32.6% |
+| 3 m | 5.4 | 43.2 m | 0.931 | 100% | 7.5% |
+| 5 m | 5.4 | 43.2 m | 0.863 | 100% | 12.3% |
+| 7 m | 5.4 | 43.2 m | 0.725 | 100% | 17.9% |
 
 High regime, `LT8_50`, 3 m clump radius, varying clump size:
 
 | Clump size | Clumps/ha | Mean spacing | Within-clump closure | Closed clumps | Total cover |
 | ---: | ---: | ---: | ---: | ---: | ---: |
-| 2 | 16.1 | 24.9 m | 0.588 | 0% | 21.0% |
-| 3 | 10.7 | 30.5 m | 0.765 | 100% | 14.5% |
 | 4 | 8.0 | 35.3 m | 0.855 | 100% | 11.1% |
-| 5 | 6.4 | 39.4 m | 0.905 | 100% | 9.0% |
+| 6 | 5.4 | 43.2 m | 0.931 | 100% | 7.5% |
+| 8 | 4.0 | 49.9 m | 0.959 | 100% | 5.7% |
+| 10 | 3.2 | 55.8 m | 0.975 | 100% | 4.6% |
 
-The trade-off is explicit: tight clumps of 3+ trees close the clump canopy but
-cover less of the stand; looser clumps raise total cover while losing local
-closure. A 2-tree clump at 3 m radius does not close. These are geometry
-scenarios, not empirical clump statistics and not a snow-interception model.
+The previous 2–5 tree pilot was a misreading: 2–5 trees is the maximum-diameter
+subgroup in MWP #3, not the whole clump. With the legal 4–10 tree clumps,
+within-clump closure is high (0.86–0.98 at 3 m) even though total stand cover
+is lower. The geometry is still a scenario, not an empirical clump
+distribution, and the canopy openings required by GWM 10 are not yet
+spatialized.
 
 ## What this does and does not establish
 
@@ -110,7 +119,8 @@ Establishes:
 
 Does not establish:
 
-- a spatial clump layout or a physical snow-interception model;
+- an actual spatial clump layout, canopy-opening layout, or physical
+  snow-interception model;
 - a legal UWR compliance claim;
 - KC calibration;
 - a preferred policy. The policy levels are scenario axes for the user to
@@ -121,7 +131,7 @@ Does not establish:
 - `transitions.csv` — 24 policy transitions with large-tree metrics.
 - `curves.csv` — 96 growth curves.
 - `benchmark.csv` — the policy table above.
-- `clump_scenarios.csv` — 276 clump geometry scenarios.
+- `clump_scenarios.csv` — 276 clump geometry scenarios (4–10 tree clumps).
 - `clump_scenario_summary.csv` — grouped clump geometry table.
 - `manifest.json` — source, policies, run hashes, caveats.
 - Generators: `runbooks/build_policy_pilot.py` and
