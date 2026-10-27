@@ -103,3 +103,7 @@ status and the GitHub issue comments.
 - Kept the MWP #3 page-162 map out of the GIS stack. It has a north arrow and a
   scale bar but no coordinate grid; a georeference would need control points
   from the SUP/VRI/road network and should be treated as approximate.
+- Checked the recovered Figure 11 density distribution against the Table 29
+  q-factors. The log-linear fit gives q 1.306/1.254/1.253 for
+  Low/Moderate/High, versus 1.30/1.25/1.25. The basal-area totals remain
+  4-6% above Table 29; the q shape agrees closely.

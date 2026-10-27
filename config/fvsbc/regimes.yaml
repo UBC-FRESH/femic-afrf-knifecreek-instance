@@ -163,6 +163,6 @@ benchmark:
     - compare residual basal area by habitat class with Table 29 (29/22/16 m2/ha)
     - compare maximum DBH with Table 29 (60/55/50 cm)
     - compare the residual 5 cm diameter distribution with Figure 11
-    - report the recovered Figure 11 sums (17.02/22.96/30.17 m2/ha) as a shape check, not a target
+    - report the recovered Figure 11 sums (17.02/22.96/30.17 m2/ha) and implied q (1.306/1.254/1.253) as shape checks, not targets
     - compare thinning yield with the plan's ~50 m3/ha expectation
     - compare treated area with the 82.0 ha/year selection AAC

@@ -78,6 +78,20 @@ Recovered basal-area sums:
 | Moderate | 22.96 | 22 | +4.4% |
 | High | 30.17 | 29 | +4.0% |
 
+The density distribution also implies a q-factor. Fitting a log-linear
+density-diameter model over the published classes gives:
+
+| Habitat class | Recovered q | Table 29 q |
+| --- | ---: | ---: |
+| Low | 1.306 | 1.30 |
+| Moderate | 1.254 | 1.25 |
+| High | 1.253 | 1.25 |
+
+The q agreement is close. This is a shape check on the figure, not a
+recalibration. The basal-area totals are slightly above Table 29 (about 4–6%),
+but the relative diameter distribution and q are consistent with the policy
+table.
+
 Do not force the figure to close to Table 29. Table 29 is the authoritative
 residual basal-area/D/q contract. Figure 11 is the published relative diameter
 distribution; it is slightly above the Table 29 totals, probably because the
