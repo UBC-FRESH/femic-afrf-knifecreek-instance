@@ -81,6 +81,7 @@ disturbance, and mule-deer constraints, then construct reviewed stem lists.
 - [x] P1.2d Correct THINQFA BC units and record the pilot (#25)
 - [ ] P1.3 Acquire or reconstruct tree-level tallies and CFI plot data (#10)
   - [x] Build a public IDF Cariboo PSP stem-list analog for the interim pilot.
+  - [x] Fit a QMD/TPA Weibull scale regression and generate conditional lists.
   - [ ] Acquire the Knife Creek CFI or released tree list.
 - [ ] P1.4 Build AU strata and nemora stem populations (#11)
 - [ ] P1.5 Record the data-quality and coverage audit (#12)
@@ -119,8 +120,12 @@ Findings:
   mature IDF plots yielded 4,553 live trees >=9.1 cm, 45 stable Weibull fits,
   and 24 synthetic one-hectare stem lists (22,178 trees). Three stands ran
   through FVS-BC with the corrected cycle-2 THINQFA; residual BA was 30-34
-  m²/ha against the 29 m²/ha target. This is a regional analog, not KC data.
-  See `notes/reference/psp-idf-cariboo-stemlists.md`.
+  m²/ha against the 29 m²/ha target. A QMD/TPA Weibull scale regression was
+  fitted; TPA was not significant after QMD, so QMD-only is selected and the
+  pooled shape is used. Conditional lists span QMD 18-26 and BA 22.9-29.4
+  m²/ha. Generalized gamma was tested but no stable fit beat Weibull. This is
+  a regional analog, not KC data. See
+  `notes/reference/psp-idf-cariboo-stemlists.md`.
 
 - The AFRF Management and Working Plan #3 (2007) is acquired. It gives the
   Knife Creek MDWR contract: single-tree selection, 30-year cycle, Table 29

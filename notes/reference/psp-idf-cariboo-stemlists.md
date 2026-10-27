@@ -63,6 +63,51 @@ The plot-level fits are retained in
 The fit is on `DBH − 9.1` because the PSP sample is left-truncated at the
 merchantable limit. The lower bound is added back when sampling.
 
+## QMD/TPA regression
+
+The per-plot Weibull fits were regressed on QMD and TPA. Using log QMD and
+log TPA:
+
+| Model | R² | Adj. R² | LOOCV RMSE | Coefficients |
+| --- | ---: | ---: | ---: | --- |
+| `log(beta) ~ log(QMD) + log(TPA)` | 0.480 | 0.455 | 0.314 | `-6.463 + 2.423 log QMD + 0.217 log TPA` |
+| `log(beta) ~ log(QMD)` | 0.471 | 0.459 | 0.306 | `-3.863 + 2.049 log QMD` |
+| `log(a) ~ log(QMD) + log(TPA)` | 0.096 | 0.053 | 0.362 | `-7.674 + 1.282 log QMD + 0.577 log TPA` |
+| `log(a) ~ log(QMD)` | 0.012 | -0.011 | 0.367 | not used |
+
+TPA is not significant after QMD in the scale model (`t = 0.86`; VIF = 2.71).
+The QMD-only model is selected. The shape parameter `a` is not predictable
+from QMD/TPA, so the pooled `a = 1.0200` is used.
+
+Generalized gamma was also tested per plot. Five of 45 plots had lower AICc
+with GG, but every one had degenerate parameters (`p` near 0 or 170, `beta`
+near 1e-7). No stable GG fit beat Weibull, so the simpler Weibull is used.
+
+The regression is a scale model, not a full growth model. QMD predicts the
+Weibull scale; TPA sets density; the final stand is scale-calibrated to the
+target QMD. The five conditional lists are:
+
+| Stand | QMD | TPA | BA (m²/ha) |
+| --- | ---: | ---: | ---: |
+| PSP-REG-001 | 18 | 900 | 22.9 |
+| PSP-REG-002 | 20 | 800 | 25.1 |
+| PSP-REG-003 | 22 | 750 | 28.5 |
+| PSP-REG-004 | 24 | 650 | 29.4 |
+| PSP-REG-005 | 26 | 550 | 29.2 |
+
+`runbooks/fit_psp_weibull_regression.py` writes the model diagnostics and the
+conditional lists. The three-stand FVS-BC pilot results are in
+`idf_cariboo_psp_fvs_pilot.csv`; the two conditional regression stands are in
+`idf_cariboo_psp_regression_fvs_pilot.csv`:
+
+| Stand | Target QMD | Year 30 pre | Year 30 post | Removed TPH |
+| --- | ---: | ---: | ---: | ---: |
+| PSP-REG-003 | 22 | 41 | 35 | 195 |
+| PSP-REG-004 | 24 | 40 | 38 | 88 |
+
+Again the residual is above the 29 m²/ha target because of the q deficit in the
+grown stand.
+
 ## Synthetic stem lists
 
 `runbooks/build_psp_stemlists.py` generates one-hectare stems by:

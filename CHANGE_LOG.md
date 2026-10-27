@@ -169,3 +169,10 @@ status and the GitHub issue comments.
   (`0.0.1-alpha`) for the PSP stem-list fit and inverse-CDF sampling. The note
   records that nemora has grouped PDF fitting, not a covariate regression;
   the per-plot fits are retained for that next step.
+- P1.3c: fitted a Weibull DBH scale regression on QMD/TPA. The QMD-only
+  model is selected (`log beta = -3.863 + 2.049 log QMD`, R² 0.471, adj. 0.459,
+  LOOCV 0.306); TPA is not significant after QMD (`t=0.86`, VIF 2.71). The
+  shape `a` is not predictable; the pooled `a=1.0200` is used. Five conditional
+  stem lists span QMD 18-26 and BA 22.9-29.4 m²/ha. Generalized gamma was
+  tested; no stable GG fit beat Weibull, so Weibull is retained. Two conditional
+  stands ran through FVS-BC; residual BA was 35-38 m²/ha against the 29 target.
