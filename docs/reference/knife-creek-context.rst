@@ -37,6 +37,59 @@ Why the silviculture is uneven-aged
 - The model must represent repeated selection entries, residual structure, and
   post-cut growth.
 
+Management direction from MWP #3
+--------------------------------
+
+The AFRF Management and Working Plan #3 (2007) makes mule-deer winter habitat
+the primary objective on all Knife Creek compartments. The plan's Table 29
+gives the target residual structure:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Habitat class
+     - Residual B (m²/ha)
+     - Maximum DBH (cm)
+     - q (5 cm classes)
+     - Cutting cycle (years)
+   * - High
+     - 29
+     - 60
+     - 1.25
+     - 30
+   * - Moderate
+     - 22
+     - 55
+     - 1.25
+     - 30
+   * - Low
+     - 16
+     - 50
+     - 1.30
+     - 30
+
+The silvicultural system is single-tree selection, with small groups of 2–5
+trees at the maximum diameter. Removals concentrate on trees below 37.5 cm DBH;
+the maximum-diameter class is retained in groups. Thinning treatments typically
+produce about 50 m³/ha.
+
+Table 35 gives the Knife Creek AAC as 82.0 ha/year of single-tree selection plus
+11.2 ha/year of salvage. The 2001–2005 actual was 44.3 ha/year partial cut plus
+31.2 ha/year salvage, against 93.2 ha/year total AAC. The plan's CCLUP outcome
+is 0% conventional harvest, 95% modified harvest and 5% no harvest, compared
+with the CCLUP target of 45/50/5.
+
+These are public management-plan values, not the legal UWR order. The 2003
+Knife Creek transition strategy and the approved UWR order are still
+outstanding. The full contract is in ``config/mdwr_regimes.yaml`` and the
+context note is ``notes/reference/mwp3-kc-management-direction.md``.
+
+Figure 11 on the same page gives the relative diameter distribution by 5 cm
+class. It was recovered with ``figrecover``; the reviewed table is
+``data/benchmarks/mwp3_figure11_target_stand_structure.csv``. Its basal-area
+sums are 17.02/22.96/30.17 m²/ha for Low/Moderate/High, slightly above the Table
+29 targets. Use Table 29 for the target and Figure 11 for the shape.
+
 Disturbance
 -----------
 
@@ -57,6 +110,8 @@ Site series
   elevation 720-1,020 m.
 - The classification and keys are in `config/site_series.yaml` and
   `reference/AFRF-site-unit-report-2004.pdf`.
+- Site index by site series and species is transcribed in
+  `data/site_index/klinka_2004_site_index.csv` from Tables 8.2.1–8.2.4.
 - The georeferenced site-series polygons are in the report's map pockets /
   CD-ROM, not the PDF. The spatial map is still required.
 - Do not infer site series from BEC zone/subzone alone.

@@ -66,3 +66,40 @@ status and the GitHub issue comments.
   pockets/CD-ROM, not the PDF. The spatial site-series map remains blocked under
   P1.2a (#15). The report gives Knife Creek as 3,484 ha, Douglas-fir ~3,000 ha
   (87%), elevation 720-1,020 m.
+
+## 2026-10-27
+
+- Activated P1.2b (#18) to turn the quantitative public figures and tables in
+  the AFRF reference documents into reviewed benchmark data.
+- Acquired the AFRF Management and Working Plan #3
+  (`reference/AFRF-management-working-plan-3-2007.pdf`, SHA-256 `9bfd8b8f…ff6a`).
+  It is a public UBC AFRF planning document, not OGL. Extracted the Knife Creek
+  MDWR contract into `config/mdwr_regimes.yaml`: single-tree selection,
+  30-year cycle, Table 29 structures (High 29 m²/ha, D 60 cm, q 1.25; Moderate
+  22/55/1.25; Low 16/50/1.30), Table 35 AAC (82.0 ha/year selection, 11.2
+  ha/year salvage), and the 0% conventional / 95% modified / 5% no-harvest
+  outcome. The legal UWR order and 2003 transition strategy remain blocked.
+- Recovered MWP #3 Figure 11 with `figrecover` 0.1.0a1 after rendering page 97
+  at 300 dpi, masking the legend, and calibrating the bar/line chart. The
+  reviewed table is `data/benchmarks/mwp3_figure11_target_stand_structure.csv`;
+  the long table, metadata, review manifest and recovery note are beside it.
+  Recovered basal-area sums are 17.02/22.96/30.17 m²/ha for Low/Moderate/High
+  versus Table 29 targets 16/22/29. Table 29 remains the target; Figure 11 is
+  the relative diameter-distribution shape.
+- Transcribed MWP #3 Appendix 9 (PDF page 162) into
+  `data/benchmarks/mwp3_kc_compartments.csv`: KC01–KC11 and RD05–RD07; gross
+  3,485.6 ha, net 3,162.3 ha. The source map is schematic with no coordinate
+  grid, so it is a table transcription, not a GIS layer.
+- Transcribed Klinka et al. 2004 Tables 8.2.1–8.2.4 into
+  `data/site_index/klinka_2004_site_index.csv` (105 rows; IDFxm, IDFdk3,
+  SBSdw1, ICHmk3; site index m @ 50 yr bh). The report's figures are
+  photographs and flow diagrams, not quantitative charts; the tables are the
+  right source.
+- Recorded the FVS-BC keyword correction: `THINQFA` implements BDq;
+  `THINBTA` is a thin-from-below to a trees-per-acre target, not basal area.
+  Replaced the placeholder `SEL_BA18/25/30` regimes with
+  `SEL_MDWR_HIGH/MODERATE/LOW`. Added the wrapper gap: `fresh-fvsbc` 0.11.0
+  does not yet model the `THINQFA` supplemental residual-density-units record.
+- Kept the MWP #3 page-162 map out of the GIS stack. It has a north arrow and a
+  scale bar but no coordinate grid; a georeference would need control points
+  from the SUP/VRI/road network and should be treated as approximate.

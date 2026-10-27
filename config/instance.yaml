@@ -29,3 +29,25 @@ instance:
   estate_engine: ws4
   status: phase-1
   merged_instance_reserved: femic-afrf-instance
+  management_plan:
+    source: AFRF Management and Working Plan #3 (2007)
+    working_circle: Knife Creek Mule Deer Winter Range
+    gross_area_ha: 3333
+    reserves_area_ha: 152
+    net_productive_area_ha: 3117
+    appendix9_gross_area_ha: 3485.6
+    appendix9_net_area_ha: 3162.3
+    cutting_cycle_years: 30
+    silvicultural_system: single-tree selection with small groups at maximum diameter
+    aac_single_tree_selection_ha_per_year: 82.0
+    aac_salvage_ha_per_year: 11.2
+    cclup_conventional_pct: 45
+    cclup_modified_pct: 50
+    cclup_no_harvest_pct: 5
+    plan_conventional_pct: 0
+    plan_modified_pct: 95
+    plan_no_harvest_pct: 5
+    notes: >-
+      Public management direction, not the legal UWR order. Area figures differ
+      by vintage/boundary (SUP 3,533.1341 ha; Appendix 9 net 3,162.3 ha;
+      Table 32 net 3,117 ha). See config/mdwr_regimes.yaml.

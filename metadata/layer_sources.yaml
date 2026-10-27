@@ -134,8 +134,10 @@ resource is a raster folder, not an AOI vector layer. It is not fetched here.
 - AFRF site-series / ecosystem map. The public BEC map gives zone/subzone/
   variant only.
 - Approved UWR boundary and legal mule-deer objectives.
+- The CCLUP 2003 Knife Creek transition strategy.
 - Tree-level tallies or CFI plots for a stem list.
 - A net THLB / operability classification.
+- A georeferenced site-series map (map pockets / CD-ROM).
 
 ## Klinka et al. 2004 site-unit report
 
@@ -159,3 +161,69 @@ The report gives the Knife Creek block as 3,484 ha, Douglas-fir ~3,000 ha
 (87%), elevation 720-1,020 m. The VRI 2025 gives SUP area 3,533.13 ha and
 FDI-leading 3,416.8 ha (96.7%); these are different vintages, not a reason to
 force agreement.
+
+## AFRF Management and Working Plan #3
+
+| Field | Value |
+| --- | --- |
+| Citation | Alex Fraser Research Forest, Management and Working Plan #3, January 1, 2007 |
+| Path | `reference/AFRF-management-working-plan-3-2007.pdf` |
+| Pages | 168 |
+| Licence | UBC AFRF publication; not OGL |
+| SHA-256 | `9bfd8b8f0449f45fb97fcf529236640ace09b73ba74f77001f677eee7307ff6a` |
+| Policy contract | `config/mdwr_regimes.yaml` |
+| Context note | `notes/reference/mwp3-kc-management-direction.md` |
+
+The plan makes mule-deer winter habitat the primary objective on all Knife
+Creek compartments. Table 29 gives the target residual structure (High 29
+m²/ha, D 60 cm, q 1.25; Moderate 22/55/1.25; Low 16/50/1.30; 30-year cycle).
+Table 35 gives the area AAC (82.0 ha/year selection, 11.2 ha/year salvage).
+Appendix 9 gives the KC01–KC11 and RD05–RD07 compartment table. This is public
+management direction, not the legal UWR order.
+
+## Recovered MWP #3 Figure 11 target structure
+
+| Field | Value |
+| --- | --- |
+| Source | MWP #3 Figure 11, PDF page 97 (printed 89) |
+| Method | `figrecover` 0.1.0a1, 300 dpi, calibrated bar/line extraction |
+| Reviewed table | `data/benchmarks/mwp3_figure11_target_stand_structure.csv` |
+| Metadata | `data/benchmarks/mwp3_figure11_target_stand_structure.metadata.json` |
+| Review manifest | `data/benchmarks/mwp3_figure11_review.jsonl` |
+| Recovery note | `notes/reference/mwp3-figure11-recovery.md` |
+| Reproduction script | `runbooks/recover_mwp3_figure11.py` |
+
+The recovered per-class basal areas sum to 17.02/22.96/30.17 m²/ha for
+Low/Moderate/High, versus Table 29 targets of 16/22/29. Table 29 remains the
+target; Figure 11 is the relative diameter-distribution shape.
+
+## Knife Creek compartment table (MWP #3 Appendix 9)
+
+| Field | Value |
+| --- | --- |
+| Source | MWP #3 Appendix 9, PDF page 162 (printed 150) |
+| Path | `data/benchmarks/mwp3_kc_compartments.csv` |
+| Metadata | `data/benchmarks/mwp3_kc_compartments.metadata.json` |
+| Gross area | 3,485.6 ha |
+| Net area | 3,162.3 ha |
+| Non-productive | 48.3 ha |
+| ESA | 125.5 ha |
+| Reserve | 64.4 ha |
+| Permanent OGMA | 84.1 ha |
+
+The source is a schematic planning map with a north arrow and scale bar but no
+coordinate grid. The table is a transcription, not a georeferenced GIS layer.
+
+## Klinka 2004 site-index table
+
+| Field | Value |
+| --- | --- |
+| Citation | Klinka et al. 2004, Tables 8.2.1–8.2.4 |
+| Path | `data/site_index/klinka_2004_site_index.csv` |
+| Metadata | `data/site_index/klinka_2004_site_index.metadata.json` |
+| Rows | 105 |
+| Units | site index, metres at 50 years breast height |
+
+Direct transcription of the published tables for IDFxm, IDFdk3, SBSdw1 and
+ICHmk3. The report's figures are photographs and flow diagrams, not
+quantitative charts; the tables are the appropriate source.

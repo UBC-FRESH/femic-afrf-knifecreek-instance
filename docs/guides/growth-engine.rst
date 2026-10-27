@@ -48,9 +48,31 @@ let the instance compute the residual state directly instead of assuming it.
 Selection-cut keywords
 ----------------------
 
-The FVS keyword table includes basal-area and thinning controls, including
-`THINBTA`, `THINATA`, `THINBBA`, `THINABA`, `THINPRSC`, and `THINDBH`. A
-selection regime is a reviewed combination of:
+The Knife Creek regimes use `THINQFA` (THIN Q-Factor Approach), because the
+AFRF plan specifies BDq: residual basal area, maximum DBH, and q-factor by
+habitat class. `THINQFA` thins through a diameter range to a q-factor
+distribution and a residual density. The FVS fields are:
+
+- entry year or cycle;
+- minimum DBH (in);
+- maximum DBH (in);
+- species code;
+- q-factor;
+- diameter-class width (in); and
+- residual density, with a supplemental record selecting basal area per acre,
+  trees per acre, or SDI.
+
+`THINBTA` is **not** a basal-area target; it is a thin-from-below to a
+trees-per-acre target. `THINBBA`, `THINABA`, `THINDBH` and `THINQFA` are the
+relevant alternatives. The plan's values are in
+`config/mdwr_regimes.yaml`; the keyword templates are in
+`config/fvsbc/regimes.yaml`.
+
+`fresh-fvsbc` 0.11.0 does not yet model the `THINQFA` supplemental record. Add
+that wrapper support before running the regimes. The entry-year/cycle semantics
+also need a controlled pilot.
+
+A selection regime is a reviewed combination of:
 
 - the residual basal-area target or the removal proportion;
 - the species preference;
@@ -58,9 +80,9 @@ selection regime is a reviewed combination of:
 - the cutting cycle and the entry window; and
 - the minimum retained structure.
 
-The exact keyword sequence and parameter values are not yet reviewed. They are
-templates in `config/fvsbc/regimes.yaml`. Do not run a regime as a policy
-scenario until it has a source and a review note.
+The numbers are reviewed policy (Table 29), but the keyword sequence is not yet
+validated by a run. Do not run a regime as a policy scenario until the pilot
+and the wrapper gap are closed.
 
 Stem lists
 ----------
@@ -86,8 +108,11 @@ Known limits
 ------------
 
 - FVS-BC is distance-independent. It does not model the spatial arrangement of
-  retained trees within a stand. ws4 handles block-level spatial constraints;
-  FVS-BC handles the stand-level tree list.
+  retained trees within a stand. The plan's 2–5 tree maximum-diameter groups are
+  a ws4/post-processing constraint, not an FVS keyword.
+- `THINQFA` needs a supplemental residual-density-units record that
+  `fresh-fvsbc` 0.11.0 does not yet expose. Do not hand-edit generated keyword
+  files to work around it; add the wrapper support.
 - The wrapper is at package version 0.11.0 and commit
   `ca33d0e26a079a72add5108f1b182b798b0c4e3e`. Pin it and re-run the pilot when
   it moves.
