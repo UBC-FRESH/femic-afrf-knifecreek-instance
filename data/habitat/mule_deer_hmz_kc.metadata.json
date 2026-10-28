@@ -1,0 +1,18 @@
+{
+  "source": "BC Map Hub / DataBC",
+  "item": "Mule Deer Winter Range Habitat Management Zones - Cariboo Region",
+  "arcgis_item": "96151b4539c4437897e3ec3324037db2",
+  "query_url": "https://maps.gov.bc.ca/arcgis/rest/services/whse/bcgw_pub_reg_land_and_natural_resource/MapServer/8/query",
+  "licence": "Open Government Licence - British Columbia",
+  "retrieved": "2026-10-28",
+  "clip": "SUP S15382, EPSG:3005",
+  "unit_filter": "HABITAT_MGMT_ZONE starts with dwl_50_",
+  "features": 5,
+  "area_ha": 3489.2703796000797,
+  "sha256": "ff2e043bd1f446b5c7d5e3788e948961d1488f8829c3ace50e03de4cbce439e2",
+  "caveats": [
+    "Public spatial layer; verify the current approved order before a compliance claim.",
+    "HMZ is a spatial constraint; a stand-level run alone is not compliance.",
+    "The layer does not replace the legal UWR boundary or stand-structure map."
+  ]
+}

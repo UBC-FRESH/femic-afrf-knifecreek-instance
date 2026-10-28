@@ -1,0 +1,12 @@
+{
+  "vri": "data/inventory/vri_2025_kc.gpkg",
+  "hmz": "data/habitat/mule_deer_hmz_kc.gpkg",
+  "crs": "EPSG:3005",
+  "polygons": 178,
+  "overlay_area_ha": 3489.2703796000533,
+  "caveats": [
+    "HMZ is a spatial legal constraint; the crosswalk is not a treatment decision.",
+    "Dominant HMZ is the largest area share, not a legal interpretation.",
+    "Verify the current approved order before a compliance claim."
+  ]
+}

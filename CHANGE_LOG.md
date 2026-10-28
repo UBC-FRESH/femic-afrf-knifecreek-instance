@@ -247,3 +247,10 @@ status and the GitHub issue comments.
   `runbooks/compile_ws4_dataset.py` and `ws4/dataset_v1_synthetic/` (4 synthetic
   1 ha blocks, 23 tracks, 25 treatments, 575 curves). `ws4 validate` passes.
   The dataset is a structural fixture, not a KC operating dataset.
+- P2.9 HMZ spatial acquisition: fetched the BC Map Hub/DataBC Cariboo mule-deer
+  HMZ layer, clipped it to SUP S15382 and built a VRI × HMZ crosswalk. Areas:
+  HMZ 1 M 738.29 ha, 2 L 1,217.15 ha, 3 M 320.51 ha, 4 M 1,213.33 ha, 5 A
+  0.00045 ha; total 3,489.27 ha against the 3,533.13 ha SUP. Added
+  `runbooks/fetch_mdwr_hmz.py`, `runbooks/assign_hmz.py` and
+  `notes/reference/mdwr-hmz-layer.md`. The synthetic ws4 dataset is not yet
+  spatially masked.

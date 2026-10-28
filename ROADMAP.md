@@ -78,7 +78,9 @@ disturbance, and mule-deer constraints, then construct reviewed stem lists.
 - [ ] P1.2a Acquire the AFRF site-series map and legal UWR/HMZ spatial layer (#15)
   - [x] Acquire the 2007 GWM order text, 2003 transition plan, Part 1a/1b,
     Extension Note 25A and LMH 13.
-  - [ ] Acquire the spatial UWR boundary, stand-structure classes and HMZ layer.
+  - [x] Acquire the HMZ spatial layer and VRI crosswalk
+    (`data/habitat/mule_deer_hmz_kc.gpkg`).
+  - [ ] Verify the legal UWR boundary and stand-structure map.
 - [x] P1.2b Recover public figure and table benchmarks (#18)
 - [x] P1.2c Pin the THINQFA-capable fresh-fvsbc (#22)
 - [x] P1.2d Correct THINQFA BC units and record the pilot (#25)
