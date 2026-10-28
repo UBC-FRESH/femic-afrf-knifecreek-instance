@@ -270,6 +270,17 @@ trees across 160 blocks; `ws4/dataset_kc_spatial_v3` carries the reserve
 classes. This is a canopy inventory, not a CFI: no species, understory or
 measured DBH. See `notes/reference/lidarbc-kc-pilot.md`.
 
+### AFRF Knife Creek PSP dataset
+
+The AFRF KC PSP workbook is the primary field-data candidate: 24 permanent
+0.05 ha plots (15.81 × 31.62 m), 1993–2013, stem-map coordinates, species,
+DBH/height/crown/vigor. FRDA Report 242 confirms the design, plot/block/
+treatment mapping, the `P = I/B` interior/buffer distinction and the vigor/
+crown definitions. The raw workbook is private and not committed. Remaining
+metadata questions are limited to `TS`, `TC`, `D1/D2/DA/DS/WTA`, `HT13`,
+duplicate columns and the exact X/Y conversion. See
+`notes/reference/kc-afrf-psp-dataset.md`.
+
 ### Maps
 
 MWP #3 landscape appendices, KC pages: 150 forest cover, 158 seral, 162
