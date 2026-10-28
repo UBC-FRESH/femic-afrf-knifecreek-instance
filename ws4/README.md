@@ -52,7 +52,7 @@ patch-account files remain templates.
 | --- | --- |
 | `state_transition_contract.md` | The table and identifier contract |
 | `state_library_v0/` | Legacy Table 29 transition library |
-| `state_library_v1/` | Planned GWM 2007 legal-basis transition library |
+| `state_library_v1/` | Provisional GWM 2007 clump-reserve transition library |
 | `policy_pilot_v0/` | Legacy Table 29 veteran-retention policy pilot |
 | `gwm_pilot_v0/` | GWM 2007 legal-basis stand-structure pilot |
 | `targets.template.yaml` | Harvest and habitat target template |

@@ -235,3 +235,9 @@ status and the GitHub issue comments.
   large BA 1.07/2.64/5.12 m²/ha. High `PSP-REG-001` and `PSP-REG-002` fail on
   starting large-tree structure. Retrospective marking scenario, not a new FVS
   growth run and not a legal-compliance claim.
+- P2.7 provisional GWM 2007 state library v1: added
+  `runbooks/build_state_library_v1.py` and `ws4/state_library_v1/` (8 stands ×
+  3 GWM classes × 2 entries; 48 transitions, 192 curves, 72 per-chain states).
+  The FVS cut is followed by the selected clump-reserve marking rule and a
+  weighted residual resample. 33/48 stand-structure checks pass. The graph is
+  not closed and the clump proxy is not spatial; no legal-compliance claim.

@@ -1,0 +1,366 @@
+{
+  "nodes": [
+    "GWM_E1__PSP-IDF-004__GWM_HIGH",
+    "GWM_E1__PSP-IDF-004__GWM_LOW",
+    "GWM_E1__PSP-IDF-004__GWM_MODERATE",
+    "GWM_E1__PSP-IDF-005__GWM_HIGH",
+    "GWM_E1__PSP-IDF-005__GWM_LOW",
+    "GWM_E1__PSP-IDF-005__GWM_MODERATE",
+    "GWM_E1__PSP-IDF-006__GWM_HIGH",
+    "GWM_E1__PSP-IDF-006__GWM_LOW",
+    "GWM_E1__PSP-IDF-006__GWM_MODERATE",
+    "GWM_E1__PSP-IDF-008__GWM_HIGH",
+    "GWM_E1__PSP-IDF-008__GWM_LOW",
+    "GWM_E1__PSP-IDF-008__GWM_MODERATE",
+    "GWM_E1__PSP-IDF-012__GWM_HIGH",
+    "GWM_E1__PSP-IDF-012__GWM_LOW",
+    "GWM_E1__PSP-IDF-012__GWM_MODERATE",
+    "GWM_E1__PSP-IDF-013__GWM_HIGH",
+    "GWM_E1__PSP-IDF-013__GWM_LOW",
+    "GWM_E1__PSP-IDF-013__GWM_MODERATE",
+    "GWM_E1__PSP-IDF-015__GWM_HIGH",
+    "GWM_E1__PSP-IDF-015__GWM_LOW",
+    "GWM_E1__PSP-IDF-015__GWM_MODERATE",
+    "GWM_E1__PSP-IDF-024__GWM_HIGH",
+    "GWM_E1__PSP-IDF-024__GWM_LOW",
+    "GWM_E1__PSP-IDF-024__GWM_MODERATE",
+    "GWM_R1__PSP-IDF-004__GWM_HIGH",
+    "GWM_R1__PSP-IDF-004__GWM_LOW",
+    "GWM_R1__PSP-IDF-004__GWM_MODERATE",
+    "GWM_R1__PSP-IDF-005__GWM_HIGH",
+    "GWM_R1__PSP-IDF-005__GWM_LOW",
+    "GWM_R1__PSP-IDF-005__GWM_MODERATE",
+    "GWM_R1__PSP-IDF-006__GWM_HIGH",
+    "GWM_R1__PSP-IDF-006__GWM_LOW",
+    "GWM_R1__PSP-IDF-006__GWM_MODERATE",
+    "GWM_R1__PSP-IDF-008__GWM_HIGH",
+    "GWM_R1__PSP-IDF-008__GWM_LOW",
+    "GWM_R1__PSP-IDF-008__GWM_MODERATE",
+    "GWM_R1__PSP-IDF-012__GWM_HIGH",
+    "GWM_R1__PSP-IDF-012__GWM_LOW",
+    "GWM_R1__PSP-IDF-012__GWM_MODERATE",
+    "GWM_R1__PSP-IDF-013__GWM_HIGH",
+    "GWM_R1__PSP-IDF-013__GWM_LOW",
+    "GWM_R1__PSP-IDF-013__GWM_MODERATE",
+    "GWM_R1__PSP-IDF-015__GWM_HIGH",
+    "GWM_R1__PSP-IDF-015__GWM_LOW",
+    "GWM_R1__PSP-IDF-015__GWM_MODERATE",
+    "GWM_R1__PSP-IDF-024__GWM_HIGH",
+    "GWM_R1__PSP-IDF-024__GWM_LOW",
+    "GWM_R1__PSP-IDF-024__GWM_MODERATE",
+    "GWM_R2__PSP-IDF-004__GWM_HIGH",
+    "GWM_R2__PSP-IDF-004__GWM_LOW",
+    "GWM_R2__PSP-IDF-004__GWM_MODERATE",
+    "GWM_R2__PSP-IDF-005__GWM_HIGH",
+    "GWM_R2__PSP-IDF-005__GWM_LOW",
+    "GWM_R2__PSP-IDF-005__GWM_MODERATE",
+    "GWM_R2__PSP-IDF-006__GWM_HIGH",
+    "GWM_R2__PSP-IDF-006__GWM_LOW",
+    "GWM_R2__PSP-IDF-006__GWM_MODERATE",
+    "GWM_R2__PSP-IDF-008__GWM_HIGH",
+    "GWM_R2__PSP-IDF-008__GWM_LOW",
+    "GWM_R2__PSP-IDF-008__GWM_MODERATE",
+    "GWM_R2__PSP-IDF-012__GWM_HIGH",
+    "GWM_R2__PSP-IDF-012__GWM_LOW",
+    "GWM_R2__PSP-IDF-012__GWM_MODERATE",
+    "GWM_R2__PSP-IDF-013__GWM_HIGH",
+    "GWM_R2__PSP-IDF-013__GWM_LOW",
+    "GWM_R2__PSP-IDF-013__GWM_MODERATE",
+    "GWM_R2__PSP-IDF-015__GWM_HIGH",
+    "GWM_R2__PSP-IDF-015__GWM_LOW",
+    "GWM_R2__PSP-IDF-015__GWM_MODERATE",
+    "GWM_R2__PSP-IDF-024__GWM_HIGH",
+    "GWM_R2__PSP-IDF-024__GWM_LOW",
+    "GWM_R2__PSP-IDF-024__GWM_MODERATE"
+  ],
+  "edges": [
+    {
+      "from": "GWM_E1__PSP-IDF-024__GWM_HIGH",
+      "to": "GWM_R1__PSP-IDF-024__GWM_HIGH",
+      "regime": "GWM_HIGH",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-024__GWM_HIGH",
+      "to": "GWM_R2__PSP-IDF-024__GWM_HIGH",
+      "regime": "GWM_HIGH",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-024__GWM_MODERATE",
+      "to": "GWM_R1__PSP-IDF-024__GWM_MODERATE",
+      "regime": "GWM_MODERATE",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-024__GWM_MODERATE",
+      "to": "GWM_R2__PSP-IDF-024__GWM_MODERATE",
+      "regime": "GWM_MODERATE",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-024__GWM_LOW",
+      "to": "GWM_R1__PSP-IDF-024__GWM_LOW",
+      "regime": "GWM_LOW",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-024__GWM_LOW",
+      "to": "GWM_R2__PSP-IDF-024__GWM_LOW",
+      "regime": "GWM_LOW",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-005__GWM_HIGH",
+      "to": "GWM_R1__PSP-IDF-005__GWM_HIGH",
+      "regime": "GWM_HIGH",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-005__GWM_HIGH",
+      "to": "GWM_R2__PSP-IDF-005__GWM_HIGH",
+      "regime": "GWM_HIGH",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-005__GWM_MODERATE",
+      "to": "GWM_R1__PSP-IDF-005__GWM_MODERATE",
+      "regime": "GWM_MODERATE",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-005__GWM_MODERATE",
+      "to": "GWM_R2__PSP-IDF-005__GWM_MODERATE",
+      "regime": "GWM_MODERATE",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-005__GWM_LOW",
+      "to": "GWM_R1__PSP-IDF-005__GWM_LOW",
+      "regime": "GWM_LOW",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-005__GWM_LOW",
+      "to": "GWM_R2__PSP-IDF-005__GWM_LOW",
+      "regime": "GWM_LOW",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-015__GWM_HIGH",
+      "to": "GWM_R1__PSP-IDF-015__GWM_HIGH",
+      "regime": "GWM_HIGH",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-015__GWM_HIGH",
+      "to": "GWM_R2__PSP-IDF-015__GWM_HIGH",
+      "regime": "GWM_HIGH",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-015__GWM_MODERATE",
+      "to": "GWM_R1__PSP-IDF-015__GWM_MODERATE",
+      "regime": "GWM_MODERATE",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-015__GWM_MODERATE",
+      "to": "GWM_R2__PSP-IDF-015__GWM_MODERATE",
+      "regime": "GWM_MODERATE",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-015__GWM_LOW",
+      "to": "GWM_R1__PSP-IDF-015__GWM_LOW",
+      "regime": "GWM_LOW",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-015__GWM_LOW",
+      "to": "GWM_R2__PSP-IDF-015__GWM_LOW",
+      "regime": "GWM_LOW",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-012__GWM_HIGH",
+      "to": "GWM_R1__PSP-IDF-012__GWM_HIGH",
+      "regime": "GWM_HIGH",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-012__GWM_HIGH",
+      "to": "GWM_R2__PSP-IDF-012__GWM_HIGH",
+      "regime": "GWM_HIGH",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-012__GWM_MODERATE",
+      "to": "GWM_R1__PSP-IDF-012__GWM_MODERATE",
+      "regime": "GWM_MODERATE",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-012__GWM_MODERATE",
+      "to": "GWM_R2__PSP-IDF-012__GWM_MODERATE",
+      "regime": "GWM_MODERATE",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-012__GWM_LOW",
+      "to": "GWM_R1__PSP-IDF-012__GWM_LOW",
+      "regime": "GWM_LOW",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-012__GWM_LOW",
+      "to": "GWM_R2__PSP-IDF-012__GWM_LOW",
+      "regime": "GWM_LOW",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-004__GWM_HIGH",
+      "to": "GWM_R1__PSP-IDF-004__GWM_HIGH",
+      "regime": "GWM_HIGH",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-004__GWM_HIGH",
+      "to": "GWM_R2__PSP-IDF-004__GWM_HIGH",
+      "regime": "GWM_HIGH",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-004__GWM_MODERATE",
+      "to": "GWM_R1__PSP-IDF-004__GWM_MODERATE",
+      "regime": "GWM_MODERATE",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-004__GWM_MODERATE",
+      "to": "GWM_R2__PSP-IDF-004__GWM_MODERATE",
+      "regime": "GWM_MODERATE",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-004__GWM_LOW",
+      "to": "GWM_R1__PSP-IDF-004__GWM_LOW",
+      "regime": "GWM_LOW",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-004__GWM_LOW",
+      "to": "GWM_R2__PSP-IDF-004__GWM_LOW",
+      "regime": "GWM_LOW",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-013__GWM_HIGH",
+      "to": "GWM_R1__PSP-IDF-013__GWM_HIGH",
+      "regime": "GWM_HIGH",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-013__GWM_HIGH",
+      "to": "GWM_R2__PSP-IDF-013__GWM_HIGH",
+      "regime": "GWM_HIGH",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-013__GWM_MODERATE",
+      "to": "GWM_R1__PSP-IDF-013__GWM_MODERATE",
+      "regime": "GWM_MODERATE",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-013__GWM_MODERATE",
+      "to": "GWM_R2__PSP-IDF-013__GWM_MODERATE",
+      "regime": "GWM_MODERATE",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-013__GWM_LOW",
+      "to": "GWM_R1__PSP-IDF-013__GWM_LOW",
+      "regime": "GWM_LOW",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-013__GWM_LOW",
+      "to": "GWM_R2__PSP-IDF-013__GWM_LOW",
+      "regime": "GWM_LOW",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-006__GWM_HIGH",
+      "to": "GWM_R1__PSP-IDF-006__GWM_HIGH",
+      "regime": "GWM_HIGH",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-006__GWM_HIGH",
+      "to": "GWM_R2__PSP-IDF-006__GWM_HIGH",
+      "regime": "GWM_HIGH",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-006__GWM_MODERATE",
+      "to": "GWM_R1__PSP-IDF-006__GWM_MODERATE",
+      "regime": "GWM_MODERATE",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-006__GWM_MODERATE",
+      "to": "GWM_R2__PSP-IDF-006__GWM_MODERATE",
+      "regime": "GWM_MODERATE",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-006__GWM_LOW",
+      "to": "GWM_R1__PSP-IDF-006__GWM_LOW",
+      "regime": "GWM_LOW",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-006__GWM_LOW",
+      "to": "GWM_R2__PSP-IDF-006__GWM_LOW",
+      "regime": "GWM_LOW",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-008__GWM_HIGH",
+      "to": "GWM_R1__PSP-IDF-008__GWM_HIGH",
+      "regime": "GWM_HIGH",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-008__GWM_HIGH",
+      "to": "GWM_R2__PSP-IDF-008__GWM_HIGH",
+      "regime": "GWM_HIGH",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-008__GWM_MODERATE",
+      "to": "GWM_R1__PSP-IDF-008__GWM_MODERATE",
+      "regime": "GWM_MODERATE",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-008__GWM_MODERATE",
+      "to": "GWM_R2__PSP-IDF-008__GWM_MODERATE",
+      "regime": "GWM_MODERATE",
+      "entry": 2
+    },
+    {
+      "from": "GWM_E1__PSP-IDF-008__GWM_LOW",
+      "to": "GWM_R1__PSP-IDF-008__GWM_LOW",
+      "regime": "GWM_LOW",
+      "entry": 1
+    },
+    {
+      "from": "GWM_R1__PSP-IDF-008__GWM_LOW",
+      "to": "GWM_R2__PSP-IDF-008__GWM_LOW",
+      "regime": "GWM_LOW",
+      "entry": 2
+    }
+  ]
+}

@@ -221,6 +221,19 @@ claim legal compliance without the UWR spatial layer. See
 `notes/reference/mdwr-canopy-clump-requirements.md` and
 `notes/reference/mdwr-source-index.md`.
 
+### State-transition library v1
+
+`ws4/state_library_v1/` is the provisional GWM 2007 clump-reserve library:
+
+- 8 initial stands × 3 GWM classes × 2 entries = 48 transitions;
+- 72 state IDs, 192 curves; residual states are terminal;
+- 33/48 stand-structure checks pass (High 10/16, Moderate 11/16, Low 12/16);
+- the clump reserve uses a DBH-ranked six-tree proxy, not spatial clumps;
+- residual populations are weighted resamples of the FVS after-treatment list;
+- `legal_compliance` is false on every row;
+- the state IDs are per stand/regime/entry and are not yet canonical shared
+  states. See `ws4/state_library_v1/README.md`.
+
 ### Maps
 
 MWP #3 landscape appendices, KC pages: 150 forest cover, 158 seral, 162

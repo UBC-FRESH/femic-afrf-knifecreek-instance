@@ -172,12 +172,15 @@ Status of the model
 and a 50 cm policy threshold in places. It is useful as a structural pilot but
 is not the default legal basis.
 
-The next legal-basis library should be ``state_library_v1`` with:
+``ws4/state_library_v1`` is the provisional **GWM 2007 clump-reserve** library:
+8 stands × 3 classes × 2 entries, 48 transitions, 192 curves. It passes 33/48
+stand-structure checks (High 10/16, Moderate 11/16, Low 12/16). The clump proxy
+is a DBH-ranked six-tree chunk, not spatial; the state IDs are per chain and the
+graph is not closed. It is not a legal-compliance product.
 
-- ``basis=GWM_2007`` in the state key and manifest;
-- GWM split regimes for High/Moderate/Low;
-- post-cut checks for B, BA >37.5, D, q and reserve; and
-- clump/opening post-processing on 4–10-tree clumps.
+The next steps are to replace the proxy with a spatial clump rule, canonicalize
+shared residual states, add the HMZ spatial constraint, and compile the first
+ws4 dataset.
 
 The policy pilot in ``ws4/policy_pilot_v0/`` is also a Table 29 structural
 scenario. It shows the trade-off between large-tree retention and total BA, but
