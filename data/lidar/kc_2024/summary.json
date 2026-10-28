@@ -1,0 +1,33 @@
+{
+  "tiles_processed": 28,
+  "area_ha": 3533.1341421152733,
+  "trees": 278318,
+  "tph": 78.77368613957356,
+  "height_m": {
+    "mean": 19.465086550352076,
+    "p50": 19.007057189941406,
+    "p95": 28.612846183776853,
+    "max": 46.88472366333008
+  },
+  "crown_radius_m": {
+    "mean": 3.866511630194565,
+    "p50": 3.8078865529319543,
+    "max": 8.0
+  },
+  "dbh_cm_est": {
+    "mean": 25.912382291538115,
+    "p50": 25.14696719519929,
+    "max": 67.91981514580876
+  },
+  "large_trees_ge20m": 117297,
+  "allometry_log_dbh": {
+    "intercept": -0.015926556277605135,
+    "slope": 1.1004660678804368
+  },
+  "caveats": [
+    "Canopy tree inventory, not a CFI: no species, understory or measured DBH.",
+    "DBH is height-allometry only; do not use for BA calibration.",
+    "1 m DSM local maxima can split crowns.",
+    "Tiles are merged by exact coordinate; edge duplicates may remain if grids differ."
+  ]
+}

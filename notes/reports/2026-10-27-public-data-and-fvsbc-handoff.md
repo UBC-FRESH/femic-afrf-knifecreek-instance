@@ -257,11 +257,12 @@ CFI; the clump rule is not spatial.
 ### LidarBC canopy inventory
 
 LidarBC discovery over the SUP found 134 point-cloud tiles, 76 DEM and 72 DSM
-tiles. A 2024 1 m DEM/DSM pilot tile (`093a001_2_4_3`) produced 20,513 canopy
-trees over 247.56 ha (82.9 TPH; height mean 17.2 m, p95 25.5 m). Spatial clumps
-at 10 m linkage for trees ≥20 m: 2,177 clumps, 207 4–10-tree clumps, 1,418
-singletons, 8.8 clumps/ha. This is a canopy inventory, not a CFI: no species,
-understory or measured DBH. See `notes/reference/lidarbc-kc-pilot.md`.
+tiles. All 72 2024 DEM/DSM pairs were downloaded; 28 tiles intersect the SUP enough to
+produce clipped trees. The merged inventory has 278,318 canopy trees over
+3,533.13 ha (78.8 TPH; height mean 19.5 m, p95 28.6 m). At 10 m linkage for
+trees ≥20 m: 50,401 clumps, 6,046 4–10-tree clumps, 30,214 singletons. This is
+a canopy inventory, not a CFI: no species, understory or measured DBH. See
+`notes/reference/lidarbc-kc-pilot.md`.
 
 ### Maps
 
