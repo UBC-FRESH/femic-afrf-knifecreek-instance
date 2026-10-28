@@ -254,3 +254,9 @@ status and the GitHub issue comments.
   `runbooks/fetch_mdwr_hmz.py`, `runbooks/assign_hmz.py` and
   `notes/reference/mdwr-hmz-layer.md`. The synthetic ws4 dataset is not yet
   spatially masked.
+- P3.0 spatial VRI/HMZ dataset: added `runbooks/compile_kc_spatial_dataset.py`
+  and `ws4/dataset_kc_spatial_v1/` (160 clipped VRI blocks, 3,481.77 ha, 92
+  HMZ-specific tracks, 49 treatments). HMZ groups M 113, L 44, U 3; M offers
+  Low/Moderate, L offers Low only, U offers no treatment. `ws4 validate`
+  passes. Tree lists remain PSP-derived and clumps remain a DBH-ranked proxy;
+  this is still a structural fixture, not a KC operating model.

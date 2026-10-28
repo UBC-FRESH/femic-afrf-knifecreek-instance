@@ -13,8 +13,8 @@ A ws4 compiled dataset built from the canonical GWM 2007 graph:
 - 4 fragments;
 - GWM 2007 basis.
 
-It exists to exercise the ws4 tables and validator before KC inventory, spatial
-clumps and the HMZ layer are available.
+It exists to exercise the ws4 tables and validator. The spatial VRI/HMZ
+structural dataset is in `../dataset_kc_spatial_v1/`.
 
 ## Validation
 

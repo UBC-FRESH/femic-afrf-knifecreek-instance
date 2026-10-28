@@ -56,5 +56,6 @@ class map before a harvest opportunity is accepted.
   compliance determination.
 - The VRI crosswalk uses the largest HMZ area share as `dominant_hmz`; that is a
   summary, not a legal interpretation.
-- The synthetic ws4 dataset does not yet carry spatial blocks, so the HMZ mask
-  is not applied there.
+- The synthetic 4-block ws4 dataset does not carry spatial blocks. The spatial
+  VRI/HMZ structural dataset `ws4/dataset_kc_spatial_v1/` applies the HMZ
+  matrix through track copies (M/L/A/U).

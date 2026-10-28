@@ -206,8 +206,9 @@ that ws4 will consume. The next library is `state_library_v1` with
   48 transitions and 72 per-chain states; graph closure and shared
   canonicalization are still open.
 - [~] P2.4 Generate ws4 tracks, treatments, curves, features, and products.
-  A synthetic 4-block dataset validates; the KC operating dataset is still
-  blocked on CFI, spatial clumps and the HMZ layer.
+  A synthetic 4-block dataset and a 160-block VRI/HMZ spatial structural dataset
+  validate. The KC operating dataset is still blocked on CFI and spatial
+  clumps; the HMZ layer is acquired and enforced structurally.
 - [ ] P2.5 Record the library manifest and validation evidence
 
 Acceptance criteria:
