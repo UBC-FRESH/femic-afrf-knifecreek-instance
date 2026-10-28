@@ -1,0 +1,18 @@
+{
+  "blocks": 160,
+  "area_ha": 3481.77359050953,
+  "large_trees": 116831,
+  "clumps": 54307,
+  "reserve_trees": 88640,
+  "harvest_trees": 28191,
+  "reserve_tph_mean": 29.991802174782332,
+  "harvest_tph_mean": 9.154934966598471,
+  "reserve_ba_mean_m2_ha": 2.7602009372054632,
+  "caveats": [
+    "Spatial reserve scenario only; not a legal D-floor check.",
+    "Mature tree proxy is height >=20 m; DBH is height-allometry only.",
+    "No species, understory, damage or mortality.",
+    "Components >10 trees are split into 10-tree height-ranked chunks.",
+    "Small components (<4 trees) are left intact."
+  ]
+}

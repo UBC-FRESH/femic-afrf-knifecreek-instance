@@ -279,3 +279,11 @@ status and the GitHub issue comments.
   clumps/ha. Added `ws4/dataset_kc_spatial_v2/` with block group clump classes
   (29 `<10`, 54 `10–20`, 68 `20–30`, 9 `30+` clumps/ha); `ws4 validate`
   passes. The FVS treatment reserve remains the DBH-ranked proxy.
+- P3.4 spatial LiDAR reserve scenario: added
+  `runbooks/lidar_reserve_scenario.py` and
+  `data/lidar/kc_2024/reserve_trees.parquet` / `block_reserve_summary.csv`.
+  4–10-tree clumps reserve the three largest trees; 88,640 reserve and 28,191
+  harvest trees across 160 blocks (mean 30.0 reserve TPH, 9.15 harvest TPH).
+  Added `ws4/dataset_kc_spatial_v3/` with observed clump and reserve classes;
+  `ws4 validate` passes. The FVS treatment reserve remains the DBH-ranked
+  proxy, so this is still not the FVS tree-level cut.

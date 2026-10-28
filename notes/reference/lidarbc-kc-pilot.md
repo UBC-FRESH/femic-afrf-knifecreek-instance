@@ -73,6 +73,21 @@ a giant component. The 10 m linkage is the informative scale: it finds 207
   crown segmentation.
 - No ground-truth comparison against KC CFI yet.
 
+## Spatial reserve scenario
+
+`runbooks/lidar_reserve_scenario.py` assigns a reserve inside each block:
+
+- mature trees are height ≥20 m;
+- connect at 10 m;
+- 4–10-tree clumps reserve the three largest trees;
+- components over 10 trees are split into 10-tree height-ranked chunks;
+- components under four trees are left intact.
+
+Across 160 blocks: 116,831 large trees, 54,307 clumps, 88,640 reserve trees,
+28,191 harvest trees. Mean reserve 30.0 TPH and harvest 9.15 TPH. The reserve
+BA estimate is 2.76 m²/ha. This is a spatial canopy scenario, not a legal D-floor
+check.
+
 ## What it changes
 
 - It proves LidarBC coverage exists over Knife Creek and can produce a

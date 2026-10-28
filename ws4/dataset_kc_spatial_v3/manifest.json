@@ -1,0 +1,64 @@
+{
+  "schema_version": "0.1",
+  "tables": {
+    "fragments": "fragments.parquet",
+    "blocks": "blocks.parquet",
+    "tracks": "tracks.parquet",
+    "strata": "strata.parquet",
+    "treatments": "treatments.parquet",
+    "curves": "curves.parquet",
+    "features": "features.parquet",
+    "products": "products.parquet",
+    "protoaccounts": "protoaccounts.parquet",
+    "accounts": "accounts.parquet",
+    "groups": "groups.parquet",
+    "messages": "messages.parquet"
+  },
+  "sources": [
+    {
+      "path": "ws4/state_library_v1/canonical",
+      "transitions_sha256": "0c7f330656419e30a1557185fd567fbaea8df9f63d5195b22539773c7db26d50"
+    },
+    {
+      "path": "data/inventory/vri_2025_kc.gpkg",
+      "sha256": "9d05220b18c073902c47755088adfa532fe288e312b4d0418e7bb67a073837b5"
+    },
+    {
+      "path": "data/habitat/kc_vri_hmz_overlay.csv",
+      "sha256": "23568e917d185f98f4e6e057eb0079089dd04589164c0b5cf7d6ec31d4cd2c36"
+    }
+  ],
+  "options": {
+    "source": "programmatic"
+  },
+  "metadata": {
+    "instance": "knife-creek",
+    "basis": "GWM_2007",
+    "status": "spatial-structural-fixture",
+    "blocks": 160,
+    "area_ha": 3481.77359050953,
+    "hmz_groups": {
+      "M": 113,
+      "L": 44,
+      "U": 3
+    },
+    "clump_classes": {
+      "CLUMP20_30": 68,
+      "CLUMP10_20": 54,
+      "CLUMP_LT10": 29,
+      "CLUMP30_PLUS": 9
+    },
+    "reserve_classes": {
+      "RESERVE30_PLUS": 92,
+      "RESERVE_LT20": 41,
+      "RESERVE20_30": 27
+    },
+    "caveats": [
+      "Blocks are clipped VRI polygons, but tree lists are PSP-derived, not KC CFI.",
+      "Initial canonical state is nearest BA/QMD class, not a measured state assignment.",
+      "Block groups use observed LiDAR clump and reserve classes; the FVS treatment reserve is still a DBH-ranked proxy.",
+      "HMZ track offers enforce the matrix; they are not a legal-compliance determination.",
+      "No current approved-order verification."
+    ]
+  }
+}

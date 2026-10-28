@@ -264,9 +264,11 @@ trees ≥20 m: 50,401 clumps, 6,046 4–10-tree clumps, 30,214 singletons. Block
 level features are in `data/lidar/kc_2024/block_tree_summary.csv`; all 160
 spatial blocks are covered, with mean 18.2 4–10-tree clumps/ha. `ws4/
 dataset_kc_spatial_v2` groups blocks by observed clump class (29 `<10`, 54
-`10–20`, 68 `20–30`, 9 `30+`). This is a canopy inventory, not a CFI: no
-species, understory or measured DBH. See
-`notes/reference/lidarbc-kc-pilot.md`.
+`10–20`, 68 `20–30`, 9 `30+`). A spatial reserve scenario
+(`lidar_reserve_scenario.py`) assigns 88,640 reserve trees and 28,191 harvest
+trees across 160 blocks; `ws4/dataset_kc_spatial_v3` carries the reserve
+classes. This is a canopy inventory, not a CFI: no species, understory or
+measured DBH. See `notes/reference/lidarbc-kc-pilot.md`.
 
 ### Maps
 

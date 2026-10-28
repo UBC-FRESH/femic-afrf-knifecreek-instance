@@ -39,3 +39,11 @@ tiles overlap at edges.
 `block_tree_summary.csv` joins the tree points to clipped VRI polygons. All 160
 spatial blocks have LiDAR coverage: mean 77.2 TPH, 39.1 TPH ≥20 m, and 18.2
 4–10-tree clumps/ha. `block_tree_summary.json` carries the summary.
+
+## Spatial reserve scenario
+
+`reserve_trees.parquet` assigns every large LiDAR tree to `reserve` or
+`harvest`: 88,640 reserve trees and 28,191 harvest trees across 160 blocks.
+`block_reserve_summary.csv` has per-block reserve/harvest TPH and BA estimates.
+The FVS treatment reserve is still the DBH-ranked proxy; this is a spatial
+canopy reserve scenario, not the FVS tree-level cut.
