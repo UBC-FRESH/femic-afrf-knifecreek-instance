@@ -158,6 +158,17 @@ Site series
   CD-ROM, not the PDF. The spatial map is still required.
 - Do not infer site series from BEC zone/subzone alone.
 
+AFRF Knife Creek PSP dataset
+----------------------------
+
+The AFRF Knife Creek PSP workbook is the primary field-data candidate: 24
+permanent 0.05 ha plots (15.81 × 31.62 m), measured in 1993, 1997, 2004, 2008
+and 2013, with stem-map coordinates, species, DBH, height, crown and vigor.
+FRDA Report 242 confirms the plot design, plot/block/treatment mapping and the
+interior/buffer tree distinction. The workbook has no data dictionary for a few
+auxiliary columns, and the raw workbook is not public. See
+:doc:`kc-afrf-psp-data`.
+
 Public PSP analog
 -----------------
 

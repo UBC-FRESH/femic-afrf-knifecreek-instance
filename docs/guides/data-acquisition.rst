@@ -167,6 +167,18 @@ The extracted contract is ``config/mdwr_regimes.yaml`` and the FVS-BC templates
 are ``config/fvsbc/regimes.yaml``. The default basis is GWM 2007; Table 29 is a
 named alternative. See :doc:`../reference/mdwr-legal-basis`.
 
+AFRF Knife Creek PSP dataset
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The AFRF Knife Creek PSP workbook is acquired in the workspace source set:
+24 permanent 0.05 ha plots (15.81 × 31.62 m), five measurements from 1993 to
+2013, stem-map coordinates and tree-level species/DBH/height/crown/vigor.
+FRDA Report 242 confirms the plot design, plot/block/treatment mapping and the
+`P = I/B` interior/buffer distinction. It is the primary field-data candidate
+but not yet a formal CFI or public dataset. The raw workbook is not committed;
+assumptions, caveats and remaining QC questions are in
+:doc:`../reference/kc-afrf-psp-data`.
+
 LidarBC canopy inventory
 ~~~~~~~~~~~~~~~~~~~~~~~~
 

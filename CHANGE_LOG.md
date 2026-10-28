@@ -287,3 +287,10 @@ status and the GitHub issue comments.
   Added `ws4/dataset_kc_spatial_v3/` with observed clump and reserve classes;
   `ws4 validate` passes. The FVS treatment reserve remains the DBH-ranked
   proxy, so this is still not the FVS tree-level cut.
+- P3.5 AFRF KC PSP data documentation: added ADR 0006, the reference note
+  `kc-afrf-psp-dataset.md` and the Sphinx page `kc-afrf-psp-data`. Read FRDA
+  Report 242, FRDA 267 and the 2020 Forests paper. Confirmed the 24 × 0.05 ha
+  rectangular plots (15.81 × 31.62 m), plot/block/treatment mapping, `P = I/B`
+  interior/buffer distinction, vigor classes, crown-diameter and live-crown
+  definitions. Remaining unknowns: `TS`, `TC`, `D1/D2/DA/DS/WTA`, `HT13`,
+  duplicate columns and exact X/Y conversion. Raw workbook remains private.

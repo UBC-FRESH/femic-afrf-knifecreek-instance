@@ -13,6 +13,7 @@
 - [State-transition design](guides/state-transition-design.html): states, regimes, residual states, and the ws4 bridge.
 - [ws4 workflow](guides/ws4-workflow.html): the planned assembly, baseline, and optimization.
 - [Data publication boundary](reference/data-publication-boundary.html): what is public and what is excluded.
+- [AFRF Knife Creek PSP data](reference/kc-afrf-psp-data.html): 24 permanent plots, 0.05 ha, 1993–2013, column assumptions, caveats and QC questions.
 - [MDWR legal basis](reference/mdwr-legal-basis.html): the 2007 order, 4–10-tree clumps, legal BA/D targets, Table 29 discrepancy, and the Knife Creek HMZ matrix.
 - [Knife Creek context](reference/knife-creek-context.html): location, BEC, disturbance, and the modelling implications.
 - [Growth-engine crosswalk](reference/growth-engine-crosswalk.html): FVS-BC tables to ws4 tables.
