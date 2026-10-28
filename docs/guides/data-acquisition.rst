@@ -6,7 +6,8 @@ Status
 
 The legal boundary, inventory, BEC, site index, disturbance, mule-deer
 habitat-class, site-unit classification and public management-plan inputs are
-acquired. The legal UWR order, the 2003 Knife Creek transition strategy, the
+acquired. The 2007 GWM order text, the 2003 Knife Creek transition plan and the
+Part 1a/1b scientific basis are acquired. The spatial UWR/HMZ layer, the
 georeferenced site-series map and a stem list are still required.
 
 Boundary acquired
@@ -105,26 +106,61 @@ The plan is acquired at
 ``9bfd8b8f0449f45fb97fcf529236640ace09b73ba74f77001f677eee7307ff6a``.
 It is a public UBC AFRF planning document, not an OGL dataset.
 
-The Knife Creek management contract is extracted in
-``config/mdwr_regimes.yaml``:
+The plan gives the AFRF Table 29 interpretation:
 
-- Table 29: High 29 m²/ha, D 60 cm, q 1.25; Moderate 22/55/1.25; Low
-  16/50/1.30; 30-year cycle.
-- Table 35: 82.0 ha/year single-tree selection and 11.2 ha/year salvage.
-- Plan outcome: 0% conventional harvest, 95% modified harvest, 5% no harvest.
-- Single-tree selection with small groups of 2–5 trees at maximum diameter.
+- High 29 m²/ha, D 60 cm, q 1.25; Moderate 22/55/1.25; Low 16/50/1.30;
+- 30-year cycle;
+- AAC 82.0 ha/year single-tree selection + 11.2 ha/year salvage;
+- plan outcome 0% conventional, 95% modified, 5% no harvest.
+
+Table 29 is **not** the legal curve. The legal order uses BA >37.5 cm
+≥16/11/6 m²/ha, Table 2 D ≥70/60/50, and a large-tree reserve. The AFRF plan's
+2–5-tree groups are the maximum-diameter subgroup; the legal clump is 4–10 or
+more mature trees with interlocking crowns.
 
 Figure 11 (target stand structure by habitat class) was recovered with
 ``figrecover`` 0.1.0a1 and is reviewed at
 ``data/benchmarks/mwp3_figure11_target_stand_structure.csv``. The recovered
 basal-area sums are 17.02/22.96/30.17 m²/ha for Low/Moderate/High; Table 29
-remains the residual target. The recovery method, calibration and caveats are in
-``notes/reference/mwp3-figure11-recovery.md``.
+remains the AFRF residual-shape target. The recovery method, calibration and
+caveats are in ``notes/reference/mwp3-figure11-recovery.md``.
 
 Appendix 9 (PDF page 162) gives the KC01–KC11 and RD05–RD07 compartment table,
 transcribed at ``data/benchmarks/mwp3_kc_compartments.csv``. The map is
 schematic and has no coordinate grid; it is a planning-map transcription, not a
 georeferenced GIS layer.
+
+2007 GWM order and 2003 Knife Creek transition plan
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The legal source is the *Amended Order #U-5-001, U-5-002 and U-5-003 —
+Ungulate Winter Ranges, Cariboo Chilcotin Land Use Plan, Shallow and Moderate
+Snowpack* (signed February 2007). Knife Creek is U-5-002 ``dwl_50``.
+
+The order text and the 2003 *Transition Period Harvest Opportunities: Knife
+Creek* are acquired in the workspace source set:
+
+- ``/srv/shared-data/gep/ws4/sources/afrf-mule-deer/gwm_order_shallow_moderate_2007.pdf``
+- ``/srv/shared-data/gep/ws4/sources/afrf-mule-deer/part3_knife_creek.pdf``
+
+Key requirements:
+
+- clumps of 4–10 or more mature trees with interlocking crowns;
+- canopy openings 0.3–1.0 tree heights, mean 0.5;
+- legal stand targets: B 29/22/16; BA >37.5 ≥16/11/6; D ≥70/60/50;
+- q 1.20–1.35 / 1.25–1.35 / 1.25–1.40;
+- large-tree reserve 0–2.9 / 0–2.2 / 0–1.6 above D;
+- HMZ 1–5 = ``M, L, M, M, A`` for Knife Creek;
+- before 2026, retain ≥80% of pre-harvest merchantable Douglas-fir BA; and
+- a potential north-facing >20% slope, >10 ha exemption in the Moderate
+  Snowpack zone.
+
+The spatial UWR/HMZ GIS layer is still required. The text and HMZ matrix are
+not a compliance test.
+
+The extracted contract is ``config/mdwr_regimes.yaml`` and the FVS-BC templates
+are ``config/fvsbc/regimes.yaml``. The default basis is GWM 2007; Table 29 is a
+named alternative. See :doc:`../reference/mdwr-legal-basis`.
 
 PSP-derived IDF Cariboo stem lists
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

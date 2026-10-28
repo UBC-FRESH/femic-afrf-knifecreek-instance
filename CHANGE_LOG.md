@@ -214,3 +214,10 @@ status and the GitHub issue comments.
   an AFRF interpretation, not the legal curve. Added the source index, updated
   the clump scenarios to 4–10 trees, and recorded the Knife Creek HMZ matrix
   and the north-facing >20% slope, >10 ha exemption. No legal-compliance claim.
+- P2.4 MDWR legal basis is the default, with user-facing docs: added ADR 0005,
+  GWM 2007 default and Table 29 named alternative in `config/mdwr_regimes.yaml`
+  and `config/fvsbc/regimes.yaml`, and the surplus-large-tree split cut
+  (`THINABA` above 37.5 cm, then `THINQFA` 0–37.5 cm). Added Sphinx pages
+  `reference/mdwr-legal-basis` and `guides/mdwr-habitat-constraints`, plus the
+  legal target/HMZ/clump CSVs. `state_library_v0` is marked legacy Table 29;
+  `state_library_v1` is the planned GWM 2007 rebuild. No legal-compliance claim.

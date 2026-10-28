@@ -92,17 +92,18 @@ recalibration. The basal-area totals are slightly above Table 29 (about 4–6%),
 but the relative diameter distribution and q are consistent with the policy
 table.
 
-Do not force the figure to close to Table 29. Table 29 is the authoritative
-residual basal-area/D/q contract. Figure 11 is the published relative diameter
-distribution; it is slightly above the Table 29 totals, probably because the
-figure is a target schematic rather than a normalized yield table. The model
-should use Table 29 for the residual target and Figure 11 for the shape, and
-should report both when comparing FVS-BC output.
+Do not force the figure to close to Table 29. Table 29 is the AFRF
+management-plan interpretation; GWM 2007 is the legal default. Figure 11 is the
+published relative diameter distribution; it is slightly above the Table 29
+totals, probably because the figure is a target schematic rather than a
+normalized yield table. Use Table 29 for the AFRF comparison and Figure 11 for
+the shape; report both when comparing FVS-BC output.
 
 ## Use in the model
 
-- FVS-BC `THINQFA` residual basal area is set from Table 29, not from the
-  recovered sums.
+- The default GWM 2007 cut sets the large-tree target from the legal order and
+  the small-tree target from `B − large-tree BA`; Table 29 is the AFRF
+  alternative. Neither uses the recovered sums as a target.
 - The recovered per-class distribution is a benchmark for the post-treatment
   diameter distribution: compare the simulated residual trees/ha and basal
   area per 5 cm class with Figure 11.
@@ -124,9 +125,10 @@ should report both when comparing FVS-BC output.
 - The MWP #3 map on page 162 is a schematic planning map with a scale bar and
   north arrow but no coordinate grid. It is not the site-series map and it was
   not used to georeference this table.
-- The legal UWR order and the 2003 Knife Creek transition strategy remain
-  outstanding. This table is public management-plan evidence, not a legal
-  constraint.
+- The legal UWR order text and the 2003 transition plan are acquired; the
+  spatial UWR/HMZ layer remains outstanding. This table is public
+  management-plan evidence, not a legal constraint. GWM 2007 is the default
+  basis; Table 29 is the AFRF alternative.
 
 ## Verification
 

@@ -26,8 +26,10 @@ The Klinka et al. 2004 site-unit report is acquired and the IDFxm/IDFdk3
 site-series classification and site-index tables are extracted. The AFRF
 Management and Working Plan #3 is acquired; its Knife Creek MDWR contract is in
 `config/mdwr_regimes.yaml`, and Figure 11 was recovered into
-`data/benchmarks/`. The georeferenced site-series map, the legal UWR order and
-the 2003 transition strategy are blocked under P1.2a (#15). A public
+`data/benchmarks/`. The 2007 GWM order and the 2003 Knife Creek transition plan
+are acquired; GWM 2007 is the default basis and Table 29 is a named AFRF
+alternative. The georeferenced site-series map and the legal UWR/HMZ spatial
+layer are still blocked under P1.2a (#15). A public
 PSP-derived IDF Cariboo stem-list analog is committed under `data/psp/` for the
 interim FVS-BC pilot; the KC CFI is still preferred. The repository does **not**
 yet carry a calibrated FVS-BC library or a runnable ws4 dataset. See
@@ -67,9 +69,10 @@ and optimizes the estate-level objective.
   `THINQFA` (BDq), `THINBBA`, `THINABA` and `THINDBH`, plus
   `FVS_TreeList_Metric`, `FVS_CutList_Metric`, `FVS_ATRTList_Metric`,
   `FVS_Summary_Metric`, and `FVS_StrClass_Metric`.
-- The Knife Creek regimes use `THINQFA` with the Table 29 residual B/D/q
-  values. `THINBTA` is not a basal-area target; it is a thin-from-below to a
-  trees-per-acre target.
+- The default Knife Creek regimes are GWM 2007: `THINABA` above 37.5 cm to the
+  legal large-tree minimum, then `THINQFA` on 0–37.5 cm to the remaining B.
+  Table 29 is a named AFRF alternative. `THINBTA` is not a basal-area target;
+  it is a thin-from-below to a trees-per-acre target.
 - The per-tree and cut-list outputs give the removed stems, the residual stems,
   and the post-cut state needed for the next entry.
 - VDYP and TIPSY produce stand-level averages that cannot carry a residual
@@ -113,7 +116,8 @@ python -m fresh_fvsbc data/fvsbc/populations/AU01.json \
   --keyword SITECODE=FD,100 \
   --keyword TIMEINT=,30 \
   --keyword NUMCYCLE=2 \
-  --keyword THINQFA=2,0.0,60.0,0,1.25,5.0,126.32 \
+  --keyword THINABA=2,16.0,1.0,37.5,999.0,0.0,999.0 \
+  --keyword THINQFA=2,0.0,37.5,0,1.25,5.0,56.63 \
   --keyword PROCESS \
   --block "DATABASE|DSNOut|FVSOut.db|TreeLIDB|CutLIDB|ATRTLIDB|Summary|StrClass" \
   --keyword STOP
@@ -139,8 +143,9 @@ are listed in `config/data_requirements.yaml` and
   georeferenced site-series map is blocked;
 - site index and species composition — VRI and Klinka 2004 tables acquired;
 - disturbance history, including the 2013 wildfire — acquired;
-- public mule-deer habitat classes and MWP #3 management direction — acquired;
-  the legal UWR order is blocked; and
+- public mule-deer habitat classes, MWP #3 management direction, the 2007 GWM
+  order and the 2003 transition plan — acquired; the legal UWR/HMZ spatial
+  layer is still blocked; and
 - tree-level tallies or a reviewed synthetic stem-population basis — a public
   IDF Cariboo PSP analog is available; the KC CFI is still preferred.
 

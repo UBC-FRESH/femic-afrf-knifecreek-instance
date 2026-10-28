@@ -1,30 +1,223 @@
 # FVS-BC selection regimes for the Knife Creek mule-deer winter range.
 #
-# Policy source: config/mdwr_regimes.yaml, interpreted from AFRF MWP #3
-# Table 29. These are reviewed policy targets. They are not yet runnable: the
-# state-transition pilot and the THINQFA entry-year semantics are still
-# outstanding. The wrapper can now write THINQFA's supplemental record (P42.1,
-# commit d86e78b); the record is not the remaining blocker.
+# Default policy basis: GWM_2007, Amended Order U-5-001/2/3, Shallow and
+# Moderate Snowpack (2007), Schedule 1 GWM 10. The order requires clumps of
+# 4-10 or more mature trees with interlocking crowns, legal BA >37.5 cm
+# targets, Table 2 D values, and a large-tree reserve.
 #
-# THINQFA implements the BDq target: it thins an uneven-aged stand through a
-# diameter range to a q-factor distribution and a residual density. The BC
-# variant converts fields 2 (minimum DBH), 3 (maximum DBH) and 6 (class width)
-# from centimetres to inches in canada/bc/initre.f, so those fields are written
-# in centimetres here. The residual-density target is square feet per acre.
-# The supplemental record selects that unit.
+# AFRF MWP #3 Table 29 is a named alternative under `afrf_table29_regimes`.
+# It is not the legal curve: it uses D 60/55/50 and no legal large-tree
+# targets. Do not mix the two bases in one state graph.
+#
+# Default cut method: split_large_small. THINABA removes surplus large trees
+# above 37.5 cm to the legal minimum large-tree BA; THINQFA then thins the
+# 0-37.5 cm component to B minus the retained large-tree BA. This implements
+# the decision that surplus large trees above the minimum are harvestable.
+#
+# THINQFA implements the BDq target. The BC variant converts fields 2
+# (minimum DBH), 3 (maximum DBH) and 6 (class width) from centimetres to
+# inches in canada/bc/initre.f, so those fields are written in centimetres.
+# THINABA field 2 is m2/ha; its DBH fields are cm. The THINQFA residual
+# density is square feet per acre; the supplemental record selects that unit.
 
-regimes:
+default_basis: GWM_2007
+legal_basis: true
+
+gwm_2007_regimes:
+  - id: SEL_GWM_HIGH
+    label: GWM 2007 High, split large/small cut
+    status: reviewed-legal-policy
+    basis: GWM_2007
+    legal: true
+    habitat_class: High
+    residual_basal_area_m2_ha: 29.0
+    large_tree_ba_min_m2_ha: 16.0
+    large_tree_dbh_cm: 37.5
+    large_tree_reserve_m2_ha: [0.0, 2.9]
+    max_dbh_cm: 70.0
+    q_factor: 1.25
+    q_range: [1.20, 1.35]
+    cutting_cycle_years: 30
+    method: split_large_small
+    harvest_surplus_large_trees: true
+    species_preference: null
+    keywords:
+      - THINABA
+      - THINQFA
+    fvsbc_keywords:
+      - name: THINABA
+        fields:
+          year_or_cycle: 2
+          target_ba_m2_ha: 16.0
+          cutting_efficiency: 1.0
+          min_dbh_cm: 37.5
+          max_dbh_cm: 999.0
+          min_height_m: 0.0
+          max_height_m: 999.0
+      - name: THINQFA
+        fields:
+          year_or_cycle: 2
+          min_dbh_cm: 0.0
+          max_dbh_cm: 37.5
+          species_code: 0
+          q_factor: 1.25
+          class_width_cm: 5.0
+          residual_density: 56.63
+        supplemental_record:
+          units: 0
+          units_label: basal_area_ft2_per_acre
+    entry_settings:
+      TIMEINT: ",30"
+      NUMCYCLE: 2
+      note: Cycle 2 with a 30-year period applies the cut at year 30.
+    notes: >-
+      Legal High: B 29, BA >37.5 >=16, D >=70, q 1.20-1.35, reserve 0-2.9.
+      Surplus large trees above 16 m2/ha are harvested. If the stand has less
+      than 16 m2/ha above 37.5 cm, THINABA cancels and the residual large-tree
+      target is reported as unmet.
+
+  - id: SEL_GWM_MODERATE
+    label: GWM 2007 Moderate, split large/small cut
+    status: reviewed-legal-policy
+    basis: GWM_2007
+    legal: true
+    habitat_class: Moderate
+    residual_basal_area_m2_ha: 22.0
+    large_tree_ba_min_m2_ha: 11.0
+    large_tree_dbh_cm: 37.5
+    large_tree_reserve_m2_ha: [0.0, 2.2]
+    max_dbh_cm: 60.0
+    q_factor: 1.25
+    q_range: [1.25, 1.35]
+    cutting_cycle_years: 30
+    method: split_large_small
+    harvest_surplus_large_trees: true
+    species_preference: null
+    keywords:
+      - THINABA
+      - THINQFA
+    fvsbc_keywords:
+      - name: THINABA
+        fields:
+          year_or_cycle: 2
+          target_ba_m2_ha: 11.0
+          cutting_efficiency: 1.0
+          min_dbh_cm: 37.5
+          max_dbh_cm: 999.0
+          min_height_m: 0.0
+          max_height_m: 999.0
+      - name: THINQFA
+        fields:
+          year_or_cycle: 2
+          min_dbh_cm: 0.0
+          max_dbh_cm: 37.5
+          species_code: 0
+          q_factor: 1.25
+          class_width_cm: 5.0
+          residual_density: 47.92
+        supplemental_record:
+          units: 0
+          units_label: basal_area_ft2_per_acre
+    entry_settings:
+      TIMEINT: ",30"
+      NUMCYCLE: 2
+      note: Cycle 2 with a 30-year period applies the cut at year 30.
+    notes: >-
+      Legal Moderate: B 22, BA >37.5 >=11, D >=60, q 1.25-1.35, reserve 0-2.2.
+
+  - id: SEL_GWM_LOW
+    label: GWM 2007 Low, split large/small cut
+    status: reviewed-legal-policy
+    basis: GWM_2007
+    legal: true
+    habitat_class: Low
+    residual_basal_area_m2_ha: 16.0
+    large_tree_ba_min_m2_ha: 6.0
+    large_tree_dbh_cm: 37.5
+    large_tree_reserve_m2_ha: [0.0, 1.6]
+    max_dbh_cm: 50.0
+    q_factor: 1.30
+    q_range: [1.25, 1.40]
+    cutting_cycle_years: 30
+    method: split_large_small
+    harvest_surplus_large_trees: true
+    species_preference: null
+    keywords:
+      - THINABA
+      - THINQFA
+    fvsbc_keywords:
+      - name: THINABA
+        fields:
+          year_or_cycle: 2
+          target_ba_m2_ha: 6.0
+          cutting_efficiency: 1.0
+          min_dbh_cm: 37.5
+          max_dbh_cm: 999.0
+          min_height_m: 0.0
+          max_height_m: 999.0
+      - name: THINQFA
+        fields:
+          year_or_cycle: 2
+          min_dbh_cm: 0.0
+          max_dbh_cm: 37.5
+          species_code: 0
+          q_factor: 1.30
+          class_width_cm: 5.0
+          residual_density: 43.56
+        supplemental_record:
+          units: 0
+          units_label: basal_area_ft2_per_acre
+    entry_settings:
+      TIMEINT: ",30"
+      NUMCYCLE: 2
+      note: Cycle 2 with a 30-year period applies the cut at year 30.
+    notes: >-
+      Legal Low: B 16, BA >37.5 >=6, D >=50, q 1.25-1.40, reserve 0-1.6.
+
+sensitivities:
+  - id: SEL_GWM_HIGH_RETAIN
+    label: GWM 2007 High, retain all above D
+    status: sensitivity-not-default
+    basis: GWM_2007
+    legal: true
+    habitat_class: High
+    residual_basal_area_m2_ha: 29.0
+    max_dbh_cm: 70.0
+    q_factor: 1.25
+    cutting_cycle_years: 30
+    method: full_range_bdq
+    harvest_surplus_large_trees: false
+    fvsbc_keyword:
+      name: THINQFA
+      fields:
+        year_or_cycle: 2
+        min_dbh_cm: 0.0
+        max_dbh_cm: 70.0
+        species_code: 0
+        q_factor: 1.25
+        class_width_cm: 5.0
+        residual_density: 126.32
+      supplemental_record:
+        units: 0
+        units_label: basal_area_ft2_per_acre
+    notes: >-
+      Contrast case: retain every tree above the legal D. It does not harvest
+      surplus large trees and may leave residual BA above B. Use only as a
+      sensitivity, not the default.
+
+afrf_table29_regimes:
   - id: SEL_MDWR_HIGH
-    label: Single-tree selection, MDWR High
-    status: reviewed-policy-pending-pilot
+    label: AFRF Table 29 High, full-range BDq
+    status: legacy-alternative
+    basis: AFRF_MWP3_TABLE29
+    legal: false
     habitat_class: High
     residual_basal_area_m2_ha: 29.0
     max_dbh_cm: 60.0
     q_factor: 1.25
     cutting_cycle_years: 30
-    species_preference: null
-    keywords:
-      - THINQFA
+    method: full_range_bdq
+    harvest_surplus_large_trees: null
     fvsbc_keyword:
       name: THINQFA
       fields:
@@ -38,32 +231,22 @@ regimes:
       supplemental_record:
         units: 0
         units_label: basal_area_ft2_per_acre
-      entry_settings:
-        TIMEINT: ",30"
-        NUMCYCLE: 2
-        note: >-
-          Cycle 2 with a 30-year period applies the cut at year 30, after the
-          first 30-year growth interval. Cycle 1 would apply at year 0.
-      notes: >-
-        Full-range BDq target. Cycle 2 with TIMEINT=,30 and NUMCYCLE=2 is the
-        reviewed 30-year entry.
     notes: >-
-      Table 29 High: B 29 m2/ha, D 60 cm, q 1.25, 30-year cycle. The policy
-      direction is single-tree selection with groups of 2-5 trees at the
-      maximum diameter. FVS-BC is distance-independent and cannot enforce the
-      spatial grouping.
+      MWP #3 Table 29 High: B 29, D 60, q 1.25. The maximum-diameter subgroup
+      is 2-5 trees; the whole clump is 4-10 or more mature trees.
 
   - id: SEL_MDWR_MODERATE
-    label: Single-tree selection, MDWR Moderate
-    status: reviewed-policy-pending-pilot
+    label: AFRF Table 29 Moderate, full-range BDq
+    status: legacy-alternative
+    basis: AFRF_MWP3_TABLE29
+    legal: false
     habitat_class: Moderate
     residual_basal_area_m2_ha: 22.0
     max_dbh_cm: 55.0
     q_factor: 1.25
     cutting_cycle_years: 30
-    species_preference: null
-    keywords:
-      - THINQFA
+    method: full_range_bdq
+    harvest_surplus_large_trees: null
     fvsbc_keyword:
       name: THINQFA
       fields:
@@ -77,27 +260,20 @@ regimes:
       supplemental_record:
         units: 0
         units_label: basal_area_ft2_per_acre
-      entry_settings:
-        TIMEINT: ",30"
-        NUMCYCLE: 2
-        note: Cycle 2 applies the cut at year 30.
-      notes: >-
-        Full-range BDq target. Cycle 2 with a 30-year period is the reviewed
-        entry.
-    notes: >-
-      Table 29 Moderate: B 22 m2/ha, D 55 cm, q 1.25, 30-year cycle.
+    notes: "MWP #3 Table 29 Moderate: B 22, D 55, q 1.25."
 
   - id: SEL_MDWR_LOW
-    label: Single-tree selection, MDWR Low
-    status: reviewed-policy-pending-pilot
+    label: AFRF Table 29 Low, full-range BDq
+    status: legacy-alternative
+    basis: AFRF_MWP3_TABLE29
+    legal: false
     habitat_class: Low
     residual_basal_area_m2_ha: 16.0
     max_dbh_cm: 50.0
     q_factor: 1.30
     cutting_cycle_years: 30
-    species_preference: null
-    keywords:
-      - THINQFA
+    method: full_range_bdq
+    harvest_surplus_large_trees: null
     fvsbc_keyword:
       name: THINQFA
       fields:
@@ -111,78 +287,41 @@ regimes:
       supplemental_record:
         units: 0
         units_label: basal_area_ft2_per_acre
-      entry_settings:
-        TIMEINT: ",30"
-        NUMCYCLE: 2
-        note: Cycle 2 applies the cut at year 30.
-      notes: >-
-        Full-range BDq target. Cycle 2 with a 30-year period is the reviewed
-        entry.
-    notes: >-
-      Table 29 Low: B 16 m2/ha, D 50 cm, q 1.30, 30-year cycle.
-
-design_variants:
-  - id: SEL_MDWR_SMALL_TREE
-    label: Small-tree thinning below 37.5 cm DBH
-    status: design-only
-    description: >-
-      The plan says harvest opportunities concentrate on trees below 37.5 cm
-      DBH and that the maximum-diameter class is retained in groups of 2-5
-      trees. A full-range THINQFA removes some trees above 37.5 cm to reach
-      the BDq target. This variant instead thins only the 0-37.5 cm component.
-    fvsbc_keyword:
-      name: THINQFA
-      fields:
-        year_or_cycle: 2
-        min_dbh_cm: 0.0
-        max_dbh_cm: 37.5
-        species_code: 0
-        q_factor: 1.25
-        class_width_cm: 5.0
-        residual_density: computed-per-state
-      supplemental_record:
-        units: 0
-        units_label: basal_area_ft2_per_acre
-    residual_density_rule: >-
-      Table 29 residual B minus the basal area retained above 37.5 cm DBH in
-      the current state, floored at zero. The pilot must compute this per state,
-      not use a fixed number.
-    notes: >-
-      This is closer to the operational wording but it does not guarantee the
-      full-stand q target. Compare it with the full-range regime in the pilot
-      and report which one better matches Figure 11 and Table 29.
+    notes: "MWP #3 Table 29 Low: B 16, D 50, q 1.30."
 
 wrapper_gaps:
   - id: thinqfa_supplemental_record
     description: >-
-      Resolved in fresh-fvsbc P42.1: Keyword.supplemental and
-      SUPPLEMENTAL_KEYWORDS write THINQFA's one-line residual-density-units
-      record without an END terminator. The KC pin is d86e78b.
+      Resolved in fresh-fvsbc P42.1: Keyword.supplemental writes THINQFA's
+      one-line residual-density-units record. The KC pin is d86e78b.
     status: resolved
     target_repository: UBC-FRESH/fresh-fvsbc
     resolved_by: d86e78b0fc31386684aae1a0a1a9a821c0ee2baf
   - id: entry_year_semantics
     description: >-
-      Resolved by a synthetic pilot: cycle 1 applies at year 0; with
-      TIMEINT=,30 and NUMCYCLE=2, THINQFA at cycle 2 applies at year 30; with
-      TIMEINT=,10 and NUMCYCLE=4, cycle 4 also applies at year 30.
+      Resolved by a synthetic pilot: cycle 2 with TIMEINT=,30 applies at year
+      30; cycle 4 with TIMEINT=,10 also applies at year 30.
     status: resolved
     evidence: notes/reference/fvsbc-thinqfa-pilot.md
-  - id: spatial_grouping
+  - id: spatial_clumps_and_hmz
     description: >-
-      The 2-5 tree maximum-diameter groups are a spatial constraint. FVS-BC
-      cannot model it. Enforce or report it in ws4/post-processing.
+      FVS-BC is distance-independent. The 4-10-tree interlocking-crown clumps,
+      canopy openings, and the U-5-002 HMZ matrix are ws4/post-processing or
+      spatial constraints, not FVS keywords.
     status: open
+    owner: ws4 instance
 
 benchmark:
-  figure11_table: data/benchmarks/mwp3_figure11_target_stand_structure.csv
-  figure11_metadata: data/benchmarks/mwp3_figure11_target_stand_structure.metadata.json
-  figure11_review: data/benchmarks/mwp3_figure11_review.jsonl
-  thinqfa_pilot: notes/reference/fvsbc-thinqfa-pilot.md
+  default_basis: GWM_2007
+  legal_targets: data/benchmarks/mdwr_gwm2007_targets.csv
+  clump_targets: data/benchmarks/mdwr_gwm2007_clump.csv
+  hmz: data/benchmarks/mdwr_gwm2007_knife_creek_hmz.csv
+  afrf_table29: data/benchmarks/mwp3_figure11_target_stand_structure.csv
   acceptance:
-    - compare residual basal area by habitat class with Table 29 (29/22/16 m2/ha)
-    - compare maximum DBH with Table 29 (60/55/50 cm)
-    - compare the residual 5 cm diameter distribution with Figure 11
-    - report the recovered Figure 11 sums (17.02/22.96/30.17 m2/ha) and implied q (1.306/1.254/1.253) as shape checks, not targets
-    - compare thinning yield with the plan's ~50 m3/ha expectation
-    - compare treated area with the 82.0 ha/year selection AAC
+    - post-harvest total BA at or above the legal B minimum for the class
+    - post-harvest BA in stems >=37.5 cm at or above 16/11/6 m2/ha
+    - post-harvest maximum DBH at or above the legal Table 2 D (70/60/50) or a documented reserve
+    - post-harvest q within 1.20-1.35 / 1.25-1.35 / 1.25-1.40
+    - surplus large trees above the minimum are removed by THINABA, not by lowering the large-tree target
+    - clump post-processing uses 4-10 mature trees; the maximum-diameter subgroup is 2-5
+    - the HMZ area matrix is checked spatially; a stand-level run alone is not compliance

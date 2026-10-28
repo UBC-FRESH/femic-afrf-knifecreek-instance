@@ -61,8 +61,8 @@ Use two tracks instead:
    scenario axes, not observations.
 2. **KC-specific data.** When the AFRF CFI/tree lists or stem-mapped UWR
    monitoring plots arrive, replace the geometry scenarios with observed clump
-   sizes, spacing and crown dimensions. The approved UWR order and 2003
-   transition strategy should define the legal clump target.
+   sizes, spacing and crown dimensions. The 2007 GWM order defines the legal
+   clump target: 4–10 or more mature trees with interlocking crowns.
 
 ## Caveat
 

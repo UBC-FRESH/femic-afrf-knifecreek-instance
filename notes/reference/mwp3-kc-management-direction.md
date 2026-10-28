@@ -40,7 +40,7 @@ have since been acquired; see `mdwr-canopy-clump-requirements.md` and
   grouping; that is a ws4/operability check or a post-processing constraint,
   not a tree-list keyword.
 
-## Table 29 target structures
+## Table 29 AFRF alternative structures
 
 **Table 29 is an AFRF interpretation, not the legal GWM curve.** The legal order
 requires D ≥70/60/50 cm and BA in stems ≥37.5 cm ≥16/11/6 m²/ha for
@@ -58,8 +58,8 @@ Figure 11 on the same page gives the relative diameter distribution by 5 cm
 class for the same three classes. The recovered table is
 `data/benchmarks/mwp3_figure11_target_stand_structure.csv`; its basal-area sums
 are 17.02/22.96/30.17 m²/ha for Low/Moderate/High, slightly above the Table 29
-targets. Use Table 29 for the residual target and Figure 11 for the shape, and
-report both when comparing FVS-BC output.
+targets. Use Table 29 for the AFRF comparison and Figure 11 for the shape.
+GWM 2007 is the legal default; report both when comparing FVS-BC output.
 
 ## Area-based allowable cut
 

@@ -75,7 +75,10 @@ disturbance, and mule-deer constraints, then construct reviewed stem lists.
 
 - [x] P1.1 Acquire and checksum the legal boundary and block identifier (#8)
 - [x] P1.2 Acquire VRI, BEC, site-series, and disturbance source data (#9)
-- [ ] P1.2a Acquire the AFRF site-series map and legal UWR order (#15)
+- [ ] P1.2a Acquire the AFRF site-series map and legal UWR/HMZ spatial layer (#15)
+  - [x] Acquire the 2007 GWM order text, 2003 transition plan, Part 1a/1b,
+    Extension Note 25A and LMH 13.
+  - [ ] Acquire the spatial UWR boundary, stand-structure classes and HMZ layer.
 - [x] P1.2b Recover public figure and table benchmarks (#18)
 - [x] P1.2c Pin the THINQFA-capable fresh-fvsbc (#22)
 - [x] P1.2d Correct THINQFA BC units and record the pilot (#25)
@@ -106,15 +109,20 @@ Findings:
 - Fire: 2013 6.04 ha, 1938 62.11 ha, 1937 0.66 ha.
 - Harvest history: 60 openings over 2,478.73 ha, 1956-2023.
 - Mule-deer habitat classes: High 1,327.68 ha, Moderate 1,135.66 ha, Low
-  1,020.53 ha, Nil 6.15 ha. The legal UWR order is still blocked.
+  1,020.53 ha, Nil 6.15 ha. These are public classes, not the legal UWR/HMZ
+  layer.
+- The 2007 GWM order and 2003 transition plan are acquired. GWM 2007 is the
+  default basis; Table 29 is a named AFRF alternative. The legal clump is 4–10
+  mature trees with interlocking crowns; the legal large-tree threshold is
+  37.5 cm and Table 2 D is 70/60/50.
 - The Klinka et al. 2004 site-unit report is acquired. It gives the IDFxm
   01-09 and IDFdk3 01-10 site-series classification, nine site groups, keys,
   edatopic grids, and descriptions. The Knife Creek block is 3,484 ha,
   Douglas-fir ~3,000 ha (87%), elevation 720-1,020 m.
 - The georeferenced site-series map is **not** in the PDF; it is in the
   report's map pockets/CD-ROM. The spatial site-series map is still P1.2a.
-- The AFRF site-series map and the legal UWR order are P1.2a. They are not
-  inferred from BEC or the public habitat classes.
+- The AFRF site-series map and the legal UWR/HMZ spatial layer are P1.2a. They
+  are not inferred from BEC or the public habitat classes.
 - The public FAIB PSP compilation has 338 first-measurement IDF PSPs in the
   Williams Lake and 100 Mile House TSAs. The selected 51 Douglas-fir-leading,
   mature IDF plots yielded 4,553 live trees >=9.1 cm, 45 stable Weibull fits,
@@ -128,24 +136,25 @@ Findings:
   `notes/reference/psp-idf-cariboo-stemlists.md`.
 
 - The AFRF Management and Working Plan #3 (2007) is acquired. It gives the
-  Knife Creek MDWR contract: single-tree selection, 30-year cycle, Table 29
-  residual structures (High 29 m²/ha, D 60 cm, q 1.25; Moderate 22/55/1.25;
-  Low 16/50/1.30), and Table 35 AAC (82.0 ha/year selection, 11.2 ha/year
-  salvage). The plan outcome is 0% conventional harvest, 95% modified harvest,
-  5% no harvest.
+  AFRF alternative: single-tree selection, 30-year cycle, Table 29 residual
+  structures (High 29 m²/ha, D 60 cm, q 1.25; Moderate 22/55/1.25; Low
+  16/50/1.30), and Table 35 AAC (82.0 ha/year selection, 11.2 ha/year salvage).
+  GWM 2007 is the default legal basis; Table 29 is the AFRF comparison.
 - MWP #3 Figure 11 was recovered with `figrecover` 0.1.0a1. The reviewed table
   is `data/benchmarks/mwp3_figure11_target_stand_structure.csv`; recovered BA
-  sums are 17.02/22.96/30.17 m²/ha vs Table 29 targets 16/22/29. Use Table 29
-  for the target and Figure 11 for the shape.
+  sums are 17.02/22.96/30.17 m²/ha vs Table 29 16/22/29. Use Table 29 for the
+  AFRF shape comparison and Figure 11 for the shape.
 - The Klinka 2004 site-index tables are transcribed as
   `data/site_index/klinka_2004_site_index.csv` (105 rows; IDFxm, IDFdk3,
   SBSdw1, ICHmk3).
 - MWP #3 Appendix 9 gives the KC01–KC11 and RD05–RD07 compartment table (gross
   3,485.6 ha, net 3,162.3 ha). The map is schematic and has no coordinate grid;
   it is not a georeferenced GIS layer.
-- `THINQFA` is the correct FVS-BC keyword for the Table 29 BDq targets.
-  `THINBTA` is a trees-per-acre target, not a basal-area target. The wrapper
-  now supports `THINQFA`'s supplemental record at pin `d86e78b` (P1.2c).
+- The default GWM 2007 cut uses `THINABA` above 37.5 cm to the legal
+  large-tree minimum, then `THINQFA` on 0–37.5 cm. Table 29 uses full-range
+  `THINQFA`. `THINBTA` is a trees-per-acre target, not a basal-area target.
+  The wrapper now supports `THINQFA`'s supplemental record at pin `d86e78b`
+  (P1.2c).
 - A synthetic pilot (P1.2d) settled the entry cycle: cycle 1 is year 0; cycle 2
   with `TIMEINT=,30` is year 30. The BC variant converts `THINQFA` fields 2, 3
   and 6 from centimetres to inches, so the KC templates store those fields in
@@ -166,9 +175,9 @@ Parent issue: TBD
 Branch: `feature/p2-state-library`
 Status: planned
 
-A provisional structural library exists at `ws4/state_library_v0/` (8 initial
-states, 6 residual states, 48 transitions, 192 curves) from the PSP-derived
-IDF Cariboo analog. A veteran/large-tree retention policy pilot is at
+A **legacy Table 29** structural library exists at `ws4/state_library_v0/` (8
+initial states, 6 residual states, 48 transitions, 192 curves). It is not the
+default GWM basis. A veteran/large-tree retention policy pilot is at
 `ws4/policy_pilot_v0/` (4 policies × 3 regimes × 2 stands, 24 transitions,
 276 geometric clump scenarios). It is not a closed graph and not a compiled
 ws4 dataset; Phase 2 has not been opened as a formal phase. The public PSP stem
@@ -183,7 +192,8 @@ interpretation, not the legal curve. See
 `notes/reference/mdwr-canopy-clump-requirements.md`.
 
 Goal: run FVS-BC selection-cut regimes and build the state-transition library
-that ws4 will consume.
+that ws4 will consume. The next library is `state_library_v1` with
+`basis=GWM_2007`; v0 remains the Table 29 comparison.
 
 - [ ] P2.1 Define the state key and the selection regimes
 - [ ] P2.2 Run the FVS-BC pilot for one AU and one regime
@@ -285,8 +295,8 @@ Acceptance criteria:
 1. Phase 0 is complete under parent issue #1.
 2. Phase 1 is active under parent issue #7. P1.1 (boundary) and P1.2 (public
    layers) are complete.
-3. P1.2a (#15) is blocked on the AFRF site-series map, the legal UWR order and
-   the 2003 transition strategy.
+3. P1.2a (#15) is blocked on the AFRF site-series map and the legal UWR/HMZ
+   spatial layer. The 2007 order text and 2003 transition plan are acquired.
 4. P1.2b (#18) is complete: public benchmarks from MWP #3 Figure 11, the
    Appendix 9 compartment table, and the Klinka 2004 site-index tables are
    reviewed and committed.
@@ -294,6 +304,7 @@ Acceptance criteria:
    pilot; the KC CFI or released tree list is still the preferred basis. P1.4
    (#11) is the next model-preparation task: build AU strata and stem
    populations.
-6. Do not start the KC FVS-BC pilot until the site-series/UWR gaps are resolved
-   or explicitly accepted and the stem-list basis is reviewed. The synthetic
-   THINQFA pilot and the BC unit check are complete.
+6. Run a GWM 2007 legal-basis pilot on the conditional PSP stands, then rebuild
+   the state library as `state_library_v1` with `basis=GWM_2007`. Do not compile
+   the legacy Table 29 v0 library as legal compliance. The synthetic THINQFA
+   pilot and the BC unit check are complete; the KC stem list is still missing.

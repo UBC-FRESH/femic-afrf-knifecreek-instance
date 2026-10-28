@@ -70,9 +70,11 @@ at year 0.
 
 `THINBTA` is **not** a basal-area target; it is a thin-from-below to a
 trees-per-acre target. `THINBBA`, `THINABA`, `THINDBH` and `THINQFA` are the
-relevant alternatives. The plan's values are in
-`config/mdwr_regimes.yaml`; the keyword templates are in
-`config/fvsbc/regimes.yaml`.
+relevant alternatives. The default legal values are in
+``config/mdwr_regimes.yaml``; the keyword templates are in
+``config/fvsbc/regimes.yaml``. The default GWM 2007 regimes use a split cut:
+``THINABA`` above 37.5 cm to the legal large-tree minimum, then ``THINQFA`` on
+0–37.5 cm to the remaining B. Table 29 is a named AFRF alternative.
 
 `fresh-fvsbc` P42.1 models the `THINQFA` supplemental record; the KC pin is
 `d86e78b`. The synthetic pilot recorded the entry-year/cycle semantics in
@@ -86,9 +88,9 @@ A selection regime is a reviewed combination of:
 - the cutting cycle and the entry window; and
 - the minimum retained structure.
 
-The numbers are reviewed policy (Table 29), but the keyword sequence is not yet
-validated by a run. Do not run a regime as a policy scenario until the pilot
-and the wrapper gap are closed.
+The numbers are reviewed policy. The GWM 2007 regimes are the default; Table 29
+is an AFRF alternative. The keyword sequence is not yet validated by a KC run;
+the public PSP-derived structural pilot is in ``ws4/policy_pilot_v0``.
 
 Stem lists
 ----------
@@ -114,8 +116,9 @@ Known limits
 ------------
 
 - FVS-BC is distance-independent. It does not model the spatial arrangement of
-  retained trees within a stand. The plan's 2–5 tree maximum-diameter groups are
-  a ws4/post-processing constraint, not an FVS keyword.
+  retained trees within a stand. GWM 10's 4–10-tree interlocking-crown clumps
+  and the 2–5-tree maximum-diameter subgroup are ws4/post-processing
+  constraints, not FVS keywords.
 - `THINQFA` needs a supplemental residual-density-units record. `fresh-fvsbc`
   P42.1 writes it; the KC pin is `d86e78b`. Do not hand-edit generated keyword
   files.

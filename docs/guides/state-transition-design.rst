@@ -42,25 +42,42 @@ A regime is a selection rule:
 - minimum retained structure; and
 - the post-cut state key.
 
-The first regimes come from AFRF MWP #3 Table 29 and are reviewed policy
-targets, not placeholders:
+The first regimes are the **GWM 2007** legal regimes. The AFRF MWP #3 Table 29
+regimes are a named alternative, not the default:
 
-- `SEL_MDWR_HIGH` — B 29 m²/ha, D 60 cm, q 1.25, 30-year cycle;
-- `SEL_MDWR_MODERATE` — B 22 m²/ha, D 55 cm, q 1.25, 30-year cycle; and
-- `SEL_MDWR_LOW` — B 16 m²/ha, D 50 cm, q 1.30, 30-year cycle.
+**Default GWM 2007** (split large/small cut, harvest surplus large trees):
 
-The FVS-BC keyword is `THINQFA` (BDq: q-factor, maximum DBH, residual
-basal-area density). `THINBTA` is not a basal-area target; it is a
-thin-from-below to a trees-per-acre target. `fresh-fvsbc` P42.1 supports the
-`THINQFA` supplemental record, and a synthetic pilot settled the entry year:
-cycle 2 with a 30-year period cuts at year 30. The regimes are still not
-runnable because the KC stem list is not available. See `config/fvsbc/regimes.yaml` and
-`config/mdwr_regimes.yaml`.
+- ``SEL_GWM_HIGH`` — B 29 m²/ha, BA >37.5 ≥16, D ≥70, q 1.25, 30-year cycle;
+- ``SEL_GWM_MODERATE`` — B 22, BA >37.5 ≥11, D ≥60, q 1.25;
+- ``SEL_GWM_LOW`` — B 16, BA >37.5 ≥6, D ≥50, q 1.30.
 
-A design variant, `SEL_MDWR_SMALL_TREE`, thins only the 0–37.5 cm component to
-match the plan's operational wording. Its residual density is computed per
-state as Table 29 B minus the retained large-tree basal area. Compare it with
-the full-range BDq regime in the pilot.
+The split cut runs ``THINABA`` above 37.5 cm to the large-tree minimum and then
+``THINQFA`` on 0–37.5 cm to ``B − large-tree BA``. This harvests surplus large
+trees above the legal minimum, as decided in ADR 0005. If the stand has less
+than the minimum large-tree BA, the report says so; the target is not lowered.
+
+**AFRF Table 29 alternative** (full-range BDq):
+
+- ``SEL_MDWR_HIGH`` — 29/60/1.25;
+- ``SEL_MDWR_MODERATE`` — 22/55/1.25; and
+- ``SEL_MDWR_LOW`` — 16/50/1.30.
+
+These keep the AFRF management-plan comparison but are not legal compliance.
+Do not mix GWM and Table 29 states in one graph.
+
+The FVS-BC keyword is ``THINQFA`` (BDq: q-factor, maximum DBH, residual
+basal-area density). ``THINBTA`` is not a basal-area target; it is a
+thin-from-below to a trees-per-acre target. ``fresh-fvsbc`` P42.1 supports the
+``THINQFA`` supplemental record, and a synthetic pilot settled the entry year:
+cycle 2 with a 30-year period cuts at year 30. The regimes are not yet runnable
+on KC because the KC stem list is not available. See
+``config/fvsbc/regimes.yaml`` and ``config/mdwr_regimes.yaml``.
+
+A retain-all-above-D variant, ``SEL_GWM_HIGH_RETAIN``, is a sensitivity. It does
+not harvest surplus large trees and may leave residual BA above B.
+
+The older ``SEL_MDWR_SMALL_TREE`` design variant thins only the 0–37.5 cm
+component. The GWM split regimes supersede it for legal-basis work.
 
 Transition
 ----------
@@ -140,18 +157,22 @@ not describe a constraint as met when it is only reported.
 Open questions
 --------------
 
-1. The public mule-deer habitat-class layer is acquired; the legal UWR order is
-   still blocked. Do not treat the public classes as the legal constraint.
+1. The 2007 legal order text and the 2003 transition plan are acquired. The
+   spatial UWR/HMZ layer is still required; do not treat the public habitat
+   classes as the legal constraint.
 2. The stem-list source is still unresolved: AFRF CFI/research plots or an
    approved VRI + `nemora` synthetic reconstruction.
 3. How many states are needed before the graph is stable enough to optimize?
-4. Does the block-level spatial constraint need a maximum selection-opening
-   size, or is the stand-level retention enough?
-5. `THINQFA` is the selected keyword; the wrapper's supplemental-record support
-   is in P42.1, and cycle 2 with a 30-year period is the reviewed entry. See
-   `config/fvsbc/regimes.yaml`.
+4. The legal clump is 4–10 mature trees with interlocking crowns, and canopy
+   openings are 0.3–1.0 tree heights (mean 0.5). The block-level spatial layer
+   still needs to check both, plus the HMZ matrix.
+5. ``THINQFA`` is the selected keyword; the wrapper supplemental-record support
+   is in P42.1, and cycle 2 with a 30-year period is the reviewed entry. The
+   default GWM regimes also use ``THINABA`` for surplus large trees. See
+   ``config/fvsbc/regimes.yaml``.
 6. Should the first public baseline be a single regime or a regime portfolio?
    The plan's AAC is area-based, so start with the High/Moderate/Low portfolio
-   and report the area and volume by class.
+   and report the area and volume by class. The default portfolio is GWM 2007;
+   Table 29 is a comparison run.
 
 See `planning/fvsbc-state-transition-design.md` for the working plan.

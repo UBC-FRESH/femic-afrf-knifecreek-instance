@@ -171,9 +171,8 @@ Therefore:
   Table 2 D ≥70/60/50, q 1.20–1.35/1.25–1.35/1.25–1.40, reserve
   0–2.9/0–2.2/0–1.6.
 
-This discrepancy is a model decision for the user: preserve Table 29 as the
-AFRF target, add a separate legal GWM regime set, or make the basis an explicit
-scenario axis.
+ADR 0005 resolves this: GWM 2007 is the default, Table 29 is a named AFRF
+alternative, and the basis is part of the state-transition contract.
 
 ## 7. What the model should expose
 
@@ -194,3 +193,15 @@ The earlier `policy_pilot_v0` used a 50 cm large-tree threshold and 2–5 tree
 clumps. It remains a useful structural pilot, but it is **not** the legal GWM
 clump geometry. New scenarios should use 4–10+ mature trees and should report
 the max-D subgroup separately.
+
+## Decision record
+
+ADR 0005 makes **GWM_2007 the default** and keeps **AFRF_MWP3_TABLE29** as a
+named alternative. Surplus large trees above the minimum large-tree BA are
+harvestable. The default treatment is a split cut: `THINABA` above 37.5 cm to
+the legal large-tree minimum, then `THINQFA` on 0–37.5 cm to `B − large-tree
+BA`. A retain-all-above-D variant remains a sensitivity, not the default.
+
+The legacy `ws4/state_library_v0` was built on Table 29 and is not the default
+basis. A legal-basis rebuild should be `state_library_v1` with an explicit
+`basis=GWM_2007` in the state key and manifest.

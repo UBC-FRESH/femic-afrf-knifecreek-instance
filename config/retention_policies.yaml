@@ -17,12 +17,19 @@
 # values; they are a structural policy axis, not a legal-compliance set.
 
 policy_basis:
-  id: AFRF_MWP3_TABLE29
-  legal: false
+  id: GWM_2007
+  legal: true
+  default: true
   note: >-
-    These policies use the AFRF Table 29 B/D/q values and a 50 cm large-tree
-    threshold. They are structural scenarios, not the legal GWM 2007 basis.
-    The legal basis is in config/mdwr_regimes.yaml legal_gwm_2007.
+    The model default is the 2007 GWM basis in config/mdwr_regimes.yaml
+    legal_gwm_2007. The policy definitions below are a legacy Table 29
+    structural pilot and are not the legal default.
+  pilot_basis:
+    id: AFRF_MWP3_TABLE29
+    legal: false
+    note: >-
+      These policies use the AFRF Table 29 B/D/q values and a 50 cm large-tree
+      threshold. They are retained for structural comparison only.
 
 policy_axes:
   large_tree_min_dbh_cm:

@@ -44,25 +44,30 @@ The classes are reviewed after the pilot. They are not policy.
 ## Regime key
 
 ```text
-regime_id = SEL_MDWR_<HABITAT>
+regime_id = SEL_GWM_<HABITAT>       # default
+regime_id = SEL_MDWR_<HABITAT>      # AFRF Table 29 alternative
 ```
 
-The first regimes come from AFRF MWP #3 Table 29:
+The default regimes are GWM 2007 (Amended Order U-5-001/2/3):
 
-- `SEL_MDWR_HIGH`: B 29 m2/ha, D 60 cm, q 1.25, 30-year cycle;
-- `SEL_MDWR_MODERATE`: B 22 m2/ha, D 55 cm, q 1.25, 30-year cycle; and
-- `SEL_MDWR_LOW`: B 16 m2/ha, D 50 cm, q 1.30, 30-year cycle.
+- `SEL_GWM_HIGH`: B 29, BA >37.5 ≥16, D ≥70, q 1.25;
+- `SEL_GWM_MODERATE`: B 22, BA >37.5 ≥11, D ≥60, q 1.25; and
+- `SEL_GWM_LOW`: B 16, BA >37.5 ≥6, D ≥50, q 1.30.
 
-The FVS-BC keyword is `THINQFA` (BDq). `THINBTA` is a trees-per-acre target,
-not a basal-area target. A design variant, `SEL_MDWR_SMALL_TREE`, thins only
-the 0-37.5 cm component and computes its residual density per state as Table 29
-B minus the retained large-tree basal area.
+The default cut is split: `THINABA` above 37.5 cm to the large-tree minimum,
+then `THINQFA` on 0–37.5 cm to `B − large-tree BA`. Surplus large trees above
+the minimum are harvestable. `THINBTA` is a trees-per-acre target, not a
+basal-area target.
 
-The regimes are reviewed policy, but they are not yet runnable. `fresh-fvsbc`
-P42.1 supports the `THINQFA` supplemental residual-density-units record. A
-synthetic pilot settled the entry cycle: cycle 1 is year 0, and cycle 2 with
-`TIMEINT=,30` is year 30. The BC variant reads fields 2, 3 and 6 in centimetres;
-see `notes/reference/fvsbc-thinqfa-pilot.md`.
+The AFRF MWP #3 Table 29 regimes (`SEL_MDWR_HIGH/MODERATE/LOW`) are a named
+alternative: B 29/22/16, D 60/55/50, q 1.25/1.25/1.30. They are not legal
+compliance and must not be mixed with GWM states.
+
+The regimes are reviewed policy, but they are not yet runnable on KC.
+`fresh-fvsbc` P42.1 supports the `THINQFA` supplemental residual-density-units
+record. A synthetic pilot settled the entry cycle: cycle 1 is year 0, and cycle
+2 with `TIMEINT=,30` is year 30. The BC variant reads fields 2, 3 and 6 in
+centimetres; see `notes/reference/fvsbc-thinqfa-pilot.md`.
 
 ## Run sequence
 
@@ -139,32 +144,34 @@ The first library is acceptable when:
 ## Public benchmark
 
 MWP #3 Figure 11 was recovered with `figrecover` into
-`data/benchmarks/mwp3_figure11_target_stand_structure.csv`. Use Table 29 for
-the residual B/D/q target and Figure 11 for the relative 5 cm diameter
-distribution. The recovered basal-area sums are 17.02/22.96/30.17 m2/ha for
-Low/Moderate/High; report the difference from the 16/22/29 targets rather than
-rescaling.
+`data/benchmarks/mwp3_figure11_target_stand_structure.csv`. Use the GWM 2007
+targets for the legal default and Figure 11 for the relative 5 cm diameter
+distribution. Table 29 is the AFRF alternative. The recovered basal-area sums
+are 17.02/22.96/30.17 m2/ha for Low/Moderate/High; report the difference from
+the 16/22/29 Table 29 totals rather than rescaling.
 
 ## Open questions
 
 1. Which stem-list source is available?
 2. How many basal-area and QMD classes are enough?
-3. Does the mule-deer constraint act on basal area, canopy cover, large-tree
-   density, or a combination? The plan's Table 29 is the public starting point.
+3. The legal constraint is now explicit: BA >37.5 cm, 4–10-tree clumps,
+   canopy openings, and the HMZ matrix. What remains is the spatial UWR/HMZ
+   layer and a decision on how to report canopy-opening layout.
 4. Should the state include a years-since-entry dimension, or is the offset
    clock enough?
 5. How should a regime portfolio be represented: one treatment per regime, or
    a nested choice?
 6. How should the model handle the 2013 burn area as a distinct origin?
-7. Do we use the full-range BDq cut or the 0-37.5 cm small-tree variant?
+7. The default is the GWM split cut. The retain-all-above-D variant remains a
+   sensitivity, not the default.
 
 ## Next experiments
 
-1. Run one real KC AU through a single `THINQFA` selection cut once the stem
-   list exists.
+1. Run one real KC AU through a single GWM split cut once the stem list
+   exists.
 2. Confirm the cut list and after-treatment list are populated.
-3. Compare the residual B, D, q and 5 cm distribution with Table 29 and
-   Figure 11.
+3. Compare the residual B, BA >37.5, D, q and 5 cm distribution with GWM 2007
+   and Figure 11; run Table 29 as the AFRF comparison.
 4. Build a two-cycle graph from the residual state.
 5. Export the two-state graph to ws4 and validate the dataset.
 6. Add a mule-deer feature account and report it.

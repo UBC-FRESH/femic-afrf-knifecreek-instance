@@ -8,6 +8,7 @@ Operator and contributor guides for the Knife Creek instance.
 
    instance-contract
    data-acquisition
+   mdwr-habitat-constraints
    growth-engine
    state-transition-design
    ws4-workflow
