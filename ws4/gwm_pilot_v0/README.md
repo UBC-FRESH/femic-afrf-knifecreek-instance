@@ -61,6 +61,35 @@ The failures are informative:
   recommended ranges 0–2.9/0–2.2/0–1.6. The source stands carry more >D
   structure than the legal curve assumes.
 
+## Selected clump-reserve rule
+
+The selected rule is **option 1**: start from the retain-above-D FVS result,
+then apply a clump-reserve marking rule. The current proxy groups trees ≥37.5
+cm into DBH-ranked chunks of six (not spatial), reserves the largest three
+trees above D in each chunk, and harvests the remaining trees above D.
+
+`clump_reserve_summary.csv`:
+
+| Regime | n | Mean post BA | Mean large BA | Mean reserve >D | Mean q | Mean max DBH | Mean removed large BA | Pass |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| High | 5 | 30.55 | 17.17 | 1.55 | 1.269 | 88.8 | 1.07 | 3/5 |
+| Moderate | 5 | 25.11 | 14.33 | 3.11 | 1.250 | 88.8 | 2.64 | 5/5 |
+| Low | 5 | 21.55 | 11.30 | 5.55 | 1.300 | 88.8 | 5.12 | 5/5 |
+
+**13/15 pass**, with the same two High failures as the retain-above-D base:
+
+- `PSP-REG-001` has max DBH 65.7 cm (<70) and large BA 12.37 (<16);
+- `PSP-REG-002` has large BA 15.38 (<16).
+
+The rule harvests 1.07/2.64/5.12 m²/ha of large trees on average while
+preserving a >D reserve. The reserve still exceeds the Table 2 recommended
+range in Moderate and Low, because the source stands carry more >D structure
+than the legal curve assumes.
+
+This is a **retrospective marking scenario**, not a new FVS growth run. The
+DBH-ranked chunk is a non-spatial proxy; replace it with a real spatial clump
+when KC stem maps exist.
+
 ## Interpretation
 
 The FVS keyword set can preserve D or harvest surplus large trees, but not

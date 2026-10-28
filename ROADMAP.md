@@ -196,8 +196,10 @@ that ws4 will consume. The next library is `state_library_v1` with
 `basis=GWM_2007`; v0 remains the Table 29 comparison.
 
 - [x] P2.1 Define the state key and the selection regimes
-- [~] P2.2 Run the FVS-BC GWM pilot; stand-structure pass 17/30, tree-level
-  reserve still required
+- [~] P2.2 Run the FVS-BC GWM pilot; stand-structure pass 17/30. The selected
+  rule is post-FVS clump reserve (largest 2–5 above D per 4–10-tree clump),
+  13/15 pass with a DBH-ranked six-tree proxy. A spatial clump rule is still
+  required for KC.
 - [ ] P2.3 Build the multi-cycle state graph and canonicalize states
 - [ ] P2.4 Generate ws4 tracks, treatments, curves, features, and products
 - [ ] P2.5 Record the library manifest and validation evidence

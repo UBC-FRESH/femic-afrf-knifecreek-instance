@@ -27,7 +27,13 @@ large_tree_policy:
   basis: GWM_2007
   harvest_surplus_above_minimum: true
   retain_all_above_d: false
-  default_method: split_large_small
+  default_method: full_range_bdq_then_clump_reserve
+  clump_reserve:
+    clump_proxy: DBH-ranked 6-tree chunks until KC stem maps exist
+    clump_size_range: [4, 10]
+    reserve_trees_range: [2, 5]
+    reserve_threshold: D
+    harvest: remaining trees above D outside the reserve
   note: >-
     Surplus large trees above the legal minimum (16/11/6 m2/ha above 37.5 cm)
     are harvestable, but the legal D floor must be preserved. The default FVS

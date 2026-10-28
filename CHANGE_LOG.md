@@ -228,3 +228,10 @@ status and the GitHub issue comments.
   range in most High/Moderate cases. A full-range split meets q but strips the
   largest trees and leaves max DBH below D. This is not a legal-compliance
   result; a tree-level reserve/marking rule is required before `state_library_v1`.
+- P2.6 selected clump-reserve rule: added `runbooks/apply_clump_reserve.py`
+  and `clump_reserve.csv`/summary. Start from the retain-above-D FVS result,
+  reserve the largest 2–5 trees above D per 4–10-tree clump (DBH-ranked
+  six-tree proxy), and harvest the rest above D. 13/15 cases pass; mean removed
+  large BA 1.07/2.64/5.12 m²/ha. High `PSP-REG-001` and `PSP-REG-002` fail on
+  starting large-tree structure. Retrospective marking scenario, not a new FVS
+  growth run and not a legal-compliance claim.

@@ -25,6 +25,29 @@
 default_basis: GWM_2007
 legal_basis: true
 
+selected_policy:
+  id: GWM_2007_CLUMP_RESERVE
+  legal: true
+  fvs_base: GWM full-range BDq to D and B; retain all above D
+  method: full_range_bdq_then_clump_reserve
+  description: >-
+    Run the GWM full-range BDq cut to D and B, then apply a clump-reserve
+    marking rule to the after-treatment tree list. The rule groups mature
+    trees >=37.5 cm into 4-10-tree clumps (a DBH-ranked 6-tree proxy until KC
+    stem maps exist), reserves the largest 2-5 trees above D per clump, and
+    harvests the remaining trees above D. This harvests surplus large trees
+    while preserving a >D reserve and the D floor.
+  clump_size_proxy: 6
+  clump_size_range: [4, 10]
+  reserve_trees_per_clump: 3
+  reserve_trees_range: [2, 5]
+  reserve_threshold: D
+  postprocess: runbooks/apply_clump_reserve.py
+  evidence: ws4/gwm_pilot_v0/clump_reserve_summary.csv
+
+# The three gwm_2007_regimes below are the D-protected split pilot templates.
+# The selected policy is `selected_policy` above: full-range BDq then clump
+# reserve post-processing.
 gwm_2007_regimes:
   - id: SEL_GWM_HIGH
     label: GWM 2007 High, split large/small cut

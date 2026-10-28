@@ -37,10 +37,11 @@ the default basis and Table 29 is a named alternative; see
 
 A **GWM 2007 legal-basis pilot** is in `gwm_pilot_v0/`: five PSP-derived stands ×
 three GWM classes × two methods. It passes 17/30 stand-structure checks. The
-D-protected split preserves max DBH but leaves the >D reserve and fails q in
-most High/Moderate cases; a full-range split meets q but strips the largest
-trees. A tree-level reserve/marking rule is required before a legal-basis state
-library. It is not a compliance result. See `gwm_pilot_v0/README.md`.
+selected rule is a post-FVS **clump reserve**: retain above D, then reserve the
+largest 2–5 trees above D per 4–10-tree clump and harvest the rest. With the
+DBH-ranked six-tree proxy, that passes 13/15 cases and harvests 1.07/2.64/5.12
+m²/ha of large BA on average. It is a marking scenario, not a new FVS growth
+run and not a compliance result. See `gwm_pilot_v0/README.md`.
 
 The contract is in `state_transition_contract.md`; the target and
 patch-account files remain templates.

@@ -141,7 +141,29 @@ large-tree or D targets from its starting structure at all.
 This is the key limitation: FVS can preserve D or harvest surplus large trees,
 but it cannot selectively retain a small >D reserve while harvesting the rest.
 That needs a tree-level reserve/marking rule or a pre-cut reserve assignment.
-Do not compile this pilot as legal-compliant. See ``ws4/gwm_pilot_v0/README.md``.
+
+Selected clump-reserve rule
+---------------------------
+
+The selected rule is **option 1**. Start from the retain-above-D FVS result, then
+apply a clump-reserve marking rule to the after-treatment tree list:
+
+- group mature trees ≥37.5 cm into 4–10-tree clumps;
+- reserve the largest 2–5 trees above D in each clump;
+- harvest the remaining trees above D outside the reserve.
+
+Until KC stem maps exist, the clump proxy is a DBH-ranked chunk of six trees,
+and the reserve is the largest three above D. It is not spatial.
+
+The retrospective marking result is **13/15 pass** (High 3/5, Moderate 5/5,
+Low 5/5). Mean removed large BA is 1.07/2.64/5.12 m²/ha, with a >D reserve of
+1.55/3.11/5.55 m²/ha. The two High failures are the low-large-tree starting
+stands (`PSP-REG-001` and `PSP-REG-002`); they cannot meet the High large-tree
+target or D floor from their initial structure.
+
+This is a marking scenario, not a new FVS growth run. Do not compile it as
+legal-compliant. See ``ws4/gwm_pilot_v0/clump_reserve.csv`` and
+``clump_reserve_summary.csv``.
 
 Status of the model
 -------------------
