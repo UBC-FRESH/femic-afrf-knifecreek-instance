@@ -190,6 +190,14 @@ crowns. With 4–10-tree clumps, within-clump closure is high (0.86–0.98 at 3 
 while total stand cover is lower. These are scenario axes, not approved MDWR
 policy, and not a snow-interception model.
 
+The first GWM 2007 pilot is `ws4/gwm_pilot_v0/`: five conditional stands ×
+three classes × two methods. It passes 17/30 stand-structure checks. Retain
+above D passes 13/15; the D-protected split passes 4/15. The split preserves D
+but leaves the >D reserve, so q is too high in most High/Moderate cases. A
+full-range split meets q but strips the largest trees and leaves max DBH below
+D. A tree-level reserve/marking rule is needed before a legal-basis library.
+See `ws4/gwm_pilot_v0/README.md`.
+
 The public PSP stem maps are too sparse for empirical clump geometry: of the 45
 stable plots, 11 are fully mapped, 3 have any mapped tree ≥50 cm, and only one
 has more than one (four trees). See `notes/reference/psp-stem-map-limits.md`.

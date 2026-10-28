@@ -1,0 +1,301 @@
+{
+  "pilot": "knife-creek-gwm2007-v0",
+  "status": "stand-structure-feasibility-test",
+  "generated_at": "2026-10-28T01:15:56.495167+00:00",
+  "basis": "GWM_2007",
+  "source_stemlist": "data/psp/idf_cariboo_psp_conditional_stemlists.csv",
+  "stands": [
+    "PSP-REG-001",
+    "PSP-REG-002",
+    "PSP-REG-003",
+    "PSP-REG-004",
+    "PSP-REG-005"
+  ],
+  "regimes": {
+    "GWM_HIGH": {
+      "B": 29.0,
+      "large_ba": 16.0,
+      "D": 70.0,
+      "q": 1.25,
+      "q_min": 1.2,
+      "q_max": 1.35,
+      "reserve": 2.9
+    },
+    "GWM_MODERATE": {
+      "B": 22.0,
+      "large_ba": 11.0,
+      "D": 60.0,
+      "q": 1.25,
+      "q_min": 1.25,
+      "q_max": 1.35,
+      "reserve": 2.2
+    },
+    "GWM_LOW": {
+      "B": 16.0,
+      "large_ba": 6.0,
+      "D": 50.0,
+      "q": 1.3,
+      "q_min": 1.25,
+      "q_max": 1.4,
+      "reserve": 1.6
+    }
+  },
+  "methods": [
+    "split_large_small",
+    "retain_above_d"
+  ],
+  "counts": {
+    "transitions": 30,
+    "curves": 120
+  },
+  "runs": [
+    {
+      "stand": "PSP-REG-001",
+      "regime": "GWM_HIGH",
+      "method": "split_large_small",
+      "case_id": "996fe73f-12a9-41b2-999e-1f54b8d2edc5",
+      "keyword_hash": "sha256:922377237d631c1622963fd249020f10456008cc3ba47e5b163c26af8dc7b5bc",
+      "treelist_hash": "sha256:047078aa60e542b3f17814be063219fd4c31655d6b4714310cd272aedc2d8f66"
+    },
+    {
+      "stand": "PSP-REG-001",
+      "regime": "GWM_HIGH",
+      "method": "retain_above_d",
+      "case_id": "1a8dde9a-4994-40ad-a082-406a63726cb8",
+      "keyword_hash": "sha256:bb2c856f6ed91094b956c07e55f7792c53108494e89f6443b664247821b47e90",
+      "treelist_hash": "sha256:047078aa60e542b3f17814be063219fd4c31655d6b4714310cd272aedc2d8f66"
+    },
+    {
+      "stand": "PSP-REG-001",
+      "regime": "GWM_MODERATE",
+      "method": "split_large_small",
+      "case_id": "0531b4c8-7d60-45e7-a3c5-b8b1269094c2",
+      "keyword_hash": "sha256:964a2243154a18a05ca3547844dc7900caaf2d5209163a988af98dd3e755163f",
+      "treelist_hash": "sha256:047078aa60e542b3f17814be063219fd4c31655d6b4714310cd272aedc2d8f66"
+    },
+    {
+      "stand": "PSP-REG-001",
+      "regime": "GWM_MODERATE",
+      "method": "retain_above_d",
+      "case_id": "23bd2c61-a397-4f88-859c-bb5af487f53e",
+      "keyword_hash": "sha256:4b7c9f7dea62fee8f098b8df3c74ce6593efdf28c78a2f2ebd369b3d544b3b23",
+      "treelist_hash": "sha256:047078aa60e542b3f17814be063219fd4c31655d6b4714310cd272aedc2d8f66"
+    },
+    {
+      "stand": "PSP-REG-001",
+      "regime": "GWM_LOW",
+      "method": "split_large_small",
+      "case_id": "edfa006e-1f4e-4424-861e-607d7cb05242",
+      "keyword_hash": "sha256:741c54bf7307f2175e38b4bc1c36fd54e66b5a5d6d29c2a83169796320d9f94f",
+      "treelist_hash": "sha256:047078aa60e542b3f17814be063219fd4c31655d6b4714310cd272aedc2d8f66"
+    },
+    {
+      "stand": "PSP-REG-001",
+      "regime": "GWM_LOW",
+      "method": "retain_above_d",
+      "case_id": "d2ef23f7-d4ec-449d-8bb8-f8b394fb4358",
+      "keyword_hash": "sha256:aaa916d0aa25f1e75cf2032703cfc55bb02234d1302a5639e551a24a7c353709",
+      "treelist_hash": "sha256:047078aa60e542b3f17814be063219fd4c31655d6b4714310cd272aedc2d8f66"
+    },
+    {
+      "stand": "PSP-REG-002",
+      "regime": "GWM_HIGH",
+      "method": "split_large_small",
+      "case_id": "bc59e0cc-90e8-4bbd-93da-af6418a65001",
+      "keyword_hash": "sha256:fb5e03ff54f5a11e4915511dce99b481424d6cf68640bc2f5918dd099c4a069d",
+      "treelist_hash": "sha256:54647bc6b9196896bf5075cbcc741f217768d08f033a7552001018a03a940f48"
+    },
+    {
+      "stand": "PSP-REG-002",
+      "regime": "GWM_HIGH",
+      "method": "retain_above_d",
+      "case_id": "4a508e82-d55f-4e7d-b624-052bd7da90d8",
+      "keyword_hash": "sha256:6392eb795c76d076ed656e402d5444f0739adb371b421817837776cff84e095e",
+      "treelist_hash": "sha256:54647bc6b9196896bf5075cbcc741f217768d08f033a7552001018a03a940f48"
+    },
+    {
+      "stand": "PSP-REG-002",
+      "regime": "GWM_MODERATE",
+      "method": "split_large_small",
+      "case_id": "42a271b3-2a47-47f4-ba90-10c99b4dd1df",
+      "keyword_hash": "sha256:02dfaf8173cd7ab3c39dd085e0fd03a4468b221311b129506b1d513a2ff46653",
+      "treelist_hash": "sha256:54647bc6b9196896bf5075cbcc741f217768d08f033a7552001018a03a940f48"
+    },
+    {
+      "stand": "PSP-REG-002",
+      "regime": "GWM_MODERATE",
+      "method": "retain_above_d",
+      "case_id": "aa633316-2964-41d9-8513-20fc8dae11d2",
+      "keyword_hash": "sha256:646089693a7519dbc87c1acf1e9386abc7b836e1f0a2d51f56c85be0434293fc",
+      "treelist_hash": "sha256:54647bc6b9196896bf5075cbcc741f217768d08f033a7552001018a03a940f48"
+    },
+    {
+      "stand": "PSP-REG-002",
+      "regime": "GWM_LOW",
+      "method": "split_large_small",
+      "case_id": "7c553039-503e-49f9-b08b-50c9348069f9",
+      "keyword_hash": "sha256:f323a716d79649fc672cc0395987f7da0c0e6c8cb737ea8d66d71696096ea170",
+      "treelist_hash": "sha256:54647bc6b9196896bf5075cbcc741f217768d08f033a7552001018a03a940f48"
+    },
+    {
+      "stand": "PSP-REG-002",
+      "regime": "GWM_LOW",
+      "method": "retain_above_d",
+      "case_id": "3278fd82-c8a9-44d8-a60f-2a92be4e6cd9",
+      "keyword_hash": "sha256:02d221097822180b2375bae27c34340b663a63321da7ca6489fc88394fab8d9c",
+      "treelist_hash": "sha256:54647bc6b9196896bf5075cbcc741f217768d08f033a7552001018a03a940f48"
+    },
+    {
+      "stand": "PSP-REG-003",
+      "regime": "GWM_HIGH",
+      "method": "split_large_small",
+      "case_id": "ae90cc3e-30bc-403f-9d09-88e89bde142c",
+      "keyword_hash": "sha256:2f524a57d500b6273d5260392de63fd4c08b6935ffc8ae5e238a273c3b0284da",
+      "treelist_hash": "sha256:e4fa99f38dfb58655493321083e849d8fcb8f659f698bb468ba1e03bad6657f9"
+    },
+    {
+      "stand": "PSP-REG-003",
+      "regime": "GWM_HIGH",
+      "method": "retain_above_d",
+      "case_id": "14101496-1e2a-44d2-8636-28c6030a59f1",
+      "keyword_hash": "sha256:0fabd8c8818972a01ae388ebad17b3d6f639f8bb05030413ffcb8ed97df14a59",
+      "treelist_hash": "sha256:e4fa99f38dfb58655493321083e849d8fcb8f659f698bb468ba1e03bad6657f9"
+    },
+    {
+      "stand": "PSP-REG-003",
+      "regime": "GWM_MODERATE",
+      "method": "split_large_small",
+      "case_id": "d5b71efe-fe7f-4256-9686-e2ef4059cf62",
+      "keyword_hash": "sha256:e245086ddb2ad21981d5b5bd140477a393113f005be04a130eb0e527e5905e21",
+      "treelist_hash": "sha256:e4fa99f38dfb58655493321083e849d8fcb8f659f698bb468ba1e03bad6657f9"
+    },
+    {
+      "stand": "PSP-REG-003",
+      "regime": "GWM_MODERATE",
+      "method": "retain_above_d",
+      "case_id": "84ec3b8c-8e74-4504-85fb-1d0170ea6bf5",
+      "keyword_hash": "sha256:9e63b739d612053f2b98a0159ce7bf2ad54bfa855e5edc94f2cd1cb8e06c78e5",
+      "treelist_hash": "sha256:e4fa99f38dfb58655493321083e849d8fcb8f659f698bb468ba1e03bad6657f9"
+    },
+    {
+      "stand": "PSP-REG-003",
+      "regime": "GWM_LOW",
+      "method": "split_large_small",
+      "case_id": "5f9020bf-7590-41cc-bbb7-f226099f7a07",
+      "keyword_hash": "sha256:dd2e3186b61551280d1a847a8bd7f93062729ea40a13073d0bbdfc0d4f81ef38",
+      "treelist_hash": "sha256:e4fa99f38dfb58655493321083e849d8fcb8f659f698bb468ba1e03bad6657f9"
+    },
+    {
+      "stand": "PSP-REG-003",
+      "regime": "GWM_LOW",
+      "method": "retain_above_d",
+      "case_id": "38b66d54-45d6-4d3f-a194-3944b89644ea",
+      "keyword_hash": "sha256:e70920021c31f58d962d20e7d92245347d9e503e01ae0706c23ec274ad49578e",
+      "treelist_hash": "sha256:e4fa99f38dfb58655493321083e849d8fcb8f659f698bb468ba1e03bad6657f9"
+    },
+    {
+      "stand": "PSP-REG-004",
+      "regime": "GWM_HIGH",
+      "method": "split_large_small",
+      "case_id": "6f285c46-5fd8-4a62-b08d-305d239c6e5a",
+      "keyword_hash": "sha256:7d779439691752afe2058dbe33c509c57341ed8ec166dbd7e5a23b3d68b26c16",
+      "treelist_hash": "sha256:5f7d36e8f14fd1f98565401ca06b73bff17b9fbb304891701bda6456f45f2060"
+    },
+    {
+      "stand": "PSP-REG-004",
+      "regime": "GWM_HIGH",
+      "method": "retain_above_d",
+      "case_id": "f2dd50ad-49cf-4387-9fd8-7a26d1f15221",
+      "keyword_hash": "sha256:efc411bb0c432dde3215b10c0ac348db6756b558bdc06aa2b30f42f9e6e31ee4",
+      "treelist_hash": "sha256:5f7d36e8f14fd1f98565401ca06b73bff17b9fbb304891701bda6456f45f2060"
+    },
+    {
+      "stand": "PSP-REG-004",
+      "regime": "GWM_MODERATE",
+      "method": "split_large_small",
+      "case_id": "301bc57a-016c-4525-a9a7-66e27872da5f",
+      "keyword_hash": "sha256:5fb7486ef940ef1c79bd8c1856ae183bd25ef54360571cfc079c843ac2e14960",
+      "treelist_hash": "sha256:5f7d36e8f14fd1f98565401ca06b73bff17b9fbb304891701bda6456f45f2060"
+    },
+    {
+      "stand": "PSP-REG-004",
+      "regime": "GWM_MODERATE",
+      "method": "retain_above_d",
+      "case_id": "267cd87e-6e00-4df1-a5f3-c75176e99c07",
+      "keyword_hash": "sha256:b953887801b06e0f7360d435b03e2cd43dca63dcce7b94ed0ced3c218ccbb8ae",
+      "treelist_hash": "sha256:5f7d36e8f14fd1f98565401ca06b73bff17b9fbb304891701bda6456f45f2060"
+    },
+    {
+      "stand": "PSP-REG-004",
+      "regime": "GWM_LOW",
+      "method": "split_large_small",
+      "case_id": "1402a69b-7931-44d2-a14c-7a88375c6893",
+      "keyword_hash": "sha256:4f5fc6fb86864293ac84b737252c0aedd89497fb2cc0452eceaff3c801a673c4",
+      "treelist_hash": "sha256:5f7d36e8f14fd1f98565401ca06b73bff17b9fbb304891701bda6456f45f2060"
+    },
+    {
+      "stand": "PSP-REG-004",
+      "regime": "GWM_LOW",
+      "method": "retain_above_d",
+      "case_id": "13709708-1f11-490a-a65c-4894106000dd",
+      "keyword_hash": "sha256:29274fd2078a806c2a6c82f2575d16712afc0e779784f80f3425fbec4e4f67a5",
+      "treelist_hash": "sha256:5f7d36e8f14fd1f98565401ca06b73bff17b9fbb304891701bda6456f45f2060"
+    },
+    {
+      "stand": "PSP-REG-005",
+      "regime": "GWM_HIGH",
+      "method": "split_large_small",
+      "case_id": "7cf08fef-415b-445e-810e-400217835985",
+      "keyword_hash": "sha256:9274fd4c5f787a966e03a242283b2a5694d7f9468179bebd4369eb3e4abde7c2",
+      "treelist_hash": "sha256:a5d86fc14ed317657ba2a50f6a5ef18318906786fa62f09e55ee638e587bc0e6"
+    },
+    {
+      "stand": "PSP-REG-005",
+      "regime": "GWM_HIGH",
+      "method": "retain_above_d",
+      "case_id": "260e37d7-3efd-46d0-a6a4-65f2d07fe663",
+      "keyword_hash": "sha256:af6f938598fbbf5b1059174726a5cd0b95121d3b8e3adf6c962aa1d74e4490fe",
+      "treelist_hash": "sha256:a5d86fc14ed317657ba2a50f6a5ef18318906786fa62f09e55ee638e587bc0e6"
+    },
+    {
+      "stand": "PSP-REG-005",
+      "regime": "GWM_MODERATE",
+      "method": "split_large_small",
+      "case_id": "e7e072b1-5e47-4c9e-85b4-a7954e52355f",
+      "keyword_hash": "sha256:18dd9517a77ded815acf3110686e85fd63b31a57edab47f495b679dab29832b2",
+      "treelist_hash": "sha256:a5d86fc14ed317657ba2a50f6a5ef18318906786fa62f09e55ee638e587bc0e6"
+    },
+    {
+      "stand": "PSP-REG-005",
+      "regime": "GWM_MODERATE",
+      "method": "retain_above_d",
+      "case_id": "d7720810-eb18-4516-9134-23943fa7314b",
+      "keyword_hash": "sha256:425406e6d29a21aae76df33a257ee3db4a7f618fe5eddb601fa7ff6fecea8891",
+      "treelist_hash": "sha256:a5d86fc14ed317657ba2a50f6a5ef18318906786fa62f09e55ee638e587bc0e6"
+    },
+    {
+      "stand": "PSP-REG-005",
+      "regime": "GWM_LOW",
+      "method": "split_large_small",
+      "case_id": "4aaa1ed3-4e64-4bb9-8775-69dde9c45dec",
+      "keyword_hash": "sha256:5a186d4a5efe27114142595c5fc456313e59dd016697dfdad55721fa77627ba4",
+      "treelist_hash": "sha256:a5d86fc14ed317657ba2a50f6a5ef18318906786fa62f09e55ee638e587bc0e6"
+    },
+    {
+      "stand": "PSP-REG-005",
+      "regime": "GWM_LOW",
+      "method": "retain_above_d",
+      "case_id": "9e6c513c-471b-4ca2-835f-505a835b51cf",
+      "keyword_hash": "sha256:198f7ef21468cd84351a6df1de6bb82ac531b30d035fb283ef3b04812dacb273",
+      "treelist_hash": "sha256:a5d86fc14ed317657ba2a50f6a5ef18318906786fa62f09e55ee638e587bc0e6"
+    }
+  ],
+  "caveats": [
+    "PSP-derived regional IDF Cariboo analog, not Knife Creek data.",
+    "Stand-structure feasibility test only; legal_compliance is false.",
+    "The UWR/HMZ spatial layer is not tested.",
+    "The clump metrics are post-processing proxies, not spatial clumps.",
+    "No KC FVS-BC calibration exists.",
+    "High BA >37.5 >=16 may be unreachable from low-large-tree stands; report the gap."
+  ]
+}

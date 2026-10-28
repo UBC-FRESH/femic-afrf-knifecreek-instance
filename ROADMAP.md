@@ -195,8 +195,9 @@ Goal: run FVS-BC selection-cut regimes and build the state-transition library
 that ws4 will consume. The next library is `state_library_v1` with
 `basis=GWM_2007`; v0 remains the Table 29 comparison.
 
-- [ ] P2.1 Define the state key and the selection regimes
-- [ ] P2.2 Run the FVS-BC pilot for one AU and one regime
+- [x] P2.1 Define the state key and the selection regimes
+- [~] P2.2 Run the FVS-BC GWM pilot; stand-structure pass 17/30, tree-level
+  reserve still required
 - [ ] P2.3 Build the multi-cycle state graph and canonicalize states
 - [ ] P2.4 Generate ws4 tracks, treatments, curves, features, and products
 - [ ] P2.5 Record the library manifest and validation evidence

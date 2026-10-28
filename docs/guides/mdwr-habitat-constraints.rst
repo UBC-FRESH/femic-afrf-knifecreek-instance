@@ -118,6 +118,31 @@ The 2003 Knife Creek transition plan is acquired. Before 2026, GWM 13 requires
 ≥80% retention of pre-harvest merchantable Douglas-fir BA. The cutting cycle is
 at least 30 years.
 
+First GWM 2007 pilot
+--------------------
+
+The first GWM pilot is in ``ws4/gwm_pilot_v0``: five PSP-derived conditional
+stands × three GWM classes × two methods = 30 transitions.
+
+The default D-protected split removes surplus in the 37.5–D range and leaves
+trees above D as the reserve. The retain-above-D method is the sensitivity.
+
+The pilot passes 17 of 30 stand-structure checks:
+
+- retain above D: 13/15;
+- split 37.5–D: 4/15.
+
+The split preserves the legal D floor but leaves the >D reserve, which makes q
+too high in most High and Moderate cases (mean q 1.38 and 1.44 against the
+1.35 upper limit). A full-range split can meet q and B but strips the largest
+trees and leaves max DBH below D. High ``PSP-REG-001`` cannot meet the High
+large-tree or D targets from its starting structure at all.
+
+This is the key limitation: FVS can preserve D or harvest surplus large trees,
+but it cannot selectively retain a small >D reserve while harvesting the rest.
+That needs a tree-level reserve/marking rule or a pre-cut reserve assignment.
+Do not compile this pilot as legal-compliant. See ``ws4/gwm_pilot_v0/README.md``.
+
 Status of the model
 -------------------
 

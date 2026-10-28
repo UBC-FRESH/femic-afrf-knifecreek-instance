@@ -221,3 +221,10 @@ status and the GitHub issue comments.
   `reference/mdwr-legal-basis` and `guides/mdwr-habitat-constraints`, plus the
   legal target/HMZ/clump CSVs. `state_library_v0` is marked legacy Table 29;
   `state_library_v1` is the planned GWM 2007 rebuild. No legal-compliance claim.
+- P2.5 GWM 2007 legal-basis pilot: added `runbooks/build_gwm_pilot.py` and
+  `ws4/gwm_pilot_v0/` (5 stands × 3 classes × 2 methods; 30 transitions, 120
+  curves). Stand-structure pass 17/30. Retain above D passes 13/15; the
+  D-protected split passes 4/15 because the >D reserve pushes q above the legal
+  range in most High/Moderate cases. A full-range split meets q but strips the
+  largest trees and leaves max DBH below D. This is not a legal-compliance
+  result; a tree-level reserve/marking rule is required before `state_library_v1`.

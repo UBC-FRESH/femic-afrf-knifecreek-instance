@@ -35,6 +35,13 @@ the default basis and Table 29 is a named alternative; see
 `../docs/reference/mdwr-legal-basis.rst` and
 `../docs/guides/mdwr-habitat-constraints.rst`.
 
+A **GWM 2007 legal-basis pilot** is in `gwm_pilot_v0/`: five PSP-derived stands ×
+three GWM classes × two methods. It passes 17/30 stand-structure checks. The
+D-protected split preserves max DBH but leaves the >D reserve and fails q in
+most High/Moderate cases; a full-range split meets q but strips the largest
+trees. A tree-level reserve/marking rule is required before a legal-basis state
+library. It is not a compliance result. See `gwm_pilot_v0/README.md`.
+
 The contract is in `state_transition_contract.md`; the target and
 patch-account files remain templates.
 
@@ -45,7 +52,8 @@ patch-account files remain templates.
 | `state_transition_contract.md` | The table and identifier contract |
 | `state_library_v0/` | Legacy Table 29 transition library |
 | `state_library_v1/` | Planned GWM 2007 legal-basis transition library |
-| `policy_pilot_v0/` | Veteran/large-tree retention policy pilot |
+| `policy_pilot_v0/` | Legacy Table 29 veteran-retention policy pilot |
+| `gwm_pilot_v0/` | GWM 2007 legal-basis stand-structure pilot |
 | `targets.template.yaml` | Harvest and habitat target template |
 | `patch_accounts.template.yaml` | Selection-opening patch account template |
 | `topology.csv` | Block topology, once the boundary exists |
