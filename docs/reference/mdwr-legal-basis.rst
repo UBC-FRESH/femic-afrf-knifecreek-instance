@@ -260,9 +260,10 @@ variant is available as a sensitivity, not the default.
 
 The legacy ``ws4/state_library_v0`` was built on Table 29 and is not the default
 basis. ``ws4/state_library_v1`` is the provisional GWM 2007 clump-reserve
-library: 48 transitions, 33/48 stand-structure checks pass, graph not closed,
-and the clump rule uses a non-spatial DBH-ranked proxy. It is not a
-legal-compliance product.
+library: 48 transitions, 33/48 stand-structure checks pass. Its canonical graph
+has 23 states, 25 transitions and 6 terminal states, with no cycles. A synthetic
+4-block ws4 dataset compiles and passes ``ws4 validate``. The graph is still a
+non-spatial DBH-ranked proxy and is not a legal-compliance product.
 
 First GWM pilot
 ---------------

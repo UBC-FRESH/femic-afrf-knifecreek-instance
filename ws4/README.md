@@ -43,6 +43,11 @@ DBH-ranked six-tree proxy, that passes 13/15 cases and harvests 1.07/2.64/5.12
 m²/ha of large BA on average. It is a marking scenario, not a new FVS growth
 run and not a compliance result. See `gwm_pilot_v0/README.md`.
 
+A synthetic ws4 validation dataset is in `dataset_v1_synthetic/`: 4 synthetic
+1 ha blocks, 23 tracks, 25 treatments and 575 curves from the canonical GWM
+2007 graph. `ws4 validate` passes. It is a structural fixture, not a KC
+operating dataset. See `dataset_v1_synthetic/README.md`.
+
 The contract is in `state_transition_contract.md`; the target and
 patch-account files remain templates.
 
@@ -55,6 +60,7 @@ patch-account files remain templates.
 | `state_library_v1/` | Provisional GWM 2007 clump-reserve transition library |
 | `policy_pilot_v0/` | Legacy Table 29 veteran-retention policy pilot |
 | `gwm_pilot_v0/` | GWM 2007 legal-basis stand-structure pilot |
+| `dataset_v1_synthetic/` | Synthetic ws4 validation dataset |
 | `targets.template.yaml` | Harvest and habitat target template |
 | `patch_accounts.template.yaml` | Selection-opening patch account template |
 | `topology.csv` | Block topology, once the boundary exists |

@@ -234,6 +234,21 @@ claim legal compliance without the UWR spatial layer. See
 - the state IDs are per stand/regime/entry and are not yet canonical shared
   states. See `ws4/state_library_v1/README.md`.
 
+### Canonical graph and synthetic ws4 dataset
+
+The v1 graph is canonicalized in `ws4/state_library_v1/canonical/`:
+
+- 23 shared BA/QMD/large-tree/reserve states;
+- 25 aggregated transitions;
+- 500 curve rows;
+- 6 terminal states;
+- 0 cycles;
+- terminal-closed, not cycle-closed.
+
+`ws4/dataset_v1_synthetic/` compiles 4 synthetic 1 ha blocks, 23 tracks,
+25 treatments and 575 curves from the canonical graph. `ws4 validate` passes.
+It is a structural validation fixture, not a KC operating dataset.
+
 ### Maps
 
 MWP #3 landscape appendices, KC pages: 150 forest cover, 158 seral, 162

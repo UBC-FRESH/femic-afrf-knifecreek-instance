@@ -4,13 +4,17 @@ ws4 Workflow
 Status
 ------
 
-There is no runnable ws4 dataset yet. This page records the intended assembly
-and the contract the state-transition library must satisfy.
+There is a synthetic ws4 validation dataset at
+``ws4/dataset_v1_synthetic``. It has 4 synthetic 1 ha blocks, 23 canonical
+tracks, 25 treatments and 575 curves, and ``ws4 validate`` passes. It is a
+structural fixture, not a KC operating dataset. The real KC dataset still
+requires the CFI, spatial clumps and the UWR/HMZ layer.
 
 Assembly sequence
 -----------------
 
-1. Build the stem-list manifest and the FVS-BC state library.
+1. Build the stem-list manifest and the FVS-BC state library; v1 and its
+   canonical graph are in ``ws4/state_library_v1``.
 2. Export the library as ws4 tables:
    ``tracks``, ``strata``, ``treatments``, ``curves``, ``features``,
    ``products``, ``protoaccounts``, ``accounts``, and ``groups``.

@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1",
+  "tables": {
+    "fragments": "fragments.parquet",
+    "blocks": "blocks.parquet",
+    "tracks": "tracks.parquet",
+    "strata": "strata.parquet",
+    "treatments": "treatments.parquet",
+    "curves": "curves.parquet",
+    "features": "features.parquet",
+    "products": "products.parquet",
+    "protoaccounts": "protoaccounts.parquet",
+    "accounts": "accounts.parquet",
+    "groups": "groups.parquet",
+    "messages": "messages.parquet"
+  },
+  "sources": [
+    {
+      "path": "ws4/state_library_v1/canonical",
+      "states_sha256": "e91c61b61f19815edfbadead5ef3ca12c1c8ee167acec5e9784f4bebb0e0faa9",
+      "transitions_sha256": "0c7f330656419e30a1557185fd567fbaea8df9f63d5195b22539773c7db26d50",
+      "curves_sha256": "90315c07c9cf0c9b83e8b68a6f90b93aa7e9d8818bf5eea438a4022894865445"
+    }
+  ],
+  "options": {
+    "source": "programmatic"
+  },
+  "metadata": {
+    "instance": "knife-creek",
+    "basis": "GWM_2007",
+    "status": "synthetic-structural-validation",
+    "caveats": [
+      "Synthetic 1 ha blocks, not KC inventory or operating area.",
+      "Canonical states are structural bins, not calibrated KC states.",
+      "The clump rule is a DBH-ranked proxy, not spatial.",
+      "No UWR/HMZ spatial constraint.",
+      "Not a legal-compliance product."
+    ]
+  }
+}

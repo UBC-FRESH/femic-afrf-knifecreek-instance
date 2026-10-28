@@ -178,9 +178,12 @@ stand-structure checks (High 10/16, Moderate 11/16, Low 12/16). The clump proxy
 is a DBH-ranked six-tree chunk, not spatial; the state IDs are per chain and the
 graph is not closed. It is not a legal-compliance product.
 
-The next steps are to replace the proxy with a spatial clump rule, canonicalize
-shared residual states, add the HMZ spatial constraint, and compile the first
-ws4 dataset.
+The v1 graph is canonicalized to 23 states, 25 transitions and 6 terminal
+states, with no cycles. A synthetic ws4 dataset (4 one-hectare blocks) compiles
+and passes ``ws4 validate``; it is a structural fixture, not a KC operating
+dataset. The next steps are to replace the proxy with a spatial clump rule, add
+the HMZ spatial constraint, and replace the synthetic dataset with a
+KC-calibrated compile.
 
 The policy pilot in ``ws4/policy_pilot_v0/`` is also a Table 29 structural
 scenario. It shows the trade-off between large-tree retention and total BA, but
