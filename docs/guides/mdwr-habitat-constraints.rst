@@ -184,7 +184,9 @@ is not the default legal basis.
 8 stands × 3 classes × 2 entries, 48 transitions, 192 curves. It passes 33/48
 stand-structure checks (High 10/16, Moderate 11/16, Low 12/16). The clump proxy
 is a DBH-ranked six-tree chunk, not spatial; the state IDs are per chain and the
-graph is not closed. It is not a legal-compliance product.
+graph is not closed. It is not a legal-compliance product. The LidarBC pilot
+now provides observed canopy-tree positions and spatial clumps for one tile;
+they are validation/scenario input, not yet substituted into the library.
 
 The v1 graph is canonicalized to 23 states, 25 transitions and 6 terminal
 states, with no cycles. A synthetic ws4 dataset (4 one-hectare blocks) compiles

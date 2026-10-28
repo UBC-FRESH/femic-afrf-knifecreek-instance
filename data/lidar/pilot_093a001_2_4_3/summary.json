@@ -1,0 +1,32 @@
+{
+  "tile": "kc_dem_093a001_2_4_3",
+  "area_ha": 247.5646,
+  "trees": 20513,
+  "tph": 82.85918099760627,
+  "height_m": {
+    "mean": 17.21213043513038,
+    "p50": 16.713729858398438,
+    "p95": 25.505452728271486,
+    "max": 36.29252243041992
+  },
+  "crown_radius_m": {
+    "mean": 3.856556295808744,
+    "p50": 3.640054944640259,
+    "max": 8.0
+  },
+  "dbh_cm_est": {
+    "mean": 22.629007200968562,
+    "p50": 21.829004781933442,
+    "max": 51.23998978260545
+  },
+  "large_trees_ge20m": 4747,
+  "allometry_log_dbh": {
+    "intercept": -0.015926556277605135,
+    "slope": 1.1004660678804368
+  },
+  "caveats": [
+    "Canopy tree inventory, not a CFI: no species, understory or measured DBH.",
+    "DBH is height-allometry from PSP conditional FD trees; not a BA calibration.",
+    "1 m DSM local maxima can split crowns; minimum spacing reduces but does not eliminate over-segmentation."
+  ]
+}

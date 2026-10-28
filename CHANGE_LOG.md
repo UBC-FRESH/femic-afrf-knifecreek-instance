@@ -260,3 +260,10 @@ status and the GitHub issue comments.
   Low/Moderate, L offers Low only, U offers no treatment. `ws4 validate`
   passes. Tree lists remain PSP-derived and clumps remain a DBH-ranked proxy;
   this is still a structural fixture, not a KC operating model.
+- P3.1 LidarBC canopy inventory pilot: discovered 134 point-cloud, 76 DEM and
+  72 DSM tiles over the SUP; downloaded the 2024 1 m DEM/DSM for tile
+  `093a001_2_4_3`; built 20,513 canopy trees over 247.56 ha (82.9 TPH), with
+  spatial clump analysis. At 10 m linkage for trees ≥20 m: 2,177 clumps, 207
+  4–10-tree clumps, 1,418 singletons, 8.8 clumps/ha. Added
+  `runbooks/lidar_tree_inventory.py`, `notes/reference/lidarbc-kc-pilot.md` and
+  the LiDAR Sphinx page. DBH is height-allometry only; this is not a CFI.

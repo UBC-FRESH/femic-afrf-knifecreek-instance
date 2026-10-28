@@ -254,6 +254,15 @@ track offers enforce M = Low/Moderate, L = Low only, A = all, U = no
 treatments. `ws4 validate` passes. Tree lists are still PSP-derived, not KC
 CFI; the clump rule is not spatial.
 
+### LidarBC canopy inventory
+
+LidarBC discovery over the SUP found 134 point-cloud tiles, 76 DEM and 72 DSM
+tiles. A 2024 1 m DEM/DSM pilot tile (`093a001_2_4_3`) produced 20,513 canopy
+trees over 247.56 ha (82.9 TPH; height mean 17.2 m, p95 25.5 m). Spatial clumps
+at 10 m linkage for trees ≥20 m: 2,177 clumps, 207 4–10-tree clumps, 1,418
+singletons, 8.8 clumps/ha. This is a canopy inventory, not a CFI: no species,
+understory or measured DBH. See `notes/reference/lidarbc-kc-pilot.md`.
+
 ### Maps
 
 MWP #3 landscape appendices, KC pages: 150 forest cover, 158 seral, 162

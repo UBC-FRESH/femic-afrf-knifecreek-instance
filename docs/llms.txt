@@ -7,6 +7,7 @@
 - [Home](index.html): the documentation home for the instance.
 - [Instance contract](guides/instance-contract.html): scope, inputs, outputs, and reproducibility.
 - [Data acquisition](guides/data-acquisition.html): the boundary, inventory, BEC, disturbance, and mule-deer checklist.
+- [LiDAR tree inventory](guides/lidar-inventory.html): LidarBC coverage, canopy-tree pilot, spatial clumps, and limits.
 - [MDWR habitat constraints](guides/mdwr-habitat-constraints.html): GWM 2007 default, surplus-large-tree harvest, 4–10-tree clumps, HMZ, and acceptance checks.
 - [Growth engine](guides/growth-engine.html): why FVS-BC, the fresh-fvsbc pin, and the selection-cut surface.
 - [State-transition design](guides/state-transition-design.html): states, regimes, residual states, and the ws4 bridge.

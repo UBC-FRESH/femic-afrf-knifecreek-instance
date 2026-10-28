@@ -182,6 +182,22 @@ salvage). Appendix 9 gives the KC01–KC11 and RD05–RD07 compartment table. Th
 is public management direction, not the legal UWR order. GWM 2007 is the
 default basis; Table 29 is a named AFRF alternative.
 
+## LidarBC pilot
+
+| Field | Value |
+| --- | --- |
+| Source | LidarBC Open LiDAR Data Portal / BC Map Hub |
+| Discovery | 134 point-cloud tiles, 76 DEM, 72 DSM over SUP S15382 |
+| Pilot tile | `093a001_2_4_3`, 2024, 1 m DEM/DSM |
+| Tree inventory | `data/lidar/pilot_093a001_2_4_3/trees.gpkg` |
+| Summary | `data/lidar/pilot_093a001_2_4_3/summary.json` |
+| Clumps | `data/lidar/pilot_093a001_2_4_3/clump_analysis.csv` |
+| Reproducer | `runbooks/lidar_tree_inventory.py` |
+| Note | `notes/reference/lidarbc-kc-pilot.md` |
+
+The pilot found 20,513 canopy trees (82.9 TPH) over 247.56 ha. DBH is
+height-allometry only; the inventory is not a CFI.
+
 ## 2007 GWM order and 2003 Knife Creek transition plan
 
 | Field | Value |

@@ -167,6 +167,18 @@ The extracted contract is ``config/mdwr_regimes.yaml`` and the FVS-BC templates
 are ``config/fvsbc/regimes.yaml``. The default basis is GWM 2007; Table 29 is a
 named alternative. See :doc:`../reference/mdwr-legal-basis`.
 
+LidarBC canopy inventory
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+LidarBC discovery over the SUP found 134 point-cloud tiles, 76 DEM tiles and
+72 DSM tiles. A 2024 1 m DEM/DSM pilot tile produced 20,513 canopy trees over
+247.56 ha, with 82.9 TPH and a spatial clump table. The tree inventory is
+`data/lidar/pilot_093a001_2_4_3/trees.gpkg`.
+
+This is **not a CFI**: it has no species, understory or measured DBH. DBH is a
+height-allometry estimate; the estimated BA is much lower than VRI BA. See
+:doc:`lidar-inventory` and `notes/reference/lidarbc-kc-pilot.md`.
+
 PSP-derived IDF Cariboo stem lists
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
