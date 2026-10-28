@@ -241,3 +241,9 @@ status and the GitHub issue comments.
   The FVS cut is followed by the selected clump-reserve marking rule and a
   weighted residual resample. 33/48 stand-structure checks pass. The graph is
   not closed and the clump proxy is not spatial; no legal-compliance claim.
+- P2.8 canonical graph and synthetic ws4 compile: added
+  `runbooks/canonicalize_state_library.py`, `ws4/state_library_v1/canonical/`
+  (23 states, 25 transitions, 500 curve rows, 6 terminal states, 0 cycles),
+  `runbooks/compile_ws4_dataset.py` and `ws4/dataset_v1_synthetic/` (4 synthetic
+  1 ha blocks, 23 tracks, 25 treatments, 575 curves). `ws4 validate` passes.
+  The dataset is a structural fixture, not a KC operating dataset.

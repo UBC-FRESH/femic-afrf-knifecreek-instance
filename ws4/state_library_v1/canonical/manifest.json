@@ -1,0 +1,49 @@
+{
+  "library": "knife-creek-state-transition-v1-canonical",
+  "basis": "GWM_2007",
+  "status": "canonical-terminal-graph",
+  "counts": {
+    "states": 23,
+    "transitions": 25,
+    "curves": 500,
+    "terminal_states": 6,
+    "cycles": 0
+  },
+  "classes": {
+    "ba": [
+      "BA_LT20",
+      "BA20_25",
+      "BA25_30",
+      "BA30_35",
+      "BA35_40",
+      "BA40_PLUS"
+    ],
+    "qmd": [
+      "QMD_LT20",
+      "QMD20_25",
+      "QMD25_30",
+      "QMD30_35",
+      "QMD35_PLUS"
+    ],
+    "large_ba": [
+      "LT_NA",
+      "LT_LT6",
+      "LT6_11",
+      "LT11_16",
+      "LT16_PLUS"
+    ],
+    "reserve": [
+      "RES_NA",
+      "RES_LT0_5",
+      "RES0_5_2",
+      "RES2_PLUS"
+    ]
+  },
+  "caveats": [
+    "Canonical classes are structural bins, not calibrated states.",
+    "Duplicate from-state/regime transitions use the modal target state.",
+    "Terminal states are explicit no-outgoing states; cycles are not forced.",
+    "The clump rule is still a DBH-ranked proxy, not spatial.",
+    "No legal-compliance claim."
+  ]
+}

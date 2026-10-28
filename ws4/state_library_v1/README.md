@@ -52,10 +52,18 @@ failures are retained as evidence, not hidden.
   not canonical shared states.
 - Anything about the HMZ spatial matrix.
 
+## Canonical graph
+
+`canonical/` maps the 72 per-chain states to 23 shared BA/QMD/large-tree/reserve
+classes: 25 aggregated transitions, 500 curve rows, 6 terminal states and 0
+cycles. The graph is terminal-closed, not cycle-closed. See
+`canonical/README.md`.
+
 ## Next
 
-1. Replace the DBH-ranked six-tree proxy with a spatial clump rule when KC stem
+1. Compile a synthetic ws4 dataset from the canonical graph and run
+   `ws4 validate`.
+2. Replace the DBH-ranked six-tree proxy with a spatial clump rule when KC stem
    maps or CFI arrive.
-2. Canonicalize residual states and close the graph.
 3. Add the HMZ spatial constraint.
-4. Compile the first ws4 dataset and run `ws4 validate`.
+4. Replace the synthetic dataset with a KC-calibrated compile.
