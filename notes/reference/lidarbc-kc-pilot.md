@@ -89,3 +89,32 @@ a giant component. The 10 m linkage is the informative scale: it finds 207
 3. Compare LiDAR crowns/height to VRI and any available field plots.
 4. Use LiDAR clumps to calibrate the spatial clump rule in `ws4`.
 5. Keep the DBH/BA fields labelled estimated until a CFI calibration exists.
+
+## Multi-tile 2024 run
+
+All 72 2024 DEM/DSM pairs were downloaded (940 MB). 28 tiles intersect the SUP
+strongly enough to produce trees after clipping. The merged inventory is in
+`data/lidar/kc_2024/`.
+
+- 278,318 canopy trees;
+- 78.8 TPH over the 3,533.13 ha SUP;
+- height mean 19.5 m, p95 28.6 m, max 46.9 m;
+- estimated DBH mean 25.9 cm, max 67.9 cm;
+- 117,297 trees ≥20 m.
+
+Clumps for trees ≥20 m:
+
+| Linkage | Clumps | Mean size | 4–10-tree clumps | Singletons | Clumps/ha |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 5 m | 116,007 | 1.01 | 5 | 114,752 | 32.8 |
+| 10 m | 50,401 | 2.33 | 6,046 | 30,214 | 14.3 |
+| 15 m | 11,903 | 9.85 | 1,466 | 6,803 | 3.4 |
+
+At block scale this is still a canopy inventory: no species, understory or
+measured DBH. The 10 m linkage finds thousands of 4–10-tree groups, but also
+many singletons; 15 m over-merges. The inventory is now broad enough to compare
+against VRI and to derive block-level clump features, not yet a CFI replacement.
+
+Note: 28 tiles processed, not all 72, because many 2024 tiles do not intersect
+the SUP after clipping. The 3,533.13 ha denominator is the legal SUP area, not
+the sum of per-tile areas; per-tile areas overlap at edges.

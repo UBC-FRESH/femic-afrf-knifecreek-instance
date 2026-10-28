@@ -85,6 +85,47 @@ Files
 - ``runbooks/lidar_tree_inventory.py``
 - ``notes/reference/lidarbc-kc-pilot.md``
 
+Full 2024 run
+-------------
+
+All 72 2024 DEM/DSM pairs were downloaded (940 MB). 28 tiles intersect the SUP
+strongly enough to produce clipped trees. The merged inventory has:
+
+- 278,318 canopy trees;
+- 78.8 TPH over 3,533.13 ha;
+- height mean 19.5 m, p95 28.6 m, max 46.9 m;
+- estimated DBH mean 25.9 cm, max 67.9 cm;
+- 117,297 trees at least 20 m tall.
+
+Clumps for trees ≥20 m:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Linkage
+     - Clumps
+     - Mean size
+     - 4–10-tree clumps
+     - Singletons
+   * - 5 m
+     - 116,007
+     - 1.01
+     - 5
+     - 114,752
+   * - 10 m
+     - 50,401
+     - 2.33
+     - 6,046
+     - 30,214
+   * - 15 m
+     - 11,903
+     - 9.85
+     - 1,466
+     - 6,803
+
+The 10 m linkage is the useful scale. The full run is in
+``data/lidar/kc_2024/``.
+
 Next
 ----
 

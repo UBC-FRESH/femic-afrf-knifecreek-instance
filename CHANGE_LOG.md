@@ -267,3 +267,9 @@ status and the GitHub issue comments.
   4–10-tree clumps, 1,418 singletons, 8.8 clumps/ha. Added
   `runbooks/lidar_tree_inventory.py`, `notes/reference/lidarbc-kc-pilot.md` and
   the LiDAR Sphinx page. DBH is height-allometry only; this is not a CFI.
+- P3.2 all-2024 LidarBC canopy inventory: downloaded all 72 2024 DEM/DSM
+  pairs (940 MB); 28 tiles intersect the SUP enough to produce clipped trees.
+  Added `runbooks/lidar_inventory_all_tiles.py` and `data/lidar/kc_2024/`:
+  278,318 canopy trees, 78.8 TPH, height mean 19.5 m, 117,297 trees ≥20 m.
+  At 10 m linkage, 50,401 clumps and 6,046 4–10-tree clumps. The inventory is
+  still canopy-only, with height-allometry DBH and no species/understory.

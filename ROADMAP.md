@@ -86,7 +86,10 @@ disturbance, and mule-deer constraints, then construct reviewed stem lists.
 - [x] P1.2d Correct THINQFA BC units and record the pilot (#25)
 - [ ] P1.3 Acquire or reconstruct tree-level tallies and CFI plot data (#10)
   - [x] Build a LidarBC canopy-tree inventory pilot for one 2024 tile.
-  - [ ] Extend LidarBC to all 2024 tiles and calibrate against a CFI.
+  - [x] Extend the 2024 DEM/DSM run to all downloaded tiles: 278,318 canopy
+    trees, 28 tiles intersecting the SUP.
+  - [ ] Calibrate the canopy inventory against a CFI and derive block-level
+    clump features.
   - [x] Build a public IDF Cariboo PSP stem-list analog for the interim pilot.
   - [x] Fit a QMD/TPA Weibull scale regression and generate conditional lists.
   - [ ] Acquire the Knife Creek CFI or released tree list.

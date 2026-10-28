@@ -47,3 +47,7 @@ data/raw/
 # Raw LiDAR downloads and large derived rasters
 data/lidar/raw/
 data/lidar/*/chm.tif
+
+# Large derived LiDAR tree products; parquet/summary are committed
+data/lidar/kc_2024/trees.gpkg
+data/lidar/kc_2024/trees.csv
