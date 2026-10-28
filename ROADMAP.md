@@ -90,8 +90,9 @@ disturbance, and mule-deer constraints, then construct reviewed stem lists.
     trees, 28 tiles intersecting the SUP.
   - [x] Derive block-level LiDAR clump features and add them to
     `ws4/dataset_kc_spatial_v2`.
+  - [x] Add a spatial LiDAR reserve scenario and `dataset_kc_spatial_v3`.
   - [ ] Calibrate the canopy inventory against a CFI and replace the FVS
-    DBH-ranked reserve proxy with observed clumps.
+    DBH-ranked reserve proxy with the LiDAR reserve in the FVS cut.
   - [x] Build a public IDF Cariboo PSP stem-list analog for the interim pilot.
   - [x] Fit a QMD/TPA Weibull scale regression and generate conditional lists.
   - [ ] Acquire the Knife Creek CFI or released tree list.

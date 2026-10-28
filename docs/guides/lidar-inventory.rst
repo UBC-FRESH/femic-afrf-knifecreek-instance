@@ -139,9 +139,17 @@ dataset blocks have LiDAR coverage.
 - 6,043 within-block 4–10-tree clumps.
 
 `ws4/dataset_kc_spatial_v2` adds the observed clump class to each block group:
-29 blocks `<10`, 54 `10–20`, 68 `20–30`, 9 `30+` clumps/ha. The FVS treatment
-reserve is still the DBH-ranked proxy; the LiDAR clumps are now block-level
-features, not yet the tree-level reserve marking.
+29 blocks `<10`, 54 `10–20`, 68 `20–30`, 9 `30+` clumps/ha.
+
+`runbooks/lidar_reserve_scenario.py` then assigns a spatial reserve within each
+block: 4–10-tree clumps reserve the three largest trees; components over 10 are
+split into 10-tree chunks; components under four are left intact. Result:
+116,831 large trees, 54,307 clumps, 88,640 reserve trees, 28,191 harvest trees.
+
+`ws4/dataset_kc_spatial_v3` carries the observed clump and reserve classes, and
+`data/lidar/kc_2024/reserve_trees.parquet` assigns every large LiDAR tree to
+reserve or harvest. This is a block-level spatial reserve scenario, not yet the
+FVS tree-level cut. The FVS treatment reserve remains the DBH-ranked proxy.
 
 Next
 ----

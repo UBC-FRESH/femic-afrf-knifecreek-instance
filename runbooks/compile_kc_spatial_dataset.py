@@ -89,6 +89,7 @@ def main() -> None:
     parser.add_argument("--sup", type=Path, required=True)
     parser.add_argument("--hmz-crosswalk", type=Path, required=True)
     parser.add_argument("--lidar-block-summary", type=Path)
+    parser.add_argument("--lidar-reserve-summary", type=Path)
     parser.add_argument("--out-dir", type=Path, required=True)
     args = parser.parse_args()
     states = pd.read_csv(args.canonical / "states.csv")
@@ -227,6 +228,30 @@ def main() -> None:
         blocks_gdf["clump_class"] = blocks_gdf["clump_class"].fillna("CLUMP_NA")
     else:
         blocks_gdf["clump_class"] = "CLUMP_NA"
+    reserve = None
+    if args.lidar_reserve_summary:
+        reserve = pd.read_csv(args.lidar_reserve_summary)
+        blocks_gdf = blocks_gdf.merge(
+            reserve[
+                [
+                    "POLYGON_ID",
+                    "reserve_tph",
+                    "harvest_tph",
+                    "reserve_ba_est_m2_ha",
+                    "clumps",
+                ]
+            ],
+            on="POLYGON_ID",
+            how="left",
+        )
+        blocks_gdf["reserve_class"] = pd.cut(
+            blocks_gdf["reserve_tph"],
+            bins=[-0.01, 20.0, 30.0, 1e9],
+            labels=["RESERVE_LT20", "RESERVE20_30", "RESERVE30_PLUS"],
+        ).astype(str)
+        blocks_gdf["reserve_class"] = blocks_gdf["reserve_class"].fillna("RESERVE_NA")
+    else:
+        blocks_gdf["reserve_class"] = "RESERVE_NA"
     blocks_gdf = blocks_gdf.reset_index(drop=True)
     blocks = pd.DataFrame(
         {
@@ -251,7 +276,9 @@ def main() -> None:
             "group": "hmz_"
             + blocks_gdf["hmz_group"].astype(str)
             + "__"
-            + blocks_gdf["clump_class"].astype(str),
+            + blocks_gdf["clump_class"].astype(str)
+            + "__"
+            + blocks_gdf["reserve_class"].astype(str),
         }
     )
     strata = pd.DataFrame(
@@ -298,29 +325,32 @@ def main() -> None:
         "area_ha": float(blocks["area_ha"].sum()),
         "hmz_groups": blocks_gdf["hmz_group"].value_counts().to_dict(),
         "clump_classes": blocks_gdf["clump_class"].value_counts().to_dict(),
+        "reserve_classes": blocks_gdf["reserve_class"].value_counts().to_dict(),
         "caveats": [
             "Blocks are clipped VRI polygons, but tree lists are PSP-derived, not KC CFI.",
             "Initial canonical state is nearest BA/QMD class, not a measured state assignment.",
             (
-                "Block groups use observed LiDAR clump classes; the FVS "
-                "treatment reserve is still a DBH-ranked proxy."
+                "Block groups use observed LiDAR clump and reserve classes; "
+                "the FVS treatment reserve is still a DBH-ranked proxy."
             ),
             "HMZ track offers enforce the matrix; they are not a legal-compliance determination.",
             "No current approved-order verification.",
         ],
     }
     if lidar is not None:
-        blocks_gdf[
-            [
-                "POLYGON_ID",
-                "hmz_group",
-                "dominant_code",
-                "clump_class",
-                "large_clumps_per_ha",
-                "large_clumps_4_10",
-                "large_tph_ge20",
-            ]
-        ].to_csv(args.out_dir / "block_features.csv", index=False)
+        columns = [
+            "POLYGON_ID",
+            "hmz_group",
+            "dominant_code",
+            "clump_class",
+            "reserve_class",
+            "large_clumps_per_ha",
+            "large_clumps_4_10",
+            "large_tph_ge20",
+        ]
+        if reserve is not None:
+            columns += ["reserve_tph", "harvest_tph", "reserve_ba_est_m2_ha", "clumps"]
+        blocks_gdf[columns].to_csv(args.out_dir / "block_features.csv", index=False)
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
     problems = validate_dataset(args.out_dir)
     if problems:
