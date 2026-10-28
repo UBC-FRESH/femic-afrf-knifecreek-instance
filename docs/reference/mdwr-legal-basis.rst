@@ -259,8 +259,10 @@ BA, then ``THINQFA`` on 0–37.5 cm to ``B − large-tree BA``. A retain-all-abo
 variant is available as a sensitivity, not the default.
 
 The legacy ``ws4/state_library_v0`` was built on Table 29 and is not the default
-basis. A legal-basis rebuild should be ``state_library_v1`` with an explicit
-``basis=GWM_2007`` in the state key and manifest.
+basis. ``ws4/state_library_v1`` is the provisional GWM 2007 clump-reserve
+library: 48 transitions, 33/48 stand-structure checks pass, graph not closed,
+and the clump rule uses a non-spatial DBH-ranked proxy. It is not a
+legal-compliance product.
 
 First GWM pilot
 ---------------

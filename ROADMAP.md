@@ -200,7 +200,9 @@ that ws4 will consume. The next library is `state_library_v1` with
   rule is post-FVS clump reserve (largest 2–5 above D per 4–10-tree clump),
   13/15 pass with a DBH-ranked six-tree proxy. A spatial clump rule is still
   required for KC.
-- [ ] P2.3 Build the multi-cycle state graph and canonicalize states
+- [~] P2.3 Build the multi-cycle state graph and canonicalize states. v1 has
+  48 transitions and 72 per-chain states; graph closure and shared
+  canonicalization are still open.
 - [ ] P2.4 Generate ws4 tracks, treatments, curves, features, and products
 - [ ] P2.5 Record the library manifest and validation evidence
 
