@@ -1,0 +1,36 @@
+{
+  "crown_metrics": {
+    "count": 20513,
+    "max": 8.0,
+    "mean": 3.856556295808744,
+    "median": 3.640054944640259,
+    "min": 2.5,
+    "p95": 5.408326913195984
+  },
+  "crs": "EPSG:6653",
+  "duplicate_tree_count": 0,
+  "feature_count": 20513,
+  "generated_utc": "2026-10-28T15:46:09.978043+00:00",
+  "geometry_types": [
+    "Point"
+  ],
+  "height_metrics": {
+    "count": 20513,
+    "max": 36.29252243041992,
+    "mean": 17.21213043513038,
+    "median": 16.713729858398438,
+    "min": 5.034543514251709,
+    "p95": 25.505452728271486
+  },
+  "missing_height_count": 0,
+  "path": "/srv/shared-data/gep/ws4/tmp/afrf-repos/femic-afrf-knifecreek-instance/data/lidar/pilot_093a001_2_4_3/trees.gpkg",
+  "schema_version": "femic.lidar.individual_tree.v1",
+  "species_counts": {
+    "UNK": 20513
+  },
+  "unique_tree_count": 20513,
+  "warnings": [
+    "No reprojection or resampling was performed.",
+    "Tree products are optional and source-dependent."
+  ]
+}

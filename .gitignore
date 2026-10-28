@@ -43,3 +43,7 @@ ws4/runtime/
 *.7z
 data/downloads/
 data/raw/
+
+# Raw LiDAR downloads and large derived rasters
+data/lidar/raw/
+data/lidar/*/chm.tif

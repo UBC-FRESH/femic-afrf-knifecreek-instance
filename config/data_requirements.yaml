@@ -90,6 +90,17 @@ sources:
       approved order and the legal stand-structure map must still be verified
       before a compliance claim.
 
+  - id: lidarbc
+    description: LidarBC DEM, DSM and point clouds over Knife Creek.
+    status: acquired_pilot
+    public_release: "Open Government Licence - British Columbia"
+    path: data/lidar/pilot_093a001_2_4_3/trees.gpkg
+    notes: >-
+      134 point-cloud tiles, 76 DEM and 72 DSM tiles discovered over the SUP.
+      A 2024 1 m DEM/DSM pilot tile produced 20,513 canopy trees and a spatial
+      clump table. This is a canopy inventory, not a CFI: no species,
+      understory or measured DBH; DBH is height-allometry only.
+
   - id: mwp3_management_plan
     description: AFRF Management and Working Plan #3, including the Knife Creek MDWR direction.
     status: acquired
