@@ -286,8 +286,9 @@ not a new FVS growth run, and not a compliance result.
 What is not established
 -----------------------
 
-- The HMZ spatial layer is now in the repo at
+- The HMZ spatial layer is in the repo at
   ``data/habitat/mule_deer_hmz_kc.gpkg`` and the VRI crosswalk is available.
+  ``ws4/dataset_kc_spatial_v1`` enforces the M/L/A/U track offers structurally.
   The current approved order and the legal stand-structure map still need
   verification before a compliance claim.
 - The KC CFI or released tree list is still missing.

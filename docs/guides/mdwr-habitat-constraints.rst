@@ -114,8 +114,13 @@ Knife Creek is U-5-002 ``dwl_50``. The legal order Table 3 gives HMZ 1–5 as
 The HMZ is spatial. A stand-level BDq run cannot establish compliance. The HMZ
 layer is acquired at ``data/habitat/mule_deer_hmz_kc.gpkg``: HMZ 1 M 738.29 ha,
 2 L 1,217.15 ha, 3 M 320.51 ha, 4 M 1,213.33 ha, 5 A 0.00045 ha. The VRI × HMZ
-crosswalk is ``data/habitat/kc_vri_hmz_overlay.csv``. The current approved order
-and legal stand-structure map still need verification.
+crosswalk is ``data/habitat/kc_vri_hmz_overlay.csv``.
+
+``ws4/dataset_kc_spatial_v1`` applies the matrix through track copies: M offers
+Low/Moderate, L offers Low only, A offers all, U offers no treatment. It has
+160 clipped VRI blocks, 92 tracks and 49 treatments, and ``ws4 validate``
+passes. The current approved order and legal stand-structure map still need
+verification.
 
 The 2003 Knife Creek transition plan is acquired. Before 2026, GWM 13 requires
 ≥80% retention of pre-harvest merchantable Douglas-fir BA. The cutting cycle is

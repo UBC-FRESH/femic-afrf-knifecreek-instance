@@ -247,7 +247,12 @@ The v1 graph is canonicalized in `ws4/state_library_v1/canonical/`:
 
 `ws4/dataset_v1_synthetic/` compiles 4 synthetic 1 ha blocks, 23 tracks,
 25 treatments and 575 curves from the canonical graph. `ws4 validate` passes.
-It is a structural validation fixture, not a KC operating dataset.
+
+`ws4/dataset_kc_spatial_v1/` compiles 160 clipped VRI blocks (3,481.77 ha),
+92 HMZ-specific tracks and 49 treatments. HMZ groups: M 113, L 44, U 3. HMZ
+track offers enforce M = Low/Moderate, L = Low only, A = all, U = no
+treatments. `ws4 validate` passes. Tree lists are still PSP-derived, not KC
+CFI; the clump rule is not spatial.
 
 ### Maps
 

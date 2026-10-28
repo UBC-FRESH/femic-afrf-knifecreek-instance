@@ -45,8 +45,13 @@ run and not a compliance result. See `gwm_pilot_v0/README.md`.
 
 A synthetic ws4 validation dataset is in `dataset_v1_synthetic/`: 4 synthetic
 1 ha blocks, 23 tracks, 25 treatments and 575 curves from the canonical GWM
-2007 graph. `ws4 validate` passes. It is a structural fixture, not a KC
-operating dataset. See `dataset_v1_synthetic/README.md`.
+2007 graph. `ws4 validate` passes.
+
+A spatial structural dataset is in `dataset_kc_spatial_v1/`: 160 clipped VRI
+blocks (3,481.77 ha), 92 HMZ-specific tracks, 49 treatments. HMZ M/L/U track
+offers are enforced. `ws4 validate` passes. It is closer to a KC dataset but
+still uses PSP-derived tree lists, not KC CFI. See
+`dataset_kc_spatial_v1/README.md`.
 
 The contract is in `state_transition_contract.md`; the target and
 patch-account files remain templates.
@@ -61,6 +66,7 @@ patch-account files remain templates.
 | `policy_pilot_v0/` | Legacy Table 29 veteran-retention policy pilot |
 | `gwm_pilot_v0/` | GWM 2007 legal-basis stand-structure pilot |
 | `dataset_v1_synthetic/` | Synthetic ws4 validation dataset |
+| `dataset_kc_spatial_v1/` | Spatial VRI/HMZ structural dataset |
 | `targets.template.yaml` | Harvest and habitat target template |
 | `patch_accounts.template.yaml` | Selection-opening patch account template |
 | `topology.csv` | Block topology, once the boundary exists |

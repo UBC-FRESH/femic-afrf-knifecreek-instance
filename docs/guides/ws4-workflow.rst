@@ -4,11 +4,17 @@ ws4 Workflow
 Status
 ------
 
-There is a synthetic ws4 validation dataset at
-``ws4/dataset_v1_synthetic``. It has 4 synthetic 1 ha blocks, 23 canonical
-tracks, 25 treatments and 575 curves, and ``ws4 validate`` passes. It is a
-structural fixture, not a KC operating dataset. The real KC dataset still
-requires the CFI, spatial clumps and the UWR/HMZ layer.
+There are two structural ws4 datasets:
+
+- ``ws4/dataset_v1_synthetic`` — 4 synthetic 1 ha blocks, 23 canonical tracks,
+  25 treatments, 575 curves;
+- ``ws4/dataset_kc_spatial_v1`` — 160 clipped VRI blocks (3,481.77 ha), 92
+  HMZ-specific tracks, 49 treatments.
+
+Both pass ``ws4 validate``. The spatial dataset enforces HMZ track offers:
+M = Low/Moderate, L = Low only, A = all, U = no treatment. It is still a
+structural fixture, not a KC operating dataset: the tree lists are PSP-derived,
+not KC CFI, and the clump rule is not spatial.
 
 Assembly sequence
 -----------------
