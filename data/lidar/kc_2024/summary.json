@@ -20,6 +20,7 @@
     "max": 67.91981514580876
   },
   "large_trees_ge20m": 117297,
+  "crs": "EPSG:6653",
   "allometry_log_dbh": {
     "intercept": -0.015926556277605135,
     "slope": 1.1004660678804368

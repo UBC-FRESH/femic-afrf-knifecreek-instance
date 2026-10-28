@@ -33,3 +33,9 @@ No species, understory, measured DBH, damage or mortality. DBH is
 height-allometry only; estimated BA is not a calibration target. 1 m DSM local
 maxima can split crowns. The SUP denominator is legal area, not per-tile area;
 tiles overlap at edges.
+
+## Block features
+
+`block_tree_summary.csv` joins the tree points to clipped VRI polygons. All 160
+spatial blocks have LiDAR coverage: mean 77.2 TPH, 39.1 TPH ≥20 m, and 18.2
+4–10-tree clumps/ha. `block_tree_summary.json` carries the summary.
