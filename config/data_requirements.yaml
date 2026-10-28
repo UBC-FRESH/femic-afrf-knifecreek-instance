@@ -77,16 +77,18 @@ sources:
 
   - id: mule_deer_legal_order
     description: Approved Ungulate Winter Range order, HMZ matrix and spatial layer.
-    status: acquired_text_pending_gis
-    public_release: "public BC order; spatial layer status TBD"
+    status: acquired
+    public_release: "public BC order and OGL-BC HMZ layer"
     local_sources:
       - /srv/shared-data/gep/ws4/sources/afrf-mule-deer/gwm_order_shallow_moderate_2007.pdf
+      - data/habitat/mule_deer_hmz_kc.gpkg
     notes: >-
-      The 2007 Shallow/Moderate GWM order text and the Knife Creek HMZ matrix
-      are acquired. GWM 10 requires 4-10 or more mature trees with interlocking
-      crowns, BA >37.5 cm >=16/11/6 m2/ha, and Table 2 D >=70/60/50. The legal
-      UWR boundary, stand-structure classes and HMZ spatial layer are still
-      required before a compliance claim.
+      The 2007 Shallow/Moderate GWM order text, the Knife Creek HMZ matrix and
+      the HMZ spatial layer are acquired. GWM 10 requires 4-10 or more mature
+      trees with interlocking crowns, BA >37.5 cm >=16/11/6 m2/ha, and Table 2
+      D >=70/60/50. The HMZ layer totals 3,489.27 ha inside the SUP. The current
+      approved order and the legal stand-structure map must still be verified
+      before a compliance claim.
 
   - id: mwp3_management_plan
     description: AFRF Management and Working Plan #3, including the Knife Creek MDWR direction.

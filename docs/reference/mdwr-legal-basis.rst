@@ -286,9 +286,10 @@ not a new FVS growth run, and not a compliance result.
 What is not established
 -----------------------
 
-- The legal UWR boundary, stand-structure classes and HMZ spatial GIS layer are
-  not yet in the repo. The order text and HMZ matrix are not enough for a
-  compliance claim.
+- The HMZ spatial layer is now in the repo at
+  ``data/habitat/mule_deer_hmz_kc.gpkg`` and the VRI crosswalk is available.
+  The current approved order and the legal stand-structure map still need
+  verification before a compliance claim.
 - The KC CFI or released tree list is still missing.
 - No KC-calibrated FVS-BC case exists.
 - Canopy-opening layout and the 4–10-tree clump pattern are post-processing

@@ -202,6 +202,24 @@ BA >37.5 cm >=16/11/6 m²/ha, Table 2 D >=70/60/50, and a large-tree reserve.
 The Knife Creek HMZ row is HMZ 1–5 = M, L, M, M, A. The spatial UWR/HMZ layer
 is still required for a compliance claim.
 
+## Mule-deer HMZ layer
+
+| Field | Value |
+| --- | --- |
+| Source | BC Map Hub / DataBC, Mule Deer Winter Range Habitat Management Zones — Cariboo Region |
+| ArcGIS item | `96151b4539c4437897e3ec3324037db2`, layer 8 |
+| Query | `.../bcgw_pub_reg_land_and_natural_resource/MapServer/8/query` |
+| Licence | Open Government Licence - British Columbia |
+| Derived layer | `data/habitat/mule_deer_hmz_kc.gpkg` |
+| Area table | `data/habitat/mule_deer_hmz_kc.csv` |
+| VRI crosswalk | `data/habitat/kc_vri_hmz_overlay.csv` |
+| Reproducer | `runbooks/fetch_mdwr_hmz.py`, `runbooks/assign_hmz.py` |
+| Note | `notes/reference/mdwr-hmz-layer.md` |
+
+Knife Creek HMZ areas: 1 M 738.29 ha; 2 L 1,217.15 ha; 3 M 320.51 ha; 4 M
+1,213.33 ha; 5 A 0.00045 ha; total 3,489.27 ha. The SUP is 3,533.13 ha; the
+43.86 ha difference is outside the HMZ polygons.
+
 ## Recovered MWP #3 Figure 11 target structure
 
 | Field | Value |

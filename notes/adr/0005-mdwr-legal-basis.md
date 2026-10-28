@@ -62,7 +62,9 @@ states in one graph or one optimization run without an explicit basis label.
   not the default basis and must not be compiled as legal compliance.
 - A new legal-basis library should be `state_library_v1` with `basis=GWM_2007`.
 - Clump post-processing uses 4–10 trees; 2–5 is the maximum-diameter subgroup.
-- The spatial HMZ/UWR layer is still needed for a compliance claim.
+- The HMZ spatial layer is acquired and clipped to the SUP; the current
+  approved order and legal stand-structure map still need verification for a
+  compliance claim.
 
 ## Alternatives considered
 

@@ -155,8 +155,13 @@ Key requirements:
 - a potential north-facing >20% slope, >10 ha exemption in the Moderate
   Snowpack zone.
 
-The spatial UWR/HMZ GIS layer is still required. The text and HMZ matrix are
-not a compliance test.
+The spatial HMZ layer is acquired at
+``data/habitat/mule_deer_hmz_kc.gpkg`` from the BC Map Hub/DataBC layer. Knife
+Creek HMZ areas are 1 M 738.29 ha, 2 L 1,217.15 ha, 3 M 320.51 ha, 4 M
+1,213.33 ha, 5 A 0.00045 ha; total 3,489.27 ha against the 3,533.13 ha SUP.
+The VRI × HMZ crosswalk is ``data/habitat/kc_vri_hmz_overlay.csv``. The current
+approved order and legal stand-structure map still need verification before a
+compliance claim.
 
 The extracted contract is ``config/mdwr_regimes.yaml`` and the FVS-BC templates
 are ``config/fvsbc/regimes.yaml``. The default basis is GWM 2007; Table 29 is a

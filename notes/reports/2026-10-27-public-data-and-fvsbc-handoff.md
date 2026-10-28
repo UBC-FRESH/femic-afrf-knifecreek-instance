@@ -296,8 +296,9 @@ see `notes/reference/kc-general-map-2014.md`.
 
 1. KC CFI or a released tree list. The PSP analog is regional, not KC.
 2. Georeferenced AFRF site-series map. The Klinka maps are in pockets/CD-ROM.
-3. Legal UWR/HMZ spatial layer. The 2007 order text and HMZ matrix are
-   acquired; the spatial boundary and stand-structure/HMZ GIS layer are not.
+3. Legal UWR boundary/current order verification. The HMZ spatial layer is
+   acquired at `data/habitat/mule_deer_hmz_kc.gpkg` and crosswalked to VRI; the
+   legal boundary and stand-structure map still need verification.
 4. FVS-BC calibration for KC. No calibrated KC case exists.
 5. `fresh-fvsbc` upstream documentation still describes `THINQFA` generically;
    the BC cm conversion is recorded here and in PR #190's comment, but a

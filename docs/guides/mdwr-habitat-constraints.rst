@@ -111,8 +111,11 @@ Knife Creek is U-5-002 ``dwl_50``. The legal order Table 3 gives HMZ 1–5 as
 - HMZ 4: Low or Moderate only;
 - HMZ 5: all classes.
 
-The HMZ is spatial. A stand-level BDq run cannot establish compliance. The
-legal UWR/HMZ GIS layer is still missing.
+The HMZ is spatial. A stand-level BDq run cannot establish compliance. The HMZ
+layer is acquired at ``data/habitat/mule_deer_hmz_kc.gpkg``: HMZ 1 M 738.29 ha,
+2 L 1,217.15 ha, 3 M 320.51 ha, 4 M 1,213.33 ha, 5 A 0.00045 ha. The VRI × HMZ
+crosswalk is ``data/habitat/kc_vri_hmz_overlay.csv``. The current approved order
+and legal stand-structure map still need verification.
 
 The 2003 Knife Creek transition plan is acquired. Before 2026, GWM 13 requires
 ≥80% retention of pre-harvest merchantable Douglas-fir BA. The cutting cycle is
@@ -181,9 +184,9 @@ graph is not closed. It is not a legal-compliance product.
 The v1 graph is canonicalized to 23 states, 25 transitions and 6 terminal
 states, with no cycles. A synthetic ws4 dataset (4 one-hectare blocks) compiles
 and passes ``ws4 validate``; it is a structural fixture, not a KC operating
-dataset. The next steps are to replace the proxy with a spatial clump rule, add
-the HMZ spatial constraint, and replace the synthetic dataset with a
-KC-calibrated compile.
+dataset. The next steps are to replace the proxy with a spatial clump rule,
+join the acquired HMZ layer to the block/AU geometry, and replace the synthetic
+dataset with a KC-calibrated compile.
 
 The policy pilot in ``ws4/policy_pilot_v0/`` is also a Table 29 structural
 scenario. It shows the trade-off between large-tree retention and total BA, but
