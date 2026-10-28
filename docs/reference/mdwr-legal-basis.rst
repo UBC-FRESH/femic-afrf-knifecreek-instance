@@ -262,6 +262,18 @@ The legacy ``ws4/state_library_v0`` was built on Table 29 and is not the default
 basis. A legal-basis rebuild should be ``state_library_v1`` with an explicit
 ``basis=GWM_2007`` in the state key and manifest.
 
+First GWM pilot
+---------------
+
+``ws4/gwm_pilot_v0`` is the first stand-structure feasibility test: five
+PSP-derived conditional stands × three GWM classes × two methods. It passes
+17/30 checks. Retain-above-D passes 13/15; the D-protected split passes 4/15.
+The split preserves max DBH but leaves the >D reserve, so q is too high in most
+High and Moderate cases. A full-range split meets q but strips the largest
+trees and leaves max DBH below D. A tree-level reserve/marking rule is needed
+before a legal-basis state library can be compiled. This is not a compliance
+result.
+
 What is not established
 -----------------------
 

@@ -30,10 +30,12 @@ large_tree_policy:
   default_method: split_large_small
   note: >-
     Surplus large trees above the legal minimum (16/11/6 m2/ha above 37.5 cm)
-    are harvestable. The default cut first removes surplus large trees with
-    THINABA above 37.5 cm to the minimum, then thins 0-37.5 cm with THINQFA to
-    B minus the retained large-tree BA. A retain-all-above-D variant is a
-    sensitivity, not the default.
+    are harvestable, but the legal D floor must be preserved. The default FVS
+    cut removes surplus in the 37.5-D cm range with THINABA to the minimum,
+    then thins 0-37.5 cm with THINQFA to B minus the retained large-tree BA.
+    Trees above D are the reserve. Harvesting surplus above D requires a
+    tree-level reserve rule that FVS does not provide; a full-range THINABA is
+    a sensitivity. A retain-all-above-D variant is also a sensitivity.
 
 source:
   document: Alex Fraser Research Forest Management and Working Plan #3

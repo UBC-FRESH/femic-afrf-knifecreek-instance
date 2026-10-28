@@ -10,9 +10,11 @@
 # targets. Do not mix the two bases in one state graph.
 #
 # Default cut method: split_large_small. THINABA removes surplus large trees
-# above 37.5 cm to the legal minimum large-tree BA; THINQFA then thins the
-# 0-37.5 cm component to B minus the retained large-tree BA. This implements
-# the decision that surplus large trees above the minimum are harvestable.
+# in the 37.5-D cm range to the legal minimum large-tree BA; trees above D
+# remain as the reserve. THINQFA then thins the 0-37.5 cm component to B minus
+# the retained large-tree BA. Harvesting surplus above D requires a tree-level
+# reserve rule that FVS does not provide; the pilot tests the D-protected cut.
+# A full-range THINABA to 999 is a sensitivity, not the default.
 #
 # THINQFA implements the BDq target. The BC variant converts fields 2
 # (minimum DBH), 3 (maximum DBH) and 6 (class width) from centimetres to
@@ -51,7 +53,7 @@ gwm_2007_regimes:
           target_ba_m2_ha: 16.0
           cutting_efficiency: 1.0
           min_dbh_cm: 37.5
-          max_dbh_cm: 999.0
+          max_dbh_cm: 70.0
           min_height_m: 0.0
           max_height_m: 999.0
       - name: THINQFA
@@ -103,7 +105,7 @@ gwm_2007_regimes:
           target_ba_m2_ha: 11.0
           cutting_efficiency: 1.0
           min_dbh_cm: 37.5
-          max_dbh_cm: 999.0
+          max_dbh_cm: 60.0
           min_height_m: 0.0
           max_height_m: 999.0
       - name: THINQFA
@@ -152,7 +154,7 @@ gwm_2007_regimes:
           target_ba_m2_ha: 6.0
           cutting_efficiency: 1.0
           min_dbh_cm: 37.5
-          max_dbh_cm: 999.0
+          max_dbh_cm: 50.0
           min_height_m: 0.0
           max_height_m: 999.0
       - name: THINQFA

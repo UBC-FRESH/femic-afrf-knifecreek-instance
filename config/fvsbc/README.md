@@ -17,10 +17,15 @@ minimum are harvestable.
 - `SEL_GWM_MODERATE` — B 22, BA >37.5 ≥11, D ≥60, q 1.25; and
 - `SEL_GWM_LOW` — B 16, BA >37.5 ≥6, D ≥50, q 1.30.
 
-Each regime runs `THINABA` above 37.5 cm to the large-tree minimum, then
-`THINQFA` on 0–37.5 cm to `B − large-tree BA`. For High, the small-tree target
-is 13 m²/ha, or 56.63 ft²/ac. The Table 2 reserve above D is 0–2.9/0–2.2/0–1.6
-m²/ha.
+Each regime runs `THINABA` in the 37.5–D cm range to the large-tree minimum,
+leaving trees above D as the reserve, then `THINQFA` on 0–37.5 cm to
+`B − large-tree BA`. For High, the small-tree target is 13 m²/ha, or
+56.63 ft²/ac. The Table 2 reserve above D is 0–2.9/0–2.2/0–1.6 m²/ha.
+
+The first GWM pilot is in `../../ws4/gwm_pilot_v0/`. It passes 17/30
+stand-structure checks. The D-protected split leaves the >D reserve and fails q
+in most High/Moderate cases; a tree-level reserve/marking rule is needed to
+harvest surplus above D without stripping the D floor.
 
 A retain-all-above-D variant, `SEL_GWM_HIGH_RETAIN`, is a sensitivity. It is
 not the default because it forgoes the surplus large-tree harvest.
