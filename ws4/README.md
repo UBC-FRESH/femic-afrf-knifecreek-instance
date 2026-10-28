@@ -47,11 +47,12 @@ A synthetic ws4 validation dataset is in `dataset_v1_synthetic/`: 4 synthetic
 1 ha blocks, 23 tracks, 25 treatments and 575 curves from the canonical GWM
 2007 graph. `ws4 validate` passes.
 
-A spatial structural dataset is in `dataset_kc_spatial_v1/`: 160 clipped VRI
+A spatial structural dataset is in `dataset_kc_spatial_v2/`: 160 clipped VRI
 blocks (3,481.77 ha), 92 HMZ-specific tracks, 49 treatments. HMZ M/L/U track
-offers are enforced. `ws4 validate` passes. It is closer to a KC dataset but
-still uses PSP-derived tree lists, not KC CFI. See
-`dataset_kc_spatial_v1/README.md`.
+offers are enforced, and block groups carry observed LidarBC clump classes:
+29 `<10`, 54 `10–20`, 68 `20–30`, 9 `30+` clumps/ha. `ws4 validate` passes. It
+is closer to a KC dataset but still uses PSP-derived tree lists, not KC CFI. See
+`dataset_kc_spatial_v2/README.md`.
 
 The contract is in `state_transition_contract.md`; the target and
 patch-account files remain templates.
@@ -67,6 +68,7 @@ patch-account files remain templates.
 | `gwm_pilot_v0/` | GWM 2007 legal-basis stand-structure pilot |
 | `dataset_v1_synthetic/` | Synthetic ws4 validation dataset |
 | `dataset_kc_spatial_v1/` | Spatial VRI/HMZ structural dataset |
+| `dataset_kc_spatial_v2/` | v1 plus observed LiDAR clump classes |
 | `targets.template.yaml` | Harvest and habitat target template |
 | `patch_accounts.template.yaml` | Selection-opening patch account template |
 | `topology.csv` | Block topology, once the boundary exists |

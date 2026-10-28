@@ -126,6 +126,23 @@ Clumps for trees ≥20 m:
 The 10 m linkage is the useful scale. The full run is in
 ``data/lidar/kc_2024/``.
 
+Block-level features
+--------------------
+
+`runbooks/lidar_block_features.py` joins the tree points to clipped VRI blocks
+and writes ``data/lidar/kc_2024/block_tree_summary.csv``. All 160 spatial
+dataset blocks have LiDAR coverage.
+
+- mean tree density: 77.2 TPH;
+- mean large-tree density: 39.1 TPH (≥20 m);
+- mean 4–10-tree clump density: 18.2 clumps/ha;
+- 6,043 within-block 4–10-tree clumps.
+
+`ws4/dataset_kc_spatial_v2` adds the observed clump class to each block group:
+29 blocks `<10`, 54 `10–20`, 68 `20–30`, 9 `30+` clumps/ha. The FVS treatment
+reserve is still the DBH-ranked proxy; the LiDAR clumps are now block-level
+features, not yet the tree-level reserve marking.
+
 Next
 ----
 

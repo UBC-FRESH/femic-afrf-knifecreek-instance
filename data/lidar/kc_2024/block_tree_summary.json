@@ -1,0 +1,16 @@
+{
+  "blocks": 160,
+  "blocks_with_lidar": 160,
+  "area_ha": 3481.77359050953,
+  "covered_area_ha": 3481.77359050953,
+  "mean_tph": 77.19028785098047,
+  "mean_large_tph": 39.1467371413808,
+  "mean_clumps_4_10_per_ha": 18.180533304564193,
+  "total_clumps_4_10": 6043,
+  "caveats": [
+    "LiDAR canopy features only; no species, understory or measured DBH.",
+    "DBH and BA are height-allometry estimates, not calibration targets.",
+    "Clumps use 10 m linkage for trees >=20 m within each VRI polygon.",
+    "Polygon-edge clumps can be split across block boundaries."
+  ]
+}

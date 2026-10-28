@@ -260,8 +260,12 @@ LidarBC discovery over the SUP found 134 point-cloud tiles, 76 DEM and 72 DSM
 tiles. All 72 2024 DEM/DSM pairs were downloaded; 28 tiles intersect the SUP enough to
 produce clipped trees. The merged inventory has 278,318 canopy trees over
 3,533.13 ha (78.8 TPH; height mean 19.5 m, p95 28.6 m). At 10 m linkage for
-trees ≥20 m: 50,401 clumps, 6,046 4–10-tree clumps, 30,214 singletons. This is
-a canopy inventory, not a CFI: no species, understory or measured DBH. See
+trees ≥20 m: 50,401 clumps, 6,046 4–10-tree clumps, 30,214 singletons. Block-
+level features are in `data/lidar/kc_2024/block_tree_summary.csv`; all 160
+spatial blocks are covered, with mean 18.2 4–10-tree clumps/ha. `ws4/
+dataset_kc_spatial_v2` groups blocks by observed clump class (29 `<10`, 54
+`10–20`, 68 `20–30`, 9 `30+`). This is a canopy inventory, not a CFI: no
+species, understory or measured DBH. See
 `notes/reference/lidarbc-kc-pilot.md`.
 
 ### Maps

@@ -180,7 +180,7 @@ def main() -> None:
             "tile": raw["tile"],
         },
         geometry=gpd.points_from_xy(raw["x"], raw["y"]),
-        crs=3005,
+        crs=6653,
     )
     trees.to_file(args.out_dir / "trees.gpkg", driver="GPKG")
     trees.drop(columns="geometry").to_csv(args.out_dir / "trees.csv", index=False)
@@ -212,6 +212,7 @@ def main() -> None:
             "max": float(trees["dbh_cm_est"].max()),
         },
         "large_trees_ge20m": int((heights >= 20).sum()),
+        "crs": "EPSG:6653",
         "allometry_log_dbh": {"intercept": float(intercept), "slope": float(slope)},
         "caveats": [
             "Canopy tree inventory, not a CFI: no species, understory or measured DBH.",

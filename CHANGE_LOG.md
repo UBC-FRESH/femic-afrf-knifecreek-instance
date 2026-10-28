@@ -273,3 +273,9 @@ status and the GitHub issue comments.
   278,318 canopy trees, 78.8 TPH, height mean 19.5 m, 117,297 trees ≥20 m.
   At 10 m linkage, 50,401 clumps and 6,046 4–10-tree clumps. The inventory is
   still canopy-only, with height-allometry DBH and no species/understory.
+- P3.3 LiDAR block features: added `runbooks/lidar_block_features.py` and
+  `data/lidar/kc_2024/block_tree_summary.csv`. All 160 spatial blocks have
+  LiDAR coverage; mean 77.2 TPH, 39.1 large TPH (≥20 m), 18.2 4–10-tree
+  clumps/ha. Added `ws4/dataset_kc_spatial_v2/` with block group clump classes
+  (29 `<10`, 54 `10–20`, 68 `20–30`, 9 `30+` clumps/ha); `ws4 validate`
+  passes. The FVS treatment reserve remains the DBH-ranked proxy.
