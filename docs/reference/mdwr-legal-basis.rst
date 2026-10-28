@@ -270,9 +270,15 @@ PSP-derived conditional stands × three GWM classes × two methods. It passes
 17/30 checks. Retain-above-D passes 13/15; the D-protected split passes 4/15.
 The split preserves max DBH but leaves the >D reserve, so q is too high in most
 High and Moderate cases. A full-range split meets q but strips the largest
-trees and leaves max DBH below D. A tree-level reserve/marking rule is needed
-before a legal-basis state library can be compiled. This is not a compliance
-result.
+trees and leaves max DBH below D.
+
+The selected rule is therefore a post-FVS clump reserve: run the retain-above-D
+BDq cut, group mature trees into 4–10-tree clumps, reserve the largest 2–5 trees
+above D per clump, and harvest the rest above D. With a DBH-ranked six-tree
+proxy, this passes **13/15** cases (High 3/5, Moderate 5/5, Low 5/5) and
+harvests 1.07/2.64/5.12 m²/ha of large BA on average. The two High failures are
+the low-large-tree starting stands. This is a retrospective marking scenario,
+not a new FVS growth run, and not a compliance result.
 
 What is not established
 -----------------------
