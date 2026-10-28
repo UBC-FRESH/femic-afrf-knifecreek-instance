@@ -15,9 +15,10 @@ There is no clearcut treatment in the default model.
 
 The provisional structural library is in `state_library_v0/`: 8 initial
 states, 6 residual states, 48 selection transitions and 192 interval curves,
-built from the PSP-derived IDF Cariboo analog. It is **not** a compiled ws4
-dataset and the residual graph is not closed. See
-`state_library_v0/README.md`.
+built from the PSP-derived IDF Cariboo analog. It is a **legacy Table 29**
+library, not the default GWM 2007 basis. It is **not** a compiled ws4 dataset
+and the residual graph is not closed. See `state_library_v0/README.md`. The
+next library is `state_library_v1` with `basis=GWM_2007`.
 
 A veteran/large-tree retention policy pilot is in `policy_pilot_v0/`: four
 policies on two PSP-derived conditional stands, showing the trade-off between
@@ -28,8 +29,11 @@ interlocking crowns**, not 2–5; the 2–5 figure is the maximum-diameter subgr
 It is not approved policy. Policy definitions are in
 `../config/retention_policies.yaml`. The public PSP stem maps are too sparse for
 empirical clump geometry; see `../notes/reference/psp-stem-map-limits.md`.
-The legal order and the AFRF Table 29 differ on D and large-tree BA; see
-`../notes/reference/mdwr-canopy-clump-requirements.md`.
+The legal order and the AFRF Table 29 differ on D and large-tree BA. GWM 2007 is
+the default basis and Table 29 is a named alternative; see
+`../notes/reference/mdwr-canopy-clump-requirements.md`,
+`../docs/reference/mdwr-legal-basis.rst` and
+`../docs/guides/mdwr-habitat-constraints.rst`.
 
 The contract is in `state_transition_contract.md`; the target and
 patch-account files remain templates.
@@ -39,7 +43,8 @@ patch-account files remain templates.
 | File | Purpose |
 | --- | --- |
 | `state_transition_contract.md` | The table and identifier contract |
-| `state_library_v0/` | Provisional FVS-BC transition library |
+| `state_library_v0/` | Legacy Table 29 transition library |
+| `state_library_v1/` | Planned GWM 2007 legal-basis transition library |
 | `policy_pilot_v0/` | Veteran/large-tree retention policy pilot |
 | `targets.template.yaml` | Harvest and habitat target template |
 | `patch_accounts.template.yaml` | Selection-opening patch account template |

@@ -26,7 +26,9 @@ In scope:
 - FVS-BC selection-cut runs and their per-tree, cut-list, structural, and
   summary outputs;
 - a state-transition library and its ws4 translation;
-- a baseline selection schedule and scenario comparison; and
+- a baseline selection schedule and scenario comparison;
+- GWM 2007 as the default MDWR basis, with Table 29 as a named AFRF
+  alternative; and
 - documentation of the data publication and merge boundaries.
 
 Out of scope until a later phase:
@@ -53,7 +55,10 @@ BEC and site-series map       Analysis-unit stratification and FVS-BC site
                               input.
 Disturbance history           The 2013 wildfire and harvest history that shape
                               current structure.
-Mule-deer winter-range map    Spatial constraints and habitat indicators.
+Mule-deer winter-range map    Legal UWR/HMZ spatial constraints and habitat
+                              indicators. The 2007 order text and 2003
+                              transition plan are acquired; the spatial layer
+                              is still required.
 CFI / tree-level tallies      Measured or reconstructed stem distributions.
 nemora outputs                Synthetic stem populations where measured tree
                               lists are unavailable.
@@ -84,6 +89,11 @@ Every derived surface must be reproducible from:
 - the ws4 build command and target set.
 
 No run is complete until that chain is recorded.
+
+The policy basis is part of the chain. A GWM 2007 run and a Table 29 run are
+different products; the state key or manifest must say which basis was used.
+The legal order and HMZ text are not a compliance claim without the spatial
+UWR layer.
 
 Relationship to Gavin Lake
 ---------------------------

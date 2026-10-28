@@ -1,23 +1,44 @@
 FVS-BC configuration
 ====================
 
-`regimes.yaml` holds the Knife Creek selection regimes. The residual-structure
-targets now come from the AFRF Management and Working Plan #3, Table 29; the
-policy contract is in `../mdwr_regimes.yaml` and the context note is
-`../../notes/reference/mwp3-kc-management-direction.md`.
+`regimes.yaml` holds the Knife Creek selection regimes. The default basis is
+**GWM 2007** (Amended Order #U-5-001/2/3, Shallow and Moderate Snowpack). The
+AFRF MWP #3 Table 29 regimes are a named alternative under
+`afrf_table29_regimes`. The policy contract is in `../mdwr_regimes.yaml`; the
+legal note is `../../notes/reference/mdwr-canopy-clump-requirements.md`.
 
-The three regimes are:
+Default GWM 2007 regimes
+------------------------
 
-- `SEL_MDWR_HIGH` — B 29 m²/ha, D 60 cm, q 1.25, 30-year cycle;
-- `SEL_MDWR_MODERATE` — B 22 m²/ha, D 55 cm, q 1.25, 30-year cycle; and
-- `SEL_MDWR_LOW` — B 16 m²/ha, D 50 cm, q 1.30, 30-year cycle.
+The default is a split large/small cut. Surplus large trees above the legal
+minimum are harvestable.
 
-They are reviewed policy targets but they are **not yet runnable**. The pilot
-must resolve:
+- `SEL_GWM_HIGH` — B 29 m²/ha, BA >37.5 ≥16, D ≥70, q 1.25;
+- `SEL_GWM_MODERATE` — B 22, BA >37.5 ≥11, D ≥60, q 1.25; and
+- `SEL_GWM_LOW` — B 16, BA >37.5 ≥6, D ≥50, q 1.30.
 
-1. the KC stem list; and
-2. whether a full-range BDq cut or the small-tree variant better matches the
-   plan's “concentrate below 37.5 cm DBH” wording.
+Each regime runs `THINABA` above 37.5 cm to the large-tree minimum, then
+`THINQFA` on 0–37.5 cm to `B − large-tree BA`. For High, the small-tree target
+is 13 m²/ha, or 56.63 ft²/ac. The Table 2 reserve above D is 0–2.9/0–2.2/0–1.6
+m²/ha.
+
+A retain-all-above-D variant, `SEL_GWM_HIGH_RETAIN`, is a sensitivity. It is
+not the default because it forgoes the surplus large-tree harvest.
+
+Table 29 alternative
+--------------------
+
+`afrf_table29_regimes` keeps the AFRF management-plan comparison:
+
+- `SEL_MDWR_HIGH` — B 29, D 60, q 1.25;
+- `SEL_MDWR_MODERATE` — B 22, D 55, q 1.25; and
+- `SEL_MDWR_LOW` — B 16, D 50, q 1.30.
+
+These are not legal compliance. They use lower D and omit the legal BA >37.5
+targets and reserve. Do not mix them with GWM states in one graph.
+
+Keyword notes
+-------------
 
 `THINQFA` is the right keyword because it encodes BDq directly. `THINBTA` is
 not a basal-area target; it is a thin-from-below to a trees-per-acre target.
@@ -28,14 +49,12 @@ Resolved wrapper gap
 --------------------
 
 `fresh-fvsbc` P42.1 added `Keyword.supplemental` and
-`SUPPLEMENTAL_KEYWORDS`, so the wrapper now writes `THINQFA`'s one-line
+`SUPPLEMENTAL_KEYWORDS`, so the wrapper writes `THINQFA`'s one-line
 residual-density-units record with no `END` terminator. The KC pin is
-`d86e78b0fc31386684aae1a0a1a9a821c0ee2baf` (post-v0.12.0 main). The
-supplemental record is no longer the blocker.
+`d86e78b0fc31386684aae1a0a1a9a821c0ee2baf` (post-v0.12.0 main).
 
 A synthetic pilot settled the entry year: cycle 2 with `TIMEINT=,30` and
-`NUMCYCLE=2` applies the cut at year 30. The full-range vs small-tree choice
-and the KC stem list remain.
+`NUMCYCLE=2` applies the cut at year 30. The KC stem list remains the blocker.
 
 THINQFA units in BC
 -------------------
@@ -44,16 +63,20 @@ THINQFA units in BC
 (maximum DBH) and 6 (class width) from **centimetres to inches**. The keyword
 guide's inches are the base variant's convention. The KC templates therefore
 store those three fields in centimetres. The residual-density target is square
-feet per acre: 126.32 is 29 m²/ha, 95.83 is 22 m²/ha, and 69.70 is 16 m²/ha.
+feet per acre: 56.63 is 13 m²/ha, 47.92 is 11 m²/ha, and 43.56 is 10 m²/ha.
 
-The synthetic pilot is `../../notes/reference/fvsbc-thinqfa-pilot.md`.
+`THINABA` field 2 is m²/ha and its DBH fields are cm. The synthetic pilot is
+`../../notes/reference/fvsbc-thinqfa-pilot.md`.
 
 Benchmark
 ---------
 
+The default legal targets are in `../../data/benchmarks/mdwr_gwm2007_targets.csv`,
+`..._clump.csv` and `..._knife_creek_hmz.csv`.
+
 `data/benchmarks/mwp3_figure11_target_stand_structure.csv` is the recovered
-Figure 11 target diameter distribution. Use Table 29 for the residual B/D/q
-contract and Figure 11 for the shape. The recovered basal-area sums are
+Figure 11 target diameter distribution. Use it for the AFRF Table 29 shape
+comparison, not the legal curve. The recovered basal-area sums are
 17.02/22.96/30.17 m²/ha for Low/Moderate/High, slightly above the Table 29
 targets; report the difference rather than rescaling the figure.
 

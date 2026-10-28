@@ -16,8 +16,9 @@ chat transcript.
 - Knife Creek uses FVS-BC because it is an uneven-aged, continuous-cover
   selection forest. VDYP and TIPSY are not the primary KC engine.
 - KC has a strict mule-deer wintering-habitat constraint. No clearcuts or
-  even-aged silviculture. Do not claim legal compliance without the approved
-  UWR order and the 2003 transition strategy.
+  even-aged silviculture. The 2007 GWM order and 2003 transition plan are
+  acquired; do not claim legal compliance without the spatial UWR/HMZ layer
+  and the current approved order.
 - Do not infer scenario-parameter intent. The user is the domain expert; ask
   about modelling intent. A deliberately unattainable minimum with a linear
   penalty, paired with even-flow, is a legitimate pull-up technique.
@@ -45,7 +46,8 @@ chat transcript.
 | FAIB PSP-derived IDF Cariboo stem lists | `data/psp/` | acquired synthetic analog |
 | KC CFI or released tree list | — | still required |
 | Georeferenced site-series map | — | blocked |
-| Approved UWR order + 2003 transition strategy | — | blocked |
+| 2007 GWM order + 2003 transition strategy | `/srv/shared-data/gep/ws4/sources/afrf-mule-deer/` | acquired; spatial UWR/HMZ layer still required |
+| GWM 2007 legal targets and clump rules | `data/benchmarks/mdwr_gwm2007_*.csv` | extracted |
 
 ### Gavin Lake
 
@@ -72,7 +74,26 @@ chat transcript.
 
 ### Knife Creek management contract
 
-MWP #3 Table 29:
+ADR 0005 makes **GWM 2007 the default** and keeps **AFRF_MWP3_TABLE29** as a
+named alternative. Surplus large trees above the legal minimum are harvestable.
+
+Legal GWM 2007 targets (IDFdk3/IDFdw):
+
+| Habitat | B | BA >37.5 | D | q | Reserve above D |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| High | ≥29 m²/ha | ≥16 m²/ha | ≥70 cm | 1.20–1.35 | 0–2.9 m²/ha |
+| Moderate | ≥22 | ≥11 | ≥60 | 1.25–1.35 | 0–2.2 |
+| Low | ≥16 | ≥6 | ≥50 | 1.25–1.40 | 0–1.6 |
+
+- GWM 10 clumps: 4–10 or more mature trees with interlocking crowns; the
+  maximum-diameter subgroup is 2–5 trees.
+- Canopy openings 0.3–1.0 tree heights, mean 0.5; cutting cycle ≥30 years.
+- Before 2026, retain ≥80% of pre-harvest merchantable Douglas-fir BA.
+- Knife Creek HMZ 1–5: M, L, M, M, A.
+- Typical thinning yield ~50 m³/ha; AAC 82.0 ha/yr selection + 11.2 ha/yr
+  salvage.
+
+AFRF Table 29 alternative:
 
 | Habitat | Residual B | Max DBH | q | Cycle |
 | --- | ---: | ---: | ---: | ---: |
@@ -80,12 +101,10 @@ MWP #3 Table 29:
 | Moderate | 22 m²/ha | 55 cm | 1.25 | 30 |
 | Low | 16 m²/ha | 50 cm | 1.30 | 30 |
 
-- Single-tree selection, small groups of 2–5 trees at maximum D.
-- Concentrate removals below 37.5 cm DBH; typical thinning yield ~50 m³/ha.
-- AAC: 82.0 ha/yr selection + 11.2 ha/yr salvage.
-- Plan outcome: 0% conventional, 95% modified, 5% no harvest.
-- Areas differ by source: Table 32 net 3,117 ha; Appendix 9 net 3,162.3 ha;
-  SUP 3,533.1341 ha. Record, do not reconcile silently.
+Table 29 matches the legal total B but uses lower D (60/55/50 vs 70/60/50) and
+omits the legal BA >37.5 targets and reserve. It is an AFRF interpretation, not
+legal compliance. Areas differ by source: Table 32 net 3,117 ha; Appendix 9 net
+3,162.3 ha; SUP 3,533.1341 ha. Record, do not reconcile silently.
 
 ### Figure 11
 
@@ -94,7 +113,8 @@ MWP #3 Table 29:
 - BA sums: Low `17.02`, Moderate `22.96`, High `30.17` m²/ha versus Table 29
   `16/22/29`. The difference is recorded, not forced.
 - Recovered density implies q `1.306/1.254/1.253` versus `1.30/1.25/1.25`.
-- Table 29 is the policy target; Figure 11 is the relative shape.
+- Table 29 is the AFRF shape comparison; the GWM tables are the legal default.
+  Figure 11 is the relative shape.
 - Klinka 2004's figures are photographs and diagrams, not quantitative charts;
   the site-index tables were transcribed directly.
 
@@ -103,9 +123,10 @@ MWP #3 Table 29:
 - `THINQFA` is the correct BDq keyword. `THINBTA` is a trees-per-acre target,
   not a basal-area target.
 - The BC variant converts `THINQFA` fields 2, 3 and 6 (minimum DBH, maximum
-  DBH, class width) from **cm to inches** in `canada/bc/initre.f`. The KC
-  templates use cm (`0.0`, `60/55/50`, `5.0`). The residual target is ft²/ac
-  (`126.32/95.83/69.70`).
+  DBH, class width) from **cm to inches** in `canada/bc/initre.f`. GWM 2007
+  uses `THINABA` above 37.5 cm to the large-tree minimum, then `THINQFA` on
+  0–37.5 cm. Table 29 uses full-range `THINQFA` with D 60/55/50. Both store
+  those fields in cm; the residual target is ft²/ac.
 - The supplemental record is `0` BA/ac, `1` TPA, `2` SDI; it has no `END`.
 - Entry cycle: cycle 1 = year 0; cycle 2 with `TIMEINT=,30` = year 30; cycle 4
   with 10-year periods also = year 30.
@@ -137,8 +158,9 @@ MWP #3 Table 29:
 
 ### State-transition library v0
 
-`ws4/state_library_v0/` is a provisional transition library from eight
-PSP-derived stands × three Table 29 regimes × two 30-year entries:
+`ws4/state_library_v0/` is a **legacy Table 29** transition library from eight
+PSP-derived stands × three Table 29 regimes × two 30-year entries. It is not
+the default GWM 2007 basis:
 
 - 8 initial states, 6 residual states, 48 transitions, 192 curves;
 - mean residual BA: High 33.31, Moderate 29.19, Low 25.94 m²/ha against
@@ -146,7 +168,8 @@ PSP-derived stands × three Table 29 regimes × two 30-year entries:
 - mean residual q: 1.284/1.255/1.296 against 1.25/1.25/1.30;
 - mean residual maximum DBH about 73.6 cm against 60/55/50;
 - the graph is not closed and the residual states are terminal;
-- it is not a compiled ws4 dataset and not KC-calibrated.
+- it is not a compiled ws4 dataset and not KC-calibrated;
+- a legal-basis rebuild should be `state_library_v1` with `basis=GWM_2007`.
 
 The residual BA and maximum DBH exceed the targets because the source stands
 contain trees above the Table 29 maximum DBH and because q deficits limit the
@@ -161,10 +184,11 @@ m²/ha of large trees in the cases with an after-treatment tree list. Clump
 count and crown-cover proxies scale with the large-tree target.
 
 `ws4/policy_pilot_v0/clump_scenarios.csv` adds 276 geometric clump scenarios:
-the retained large-tree TPH is placed in 2–5 tree clumps at 3, 5 or 7 m radius.
-Tight 3 m clumps of 3+ trees close the clump canopy but cover less of the stand;
-looser clumps raise total cover while losing local closure. These are scenario
-axes, not approved MDWR policy, and not a snow-interception model.
+the retained large-tree TPH is placed in **4, 6, 8 or 10** tree clumps at 3, 5
+or 7 m radius. GWM 10 requires 4–10 or more mature trees with interlocking
+crowns. With 4–10-tree clumps, within-clump closure is high (0.86–0.98 at 3 m)
+while total stand cover is lower. These are scenario axes, not approved MDWR
+policy, and not a snow-interception model.
 
 The public PSP stem maps are too sparse for empirical clump geometry: of the 45
 stable plots, 11 are fully mapped, 3 have any mapped tree ≥50 cm, and only one
@@ -172,11 +196,14 @@ has more than one (four trees). See `notes/reference/psp-stem-map-limits.md`.
 Use KC CFI/tree lists or the approved UWR material when available.
 
 The 2007 shallow/moderate GWM order and the 2003 Knife Creek transition plan
-were located after the first clump pilot. GWM 10 requires clumps of 4–10 or more
-mature trees with interlocking crowns, not 2–5; the 2–5 figure in MWP #3 is the
-maximum-diameter subgroup. The legal stand-level targets are BA >37.5 cm
-≥16/11/6 m²/ha and Table 2 D ≥70/60/50 for High/Moderate/Low. MWP #3 Table 29
-uses lower D (60/55/50) and is an AFRF interpretation, not the legal curve.
+were located after the first clump pilot. ADR 0005 makes **GWM 2007 the
+default** and keeps **AFRF_MWP3_TABLE29** as a named alternative. Surplus large
+trees above the legal minimum are harvestable (default split cut). GWM 10
+requires clumps of 4–10 or more mature trees with interlocking crowns, not
+2–5; the 2–5 figure in MWP #3 is the maximum-diameter subgroup. The legal
+stand-level targets are BA >37.5 cm ≥16/11/6 m²/ha and Table 2 D ≥70/60/50 for
+High/Moderate/Low. MWP #3 Table 29 uses lower D (60/55/50) and is an AFRF
+interpretation, not the legal curve.
 The Knife Creek HMZ matrix is HMZ 1 M, 2 L, 3 M, 4 M, 5 A; the order also has a
 north-facing >20% slope, >10 ha exemption in the Moderate Snowpack zone. Do not
 claim legal compliance without the UWR spatial layer. See
@@ -210,10 +237,17 @@ see `notes/reference/kc-general-map-2014.md`.
 | KC | #27 / `78d71cb` | PSP-derived IDF Cariboo stem lists |
 | KC | #28 / `2b7c005` | Pin `nemora` |
 | KC | #29 / `c39e8b3` | Weibull QMD/TPA regression + conditional lists |
+| KC | #30 / `1057094` | Persistent public-data/FVS-BC handoff |
+| KC | #31 / `1da9050` | 2014 general-map note |
+| KC | #32 / `97b62e3` | State-transition library v0 |
+| KC | #33 / `c1e4c3c` | Veteran-retention policy pilot |
+| KC | #34 / `bf62b8f` | Clump geometry + PSP stem-map limits |
+| KC | #35 / `62c460b` | MDWR legal basis correction |
 | Gavin | #23 / `d04c8bb` | Klinka site index + GL AAC |
 | FEMIC | #420, #423–#425 | Register/bump AFRF submodules |
 | FEMIC | #428, #429, #430 | Benchmark, map note, THINQFA pin |
 | FEMIC | #432, #433, #434, #435 | Unit correction, PSP lists, nemora pin, regression |
+| FEMIC | #438, #439, #440, #442 | State v0, policy pilot, clump geometry, legal basis |
 | `fresh-fvsbc` | #190 / `d86e78b` | P42.1 THINQFA supplemental record |
 
 `nemora` used for the PSP fits: commit
@@ -223,15 +257,15 @@ see `notes/reference/kc-general-map-2014.md`.
 
 1. KC CFI or a released tree list. The PSP analog is regional, not KC.
 2. Georeferenced AFRF site-series map. The Klinka maps are in pockets/CD-ROM.
-3. Approved UWR boundary and legal mule-deer objectives.
-4. The 2003 CCLUP Knife Creek transition strategy.
-5. FVS-BC calibration for KC. No calibrated KC case exists.
-6. `fresh-fvsbc` upstream documentation still describes `THINQFA` generically;
+3. Legal UWR/HMZ spatial layer. The 2007 order text and HMZ matrix are
+   acquired; the spatial boundary and stand-structure/HMZ GIS layer are not.
+4. FVS-BC calibration for KC. No calibrated KC case exists.
+5. `fresh-fvsbc` upstream documentation still describes `THINQFA` generically;
    the BC cm conversion is recorded here and in PR #190's comment, but a
    package doc/test follow-up remains.
-7. `fresh-fvsbc` P42 roadmap closeout is still marked active, although the code
+6. `fresh-fvsbc` P42 roadmap closeout is still marked active, although the code
    is merged.
-8. FEMIC has unrelated uncommitted lidar/tfl6 work in the local checkout; do
+7. FEMIC has unrelated uncommitted lidar/tfl6 work in the local checkout; do
    not fold it into AFRF changes.
 
 ## What to request from Ionut / AFRF
@@ -239,8 +273,8 @@ see `notes/reference/kc-general-map-2014.md`.
 - CFI/PSP tree tallies for KC and Gavin: plot coordinates, design, species,
   DBH, height, crown, age, site index, damage, measurement dates.
 - Georeferenced site-series/ecosystem polygons.
-- Approved UWR boundary and legal mule-deer objectives.
-- 2003 Knife Creek transition strategy.
+- Legal UWR/HMZ spatial layer and current approved order at the time of a
+  compliance claim.
 - Appendix 9 compartment/harvest-unit/reserve/OGMA polygons.
 - Cutblock/opening polygons with harvest type/date, roads, fire severity and
   salvage.
@@ -250,12 +284,16 @@ see `notes/reference/kc-general-map-2014.md`.
 
 ## Next moves
 
-1. Ingest the Ionut dump when it arrives and replace the regional PSP analog
+1. Run a GWM 2007 legal-basis pilot on the conditional PSP stands and check
+   whether High BA >37.5 ≥16 is reachable.
+2. Rebuild the state-transition library as `state_library_v1` with
+   `basis=GWM_2007`; keep v0 as the Table 29 legacy comparison.
+3. Add the HMZ spatial constraint and the 4–10-tree clump/canopy-opening
+   post-processing to the ws4 compile.
+4. Ingest the Ionut dump when it arrives and replace the regional PSP analog
    with KC CFI where possible.
-2. Build KC AU strata and the FVS-BC state-transition library (P1.4/P2).
-3. Use the conditional PSP lists for structural tests until then.
-4. Add a `fresh-fvsbc` package note/test for the BC THINQFA cm fields.
-5. Do not claim legal UWR compliance, calibration, or infinite information.
+5. Add a `fresh-fvsbc` package note/test for the BC THINQFA cm fields.
+6. Do not claim legal UWR compliance, calibration, or infinite information.
 
 ## Reproduction
 

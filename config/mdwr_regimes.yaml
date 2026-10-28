@@ -10,6 +10,31 @@
 # stems >=37.5 cm >= 16/11/6 m2/ha for High/Moderate/Low. Both bases are
 # represented here. See notes/reference/mdwr-canopy-clump-requirements.md.
 
+default_basis: GWM_2007
+basis_options:
+  GWM_2007:
+    block: legal_gwm_2007
+    legal: true
+    default: true
+    label: 2007 GWM legal basis
+  AFRF_MWP3_TABLE29:
+    block: habitat_classes
+    legal: false
+    default: false
+    label: AFRF MWP #3 Table 29 interpretation
+
+large_tree_policy:
+  basis: GWM_2007
+  harvest_surplus_above_minimum: true
+  retain_all_above_d: false
+  default_method: split_large_small
+  note: >-
+    Surplus large trees above the legal minimum (16/11/6 m2/ha above 37.5 cm)
+    are harvestable. The default cut first removes surplus large trees with
+    THINABA above 37.5 cm to the minimum, then thins 0-37.5 cm with THINQFA to
+    B minus the retained large-tree BA. A retain-all-above-D variant is a
+    sensitivity, not the default.
+
 source:
   document: Alex Fraser Research Forest Management and Working Plan #3
   date: 2007-01-01
@@ -87,6 +112,8 @@ legal_gwm_2007:
   # Amended Order U-5-001/2/3, Shallow and Moderate Snowpack, Schedule 1
   # GWM 10, Tables 1 and 2. Knife Creek is U-5-002 dwl_50, IDFdk3/IDFdw.
   basis: legal
+  default: true
+  harvest_surplus_large_trees: true
   note: >-
     These are the legal stand-level minima. Table 29 below is the AFRF
     interpretation and uses lower D for High and Moderate; do not present
@@ -142,6 +169,8 @@ legal_gwm_2007:
 habitat_class_basis:
   id: AFRF_MWP3_TABLE29
   legal: false
+  role: afrf_alternative
+  default: false
   note: >-
     The habitat_classes block is the AFRF Table 29 interpretation. The legal
     2007 GWM extraction is in legal_gwm_2007.

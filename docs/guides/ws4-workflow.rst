@@ -49,6 +49,7 @@ The baseline is a selection-only schedule:
 - every block starts on its assigned state track;
 - a block becomes eligible for a selection entry after the cutting cycle;
 - the schedule chooses one reviewed regime per block;
+- the default regime set is GWM 2007, with Table 29 as a named alternative;
 - the run reports harvest, growing stock, habitat indicators, and entry
   frequency; and
 - no clearcut treatment exists in the dataset.
@@ -63,7 +64,8 @@ The first optimization should be a regime-portfolio question:
 
 - choose selection entries by block and period;
 - meet even-flow or non-declining harvest targets;
-- respect the cutting cycle and the mule-deer floors; and
+- respect the cutting cycle, the 4–10-tree clump/opening pattern, and the HMZ
+  floors; and
 - compare the baseline with the optimized schedule.
 
 A global accounting run across Gavin Lake and Knife Creek is a later, merged

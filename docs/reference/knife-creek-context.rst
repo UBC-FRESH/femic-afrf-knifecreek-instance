@@ -37,41 +37,82 @@ Why the silviculture is uneven-aged
 - The model must represent repeated selection entries, residual structure, and
   post-cut growth.
 
-Management direction from MWP #3
---------------------------------
+Management direction
+--------------------
 
-The AFRF Management and Working Plan #3 (2007) makes mule-deer winter habitat
-the primary objective on all Knife Creek compartments. The plan's Table 29
-gives the target residual structure:
+The default Knife Creek model basis is the **2007 GWM order** (Amended Order
+#U-5-001/U-5-002/U-5-003, Shallow and Moderate Snowpack). Knife Creek is
+U-5-002 ``dwl_50``. The AFRF MWP #3 Table 29 values are a named alternative,
+not the legal curve. See :doc:`mdwr-legal-basis`.
+
+Legal stand-level targets for IDFdk3/IDFdw:
 
 .. list-table::
    :header-rows: 1
 
    * - Habitat class
-     - Residual B (m²/ha)
-     - Maximum DBH (cm)
-     - q (5 cm classes)
-     - Cutting cycle (years)
+     - Total BA ≥12.5 cm
+     - BA ≥37.5 cm
+     - Table 2 D
+     - q
+     - Reserve above D
    * - High
-     - 29
-     - 60
-     - 1.25
-     - 30
+     - ≥29 m²/ha
+     - ≥16 m²/ha
+     - ≥70 cm
+     - 1.20–1.35
+     - 0–2.9 m²/ha
    * - Moderate
-     - 22
-     - 55
-     - 1.25
-     - 30
+     - ≥22 m²/ha
+     - ≥11 m²/ha
+     - ≥60 cm
+     - 1.25–1.35
+     - 0–2.2 m²/ha
    * - Low
-     - 16
-     - 50
-     - 1.30
-     - 30
+     - ≥16 m²/ha
+     - ≥6 m²/ha
+     - ≥50 cm
+     - 1.25–1.40
+     - 0–1.6 m²/ha
 
-The silvicultural system is single-tree selection, with small groups of 2–5
-trees at the maximum diameter. Removals concentrate on trees below 37.5 cm DBH;
-the maximum-diameter class is retained in groups. Thinning treatments typically
-produce about 50 m³/ha.
+GWM 10 requires clumps of **4–10 or more mature trees with interlocking
+crowns**, small canopy openings 0.3–1.0 tree heights (mean 0.5), and a minimum
+30-year cutting cycle. MWP #3's 2–5-tree groups are only the maximum-diameter
+subgroup inside the clump.
+
+The AFRF MWP #3 Table 29 alternative is:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Habitat class
+     - Residual B
+     - Maximum DBH
+     - q
+     - Cutting cycle
+   * - High
+     - 29 m²/ha
+     - 60 cm
+     - 1.25
+     - 30 years
+   * - Moderate
+     - 22 m²/ha
+     - 55 cm
+     - 1.25
+     - 30 years
+   * - Low
+     - 16 m²/ha
+     - 50 cm
+     - 1.30
+     - 30 years
+
+Table 29 matches the legal total-B values but uses lower D (60/55/50 vs
+70/60/50) and omits the legal BA >37.5 targets and reserve. Label any Table 29
+run as an AFRF interpretation, not compliance.
+
+The legal Knife Creek HMZ row is HMZ 1–5 = ``M, L, M, M, A``: HMZ 2 is Low-only;
+HMZ 1/3/4 are Low or Moderate; HMZ 5 is all classes. The 2003 transition plan
+and the order text are acquired; the spatial UWR/HMZ layer is still required.
 
 Table 35 gives the Knife Creek AAC as 82.0 ha/year of single-tree selection plus
 11.2 ha/year of salvage. The 2001–2005 actual was 44.3 ha/year partial cut plus
@@ -79,9 +120,8 @@ Table 35 gives the Knife Creek AAC as 82.0 ha/year of single-tree selection plus
 is 0% conventional harvest, 95% modified harvest and 5% no harvest, compared
 with the CCLUP target of 45/50/5.
 
-These are public management-plan values, not the legal UWR order. The 2003
-Knife Creek transition strategy and the approved UWR order are still
-outstanding. The full contract is in ``config/mdwr_regimes.yaml`` and the
+These are public management-plan values; the legal order is the default
+constraint. The full contract is in ``config/mdwr_regimes.yaml`` and the
 context note is ``notes/reference/mwp3-kc-management-direction.md``.
 
 Figure 11 on the same page gives the relative diameter distribution by 5 cm
@@ -89,8 +129,8 @@ class. It was recovered with ``figrecover``; the reviewed table is
 ``data/benchmarks/mwp3_figure11_target_stand_structure.csv``. Its basal-area
 sums are 17.02/22.96/30.17 m²/ha for Low/Moderate/High, slightly above the Table
 29 targets. The recovered density distribution implies q 1.306/1.254/1.253,
-close to the Table 29 values 1.30/1.25/1.25. Use Table 29 for the target and
-Figure 11 for the shape.
+close to the Table 29 values 1.30/1.25/1.25. Use Table 29 for the AFRF shape
+comparison and the GWM tables for the legal basis.
 
 Disturbance
 -----------
@@ -145,7 +185,8 @@ Current inventory snapshot
   62.11 ha; the 1937 fire 0.66 ha.
 - Mule-deer habitat classes: High 1,327.68 ha, Moderate 1,135.66 ha, Low
   1,020.53 ha, Nil 6.15 ha. Almost the whole block is in a winter-range class.
-- The legal UWR order and the AFRF site-series map are still required.
+- The legal UWR order text and the 2003 transition plan are acquired; the
+  spatial UWR/HMZ layer and the AFRF site-series map are still required.
 
 Model implications
 ------------------

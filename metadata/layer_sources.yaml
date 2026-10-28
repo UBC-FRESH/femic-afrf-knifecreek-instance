@@ -175,11 +175,32 @@ force agreement.
 | Context note | `notes/reference/mwp3-kc-management-direction.md` |
 
 The plan makes mule-deer winter habitat the primary objective on all Knife
-Creek compartments. Table 29 gives the target residual structure (High 29
-m²/ha, D 60 cm, q 1.25; Moderate 22/55/1.25; Low 16/50/1.30; 30-year cycle).
-Table 35 gives the area AAC (82.0 ha/year selection, 11.2 ha/year salvage).
-Appendix 9 gives the KC01–KC11 and RD05–RD07 compartment table. This is public
-management direction, not the legal UWR order.
+Creek compartments. Table 29 gives the AFRF alternative residual structure
+(High 29 m²/ha, D 60 cm, q 1.25; Moderate 22/55/1.25; Low 16/50/1.30; 30-year
+cycle). Table 35 gives the area AAC (82.0 ha/year selection, 11.2 ha/year
+salvage). Appendix 9 gives the KC01–KC11 and RD05–RD07 compartment table. This
+is public management direction, not the legal UWR order. GWM 2007 is the
+default basis; Table 29 is a named AFRF alternative.
+
+## 2007 GWM order and 2003 Knife Creek transition plan
+
+| Field | Value |
+| --- | --- |
+| Citation | Amended Order #U-5-001, U-5-002 and U-5-003, Shallow and Moderate Snowpack, February 2007 |
+| Local order | `/srv/shared-data/gep/ws4/sources/afrf-mule-deer/gwm_order_shallow_moderate_2007.pdf` |
+| Knife Creek UWR | U-5-002 `dwl_50` |
+| Transition plan | CCLUP Mule Deer Strategy Committee 2003, *Transition Period Harvest Opportunities: Knife Creek* |
+| Local transition plan | `/srv/shared-data/gep/ws4/sources/afrf-mule-deer/part3_knife_creek.pdf` |
+| Extracted targets | `data/benchmarks/mdwr_gwm2007_targets.csv` |
+| Clump/opening rules | `data/benchmarks/mdwr_gwm2007_clump.csv` |
+| HMZ matrix | `data/benchmarks/mdwr_gwm2007_knife_creek_hmz.csv` |
+| Legal note | `notes/reference/mdwr-canopy-clump-requirements.md` |
+| Source index | `notes/reference/mdwr-source-index.md` |
+
+GWM 10 requires clumps of 4–10 or more mature trees with interlocking crowns,
+BA >37.5 cm >=16/11/6 m²/ha, Table 2 D >=70/60/50, and a large-tree reserve.
+The Knife Creek HMZ row is HMZ 1–5 = M, L, M, M, A. The spatial UWR/HMZ layer
+is still required for a compliance claim.
 
 ## Recovered MWP #3 Figure 11 target structure
 
@@ -195,7 +216,8 @@ management direction, not the legal UWR order.
 
 The recovered per-class basal areas sum to 17.02/22.96/30.17 m²/ha for
 Low/Moderate/High, versus Table 29 targets of 16/22/29. Table 29 remains the
-target; Figure 11 is the relative diameter-distribution shape.
+AFRF shape comparison; GWM 2007 is the legal default. Figure 11 is the relative
+diameter-distribution shape.
 
 ## Knife Creek compartment table (MWP #3 Appendix 9)
 

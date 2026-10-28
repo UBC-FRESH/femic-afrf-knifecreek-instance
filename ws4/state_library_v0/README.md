@@ -1,7 +1,9 @@
 # KC state-transition library v0
 
-Status: **provisional structural pilot**. This is a transition library, not a
-compiled ws4 dataset.
+Status: **legacy Table 29 structural pilot**. This is a transition library, not
+a compiled ws4 dataset and not the default GWM 2007 basis. The legal default is
+GWM 2007; see `../../notes/adr/0005-mdwr-legal-basis.md`. The next library is
+`state_library_v1` with `basis=GWM_2007`.
 
 ## What is here
 
@@ -20,7 +22,7 @@ Eight PSP-derived IDF Cariboo stands spanning BA 20.8–38.5 m²/ha and QMD
 16.8–22.2 cm. These are regional analogs, not Knife Creek data.
 
 Regimes: `SEL_MDWR_HIGH`, `SEL_MDWR_MODERATE`, `SEL_MDWR_LOW`, from MWP #3
-Table 29. All entries use the corrected BC `THINQFA` units (cm for DBH fields,
+Table 29. These are the AFRF alternative, not the legal GWM curve. All entries use the corrected BC `THINQFA` units (cm for DBH fields,
 ft²/ac for residual density) and two 30-year entries (`TIMEINT=,10`,
 `NUMCYCLE=10`, `THINQFA` at cycles 4 and 7).
 

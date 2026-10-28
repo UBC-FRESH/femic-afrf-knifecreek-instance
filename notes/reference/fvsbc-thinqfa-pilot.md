@@ -78,7 +78,7 @@ Establishes:
 Does not establish:
 
 - a KC growth-and-yield calibration;
-- that Table 29 residual B is achieved from a real KC stand;
+- that the GWM 2007 or Table 29 residual B is achieved from a real KC stand;
 - the correct state classes or the full-range vs small-tree choice;
 - anything about the 4–10-tree mature clumps (or the 2–5 maximum-diameter
   subgroup), which FVS cannot model.
