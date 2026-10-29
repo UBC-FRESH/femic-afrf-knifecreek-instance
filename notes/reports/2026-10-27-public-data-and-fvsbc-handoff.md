@@ -297,6 +297,16 @@ is unmodelled MPB. The earlier 0.5 cm QMD threshold was ad hoc and is not a
 gate. No stand age is assigned: the plots are uneven-aged and VRI age is not
 a plot age. FVS-BC does not use site index.
 
+### Observed transitions
+
+`data/psp/kc_afrf_psp_transitions.csv` is the first direct transition table:
+96 plot-interval rows, with start/end BA/TPH/QMD/height, large-tree metrics,
+mortality, ingrowth and a Block C/D flag. Species-group rows are in
+`kc_afrf_psp_transitions_species.csv`. DBH presence is the working live-tree
+indicator; `TS`/`TC` remain unresolved. No age or site index is assigned. This
+is sparse (24 plots × 4 intervals) and not a whole-block sample, but it is the
+primary observed evidence for the next state library.
+
 ### Maps
 
 MWP #3 landscape appendices, KC pages: 150 forest cover, 158 seral, 162

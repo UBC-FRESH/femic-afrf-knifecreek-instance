@@ -212,3 +212,15 @@ parameters do not transfer consistently: BA bias worsens when B or C is held
 out, QMD bias worsens when C or D is held out, and SE mortality ranges from
 0.52 to 4.01 across folds. The calibration is diagnostic only; the uncalibrated
 backtest is the defensible structural baseline.
+
+## Observed transition table
+
+`data/psp/kc_afrf_psp_transitions.csv` has 96 plot-interval rows (24 plots × 4
+intervals) with start/end BA, TPH, QMD, height, large-tree metrics, mortality,
+ingrowth and a Block C/D flag. Species-group BA/TPH are in
+`kc_afrf_psp_transitions_species.csv`. DBH presence is the working live-tree
+indicator because `TS`/`TC` remain unresolved. A tree first measured after the
+interval start is ingrowth; a start-live tree with no end DBH is mortality.
+No age or site index is assigned. This is the primary observed evidence for
+the next state library; its support is sparse (24 plots, four intervals) and
+it is not a whole-block sample.

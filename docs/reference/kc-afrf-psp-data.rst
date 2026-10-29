@@ -336,6 +336,20 @@ No stand age or site index is assigned. The plots are uneven-aged and VRI age
 is polygon-level context, not a plot age; the VRI summary is not backdated to
 1993. FVS-BC also reports that site index is not used in this variant.
 
+Observed transitions
+--------------------
+
+``data/psp/kc_afrf_psp_transitions.csv`` is the first directly observed
+transition table: 24 plots × 4 intervals = 96 rows. It carries start/end BA,
+TPH, QMD, mean height, large-tree BA/TPH, mortality, ingrowth and a Block C/D
+flag. Species-group start/end BA/TPH are in
+``kc_afrf_psp_transitions_species.csv``.
+
+The working live-tree indicator is DBH presence because the `TS`/`TC` codes
+remain unresolved. A tree whose first DBH appears after the interval start is
+ingrowth; a start-live tree without an end DBH is mortality. No age or site
+index is assigned. The table is derived data; raw tree records remain private.
+
 What it unblocks
 ----------------
 

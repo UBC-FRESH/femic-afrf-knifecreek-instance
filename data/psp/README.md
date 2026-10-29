@@ -14,6 +14,9 @@ files:
 | `kc_afrf_psp_dynamics.csv` | Mortality/ingrowth by interval, block, treatment and size class. |
 | `kc_afrf_psp_dynamics_summary.csv` | Mortality/ingrowth summary by block/treatment. |
 | `kc_afrf_psp_mortality_by_plot.csv` | Plot-level mortality and recruitment. |
+| `kc_afrf_psp_transitions.csv` | 96 observed plot-interval transitions. |
+| `kc_afrf_psp_transitions_species.csv` | Species-group BA/TPH for those transitions. |
+| `kc_afrf_psp_transitions_metadata.json` | Transition provenance, assumptions and caveats. |
 
 Mortality/ingrowth use DBH presence at each measurement as the working
 live/dead indicator. `TS`/`TC` and the dead-tree column semantics remain

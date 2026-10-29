@@ -1,0 +1,34 @@
+{
+  "source": "AFRF Knife Creek PSP workbook, derived transition table",
+  "sha256": "a74a7f85c12013ebf38dc12d37cf3720355cfb4a53b951e92381aca262a0b7fc",
+  "plots": 24,
+  "intervals": 4,
+  "rows": 96,
+  "block_rows": {
+    "B": 32,
+    "D": 32,
+    "C": 32
+  },
+  "subset_cd_rows": 64,
+  "area_ha": 0.05,
+  "large_dbh_cm": 37.5,
+  "assumptions": [
+    "P=I is the plot population; P=B is excluded.",
+    "DBH presence at a measurement is the working live-tree indicator.",
+    "A tree with first DBH after the interval start is ingrowth.",
+    "A start-live tree without DBH at the end is mortality.",
+    "No TS/TC, D1/D2/DA/DS/WTA or age fields are used.",
+    "No absolute plot centres are available; no spatial join is implied."
+  ],
+  "caveats": [
+    "TS/TC are unresolved; DBH presence may misclassify some dead trees.",
+    "The 24-plot thinning experiment is not a whole-block sample.",
+    "The 16 Block C/D plots are flagged separately; they are not the same sample.",
+    "Raw tree-level data are private and not in this release.",
+    "No age or site index is assigned; the stands are uneven-aged."
+  ],
+  "files": [
+    "kc_afrf_psp_transitions.csv",
+    "kc_afrf_psp_transitions_species.csv"
+  ]
+}
