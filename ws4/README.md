@@ -47,6 +47,10 @@ A synthetic ws4 validation dataset is in `dataset_v1_synthetic/`: 4 synthetic
 1 ha blocks, 23 tracks, 25 treatments and 575 curves from the canonical GWM
 2007 graph. `ws4 validate` passes.
 
+A state reconstruction of the 96 observed transitions is in
+`kc_psp_simulation/`; it is conditional on observed ingrowth and is not an
+ingrowth forecast.
+
 Tree-level empirical models are in `kc_psp_tree_models/`: DBH increment and
 survival transfer reasonably in leave-one-block-out tests; Poisson ingrowth
 does not. They are diagnostics, not yet a stand model.

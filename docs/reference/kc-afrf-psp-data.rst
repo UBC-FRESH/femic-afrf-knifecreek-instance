@@ -387,6 +387,22 @@ are useful diagnostics. Ingrowth is strongly block-specific and must be
 block-specific scenario data, not a transferable equation. The models do not
 assign age or site index and are not yet a complete stand model.
 
+State reconstruction
+--------------------
+
+``ws4/kc_psp_simulation`` applies the leave-one-block-out growth and survival
+models to all 96 observed transitions.
+
+| Mode | BA bias | BA MAE | TPH bias | TPH MAE | QMD bias | QMD MAE |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| cohort | -0.04 | 1.49 | -21.2 | 109.3 | +0.11 | 0.34 |
+| conditional | -0.04 | 1.49 | +12.4 | 91.5 | -0.02 | 0.31 |
+
+Cohort mode excludes ingrowth. Conditional mode uses the recruits actually
+observed in the interval, so it is a reconstruction, not an ingrowth forecast.
+BA and QMD reconstruct well; TPH is noisier. Ingrowth remains block-specific
+scenario data.
+
 What it unblocks
 ----------------
 
