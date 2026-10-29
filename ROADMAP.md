@@ -104,6 +104,8 @@ disturbance, and mule-deer constraints, then construct reviewed stem lists.
     empirical ingrowth still does not transfer across blocks.
   - [x] Reconstruct the 96 observed transitions with the growth/survival
     models; BA/QMD are plausible, TPH is noisier, ingrowth remains conditional.
+  - [x] Compare binned simulated states to observed transitions; 75/96 canonical
+    matches, mostly BA-class because the bins are coarse.
   - [x] Build a LidarBC canopy-tree inventory pilot for one 2024 tile.
   - [x] Extend the 2024 DEM/DSM run to all downloaded tiles: 278,318 canopy
     trees, 28 tiles intersecting the SUP.

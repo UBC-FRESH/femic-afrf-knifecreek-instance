@@ -333,6 +333,8 @@ models to all 96 transitions. Cohort (no ingrowth): BA -0.04 m²/ha (MAE 1.49),
 TPH -21.2 (MAE 109.3), QMD +0.11 (MAE 0.34). Conditional (observed recruits):
 BA -0.04 (MAE 1.49), TPH +12.4 (MAE 91.5), QMD -0.02 (MAE 0.31). BA/QMD
 reconstruct well; TPH is noisier. Conditional ingrowth is not a forecast.
+Simulated end states match observed canonical BA/QMD/large-tree states on
+75/96 transitions (78.1%); bins are coarse, so this is mainly a BA-class match.
 
 ### Maps
 

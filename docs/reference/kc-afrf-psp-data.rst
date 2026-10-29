@@ -403,6 +403,11 @@ observed in the interval, so it is a reconstruction, not an ingrowth forecast.
 BA and QMD reconstruct well; TPH is noisier. Ingrowth remains block-specific
 scenario data.
 
+The simulated end state matches the observed canonical BA/QMD/large-tree state
+on **75 of 96 transitions (78.1%)**: B 26/32, C 26/32, D 23/32. The bins are
+coarse — all QMD is below 20 cm and large-tree BA is concentrated below
+6 m²/ha — so this is mainly a BA-class match, not a fine structural model.
+
 What it unblocks
 ----------------
 
