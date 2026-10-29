@@ -85,6 +85,8 @@ disturbance, and mule-deer constraints, then construct reviewed stem lists.
 - [x] P1.2c Pin the THINQFA-capable fresh-fvsbc (#22)
 - [x] P1.2d Correct THINQFA BC units and record the pilot (#25)
 - [ ] P1.3 Acquire or reconstruct tree-level tallies and CFI plot data (#10)
+  - [x] Ingest the AFRF KC PSP plots and run the first FVS-BC backtest
+    (`ws4/kc_psp_validation`; structural, placeholder age/site index).
   - [x] Build a LidarBC canopy-tree inventory pilot for one 2024 tile.
   - [x] Extend the 2024 DEM/DSM run to all downloaded tiles: 278,318 canopy
     trees, 28 tiles intersecting the SUP.

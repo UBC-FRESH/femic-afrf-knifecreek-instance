@@ -1,5 +1,23 @@
 # PSP-derived IDF Cariboo stem lists
 
+## AFRF Knife Creek PSP field data
+
+The AFRF KC PSP workbook is the primary field-data candidate, not the regional
+analog below. The raw workbook is private and not committed. Public derived
+files:
+
+| File | Purpose |
+| --- | --- |
+| `kc_afrf_psp_plot_summary.csv` | 24 plots × 5 years, interior-tree TPH/BA/QMD/height/large-tree metrics. |
+| `kc_afrf_psp_schema.csv` | Tidy long-table column schema. |
+| `kc_afrf_psp_metadata.json` | Source hash, counts, assumptions. |
+
+See `../notes/reference/kc-afrf-psp-dataset.md` and
+`../ws4/kc_psp_validation/README.md`. The 1993–2013 FVS backtest is a
+structural test with placeholder age/site index, not a calibration claim.
+
+# Regional IDF Cariboo analog
+
 Public FAIB permanent-sample-plot data, filtered to Douglas-fir-leading,
 first-measurement IDF stands in the Williams Lake and 100 Mile House TSAs.
 These are regional IDF analogs for the Knife Creek model, not KC data.

@@ -177,6 +177,46 @@ Remaining QC questions
 6. Absolute plot centres, block polygons and treatment polygons.
 7. Publication clearance for the raw workbook.
 
+First FVS-BC backtest
+---------------------
+
+`ws4/kc_psp_validation` initialises FVS-BC from the 1993 interior trees,
+expands each tree by 20 (0.05 ha), and grows without cutting to 1997, 2004,
+2008 and 2013.
+
+.. list-table::
+   :header-rows: 1
+
+   * - Year
+     - Obs BA
+     - Pred BA
+     - BA bias
+     - Obs QMD
+     - Pred QMD
+     - Obs TPH
+     - Pred TPH
+   * - 2004
+     - 33.14
+     - 30.50
+     - -2.64
+     - 13.47
+     - 12.88
+     - 2,768
+     - 2,921
+   * - 2013
+     - 35.38
+     - 34.50
+     - -0.88
+     - 14.98
+     - 14.05
+     - 2,291
+     - 2,777
+
+BA and QMD are broadly plausible; TPH is increasingly overpredicted because
+FVS does not reproduce the observed mortality, especially in the controls
+(+679 TPH average). Tree age 100 and site index FD 60 are placeholders. This
+is a structural backtest, not a calibration claim.
+
 What it unblocks
 ----------------
 
