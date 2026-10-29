@@ -377,3 +377,9 @@ status and the GitHub issue comments.
   package now, and keep the recipe lane blocked rather than hand-writing
   unvalidated XML. Also corrected X/Y to metres from plot centre and recorded
   the Marshall metadata response.
+- P3.2 Patchworks fragment layer: added
+  `data/patchworks_knifecreek/spatial/fragments.shp` and derived
+  `fragments.csv` for 160 VRI blocks, 3,481.77 ha, EPSG:3005. Block order
+  matches `dataset_kc_spatial_v3`; `RES_KEY`/`BLOCK`, `TRACK`, `F_AGE`, BEC,
+  HMZ, clump and reserve attributes are carried. Matrix, roads, topology, pin
+  and ForestModelXML remain pending.

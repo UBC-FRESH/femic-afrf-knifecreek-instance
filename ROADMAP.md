@@ -262,7 +262,7 @@ targets), ingest it into ws4, and run the baseline, selection, reports and web
 UI.
 
 - [ ] P3.1 Format spike and ForestModelXML decision (#61)
-- [ ] P3.2 Build `fragments.shp` and stable block identity (#62)
+- [x] P3.2 Build `fragments.shp` and stable block identity (#62)
 - [ ] P3.3 Build `tracks/H` matrix tables and 300-year curves (#63)
 - [ ] P3.4 Build product, feature, accounts and protoaccounts (#64)
 - [ ] P3.5 Build topology, roads and patch accounts (#65)
