@@ -87,6 +87,9 @@ def _keywords(
     plot: int,
     mortality_multiplier: float | None = None,
     site_index: float = 60.0,
+    ba_multipliers: dict[str, float] | None = None,
+    mort_multipliers: dict[str, float] | None = None,
+    fixmort: dict[str, float] | None = None,
 ) -> list[Keyword]:
     """Build a no-cut 20-year FVS key set."""
     return [
@@ -108,7 +111,24 @@ def _keywords(
         Keyword("NUMCYCLE", (str(len(INTERVALS)),)),
         Keyword("RANNSEED", ("1",)),
         *(
-            [Keyword("MORTMULT", ("1", "0", str(mortality_multiplier), "0", "999"))]
+            [
+                Keyword("FIXMORT", ("1", species, f"{rate:.4f}", "0", "999", "0"))
+                for species, rate in (fixmort or {}).items()
+            ]
+        ),
+        *(
+            [
+                Keyword("BAIMULT", ("1", species, f"{multiplier:.4f}"))
+                for species, multiplier in (ba_multipliers or {}).items()
+            ]
+        ),
+        *(
+            [
+                Keyword("MORTMULT", ("1", species, f"{multiplier:.4f}", "0", "999"))
+                for species, multiplier in (mort_multipliers or {}).items()
+            ]
+            if mort_multipliers
+            else [Keyword("MORTMULT", ("1", "0", f"{mortality_multiplier:.4f}", "0", "999"))]
             if mortality_multiplier is not None
             else []
         ),

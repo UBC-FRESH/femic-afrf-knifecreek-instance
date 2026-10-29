@@ -191,3 +191,14 @@ gives BA -4.34 and TPH -115. No global multiplier fits both. A site-index 80
 vs 60 test produced no change. Tree age 100 and site index FD 60 remain
 placeholders; species/size-specific calibration is needed. See
 `ws4/kc_psp_validation/README.md`.
+
+## Calibration v1
+
+`ws4/kc_psp_calibration/` fits species-group `BAIMULT` and `MORTMULT` to
+2013 BA/TPH with a damped fixed-point update. It converged at iteration 28.
+Final parameters: FD BAI 1.6213 / mort 1.7593; SE 1.3948 / 3.8261; PL 1.0 /
+8.0; HW 1.0 / 1.2012. 2013 totals: BA 36.38 vs 35.38 (+1.00), QMD 15.76 vs
+14.98 (+0.77), TPH 2,313 vs 2,291 (+22.5). FD/SE/HW match; PL is unmodelled
+MPB (40.38 vs 6.98 BA; 1,100 vs 620 TPH). Status is converged-not-accepted
+because QMD exceeds the 0.5 cm criterion. See
+`ws4/kc_psp_calibration/README.md`.

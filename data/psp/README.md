@@ -19,8 +19,9 @@ Mortality/ingrowth use DBH presence at each measurement as the working
 live/dead indicator. `TS`/`TC` and the dead-tree column semantics remain
 unresolved, so these summaries are not a substitute for the field codes.
 
-See `../notes/reference/kc-afrf-psp-dataset.md` and
-`../ws4/kc_psp_validation/README.md`. The 1993–2013 FVS backtest is a
+See `../notes/reference/kc-afrf-psp-dataset.md`,
+`../ws4/kc_psp_validation/README.md` and
+`../ws4/kc_psp_calibration/README.md`. The 1993–2013 FVS backtest is a
 structural test with placeholder age/site index, not a calibration claim. Its
 v1 tables correct the cycle-year alignment in the earlier v0 run.
 
