@@ -26,7 +26,7 @@
   "assumptions": [
     "P=I is the plot population; P=B is the 5 m buffer.",
     "Plot area 0.05 ha, expansion 20.",
-    "X/Y are feet from plot centre; converted to metres.",
+    "X/Y are metres from plot centre; no conversion applied (P. Marshall, pers. comm., 2026-10-29).",
     "DBH cm, height/crown/live-crown-base m.",
     "TS/TC/D1/D2/DA/DS/WTA are not used."
   ]

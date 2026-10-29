@@ -282,6 +282,11 @@ Acceptance criteria:
 - The web UI serves the dataset, runs and targets.
 - No clearcut and no legal-compliance claim.
 
+P3.1 status: the compiled H-matrix lane is buildable. ForestModelXML is blocked
+because no valid example, schema or compiler is available; see
+`notes/reference/patchworks-forestmodelxml-format-spike.md`. Do not claim recipe
+parity until that changes.
+
 ## Phase 4: Verification and scenarios
 
 Parent issue: TBD

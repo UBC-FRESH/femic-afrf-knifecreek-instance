@@ -3,8 +3,8 @@ plot,int64
 position,str
 tree,int64
 species,str
-x_ft,float64
-y_ft,float64
+x_m,float64
+y_m,float64
 year,int64
 dbh_cm,float64
 height_m,float64
@@ -17,8 +17,6 @@ lc4_m,float64
 vigor,float64
 status,int64
 tree_class,int64
-x_m,float64
-y_m,float64
 crown_width_m,float64
 live_crown_base_m,float64
 crown_ratio,float64

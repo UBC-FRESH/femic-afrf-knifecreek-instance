@@ -371,3 +371,9 @@ status and the GitHub issue comments.
   tracks/H, product and feature accounts, topology, roads, pin and
   ForestModelXML as primary deliverables, with ws4 ingestion as the runtime
   lane. No model claim is added.
+- P3.1 ForestModelXML format spike: checked the Gavin archive, local
+  repositories and public sources. No valid ForestModelXML, schema or compiler
+  was found. Decision: build the compiled `tracks/H` + `fragments.shp` + pin
+  package now, and keep the recipe lane blocked rather than hand-writing
+  unvalidated XML. Also corrected X/Y to metres from plot centre and recorded
+  the Marshall metadata response.
