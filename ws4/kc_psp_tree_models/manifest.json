@@ -13,8 +13,9 @@
   "caveats": [
     "Tree records within plots are correlated; block CV is a transfer test, not independent replication.",
     "Survival and ingrowth use DBH presence as the working live-tree indicator.",
+    "Ingrowth is an empirical block/treatment distribution, not a transferable model; held-out blocks fall back to their treatment distribution.",
     "OH is excluded: only two OH trees are present and both die.",
     "No age or site index is assigned.",
-    "No treatment response is fitted; treatment is only an ingrowth covariate."
+    "Stand validation covers the 1993 start cohort only; ingrowth is excluded."
   ]
 }

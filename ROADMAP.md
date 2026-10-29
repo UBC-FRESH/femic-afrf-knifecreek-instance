@@ -100,7 +100,8 @@ disturbance, and mule-deer constraints, then construct reviewed stem lists.
   - [x] Audit state support: canonical bins are sparse; species-resolved bins
     are too sparse for an empirical matrix.
   - [x] Fit tree-level growth/survival/ingrowth models; growth and survival
-    transfer reasonably, Poisson ingrowth does not.
+    transfer reasonably at the tree and start-cohort aggregate levels;
+    empirical ingrowth still does not transfer across blocks.
   - [x] Build a LidarBC canopy-tree inventory pilot for one 2024 tile.
   - [x] Extend the 2024 DEM/DSM run to all downloaded tiles: 278,318 canopy
     trees, 28 tiles intersecting the SUP.
