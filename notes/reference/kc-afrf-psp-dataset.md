@@ -234,3 +234,12 @@ max 16. Species-mix bins: 20 start states, 36 pairs, 17 repeated, 19 one-off,
 median 1. The canonical bins support only a coarse graph; species-resolved
 states are too sparse for an empirical ws4 matrix. All observed QMD values are
 below 20 cm. No acceptance threshold is applied.
+
+## Tree-level models
+
+`ws4/kc_psp_tree_models/` fits diameter increment, survival and ingrowth from
+the tagged trees and validates leave-one-block-out. Diameter RMSE is
+0.087–0.102 cm/yr; survival Brier is 0.060–0.071 with AUC 0.805–0.896. The
+Poisson ingrowth model fails transfer (held-out observed/predicted totals:
+B 1/88, C 127/23, D 35/57). Growth and survival are diagnostics; ingrowth
+needs an empirical block/treatment distribution or zero-inflated model.

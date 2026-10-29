@@ -340,3 +340,9 @@ status and the GitHub issue comments.
   species-mix pairs with 19 one-off (median 1). Canonical support is sufficient
   only for a coarse graph; species-resolved empirical transitions are too
   sparse. No acceptance threshold is applied.
+- P3.13 tree-level models: added `runbooks/fit_psp_tree_models.py` and
+  `ws4/kc_psp_tree_models/`. Leave-one-block-out DBH increment RMSE
+  0.087–0.102 cm/yr; survival Brier 0.060–0.071 and AUC 0.805–0.896. Poisson
+  ingrowth fails transfer (observed/predicted totals B 1/88, C 127/23,
+  D 35/57). Growth and survival are diagnostics; ingrowth is not usable yet.
+  No age or site index is assigned.
