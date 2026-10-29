@@ -9,9 +9,9 @@ area and trees/ha move toward the measured 2013 values, then re-runs the
 The iteration stops when the largest parameter change is below
 ``--parameter-tolerance`` and the objective change is below
 ``--loss-tolerance``, or at ``--max-iter``. A non-converged result is recorded
-as such; it is not silently treated as calibrated. Age and site index are
-VRI-derived stand-level priors; FVS-BC ignores site index, and age changes did
-not affect this backtest.
+as such; it is not silently treated as calibrated. No stand age or site index
+is assigned: uneven-aged plots have no single age, and FVS-BC ignores site
+index.
 
 Usage::
 
@@ -56,10 +56,10 @@ SPECIES_GROUP = {
     "AT": "HW",
     "OH": "HW",
 }
-# VRI 2025 FDI-leading, area-weighted median, backdated to 1993.
-TREE_AGE = 64.0
-STAND_AGE = 64.0
-SITE_INDEX = 14.5
+# No plot age is available; keep the FVS age fields at an explicit unknown.
+TREE_AGE = 0.0
+STAND_AGE = 0.0
+SITE_INDEX = None
 BA_BOUNDS = (0.25, 4.0)
 MORT_BOUNDS = (0.25, 8.0)
 
@@ -210,7 +210,7 @@ def _next_parameters(
     next_ba = dict(ba)
     next_mort = dict(mort)
     for group in GROUPS:
-        if group not in observed_2013.index:
+        if group not in observed_2013.index or group not in observed_1993.index:
             continue
         obs = observed_2013.loc[group]
         pred = predicted_2013.loc[group] if group in predicted_2013.index else None
@@ -345,7 +345,7 @@ def main() -> None:
             "0.5 cm thresholds were ad hoc and are not used as a gate."
         ),
     }
-    status = "converged" if converged else "not-converged"
+    status = "converged-in-sample" if converged else "not-converged"
     parameters = {
         "groups": {group: list(species) for group, species in GROUPS.items()},
         "species_to_group": SPECIES_GROUP,
@@ -362,7 +362,7 @@ def main() -> None:
         "plots": int(initial["plot"].nunique()),
         "tree_age": TREE_AGE,
         "stand_age": STAND_AGE,
-        "site_index": {"species": "FD", "value": SITE_INDEX},
+        "site_index": (None if SITE_INDEX is None else {"species": "FD", "value": SITE_INDEX}),
         "max_iter": args.max_iter,
         "damping": args.damping,
         "parameter_tolerance": args.parameter_tolerance,
@@ -370,11 +370,12 @@ def main() -> None:
         "iterations": len(history),
         "final_loss": history[-1]["loss"],
         "diagnostics": diagnostics,
+        "out_of_sample_validation": "ws4/kc_psp_cv",
         "parameters": parameters,
         "runs": final_runs,
         "caveats": [
             "The calibration target is 2013 species-group BA and TPH.",
-            "Age/site index are VRI-derived stand-level priors, not plot-level joins.",
+            "No stand age or site index assigned; uneven-aged plots have no single age.",
             "The model is distance-independent and has no explicit MPB module.",
             "Parameters are bounded to avoid numerically unstable fits.",
             "Not a legal-compliance or whole-block inventory claim.",

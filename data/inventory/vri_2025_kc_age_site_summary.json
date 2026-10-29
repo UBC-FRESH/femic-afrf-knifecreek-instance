@@ -1,9 +1,7 @@
 {
   "source": "VRI 2025 R1, Knife Creek",
   "source_path": "data/inventory/vri_2025_kc.gpkg",
-  "target_year": 1993,
-  "projected_year": 2025,
-  "note": "Polygon-level VRI prior only. The PSP workbook has no absolute plot centres, so these values are not a plot-level join.",
+  "note": "Polygon-level VRI context only. The PSP workbook has no absolute plot centres and the plots are uneven-aged, so these values are not a plot age or a plot-level join.",
   "all_forest": {
     "label": "all_forest",
     "polygons": 174,
@@ -11,7 +9,6 @@
     "age_2025_mean": 120.70114942528735,
     "age_2025_median": 123.0,
     "age_2025_area_weighted_median": 96.0,
-    "age_1993_area_weighted_median": 64.0,
     "site_index_mean_m": 14.767241379310347,
     "site_index_median_m": 14.5,
     "site_index_area_weighted_median_m": 14.5,
@@ -25,7 +22,6 @@
     "age_2025_mean": 122.9375,
     "age_2025_median": 123.0,
     "age_2025_area_weighted_median": 96.0,
-    "age_1993_area_weighted_median": 64.0,
     "site_index_mean_m": 14.785,
     "site_index_median_m": 14.5,
     "site_index_area_weighted_median_m": 14.5,
