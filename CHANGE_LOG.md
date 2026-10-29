@@ -327,3 +327,10 @@ status and the GitHub issue comments.
   is worse when C or D is held out, and fold parameters are unstable. The
   calibration is diagnostic only; the uncalibrated backtest remains the
   defensible structural baseline. No age or site index is assigned.
+- P3.11 observed PSP transitions: added
+  `runbooks/build_psp_transitions.py` and public derived tables
+  `data/psp/kc_afrf_psp_transitions.csv` (96 plot-interval rows) and
+  `kc_afrf_psp_transitions_species.csv`. The table carries start/end BA, TPH,
+  QMD, height, large-tree metrics, mortality, ingrowth and a Block C/D flag.
+  DBH presence is the working live indicator; TS/TC remain unresolved. No age
+  or site index is assigned.

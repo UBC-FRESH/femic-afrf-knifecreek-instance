@@ -95,6 +95,8 @@ disturbance, and mule-deer constraints, then construct reviewed stem lists.
     Removed the ad hoc QMD acceptance gate.
   - [x] Run leave-one-block-out validation; calibration is diagnostic only
     because it does not transfer consistently.
+  - [x] Build the 96-row observed PSP transition table as the primary evidence
+    for the next state library.
   - [x] Build a LidarBC canopy-tree inventory pilot for one 2024 tile.
   - [x] Extend the 2024 DEM/DSM run to all downloaded tiles: 278,318 canopy
     trees, 28 tiles intersecting the SUP.
