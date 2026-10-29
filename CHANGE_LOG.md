@@ -311,13 +311,19 @@ status and the GitHub issue comments.
   converged at iteration 28 (max parameter change 0.0009, loss change
   3.6e-5). Final 2013 BA 36.38 vs 35.38, QMD 15.76 vs 14.98, TPH 2,313 vs
   2,291. FD/SE/HW match; PL is unmodelled MPB. The earlier 0.5 cm QMD
-  threshold was ad hoc and is not a gate. Added the VRI stand-level age/site
-  summary (age 64 at 1993; site index 14.5 m); FVS-BC does not use site index
-  and age 64 vs 91 gave the same run. No legal or whole-block claim.
+  threshold was ad hoc and is not a gate. The VRI age/site summary is context
+  only: the PSP plots are uneven-aged and have no plot age. FVS-BC does not use
+  site index. No legal or whole-block claim.
 - P3.9 VRI age/site documentation: added
   `runbooks/summarize_vri_age_site.py` and
-  `data/inventory/vri_2025_kc_age_site_summary.json`. The VRI stand-level
-  prior is age 64 at 1993 and site index 14.5 m. FVS-BC reports that site
-  index is not used; age 64 vs 91 gave the same result. Removed the ad hoc
-  QMD acceptance gate; the calibration status is now simply `converged` with
+  `data/inventory/vri_2025_kc_age_site_summary.json` as polygon-level context
+  only. The plots are uneven-aged and have no plot age, so no VRI age was
+  backdated or assigned. FVS-BC reports that site index is not used. Removed
+  the ad hoc QMD acceptance gate; calibration status is `converged` with
   residual diagnostics.
+- P3.10 held-out validation: added `runbooks/fvs_cross_validate_afrf_kc_psp.py`
+  and `ws4/kc_psp_cv/`. Leave-one-block-out calibration does not transfer
+  consistently: calibrated BA bias is worse when B or C is held out, QMD bias
+  is worse when C or D is held out, and fold parameters are unstable. The
+  calibration is diagnostic only; the uncalibrated backtest remains the
+  defensible structural baseline. No age or site index is assigned.

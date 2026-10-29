@@ -188,9 +188,9 @@ Observed annual mortality rises from 1.0% (1993–97) to 2.4% (2008–13). FVS
 `MORTMULT` sensitivity shows the trade-off: at 2013, multiplier 1 gives BA
 +1.04 and TPH +422; multiplier 2.5 gives BA -3.25 and TPH -0.5; multiplier 3
 gives BA -4.34 and TPH -115. No global multiplier fits both. A site-index 80
-vs 60 test produced no change. VRI gives a stand-level age of 64 (1993) and
-site index 14.5 m; FVS-BC does not use site index, and age 64 versus 91 gave
-the same run. See `ws4/kc_psp_validation/README.md`.
+vs 60 test produced no change. No stand age is assigned: the plots are
+uneven-aged and VRI age is not a plot age. FVS-BC does not use site index. See
+`ws4/kc_psp_validation/README.md`.
 
 ## Calibration v1
 
@@ -200,8 +200,15 @@ Final parameters: FD BAI 1.6213 / mort 1.7593; SE 1.3948 / 3.8261; PL 1.0 /
 8.0; HW 1.0 / 1.2012. 2013 totals: BA 36.38 vs 35.38 (+1.00), QMD 15.76 vs
 14.98 (+0.77), TPH 2,313 vs 2,291 (+22.5). FD/SE/HW match; PL is unmodelled
 MPB (40.38 vs 6.98 BA; 1,100 vs 620 TPH). The earlier 0.5 cm QMD threshold was
-ad hoc and is no longer a gate. VRI gives a stand-level age of 64 (1993,
-area-weighted median backdated from 2025) and site index 14.5 m; FVS-BC does
-not use site index, and age 64 vs 91 gave the same run. See
-`ws4/kc_psp_calibration/README.md` and
-`data/inventory/vri_2025_kc_age_site_summary.json`.
+ad hoc and is no longer a gate. No stand age is assigned: the plots are
+uneven-aged and VRI age is not a plot age. FVS-BC does not use site index.
+See `ws4/kc_psp_calibration/README.md` and
+`data/inventory/vri_2025_kc_age_site_summary.json` (context only).
+
+## Cross-validation
+
+`ws4/kc_psp_cv/` fits on two blocks and evaluates the third. The calibrated
+parameters do not transfer consistently: BA bias worsens when B or C is held
+out, QMD bias worsens when C or D is held out, and SE mortality ranges from
+0.52 to 4.01 across folds. The calibration is diagnostic only; the uncalibrated
+backtest is the defensible structural baseline.

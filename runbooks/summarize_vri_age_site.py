@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Summarize VRI age and site index for the Knife Creek instance.
+"""Summarize VRI age and site index as context, not as PSP plot inputs.
 
-The VRI is polygon-level. This summary is a stand-level prior for the PSP
-backtests; it is not a plot-level join, because the PSP workbook has no
-absolute plot centres.
+The VRI is polygon-level. The PSP workbook has no absolute plot centres and
+the plots are uneven-aged, so VRI age must not be backdated or assigned to
+plots.
 
 Usage::
 
@@ -22,9 +22,6 @@ import geopandas as gpd
 import numpy as np
 import pandas as pd
 
-TARGET_YEAR = 1993
-PROJECTED_YEAR = 2025
-
 
 def _weighted_quantile(values: pd.Series, weights: pd.Series, q: float) -> float:
     """Weighted quantile with a cumulative-weight interpolation-free definition."""
@@ -40,7 +37,6 @@ def _summary(frame: pd.DataFrame, label: str) -> dict[str, object]:
     valid = frame.dropna(subset=["PROJ_AGE_1", "SITE_INDEX"]).copy()
     age = valid["PROJ_AGE_1"]
     site = valid["SITE_INDEX"]
-    age_1993 = age - (PROJECTED_YEAR - TARGET_YEAR)
     weights = valid["POLYGON_AREA"]
     return {
         "label": label,
@@ -49,7 +45,6 @@ def _summary(frame: pd.DataFrame, label: str) -> dict[str, object]:
         "age_2025_mean": float(age.mean()),
         "age_2025_median": float(age.median()),
         "age_2025_area_weighted_median": _weighted_quantile(age, weights, 0.5),
-        "age_1993_area_weighted_median": _weighted_quantile(age_1993, weights, 0.5),
         "site_index_mean_m": float(site.mean()),
         "site_index_median_m": float(site.median()),
         "site_index_area_weighted_median_m": _weighted_quantile(site, weights, 0.5),
@@ -69,11 +64,10 @@ def main() -> None:
     payload = {
         "source": "VRI 2025 R1, Knife Creek",
         "source_path": str(args.vri),
-        "target_year": TARGET_YEAR,
-        "projected_year": PROJECTED_YEAR,
         "note": (
-            "Polygon-level VRI prior only. The PSP workbook has no absolute "
-            "plot centres, so these values are not a plot-level join."
+            "Polygon-level VRI context only. The PSP workbook has no absolute "
+            "plot centres and the plots are uneven-aged, so these values are "
+            "not a plot age or a plot-level join."
         ),
         "all_forest": _summary(vri, "all_forest"),
         "fdi_leading": _summary(fdi, "fdi_leading"),

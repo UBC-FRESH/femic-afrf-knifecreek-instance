@@ -1,8 +1,9 @@
 # AFRF Knife Creek PSP FVS-BC calibration v1
 
-Status: **converged**, with residual diagnostics. There is no external
-acceptance threshold; the earlier 1.0 m²/ha, 100 TPH and 0.5 cm limits were
-local placeholders and are not used as a gate.
+Status: **converged in sample; not validated out of sample**. The earlier
+1.0 m²/ha, 100 TPH and 0.5 cm limits were local placeholders and are not used
+as a gate. See `ws4/kc_psp_cv/` for the leave-one-block-out result; it does not
+transfer consistently, so these parameters are diagnostic only.
 
 The calibration matches the non-pine species groups and total TPH, but it does
 not reproduce the lodgepole-pine collapse or the observed QMD.
@@ -18,10 +19,9 @@ not reproduce the lodgepole-pine collapse or the observed QMD.
 - Bounds: `BAIMULT` 0.25–4.0; `MORTMULT` 0.25–8.0.
 - Convergence: maximum relative parameter change < 0.02 and loss change
   < 1e-4, or 30 iterations.
-- Stand age 64 and site index 14.5 m are VRI-derived stand-level priors from
-  `data/inventory/vri_2025_kc_age_site_summary.json`. They are not plot-level
-  joins. FVS-BC prints `SITE INDEX IS NOT USED IN THIS VARIANT`; changing
-  age from 64 to 91 also did not change the backtest.
+- No stand age or site index is assigned. These are uneven-aged plots with no
+  single age; VRI age is polygon-level context and was not backdated to the
+  plots. FVS-BC also reports that site index is not used in this variant.
 
 ## Convergence
 
@@ -68,8 +68,10 @@ Trajectory diagnostics:
 
 ## Interpretation
 
-- The calibrated model is usable as a **background growth/mortality engine**
-  for FD/SE/HW, not as a complete KC stand model.
+- The calibration is **not validated** out of sample. Do not use these
+  parameters to generate production ws4 transition curves.
+- The uncalibrated FVS-BC run is the defensible structural baseline; observed
+  PSP transitions are preferable where available.
 - Do not use `MORTMULT PL = 8` as a biological estimate; it is a bounded proxy.
 - Do not use this run for legal compliance, whole-block inventory or a
   no-disturbance claim.
@@ -85,4 +87,5 @@ Trajectory diagnostics:
 - `validation.csv`, `validation_summary.csv`, `fvs_predictions.csv`.
 - `manifest.json` — convergence status, diagnostics, run hashes, caveats.
 - Generator: `runbooks/fvs_calibrate_afrf_kc_psp.py`.
-- VRI prior: `data/inventory/vri_2025_kc_age_site_summary.json`.
+- VRI context only: `data/inventory/vri_2025_kc_age_site_summary.json`.
+  This is not a plot age or site-index input.

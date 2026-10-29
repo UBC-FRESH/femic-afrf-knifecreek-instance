@@ -265,10 +265,10 @@ rises from 1.0% to 2.4% over the four intervals.
 
 No global multiplier fits both TPH and BA. Multiplier 2.5 nearly matches TPH
 but leaves BA low by 3.25 m²/ha; multiplier 2.0 is a compromise (BA -2.00,
-TPH +126). The remaining BA error needs growth/species calibration. Stand age
-64 and site index 14.5 m come from the VRI stand-level summary; FVS-BC reports
-that site index is not used in this variant, and age 64 versus 91 produced the
-same backtest. This is a structural backtest, not a calibration claim.
+TPH +126). The remaining BA error needs growth/species calibration. No stand
+age or site index is assigned: the plots are uneven-aged and VRI age is not a
+plot age. FVS-BC reports that site index is not used in this variant. This is a
+structural backtest, not a calibration claim.
 
 Calibration v1
 --------------
@@ -326,10 +326,15 @@ The 1.0 m²/ha, 100 TPH and 0.5 cm limits used earlier were local placeholders,
 not an external validation standard, and are no longer used as a pass/fail
 gate. QMD and PL residuals remain.
 
-Stand age 64 and site index 14.5 m come from the VRI stand-level summary
-(``data/inventory/vri_2025_kc_age_site_summary.json``), not a plot-level join.
-FVS-BC prints that site index is not used in this variant; age 64 versus 91
-also produced the same backtest.
+Leave-one-block-out cross-validation is in ``ws4/kc_psp_cv``. The calibrated
+parameters do not transfer consistently: BA bias worsens when B or C is held
+out, QMD bias worsens when C or D is held out, and the fitted parameters vary
+substantially between folds. The calibration is therefore diagnostic only; do
+not use it to generate production transition curves.
+
+No stand age or site index is assigned. The plots are uneven-aged and VRI age
+is polygon-level context, not a plot age; the VRI summary is not backdated to
+1993. FVS-BC also reports that site index is not used in this variant.
 
 What it unblocks
 ----------------

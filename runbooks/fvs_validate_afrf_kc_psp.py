@@ -5,9 +5,9 @@ Initialises each plot from the 1993 interior-tree measurement, expands each
 tree by 20 (0.05 ha), and grows it without cutting to the 1997/2004/2008/2013
 measurements. This is a structural validation, not a calibrated KC model.
 
-Stand age 64 and site index FD 14.5 are VRI-derived stand-level priors. FVS-BC
-reports that site index is not used in this variant; age 64 versus 91 also
-produced the same backtest.
+No stand age or site index is assigned. Uneven-aged PSP plots have no single
+stand age, and VRI polygon age is not a plot age. FVS-BC reports that site
+index is not used in this variant.
 
 Usage::
 
@@ -87,7 +87,7 @@ def _record(
 def _keywords(
     plot: int,
     mortality_multiplier: float | None = None,
-    site_index: float = 60.0,
+    site_index: float | None = None,
     ba_multipliers: dict[str, float] | None = None,
     mort_multipliers: dict[str, float] | None = None,
     fixmort: dict[str, float] | None = None,
@@ -106,7 +106,7 @@ def _keywords(
             ("712", "CHS131", str(round(stand_age)), "200", "35", "16"),
         ),
         Keyword("MANAGED", ("0", "1")),
-        Keyword("SITECODE", ("FD", str(site_index))),
+        *([Keyword("SITECODE", ("FD", str(site_index)))] if site_index is not None else []),
         Keyword("INVYEAR", ("1993",)),
         Keyword("DESIGN", ("0", "1", "999", "1", "0", "1", "1")),
         *(
@@ -150,10 +150,10 @@ def main() -> None:
     parser.add_argument("--observed", type=Path, required=True)
     parser.add_argument("--out-dir", type=Path, required=True)
     parser.add_argument("--runtime-dir", type=Path, required=True)
-    parser.add_argument("--tree-age", type=float, default=64.0)
+    parser.add_argument("--tree-age", type=float, default=0.0)
     parser.add_argument("--mortality-multiplier", type=float)
-    parser.add_argument("--site-index", type=float, default=14.5)
-    parser.add_argument("--stand-age", type=float, default=64.0)
+    parser.add_argument("--site-index", type=float)
+    parser.add_argument("--stand-age", type=float, default=0.0)
     args = parser.parse_args()
     args.out_dir.mkdir(parents=True, exist_ok=True)
     args.runtime_dir.mkdir(parents=True, exist_ok=True)
@@ -239,11 +239,13 @@ def main() -> None:
         "tree_age": args.tree_age,
         "stand_age": args.stand_age,
         "mortality_multiplier": args.mortality_multiplier,
-        "site_index": {"species": "FD", "value": args.site_index},
+        "site_index": (
+            None if args.site_index is None else {"species": "FD", "value": args.site_index}
+        ),
         "runs": runs,
         "caveats": [
-            "Stand age 64 and site index 14.5 m are VRI-derived stand-level priors; "
-            "FVS-BC does not use site index.",
+            "No stand age or site index assigned; uneven-aged plots have no single "
+            "age, and VRI polygon age is not a plot age.",
             "No independent whole-block validation; species are mapped to BC codes.",
             "Initial population uses only interior trees with 1993 DBH.",
             "Height is filled from DBH when 1993 height is missing.",
