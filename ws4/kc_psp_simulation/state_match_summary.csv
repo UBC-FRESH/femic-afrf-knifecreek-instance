@@ -1,0 +1,4 @@
+heldout_block,n,cohort_matches,conditional_matches,observed_start_states,observed_end_states,cohort_end_states,conditional_end_states,cohort_match_rate,conditional_match_rate
+B,32,26,26,9,8,8,8,0.8125,0.8125
+C,32,26,26,6,6,6,6,0.8125,0.8125
+D,32,23,23,6,6,6,6,0.71875,0.71875

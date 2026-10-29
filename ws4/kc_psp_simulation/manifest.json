@@ -1,34 +1,38 @@
 {
-  "simulation": "afrf-kc-psp-state-reconstruction-v1",
-  "transitions": 96,
-  "folds": [
-    "B",
-    "C",
-    "D"
-  ],
+  "comparison": "afrf-kc-psp-simulated-state-match-v1",
   "overall": {
-    "cohort": {
-      "ba_bias": -0.040316924613791216,
-      "ba_mae": 1.4857763776875463,
-      "tph_bias": -21.16208498282683,
-      "tph_mae": 109.29229502725333,
-      "qmd_bias": 0.11094593359314393,
-      "qmd_mae": 0.33507295765236106
-    },
-    "conditional": {
-      "ba_bias": -0.03901676036379124,
-      "ba_mae": 1.4856513681875463,
-      "tph_bias": 12.379581683839833,
-      "tph_mae": 91.48593719632571,
-      "qmd_bias": -0.02170741007939343,
-      "qmd_mae": 0.30942935460193405
-    }
+    "n": 96,
+    "cohort_matches": 75,
+    "conditional_matches": 75,
+    "cohort_match_rate": 0.78125,
+    "conditional_match_rate": 0.78125
   },
-  "caveats": [
-    "Conditional mode uses observed ingrowth counts and recruit DBH; it is not a forecast.",
-    "Cohort mode excludes ingrowth and tests growth/survival only.",
-    "Models are fit leave-one-block-out.",
-    "No age or site index is assigned.",
-    "DBH presence is the working live-tree indicator."
+  "bins": {
+    "ba": [
+      "BA_LT20",
+      "BA20_25",
+      "BA25_30",
+      "BA30_35",
+      "BA35_40",
+      "BA40_PLUS"
+    ],
+    "qmd": [
+      "QMD_LT20",
+      "QMD20_25",
+      "QMD25_30",
+      "QMD30_35",
+      "QMD35_PLUS"
+    ],
+    "large_tree_ba": [
+      "LT_LT6",
+      "LT6_11",
+      "LT11_16",
+      "LT16_PLUS"
+    ]
+  },
+  "notes": [
+    "States are BA/QMD/large-tree canonical bins; reserve is not observed.",
+    "Conditional mode uses observed ingrowth; it is not an ingrowth forecast.",
+    "A state match is exact equality of the three bins, not a distance."
   ]
 }

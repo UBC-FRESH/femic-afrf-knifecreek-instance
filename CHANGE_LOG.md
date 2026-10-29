@@ -355,3 +355,8 @@ status and the GitHub issue comments.
   BA -0.04 (MAE 1.49), TPH +12.4 (MAE 91.5), QMD -0.02 (MAE 0.31). BA/QMD
   reconstruct well; TPH is noisier. Ingrowth remains block-specific scenario
   data, not a forecast.
+- P3.16 simulated-state comparison: added `runbooks/compare_simulated_states.py`
+  and state-match tables. Simulated end states match observed canonical
+  BA/QMD/large-tree states on 75/96 transitions (78.1%): B 26/32, C 26/32,
+  D 23/32. The bins are coarse (all QMD <20 cm, most large BA <6 m²/ha), so
+  this is mainly a BA-class match.

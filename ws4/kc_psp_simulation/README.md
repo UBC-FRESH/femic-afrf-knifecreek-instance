@@ -30,6 +30,23 @@ By block:
 | C | +0.06 / 1.09 | +0.07 / 1.09 | -59.8 | +18.3 | +0.23 | -0.09 |
 | D | +0.01 / 2.10 | +0.01 / 2.10 | -23.2 | -1.3 | +0.07 | -0.01 |
 
+## Binned state match
+
+The simulated end state is mapped to the same BA/QMD/large-tree bins used by
+the state-support audit.
+
+| Block | Matches | n | Match rate |
+| --- | ---: | ---: | ---: |
+| B | 26 | 32 | 81.3% |
+| C | 26 | 32 | 81.3% |
+| D | 23 | 32 | 71.9% |
+| Overall | 75 | 96 | 78.1% |
+
+Cohort and conditional modes have the same match count. The bins are coarse:
+all observed QMD values are below 20 cm and most large-tree BA is below
+6 m²/ha, so the match is mostly a BA-class match. It is not evidence of a
+fine-grained structural model.
+
 ## Interpretation
 
 - BA and QMD reconstruct well at stand level.
@@ -39,13 +56,18 @@ By block:
   block-specific empirical scenario; held-out transfer failed in
   `ws4/kc_psp_tree_models/ingrowth_validation.csv`.
 - The weak point is TPH and ingrowth, not BA/QMD.
+- The 78% canonical state match is dominated by BA because the other bins are
+  nearly constant.
 
 ## Files
 
 - `simulation_validation.csv` — one row per transition and mode.
 - `simulation_summary.csv` — block × interval summary.
-- `manifest.json` — overall metrics and caveats.
+- `state_match.csv` — exact BA/QMD/large-tree state match per transition.
+- `state_match_summary.csv` — match counts by block.
+- `manifest.json` — simulation metrics and caveats.
 - Generator: `runbooks/simulate_psp_states.py`.
+- State comparison: `runbooks/compare_simulated_states.py`.
 
 ## Next
 

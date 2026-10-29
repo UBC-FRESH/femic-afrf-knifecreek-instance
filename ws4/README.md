@@ -49,7 +49,8 @@ A synthetic ws4 validation dataset is in `dataset_v1_synthetic/`: 4 synthetic
 
 A state reconstruction of the 96 observed transitions is in
 `kc_psp_simulation/`; it is conditional on observed ingrowth and is not an
-ingrowth forecast.
+ingrowth forecast. Simulated end states match the observed canonical
+BA/QMD/large-tree state on 75/96 transitions (78.1%).
 
 Tree-level empirical models are in `kc_psp_tree_models/`: DBH increment and
 survival transfer reasonably in leave-one-block-out tests; Poisson ingrowth

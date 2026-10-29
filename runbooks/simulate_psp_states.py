@@ -78,6 +78,9 @@ def _simulate_fold(
         pred_surv = np.clip(pred_surv, 0, 1)
         cohort_tph = float(pred_surv.sum() * 20.0)
         cohort_ba = float(np.sum(pred_surv * 0.00007854 * dbh_end**2 * 20.0))
+        cohort_large_ba = float(
+            np.sum(pred_surv * 0.00007854 * dbh_end**2 * 20.0 * (dbh_end >= 37.5))
+        )
         rec = recruits[
             (recruits["plot"] == transition.plot)
             & (recruits["first_year"] > transition.start_year)
@@ -85,8 +88,12 @@ def _simulate_fold(
         ]
         rec_tph = float(len(rec) * 20.0)
         rec_ba = float((0.00007854 * rec["first_dbh_cm"] ** 2 * 20.0).sum())
+        rec_large_ba = float(
+            (0.00007854 * rec.loc[rec["first_dbh_cm"] >= 37.5, "first_dbh_cm"] ** 2 * 20.0).sum()
+        )
         full_tph = cohort_tph + rec_tph
         full_ba = cohort_ba + rec_ba
+        full_large_ba = cohort_large_ba + rec_large_ba
         rows.append(
             {
                 "heldout_block": heldout,
@@ -99,13 +106,16 @@ def _simulate_fold(
                 "obs_tph": float(transition.tph_end),
                 "obs_ba_m2_ha": float(transition.ba_end_m2_ha),
                 "obs_qmd_cm": float(transition.qmd_end_cm),
+                "obs_large_ba_m2_ha": float(transition.large_ba_end_m2_ha),
                 "cohort_tph": cohort_tph,
                 "cohort_ba_m2_ha": cohort_ba,
+                "cohort_large_ba_m2_ha": cohort_large_ba,
                 "cohort_qmd_cm": (
                     np.sqrt(cohort_ba / (cohort_tph * 0.00007854)) if cohort_tph > 0 else np.nan
                 ),
                 "conditional_tph": full_tph,
                 "conditional_ba_m2_ha": full_ba,
+                "conditional_large_ba_m2_ha": full_large_ba,
                 "conditional_qmd_cm": (
                     np.sqrt(full_ba / (full_tph * 0.00007854)) if full_tph > 0 else np.nan
                 ),
