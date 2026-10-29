@@ -305,4 +305,11 @@ status and the GitHub issue comments.
   14.61 vs 14.98, TPH 2,713 vs 2,291. MORTMULT 1/2/2.5/3/4 at 2013 gives TPH
   +422/+126/-0.5/-115/-336 and BA +1.04/-2.00/-3.25/-4.34/-6.67. No global
   multiplier fits both; site-index 80 vs 60 was identical. Structural result,
-  not calibration.
+  not calibration.\n- P3.8 FVS-BC species-group calibration: added
+  `runbooks/fvs_calibrate_afrf_kc_psp.py` and
+  `ws4/kc_psp_calibration/`. Damped fixed-point fit to 2013 group BA/TPH
+  converged at iteration 28 (max parameter change 0.0009, loss change
+  3.6e-5). Final 2013 BA 36.38 vs 35.38, QMD 15.76 vs 14.98, TPH 2,313 vs
+  2,291. FD/SE/HW match; PL is unmodelled MPB. Status:
+  converged-not-accepted because QMD bias 0.77 cm exceeds the 0.5 cm
+  criterion. No legal or whole-block claim.

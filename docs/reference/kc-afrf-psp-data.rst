@@ -270,6 +270,64 @@ index 80 versus 60 test produced no change under this configuration; tree age
 100 and site index FD 60 remain placeholders. This is a structural backtest,
 not a calibration claim.
 
+Calibration v1
+--------------
+
+``ws4/kc_psp_calibration`` is a species-group fixed-point calibration of
+``BAIMULT`` and ``MORTMULT`` against 2013 BA and TPH. It converged at
+iteration 28, but it is **not validation-accepted**.
+
+.. list-table::
+   :header-rows: 1
+
+   * - Parameter
+     - FD
+     - SE
+     - PL
+     - HW
+   * - ``BAIMULT``
+     - 1.6213
+     - 1.3948
+     - 1.0000
+     - 1.0000
+   * - ``MORTMULT``
+     - 1.7593
+     - 3.8261
+     - 8.0000
+     - 1.2012
+
+2013 validation:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Metric
+     - Observed
+     - Predicted
+     - Bias
+   * - BA (m²/ha)
+     - 35.38
+     - 36.38
+     - +1.00
+   * - QMD (cm)
+     - 14.98
+     - 15.76
+     - +0.77
+   * - TPH
+     - 2,291
+     - 2,313
+     - +22.5
+
+FD, SE and HW groups match closely; PL does not (observed 6.98 m²/ha and 620
+TPH; predicted 40.38 and 1,100). The BC build has no active MPB module, and
+``MORTMULT PL = 8`` is a bounded proxy, not a biological estimate.
+
+The declared acceptance criteria are an absolute BA bias ≤ 1.0 m²/ha, an
+absolute TPH bias ≤ 100 and an absolute QMD bias ≤ 0.5 cm. BA and TPH pass;
+QMD fails at 0.77 cm. The run is
+therefore **converged-not-accepted** and is usable only as a background
+growth/mortality engine for FD/SE/HW, not as a complete KC stand model.
+
 What it unblocks
 ----------------
 

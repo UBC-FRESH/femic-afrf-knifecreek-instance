@@ -89,6 +89,13 @@ age/site-index treatment therefore remains unresolved. The `MORTMULT` sweep in
 - The raw workbook is private; only derived validation tables are committed.
 - v0's 2004/2008/2013 table was misaligned and must not be reused.
 
+## Calibration v1
+
+`ws4/kc_psp_calibration/` fits species-group growth and mortality multipliers
+to the 2013 group BA/TPH. It converged at iteration 28 but is
+**converged-not-accepted**: 2013 BA +1.00, TPH +22.5, QMD +0.77; PL remains
+unmodelled MPB. See that directory's README before using the parameters.
+
 ## Files
 
 - `validation.csv` — observed vs predicted by plot/year.
