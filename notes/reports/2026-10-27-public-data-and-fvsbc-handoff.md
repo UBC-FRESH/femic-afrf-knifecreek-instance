@@ -282,9 +282,11 @@ duplicate columns and the exact X/Y conversion. See
 `notes/reference/kc-afrf-psp-dataset.md`.
 
 The first FVS backtest is `ws4/kc_psp_validation/`: 1993 interior trees,
-20× expansion, no cut. 2013 BA 34.50 predicted vs 35.38 observed; QMD 14.05 vs
-14.98; TPH 2,777 vs 2,291. FVS under-reproduces mortality, especially in the
-controls. Age/site index are placeholders; not a calibration claim.
+20× expansion, no cut. Version v1 corrects cycle-year alignment. 2013 BA 36.42
+predicted vs 35.38 observed; QMD 14.61 vs 14.98; TPH 2,713 vs 2,291. Observed
+annual mortality rises from 1.0% to 2.4%. `MORTMULT` 1/2/2.5/3/4 gives 2013
+TPH +422/+126/-0.5/-115/-336 and BA +1.04/-2.00/-3.25/-4.34/-6.67; no global
+multiplier fits both. Age/site index are placeholders; not a calibration claim.
 
 ### Maps
 

@@ -296,7 +296,13 @@ status and the GitHub issue comments.
   duplicate columns and exact X/Y conversion. Raw workbook remains private.
 - P3.6 AFRF KC PSP ingest and first FVS backtest: added the private tidy tree
   ingest, public plot summary/schema/metadata under `data/psp/`, and
-  `ws4/kc_psp_validation/`. 1993 interior trees with 20× expansion; no cut;
-  2013 BA 34.50 vs 35.38 observed, QMD 14.05 vs 14.98, TPH 2,777 vs 2,291.
-  FVS under-reproduces mortality, especially in controls. Age/site index are
-  placeholders; no calibration claim.
+  `ws4/kc_psp_validation/`. 1993 interior trees with 20× expansion; no cut.
+  v0's intermediate-year table was misaligned and is superseded by v1 below.
+- P3.7 PSP mortality/ingrowth analysis and MORTMULT sensitivity: added
+  `runbooks/summarize_psp_dynamics.py` and public dynamics summaries; observed
+  annual mortality 1.0/1.4/2.1/2.4% across the four intervals. Corrected the
+  FVS interval alignment to 4/7/4/5 years. v1 2013: BA 36.42 vs 35.38, QMD
+  14.61 vs 14.98, TPH 2,713 vs 2,291. MORTMULT 1/2/2.5/3/4 at 2013 gives TPH
+  +422/+126/-0.5/-115/-336 and BA +1.04/-2.00/-3.25/-4.34/-6.67. No global
+  multiplier fits both; site-index 80 vs 60 was identical. Structural result,
+  not calibration.

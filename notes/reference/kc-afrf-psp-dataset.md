@@ -175,11 +175,19 @@ This is still an inference, not a header definition.
 measurements, expands each tree by 20, and grows without cutting to 1997, 2004,
 2008 and 2013. Results:
 
-- 2013 BA 34.50 predicted vs 35.38 observed (-0.88 m²/ha);
-- 2013 QMD 14.05 vs 14.98 cm (-0.93 cm);
-- 2013 TPH 2,777 vs 2,291 (+487), so FVS under-reproduces mortality;
-- controls have the largest TPH error (+679 average) and C1 the largest BA
-  underprediction (-2.88 m²/ha average).
+- 2013 BA 36.42 predicted vs 35.38 observed (+1.04 m²/ha);
+- 2013 QMD 14.61 vs 14.98 cm (-0.38 cm);
+- 2013 TPH 2,713 vs 2,291 (+422), so FVS under-reproduces mortality;
+- controls have the largest 2013 error (+5.0 m²/ha BA, +1,504 TPH); C1 has
+  the largest BA underprediction (-2.3 m²/ha at 2013).
 
-Tree age 100 and site index FD 60 are placeholders. This is a structural
-backtest, not a calibrated KC model. See `ws4/kc_psp_validation/README.md`.
+Version v1 corrects the v0 cycle-year alignment; v0 intermediate years are
+superseded.
+
+Observed annual mortality rises from 1.0% (1993–97) to 2.4% (2008–13). FVS
+`MORTMULT` sensitivity shows the trade-off: at 2013, multiplier 1 gives BA
++1.04 and TPH +422; multiplier 2.5 gives BA -3.25 and TPH -0.5; multiplier 3
+gives BA -4.34 and TPH -115. No global multiplier fits both. A site-index 80
+vs 60 test produced no change. Tree age 100 and site index FD 60 remain
+placeholders; species/size-specific calibration is needed. See
+`ws4/kc_psp_validation/README.md`.

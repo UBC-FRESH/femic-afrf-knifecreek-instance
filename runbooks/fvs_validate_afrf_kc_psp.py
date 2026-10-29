@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import shutil
 from pathlib import Path
 
 import numpy as np
@@ -82,7 +83,11 @@ def _record(
     }
 
 
-def _keywords(plot: int) -> list[Keyword]:
+def _keywords(
+    plot: int,
+    mortality_multiplier: float | None = None,
+    site_index: float = 60.0,
+) -> list[Keyword]:
     """Build a no-cut 20-year FVS key set."""
     return [
         Keyword(
@@ -93,13 +98,21 @@ def _keywords(plot: int) -> list[Keyword]:
         Keyword("STDIDENT", (f"KC PSP PLOT {plot}",)),
         Keyword("STDINFO", ("712", "CHS131", "0", "200", "35", "16")),
         Keyword("MANAGED", ("0", "1")),
-        Keyword("SITECODE", ("FD", "60")),
+        Keyword("SITECODE", ("FD", str(site_index))),
         Keyword("INVYEAR", ("1993",)),
         Keyword("DESIGN", ("0", "1", "999", "1", "0", "1", "1")),
-        Keyword("TIMEINT", ("", *(str(value) for value in INTERVALS))),
-        Keyword("NUMCYCLE", ("5",)),
+        *(
+            Keyword("TIMEINT", (str(cycle), str(interval)))
+            for cycle, interval in enumerate(INTERVALS, start=1)
+        ),
+        Keyword("NUMCYCLE", (str(len(INTERVALS)),)),
         Keyword("RANNSEED", ("1",)),
-        Keyword("TREELIST", ("5",)),
+        *(
+            [Keyword("MORTMULT", ("1", "0", str(mortality_multiplier), "0", "999"))]
+            if mortality_multiplier is not None
+            else []
+        ),
+        Keyword("TREELIST", (str(len(INTERVALS)),)),
         Keyword("PROCESS"),
         Keyword("STOP"),
     ]
@@ -113,6 +126,8 @@ def main() -> None:
     parser.add_argument("--out-dir", type=Path, required=True)
     parser.add_argument("--runtime-dir", type=Path, required=True)
     parser.add_argument("--tree-age", type=float, default=100.0)
+    parser.add_argument("--mortality-multiplier", type=float)
+    parser.add_argument("--site-index", type=float, default=60.0)
     args = parser.parse_args()
     args.out_dir.mkdir(parents=True, exist_ok=True)
     args.runtime_dir.mkdir(parents=True, exist_ok=True)
@@ -128,21 +143,21 @@ def main() -> None:
             _record(row, plot_id=int(plot), tree_num=index + 1, tree_age=args.tree_age)
             for index, (_, row) in enumerate(group.iterrows())
         ]
+        case_dir = args.runtime_dir / f"plot_{int(plot):02d}"
+        if case_dir.exists():
+            shutil.rmtree(case_dir)
         result = run_case(
             records,
-            _keywords(int(plot)),
-            directory=args.runtime_dir / f"plot_{int(plot):02d}",
+            _keywords(int(plot), args.mortality_multiplier, args.site_index),
+            directory=case_dir,
         )
-        summary = read_table(result.database, "FVS_Summary_Metric").sort_values("Year")
-        # FVS reports years since inventory; map cycle index to the calendar years.
-        calendar = [1993]
-        for interval in INTERVALS:
-            calendar.append(calendar[-1] + interval)
-        for index, row in enumerate(summary.itertuples(index=False)):
+        summary = read_table(result.database, "FVS_Summary_Metric")
+        summary = summary[summary["CaseID"] == result.provenance.case_id].sort_values("Year")
+        for row in summary.itertuples(index=False):
             predicted.append(
                 {
                     "plot": int(plot),
-                    "year": calendar[index] if index < len(calendar) else 1993 + int(row.Year),
+                    "year": int(row.Year),
                     "pred_ba_m2_ha": float(row.BA),
                     "pred_tph": float(row.Tph),
                     "pred_qmd_cm": float(row.QMD),
@@ -184,14 +199,15 @@ def main() -> None:
     )
     summary.to_csv(args.out_dir / "validation_summary.csv", index=False)
     manifest = {
-        "validation": "afrf-kc-psp-fvs-backtest-v0",
+        "validation": "afrf-kc-psp-fvs-backtest-v1",
         "status": "structural-placeholder",
         "plots": int(initial["plot"].nunique()),
         "initial_year": 1993,
         "years": list(YEARS),
         "area_ha": AREA_HA,
         "tree_age": args.tree_age,
-        "site_index": {"species": "FD", "value": 60},
+        "mortality_multiplier": args.mortality_multiplier,
+        "site_index": {"species": "FD", "value": args.site_index},
         "runs": runs,
         "caveats": [
             "Tree age and site index are placeholders.",

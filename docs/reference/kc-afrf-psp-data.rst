@@ -180,9 +180,11 @@ Remaining QC questions
 First FVS-BC backtest
 ---------------------
 
-`ws4/kc_psp_validation` initialises FVS-BC from the 1993 interior trees,
-expands each tree by 20 (0.05 ha), and grows without cutting to 1997, 2004,
-2008 and 2013.
+``ws4/kc_psp_validation`` initialises FVS-BC from the 1993 interior trees,
+expands each tree by 20 (0.05 ha), and grows without cutting with intervals of
+4, 7, 4 and 5 years. The summary years are 1993, 1997, 2004, 2008 and 2013.
+Version v1 corrects the cycle-year alignment in v0; do not reuse v0's
+intermediate-year table.
 
 .. list-table::
    :header-rows: 1
@@ -197,25 +199,76 @@ expands each tree by 20 (0.05 ha), and grows without cutting to 1997, 2004,
      - Pred TPH
    * - 2004
      - 33.14
-     - 30.50
-     - -2.64
+     - 32.08
+     - -1.06
      - 13.47
-     - 12.88
+     - 13.34
      - 2,768
-     - 2,921
+     - 2,865
+   * - 2008
+     - 33.20
+     - 34.08
+     - +0.88
+     - 13.86
+     - 13.92
+     - 2,577
+     - 2,795
    * - 2013
      - 35.38
-     - 34.50
-     - -0.88
+     - 36.42
+     - +1.04
      - 14.98
-     - 14.05
+     - 14.61
      - 2,291
-     - 2,777
+     - 2,713
 
-BA and QMD are broadly plausible; TPH is increasingly overpredicted because
-FVS does not reproduce the observed mortality, especially in the controls
-(+679 TPH average). Tree age 100 and site index FD 60 are placeholders. This
-is a structural backtest, not a calibration claim.
+BA and QMD are broadly plausible. TPH is overpredicted by 2013 (+422), driven
+by the unthinned controls: +5.0 m²/ha BA and +1,504 TPH at 2013. C1 plots have
+the largest BA underprediction (-2.3 m²/ha at 2013). Observed annual mortality
+rises from 1.0% to 2.4% over the four intervals.
+
+``MORTMULT`` sensitivity at 2013:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Multiplier
+     - Pred BA
+     - BA bias
+     - Pred TPH
+     - TPH bias
+   * - 1.0
+     - 36.42
+     - +1.04
+     - 2,713
+     - +422
+   * - 2.0
+     - 33.38
+     - -2.00
+     - 2,417
+     - +126
+   * - 2.5
+     - 32.13
+     - -3.25
+     - 2,290
+     - -0.5
+   * - 3.0
+     - 31.04
+     - -4.34
+     - 2,176
+     - -115
+   * - 4.0
+     - 28.71
+     - -6.67
+     - 1,955
+     - -336
+
+No global multiplier fits both TPH and BA. Multiplier 2.5 nearly matches TPH
+but leaves BA low by 3.25 m²/ha; multiplier 2.0 is a compromise (BA -2.00,
+TPH +126). The remaining BA error needs growth/species calibration. A site
+index 80 versus 60 test produced no change under this configuration; tree age
+100 and site index FD 60 remain placeholders. This is a structural backtest,
+not a calibration claim.
 
 What it unblocks
 ----------------
