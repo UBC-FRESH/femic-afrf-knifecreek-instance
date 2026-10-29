@@ -47,6 +47,10 @@ A synthetic ws4 validation dataset is in `dataset_v1_synthetic/`: 4 synthetic
 1 ha blocks, 23 tracks, 25 treatments and 575 curves from the canonical GWM
 2007 graph. `ws4 validate` passes.
 
+A partial 30-year structural generator is in `kc_psp_generator/`; it produces
+BA/TPH/QMD/large-BA curves only and keeps ingrowth as an explicit block-specific
+scenario.
+
 A state reconstruction of the 96 observed transitions is in
 `kc_psp_simulation/`; it is conditional on observed ingrowth and is not an
 ingrowth forecast. Simulated end states match the observed canonical

@@ -106,6 +106,8 @@ disturbance, and mule-deer constraints, then construct reviewed stem lists.
     models; BA/QMD are plausible, TPH is noisier, ingrowth remains conditional.
   - [x] Compare binned simulated states to observed transitions; 75/96 canonical
     matches, mostly BA-class because the bins are coarse.
+  - [x] Generate partial 30-year structural curves with block-specific ingrowth
+    scenarios; not a compiled ws4 dataset.
   - [x] Build a LidarBC canopy-tree inventory pilot for one 2024 tile.
   - [x] Extend the 2024 DEM/DSM run to all downloaded tiles: 278,318 canopy
     trees, 28 tiles intersecting the SUP.

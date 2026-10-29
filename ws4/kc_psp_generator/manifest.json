@@ -1,0 +1,26 @@
+{
+  "generator": "kc-psp-partial-ws4-v1",
+  "starts": 24,
+  "horizon_years": 30,
+  "step_years": 5,
+  "curves": [
+    "ba_m2_ha",
+    "tph",
+    "qmd_cm",
+    "large_ba_m2_ha"
+  ],
+  "not_generated": [
+    "volume",
+    "canopy cover",
+    "treatment response",
+    "products"
+  ],
+  "ingrowth": "block/treatment empirical scenario; not a transferable forecast",
+  "models": "ws4/kc_psp_tree_models/tree_models.json",
+  "caveats": [
+    "Partial curve library, not a compiled ws4 dataset.",
+    "Ingrowth is an observed block/treatment scenario.",
+    "No age or site index is assigned.",
+    "No treatment response is generated."
+  ]
+}

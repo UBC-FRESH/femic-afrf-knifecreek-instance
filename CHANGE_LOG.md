@@ -360,3 +360,8 @@ status and the GitHub issue comments.
   BA/QMD/large-tree states on 75/96 transitions (78.1%): B 26/32, C 26/32,
   D 23/32. The bins are coarse (all QMD <20 cm, most large BA <6 m²/ha), so
   this is mainly a BA-class match.
+- P3.17 partial ws4 generator: added `runbooks/generate_psp_transitions.py`
+  and `ws4/kc_psp_generator/`. It generates 24 no-cut, 30-year structural
+  curves (BA/TPH/QMD/large BA) in five-year steps, with block/treatment
+  ingrowth scenarios held separately. It is not a compiled ws4 dataset and
+  has no volume, canopy or treatment response.

@@ -408,6 +408,17 @@ on **75 of 96 transitions (78.1%)**: B 26/32, C 26/32, D 23/32. The bins are
 coarse — all QMD is below 20 cm and large-tree BA is concentrated below
 6 m²/ha — so this is mainly a BA-class match, not a fine structural model.
 
+Partial ws4 generator
+---------------------
+
+``ws4/kc_psp_generator`` starts from the 24 1993 plots, applies the tree-level
+growth/survival models for 30 years in five-year steps, and adds an explicit
+block/treatment ingrowth scenario.
+
+It produces BA, TPH, QMD and large-tree BA curves only. It does not generate
+volume, canopy cover, treatment response or a compiled ws4 dataset. The 30-year
+projection is an extrapolation; no 30-year observed validation exists.
+
 What it unblocks
 ----------------
 
