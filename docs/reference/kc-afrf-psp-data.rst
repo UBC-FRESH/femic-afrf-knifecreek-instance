@@ -369,6 +369,23 @@ species-resolved bins do not. All observed QMD values fall below 20 cm and the
 large-tree BA classes are concentrated below 6 m²/ha. No acceptance threshold
 is applied; one-off pairs are retained.
 
+Tree-level models
+-----------------
+
+``ws4/kc_psp_tree_models`` fits interval-start tree models to the 3,700+
+tagged trees and validates them leave-one-block-out.
+
+- Diameter increment RMSE: 0.087–0.102 cm/yr; bias -0.013 to +0.014 cm/yr.
+- Survival Brier: 0.060–0.071; AUC: 0.805–0.896; mean predicted survival
+  matches observed prevalence.
+- Poisson ingrowth fails transfer: held-out observed/predicted totals are
+  B 1/88, C 127/23 and D 35/57.
+
+Growth and survival are useful diagnostics. Ingrowth is strongly block- and
+treatment-specific and must be replaced by an empirical distribution or a
+zero-inflated model before use. The models do not assign age or site index and
+are not yet a complete stand model.
+
 What it unblocks
 ----------------
 

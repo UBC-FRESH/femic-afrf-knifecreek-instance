@@ -47,6 +47,10 @@ A synthetic ws4 validation dataset is in `dataset_v1_synthetic/`: 4 synthetic
 1 ha blocks, 23 tracks, 25 treatments and 575 curves from the canonical GWM
 2007 graph. `ws4 validate` passes.
 
+Tree-level empirical models are in `kc_psp_tree_models/`: DBH increment and
+survival transfer reasonably in leave-one-block-out tests; Poisson ingrowth
+does not. They are diagnostics, not yet a stand model.
+
 The spatial structural dataset is in `dataset_kc_spatial_v3/`: 160 clipped VRI
 blocks (3,481.77 ha), 92 HMZ-specific tracks, 49 treatments. HMZ M/L/U track
 offers are enforced. Block groups carry observed LidarBC clump classes and a

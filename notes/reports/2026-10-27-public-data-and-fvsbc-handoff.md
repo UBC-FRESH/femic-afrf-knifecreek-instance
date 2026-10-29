@@ -316,6 +316,14 @@ start/end pairs (12 repeated, median 4 transitions); species-resolved bins give
 graph, not a species-resolved empirical state matrix. All observed QMD values
 are below 20 cm.
 
+### Tree-level models
+
+`ws4/kc_psp_tree_models/` fits DBH increment, survival and ingrowth from the
+tagged trees with leave-one-block-out validation. Diameter RMSE 0.087–0.102
+cm/yr; survival Brier 0.060–0.071, AUC 0.805–0.896. Poisson ingrowth fails
+transfer (B 1/88, C 127/23, D 35/57 observed/predicted). Growth and survival
+are diagnostics; ingrowth needs an empirical or zero-inflated model.
+
 ### Maps
 
 MWP #3 landscape appendices, KC pages: 150 forest cover, 158 seral, 162

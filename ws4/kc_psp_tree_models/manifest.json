@@ -1,0 +1,20 @@
+{
+  "models": "afrf-kc-psp-tree-models-v1",
+  "tree_intervals": 13734,
+  "mortality_events": 1123,
+  "ingrowth_intervals": 96,
+  "validation": "leave-one-block-out",
+  "folds": [
+    "B",
+    "C",
+    "D"
+  ],
+  "no_age_or_site_index": true,
+  "caveats": [
+    "Tree records within plots are correlated; block CV is a transfer test, not independent replication.",
+    "Survival and ingrowth use DBH presence as the working live-tree indicator.",
+    "OH is excluded: only two OH trees are present and both die.",
+    "No age or site index is assigned.",
+    "No treatment response is fitted; treatment is only an ingrowth covariate."
+  ]
+}
