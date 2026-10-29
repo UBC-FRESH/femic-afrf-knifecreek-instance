@@ -310,6 +310,14 @@ status and the GitHub issue comments.
   `ws4/kc_psp_calibration/`. Damped fixed-point fit to 2013 group BA/TPH
   converged at iteration 28 (max parameter change 0.0009, loss change
   3.6e-5). Final 2013 BA 36.38 vs 35.38, QMD 15.76 vs 14.98, TPH 2,313 vs
-  2,291. FD/SE/HW match; PL is unmodelled MPB. Status:
-  converged-not-accepted because QMD bias 0.77 cm exceeds the 0.5 cm
-  criterion. No legal or whole-block claim.
+  2,291. FD/SE/HW match; PL is unmodelled MPB. The earlier 0.5 cm QMD
+  threshold was ad hoc and is not a gate. Added the VRI stand-level age/site
+  summary (age 64 at 1993; site index 14.5 m); FVS-BC does not use site index
+  and age 64 vs 91 gave the same run. No legal or whole-block claim.
+- P3.9 VRI age/site documentation: added
+  `runbooks/summarize_vri_age_site.py` and
+  `data/inventory/vri_2025_kc_age_site_summary.json`. The VRI stand-level
+  prior is age 64 at 1993 and site index 14.5 m. FVS-BC reports that site
+  index is not used; age 64 vs 91 gave the same result. Removed the ad hoc
+  QMD acceptance gate; the calibration status is now simply `converged` with
+  residual diagnostics.

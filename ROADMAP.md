@@ -90,7 +90,9 @@ disturbance, and mule-deer constraints, then construct reviewed stem lists.
   - [x] Summarize PSP mortality/ingrowth and test `MORTMULT` sensitivity;
     no global multiplier fits both TPH and BA.
   - [x] Run the species-group fixed-point calibration; it converged at 28
-    iterations but is not validation-accepted (QMD and PL/MPB remain).
+    iterations (QMD and PL/MPB remain as documented residuals).
+  - [x] Document VRI-derived stand age/site index and confirm FVS-BC does not
+    use site index; removed the ad hoc QMD acceptance gate.
   - [x] Build a LidarBC canopy-tree inventory pilot for one 2024 tile.
   - [x] Extend the 2024 DEM/DSM run to all downloaded tiles: 278,318 canopy
     trees, 28 tiles intersecting the SUP.

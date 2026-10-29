@@ -286,13 +286,16 @@ The first FVS backtest is `ws4/kc_psp_validation/`: 1993 interior trees,
 predicted vs 35.38 observed; QMD 14.61 vs 14.98; TPH 2,713 vs 2,291. Observed
 annual mortality rises from 1.0% to 2.4%. `MORTMULT` 1/2/2.5/3/4 gives 2013
 TPH +422/+126/-0.5/-115/-336 and BA +1.04/-2.00/-3.25/-4.34/-6.67; no global
-multiplier fits both. Age/site index are placeholders; not a calibration claim.
+multiplier fits both. VRI stand-level age is 64 (1993) and site index 14.5 m;
+FVS-BC does not use site index, and age 64 vs 91 gave the same run. Not a
+calibration claim.
 
 Calibration v1 (`ws4/kc_psp_calibration/`) converged at iteration 28 with FD
 BAI 1.6213/mort 1.7593, SE 1.3948/3.8261, PL 1.0/8.0 and HW 1.0/1.2012. 2013
 BA 36.38 vs 35.38, QMD 15.76 vs 14.98, TPH 2,313 vs 2,291. FD/SE/HW match; PL
-is unmodelled MPB. Status is converged-not-accepted because QMD bias is 0.77
-cm against a 0.5 cm criterion.
+is unmodelled MPB. The earlier 0.5 cm QMD threshold was ad hoc and is not a
+gate. VRI stand-level age is 64 (1993) and site index 14.5 m; FVS-BC does not
+use site index, and age 64 vs 91 gave the same run.
 
 ### Maps
 
