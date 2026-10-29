@@ -256,3 +256,12 @@ reconstruct well; TPH is noisier. Conditional ingrowth is not an ingrowth
 forecast. Simulated end states match the observed canonical BA/QMD/large-tree
 state on 75/96 transitions (78.1%); the bins are coarse and this is mainly a
 BA-class match.
+
+## Partial ws4 generator
+
+`ws4/kc_psp_generator/` produces 24 no-cut, 30-year structural curves (BA,
+TPH, QMD, large-tree BA) in five-year steps. Ingrowth is an explicit
+block/treatment empirical scenario, not a fitted equation. It does not produce
+volume, canopy cover or treatment response, and it is not a compiled ws4
+dataset. The 30-year projection is an extrapolation beyond the 4–7-year model
+fit intervals.
