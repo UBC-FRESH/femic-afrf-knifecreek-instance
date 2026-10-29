@@ -224,3 +224,13 @@ interval start is ingrowth; a start-live tree with no end DBH is mortality.
 No age or site index is assigned. This is the primary observed evidence for
 the next state library; its support is sparse (24 plots, four intervals) and
 it is not a whole-block sample.
+
+## State-support audit
+
+`data/psp/kc_afrf_psp_state_support.csv` maps the 96 transitions to the
+existing canonical BA/QMD/large-tree bins and to a species-mix class.
+Canonical bins: 9 start states, 18 pairs, 12 repeated, median 4 transitions,
+max 16. Species-mix bins: 20 start states, 36 pairs, 17 repeated, 19 one-off,
+median 1. The canonical bins support only a coarse graph; species-resolved
+states are too sparse for an empirical ws4 matrix. All observed QMD values are
+below 20 cm. No acceptance threshold is applied.

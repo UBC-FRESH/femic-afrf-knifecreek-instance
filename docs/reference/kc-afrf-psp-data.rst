@@ -350,6 +350,25 @@ remain unresolved. A tree whose first DBH appears after the interval start is
 ingrowth; a start-live tree without an end DBH is mortality. No age or site
 index is assigned. The table is derived data; raw tree records remain private.
 
+State-support audit
+-------------------
+
+``data/psp/kc_afrf_psp_state_support.csv`` maps the 96 transitions to the
+existing ws4 BA/QMD/large-tree bins and to a species-mix class. Support counts
+are in ``kc_afrf_psp_state_support_summary.csv``.
+
+Results:
+
+- canonical bins: 9 start states, 18 start/end pairs, 12 repeated pairs,
+  median 4 transitions per pair, maximum 16;
+- species-mix bins: 20 start states, 36 pairs, 17 repeated, 19 one-off,
+  median 1 transition per pair.
+
+The canonical bins have enough repeated support for a coarse graph, but the
+species-resolved bins do not. All observed QMD values fall below 20 cm and the
+large-tree BA classes are concentrated below 6 m²/ha. No acceptance threshold
+is applied; one-off pairs are retained.
+
 What it unblocks
 ----------------
 
