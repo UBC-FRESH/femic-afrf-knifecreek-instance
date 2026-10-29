@@ -348,3 +348,10 @@ status and the GitHub issue comments.
   ingrowth): BA -0.04 m²/ha (MAE 1.49), TPH +12.8 (MAE 91.1), QMD -0.02 cm
   (MAE 0.31). Growth and survival are diagnostics; ingrowth must be
   block-specific scenario data. No age or site index is assigned.
+- P3.15 state reconstruction: added `runbooks/simulate_psp_states.py` and
+  `ws4/kc_psp_simulation/`. Leave-one-block-out growth/survival models applied
+  to 96 transitions. Cohort (no ingrowth): BA -0.04 m²/ha (MAE 1.49), TPH
+  -21.2 (MAE 109.3), QMD +0.11 (MAE 0.34). Conditional (observed recruits):
+  BA -0.04 (MAE 1.49), TPH +12.4 (MAE 91.5), QMD -0.02 (MAE 0.31). BA/QMD
+  reconstruct well; TPH is noisier. Ingrowth remains block-specific scenario
+  data, not a forecast.

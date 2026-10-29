@@ -1,0 +1,34 @@
+{
+  "simulation": "afrf-kc-psp-state-reconstruction-v1",
+  "transitions": 96,
+  "folds": [
+    "B",
+    "C",
+    "D"
+  ],
+  "overall": {
+    "cohort": {
+      "ba_bias": -0.040316924613791216,
+      "ba_mae": 1.4857763776875463,
+      "tph_bias": -21.16208498282683,
+      "tph_mae": 109.29229502725333,
+      "qmd_bias": 0.11094593359314393,
+      "qmd_mae": 0.33507295765236106
+    },
+    "conditional": {
+      "ba_bias": -0.03901676036379124,
+      "ba_mae": 1.4856513681875463,
+      "tph_bias": 12.379581683839833,
+      "tph_mae": 91.48593719632571,
+      "qmd_bias": -0.02170741007939343,
+      "qmd_mae": 0.30942935460193405
+    }
+  },
+  "caveats": [
+    "Conditional mode uses observed ingrowth counts and recruit DBH; it is not a forecast.",
+    "Cohort mode excludes ingrowth and tests growth/survival only.",
+    "Models are fit leave-one-block-out.",
+    "No age or site index is assigned.",
+    "DBH presence is the working live-tree indicator."
+  ]
+}

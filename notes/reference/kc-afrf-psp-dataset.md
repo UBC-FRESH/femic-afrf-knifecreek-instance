@@ -245,3 +245,12 @@ observed/predicted totals: B 1/81, C 127/18, D 35/64). Growth and survival are
 diagnostics; ingrowth must be block-specific scenario data. Start-cohort stand
 aggregate (no ingrowth): BA bias -0.04 m²/ha (MAE 1.49), TPH +12.8 (MAE 91.1),
 QMD -0.02 cm (MAE 0.31).
+
+## State reconstruction
+
+`ws4/kc_psp_simulation/` applies leave-one-block-out growth/survival models
+to the 96 transitions. Cohort (no ingrowth): BA bias -0.04 (MAE 1.49), TPH
+-21.2 (MAE 109.3), QMD +0.11 (MAE 0.34). Conditional (observed recruits): BA
+-0.04 (MAE 1.49), TPH +12.4 (MAE 91.5), QMD -0.02 (MAE 0.31). BA/QMD
+reconstruct well; TPH is noisier. Conditional ingrowth is not an ingrowth
+forecast.
