@@ -15,7 +15,7 @@ after its parent issue exists and the maintainer approves it.
 | P0 Bootstrap and growth-engine contract | #1 | `feature/p0-bootstrap` | complete |
 | P1 Data acquisition and stem lists | #7 | `feature/p1-data-acquisition` | active |
 | P2 FVS-BC state-transition library | TBD | `feature/p2-state-library` | planned |
-| P3 ws4 instance assembly | TBD | `feature/p3-ws4-assembly` | planned |
+| P3 Patchworks-compatible KC package | #60 | `feature/p3-patchworks-package` | active |
 | P4 Verification and scenarios | TBD | `feature/p4-verification` | planned |
 | P5 Release v0.1 | TBD | `feature/p5-release` | planned |
 | P6 Maintain and merge readiness | TBD | `feature/p6-maintain` | planned |
@@ -250,26 +250,37 @@ Acceptance criteria:
 - The library validates against the ws4 schema.
 - The known limits of FVS-BC and the wrapper are recorded.
 
-## Phase 3: ws4 instance assembly
+## Phase 3: Patchworks-compatible Knife Creek package
 
-Parent issue: TBD
-Branch: `feature/p3-ws4-assembly`
-Status: planned
+Parent issue: #60
+Branch: `feature/p3-patchworks-package`
+Status: active
 
-Goal: compile the Knife Creek ws4 dataset and run a first baseline.
+Goal: build a Patchworks-compatible Knife Creek package (fragments, tracks/H
+matrix, product and feature accounts, topology, roads, pin, ForestModelXML,
+targets), ingest it into ws4, and run the baseline, selection, reports and web
+UI.
 
-- [ ] P3.1 Map blocks and AUs to initial state tracks
-- [ ] P3.2 Compile the ws4 dataset
-- [ ] P3.3 Generate topology and patch accounts
-- [ ] P3.4 Build and run the baseline selection schedule
-- [ ] P3.5 Record the assembly evidence
+- [ ] P3.1 Format spike and ForestModelXML decision (#61)
+- [ ] P3.2 Build `fragments.shp` and stable block identity (#62)
+- [ ] P3.3 Build `tracks/H` matrix tables and 300-year curves (#63)
+- [ ] P3.4 Build product, feature, accounts and protoaccounts (#64)
+- [ ] P3.5 Build topology, roads and patch accounts (#65)
+- [ ] P3.6 Build pin, scenarios and targets (#66)
+- [ ] P3.7 Ingest, validate, run, report and serve (#67)
+- [ ] P3.8 Record parity evidence and close out (#68)
 
 Acceptance criteria:
 
-- `ws4 validate` accepts the dataset.
-- The baseline uses selection entries only; no clearcut treatment exists.
-- The cutting cycle and mule-deer constraints are enforced or explicitly
-  reported as not yet enforced.
+- A Patchworks-compatible package exists with the documented spatial and
+  matrix layers.
+- `ws4 ingest` produces a dataset that passes `ws4 validate`.
+- Product and feature accounts resolve for every target.
+- Topology, roads and patch accounts exist or their absence is explicitly
+  recorded.
+- A no-cut baseline and a selection scenario produce reports.
+- The web UI serves the dataset, runs and targets.
+- No clearcut and no legal-compliance claim.
 
 ## Phase 4: Verification and scenarios
 

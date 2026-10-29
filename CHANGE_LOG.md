@@ -365,3 +365,9 @@ status and the GitHub issue comments.
   curves (BA/TPH/QMD/large BA) in five-year steps, with block/treatment
   ingrowth scenarios held separately. It is not a compiled ws4 dataset and
   has no volume, canopy or treatment response.
+- P3.0 activate the Patchworks-compatible Knife Creek package: opened parent
+  issue #60, child issues #61–#68, and branch
+  `feature/p3-patchworks-package`. The phase now treats fragments.shp,
+  tracks/H, product and feature accounts, topology, roads, pin and
+  ForestModelXML as primary deliverables, with ws4 ingestion as the runtime
+  lane. No model claim is added.
