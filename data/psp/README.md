@@ -11,10 +11,18 @@ files:
 | `kc_afrf_psp_plot_summary.csv` | 24 plots × 5 years, interior-tree TPH/BA/QMD/height/large-tree metrics. |
 | `kc_afrf_psp_schema.csv` | Tidy long-table column schema. |
 | `kc_afrf_psp_metadata.json` | Source hash, counts, assumptions. |
+| `kc_afrf_psp_dynamics.csv` | Mortality/ingrowth by interval, block, treatment and size class. |
+| `kc_afrf_psp_dynamics_summary.csv` | Mortality/ingrowth summary by block/treatment. |
+| `kc_afrf_psp_mortality_by_plot.csv` | Plot-level mortality and recruitment. |
+
+Mortality/ingrowth use DBH presence at each measurement as the working
+live/dead indicator. `TS`/`TC` and the dead-tree column semantics remain
+unresolved, so these summaries are not a substitute for the field codes.
 
 See `../notes/reference/kc-afrf-psp-dataset.md` and
 `../ws4/kc_psp_validation/README.md`. The 1993–2013 FVS backtest is a
-structural test with placeholder age/site index, not a calibration claim.
+structural test with placeholder age/site index, not a calibration claim. Its
+v1 tables correct the cycle-year alignment in the earlier v0 run.
 
 # Regional IDF Cariboo analog
 
