@@ -1,0 +1,33 @@
+{
+  "source": "AFRF Knife Creek PSP workbook",
+  "sha256": "6d958ca93364e424ad41380da87c5f6da1e5ce5ce4fbd762226286d748a82ded",
+  "rows": 26940,
+  "plots": 24,
+  "years": [
+    1993,
+    1997,
+    2004,
+    2008,
+    2013
+  ],
+  "area_ha": 0.05,
+  "position_counts": {
+    "I": 19355,
+    "B": 7585
+  },
+  "public_files": [
+    "kc_afrf_psp_plot_summary.csv",
+    "kc_afrf_psp_schema.csv"
+  ],
+  "private_files": [
+    "trees_long.parquet",
+    "plot_summary.csv"
+  ],
+  "assumptions": [
+    "P=I is the plot population; P=B is the 5 m buffer.",
+    "Plot area 0.05 ha, expansion 20.",
+    "X/Y are feet from plot centre; converted to metres.",
+    "DBH cm, height/crown/live-crown-base m.",
+    "TS/TC/D1/D2/DA/DS/WTA are not used."
+  ]
+}

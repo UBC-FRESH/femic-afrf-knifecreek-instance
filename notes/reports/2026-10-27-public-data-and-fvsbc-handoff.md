@@ -281,6 +281,11 @@ metadata questions are limited to `TS`, `TC`, `D1/D2/DA/DS/WTA`, `HT13`,
 duplicate columns and the exact X/Y conversion. See
 `notes/reference/kc-afrf-psp-dataset.md`.
 
+The first FVS backtest is `ws4/kc_psp_validation/`: 1993 interior trees,
+20× expansion, no cut. 2013 BA 34.50 predicted vs 35.38 observed; QMD 14.05 vs
+14.98; TPH 2,777 vs 2,291. FVS under-reproduces mortality, especially in the
+controls. Age/site index are placeholders; not a calibration claim.
+
 ### Maps
 
 MWP #3 landscape appendices, KC pages: 150 forest cover, 158 seral, 162

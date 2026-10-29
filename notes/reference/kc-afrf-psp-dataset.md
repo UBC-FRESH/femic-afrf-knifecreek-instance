@@ -168,3 +168,18 @@ This is still an inference, not a header definition.
 - a legal-compliance determination;
 - absolute spatial joins to VRI/HMZ/LiDAR;
 - public release of raw field data.
+
+## First FVS-BC backtest
+
+`ws4/kc_psp_validation/` initialises FVS-BC from the 1993 interior-tree
+measurements, expands each tree by 20, and grows without cutting to 1997, 2004,
+2008 and 2013. Results:
+
+- 2013 BA 34.50 predicted vs 35.38 observed (-0.88 m²/ha);
+- 2013 QMD 14.05 vs 14.98 cm (-0.93 cm);
+- 2013 TPH 2,777 vs 2,291 (+487), so FVS under-reproduces mortality;
+- controls have the largest TPH error (+679 average) and C1 the largest BA
+  underprediction (-2.88 m²/ha average).
+
+Tree age 100 and site index FD 60 are placeholders. This is a structural
+backtest, not a calibrated KC model. See `ws4/kc_psp_validation/README.md`.

@@ -177,7 +177,9 @@ FRDA Report 242 confirms the plot design, plot/block/treatment mapping and the
 `P = I/B` interior/buffer distinction. It is the primary field-data candidate
 but not yet a formal CFI or public dataset. The raw workbook is not committed;
 assumptions, caveats and remaining QC questions are in
-:doc:`../reference/kc-afrf-psp-data`.
+:doc:`../reference/kc-afrf-psp-data`. The first FVS backtest is in
+``ws4/kc_psp_validation``: 1993 interior trees, 20× expansion, no cut. It
+reproduces BA/QMD broadly but overpredicts TPH as mortality is underpredicted.
 
 LidarBC canopy inventory
 ~~~~~~~~~~~~~~~~~~~~~~~~

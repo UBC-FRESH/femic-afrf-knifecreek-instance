@@ -294,3 +294,9 @@ status and the GitHub issue comments.
   interior/buffer distinction, vigor classes, crown-diameter and live-crown
   definitions. Remaining unknowns: `TS`, `TC`, `D1/D2/DA/DS/WTA`, `HT13`,
   duplicate columns and exact X/Y conversion. Raw workbook remains private.
+- P3.6 AFRF KC PSP ingest and first FVS backtest: added the private tidy tree
+  ingest, public plot summary/schema/metadata under `data/psp/`, and
+  `ws4/kc_psp_validation/`. 1993 interior trees with 20× expansion; no cut;
+  2013 BA 34.50 vs 35.38 observed, QMD 14.05 vs 14.98, TPH 2,777 vs 2,291.
+  FVS under-reproduces mortality, especially in controls. Age/site index are
+  placeholders; no calibration claim.
