@@ -342,7 +342,9 @@ status and the GitHub issue comments.
   sparse. No acceptance threshold is applied.
 - P3.13 tree-level models: added `runbooks/fit_psp_tree_models.py` and
   `ws4/kc_psp_tree_models/`. Leave-one-block-out DBH increment RMSE
-  0.087–0.102 cm/yr; survival Brier 0.060–0.071 and AUC 0.805–0.896. Poisson
-  ingrowth fails transfer (observed/predicted totals B 1/88, C 127/23,
-  D 35/57). Growth and survival are diagnostics; ingrowth is not usable yet.
-  No age or site index is assigned.
+  0.087–0.102 cm/yr; survival Brier 0.060–0.071 and AUC 0.805–0.896.
+  Empirical block/treatment ingrowth still fails transfer (observed/predicted
+  totals B 1/81, C 127/18, D 35/64). Start-cohort stand aggregate (no
+  ingrowth): BA -0.04 m²/ha (MAE 1.49), TPH +12.8 (MAE 91.1), QMD -0.02 cm
+  (MAE 0.31). Growth and survival are diagnostics; ingrowth must be
+  block-specific scenario data. No age or site index is assigned.

@@ -320,9 +320,11 @@ are below 20 cm.
 
 `ws4/kc_psp_tree_models/` fits DBH increment, survival and ingrowth from the
 tagged trees with leave-one-block-out validation. Diameter RMSE 0.087–0.102
-cm/yr; survival Brier 0.060–0.071, AUC 0.805–0.896. Poisson ingrowth fails
-transfer (B 1/88, C 127/23, D 35/57 observed/predicted). Growth and survival
-are diagnostics; ingrowth needs an empirical or zero-inflated model.
+cm/yr; survival Brier 0.060–0.071, AUC 0.805–0.896. Empirical ingrowth still
+fails transfer (B 1/81, C 127/18, D 35/64 observed/predicted). Growth and
+survival are diagnostics; ingrowth must be block-specific scenario data.
+Start-cohort stand aggregate (no ingrowth): BA -0.04 m²/ha (MAE 1.49), TPH
++12.8 (MAE 91.1), QMD -0.02 cm (MAE 0.31).
 
 ### Maps
 

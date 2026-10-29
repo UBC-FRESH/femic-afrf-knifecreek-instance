@@ -156,49 +156,22 @@ def _fit_survival(pairs: pd.DataFrame) -> dict:
 
 
 def _fit_ingrowth(transitions: pd.DataFrame) -> dict:
-    """Fit a Poisson plot-interval ingrowth model."""
+    """Store empirical ingrowth distributions by block/treatment and treatment."""
     frame = transitions.copy()
-    frame["log_ba"] = np.log(frame["ba_start_m2_ha"].clip(lower=0.1))
-    frame["log_tph"] = np.log(frame["tph_start"].clip(lower=1.0))
-    frame["treatment_C1"] = (frame["treatment"] == "C1").astype(float)
-    frame["treatment_C2"] = (frame["treatment"] == "C2").astype(float)
-    frame["treatment_S"] = (frame["treatment"] == "S").astype(float)
-    x = pd.DataFrame(
-        {
-            "intercept": 1.0,
-            "log_ba": frame["log_ba"],
-            "log_tph": frame["log_tph"],
-            "treatment_C1": frame["treatment_C1"],
-            "treatment_C2": frame["treatment_C2"],
-            "treatment_S": frame["treatment_S"],
-        }
-    )
-    means = x.mean()
-    scales = x.std(ddof=0).replace(0, 1.0)
-    means["intercept"] = 0.0
-    scales["intercept"] = 1.0
-    z = ((x - means) / scales).to_numpy()
-    y = frame["ingrowth_n"].to_numpy()
 
-    def objective(beta: np.ndarray) -> float:
-        eta = z @ beta
-        mu = np.exp(np.clip(eta, -20, 20))
-        return float((mu - y * eta).sum() + 1e-4 * np.sum(beta[1:] ** 2))
+    def _dist(group: pd.DataFrame) -> list[int]:
+        return [int(value) for value in group["ingrowth_n"].tolist()]
 
-    result = minimize(
-        objective,
-        np.zeros(z.shape[1]),
-        method="L-BFGS-B",
-        options={"maxiter": 1000},
-    )
-    if not result.success:
-        raise RuntimeError(result.message)
+    by_block_treatment = {
+        f"{block}|{treatment}": _dist(group)
+        for (block, treatment), group in frame.groupby(["block", "treatment"])
+    }
+    by_treatment = {treatment: _dist(group) for treatment, group in frame.groupby("treatment")}
     return {
-        "kind": "poisson",
-        "columns": list(x.columns),
-        "means": means.to_dict(),
-        "scales": scales.to_dict(),
-        "coefficients": result.x.tolist(),
+        "kind": "empirical",
+        "by_block_treatment": by_block_treatment,
+        "by_treatment": by_treatment,
+        "pooled": _dist(frame),
     }
 
 
@@ -218,27 +191,55 @@ def _predict_survival(model: dict, pairs: pd.DataFrame) -> np.ndarray:
 
 
 def _predict_ingrowth(model: dict, transitions: pd.DataFrame) -> np.ndarray:
-    """Predict plot-interval ingrowth count."""
-    frame = transitions.copy()
-    frame["log_ba"] = np.log(frame["ba_start_m2_ha"].clip(lower=0.1))
-    frame["log_tph"] = np.log(frame["tph_start"].clip(lower=1.0))
-    frame["treatment_C1"] = (frame["treatment"] == "C1").astype(float)
-    frame["treatment_C2"] = (frame["treatment"] == "C2").astype(float)
-    frame["treatment_S"] = (frame["treatment"] == "S").astype(float)
-    x = pd.DataFrame(
-        {
-            "intercept": 1.0,
-            "log_ba": frame["log_ba"],
-            "log_tph": frame["log_tph"],
-            "treatment_C1": frame["treatment_C1"],
-            "treatment_C2": frame["treatment_C2"],
-            "treatment_S": frame["treatment_S"],
-        }
-    )[model["columns"]]
-    means = pd.Series(model["means"])
-    scales = pd.Series(model["scales"])
-    eta = ((x - means) / scales).to_numpy() @ np.asarray(model["coefficients"])
-    return np.exp(np.clip(eta, -20, 20))
+    """Predict expected plot-interval ingrowth from the empirical distribution."""
+    values = []
+    for row in transitions.itertuples(index=False):
+        key = f"{row.block}|{row.treatment}"
+        distribution = model["by_block_treatment"].get(key)
+        if distribution is None:
+            distribution = model["by_treatment"].get(row.treatment, model["pooled"])
+        values.append(float(np.mean(distribution)))
+    return np.asarray(values)
+
+
+def _stand_metrics(
+    pairs: pd.DataFrame,
+    pred_dg: np.ndarray,
+    pred_surv: np.ndarray,
+) -> pd.DataFrame:
+    """Aggregate predicted start-cohort BA/TPH/QMD by plot and interval."""
+    frame = pairs.copy()
+    frame["pred_dg"] = pred_dg
+    frame["pred_surv"] = np.clip(pred_surv, 0, 1)
+    frame["pred_dbh"] = frame["dbh_cm"] + frame["pred_dg"] * frame["years"]
+    frame["obs_end_dbh"] = frame["dbh_end"]
+    frame["obs_ba"] = np.where(
+        frame["survived"] == 1,
+        0.00007854 * frame["obs_end_dbh"] ** 2 * 20.0,
+        0.0,
+    )
+    frame["pred_ba"] = frame["pred_surv"] * 0.00007854 * frame["pred_dbh"] ** 2 * 20.0
+    rows = []
+    for (plot, start, block), group in frame.groupby(["plot", "year", "block"]):
+        obs_n = float((group["survived"] == 1).sum() * 20.0)
+        pred_n = float(group["pred_surv"].sum() * 20.0)
+        obs_ba = float(group["obs_ba"].sum())
+        pred_ba = float(group["pred_ba"].sum())
+        rows.append(
+            {
+                "plot": int(plot),
+                "block": block,
+                "start_year": int(start),
+                "end_year": int(start + group["years"].iloc[0]),
+                "obs_tph": obs_n,
+                "pred_tph": pred_n,
+                "obs_ba_m2_ha": obs_ba,
+                "pred_ba_m2_ha": pred_ba,
+                "obs_qmd_cm": (np.sqrt(obs_ba / (obs_n * 0.00007854)) if obs_n > 0 else np.nan),
+                "pred_qmd_cm": (np.sqrt(pred_ba / (pred_n * 0.00007854)) if pred_n > 0 else np.nan),
+            }
+        )
+    return pd.DataFrame(rows)
 
 
 def _auc(y: np.ndarray, p: np.ndarray) -> float:
@@ -286,6 +287,7 @@ def main() -> None:
     pairs = _pairs(trees)
     fold_rows = []
     ingrowth_rows = []
+    stand_rows = []
     for heldout in BLOCKS:
         train = pairs[pairs["block"] != heldout].copy()
         test = pairs[pairs["block"] == heldout].copy()
@@ -297,6 +299,7 @@ def main() -> None:
         metrics = _metrics(test, pred_dg, pred_surv)
         metrics["heldout_block"] = heldout
         fold_rows.append(metrics)
+        stand_rows.append(_stand_metrics(test, pred_dg, pred_surv))
         test_transitions = transitions[transitions["block"] == heldout].copy()
         pred_ingrowth = _predict_ingrowth(ing_model, test_transitions)
         ingrowth_rows.append(
@@ -308,7 +311,7 @@ def main() -> None:
                 "observed_mean": float(test_transitions["ingrowth_n"].mean()),
                 "predicted_mean": float(pred_ingrowth.mean()),
                 "mae": float(np.mean(np.abs(pred_ingrowth - test_transitions["ingrowth_n"]))),
-                "poisson_deviance": float(
+                "count_deviance": float(
                     2
                     * np.sum(
                         np.where(
@@ -326,6 +329,9 @@ def main() -> None:
         )
     pd.DataFrame(fold_rows).to_csv(args.out_dir / "tree_validation.csv", index=False)
     pd.DataFrame(ingrowth_rows).to_csv(args.out_dir / "ingrowth_validation.csv", index=False)
+    pd.concat(stand_rows, ignore_index=True).to_csv(
+        args.out_dir / "stand_validation.csv", index=False
+    )
 
     final_dg = _fit_dg(pairs)
     final_surv = _fit_survival(pairs)
@@ -348,9 +354,11 @@ def main() -> None:
             "Tree records within plots are correlated; block CV is a transfer "
             "test, not independent replication.",
             "Survival and ingrowth use DBH presence as the working live-tree indicator.",
+            "Ingrowth is an empirical block/treatment distribution, not a transferable model; "
+            "held-out blocks fall back to their treatment distribution.",
             "OH is excluded: only two OH trees are present and both die.",
             "No age or site index is assigned.",
-            "No treatment response is fitted; treatment is only an ingrowth covariate.",
+            "Stand validation covers the 1993 start cohort only; ingrowth is excluded.",
         ],
     }
     (args.out_dir / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
