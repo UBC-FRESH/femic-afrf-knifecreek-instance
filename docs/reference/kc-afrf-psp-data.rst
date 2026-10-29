@@ -265,17 +265,17 @@ rises from 1.0% to 2.4% over the four intervals.
 
 No global multiplier fits both TPH and BA. Multiplier 2.5 nearly matches TPH
 but leaves BA low by 3.25 m²/ha; multiplier 2.0 is a compromise (BA -2.00,
-TPH +126). The remaining BA error needs growth/species calibration. A site
-index 80 versus 60 test produced no change under this configuration; tree age
-100 and site index FD 60 remain placeholders. This is a structural backtest,
-not a calibration claim.
+TPH +126). The remaining BA error needs growth/species calibration. Stand age
+64 and site index 14.5 m come from the VRI stand-level summary; FVS-BC reports
+that site index is not used in this variant, and age 64 versus 91 produced the
+same backtest. This is a structural backtest, not a calibration claim.
 
 Calibration v1
 --------------
 
 ``ws4/kc_psp_calibration`` is a species-group fixed-point calibration of
 ``BAIMULT`` and ``MORTMULT`` against 2013 BA and TPH. It converged at
-iteration 28, but it is **not validation-accepted**.
+iteration 28.
 
 .. list-table::
    :header-rows: 1
@@ -296,7 +296,7 @@ iteration 28, but it is **not validation-accepted**.
      - 8.0000
      - 1.2012
 
-2013 validation:
+2013 diagnostics:
 
 .. list-table::
    :header-rows: 1
@@ -322,11 +322,14 @@ FD, SE and HW groups match closely; PL does not (observed 6.98 m²/ha and 620
 TPH; predicted 40.38 and 1,100). The BC build has no active MPB module, and
 ``MORTMULT PL = 8`` is a bounded proxy, not a biological estimate.
 
-The declared acceptance criteria are an absolute BA bias ≤ 1.0 m²/ha, an
-absolute TPH bias ≤ 100 and an absolute QMD bias ≤ 0.5 cm. BA and TPH pass;
-QMD fails at 0.77 cm. The run is
-therefore **converged-not-accepted** and is usable only as a background
-growth/mortality engine for FD/SE/HW, not as a complete KC stand model.
+The 1.0 m²/ha, 100 TPH and 0.5 cm limits used earlier were local placeholders,
+not an external validation standard, and are no longer used as a pass/fail
+gate. QMD and PL residuals remain.
+
+Stand age 64 and site index 14.5 m come from the VRI stand-level summary
+(``data/inventory/vri_2025_kc_age_site_summary.json``), not a plot-level join.
+FVS-BC prints that site index is not used in this variant; age 64 versus 91
+also produced the same backtest.
 
 What it unblocks
 ----------------

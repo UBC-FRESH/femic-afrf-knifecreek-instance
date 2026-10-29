@@ -1,6 +1,6 @@
 {
   "validation": "afrf-kc-psp-fvs-backtest-v1",
-  "status": "structural-placeholder",
+  "status": "structural-backtest",
   "plots": 24,
   "initial_year": 1993,
   "years": [
@@ -11,161 +11,162 @@
     2013
   ],
   "area_ha": 0.05,
-  "tree_age": 100.0,
+  "tree_age": 64.0,
+  "stand_age": 64.0,
   "mortality_multiplier": null,
   "site_index": {
     "species": "FD",
-    "value": 60.0
+    "value": 14.5
   },
   "runs": [
     {
       "plot": 1,
-      "case_id": "846d52b1-3e5e-42f3-9572-75efcbd9c9fa",
-      "keyword_hash": "sha256:6fa80fecf222c893438e18467c47d7eca2fe0695ba3dfee2c4aefb7acbb3a338",
-      "treelist_hash": "sha256:6ec601113f75dd3cd5060928c2bb7f3962ab3549e4694a770f78799dcc643379"
+      "case_id": "33121675-7e24-4899-8fa9-4231cdd34182",
+      "keyword_hash": "sha256:434b534d18459a2cbe26c5b0fb9428fcb7b16f94422cad4d09a97b2bd4aed0da",
+      "treelist_hash": "sha256:03bbbcb712ad2b78a78b39f0fd2ad1ae4fbaea16772ea3d38c5514e97a1e2dd7"
     },
     {
       "plot": 2,
-      "case_id": "471e8a3b-6497-4ddb-bf69-fec868c45dae",
-      "keyword_hash": "sha256:a15055b47a8914b84c0876645e2004c7c48ab5953778f05f56de771b69a7ebc4",
-      "treelist_hash": "sha256:697a142cfc1d3813684ac295dd4d6e793bb31aef022c359d142e8d1bb8a4985a"
+      "case_id": "590c3d0c-065e-48f6-bbea-0b8a403512de",
+      "keyword_hash": "sha256:5ccc0d75c2e4c7a485d50eff636149b9624c13618d8f3e729b19466a38bfa55f",
+      "treelist_hash": "sha256:dc76310f295ba923beb10930f8cbecd54c3dd3dbeabde943bbf39706bb9e1404"
     },
     {
       "plot": 3,
-      "case_id": "78879004-3e5e-4960-8891-5944114ff905",
-      "keyword_hash": "sha256:86d4f88241ed3e38c82b39a84418d7d89b86d6ce53104de630f514ff20beddf2",
-      "treelist_hash": "sha256:d1399f0e317a9af4a2b5ee85024c3fc60089b3c900f9e0a405c40eefc5c7c810"
+      "case_id": "3695d28b-916f-4b1d-ae29-1cc2ba3643ac",
+      "keyword_hash": "sha256:e4eca7d160e4f54495c98408768ad558d4790fc77cdc4b5259d3e882b08dc843",
+      "treelist_hash": "sha256:16d531ef05309f77c0f309c88e6b920f255857aa9573bd92006218f2c395bb25"
     },
     {
       "plot": 4,
-      "case_id": "7ec9b76d-4d8a-44ae-b94f-473c51c50158",
-      "keyword_hash": "sha256:6e9d5b1fdc8eb05b20951a8f80bef09824f7195f12036f0c0ebd59ba44dd0ddb",
-      "treelist_hash": "sha256:0b03b141498d8bca8317f7a642d99c6e266689733c885cc9d344310c52d906ab"
+      "case_id": "26727033-1beb-4372-a2f5-f0c370c27856",
+      "keyword_hash": "sha256:eb619e1de134118323c0161ca19ef625fbd8eacd945ddfc56b3606242426e831",
+      "treelist_hash": "sha256:4f9a58bba018d31c36634ae7a2b878fdc6f1393135f7851ba405ccfa1bb25da1"
     },
     {
       "plot": 5,
-      "case_id": "9d56b9fb-1019-42ce-920f-8f1be65060fc",
-      "keyword_hash": "sha256:1604e0f9e475a64851859f8e8a4075ff1e2085814e62f170eeec410db71cd614",
-      "treelist_hash": "sha256:b2c6b54019c68bb6f9998f3e6b81429baaecb0a6ae053df9f30857437d0fc188"
+      "case_id": "55a92624-7e33-47b4-8cde-06a93ce360f8",
+      "keyword_hash": "sha256:f15e206215b4502c68844bc4cd69b04a2814641b001d13716c5abac136d028c2",
+      "treelist_hash": "sha256:6d91224f283faa6254887909060fb4442a394e27f57db06daf1dda6f3f855804"
     },
     {
       "plot": 6,
-      "case_id": "33f052ea-65b9-4dd2-8323-c760e7f4706d",
-      "keyword_hash": "sha256:848afb632019b844270aded19640a4c2c42300063b203fc7b80f27a2f2c4bf32",
-      "treelist_hash": "sha256:ec684efaf0dbb6332253cdd93a7c427f3e3ca2ea5f2334a5a93e5f72319f49ce"
+      "case_id": "42d98ba7-d27f-4966-b302-b1882033a1e5",
+      "keyword_hash": "sha256:78733d22fa6aa344486a3249067205ec7bd6154a18deaf762088269d433523a7",
+      "treelist_hash": "sha256:590d0bd7aa75f0de2264a4883021e35451f7ae22907257ce8338808ce366e22a"
     },
     {
       "plot": 7,
-      "case_id": "8164f363-783d-4447-97b3-1731a3542bd5",
-      "keyword_hash": "sha256:3636779d6cbec5a178fbdeceaf0245232e57e5d6a2c1466992ef9f92fb2628b1",
-      "treelist_hash": "sha256:3d0a0257cfaee753f0a624d06fda3e604f876a3c39762cb6f7678d7cbc60fd0a"
+      "case_id": "d728f89b-e4a4-4d78-99aa-a5ddc0fc5927",
+      "keyword_hash": "sha256:c4f3d68f5a2f5318af3b114008dc54c00d07777513b3e5839cb73dfad26d0ce9",
+      "treelist_hash": "sha256:1009c6304ed21bc20ba9cdc2b79e4132935232aee47eb61bce3902d749f80816"
     },
     {
       "plot": 8,
-      "case_id": "08242f69-1f42-401c-a759-08b3685c20f4",
-      "keyword_hash": "sha256:16520743616d63e4515a4d425d85405410aba74db38321d66d2caf87d6b61144",
-      "treelist_hash": "sha256:292ffb27a2f6785db6f7882c3babb3f13c669eddd682e2ad82af0670d7042f88"
+      "case_id": "74b8c515-4af1-4006-b16c-e467d2a02ae7",
+      "keyword_hash": "sha256:56173df7f9a1f4efe0f3ba8f9937a8bd1faa62b648a803964e80d047e5068e0e",
+      "treelist_hash": "sha256:6f21bdae5177bbb3a325a34343facd1c977599c7894cc4a58af42d069e7919cf"
     },
     {
       "plot": 9,
-      "case_id": "51183e93-7ee8-4a9b-859a-4129bc8f324b",
-      "keyword_hash": "sha256:e3ca776610132c4de9b19c67b379dcf2fc5bae22e86a8862a85350fbc1fa40d3",
-      "treelist_hash": "sha256:c5cef9a3f78585973a54ce12f1aca2577d9d81776f729d17cfe9837bdd5466f2"
+      "case_id": "3a809867-4f4a-4e30-a67b-576860006bfb",
+      "keyword_hash": "sha256:cde16db53f9121d8300ea574d60e31c95dd89260cbb45b8861776a10a9d70dfe",
+      "treelist_hash": "sha256:c59cb86cb37360c0c9aa21edfc07e091c813d09c07ff1b9ce5c48bfdac6ffba1"
     },
     {
       "plot": 10,
-      "case_id": "1a9fb060-dd47-4902-a444-6977c1ecec80",
-      "keyword_hash": "sha256:ff21afff6ce1e3f05ae60dea30c71ce7085f1c23525fe3fcd13dc3d2bae12c8c",
-      "treelist_hash": "sha256:3707d1846b6ba919279fcdba0948d84e3fd5a192cf99fedfdc0e2ec39f951dfe"
+      "case_id": "9bfb9ffc-5873-41d2-9b6e-75daa6bfaf8f",
+      "keyword_hash": "sha256:46581a9a3940760ec8cff6d9c31f11f101b353ed369bcc7095d92ddf5c9168c5",
+      "treelist_hash": "sha256:60e09c13f01b358fd660200b6bab5c4da2cdb55f6e51f1aac99eb1538155719a"
     },
     {
       "plot": 11,
-      "case_id": "7f2e6cb4-e977-4bd6-b65d-ccb38bb13f96",
-      "keyword_hash": "sha256:29371f6da10c63bd3ccd994e9ef6baf304a009a1899f63b9df717fb33075e2ba",
-      "treelist_hash": "sha256:7dcf22f3c9a0d10b99155a972a4799dd6a06d7bf487d74bd2ddc3bb3505d967e"
+      "case_id": "c04d2fac-fc9c-42e4-87e7-6b43e6a597fc",
+      "keyword_hash": "sha256:6334fc8e741aa78bcb278e0b2fbb7375be1fd42eb0fc4d2ee0da4a6dd0d1ad4d",
+      "treelist_hash": "sha256:27f72a04c2671331f551496c2b4d42f747e7a03fcb4bde37651cc73ce51a35df"
     },
     {
       "plot": 12,
-      "case_id": "ce00403a-166a-46cd-8f21-677b21173ab4",
-      "keyword_hash": "sha256:22d3c1269a8b511482b99e22351543997bcbf4d218b4fe1e0caa415ab847208e",
-      "treelist_hash": "sha256:2439520ee3a7e765df7b4fc21a4b6328da49080b036a193f23922aff50155e58"
+      "case_id": "9bc51fa2-428f-46a3-9386-232aa19551f2",
+      "keyword_hash": "sha256:ea7e5983ab30d8c3ec4a34d0b8865d3514962159355a8f26cf764efb33d6a9fe",
+      "treelist_hash": "sha256:c8e6ad7fa728c597eead59a5803e0b8ff7811a27ccd4f85d29fe3b9b9659c63f"
     },
     {
       "plot": 13,
-      "case_id": "5ad5d47b-f6d1-4fb5-bf9b-d64f7333d5cd",
-      "keyword_hash": "sha256:866ab135fa3a277a6435bff61ea00ee196332bb4abcc8bd40d580435f66b9ca6",
-      "treelist_hash": "sha256:5afc7e22f53620c74d6c2d122ef2745ea9929f482c6579dda02331c42460f9dd"
+      "case_id": "420d6816-5ba0-4aa1-82df-1eab29aa7573",
+      "keyword_hash": "sha256:2d5b127de90db1321e6c3b99dcfceccbfd145b352ba4d652bfbaac9cbea71085",
+      "treelist_hash": "sha256:266752048636aeb699787df0ab51b539a0e1f170b378ca3dc198704756922c5c"
     },
     {
       "plot": 14,
-      "case_id": "21aa46ec-19bf-4773-8dfb-6b0d399ee0fc",
-      "keyword_hash": "sha256:955646b037e533ce96a56046ee86b4e32e06d3f102d3584883339b3d7531af64",
-      "treelist_hash": "sha256:09bf7d873ba129968404e4527b369f5c1122fb3daa93bf2250c3a966e6c9e6f5"
+      "case_id": "791e6a6e-f4aa-4d0e-8176-46d1a0440e72",
+      "keyword_hash": "sha256:efc5fb3eb87c757c49dcf932aed68f21efa73ecf4c788b447afa8ffd550b2dec",
+      "treelist_hash": "sha256:5cadbdb1f1602941948f3c623219b9b6cfb953a39e20db82a2c6f1c9cf98e2ba"
     },
     {
       "plot": 15,
-      "case_id": "45fe55d6-568b-41ba-8089-266dc3c5cb66",
-      "keyword_hash": "sha256:23c820a1b1908ba137f7f65a864252b2bcfd0f366f896e9628d80d60c95833f3",
-      "treelist_hash": "sha256:c87224e51ed7ce6cbfbe60a1b807ad46efdef4e74a623bde1ff15691c79e8cd1"
+      "case_id": "863863bd-a830-4537-8742-1081cb150c77",
+      "keyword_hash": "sha256:321179396e47e14a7b0d8769e017a183131774ee02bdef0fa469102d10e3ee5e",
+      "treelist_hash": "sha256:c56e7adf2d678555100510d2870cc831a56906350d50e5af8a4339ba5307e8ca"
     },
     {
       "plot": 16,
-      "case_id": "13baabbc-d1fa-4d3f-8d80-1aeced929e95",
-      "keyword_hash": "sha256:27a1b58844483c31ff8b0976dc25af4c56baad06ea0d81e200f46df97b683960",
-      "treelist_hash": "sha256:78d01df9d03d55eb0bf94c4bf8833c8177f2d755a048bbb38957d1b033b97496"
+      "case_id": "6d07457e-61bf-492d-bb6c-32bf0b318aa2",
+      "keyword_hash": "sha256:b5675ed2633c8cc622c576c59c213f51fda92b50fd386cca0279374c3d8a87e3",
+      "treelist_hash": "sha256:7f817e7e212ddf129c36779d0004b25af4d9982a2745f38f07638e5e34ccdb6f"
     },
     {
       "plot": 17,
-      "case_id": "2f56f693-13c8-4d7f-a076-65d761c5bfe4",
-      "keyword_hash": "sha256:cd0eccb5f3da5cb799bd375806e4ad5c17377d631f84a46df7c5cc6383ee3bf3",
-      "treelist_hash": "sha256:a670fb1468a769d480c49ec5d0e3565b18741eea69fa755be04a4fcb0b132d0c"
+      "case_id": "b3f2d97e-d705-4879-9c54-3e9a80fb3dae",
+      "keyword_hash": "sha256:efae8fd974deea0bf184dfd43ee7772b4f7db8a3446a99342c15c587adcefe1c",
+      "treelist_hash": "sha256:1ccbb8c93617131e3c9b7056deb552cd8dfd434fb4ca1f1ebaadd7801a731ac2"
     },
     {
       "plot": 18,
-      "case_id": "46bfdf4e-86cd-4ea0-b3bb-624616f93cba",
-      "keyword_hash": "sha256:29842dac43074698a90f077bcbfdaa5209d92ee060e1eb66768de30e2e4aaab2",
-      "treelist_hash": "sha256:ae5d6b82719e68ecec8eb038bf15fde71ff6ab6f13824bf98586c30380b63e0e"
+      "case_id": "fdd1d36b-5d89-4f2b-9131-3f0901a52bf5",
+      "keyword_hash": "sha256:97e79689d8c9553fcac688a4ddd02fd69b0d4eb03d6bb4ac9b6edbc500919af8",
+      "treelist_hash": "sha256:788ba28e9de3994de08c4229c8f9b19ee8cb315bd393ed06c881bc66dcf2e832"
     },
     {
       "plot": 19,
-      "case_id": "732c0fee-3815-4dc2-b270-bc83c5592102",
-      "keyword_hash": "sha256:644a62edd2fde7543b7b559a9e8ca1436bda91c7fc90fb94a38b2bf1fd9b6041",
-      "treelist_hash": "sha256:a951e9312ee8dc14687070bbeba70ecb6fce94919e3344f11caea837f1539088"
+      "case_id": "20464af2-f4c3-4ebe-a575-20cf3b22602b",
+      "keyword_hash": "sha256:cb0e7f2f8ce6fd83a6f1942cd43cd182903100116396dbf1928ca6dee6646bde",
+      "treelist_hash": "sha256:92a0c246ecb673a28ab43fb4c5337167a035c0426daf45234fdd2c5f88645b92"
     },
     {
       "plot": 20,
-      "case_id": "58adb383-05f6-40d0-b78c-5c4cf6c32522",
-      "keyword_hash": "sha256:aac18326bf77f118d7883d4369a367f22d2a84146ad33c5b1120258d0b398204",
-      "treelist_hash": "sha256:1f164bd9c14d3452823c1edebc14737e399095548f43265b427337a9dfa409bc"
+      "case_id": "2c9b6d52-2ffa-4ced-8936-36705fd69cab",
+      "keyword_hash": "sha256:39e15970bb0bb1711bd2442cfe0587a4721e10afb5f5cc6fb5c57dd8919b7d51",
+      "treelist_hash": "sha256:cbdcb65fe40f872aa9bed77560d53ef305bb35321991525991a8553c8b7f3b83"
     },
     {
       "plot": 21,
-      "case_id": "87d5b36b-c76e-4898-8ef2-02abd3356ef3",
-      "keyword_hash": "sha256:5aa68af1ccfb3ca41d490e1d12e60bef8d604e9043955f4464066078c661c5f9",
-      "treelist_hash": "sha256:3f82d7ce83b87835a0b46ea9b8ba95baf3e29b169fc6c0d77367b64cbbf36c76"
+      "case_id": "1dc0d56a-3477-42a9-84e7-91ef8f0c5e34",
+      "keyword_hash": "sha256:ea7f574929eb83f887ea57754d99c50c4fe9398251af7cddb7c652a85cb555b8",
+      "treelist_hash": "sha256:05aa1ceb88a98b1fd4f1d24285e6188ac55e90cd2aeda61d576c2146d9d1059d"
     },
     {
       "plot": 22,
-      "case_id": "62f30883-8e9e-4c56-b50d-31dc8549c83e",
-      "keyword_hash": "sha256:7b8ef912bf659c23f7e095c3d70e68fad98eb656cb12160af6a46bec22a45ab0",
-      "treelist_hash": "sha256:128ff4728d15de154abff17d36e0f8ff0ab4dc3f714276ffc6a438e5ad13d367"
+      "case_id": "82cae8e1-6b90-46c2-8bfb-ceca26610834",
+      "keyword_hash": "sha256:a1f154aca8f7fdc11c0e9d78e517d4fb8a6b53d0c1fb063d1d9c15b17d85f343",
+      "treelist_hash": "sha256:7977d05212efc8dd0f285094af9a807ed6e6e3045648f32b40a4b45652123699"
     },
     {
       "plot": 23,
-      "case_id": "7f543020-431d-4c44-8395-0067ae602091",
-      "keyword_hash": "sha256:62c0d5cef565bc9f95c8f1fa66248504d1022bd75f10fadda0eb8b34f8ec4396",
-      "treelist_hash": "sha256:60bf7118bb729c9c97ce675ddc1cd082bf91fd739f037b754f5a10d40d552c2c"
+      "case_id": "2dc12c94-4ab0-450a-a0fc-71ce2a116aec",
+      "keyword_hash": "sha256:080a63d45d21f6b26b6ec6daf6ef63470874709c429cc692989e1c2f687f8a8c",
+      "treelist_hash": "sha256:906b0b6bffd7f1233bfaa1bbfa7fd95c68bfcb6e452cd34b4457e108f62f2e3a"
     },
     {
       "plot": 24,
-      "case_id": "3c0948b8-2791-43d0-a328-9eea084d6ec6",
-      "keyword_hash": "sha256:b1db46f77bbe4195e56f3c61c1ac70dd9ae179d4b49d814a183b751a5d9c3b7e",
-      "treelist_hash": "sha256:b62016d281da3a4c971f7a71560ba511045f424c6f28c3e14781d0f75248ad58"
+      "case_id": "10ca4700-8845-4024-aa0f-b3585e8c2398",
+      "keyword_hash": "sha256:7393840f8968d25dccfa85415993f0411fca93599cda95c0486350e7b77751aa",
+      "treelist_hash": "sha256:42911bc0c38c5496c42aab780d7ad7e21f1aad621b16976327c2b19977f4ffbe"
     }
   ],
   "caveats": [
-    "Tree age and site index are placeholders.",
-    "No KC calibration; species are mapped to BC codes.",
+    "Stand age 64 and site index 14.5 m are VRI-derived stand-level priors; FVS-BC does not use site index.",
+    "No independent whole-block validation; species are mapped to BC codes.",
     "Initial population uses only interior trees with 1993 DBH.",
     "Height is filled from DBH when 1993 height is missing.",
     "FVS-BC is distance-independent and no cut is applied.",

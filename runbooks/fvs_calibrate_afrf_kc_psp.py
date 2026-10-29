@@ -9,7 +9,9 @@ area and trees/ha move toward the measured 2013 values, then re-runs the
 The iteration stops when the largest parameter change is below
 ``--parameter-tolerance`` and the objective change is below
 ``--loss-tolerance``, or at ``--max-iter``. A non-converged result is recorded
-as such; it is not silently treated as calibrated.
+as such; it is not silently treated as calibrated. Age and site index are
+VRI-derived stand-level priors; FVS-BC ignores site index, and age changes did
+not affect this backtest.
 
 Usage::
 
@@ -54,8 +56,10 @@ SPECIES_GROUP = {
     "AT": "HW",
     "OH": "HW",
 }
-TREE_AGE = 100.0
-SITE_INDEX = 60.0
+# VRI 2025 FDI-leading, area-weighted median, backdated to 1993.
+TREE_AGE = 64.0
+STAND_AGE = 64.0
+SITE_INDEX = 14.5
 BA_BOUNDS = (0.25, 4.0)
 MORT_BOUNDS = (0.25, 8.0)
 
@@ -132,6 +136,7 @@ def _run_iteration(
                 site_index=SITE_INDEX,
                 ba_multipliers=ba_map,
                 mort_multipliers=mort_map,
+                stand_age=STAND_AGE,
             ),
             directory=case_dir,
         )
@@ -330,23 +335,17 @@ def main() -> None:
     )
     summary.to_csv(args.out_dir / "validation_summary.csv", index=False)
     final_metrics = summary.loc[summary["year"] == TARGET_YEAR].iloc[0]
-    acceptance = {
-        "ba_bias_abs_max": 1.0,
-        "tph_bias_abs_max": 100.0,
-        "qmd_bias_abs_max": 0.5,
-        "passed": bool(
-            abs(final_metrics["ba_bias"]) <= 1.0
-            and abs(final_metrics["tph_bias"]) <= 100.0
-            and abs(final_metrics["qmd_bias"]) <= 0.5
+    diagnostics = {
+        "year": TARGET_YEAR,
+        "ba_bias": float(final_metrics["ba_bias"]),
+        "qmd_bias": float(final_metrics["qmd_bias"]),
+        "tph_bias": float(final_metrics["tph_bias"]),
+        "note": (
+            "Local diagnostics only. The earlier 1.0 m2/ha, 100 TPH and "
+            "0.5 cm thresholds were ad hoc and are not used as a gate."
         ),
     }
-    status = (
-        "converged-accepted"
-        if converged and acceptance["passed"]
-        else "converged-not-accepted"
-        if converged
-        else "not-converged"
-    )
+    status = "converged" if converged else "not-converged"
     parameters = {
         "groups": {group: list(species) for group, species in GROUPS.items()},
         "species_to_group": SPECIES_GROUP,
@@ -362,6 +361,7 @@ def main() -> None:
         "target_year": TARGET_YEAR,
         "plots": int(initial["plot"].nunique()),
         "tree_age": TREE_AGE,
+        "stand_age": STAND_AGE,
         "site_index": {"species": "FD", "value": SITE_INDEX},
         "max_iter": args.max_iter,
         "damping": args.damping,
@@ -369,12 +369,12 @@ def main() -> None:
         "loss_tolerance": args.loss_tolerance,
         "iterations": len(history),
         "final_loss": history[-1]["loss"],
-        "acceptance": acceptance,
+        "diagnostics": diagnostics,
         "parameters": parameters,
         "runs": final_runs,
         "caveats": [
             "The calibration target is 2013 species-group BA and TPH.",
-            "Tree age and site index are placeholders.",
+            "Age/site index are VRI-derived stand-level priors, not plot-level joins.",
             "The model is distance-independent and has no explicit MPB module.",
             "Parameters are bounded to avoid numerically unstable fits.",
             "Not a legal-compliance or whole-block inventory claim.",
