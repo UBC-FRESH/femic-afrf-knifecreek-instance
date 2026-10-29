@@ -307,6 +307,15 @@ indicator; `TS`/`TC` remain unresolved. No age or site index is assigned. This
 is sparse (24 plots × 4 intervals) and not a whole-block sample, but it is the
 primary observed evidence for the next state library.
 
+### State support
+
+`data/psp/kc_afrf_psp_state_support.csv` maps the 96 transitions to canonical
+BA/QMD/large-tree bins and a species-mix class. Canonical bins give 18
+start/end pairs (12 repeated, median 4 transitions); species-resolved bins give
+36 pairs but 19 are one-off (median 1). The data support a coarse canonical
+graph, not a species-resolved empirical state matrix. All observed QMD values
+are below 20 cm.
+
 ### Maps
 
 MWP #3 landscape appendices, KC pages: 150 forest cover, 158 seral, 162

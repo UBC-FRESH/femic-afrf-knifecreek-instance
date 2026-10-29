@@ -334,3 +334,9 @@ status and the GitHub issue comments.
   QMD, height, large-tree metrics, mortality, ingrowth and a Block C/D flag.
   DBH presence is the working live indicator; TS/TC remain unresolved. No age
   or site index is assigned.
+- P3.12 state-support audit: added `runbooks/audit_psp_state_support.py` and
+  `data/psp/kc_afrf_psp_state_support*.csv/json`. The 96 observed transitions
+  map to 18 canonical BA/QMD/large-tree pairs (12 repeated, median 4) but 36
+  species-mix pairs with 19 one-off (median 1). Canonical support is sufficient
+  only for a coarse graph; species-resolved empirical transitions are too
+  sparse. No acceptance threshold is applied.

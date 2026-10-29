@@ -1,0 +1,67 @@
+{
+  "source": "observed KC PSP transitions, support audit",
+  "n_transitions": 96,
+  "definitions": {
+    "ba_bins": [
+      "BA_LT20",
+      "BA20_25",
+      "BA25_30",
+      "BA30_35",
+      "BA35_40",
+      "BA40_PLUS"
+    ],
+    "qmd_bins": [
+      "QMD_LT20",
+      "QMD20_25",
+      "QMD25_30",
+      "QMD30_35",
+      "QMD35_PLUS"
+    ],
+    "large_tree_ba_bins": [
+      "LT_LT6",
+      "LT6_11",
+      "LT11_16",
+      "LT16_PLUS"
+    ],
+    "species_mix": {
+      "FD_DOM": "FD BA share >= 0.75",
+      "MIXED": "FD BA share 0.40-0.75",
+      "OTHER": "FD BA share < 0.40"
+    }
+  },
+  "canonical": {
+    "definition": "canonical",
+    "n_transitions": 96,
+    "n_start_states": 9,
+    "n_end_states": 9,
+    "n_pairs": 18,
+    "n_repeated_pairs": 12,
+    "n_one_off_pairs": 6,
+    "n_pairs_multi_plot": 12,
+    "max_pair_support": 16,
+    "median_pair_support": 4.0
+  },
+  "species_mix": {
+    "definition": "species_mix",
+    "n_transitions": 96,
+    "n_start_states": 20,
+    "n_end_states": 17,
+    "n_pairs": 36,
+    "n_repeated_pairs": 17,
+    "n_one_off_pairs": 19,
+    "n_pairs_multi_plot": 14,
+    "max_pair_support": 14,
+    "median_pair_support": 1.0
+  },
+  "notes": [
+    "Support counts are descriptive; no acceptance threshold is applied.",
+    "One-off pairs are retained, not deleted.",
+    "The canonical bins follow the existing ws4 BA/QMD/large-tree classes.",
+    "No age or site index is assigned.",
+    "No reserve-above-D class is available: reserve is a treatment decision, not an observed PSP attribute."
+  ],
+  "files": [
+    "kc_afrf_psp_state_support.csv",
+    "kc_afrf_psp_state_support_summary.csv"
+  ]
+}
