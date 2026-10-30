@@ -323,10 +323,18 @@ curves reproduce in the compile, all feature/product curve references resolve,
 all treatment targets exist, no clearcut is present and curve domains are
 strictly increasing. Strata cycles are normalized to the source 30-year cycle.
 
+P4.3 status: baseline plus GWM low and GWM moderate selection regimes ran for 30
+years with reports. `notes/reports/p4-scenario-comparison.md` records the
+structural comparison.
+
+P4.4 status: `notes/reports/p4-closeout.md` records the acceptance table,
+coverage, integrity, scenarios, mule-deer statement and limits. The phase pull
+request is queued for maintainer approval.
+
 - [x] P4.1 Verify area, AU and state coverage (#71)
 - [x] P4.2 Verify transition and curve integrity (#72)
-- [ ] P4.3 Run the baseline and two selection regimes (#73)
-- [ ] P4.4 Record the scenario comparison and caveats (#74)
+- [x] P4.3 Run the baseline and two selection regimes (#73)
+- [x] P4.4 Record the scenario comparison and caveats (#74)
 
 Acceptance criteria:
 

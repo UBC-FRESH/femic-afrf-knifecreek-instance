@@ -485,3 +485,12 @@ status and the GitHub issue comments.
   treatment targets exist; no clearcut is present. Strata cycle metadata is
   normalized to the source 30-year cycle. Evidence:
   `ws4/evidence/kc_v1/integrity_audit.json`.
+
+- P4.3 scenario runs: added `runbooks/run_kc_scenarios.py` and ran the no-cut
+  baseline plus GWM low and GWM moderate selection regimes for 30 years. Reports
+  and copied evidence are under `ws4/evidence/kc_v1/scenario_reports/`; the
+  manifest is `scenario_manifest.json`.
+- P4.4 closeout: added `notes/reports/p4-scenario-comparison.md` and
+  `notes/reports/p4-closeout.md`. The comparison reports residual BA/QMD/TPH and
+  canopy CCF, states that large-tree/reserve/seral/species indicators are
+  unavailable, and keeps calibration and legal compliance out of the claims.
