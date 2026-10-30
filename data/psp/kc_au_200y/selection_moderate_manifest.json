@@ -1,0 +1,18 @@
+{
+  "au_table": "data/kc_au/kc_au_table.csv",
+  "matches": "data/psp/kc_au_200y/kc_au_plot_matches.csv",
+  "horizon_years": 200,
+  "entry_cycle": 4,
+  "entry_year": 40,
+  "regime": "GWM_MODERATE",
+  "b_target_m2_ha": 22.0,
+  "d_target_cm": 60.0,
+  "q_target": 1.25,
+  "aus": 6,
+  "curve_rows": 108,
+  "caveats": [
+    "One entry at year 30, not a full multi-entry state graph.",
+    "No-cut before the entry and residual growth after it.",
+    "No calibration or legal-compliance claim."
+  ]
+}

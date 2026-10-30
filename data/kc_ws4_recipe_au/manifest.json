@@ -1,12 +1,21 @@
 {
-  "recipe": "kc-au-two-state-v1",
+  "recipe": "kc-au-hmz-two-state-v1",
   "aus": 6,
-  "tracks": 12,
+  "hmz_values": [
+    "L",
+    "M",
+    "U"
+  ],
+  "tracks": "AU x HMZ x natural/managed",
   "selection_entry_year": 30,
-  "treatment": "GWM_MODERATE",
+  "treatments": [
+    "GWM_LOW",
+    "GWM_MODERATE"
+  ],
   "caveats": [
-    "Two states per AU: natural and managed.",
+    "Two states per AU/HMZ: natural and managed.",
     "Managed is re-enterable but not a BA/QMD state graph.",
+    "HMZ treatment eligibility follows M/A both classes, L low only, U none.",
     "No calibration or legal-compliance claim."
   ]
 }

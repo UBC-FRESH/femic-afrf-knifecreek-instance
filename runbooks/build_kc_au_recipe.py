@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
 """Compile the AU-aware KC ForestModelXML recipe.
 
-The model has one natural and one managed state per AU. A selection treatment
-moves natural to managed; the managed state can re-enter itself. This is a
-two-state AU model, not a full BA/QMD state graph yet.
+State: AU x HMZ x natural/managed. Treatment eligibility follows the KC HMZ
+matrix:
+
+- M and A: GWM_LOW or GWM_MODERATE;
+- L: GWM_LOW only;
+- U: no treatment.
+
+The managed state can re-enter itself. This is still a two-state AU model, not a
+full BA/QMD state graph.
 
 Usage::
 
@@ -12,7 +18,8 @@ Usage::
       --assignment data/kc_au/kc_au_assignment.csv \
       --fragments data/patchworks_knifecreek/fragments.csv \
       --no-cut data/psp/kc_au_200y/kc_au_yield_200y.csv \
-      --selection data/psp/kc_au_200y/kc_au_selection_200y.csv \
+      --selection-low data/psp/kc_au_200y/kc_au_selection_low_200y.csv \
+      --selection-moderate data/psp/kc_au_200y/kc_au_selection_moderate_200y.csv \
       --out-dir data/kc_ws4_recipe_au
 """
 
@@ -32,7 +39,13 @@ FEATURE_COLUMNS = {
     "feature.yield.managed.total": "volume_m3_ha",
     "feature.habitat.canopy_ccf": "canopy_ccf",
 }
-TREATMENT = "GWM_MODERATE"
+REGIMES = ("GWM_LOW", "GWM_MODERATE")
+ALLOWED_BY_HMZ = {
+    "M": REGIMES,
+    "A": REGIMES,
+    "L": ("GWM_LOW",),
+    "U": (),
+}
 ENTRY_YEAR = 30
 
 
@@ -56,7 +69,8 @@ def main() -> None:
     parser.add_argument("--assignment", type=Path, required=True)
     parser.add_argument("--fragments", type=Path, required=True)
     parser.add_argument("--no-cut", type=Path, required=True)
-    parser.add_argument("--selection", type=Path, required=True)
+    parser.add_argument("--selection-low", type=Path, required=True)
+    parser.add_argument("--selection-moderate", type=Path, required=True)
     parser.add_argument("--out-dir", type=Path, required=True)
     args = parser.parse_args()
 
@@ -64,33 +78,39 @@ def main() -> None:
     assignment = pd.read_csv(args.assignment)[["POLYGON_ID", "au_id"]].rename(
         columns={"POLYGON_ID": "POLY_ID"}
     )
-    fragments = pd.read_csv(args.fragments)
-    no_cut = pd.read_csv(args.no_cut)
-    selection = pd.read_csv(args.selection)
-    args.out_dir.mkdir(parents=True, exist_ok=True)
-    fragments = fragments.merge(assignment, on="POLY_ID", how="left")
+    fragments = pd.read_csv(args.fragments).merge(assignment, on="POLY_ID", how="left")
     if fragments["au_id"].isna().any():
         raise ValueError("one or more fragments have no AU")
-    fragments["SILV"] = "natural"
     fragments["AU"] = fragments["au_id"]
+    fragments["SILV"] = "natural"
     fragments["IFM"] = "managed"
     fragments["ORIGIN"] = "natural"
     fragments["RETENTION"] = 0.0
     fragments["TSA"] = "KC"
     fragments["FRAGMENT_ID"] = fragments["BLOCK"]
+    args.out_dir.mkdir(parents=True, exist_ok=True)
     fragments.to_csv(args.out_dir / "fragments.csv", index=False)
 
+    no_cut = pd.read_csv(args.no_cut)
+    selections = {
+        "GWM_LOW": pd.read_csv(args.selection_low),
+        "GWM_MODERATE": pd.read_csv(args.selection_moderate),
+    }
     root = ET.Element("ForestModel", horizon="200", year="2026", match="multi")
     ET.SubElement(root, "curve", id="unity").append(ET.Element("point", x="0", y="1"))
     area_curve = ET.SubElement(root, "curve", id="kc_area")
     ET.SubElement(area_curve, "point", x="0", y="1")
     ET.SubElement(area_curve, "point", x="200", y="1")
 
-    ET.SubElement(root, "define", field="AU", column="AU")
-    ET.SubElement(root, "define", field="SILV", column="SILV")
-    ET.SubElement(root, "define", field="IFM", column="IFM")
-    ET.SubElement(root, "define", field="ORIGIN", column="ORIGIN")
-    ET.SubElement(root, "define", field="RETENTION", column="Number(column('RETENTION'))")
+    for field, column in (
+        ("AU", "AU"),
+        ("HMZ", "HMZ"),
+        ("SILV", "SILV"),
+        ("IFM", "IFM"),
+        ("ORIGIN", "ORIGIN"),
+        ("RETENTION", "Number(column('RETENTION'))"),
+    ):
+        ET.SubElement(root, "define", field=field, column=column)
     ET.SubElement(root, "define", field="treatment")
     ET.SubElement(root, "input", block="BLOCK", area="AREA_HA", age="F_AGE")
     ET.SubElement(root, "output", messages="messages.csv")
@@ -102,70 +122,104 @@ def main() -> None:
         curve_index += 1
         return f"{prefix}_{curve_index}"
 
+    hmz_values = sorted(str(value) for value in fragments["HMZ"].dropna().unique())
     for row in au.itertuples(index=False):
         au_id = str(row.au_id)
         natural = no_cut[no_cut["au_id"] == au_id].sort_values("year")
-        managed = selection[selection["au_id"] == au_id].sort_values("year")
-        if natural.empty or managed.empty:
-            raise ValueError(f"missing curves for {au_id}")
-        managed = managed[managed["year"] >= ENTRY_YEAR].copy()
-        managed["year"] = managed["year"] - ENTRY_YEAR
-        feature_ids: dict[str, str] = {}
+        if natural.empty:
+            raise ValueError(f"missing no-cut curves for {au_id}")
+        state_for = {"GWM_LOW": "managed_low", "GWM_MODERATE": "managed_moderate"}
+        feature_ids: dict[str, dict[str, str]] = {"natural": {}}
         for label, column in FEATURE_COLUMNS.items():
             curve_id = next_id("natural")
             _add_curve(root, curve_id, list(zip(natural["year"], natural[column], strict=True)))
-            feature_ids[f"natural:{label}"] = curve_id
-        for label, column in FEATURE_COLUMNS.items():
-            curve_id = next_id("managed")
-            _add_curve(root, curve_id, list(zip(managed["year"], managed[column], strict=True)))
-            feature_ids[f"managed:{label}"] = curve_id
-        cut_curve = next_id("cut")
-        cut_row = managed[managed["year"] == 0]
-        cut_value = float(cut_row["cut_m3_ha"].iloc[0]) if not cut_row.empty else 0.0
-        _add_curve(root, cut_curve, [(0, cut_value)])
+            feature_ids["natural"][label] = curve_id
 
-        for silv in ("natural", "managed"):
-            select = ET.SubElement(
+        product_ids: dict[str, str] = {}
+        for regime in REGIMES:
+            managed = selections[regime][selections[regime]["au_id"] == au_id].sort_values("year")
+            if managed.empty:
+                raise ValueError(f"missing {regime} curves for {au_id}")
+            post = managed[managed["year"] >= ENTRY_YEAR].copy()
+            post["year"] = post["year"] - ENTRY_YEAR
+            state = state_for[regime]
+            feature_ids[state] = {}
+            for label, column in FEATURE_COLUMNS.items():
+                curve_id = next_id(f"{state.lower()}")
+                _add_curve(root, curve_id, list(zip(post["year"], post[column], strict=True)))
+                feature_ids[state][label] = curve_id
+            cut_curve = next_id(f"cut_{regime.lower()}")
+            entry = post[post["year"] == 0]
+            cut = float(entry["cut_m3_ha"].iloc[0]) if not entry.empty else 0.0
+            _add_curve(root, cut_curve, [(0, cut)])
+            product_ids[regime] = cut_curve
+
+        for hmz in hmz_values:
+            allowed = ALLOWED_BY_HMZ.get(hmz, ())
+            natural_select = ET.SubElement(
                 root,
                 "select",
-                statement=f"AU eq '{au_id}' and SILV eq '{silv}'",
+                statement=f"AU eq '{au_id}' and HMZ eq '{hmz}' and SILV eq 'natural'",
             )
-            features = ET.SubElement(select, "features")
+            features = ET.SubElement(natural_select, "features")
             for label in FEATURE_COLUMNS:
-                _attribute(features, label, feature_ids[f"{silv}:{label}"])
+                _attribute(features, label, feature_ids["natural"][label])
             _attribute(features, "feature.area.managed.total", "kc_area")
-            track = ET.SubElement(select, "track")
-            treatment = ET.SubElement(
-                track,
-                "treatment",
-                label=TREATMENT,
-                minage=str(ENTRY_YEAR),
-                maxage="200",
-            )
-            transition = ET.SubElement(treatment, "transition")
-            ET.SubElement(transition, "assign", field="SILV", value="'managed'")
-
-        product = ET.SubElement(
-            root,
-            "select",
-            statement=f"AU eq '{au_id}' and treatment eq '{TREATMENT}'",
-        )
-        products = ET.SubElement(product, "products")
-        _attribute(products, "product.yield.managed.total", cut_curve)
+            track = ET.SubElement(natural_select, "track")
+            for regime in allowed:
+                treatment = ET.SubElement(
+                    track,
+                    "treatment",
+                    label=regime,
+                    minage=str(ENTRY_YEAR),
+                    maxage="200",
+                )
+                transition = ET.SubElement(treatment, "transition")
+                ET.SubElement(transition, "assign", field="SILV", value=f"'{state_for[regime]}'")
+            for regime in allowed:
+                state = state_for[regime]
+                managed_select = ET.SubElement(
+                    root,
+                    "select",
+                    statement=f"AU eq '{au_id}' and HMZ eq '{hmz}' and SILV eq '{state}'",
+                )
+                managed_features = ET.SubElement(managed_select, "features")
+                for label in FEATURE_COLUMNS:
+                    _attribute(managed_features, label, feature_ids[state][label])
+                _attribute(managed_features, "feature.area.managed.total", "kc_area")
+                managed_track = ET.SubElement(managed_select, "track")
+                treatment = ET.SubElement(
+                    managed_track,
+                    "treatment",
+                    label=regime,
+                    minage=str(ENTRY_YEAR),
+                    maxage="200",
+                )
+                transition = ET.SubElement(treatment, "transition")
+                ET.SubElement(transition, "assign", field="SILV", value=f"'{state}'")
+                product = ET.SubElement(
+                    root,
+                    "select",
+                    statement=(f"AU eq '{au_id}' and HMZ eq '{hmz}' and treatment eq '{regime}'"),
+                )
+                products = ET.SubElement(product, "products")
+                _attribute(products, "product.yield.managed.total", product_ids[regime])
 
     ET.indent(root, space="  ")
     ET.ElementTree(root).write(
         args.out_dir / "forestmodel.xml", encoding="utf-8", xml_declaration=True
     )
     manifest = {
-        "recipe": "kc-au-two-state-v1",
+        "recipe": "kc-au-hmz-two-state-v1",
         "aus": len(au),
-        "tracks": len(au) * 2,
+        "hmz_values": hmz_values,
+        "tracks": "AU x HMZ x natural/managed",
         "selection_entry_year": ENTRY_YEAR,
-        "treatment": TREATMENT,
+        "treatments": list(REGIMES),
         "caveats": [
-            "Two states per AU: natural and managed.",
+            "Two states per AU/HMZ: natural and managed.",
             "Managed is re-enterable but not a BA/QMD state graph.",
+            "HMZ treatment eligibility follows M/A both classes, L low only, U none.",
             "No calibration or legal-compliance claim.",
         ],
     }
