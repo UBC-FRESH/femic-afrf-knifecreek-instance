@@ -494,3 +494,11 @@ status and the GitHub issue comments.
   `notes/reports/p4-closeout.md`. The comparison reports residual BA/QMD/TPH and
   canopy CCF, states that large-tree/reserve/seral/species indicators are
   unavailable, and keeps calibration and legal compliance out of the claims.
+
+## 2026-10-30
+
+- P5 activated under parent issue #76, branch `feature/p5-release`.
+- P5.1 release notes: added `notes/reports/p5-release-notes.md` with the
+  structural release description, model counts, verified surfaces, scenario
+  snapshot, run commands and the known-gaps list. Tagging remains gated on
+  maintainer approval.

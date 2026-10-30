@@ -16,8 +16,8 @@ after its parent issue exists and the maintainer approves it.
 | P1 Data acquisition and stem lists | #7 | `feature/p1-data-acquisition` | active |
 | P2 FVS-BC state-transition library | TBD | `feature/p2-state-library` | planned |
 | P3 ws4 instance assembly | #60 | `feature/p3-ws4-assembly` | complete |
-| P4 Verification and scenarios | #70 | `feature/p4-verification` | active |
-| P5 Release v0.1 | TBD | `feature/p5-release` | planned |
+| P4 Verification and scenarios | #70 | `feature/p4-verification` | complete |
+| P5 Release v0.1 | #76 | `feature/p5-release` | active |
 | P6 Maintain and merge readiness | TBD | `feature/p6-maintain` | planned |
 
 ## Lifecycle Map
@@ -309,7 +309,7 @@ run summaries, target status and gaps. P3 merged in pull request #69 (commit
 
 Parent issue: #70
 Branch: `feature/p4-verification`
-Status: active
+Status: complete
 
 Goal: verify the model and compare selection regimes and estate-level targets.
 
@@ -328,8 +328,8 @@ years with reports. `notes/reports/p4-scenario-comparison.md` records the
 structural comparison.
 
 P4.4 status: `notes/reports/p4-closeout.md` records the acceptance table,
-coverage, integrity, scenarios, mule-deer statement and limits. The phase pull
-request is queued for maintainer approval.
+coverage, integrity, scenarios, mule-deer statement and limits. P4 merged in
+pull request #75 (commit `f31dc66`).
 
 - [x] P4.1 Verify area, AU and state coverage (#71)
 - [x] P4.2 Verify transition and curve integrity (#72)
@@ -344,16 +344,20 @@ Acceptance criteria:
 
 ## Phase 5: Release v0.1
 
-Parent issue: TBD
+Parent issue: #76
 Branch: `feature/p5-release`
-Status: planned
+Status: active
 
 Goal: tag and publish the Knife Creek instance with release notes and a clean
 checkout verification.
 
-- [ ] P5.1 Write release notes and the known-gaps list
-- [ ] P5.2 Tag and publish after maintainer approval
-- [ ] P5.3 Verify the release from a clean checkout
+P5.1 status: `notes/reports/p5-release-notes.md` records the release candidate,
+model counts, verified surfaces, scenario snapshot, run commands and known gaps.
+Tagging remains gated on maintainer approval.
+
+- [x] P5.1 Write release notes and the known-gaps list (#77)
+- [ ] P5.2 Tag and publish after maintainer approval (#78)
+- [ ] P5.3 Verify the release from a clean checkout (#79)
 
 Acceptance criteria:
 
