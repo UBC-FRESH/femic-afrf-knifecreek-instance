@@ -1,0 +1,19 @@
+{
+  "au_table": "data/kc_au/kc_au_table.csv",
+  "panel": "data/psp/idf_cariboo_space_for_time_plots.csv",
+  "horizon_years": 200,
+  "step_years": 10,
+  "plots_per_au": 5,
+  "aus": 6,
+  "matched_plots": 28,
+  "curve_rows": 126,
+  "fvs": "fresh-fvsbc 0.20.0 / FVS-BC",
+  "caveats": [
+    "No-cut FVS-BC curves, not observed 200-year growth.",
+    "Site index and tree age are structural inputs from the FAIB panel.",
+    "AU matching is BEC + leading species + SI band, then nearest SI.",
+    "V1 PSP calibration applied as a sensitivity.",
+    "Not a legal-compliance claim."
+  ],
+  "calibration": "ws4/kc_psp_calibration/calibration_parameters.json"
+}
