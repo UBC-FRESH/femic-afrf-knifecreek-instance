@@ -42,6 +42,34 @@ REGIMES = {
     "GWM_MODERATE": {"B": 22.0, "D": 60.0, "q": 1.25},
 }
 SPECIES_MAP = {"FDI": "FD", "PLI": "PL", "SX": "SW", "AT": "AT"}
+LARGE_THRESHOLD = 37.5
+CLUMP_SIZE = 6
+RESERVE_TREES = 3
+
+
+def _reserved_ids(after: pd.DataFrame, regime: str) -> set[str]:
+    """Return TreeIds reserved by the KC clump-reserve proxy."""
+    if after.empty:
+        return set()
+    d_target = REGIMES[regime]["D"]
+    large = after[after["DBH"] >= LARGE_THRESHOLD].sort_values("DBH", ascending=False)
+    reserved: set[str] = set()
+    for start in range(0, len(large), CLUMP_SIZE):
+        chunk = large.iloc[start : start + CLUMP_SIZE]
+        above_d = chunk[chunk["DBH"] > d_target]
+        reserved.update(str(value) for value in above_d.head(RESERVE_TREES)["TreeId"])
+    return reserved
+
+
+def _reserve_metrics(frame: pd.DataFrame, ids: set[str]) -> tuple[float, float]:
+    """Return reserve BA and TPH for the retained TreeIds."""
+    if frame.empty or not ids:
+        return 0.0, 0.0
+    selected = frame[frame["TreeId"].astype(str).isin(ids)].copy()
+    if selected.empty:
+        return 0.0, 0.0
+    ba = float((0.00007854 * selected["DBH"] ** 2 * selected["TPH"]).sum())
+    return ba, float(selected["TPH"].sum())
 
 
 def _bec_variant(row: pd.Series) -> str:
@@ -243,6 +271,8 @@ def main() -> None:
                             0.00007854 * after["DBH"] ** 2 * after["TPH"] * (after["DBH"] >= 37.5)
                         ).sum()
                     )
+                reserved = _reserved_ids(after, args.regime)
+                reserve_ba, reserve_tph = _reserve_metrics(after, reserved)
                 stage_rows.append(
                     {
                         "stage": stage,
@@ -254,6 +284,8 @@ def main() -> None:
                         "canopy_ccf": float(entry["ATCCF"]),
                         "large_ba_m2_ha": after_large,
                         "large_tph": 0.0,
+                        "reserve_ba_m2_ha": reserve_ba,
+                        "reserve_tph": reserve_tph,
                         "cut_tph": cut_tph,
                         "cut_m3_ha": cut_volume,
                     }
@@ -261,6 +293,8 @@ def main() -> None:
                 next_year = ENTRY_YEARS[stage] if stage < len(ENTRY_YEARS) else HORIZON_YEARS
                 post = summary[(summary["Year"] > entry_year) & (summary["Year"] <= next_year)]
                 for point in post.itertuples(index=False):
+                    year_trees = tree_list[tree_list["Year"] == int(point.Year)]
+                    reserve_ba, reserve_tph = _reserve_metrics(year_trees, reserved)
                     stage_rows.append(
                         {
                             "stage": stage,
@@ -272,6 +306,8 @@ def main() -> None:
                             "canopy_ccf": float(point.CCF),
                             "large_ba_m2_ha": float(point.large_ba_m2_ha),
                             "large_tph": float(point.large_tph),
+                            "reserve_ba_m2_ha": reserve_ba,
+                            "reserve_tph": reserve_tph,
                             "cut_tph": 0.0,
                             "cut_m3_ha": 0.0,
                         }
