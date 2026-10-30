@@ -69,9 +69,10 @@ def _build_recipe(h_dir: Path) -> tuple[ET.Element, pd.DataFrame, pd.DataFrame]:
         int(row.TRACK): _state_from_name(row.STRATA) for row in tracks.itertuples(index=False)
     }
 
-    root = ET.Element("ForestModel", horizon="100", year="2026", match="multi")
-    ET.SubElement(root, "curve", id="unity").append(ET.Element("point", x="0", y="1"))
     curves = pd.read_csv(h_dir / "curves.csv")
+    horizon = int(curves["X"].max())
+    root = ET.Element("ForestModel", horizon=str(horizon), year="2026", match="multi")
+    ET.SubElement(root, "curve", id="unity").append(ET.Element("point", x="0", y="1"))
     for curve_id, points in curves.groupby("CURVE", sort=True):
         _add_curve(root, f"kc_{int(curve_id)}", points)
 
@@ -154,6 +155,7 @@ def main() -> None:
     args = parser.parse_args()
 
     root, tracks, states = _build_recipe(args.h_dir)
+    horizon = int(pd.read_csv(args.h_dir / "curves.csv")["X"].max())
     args.out_dir.mkdir(parents=True, exist_ok=True)
     xml_path = args.out_dir / "forestmodel.xml"
     ET.ElementTree(root).write(xml_path, encoding="utf-8", xml_declaration=True)
@@ -197,7 +199,7 @@ def main() -> None:
         "states": len(states),
         "fragments": len(matrix_fragments),
         "state_fields": list(STATE_FIELDS),
-        "horizon_years": 100,
+        "horizon_years": horizon,
         "caveats": [
             "Generated from the KC H-matrix source tables, not from a fresh FVS-BC run.",
             "The recipe uses AU=1 as a constant compatibility field; the six KC "

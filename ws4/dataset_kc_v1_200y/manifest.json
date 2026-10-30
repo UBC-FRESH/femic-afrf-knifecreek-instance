@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1",
+  "tables": {
+    "fragments": "fragments.parquet",
+    "blocks": "blocks.parquet",
+    "tracks": "tracks.parquet",
+    "strata": "strata.parquet",
+    "treatments": "treatments.parquet",
+    "curves": "curves.parquet",
+    "features": "features.parquet",
+    "products": "products.parquet",
+    "protoaccounts": "protoaccounts.parquet",
+    "accounts": "accounts.parquet",
+    "groups": "groups.parquet",
+    "messages": "messages.parquet"
+  },
+  "sources": [
+    {
+      "path": "forestmodel.xml",
+      "sha256": "e67bfa2aad9684c9572dc50c08f1f4392e064640d61e048b6a517d1acbae5a61"
+    },
+    {
+      "path": "fragments.csv",
+      "sha256": "ffdf9da217b4b4409a42efa181fe4d35180d949c86a7d67e2c45395354a4c4a4"
+    }
+  ],
+  "options": {
+    "period_length": 1,
+    "recipe": "ForestModelXML",
+    "model": "II"
+  },
+  "metadata": {}
+}

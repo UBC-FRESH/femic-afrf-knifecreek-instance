@@ -1,0 +1,571 @@
+{
+  "matrix": "kc-h-200y-psp-curves-v1",
+  "source_h": "data/patchworks_knifecreek/tracks/H",
+  "source_curves": "data/psp/kc_afrf_psp_fvs_200y_curves.csv",
+  "tracks": 92,
+  "plots": 24,
+  "feature_rows": 552,
+  "product_rows": 98,
+  "curve_ids": 559,
+  "horizon_years": 200,
+  "mapping": [
+    {
+      "TRACK": 1,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 2,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 3,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 4,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 5,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 6,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 7,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 8,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 9,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 10,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 11,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 12,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 13,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 14,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 15,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 16,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 17,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 18,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 19,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 20,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 21,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 22,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 23,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 24,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 25,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 26,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 27,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 28,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 29,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 17.5
+    },
+    {
+      "TRACK": 30,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 17.5
+    },
+    {
+      "TRACK": 31,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 17.5
+    },
+    {
+      "TRACK": 32,
+      "plot": 6,
+      "track_ba": 22.5,
+      "track_qmd": 17.5
+    },
+    {
+      "TRACK": 33,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 34,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 35,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 36,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 37,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 38,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 39,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 40,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 41,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 42,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 43,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 44,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 45,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 46,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 47,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 48,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 49,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 50,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 51,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 52,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 53,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 54,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 55,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 56,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 57,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 58,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 59,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 60,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 61,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 37.5
+    },
+    {
+      "TRACK": 62,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 37.5
+    },
+    {
+      "TRACK": 63,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 37.5
+    },
+    {
+      "TRACK": 64,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 37.5
+    },
+    {
+      "TRACK": 65,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 17.5
+    },
+    {
+      "TRACK": 66,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 17.5
+    },
+    {
+      "TRACK": 67,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 17.5
+    },
+    {
+      "TRACK": 68,
+      "plot": 23,
+      "track_ba": 27.5,
+      "track_qmd": 17.5
+    },
+    {
+      "TRACK": 69,
+      "plot": 23,
+      "track_ba": 32.5,
+      "track_qmd": 22.5
+    },
+    {
+      "TRACK": 70,
+      "plot": 23,
+      "track_ba": 32.5,
+      "track_qmd": 22.5
+    },
+    {
+      "TRACK": 71,
+      "plot": 23,
+      "track_ba": 32.5,
+      "track_qmd": 22.5
+    },
+    {
+      "TRACK": 72,
+      "plot": 23,
+      "track_ba": 32.5,
+      "track_qmd": 22.5
+    },
+    {
+      "TRACK": 73,
+      "plot": 23,
+      "track_ba": 32.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 74,
+      "plot": 23,
+      "track_ba": 32.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 75,
+      "plot": 23,
+      "track_ba": 32.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 76,
+      "plot": 23,
+      "track_ba": 32.5,
+      "track_qmd": 32.5
+    },
+    {
+      "TRACK": 77,
+      "plot": 23,
+      "track_ba": 32.5,
+      "track_qmd": 37.5
+    },
+    {
+      "TRACK": 78,
+      "plot": 23,
+      "track_ba": 32.5,
+      "track_qmd": 37.5
+    },
+    {
+      "TRACK": 79,
+      "plot": 23,
+      "track_ba": 32.5,
+      "track_qmd": 37.5
+    },
+    {
+      "TRACK": 80,
+      "plot": 23,
+      "track_ba": 32.5,
+      "track_qmd": 37.5
+    },
+    {
+      "TRACK": 81,
+      "plot": 11,
+      "track_ba": 37.5,
+      "track_qmd": 22.5
+    },
+    {
+      "TRACK": 82,
+      "plot": 11,
+      "track_ba": 37.5,
+      "track_qmd": 22.5
+    },
+    {
+      "TRACK": 83,
+      "plot": 11,
+      "track_ba": 37.5,
+      "track_qmd": 22.5
+    },
+    {
+      "TRACK": 84,
+      "plot": 11,
+      "track_ba": 37.5,
+      "track_qmd": 22.5
+    },
+    {
+      "TRACK": 85,
+      "plot": 14,
+      "track_ba": 17.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 86,
+      "plot": 14,
+      "track_ba": 17.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 87,
+      "plot": 14,
+      "track_ba": 17.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 88,
+      "plot": 14,
+      "track_ba": 17.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 89,
+      "plot": 14,
+      "track_ba": 17.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 90,
+      "plot": 14,
+      "track_ba": 17.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 91,
+      "plot": 14,
+      "track_ba": 17.5,
+      "track_qmd": 27.5
+    },
+    {
+      "TRACK": 92,
+      "plot": 14,
+      "track_ba": 17.5,
+      "track_qmd": 27.5
+    }
+  ],
+  "caveats": [
+    "Track-to-plot assignment is nearest initial BA/QMD, not a spatial join.",
+    "No-cut FVS-BC curves with tree age 60 and site index 60 placeholders.",
+    "Product curves remain the source H point estimates.",
+    "No KC calibration or legal-compliance claim."
+  ]
+}
