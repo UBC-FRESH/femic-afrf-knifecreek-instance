@@ -159,3 +159,14 @@ targets:
   min_weight: 0.1
   shape: linear
   priority: 2
+
+
+# Final-period growing-stock floor: 90% of the initial feature-yield level.
+# Initial feature.yield.managed.total = 2,562,830.873371; 90% = 2,306,547.786034.
+- account: feature.yield.managed.total
+  period: 20
+  period_width: 10
+  minimum: 2306547.786034
+  min_weight: 1000.0
+  shape: linear
+  priority: 2

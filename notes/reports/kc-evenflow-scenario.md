@@ -21,6 +21,18 @@ contract, not by a separate post-extend step. The current source product curves
 end at 30 years; a real 200-year rebuild should run FVS for the full horizon
 rather than relying on the flat clamp.
 
+## Final growing stock
+
+The final-period target is:
+
+- account: `feature.yield.managed.total`;
+- period: 20;
+- minimum: 2,306,547.786 (90% of the initial 2,562,830.873);
+- weight: 1000.
+
+This is the only growing-stock target. It is a structural floor, not a
+calibrated inventory objective.
+
 ## Tested floor
 
 Using the GWM moderate selection schedule as the starting schedule:

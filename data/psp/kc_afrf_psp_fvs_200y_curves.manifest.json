@@ -1,0 +1,177 @@
+{
+  "source": "KC PSP first-measurement live trees",
+  "raw_source": "data/private/afrf_kc_psp/trees_long.parquet",
+  "plots": 24,
+  "horizon_years": 200,
+  "step_years": 10,
+  "tree_age": 60.0,
+  "site_index": 60,
+  "fvs": "fresh-fvsbc 0.20.0 / FVS-BC",
+  "columns": [
+    "plot",
+    "block",
+    "treatment",
+    "first_year",
+    "tree_age",
+    "site_index",
+    "year",
+    "ba_m2_ha",
+    "tph",
+    "qmd_cm",
+    "volume_m3_ha",
+    "canopy_ccf",
+    "case_id"
+  ],
+  "runs": [
+    {
+      "plot": 1,
+      "first_year": 1993,
+      "trees": 113,
+      "case_id": "358f699c-00c3-435a-a712-bf6663e368de"
+    },
+    {
+      "plot": 2,
+      "first_year": 1993,
+      "trees": 98,
+      "case_id": "982b1b58-299b-4ecf-9c32-4d8d8dcb97f8"
+    },
+    {
+      "plot": 3,
+      "first_year": 1993,
+      "trees": 523,
+      "case_id": "ea7aa907-2d1e-4f5a-9b8f-6e7f6cb12c6e"
+    },
+    {
+      "plot": 4,
+      "first_year": 1993,
+      "trees": 412,
+      "case_id": "55fe06da-66b6-4639-bd8a-35c7bcc7b5cd"
+    },
+    {
+      "plot": 5,
+      "first_year": 1993,
+      "trees": 104,
+      "case_id": "6416c258-8084-47fb-b9a6-3c1bdd2e426c"
+    },
+    {
+      "plot": 6,
+      "first_year": 1993,
+      "trees": 70,
+      "case_id": "62c17b41-094e-4040-b728-0529e07d130a"
+    },
+    {
+      "plot": 7,
+      "first_year": 1993,
+      "trees": 97,
+      "case_id": "f5716ea8-2cd0-41d8-9926-ca7a741c33a5"
+    },
+    {
+      "plot": 8,
+      "first_year": 1993,
+      "trees": 86,
+      "case_id": "a2730c58-4fdd-40ef-908b-3f284f3854b8"
+    },
+    {
+      "plot": 9,
+      "first_year": 1993,
+      "trees": 115,
+      "case_id": "4feb95d2-b83a-4db9-b4da-49230d6720a9"
+    },
+    {
+      "plot": 10,
+      "first_year": 1993,
+      "trees": 93,
+      "case_id": "58a7047e-64a2-4a62-8c56-40b290b186f6"
+    },
+    {
+      "plot": 11,
+      "first_year": 1993,
+      "trees": 155,
+      "case_id": "068a33d3-21df-44fa-af92-74fd3e303ea3"
+    },
+    {
+      "plot": 12,
+      "first_year": 1993,
+      "trees": 115,
+      "case_id": "50d46802-736a-48f9-b39c-5b6eacd2ecc6"
+    },
+    {
+      "plot": 13,
+      "first_year": 1993,
+      "trees": 75,
+      "case_id": "59a27cb0-9b99-47da-b223-dc40557a6f7e"
+    },
+    {
+      "plot": 14,
+      "first_year": 1993,
+      "trees": 62,
+      "case_id": "3cfde6e5-3120-4465-afdd-ba31397d2b1d"
+    },
+    {
+      "plot": 15,
+      "first_year": 1993,
+      "trees": 275,
+      "case_id": "1835c1b4-0992-4b0f-8bbb-a4af4b5f56e9"
+    },
+    {
+      "plot": 16,
+      "first_year": 1993,
+      "trees": 217,
+      "case_id": "1e466223-17d7-4129-a78f-2680ef0ca1e2"
+    },
+    {
+      "plot": 17,
+      "first_year": 1993,
+      "trees": 58,
+      "case_id": "ca8699f0-0d82-4cb2-8ad7-71448d1706ed"
+    },
+    {
+      "plot": 18,
+      "first_year": 1993,
+      "trees": 64,
+      "case_id": "5ffe6d08-a1fe-4401-8041-dd059e3df6fc"
+    },
+    {
+      "plot": 19,
+      "first_year": 1993,
+      "trees": 280,
+      "case_id": "521cc6a4-3d36-44e2-bba1-3f21d6ee84a2"
+    },
+    {
+      "plot": 20,
+      "first_year": 1993,
+      "trees": 273,
+      "case_id": "4df69224-a7e0-4110-b339-b15ff6452cd6"
+    },
+    {
+      "plot": 21,
+      "first_year": 1993,
+      "trees": 123,
+      "case_id": "acb8fc25-11fc-4452-947c-340eed31294b"
+    },
+    {
+      "plot": 22,
+      "first_year": 1993,
+      "trees": 140,
+      "case_id": "f70a9dec-e3d7-4085-814a-c7ee5ec47e35"
+    },
+    {
+      "plot": 23,
+      "first_year": 1993,
+      "trees": 88,
+      "case_id": "701579c8-0c05-4dac-b345-f116a8f9e2e4"
+    },
+    {
+      "plot": 24,
+      "first_year": 1993,
+      "trees": 72,
+      "case_id": "6bfcdd01-ad6e-4719-84fb-406c40a5116a"
+    }
+  ],
+  "caveats": [
+    "No-cut FVS-BC projections, not observed growth.",
+    "Tree age 60 and site index 60 are structural placeholders.",
+    "No KC calibration is claimed.",
+    "Raw tree tallies remain private; this is a derived plot curve table."
+  ]
+}
