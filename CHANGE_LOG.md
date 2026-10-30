@@ -418,3 +418,8 @@ status and the GitHub issue comments.
   `_MANAGED_` rows. H matrix has 552 feature rows, 98 product rows and 6,660
   curve points; `ws4 ingest` and `ws4 validate` pass. Large-tree/reserve,
   softwood/hardwood split and full group accounts remain open.
+- P3.5 topology, roads and structural patch accounts: built 500 block pairs
+  (352 touching) at 100 m, 44 BC Forest Tenure road sections (59.6 km), and a
+  managed-area patch account. `ws4 simulate --topology --patch-accounts` writes
+  patch membership and metrics. Roads are public-derived, not field-verified;
+  route configuration remains open.

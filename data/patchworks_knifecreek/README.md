@@ -1,57 +1,31 @@
 # Knife Creek Patchworks-compatible package
 
-Status: **fragment layer complete; H matrix has 50-year space-for-time feature curves; product accounts, roads, pin and ForestModelXML pending.**
-
-P3.2 builds the spatial fragment layer that the later `tracks/H` matrix will join to.
+Status: **fragment layer, H matrix, topology, roads and structural patch accounts complete; product yield and ForestModelXML remain limited/blocked.**
 
 ## Contents
 
 | File | Purpose |
 | --- | --- |
 | `spatial/fragments.shp` | 160 VRI blocks clipped to SUP S15382, EPSG:3005 |
-| `fragments.csv` | Derived fragment attributes for matrix ingestion |
-| `fragments_manifest.json` | Counts, source paths and caveats |
+| `fragments.csv` | Derived fragment attributes |
+| `spatial/topo_fragments.csv` | Block pair distances and shared boundary lengths |
+| `spatial/roads.gpkg` | 44 public BC Forest Tenure road sections, clipped to SUP |
+| `analysis/patch_accounts.yaml` | Structural adjacency patch account |
+| `tracks/H/` | 160 blocks, 92 tracks, 49 treatments, feature/product curves |
 
-## Keys
+## Keys and features
 
-- `RES_KEY` / `BLOCK` — stable block id, 1–160.
-- `TRACK` — initial ws4 state track from `dataset_kc_spatial_v3`.
-- `POLY_ID` — VRI polygon id.
-
-## Attributes
-
-- `AREA_HA`
-- `F_AGE`
-- `BEC`
-- `CONTCLAS`
-- `HMZ`
-- `CLUMP`
-- `RESERVE`
-
-`F_AGE` is the VRI projected age, not a measured stand age. The PSP plots are
-uneven-aged; do not treat `F_AGE` as a plot age.
-
-## Built
-
-- `tracks/H/` matrix: 160 blocks, 92 tracks, 49 treatments, 6,660 curve points,
-  552 feature rows and 98 product rows; `ws4 ingest` and `ws4 validate` pass.
-  Feature curves are 100-year regional space-for-time runs; product area curves
-  are 100-year and product yield curves remain point estimates.
-
-## Not built yet
-
-- 300-year curves (features are 0–100 years; products 0–30 years)
-- product and feature accounts
-- topology
-- roads
-- `KC_H.pin`
-- `ForestModelXML`
-- ws4 ingest and validation
+- `RES_KEY` / `BLOCK` — stable block id, 1–160
+- `TRACK` — initial ws4 state track
+- `POLY_ID` — VRI polygon id
+- feature curves: BA, QMD, TPH, canopy, volume, area
+- product curves: area and point yield
 
 ## Limits
 
-- No absolute PSP plot centres or treatment polygons are included.
-- Block order is inherited from `dataset_kc_spatial_v3`.
-- ForestModelXML is blocked pending a valid schema/compiler; see
-  `../../notes/reference/patchworks-forestmodelxml-format-spike.md`.
+- Patches are currently based on managed area, not a seral/opening feature.
+- No road route configuration or haul cost yet.
+- Product yield curves are point estimates from the existing GWM runs.
+- Feature curves are 100-year regional space-for-time FVS-BC projections, not KC chronology.
+- No ForestModelXML; see `../../notes/reference/patchworks-forestmodelxml-format-spike.md`.
 - No legal-compliance claim.

@@ -1,0 +1,11 @@
+# Knife Creek structural patch reporting.
+#
+# This uses the managed-area feature because the seral/opening feature does
+# not yet exist in the H matrix. It is an adjacency/size distribution check,
+# not an opening-size policy.
+accounts:
+  - name: patch.managed
+    criteria: feature.area.managed.total
+    threshold: 0.5
+    size_classes: [1.0, 5.0, 25.0, 50.0, .inf]
+    search_distance: 20.0

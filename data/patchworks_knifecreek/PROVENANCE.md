@@ -1,34 +1,39 @@
 # Provenance
 
-P3.2 fragment layer, generated 2026-10-29.
+P3.2/P3.3/P3.4/P3.5 derived package, generated 2026-10-30.
 
 ## Sources
 
-| Source | SHA-256 |
-| --- | --- |
-| `data/inventory/vri_2025_kc.gpkg` | `9d05220b18c073902c47755088adfa532fe288e312b4d0418e7bb67a073837b5` |
-| `data/boundaries/knife_creek_sup_S15382.gpkg` | `e79189b10d5da590d0adae658fc59607ca63e242362c9ee8963c76bea731f480` |
-| `ws4/dataset_kc_spatial_v3/manifest.json` | `b0587ba1c016a52117baa741c4e70e611a9bc5447658879e6797d8ce6b1b82c2` |
-| `data/patchworks_knifecreek/spatial/fragments.shp` | `4907020a71c2075c97b4a780b88d327329e00177f3c7f76c5c73a252ab17a23d` |
+- VRI 2025 R1: `data/inventory/vri_2025_kc.gpkg`
+- SUP S15382: `data/boundaries/knife_creek_sup_S15382.gpkg`
+- Structural ws4 dataset: `ws4/dataset_kc_spatial_v3`
+- FAIB IDF PSPs: public FAIB ground-plot compilation
+- Roads: BC Forest Tenure Road Section Lines, WFS type
+  `pub:WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW`, Open Government
+  Licence - British Columbia
 
-## Transformation
+## Transformations
 
-1. Read VRI 2025 and SUP S15382 in EPSG:3005.
-2. Intersect VRI with the SUP.
-3. Keep polygons with area ≥ 0.1 ha, positive basal area and positive live stems.
-4. Assign `BLOCK` and `TRACK` in the exact order used by `dataset_kc_spatial_v3`.
-5. Carry BEC, HMZ, clump and reserve classes and VRI projected age.
-6. Write the shapefile and derived CSV.
+1. Clip VRI to SUP; keep area ≥0.1 ha, BA>0 and live stems>0.
+2. Assign `BLOCK`/`TRACK` in `dataset_kc_spatial_v3` order.
+3. Build block topology at 100 m search distance; record shortest polygon
+   distance and shared boundary length.
+4. Fetch and clip BC Forest Tenure road sections to the SUP.
+5. Build H matrix from `dataset_kc_spatial_v3`.
+6. Replace feature curves with nearest BA/QMD space-for-time FAIB site curves.
+7. Add area curves and `_MANAGED_` accounts.
 
 ## Checks
 
-- 160 blocks, one-to-one with `dataset_kc_spatial_v3`.
-- Total area 3,481.77 ha.
-- EPSG:3005.
-- `BLOCK`, `TRACK`, `AREA_HA` and `F_AGE` match the compiled dataset.
+- 160 blocks / 3,481.77 ha
+- 500 topology pairs, 352 touching pairs
+- 44 road sections, 59,637.8 m; stored as GeoPackage to keep the text scanner out of the DBF
+- `ws4 ingest` succeeds
+- `ws4 validate` passes
 
 ## Limits
 
-- The source VRI and SUP are public; the PSP tree records remain private.
-- No absolute plot centres or treatment polygons.
-- No Patchworks recipe or matrix is validated yet.
+- OSM was tried first and had no highway inside the SUP; the BC Forest Tenure
+  layer is the road source.
+- No route configuration or legal access claim.
+- No raw PSP tree records or private workbook in this package.
