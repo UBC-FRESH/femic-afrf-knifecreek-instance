@@ -17,6 +17,8 @@ not a legal-compliance product.
 - Each managed stage transitions to the next stage; the final stage is terminal.
 - Managed x=0 is the post-entry residual from FVS `ATBA`, `ATQMD`, `ATCCF`,
   pre-cut minus removed TPH and pre-cut minus removed volume.
+- The entry is a three-part cut: large trees 37.5 cm to D, surplus above D to
+  the reserve ceiling, then small trees 2.5–37.5 cm.
 - Product curves are the cut yields at the next entry.
 
 Files:

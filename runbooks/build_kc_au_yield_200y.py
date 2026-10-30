@@ -304,7 +304,12 @@ def main() -> None:
         if not case_curves:
             raise ValueError(f"no FVS cases completed for AU {au_row.au_id}")
         stacked = pd.concat(case_curves, ignore_index=True)
-        mean = stacked.groupby("year", as_index=False).mean(numeric_only=True)
+        aggregations = {
+            column: ("max" if column == "max_dbh_cm" else "mean")
+            for column in stacked.columns
+            if column != "year"
+        }
+        mean = stacked.groupby("year", as_index=False).agg(aggregations)
         mean.insert(0, "au_id", au_row.au_id)
         mean.insert(1, "si_level", au_row.si_level)
         mean.insert(2, "n_plots", len(case_curves))

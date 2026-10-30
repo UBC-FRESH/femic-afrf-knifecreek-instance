@@ -16,6 +16,11 @@
       "schedule": "ws4/runtime/kc_au_stages/selection_gwm_moderate.csv",
       "blocks": 157,
       "run": "ws4/runtime/kc_au_stages/selection_gwm_moderate"
+    },
+    "selection_gwm_legal": {
+      "schedule": "ws4/runtime/kc_au_stages/selection_gwm_legal.csv",
+      "blocks": 157,
+      "run": "ws4/runtime/kc_au_stages/selection_gwm_legal"
     }
   },
   "caveats": [

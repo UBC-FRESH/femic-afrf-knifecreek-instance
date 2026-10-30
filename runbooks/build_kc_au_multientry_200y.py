@@ -39,34 +39,29 @@ CYCLES = (4, 7, 10, 13, 16, 19)
 ENTRY_YEARS = tuple((cycle - 1) * STEP_YEARS for cycle in CYCLES)
 FT2_PER_M2 = 4.356
 REGIMES = {
-    "GWM_LOW": {"B": 16.0, "large": 6.0, "D": 50.0, "q": 1.30},
-    "GWM_MODERATE": {"B": 22.0, "large": 11.0, "D": 60.0, "q": 1.25},
+    # The q field is the FVS THINQFA target, not the measured legal q. The
+    # FVS target is set above the legal midpoint so the tree-list 5 cm q lands
+    # inside the legal range; measured q is reported separately.
+    "GWM_LOW": {"B": 16.0, "large": 6.0, "reserve": 1.6, "D": 50.0, "q": 1.55},
+    "GWM_MODERATE": {"B": 22.0, "large": 11.0, "reserve": 2.2, "D": 60.0, "q": 1.50},
 }
 SPECIES_MAP = {"FDI": "FD", "PLI": "PL", "SX": "SW", "AT": "AT"}
 LARGE_THRESHOLD = 37.5
-CLUMP_SIZE = 6
-RESERVE_TREES = 2
 
 
-def _reserved_ids(after: pd.DataFrame, regime: str) -> set[str]:
-    """Return TreeIds reserved by the KC clump-reserve proxy."""
+def _reserved_ids(after: pd.DataFrame, regime: str) -> set[int]:
+    """Return the above-D tree indexes left by the reserve cut."""
     if after.empty:
         return set()
     d_target = REGIMES[regime]["D"]
-    large = after[after["DBH"] >= LARGE_THRESHOLD].sort_values("DBH", ascending=False)
-    reserved: set[str] = set()
-    for start in range(0, len(large), CLUMP_SIZE):
-        chunk = large.iloc[start : start + CLUMP_SIZE]
-        above_d = chunk[chunk["DBH"] > d_target]
-        reserved.update(str(value) for value in above_d.head(RESERVE_TREES)["TreeId"])
-    return reserved
+    return {int(value) for value in after.loc[after["DBH"] > d_target, "TreeIndex"]}
 
 
-def _reserve_metrics(frame: pd.DataFrame, ids: set[str]) -> tuple[float, float]:
-    """Return reserve BA and TPH for the retained TreeIds."""
+def _reserve_metrics(frame: pd.DataFrame, ids: set[int]) -> tuple[float, float]:
+    """Return reserve BA and TPH for the retained tree indexes."""
     if frame.empty or not ids:
         return 0.0, 0.0
-    selected = frame[frame["TreeId"].astype(str).isin(ids)].copy()
+    selected = frame[frame["TreeIndex"].astype(int).isin(ids)].copy()
     if selected.empty:
         return 0.0, 0.0
     ba = float((0.00007854 * selected["DBH"] ** 2 * selected["TPH"]).sum())
@@ -181,10 +176,24 @@ def _keywords(site_index: float, regime: str) -> list[Keyword]:
         )
         thinning.append(
             Keyword(
+                "THINABA",
+                (
+                    str(cycle),
+                    str(spec["reserve"]),
+                    "1.0",
+                    str(spec["D"]),
+                    "999.0",
+                    "0.0",
+                    "999.0",
+                ),
+            )
+        )
+        thinning.append(
+            Keyword(
                 "THINQFA",
                 (
                     str(cycle),
-                    "0.0",
+                    "2.5",
                     "37.5",
                     "0",
                     str(spec["q"]),
@@ -385,7 +394,12 @@ def main() -> None:
         if not cases:
             raise ValueError(f"no multi-entry FVS cases completed for {au_id}")
         stacked = pd.concat(cases, ignore_index=True)
-        mean = stacked.groupby(["stage", "year"], as_index=False).mean(numeric_only=True)
+        aggregations = {
+            column: ("max" if column == "max_dbh_cm" else "mean")
+            for column in stacked.columns
+            if column not in {"stage", "year"}
+        }
+        mean = stacked.groupby(["stage", "year"], as_index=False).agg(aggregations)
         mean.insert(0, "au_id", au_id)
         mean.insert(1, "si_level", au_row.si_level)
         mean.insert(2, "n_plots", len(cases))
