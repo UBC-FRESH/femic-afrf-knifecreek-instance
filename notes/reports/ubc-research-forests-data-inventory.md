@@ -100,16 +100,30 @@ These become the spatial accounts currently missing from the stage graph.
   - retention;
   - spatial clump/opening feasibility.
 
+## Pipeline start: normalized spatial products
+
+The first pipeline step is built in the private store under
+`processed/kc_spatial/`:
+
+- `kc_marshal_trees.gpkg` / `.parquet` — 2,032 tree records from eight source
+  plots. Plot5 and plot6 are flagged as duplicates of plot2 based on identical
+  tree attributes; the source plot identity is retained.
+- `kc_marshal_plots.gpkg` / `.csv` — 24 plot polygons with area, centroid and
+  bounds.
+- `kc_marshal_tree_summary.csv` — per-source-plot tree summaries.
+- `kc_marshal_lidar_structure.csv` — 2019 canopy metrics inside the 24 plots:
+  mean height 6.5–11.9 m, cover ≥2 m 72–94%, gap fraction <2 m 6–28%.
+
+This confirms the LiDAR and plot datasets line up spatially and gives the first
+AU/plot structural table. It is not yet a clump/opening classification.
+
 ## Immediate next steps
 
-1. Finish the DataLad save and publish the submodule pointer.
-2. Convert the eight Marshal tree shapefiles to one GeoPackage/Parquet table;
-   resolve the `plot2`/`plot5`/`plot6` duplication.
-3. Port the Kozak taper functions and bench-test against the R outputs.
-4. Clip/mosaic 2019 CHM/DEM to the KC block and derive clump/opening metrics
-   around the 24 plot polygons.
-5. Use the 2013 LAS and Marshal tree maps to validate 2019 LiDAR structure.
-6. Add spatial feature accounts to the stage graph and rerun the AAC/estate
+1. Port the Kozak taper functions and bench-test against the R outputs.
+2. Derive clump/opening classifications from the 2019 CHM and validate them
+   against the eight tree maps.
+3. Use the 2013 LAS and Marshal tree maps to validate 2019 LiDAR structure.
+4. Add spatial feature accounts to the stage graph and rerun the AAC/estate
    model.
 
 ## Caveats
