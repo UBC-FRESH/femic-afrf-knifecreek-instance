@@ -1,0 +1,3 @@
+[submodule "external/ubc-research-forests-data"]
+	path = external/ubc-research-forests-data
+	url = https://github.com/UBC-FRESH/ubc-research-forests-data.git
