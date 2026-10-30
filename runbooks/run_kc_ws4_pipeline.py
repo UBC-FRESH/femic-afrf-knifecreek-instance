@@ -201,8 +201,10 @@ def main() -> None:
             ]
         )
 
-    fragments = gpd.read_file(args.fragment_shapefile).to_crs(4326)
+    fragments = gpd.read_file(args.fragment_shapefile).to_crs(3005)
     geometry = fragments[["BLOCK", "geometry"]].rename(columns={"BLOCK": "block_id"})
+    if geometry.crs is None or geometry.crs.to_epsg() != 3005:
+        raise ValueError("KC map geometry must be in EPSG:3005")
     geometry.to_file(args.runtime / "kc_blocks.geojson", driver="GeoJSON")
     evidence = {
         "phase": "P3.7",
@@ -224,7 +226,8 @@ def main() -> None:
             + str(args.runtime)
             + " --targets ws4/targets_kc_smoke.yaml --geometry "
             + str(args.runtime / "kc_blocks.geojson")
-            + " --topology ws4/topology.csv --patch-accounts ws4/patch_accounts.yaml --port 8766"
+            + " --crs EPSG:3005 --topology ws4/topology.csv "
+            + "--patch-accounts ws4/patch_accounts.yaml --port 8766"
         ),
         "caveats": [
             "Structural model, not a calibrated KC growth model.",

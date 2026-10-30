@@ -87,6 +87,7 @@ ws4 serve \
   --runs ws4/runtime/kc_v1 \
   --targets ws4/targets_kc_smoke.yaml \
   --geometry ws4/runtime/kc_v1/kc_blocks.geojson \
+  --crs EPSG:3005 \
   --topology ws4/topology.csv \
   --patch-accounts ws4/patch_accounts.yaml \
   --port 8766

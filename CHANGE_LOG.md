@@ -513,3 +513,11 @@ status and the GitHub issue comments.
 - P5 closeout: added `notes/reports/p5-closeout.md`; P5 is complete. The FVS-BC
   pilot remains an explicit prerequisite because `fresh_fvsbc` is not installed
   in the verification environment.
+
+## 2026-10-30
+
+- Web map CRS fix: exported the map geometry in EPSG:3005 and started the web
+  service with `--crs EPSG:3005`. The MVT simplifier applies its tolerance in
+  metres; against EPSG:4326 it collapsed blocks into triangular strips. The
+  MapLibre view now renders block polygons correctly. Evidence:
+  `ws4/evidence/kc_v1/kc_web_map.png` and `notes/reports/kc-web-map-crs.md`.
