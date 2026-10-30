@@ -1,0 +1,43 @@
+{
+  "source_vri": "data/inventory/vri_2025_kc.gpkg",
+  "strata": 7,
+  "selected_strata": [
+    "IDFdk3__FDI",
+    "IDFxm__FDI"
+  ],
+  "strata_remapped": [
+    "IDFdk3__AT",
+    "IDFdk3__PLI",
+    "IDFdk3__SX",
+    "IDFxm__AT",
+    "IDFxm__SX"
+  ],
+  "si_level_quantiles": {
+    "L": [
+      5,
+      20,
+      35
+    ],
+    "M": [
+      35,
+      50,
+      65
+    ],
+    "H": [
+      65,
+      80,
+      95
+    ]
+  },
+  "coverage_target": 0.95,
+  "selected_area_fraction": 0.9780672168890224,
+  "aus": 6,
+  "polygons": 173,
+  "area_ha": 3482.2380832089616,
+  "caveats": [
+    "BEC is the variant-level code (zone + subzone + variant).",
+    "Sparse leading-species strata are remapped to the dominant same-BEC stratum.",
+    "The 5-35 / 35-65 / 65-95 bands are the FEMIC 30-point SI quantile policy.",
+    "This is an AU definition, not a yield calibration."
+  ]
+}
