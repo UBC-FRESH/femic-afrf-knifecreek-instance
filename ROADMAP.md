@@ -14,7 +14,7 @@ after its parent issue exists and the maintainer approves it.
 | --- | --- | --- | --- |
 | P0 Bootstrap and growth-engine contract | #1 | `feature/p0-bootstrap` | complete |
 | P1 Data acquisition and stem lists | #7 | `feature/p1-data-acquisition` | active |
-| P2 FVS-BC state-transition library | TBD | `feature/p2-state-library` | planned |
+| P2 FVS-BC state-transition library | #113 | `feature/p2-state-library` | active |
 | P3 ws4 instance assembly | #60 | `feature/p3-ws4-assembly` | complete |
 | P4 Verification and scenarios | #70 | `feature/p4-verification` | complete |
 | P5 Release v0.1 | #76 | `feature/p5-release` | complete |
@@ -84,7 +84,7 @@ disturbance, and mule-deer constraints, then construct reviewed stem lists.
 - [x] P1.2b Recover public figure and table benchmarks (#18)
 - [x] P1.2c Pin the THINQFA-capable fresh-fvsbc (#22)
 - [x] P1.2d Correct THINQFA BC units and record the pilot (#25)
-- [ ] P1.3 Acquire or reconstruct tree-level tallies and CFI plot data (#10)
+- [x] P1.3 Acquire or reconstruct tree-level tallies and CFI plot data (#10)
   - [x] Ingest the AFRF KC PSP plots and run the first FVS-BC backtest
     (`ws4/kc_psp_validation`; structural, placeholder age/site index).
   - [x] Summarize PSP mortality/ingrowth and test `MORTMULT` sensitivity;
@@ -118,9 +118,16 @@ disturbance, and mule-deer constraints, then construct reviewed stem lists.
     DBH-ranked reserve proxy with the LiDAR reserve in the FVS cut.
   - [x] Build a public IDF Cariboo PSP stem-list analog for the interim pilot.
   - [x] Fit a QMD/TPA Weibull scale regression and generate conditional lists.
-  - [ ] Acquire the Knife Creek CFI or released tree list.
-- [ ] P1.4 Build AU strata and nemora stem populations (#11)
-- [ ] P1.5 Record the data-quality and coverage audit (#12)
+  - [x] Acquire the 2024 Marshall remeasurement and 2013/2024 tree-level
+    shapefiles.
+  - [x] Ingest the 2024 independent FAIB IDFdk/IDFxm validation panel and
+    compare uncalibrated, v1 Marshall and v2c FAIB calibrations.
+  - [x] Create the private DataLad store
+    `UBC-FRESH/ubc-research-forests-data` and the
+    `external/ubc-research-forests-data` submodule.
+  - [x] Acquire the LiDAR (2009/2013/2019/2024) and Kozak taper package.
+- [x] P1.4 Build AU strata and nemora stem populations (#11)
+- [x] P1.5 Record the data-quality and coverage audit (#12)
 
 Findings:
 
@@ -204,9 +211,9 @@ Acceptance criteria:
 
 ## Phase 2: FVS-BC state-transition library
 
-Parent issue: TBD
+Parent issue: #113
 Branch: `feature/p2-state-library`
-Status: planned
+Status: active
 
 A **legacy Table 29** structural library exists at `ws4/state_library_v0/` (8
 initial states, 6 residual states, 48 transitions, 192 curves). It is not the
@@ -229,18 +236,21 @@ that ws4 will consume. The next library is `state_library_v1` with
 `basis=GWM_2007`; v0 remains the Table 29 comparison.
 
 - [x] P2.1 Define the state key and the selection regimes
-- [~] P2.2 Run the FVS-BC GWM pilot; stand-structure pass 17/30. The selected
-  rule is post-FVS clump reserve (largest 2–5 above D per 4–10-tree clump),
-  13/15 pass with a DBH-ranked six-tree proxy. A spatial clump rule is still
-  required for KC.
-- [~] P2.3 Build the multi-cycle state graph and canonicalize states. v1 has
-  48 transitions and 72 per-chain states; graph closure and shared
-  canonicalization are still open.
+- [~] P2.2 Run the FVS-BC GWM pilot. The AU/HMZ stage graph now meets 55/55
+  structural legal-candidate targets on the uncalibrated model. A spatial
+  clump/opening rule is still required for KC; BA/reserve is a proxy, not the
+  legal clump layout.
+- [~] P2.3 Build the multi-cycle state graph and canonicalize states. The
+  current graph has 160 blocks, 115 tracks, 102 treatments and six entry
+  stages per AU/HMZ. Continuous BA/QMD canonicalization is still open.
 - [~] P2.4 Generate ws4 tracks, treatments, curves, features, and products.
-  A synthetic 4-block dataset and a 160-block VRI/HMZ spatial structural dataset
-  validate. The KC operating dataset is still blocked on CFI and spatial
-  clumps; the HMZ layer is acquired and enforced structurally.
-- [ ] P2.5 Record the library manifest and validation evidence
+  The 160-block AU/HMZ dataset validates; v1 Marshall and v2c FAIB calibrated
+  sensitivities are built. The spatial clump/opening layer and production AAC
+  schedule remain to be built.
+- [x] P2.5 Record the library manifest and validation evidence
+- [x] P2.6 Record independent FAIB validation and the v1/v2c calibration
+  decision
+- [~] P2.7 Build the production AAC/estate model
 
 Acceptance criteria:
 
@@ -413,3 +423,22 @@ Acceptance criteria:
    the state library as `state_library_v1` with `basis=GWM_2007`. Do not compile
    the legacy Table 29 v0 library as legal compliance. The synthetic THINQFA
    pilot and the BC unit check are complete; the KC stem list is still missing.
+
+
+## Production AAC/estate lane (2026-10-30)
+
+The next work is not another calibration memo. The model has enough plot data
+and independent FAIB validation to support a production AAC decision-support
+run.
+
+Order of work:
+
+1. Normalize the eight Marshal tree shapefiles and 24 plot polygons into one
+   spatial tree table; resolve the plot2/plot5/plot6 duplication.
+2. Derive 2019 LiDAR canopy height, cover, clump and opening metrics around the
+   24 plot polygons; use the 2013 LAS for pre-treatment structure.
+3. Port the Kozak taper/merchantable-volume R functions and replace or
+   cross-check generic volume coefficients.
+4. Add spatial clump/opening and retention accounts to the stage graph.
+5. Run the 20-period AAC/estate optimization with the v1/v2c ensemble and report
+   an AAC range, harvest schedule, and structural/legal scorecard.

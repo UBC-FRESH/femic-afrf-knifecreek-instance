@@ -1,7 +1,7 @@
 # Knife Creek bootstrap plan
 
-Date: 2026-10-26
-Status: Phase 0 in progress
+Date: 2026-10-30
+Status: Phases 0-4 complete; production AAC/estate lane active
 
 ## Goal
 
@@ -69,23 +69,34 @@ state-transition library.
 - report mule-deer indicators; and
 - record the caveats.
 
+### Phase 5: production AAC/estate model
+
+- normalize the Marshal tree shapefiles and plot polygons;
+- derive LiDAR canopy, clump and opening metrics;
+- port the Kozak taper/merchantable-volume equations;
+- add spatial clump/opening and retention accounts;
+- run the 20-period AAC optimization with the v1/v2c ensemble; and
+- publish the AAC range, harvest schedule and legal/structural scorecard.
+
 ## Data dependencies
 
 | Input | Status | Owner | Notes |
 | --- | --- | --- | --- |
-| Legal boundary | required | AFRF / maintainer | Must be the Knife Creek block, not all AFRF |
-| VRI / forest cover | required | AFRF / BC Data Catalogue | Polygon-level, not a tree list |
-| BEC / site series | required | BC Data Catalogue / AFRF | Analysis-unit stratification |
-| Site index | required | VRI / AFRF | Species-specific |
-| Disturbance history | required | AFRF | 2013 wildfire and harvest history |
-| Mule-deer constraints | required | AFRF / province | Spatial classes and values |
-| CFI / research plots | optional | AFRF | Preferred stem-list basis |
-| Tree-level tallies | optional | AFRF | If CFI is unavailable |
+| Legal boundary | acquired | AFRF / maintainer | S15382; verify current order |
+| VRI / forest cover | acquired | AFRF / BC Data Catalogue | Polygon-level |
+| BEC / site series | acquired | BC Data Catalogue / AFRF | AU stratification |
+| Site index | acquired | VRI / AFRF | Species-specific |
+| Disturbance history | acquired | AFRF | 2013 wildfire and harvest history |
+| Mule-deer constraints | acquired | AFRF / province | Spatial classes and values |
+| CFI / research plots | acquired | AFRF | 24 Marshall remeasurements, 1993-2024 |
+| Tree-level tallies | acquired | AFRF | 8 spatial tree plots + 24 plot polygons |
+| LiDAR | acquired | UBC Research Forests | 2009, 2013, 2019 and 2024 products |
+| Taper/volume equations | acquired | UBC Research Forests | Kozak 2004 package |
 
 ## Risks
 
-- **No tree list.** VRI alone cannot seed FVS-BC. A synthetic nemora list is a
-  labelled assumption, not field data.
+- **Spatial realization.** The model now has tree lists and LiDAR, but the
+  stage graph is still non-spatial. Clump and opening layout must be added.
 - **Constraint ambiguity.** Mule-deer objectives may be spatial, structural, or
   both. An unmapped constraint is a gap, not a default.
 - **State explosion.** A naive state key can produce too many states. The
@@ -105,9 +116,8 @@ state-transition library.
 
 ## Open questions
 
-1. What is the authoritative boundary source, and who can release it?
-2. Are there usable CFI or research plot tree lists for Knife Creek?
-3. Which mule-deer constraints are legal requirements and which are guidance?
-4. What is the first selection regime to review?
-5. How many states are needed before the graph is stable?
-6. Should the first public baseline be a single regime or a portfolio?
+1. Which current approved order and HMZ layer governs the block?
+2. Which mule-deer constraints are legal requirements and which are guidance?
+3. How should the 2019 LiDAR be calibrated to the 2013/2024 plot structure?
+4. How should the v1-local and v2c-regional calibrations be weighted for AAC?
+5. Should the first AAC be a single even-flow schedule or a portfolio?
