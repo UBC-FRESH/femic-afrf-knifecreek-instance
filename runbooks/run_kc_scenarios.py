@@ -99,6 +99,16 @@ def main() -> None:
         )
         _run(
             [
+                "python",
+                "runbooks/normalize_kc_accounts.py",
+                "--dataset",
+                str(args.dataset),
+                "--runs",
+                str(args.runtime),
+            ]
+        )
+        _run(
+            [
                 "ws4",
                 "report",
                 "--run",

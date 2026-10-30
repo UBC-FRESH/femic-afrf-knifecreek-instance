@@ -3,6 +3,10 @@
   "accounts": 8,
   "features": 6,
   "products": 2,
+  "product_level_pairs": {
+    "product.area.managed.total": "feature.area.managed.total",
+    "product.yield.managed.total": "feature.yield.managed.total"
+  },
   "curves": 651,
   "targets": {
     "targets_kc_smoke.yaml": [

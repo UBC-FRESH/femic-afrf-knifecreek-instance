@@ -521,3 +521,11 @@ status and the GitHub issue comments.
   metres; against EPSG:4326 it collapsed blocks into triangular strips. The
   MapLibre view now renders block polygons correctly. Evidence:
   `ws4/evidence/kc_v1/kc_web_map.png` and `notes/reports/kc-web-map-crs.md`.
+
+## 2026-10-30
+
+- Account visibility fix: added `runbooks/normalize_kc_accounts.py` and wired it
+  into the pipeline and scenario runner. A no-cut baseline now carries explicit
+  zero rows for every dataset account, including product area and yield, instead
+  of omitting product accounts entirely. Selection runs keep their produced
+  values and get zeros in periods with no product flow.
