@@ -1,0 +1,1716 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ForestModel horizon="200" year="2026" match="multi">
+  <curve id="unity">
+    <point x="0" y="1" />
+  </curve>
+  <curve id="kc_area">
+    <point x="0" y="1" />
+    <point x="200" y="1" />
+  </curve>
+  <define field="AU" column="AU" />
+  <define field="SILV" column="SILV" />
+  <define field="IFM" column="IFM" />
+  <define field="ORIGIN" column="ORIGIN" />
+  <define field="RETENTION" column="Number(column('RETENTION'))" />
+  <define field="treatment" />
+  <input block="BLOCK" area="AREA_HA" age="F_AGE" />
+  <output messages="messages.csv" />
+  <curve id="natural_1">
+    <point x="0" y="36.600000" />
+    <point x="10" y="44.400000" />
+    <point x="20" y="50.400000" />
+    <point x="30" y="55.400000" />
+    <point x="40" y="59.200000" />
+    <point x="50" y="62.800000" />
+    <point x="60" y="65.600000" />
+    <point x="70" y="67.600000" />
+    <point x="80" y="69.600000" />
+    <point x="90" y="71.200000" />
+    <point x="100" y="72.600000" />
+    <point x="110" y="73.800000" />
+    <point x="120" y="74.800000" />
+    <point x="130" y="75.600000" />
+    <point x="140" y="76.400000" />
+    <point x="150" y="76.800000" />
+    <point x="160" y="77.400000" />
+    <point x="170" y="78.000000" />
+    <point x="180" y="78.200000" />
+    <point x="190" y="78.600000" />
+    <point x="200" y="79.000000" />
+  </curve>
+  <curve id="natural_2">
+    <point x="0" y="16.238922" />
+    <point x="10" y="18.352969" />
+    <point x="20" y="20.188423" />
+    <point x="30" y="21.884972" />
+    <point x="40" y="23.466589" />
+    <point x="50" y="24.924261" />
+    <point x="60" y="26.297073" />
+    <point x="70" y="27.573685" />
+    <point x="80" y="28.763534" />
+    <point x="90" y="29.881532" />
+    <point x="100" y="30.928232" />
+    <point x="110" y="31.919778" />
+    <point x="120" y="32.854011" />
+    <point x="130" y="33.742884" />
+    <point x="140" y="34.593151" />
+    <point x="150" y="35.411352" />
+    <point x="160" y="36.199469" />
+    <point x="170" y="36.967177" />
+    <point x="180" y="37.709724" />
+    <point x="190" y="38.436857" />
+    <point x="200" y="39.144556" />
+  </curve>
+  <curve id="natural_3">
+    <point x="0" y="2530.800000" />
+    <point x="10" y="2320.600000" />
+    <point x="20" y="2142.800000" />
+    <point x="30" y="1972.800000" />
+    <point x="40" y="1818.600000" />
+    <point x="50" y="1682.600000" />
+    <point x="60" y="1563.200000" />
+    <point x="70" y="1459.800000" />
+    <point x="80" y="1369.800000" />
+    <point x="90" y="1290.400000" />
+    <point x="100" y="1219.200000" />
+    <point x="110" y="1155.800000" />
+    <point x="120" y="1099.200000" />
+    <point x="130" y="1047.800000" />
+    <point x="140" y="1002.400000" />
+    <point x="150" y="960.000000" />
+    <point x="160" y="921.600000" />
+    <point x="170" y="886.600000" />
+    <point x="180" y="854.400000" />
+    <point x="190" y="824.400000" />
+    <point x="200" y="795.200000" />
+  </curve>
+  <curve id="natural_4">
+    <point x="0" y="257.200000" />
+    <point x="10" y="339.400000" />
+    <point x="20" y="421.400000" />
+    <point x="30" y="501.000000" />
+    <point x="40" y="576.600000" />
+    <point x="50" y="645.200000" />
+    <point x="60" y="708.400000" />
+    <point x="70" y="766.400000" />
+    <point x="80" y="818.800000" />
+    <point x="90" y="866.800000" />
+    <point x="100" y="910.400000" />
+    <point x="110" y="950.800000" />
+    <point x="120" y="987.200000" />
+    <point x="130" y="1021.200000" />
+    <point x="140" y="1053.000000" />
+    <point x="150" y="1082.200000" />
+    <point x="160" y="1109.600000" />
+    <point x="170" y="1135.200000" />
+    <point x="180" y="1158.800000" />
+    <point x="190" y="1181.200000" />
+    <point x="200" y="1202.200000" />
+  </curve>
+  <curve id="natural_5">
+    <point x="0" y="204.400000" />
+    <point x="10" y="234.800000" />
+    <point x="20" y="255.400000" />
+    <point x="30" y="269.200000" />
+    <point x="40" y="279.200000" />
+    <point x="50" y="285.800000" />
+    <point x="60" y="290.400000" />
+    <point x="70" y="294.000000" />
+    <point x="80" y="296.400000" />
+    <point x="90" y="298.200000" />
+    <point x="100" y="299.400000" />
+    <point x="110" y="300.200000" />
+    <point x="120" y="300.400000" />
+    <point x="130" y="300.600000" />
+    <point x="140" y="300.600000" />
+    <point x="150" y="300.400000" />
+    <point x="160" y="300.000000" />
+    <point x="170" y="299.600000" />
+    <point x="180" y="299.200000" />
+    <point x="190" y="298.400000" />
+    <point x="200" y="297.400000" />
+  </curve>
+  <curve id="managed_6">
+    <point x="0" y="55.400000" />
+    <point x="10" y="26.200000" />
+    <point x="20" y="29.800000" />
+    <point x="30" y="33.200000" />
+    <point x="40" y="36.200000" />
+    <point x="50" y="39.000000" />
+    <point x="60" y="41.400000" />
+    <point x="70" y="43.400000" />
+    <point x="80" y="45.400000" />
+    <point x="90" y="46.800000" />
+    <point x="100" y="48.200000" />
+    <point x="110" y="49.400000" />
+    <point x="120" y="50.400000" />
+    <point x="130" y="51.200000" />
+    <point x="140" y="52.000000" />
+    <point x="150" y="52.400000" />
+    <point x="160" y="53.000000" />
+    <point x="170" y="53.600000" />
+  </curve>
+  <curve id="managed_7">
+    <point x="0" y="21.884972" />
+    <point x="10" y="24.229380" />
+    <point x="20" y="27.014799" />
+    <point x="30" y="29.373786" />
+    <point x="40" y="31.448682" />
+    <point x="50" y="33.366212" />
+    <point x="60" y="35.160700" />
+    <point x="70" y="36.822546" />
+    <point x="80" y="38.338346" />
+    <point x="90" y="39.746426" />
+    <point x="100" y="41.043195" />
+    <point x="110" y="42.258428" />
+    <point x="120" y="43.404009" />
+    <point x="130" y="44.477706" />
+    <point x="140" y="45.506608" />
+    <point x="150" y="46.483894" />
+    <point x="160" y="47.419353" />
+    <point x="170" y="48.307561" />
+  </curve>
+  <curve id="managed_8">
+    <point x="0" y="1972.800000" />
+    <point x="10" y="665.000000" />
+    <point x="20" y="596.000000" />
+    <point x="30" y="551.800000" />
+    <point x="40" y="519.800000" />
+    <point x="50" y="491.200000" />
+    <point x="60" y="465.600000" />
+    <point x="70" y="443.200000" />
+    <point x="80" y="424.400000" />
+    <point x="90" y="406.800000" />
+    <point x="100" y="392.000000" />
+    <point x="110" y="378.600000" />
+    <point x="120" y="365.000000" />
+    <point x="130" y="353.200000" />
+    <point x="140" y="342.000000" />
+    <point x="150" y="331.000000" />
+    <point x="160" y="321.400000" />
+    <point x="170" y="311.400000" />
+  </curve>
+  <curve id="managed_9">
+    <point x="0" y="501.000000" />
+    <point x="10" y="266.800000" />
+    <point x="20" y="321.600000" />
+    <point x="30" y="374.600000" />
+    <point x="40" y="426.200000" />
+    <point x="50" y="474.400000" />
+    <point x="60" y="519.200000" />
+    <point x="70" y="560.600000" />
+    <point x="80" y="598.200000" />
+    <point x="90" y="632.800000" />
+    <point x="100" y="664.400000" />
+    <point x="110" y="693.400000" />
+    <point x="120" y="720.200000" />
+    <point x="130" y="743.800000" />
+    <point x="140" y="766.400000" />
+    <point x="150" y="786.600000" />
+    <point x="160" y="805.200000" />
+    <point x="170" y="821.800000" />
+  </curve>
+  <curve id="managed_10">
+    <point x="0" y="269.200000" />
+    <point x="10" y="118.400000" />
+    <point x="20" y="130.600000" />
+    <point x="30" y="141.600000" />
+    <point x="40" y="150.000000" />
+    <point x="50" y="157.000000" />
+    <point x="60" y="163.400000" />
+    <point x="70" y="169.000000" />
+    <point x="80" y="173.000000" />
+    <point x="90" y="176.800000" />
+    <point x="100" y="180.000000" />
+    <point x="110" y="182.400000" />
+    <point x="120" y="184.800000" />
+    <point x="130" y="186.600000" />
+    <point x="140" y="187.800000" />
+    <point x="150" y="189.000000" />
+    <point x="160" y="190.000000" />
+    <point x="170" y="190.400000" />
+  </curve>
+  <curve id="cut_11">
+    <point x="0" y="285.200000" />
+  </curve>
+  <select statement="AU eq 'KC_IDFdk3_FDI_H' and SILV eq 'natural'">
+    <features>
+      <attribute label="feature.habitat.basal_area">
+        <curve idref="natural_1" />
+      </attribute>
+      <attribute label="feature.habitat.qmd">
+        <curve idref="natural_2" />
+      </attribute>
+      <attribute label="feature.habitat.tph">
+        <curve idref="natural_3" />
+      </attribute>
+      <attribute label="feature.yield.managed.total">
+        <curve idref="natural_4" />
+      </attribute>
+      <attribute label="feature.habitat.canopy_ccf">
+        <curve idref="natural_5" />
+      </attribute>
+      <attribute label="feature.area.managed.total">
+        <curve idref="kc_area" />
+      </attribute>
+    </features>
+    <track>
+      <treatment label="GWM_MODERATE" minage="30" maxage="200">
+        <transition>
+          <assign field="SILV" value="'managed'" />
+        </transition>
+      </treatment>
+    </track>
+  </select>
+  <select statement="AU eq 'KC_IDFdk3_FDI_H' and SILV eq 'managed'">
+    <features>
+      <attribute label="feature.habitat.basal_area">
+        <curve idref="managed_6" />
+      </attribute>
+      <attribute label="feature.habitat.qmd">
+        <curve idref="managed_7" />
+      </attribute>
+      <attribute label="feature.habitat.tph">
+        <curve idref="managed_8" />
+      </attribute>
+      <attribute label="feature.yield.managed.total">
+        <curve idref="managed_9" />
+      </attribute>
+      <attribute label="feature.habitat.canopy_ccf">
+        <curve idref="managed_10" />
+      </attribute>
+      <attribute label="feature.area.managed.total">
+        <curve idref="kc_area" />
+      </attribute>
+    </features>
+    <track>
+      <treatment label="GWM_MODERATE" minage="30" maxage="200">
+        <transition>
+          <assign field="SILV" value="'managed'" />
+        </transition>
+      </treatment>
+    </track>
+  </select>
+  <select statement="AU eq 'KC_IDFdk3_FDI_H' and treatment eq 'GWM_MODERATE'">
+    <products>
+      <attribute label="product.yield.managed.total">
+        <curve idref="cut_11" />
+      </attribute>
+    </products>
+  </select>
+  <curve id="natural_12">
+    <point x="0" y="27.400000" />
+    <point x="10" y="33.800000" />
+    <point x="20" y="39.200000" />
+    <point x="30" y="43.600000" />
+    <point x="40" y="47.400000" />
+    <point x="50" y="50.400000" />
+    <point x="60" y="53.800000" />
+    <point x="70" y="56.000000" />
+    <point x="80" y="58.000000" />
+    <point x="90" y="60.000000" />
+    <point x="100" y="61.600000" />
+    <point x="110" y="63.000000" />
+    <point x="120" y="64.200000" />
+    <point x="130" y="65.400000" />
+    <point x="140" y="65.800000" />
+    <point x="150" y="66.800000" />
+    <point x="160" y="67.000000" />
+    <point x="170" y="67.800000" />
+    <point x="180" y="67.800000" />
+    <point x="190" y="68.400000" />
+    <point x="200" y="68.800000" />
+  </curve>
+  <curve id="natural_13">
+    <point x="0" y="15.770897" />
+    <point x="10" y="17.899357" />
+    <point x="20" y="19.873298" />
+    <point x="30" y="21.632325" />
+    <point x="40" y="23.300811" />
+    <point x="50" y="24.889862" />
+    <point x="60" y="26.364344" />
+    <point x="70" y="27.731472" />
+    <point x="80" y="29.011599" />
+    <point x="90" y="30.233164" />
+    <point x="100" y="31.347758" />
+    <point x="110" y="32.381556" />
+    <point x="120" y="33.350094" />
+    <point x="130" y="34.260174" />
+    <point x="140" y="35.111641" />
+    <point x="150" y="35.921119" />
+    <point x="160" y="36.701622" />
+    <point x="170" y="37.440829" />
+    <point x="180" y="38.145119" />
+    <point x="190" y="38.826565" />
+    <point x="200" y="39.491990" />
+  </curve>
+  <curve id="natural_14">
+    <point x="0" y="2167.800000" />
+    <point x="10" y="1990.400000" />
+    <point x="20" y="1852.200000" />
+    <point x="30" y="1735.000000" />
+    <point x="40" y="1621.000000" />
+    <point x="50" y="1516.400000" />
+    <point x="60" y="1419.400000" />
+    <point x="70" y="1333.600000" />
+    <point x="80" y="1256.600000" />
+    <point x="90" y="1188.400000" />
+    <point x="100" y="1129.200000" />
+    <point x="110" y="1075.200000" />
+    <point x="120" y="1027.600000" />
+    <point x="130" y="984.400000" />
+    <point x="140" y="944.400000" />
+    <point x="150" y="908.000000" />
+    <point x="160" y="873.200000" />
+    <point x="170" y="840.600000" />
+    <point x="180" y="810.000000" />
+    <point x="190" y="783.000000" />
+    <point x="200" y="755.600000" />
+  </curve>
+  <curve id="natural_15">
+    <point x="0" y="161.600000" />
+    <point x="10" y="218.000000" />
+    <point x="20" y="277.800000" />
+    <point x="30" y="336.800000" />
+    <point x="40" y="394.200000" />
+    <point x="50" y="450.000000" />
+    <point x="60" y="502.400000" />
+    <point x="70" y="551.600000" />
+    <point x="80" y="598.000000" />
+    <point x="90" y="641.000000" />
+    <point x="100" y="681.000000" />
+    <point x="110" y="718.000000" />
+    <point x="120" y="752.400000" />
+    <point x="130" y="784.200000" />
+    <point x="140" y="813.400000" />
+    <point x="150" y="840.200000" />
+    <point x="160" y="865.200000" />
+    <point x="170" y="888.400000" />
+    <point x="180" y="909.400000" />
+    <point x="190" y="929.400000" />
+    <point x="200" y="947.800000" />
+  </curve>
+  <curve id="natural_16">
+    <point x="0" y="164.000000" />
+    <point x="10" y="191.600000" />
+    <point x="20" y="212.400000" />
+    <point x="30" y="226.000000" />
+    <point x="40" y="236.600000" />
+    <point x="50" y="244.600000" />
+    <point x="60" y="251.000000" />
+    <point x="70" y="255.600000" />
+    <point x="80" y="259.200000" />
+    <point x="90" y="262.200000" />
+    <point x="100" y="264.400000" />
+    <point x="110" y="265.600000" />
+    <point x="120" y="266.600000" />
+    <point x="130" y="267.600000" />
+    <point x="140" y="267.600000" />
+    <point x="150" y="267.200000" />
+    <point x="160" y="267.000000" />
+    <point x="170" y="266.400000" />
+    <point x="180" y="265.400000" />
+    <point x="190" y="264.400000" />
+    <point x="200" y="263.200000" />
+  </curve>
+  <curve id="managed_17">
+    <point x="0" y="43.600000" />
+    <point x="10" y="25.400000" />
+    <point x="20" y="28.800000" />
+    <point x="30" y="32.400000" />
+    <point x="40" y="34.800000" />
+    <point x="50" y="37.800000" />
+    <point x="60" y="39.800000" />
+    <point x="70" y="41.600000" />
+    <point x="80" y="43.200000" />
+    <point x="90" y="45.000000" />
+    <point x="100" y="46.000000" />
+    <point x="110" y="47.000000" />
+    <point x="120" y="48.000000" />
+    <point x="130" y="48.200000" />
+    <point x="140" y="49.200000" />
+    <point x="150" y="49.400000" />
+    <point x="160" y="50.000000" />
+    <point x="170" y="50.000000" />
+  </curve>
+  <curve id="managed_18">
+    <point x="0" y="21.632325" />
+    <point x="10" y="25.129213" />
+    <point x="20" y="27.584935" />
+    <point x="30" y="29.732323" />
+    <point x="40" y="31.659462" />
+    <point x="50" y="33.466903" />
+    <point x="60" y="35.167732" />
+    <point x="70" y="36.730828" />
+    <point x="80" y="38.172333" />
+    <point x="90" y="39.511771" />
+    <point x="100" y="40.749952" />
+    <point x="110" y="41.900861" />
+    <point x="120" y="42.982278" />
+    <point x="130" y="44.000706" />
+    <point x="140" y="44.952937" />
+    <point x="150" y="45.872992" />
+    <point x="160" y="46.759217" />
+    <point x="170" y="47.607348" />
+  </curve>
+  <curve id="managed_19">
+    <point x="0" y="1734.600000" />
+    <point x="10" y="695.000000" />
+    <point x="20" y="629.600000" />
+    <point x="30" y="586.400000" />
+    <point x="40" y="554.200000" />
+    <point x="50" y="524.600000" />
+    <point x="60" y="499.200000" />
+    <point x="70" y="474.800000" />
+    <point x="80" y="453.200000" />
+    <point x="90" y="433.800000" />
+    <point x="100" y="416.200000" />
+    <point x="110" y="400.200000" />
+    <point x="120" y="385.200000" />
+    <point x="130" y="371.000000" />
+    <point x="140" y="357.800000" />
+    <point x="150" y="345.400000" />
+    <point x="160" y="334.600000" />
+    <point x="170" y="323.600000" />
+  </curve>
+  <curve id="managed_20">
+    <point x="0" y="336.800000" />
+    <point x="10" y="219.000000" />
+    <point x="20" y="265.000000" />
+    <point x="30" y="309.800000" />
+    <point x="40" y="354.000000" />
+    <point x="50" y="395.800000" />
+    <point x="60" y="435.200000" />
+    <point x="70" y="471.800000" />
+    <point x="80" y="505.000000" />
+    <point x="90" y="535.600000" />
+    <point x="100" y="562.800000" />
+    <point x="110" y="588.000000" />
+    <point x="120" y="610.600000" />
+    <point x="130" y="631.400000" />
+    <point x="140" y="650.000000" />
+    <point x="150" y="667.400000" />
+    <point x="160" y="683.400000" />
+    <point x="170" y="698.000000" />
+  </curve>
+  <curve id="managed_21">
+    <point x="0" y="226.000000" />
+    <point x="10" y="122.800000" />
+    <point x="20" y="135.200000" />
+    <point x="30" y="145.400000" />
+    <point x="40" y="153.800000" />
+    <point x="50" y="160.400000" />
+    <point x="60" y="165.800000" />
+    <point x="70" y="170.600000" />
+    <point x="80" y="174.200000" />
+    <point x="90" y="177.000000" />
+    <point x="100" y="179.000000" />
+    <point x="110" y="180.200000" />
+    <point x="120" y="180.800000" />
+    <point x="130" y="181.400000" />
+    <point x="140" y="182.000000" />
+    <point x="150" y="182.000000" />
+    <point x="160" y="182.000000" />
+    <point x="170" y="181.800000" />
+  </curve>
+  <curve id="cut_22">
+    <point x="0" y="158.800000" />
+  </curve>
+  <select statement="AU eq 'KC_IDFdk3_FDI_L' and SILV eq 'natural'">
+    <features>
+      <attribute label="feature.habitat.basal_area">
+        <curve idref="natural_12" />
+      </attribute>
+      <attribute label="feature.habitat.qmd">
+        <curve idref="natural_13" />
+      </attribute>
+      <attribute label="feature.habitat.tph">
+        <curve idref="natural_14" />
+      </attribute>
+      <attribute label="feature.yield.managed.total">
+        <curve idref="natural_15" />
+      </attribute>
+      <attribute label="feature.habitat.canopy_ccf">
+        <curve idref="natural_16" />
+      </attribute>
+      <attribute label="feature.area.managed.total">
+        <curve idref="kc_area" />
+      </attribute>
+    </features>
+    <track>
+      <treatment label="GWM_MODERATE" minage="30" maxage="200">
+        <transition>
+          <assign field="SILV" value="'managed'" />
+        </transition>
+      </treatment>
+    </track>
+  </select>
+  <select statement="AU eq 'KC_IDFdk3_FDI_L' and SILV eq 'managed'">
+    <features>
+      <attribute label="feature.habitat.basal_area">
+        <curve idref="managed_17" />
+      </attribute>
+      <attribute label="feature.habitat.qmd">
+        <curve idref="managed_18" />
+      </attribute>
+      <attribute label="feature.habitat.tph">
+        <curve idref="managed_19" />
+      </attribute>
+      <attribute label="feature.yield.managed.total">
+        <curve idref="managed_20" />
+      </attribute>
+      <attribute label="feature.habitat.canopy_ccf">
+        <curve idref="managed_21" />
+      </attribute>
+      <attribute label="feature.area.managed.total">
+        <curve idref="kc_area" />
+      </attribute>
+    </features>
+    <track>
+      <treatment label="GWM_MODERATE" minage="30" maxage="200">
+        <transition>
+          <assign field="SILV" value="'managed'" />
+        </transition>
+      </treatment>
+    </track>
+  </select>
+  <select statement="AU eq 'KC_IDFdk3_FDI_L' and treatment eq 'GWM_MODERATE'">
+    <products>
+      <attribute label="product.yield.managed.total">
+        <curve idref="cut_22" />
+      </attribute>
+    </products>
+  </select>
+  <curve id="natural_23">
+    <point x="0" y="31.600000" />
+    <point x="10" y="39.600000" />
+    <point x="20" y="46.000000" />
+    <point x="30" y="51.200000" />
+    <point x="40" y="55.800000" />
+    <point x="50" y="59.600000" />
+    <point x="60" y="62.800000" />
+    <point x="70" y="65.400000" />
+    <point x="80" y="67.800000" />
+    <point x="90" y="69.600000" />
+    <point x="100" y="71.200000" />
+    <point x="110" y="72.200000" />
+    <point x="120" y="73.400000" />
+    <point x="130" y="74.400000" />
+    <point x="140" y="75.200000" />
+    <point x="150" y="75.800000" />
+    <point x="160" y="76.600000" />
+    <point x="170" y="77.000000" />
+    <point x="180" y="77.200000" />
+    <point x="190" y="77.800000" />
+    <point x="200" y="78.000000" />
+  </curve>
+  <curve id="natural_24">
+    <point x="0" y="11.428619" />
+    <point x="10" y="13.166694" />
+    <point x="20" y="14.698555" />
+    <point x="30" y="16.029512" />
+    <point x="40" y="17.249783" />
+    <point x="50" y="18.380727" />
+    <point x="60" y="19.449481" />
+    <point x="70" y="20.465121" />
+    <point x="80" y="21.406211" />
+    <point x="90" y="22.292317" />
+    <point x="100" y="23.134973" />
+    <point x="110" y="23.932497" />
+    <point x="120" y="24.697670" />
+    <point x="130" y="25.430052" />
+    <point x="140" y="26.134645" />
+    <point x="150" y="26.813551" />
+    <point x="160" y="27.470272" />
+    <point x="170" y="28.108150" />
+    <point x="180" y="28.735258" />
+    <point x="190" y="29.349352" />
+    <point x="200" y="29.951793" />
+  </curve>
+  <curve id="natural_25">
+    <point x="0" y="3224.600000" />
+    <point x="10" y="3024.600000" />
+    <point x="20" y="2829.000000" />
+    <point x="30" y="2655.800000" />
+    <point x="40" y="2498.800000" />
+    <point x="50" y="2356.200000" />
+    <point x="60" y="2222.800000" />
+    <point x="70" y="2098.400000" />
+    <point x="80" y="1984.800000" />
+    <point x="90" y="1882.400000" />
+    <point x="100" y="1788.400000" />
+    <point x="110" y="1702.800000" />
+    <point x="120" y="1624.400000" />
+    <point x="130" y="1552.600000" />
+    <point x="140" y="1486.000000" />
+    <point x="150" y="1425.200000" />
+    <point x="160" y="1368.400000" />
+    <point x="170" y="1315.000000" />
+    <point x="180" y="1264.800000" />
+    <point x="190" y="1217.600000" />
+    <point x="200" y="1174.200000" />
+  </curve>
+  <curve id="natural_26">
+    <point x="0" y="217.400000" />
+    <point x="10" y="296.000000" />
+    <point x="20" y="377.400000" />
+    <point x="30" y="458.000000" />
+    <point x="40" y="535.800000" />
+    <point x="50" y="610.200000" />
+    <point x="60" y="679.400000" />
+    <point x="70" y="743.200000" />
+    <point x="80" y="801.600000" />
+    <point x="90" y="855.400000" />
+    <point x="100" y="904.600000" />
+    <point x="110" y="950.000000" />
+    <point x="120" y="991.800000" />
+    <point x="130" y="1030.000000" />
+    <point x="140" y="1065.400000" />
+    <point x="150" y="1098.800000" />
+    <point x="160" y="1129.200000" />
+    <point x="170" y="1157.600000" />
+    <point x="180" y="1184.200000" />
+    <point x="190" y="1209.000000" />
+    <point x="200" y="1232.200000" />
+  </curve>
+  <curve id="natural_27">
+    <point x="0" y="170.800000" />
+    <point x="10" y="205.800000" />
+    <point x="20" y="232.400000" />
+    <point x="30" y="252.600000" />
+    <point x="40" y="268.600000" />
+    <point x="50" y="281.000000" />
+    <point x="60" y="290.200000" />
+    <point x="70" y="297.600000" />
+    <point x="80" y="302.800000" />
+    <point x="90" y="306.400000" />
+    <point x="100" y="309.200000" />
+    <point x="110" y="311.000000" />
+    <point x="120" y="311.800000" />
+    <point x="130" y="313.000000" />
+    <point x="140" y="313.400000" />
+    <point x="150" y="313.400000" />
+    <point x="160" y="313.600000" />
+    <point x="170" y="313.200000" />
+    <point x="180" y="312.800000" />
+    <point x="190" y="312.400000" />
+    <point x="200" y="311.600000" />
+  </curve>
+  <curve id="managed_28">
+    <point x="0" y="51.200000" />
+    <point x="10" y="26.400000" />
+    <point x="20" y="30.600000" />
+    <point x="30" y="34.200000" />
+    <point x="40" y="37.200000" />
+    <point x="50" y="40.000000" />
+    <point x="60" y="42.600000" />
+    <point x="70" y="44.600000" />
+    <point x="80" y="47.000000" />
+    <point x="90" y="48.600000" />
+    <point x="100" y="50.600000" />
+    <point x="110" y="51.800000" />
+    <point x="120" y="53.000000" />
+    <point x="130" y="54.000000" />
+    <point x="140" y="55.000000" />
+    <point x="150" y="56.000000" />
+    <point x="160" y="56.600000" />
+    <point x="170" y="57.400000" />
+  </curve>
+  <curve id="managed_29">
+    <point x="0" y="16.029512" />
+    <point x="10" y="21.532802" />
+    <point x="20" y="23.617523" />
+    <point x="30" y="25.475508" />
+    <point x="40" y="27.178607" />
+    <point x="50" y="28.786939" />
+    <point x="60" y="30.266772" />
+    <point x="70" y="31.655572" />
+    <point x="80" y="32.974181" />
+    <point x="90" y="34.207949" />
+    <point x="100" y="35.377261" />
+    <point x="110" y="36.494856" />
+    <point x="120" y="37.563252" />
+    <point x="130" y="38.586931" />
+    <point x="140" y="39.571304" />
+    <point x="150" y="40.520698" />
+    <point x="160" y="41.434493" />
+    <point x="170" y="42.318667" />
+  </curve>
+  <curve id="managed_30">
+    <point x="0" y="2655.800000" />
+    <point x="10" y="765.600000" />
+    <point x="20" y="725.800000" />
+    <point x="30" y="691.800000" />
+    <point x="40" y="661.600000" />
+    <point x="50" y="634.000000" />
+    <point x="60" y="608.800000" />
+    <point x="70" y="585.200000" />
+    <point x="80" y="563.000000" />
+    <point x="90" y="543.600000" />
+    <point x="100" y="524.600000" />
+    <point x="110" y="507.000000" />
+    <point x="120" y="489.800000" />
+    <point x="130" y="474.000000" />
+    <point x="140" y="457.600000" />
+    <point x="150" y="443.200000" />
+    <point x="160" y="429.000000" />
+    <point x="170" y="416.400000" />
+  </curve>
+  <curve id="managed_31">
+    <point x="0" y="458.000000" />
+    <point x="10" y="276.000000" />
+    <point x="20" y="333.200000" />
+    <point x="30" y="390.200000" />
+    <point x="40" y="446.000000" />
+    <point x="50" y="499.400000" />
+    <point x="60" y="549.000000" />
+    <point x="70" y="595.600000" />
+    <point x="80" y="639.600000" />
+    <point x="90" y="681.400000" />
+    <point x="100" y="719.600000" />
+    <point x="110" y="755.200000" />
+    <point x="120" y="788.000000" />
+    <point x="130" y="818.000000" />
+    <point x="140" y="846.000000" />
+    <point x="150" y="871.400000" />
+    <point x="160" y="895.000000" />
+    <point x="170" y="916.600000" />
+  </curve>
+  <curve id="managed_32">
+    <point x="0" y="252.600000" />
+    <point x="10" y="120.200000" />
+    <point x="20" y="134.800000" />
+    <point x="30" y="146.400000" />
+    <point x="40" y="156.800000" />
+    <point x="50" y="165.400000" />
+    <point x="60" y="173.200000" />
+    <point x="70" y="179.600000" />
+    <point x="80" y="185.800000" />
+    <point x="90" y="191.000000" />
+    <point x="100" y="195.400000" />
+    <point x="110" y="199.400000" />
+    <point x="120" y="202.400000" />
+    <point x="130" y="205.200000" />
+    <point x="140" y="207.400000" />
+    <point x="150" y="209.400000" />
+    <point x="160" y="210.800000" />
+    <point x="170" y="212.200000" />
+  </curve>
+  <curve id="cut_33">
+    <point x="0" y="234.800000" />
+  </curve>
+  <select statement="AU eq 'KC_IDFdk3_FDI_M' and SILV eq 'natural'">
+    <features>
+      <attribute label="feature.habitat.basal_area">
+        <curve idref="natural_23" />
+      </attribute>
+      <attribute label="feature.habitat.qmd">
+        <curve idref="natural_24" />
+      </attribute>
+      <attribute label="feature.habitat.tph">
+        <curve idref="natural_25" />
+      </attribute>
+      <attribute label="feature.yield.managed.total">
+        <curve idref="natural_26" />
+      </attribute>
+      <attribute label="feature.habitat.canopy_ccf">
+        <curve idref="natural_27" />
+      </attribute>
+      <attribute label="feature.area.managed.total">
+        <curve idref="kc_area" />
+      </attribute>
+    </features>
+    <track>
+      <treatment label="GWM_MODERATE" minage="30" maxage="200">
+        <transition>
+          <assign field="SILV" value="'managed'" />
+        </transition>
+      </treatment>
+    </track>
+  </select>
+  <select statement="AU eq 'KC_IDFdk3_FDI_M' and SILV eq 'managed'">
+    <features>
+      <attribute label="feature.habitat.basal_area">
+        <curve idref="managed_28" />
+      </attribute>
+      <attribute label="feature.habitat.qmd">
+        <curve idref="managed_29" />
+      </attribute>
+      <attribute label="feature.habitat.tph">
+        <curve idref="managed_30" />
+      </attribute>
+      <attribute label="feature.yield.managed.total">
+        <curve idref="managed_31" />
+      </attribute>
+      <attribute label="feature.habitat.canopy_ccf">
+        <curve idref="managed_32" />
+      </attribute>
+      <attribute label="feature.area.managed.total">
+        <curve idref="kc_area" />
+      </attribute>
+    </features>
+    <track>
+      <treatment label="GWM_MODERATE" minage="30" maxage="200">
+        <transition>
+          <assign field="SILV" value="'managed'" />
+        </transition>
+      </treatment>
+    </track>
+  </select>
+  <select statement="AU eq 'KC_IDFdk3_FDI_M' and treatment eq 'GWM_MODERATE'">
+    <products>
+      <attribute label="product.yield.managed.total">
+        <curve idref="cut_33" />
+      </attribute>
+    </products>
+  </select>
+  <curve id="natural_34">
+    <point x="0" y="31.400000" />
+    <point x="10" y="38.400000" />
+    <point x="20" y="45.200000" />
+    <point x="30" y="50.600000" />
+    <point x="40" y="55.400000" />
+    <point x="50" y="59.000000" />
+    <point x="60" y="62.400000" />
+    <point x="70" y="65.000000" />
+    <point x="80" y="67.200000" />
+    <point x="90" y="68.800000" />
+    <point x="100" y="70.600000" />
+    <point x="110" y="72.000000" />
+    <point x="120" y="73.000000" />
+    <point x="130" y="73.800000" />
+    <point x="140" y="74.800000" />
+    <point x="150" y="75.400000" />
+    <point x="160" y="76.200000" />
+    <point x="170" y="76.400000" />
+    <point x="180" y="77.000000" />
+    <point x="190" y="77.600000" />
+    <point x="200" y="77.600000" />
+  </curve>
+  <curve id="natural_35">
+    <point x="0" y="11.125148" />
+    <point x="10" y="13.064599" />
+    <point x="20" y="14.773778" />
+    <point x="30" y="16.258909" />
+    <point x="40" y="17.677351" />
+    <point x="50" y="19.028213" />
+    <point x="60" y="20.305393" />
+    <point x="70" y="21.516455" />
+    <point x="80" y="22.668638" />
+    <point x="90" y="23.766845" />
+    <point x="100" y="24.805516" />
+    <point x="110" y="25.784130" />
+    <point x="120" y="26.703916" />
+    <point x="130" y="27.576913" />
+    <point x="140" y="28.396796" />
+    <point x="150" y="29.178653" />
+    <point x="160" y="29.921760" />
+    <point x="170" y="30.635917" />
+    <point x="180" y="31.323646" />
+    <point x="190" y="31.996526" />
+    <point x="200" y="32.659067" />
+  </curve>
+  <curve id="natural_36">
+    <point x="0" y="3201.400000" />
+    <point x="10" y="2941.000000" />
+    <point x="20" y="2734.000000" />
+    <point x="30" y="2545.400000" />
+    <point x="40" y="2361.400000" />
+    <point x="50" y="2191.000000" />
+    <point x="60" y="2037.600000" />
+    <point x="70" y="1898.600000" />
+    <point x="80" y="1774.800000" />
+    <point x="90" y="1665.400000" />
+    <point x="100" y="1567.400000" />
+    <point x="110" y="1480.600000" />
+    <point x="120" y="1403.800000" />
+    <point x="130" y="1336.400000" />
+    <point x="140" y="1275.000000" />
+    <point x="150" y="1220.200000" />
+    <point x="160" y="1170.400000" />
+    <point x="170" y="1125.200000" />
+    <point x="180" y="1083.800000" />
+    <point x="190" y="1043.800000" />
+    <point x="200" y="1005.600000" />
+  </curve>
+  <curve id="natural_37">
+    <point x="0" y="176.600000" />
+    <point x="10" y="247.200000" />
+    <point x="20" y="323.800000" />
+    <point x="30" y="399.800000" />
+    <point x="40" y="474.000000" />
+    <point x="50" y="545.600000" />
+    <point x="60" y="611.600000" />
+    <point x="70" y="672.400000" />
+    <point x="80" y="728.000000" />
+    <point x="90" y="779.000000" />
+    <point x="100" y="825.600000" />
+    <point x="110" y="868.000000" />
+    <point x="120" y="907.200000" />
+    <point x="130" y="943.600000" />
+    <point x="140" y="976.800000" />
+    <point x="150" y="1008.000000" />
+    <point x="160" y="1036.800000" />
+    <point x="170" y="1064.200000" />
+    <point x="180" y="1089.400000" />
+    <point x="190" y="1113.400000" />
+    <point x="200" y="1136.000000" />
+  </curve>
+  <curve id="natural_38">
+    <point x="0" y="200.600000" />
+    <point x="10" y="235.400000" />
+    <point x="20" y="263.400000" />
+    <point x="30" y="282.600000" />
+    <point x="40" y="296.400000" />
+    <point x="50" y="305.600000" />
+    <point x="60" y="311.200000" />
+    <point x="70" y="315.200000" />
+    <point x="80" y="317.800000" />
+    <point x="90" y="318.800000" />
+    <point x="100" y="319.200000" />
+    <point x="110" y="318.800000" />
+    <point x="120" y="318.400000" />
+    <point x="130" y="318.000000" />
+    <point x="140" y="317.000000" />
+    <point x="150" y="316.200000" />
+    <point x="160" y="315.000000" />
+    <point x="170" y="314.000000" />
+    <point x="180" y="313.200000" />
+    <point x="190" y="312.000000" />
+    <point x="200" y="310.600000" />
+  </curve>
+  <curve id="managed_39">
+    <point x="0" y="50.600000" />
+    <point x="10" y="25.600000" />
+    <point x="20" y="30.000000" />
+    <point x="30" y="33.800000" />
+    <point x="40" y="37.400000" />
+    <point x="50" y="40.400000" />
+    <point x="60" y="43.000000" />
+    <point x="70" y="45.400000" />
+    <point x="80" y="47.600000" />
+    <point x="90" y="49.000000" />
+    <point x="100" y="51.000000" />
+    <point x="110" y="52.000000" />
+    <point x="120" y="53.200000" />
+    <point x="130" y="54.200000" />
+    <point x="140" y="55.200000" />
+    <point x="150" y="56.200000" />
+    <point x="160" y="57.200000" />
+    <point x="170" y="57.400000" />
+  </curve>
+  <curve id="managed_40">
+    <point x="0" y="16.258909" />
+    <point x="10" y="20.618941" />
+    <point x="20" y="23.285211" />
+    <point x="30" y="25.633421" />
+    <point x="40" y="27.726010" />
+    <point x="50" y="29.695147" />
+    <point x="60" y="31.532351" />
+    <point x="70" y="33.225957" />
+    <point x="80" y="34.804842" />
+    <point x="90" y="36.258598" />
+    <point x="100" y="37.607975" />
+    <point x="110" y="38.878231" />
+    <point x="120" y="40.075152" />
+    <point x="130" y="41.210329" />
+    <point x="140" y="42.277776" />
+    <point x="150" y="43.298286" />
+    <point x="160" y="44.262759" />
+    <point x="170" y="45.181213" />
+  </curve>
+  <curve id="managed_41">
+    <point x="0" y="2545.400000" />
+    <point x="10" y="822.800000" />
+    <point x="20" y="735.800000" />
+    <point x="30" y="678.800000" />
+    <point x="40" y="634.400000" />
+    <point x="50" y="595.400000" />
+    <point x="60" y="560.400000" />
+    <point x="70" y="531.000000" />
+    <point x="80" y="505.000000" />
+    <point x="90" y="481.800000" />
+    <point x="100" y="462.600000" />
+    <point x="110" y="444.200000" />
+    <point x="120" y="428.600000" />
+    <point x="130" y="413.600000" />
+    <point x="140" y="399.400000" />
+    <point x="150" y="387.000000" />
+    <point x="160" y="375.400000" />
+    <point x="170" y="363.400000" />
+  </curve>
+  <curve id="managed_42">
+    <point x="0" y="399.800000" />
+    <point x="10" y="232.400000" />
+    <point x="20" y="289.000000" />
+    <point x="30" y="344.800000" />
+    <point x="40" y="399.800000" />
+    <point x="50" y="452.000000" />
+    <point x="60" y="500.000000" />
+    <point x="70" y="543.600000" />
+    <point x="80" y="584.400000" />
+    <point x="90" y="621.600000" />
+    <point x="100" y="656.400000" />
+    <point x="110" y="689.200000" />
+    <point x="120" y="719.600000" />
+    <point x="130" y="747.400000" />
+    <point x="140" y="773.600000" />
+    <point x="150" y="797.600000" />
+    <point x="160" y="819.600000" />
+    <point x="170" y="839.400000" />
+  </curve>
+  <curve id="managed_43">
+    <point x="0" y="282.600000" />
+    <point x="10" y="128.400000" />
+    <point x="20" y="142.800000" />
+    <point x="30" y="155.400000" />
+    <point x="40" y="164.400000" />
+    <point x="50" y="172.200000" />
+    <point x="60" y="178.600000" />
+    <point x="70" y="184.000000" />
+    <point x="80" y="188.600000" />
+    <point x="90" y="192.200000" />
+    <point x="100" y="195.400000" />
+    <point x="110" y="198.400000" />
+    <point x="120" y="201.000000" />
+    <point x="130" y="202.800000" />
+    <point x="140" y="204.600000" />
+    <point x="150" y="206.200000" />
+    <point x="160" y="207.400000" />
+    <point x="170" y="207.800000" />
+  </curve>
+  <curve id="cut_44">
+    <point x="0" y="217.200000" />
+  </curve>
+  <select statement="AU eq 'KC_IDFxm_FDI_H' and SILV eq 'natural'">
+    <features>
+      <attribute label="feature.habitat.basal_area">
+        <curve idref="natural_34" />
+      </attribute>
+      <attribute label="feature.habitat.qmd">
+        <curve idref="natural_35" />
+      </attribute>
+      <attribute label="feature.habitat.tph">
+        <curve idref="natural_36" />
+      </attribute>
+      <attribute label="feature.yield.managed.total">
+        <curve idref="natural_37" />
+      </attribute>
+      <attribute label="feature.habitat.canopy_ccf">
+        <curve idref="natural_38" />
+      </attribute>
+      <attribute label="feature.area.managed.total">
+        <curve idref="kc_area" />
+      </attribute>
+    </features>
+    <track>
+      <treatment label="GWM_MODERATE" minage="30" maxage="200">
+        <transition>
+          <assign field="SILV" value="'managed'" />
+        </transition>
+      </treatment>
+    </track>
+  </select>
+  <select statement="AU eq 'KC_IDFxm_FDI_H' and SILV eq 'managed'">
+    <features>
+      <attribute label="feature.habitat.basal_area">
+        <curve idref="managed_39" />
+      </attribute>
+      <attribute label="feature.habitat.qmd">
+        <curve idref="managed_40" />
+      </attribute>
+      <attribute label="feature.habitat.tph">
+        <curve idref="managed_41" />
+      </attribute>
+      <attribute label="feature.yield.managed.total">
+        <curve idref="managed_42" />
+      </attribute>
+      <attribute label="feature.habitat.canopy_ccf">
+        <curve idref="managed_43" />
+      </attribute>
+      <attribute label="feature.area.managed.total">
+        <curve idref="kc_area" />
+      </attribute>
+    </features>
+    <track>
+      <treatment label="GWM_MODERATE" minage="30" maxage="200">
+        <transition>
+          <assign field="SILV" value="'managed'" />
+        </transition>
+      </treatment>
+    </track>
+  </select>
+  <select statement="AU eq 'KC_IDFxm_FDI_H' and treatment eq 'GWM_MODERATE'">
+    <products>
+      <attribute label="product.yield.managed.total">
+        <curve idref="cut_44" />
+      </attribute>
+    </products>
+  </select>
+  <curve id="natural_45">
+    <point x="0" y="20.400000" />
+    <point x="10" y="24.600000" />
+    <point x="20" y="29.000000" />
+    <point x="30" y="32.400000" />
+    <point x="40" y="36.000000" />
+    <point x="50" y="39.000000" />
+    <point x="60" y="41.800000" />
+    <point x="70" y="44.400000" />
+    <point x="80" y="46.400000" />
+    <point x="90" y="48.200000" />
+    <point x="100" y="49.800000" />
+    <point x="110" y="51.200000" />
+    <point x="120" y="52.400000" />
+    <point x="130" y="53.200000" />
+    <point x="140" y="54.000000" />
+    <point x="150" y="54.600000" />
+    <point x="160" y="55.200000" />
+    <point x="170" y="55.800000" />
+    <point x="180" y="56.200000" />
+    <point x="190" y="56.400000" />
+    <point x="200" y="56.400000" />
+  </curve>
+  <curve id="natural_46">
+    <point x="0" y="18.366781" />
+    <point x="10" y="20.615790" />
+    <point x="20" y="22.768525" />
+    <point x="30" y="24.762580" />
+    <point x="40" y="26.571678" />
+    <point x="50" y="28.267273" />
+    <point x="60" y="29.801162" />
+    <point x="70" y="31.212091" />
+    <point x="80" y="32.517094" />
+    <point x="90" y="33.742798" />
+    <point x="100" y="34.878778" />
+    <point x="110" y="35.946835" />
+    <point x="120" y="36.964231" />
+    <point x="130" y="37.926814" />
+    <point x="140" y="38.818619" />
+    <point x="150" y="39.691868" />
+    <point x="160" y="40.525990" />
+    <point x="170" y="41.326266" />
+    <point x="180" y="42.098366" />
+    <point x="190" y="42.841323" />
+    <point x="200" y="43.550613" />
+  </curve>
+  <curve id="natural_47">
+    <point x="0" y="915.000000" />
+    <point x="10" y="887.200000" />
+    <point x="20" y="851.200000" />
+    <point x="30" y="814.400000" />
+    <point x="40" y="781.400000" />
+    <point x="50" y="750.600000" />
+    <point x="60" y="721.200000" />
+    <point x="70" y="693.000000" />
+    <point x="80" y="667.200000" />
+    <point x="90" y="641.600000" />
+    <point x="100" y="618.800000" />
+    <point x="110" y="596.400000" />
+    <point x="120" y="574.800000" />
+    <point x="130" y="555.400000" />
+    <point x="140" y="536.600000" />
+    <point x="150" y="520.000000" />
+    <point x="160" y="502.000000" />
+    <point x="170" y="485.800000" />
+    <point x="180" y="470.200000" />
+    <point x="190" y="454.800000" />
+    <point x="200" y="440.400000" />
+  </curve>
+  <curve id="natural_48">
+    <point x="0" y="122.200000" />
+    <point x="10" y="162.000000" />
+    <point x="20" y="205.000000" />
+    <point x="30" y="251.200000" />
+    <point x="40" y="297.400000" />
+    <point x="50" y="343.400000" />
+    <point x="60" y="387.000000" />
+    <point x="70" y="428.000000" />
+    <point x="80" y="466.600000" />
+    <point x="90" y="502.000000" />
+    <point x="100" y="534.800000" />
+    <point x="110" y="565.600000" />
+    <point x="120" y="594.000000" />
+    <point x="130" y="620.400000" />
+    <point x="140" y="644.000000" />
+    <point x="150" y="666.200000" />
+    <point x="160" y="686.200000" />
+    <point x="170" y="704.800000" />
+    <point x="180" y="721.400000" />
+    <point x="190" y="736.800000" />
+    <point x="200" y="750.400000" />
+  </curve>
+  <curve id="natural_49">
+    <point x="0" y="103.000000" />
+    <point x="10" y="122.400000" />
+    <point x="20" y="139.200000" />
+    <point x="30" y="152.600000" />
+    <point x="40" y="163.800000" />
+    <point x="50" y="173.000000" />
+    <point x="60" y="180.800000" />
+    <point x="70" y="186.600000" />
+    <point x="80" y="191.600000" />
+    <point x="90" y="196.200000" />
+    <point x="100" y="199.600000" />
+    <point x="110" y="202.400000" />
+    <point x="120" y="204.600000" />
+    <point x="130" y="206.000000" />
+    <point x="140" y="207.200000" />
+    <point x="150" y="207.800000" />
+    <point x="160" y="208.000000" />
+    <point x="170" y="208.200000" />
+    <point x="180" y="207.800000" />
+    <point x="190" y="207.400000" />
+    <point x="200" y="206.800000" />
+  </curve>
+  <curve id="managed_50">
+    <point x="0" y="32.400000" />
+    <point x="10" y="27.000000" />
+    <point x="20" y="29.800000" />
+    <point x="30" y="32.800000" />
+    <point x="40" y="35.000000" />
+    <point x="50" y="37.400000" />
+    <point x="60" y="39.400000" />
+    <point x="70" y="40.800000" />
+    <point x="80" y="42.600000" />
+    <point x="90" y="43.600000" />
+    <point x="100" y="44.600000" />
+    <point x="110" y="45.400000" />
+    <point x="120" y="46.200000" />
+    <point x="130" y="46.600000" />
+    <point x="140" y="47.200000" />
+    <point x="150" y="47.400000" />
+    <point x="160" y="47.600000" />
+    <point x="170" y="47.600000" />
+  </curve>
+  <curve id="managed_51">
+    <point x="0" y="24.762580" />
+    <point x="10" y="28.021141" />
+    <point x="20" y="30.071118" />
+    <point x="30" y="31.913493" />
+    <point x="40" y="33.635723" />
+    <point x="50" y="35.208923" />
+    <point x="60" y="36.697218" />
+    <point x="70" y="38.071431" />
+    <point x="80" y="39.336839" />
+    <point x="90" y="40.498476" />
+    <point x="100" y="41.593117" />
+    <point x="110" y="42.590279" />
+    <point x="120" y="43.541998" />
+    <point x="130" y="44.450671" />
+    <point x="140" y="45.313391" />
+    <point x="150" y="46.136615" />
+    <point x="160" y="46.913895" />
+    <point x="170" y="47.658427" />
+  </curve>
+  <curve id="managed_52">
+    <point x="0" y="814.400000" />
+    <point x="10" y="441.800000" />
+    <point x="20" y="428.400000" />
+    <point x="30" y="416.600000" />
+    <point x="40" y="403.200000" />
+    <point x="50" y="391.600000" />
+    <point x="60" y="379.000000" />
+    <point x="70" y="368.200000" />
+    <point x="80" y="357.200000" />
+    <point x="90" y="346.600000" />
+    <point x="100" y="336.000000" />
+    <point x="110" y="325.600000" />
+    <point x="120" y="316.200000" />
+    <point x="130" y="306.800000" />
+    <point x="140" y="298.000000" />
+    <point x="150" y="289.600000" />
+    <point x="160" y="280.200000" />
+    <point x="170" y="272.800000" />
+  </curve>
+  <curve id="managed_53">
+    <point x="0" y="251.200000" />
+    <point x="10" y="226.600000" />
+    <point x="20" y="267.600000" />
+    <point x="30" y="307.400000" />
+    <point x="40" y="345.200000" />
+    <point x="50" y="381.200000" />
+    <point x="60" y="415.000000" />
+    <point x="70" y="446.600000" />
+    <point x="80" y="475.600000" />
+    <point x="90" y="501.200000" />
+    <point x="100" y="524.600000" />
+    <point x="110" y="545.400000" />
+    <point x="120" y="564.400000" />
+    <point x="130" y="581.600000" />
+    <point x="140" y="597.400000" />
+    <point x="150" y="611.400000" />
+    <point x="160" y="623.600000" />
+    <point x="170" y="634.600000" />
+  </curve>
+  <curve id="managed_54">
+    <point x="0" y="152.600000" />
+    <point x="10" y="118.400000" />
+    <point x="20" y="127.600000" />
+    <point x="30" y="136.000000" />
+    <point x="40" y="142.400000" />
+    <point x="50" y="148.200000" />
+    <point x="60" y="153.800000" />
+    <point x="70" y="157.800000" />
+    <point x="80" y="161.400000" />
+    <point x="90" y="163.800000" />
+    <point x="100" y="165.800000" />
+    <point x="110" y="167.200000" />
+    <point x="120" y="168.200000" />
+    <point x="130" y="168.600000" />
+    <point x="140" y="169.000000" />
+    <point x="150" y="168.800000" />
+    <point x="160" y="168.400000" />
+    <point x="170" y="167.800000" />
+  </curve>
+  <curve id="cut_55">
+    <point x="0" y="63.000000" />
+  </curve>
+  <select statement="AU eq 'KC_IDFxm_FDI_L' and SILV eq 'natural'">
+    <features>
+      <attribute label="feature.habitat.basal_area">
+        <curve idref="natural_45" />
+      </attribute>
+      <attribute label="feature.habitat.qmd">
+        <curve idref="natural_46" />
+      </attribute>
+      <attribute label="feature.habitat.tph">
+        <curve idref="natural_47" />
+      </attribute>
+      <attribute label="feature.yield.managed.total">
+        <curve idref="natural_48" />
+      </attribute>
+      <attribute label="feature.habitat.canopy_ccf">
+        <curve idref="natural_49" />
+      </attribute>
+      <attribute label="feature.area.managed.total">
+        <curve idref="kc_area" />
+      </attribute>
+    </features>
+    <track>
+      <treatment label="GWM_MODERATE" minage="30" maxage="200">
+        <transition>
+          <assign field="SILV" value="'managed'" />
+        </transition>
+      </treatment>
+    </track>
+  </select>
+  <select statement="AU eq 'KC_IDFxm_FDI_L' and SILV eq 'managed'">
+    <features>
+      <attribute label="feature.habitat.basal_area">
+        <curve idref="managed_50" />
+      </attribute>
+      <attribute label="feature.habitat.qmd">
+        <curve idref="managed_51" />
+      </attribute>
+      <attribute label="feature.habitat.tph">
+        <curve idref="managed_52" />
+      </attribute>
+      <attribute label="feature.yield.managed.total">
+        <curve idref="managed_53" />
+      </attribute>
+      <attribute label="feature.habitat.canopy_ccf">
+        <curve idref="managed_54" />
+      </attribute>
+      <attribute label="feature.area.managed.total">
+        <curve idref="kc_area" />
+      </attribute>
+    </features>
+    <track>
+      <treatment label="GWM_MODERATE" minage="30" maxage="200">
+        <transition>
+          <assign field="SILV" value="'managed'" />
+        </transition>
+      </treatment>
+    </track>
+  </select>
+  <select statement="AU eq 'KC_IDFxm_FDI_L' and treatment eq 'GWM_MODERATE'">
+    <products>
+      <attribute label="product.yield.managed.total">
+        <curve idref="cut_55" />
+      </attribute>
+    </products>
+  </select>
+  <curve id="natural_56">
+    <point x="0" y="36.333333" />
+    <point x="10" y="44.000000" />
+    <point x="20" y="50.000000" />
+    <point x="30" y="55.666667" />
+    <point x="40" y="60.000000" />
+    <point x="50" y="63.666667" />
+    <point x="60" y="66.333333" />
+    <point x="70" y="69.000000" />
+    <point x="80" y="71.000000" />
+    <point x="90" y="72.333333" />
+    <point x="100" y="73.666667" />
+    <point x="110" y="74.666667" />
+    <point x="120" y="75.666667" />
+    <point x="130" y="76.666667" />
+    <point x="140" y="77.333333" />
+    <point x="150" y="78.000000" />
+    <point x="160" y="78.000000" />
+    <point x="170" y="79.000000" />
+    <point x="180" y="79.000000" />
+    <point x="190" y="79.666667" />
+    <point x="200" y="79.666667" />
+  </curve>
+  <curve id="natural_57">
+    <point x="0" y="12.705060" />
+    <point x="10" y="14.340756" />
+    <point x="20" y="15.814169" />
+    <point x="30" y="17.141108" />
+    <point x="40" y="18.384478" />
+    <point x="50" y="19.544599" />
+    <point x="60" y="20.625207" />
+    <point x="70" y="21.639469" />
+    <point x="80" y="22.599383" />
+    <point x="90" y="23.507506" />
+    <point x="100" y="24.357077" />
+    <point x="110" y="25.157403" />
+    <point x="120" y="25.928891" />
+    <point x="130" y="26.669137" />
+    <point x="140" y="27.376011" />
+    <point x="150" y="28.060843" />
+    <point x="160" y="28.727923" />
+    <point x="170" y="29.372334" />
+    <point x="180" y="29.999082" />
+    <point x="190" y="30.613596" />
+    <point x="200" y="31.220027" />
+  </curve>
+  <curve id="natural_58">
+    <point x="0" y="3262.333333" />
+    <point x="10" y="3049.333333" />
+    <point x="20" y="2851.000000" />
+    <point x="30" y="2660.000000" />
+    <point x="40" y="2478.000000" />
+    <point x="50" y="2305.666667" />
+    <point x="60" y="2152.000000" />
+    <point x="70" y="2012.333333" />
+    <point x="80" y="1888.000000" />
+    <point x="90" y="1776.000000" />
+    <point x="100" y="1677.666667" />
+    <point x="110" y="1589.333333" />
+    <point x="120" y="1509.333333" />
+    <point x="130" y="1437.333333" />
+    <point x="140" y="1373.333333" />
+    <point x="150" y="1313.333333" />
+    <point x="160" y="1259.000000" />
+    <point x="170" y="1208.333333" />
+    <point x="180" y="1162.666667" />
+    <point x="190" y="1120.000000" />
+    <point x="200" y="1079.333333" />
+  </curve>
+  <curve id="natural_59">
+    <point x="0" y="201.666667" />
+    <point x="10" y="270.666667" />
+    <point x="20" y="342.666667" />
+    <point x="30" y="414.666667" />
+    <point x="40" y="485.000000" />
+    <point x="50" y="551.333333" />
+    <point x="60" y="612.666667" />
+    <point x="70" y="669.333333" />
+    <point x="80" y="721.000000" />
+    <point x="90" y="769.000000" />
+    <point x="100" y="812.333333" />
+    <point x="110" y="852.000000" />
+    <point x="120" y="889.000000" />
+    <point x="130" y="923.333333" />
+    <point x="140" y="955.000000" />
+    <point x="150" y="985.000000" />
+    <point x="160" y="1012.333333" />
+    <point x="170" y="1038.666667" />
+    <point x="180" y="1063.000000" />
+    <point x="190" y="1086.333333" />
+    <point x="200" y="1107.666667" />
+  </curve>
+  <curve id="natural_60">
+    <point x="0" y="229.666667" />
+    <point x="10" y="263.333333" />
+    <point x="20" y="290.000000" />
+    <point x="30" y="309.666667" />
+    <point x="40" y="323.333333" />
+    <point x="50" y="331.666667" />
+    <point x="60" y="336.666667" />
+    <point x="70" y="339.333333" />
+    <point x="80" y="340.333333" />
+    <point x="90" y="340.666667" />
+    <point x="100" y="340.000000" />
+    <point x="110" y="339.000000" />
+    <point x="120" y="337.333333" />
+    <point x="130" y="335.666667" />
+    <point x="140" y="334.000000" />
+    <point x="150" y="332.000000" />
+    <point x="160" y="330.666667" />
+    <point x="170" y="328.666667" />
+    <point x="180" y="326.666667" />
+    <point x="190" y="325.000000" />
+    <point x="200" y="323.000000" />
+  </curve>
+  <curve id="managed_61">
+    <point x="0" y="55.666667" />
+    <point x="10" y="26.000000" />
+    <point x="20" y="30.333333" />
+    <point x="30" y="34.666667" />
+    <point x="40" y="38.000000" />
+    <point x="50" y="41.333333" />
+    <point x="60" y="44.000000" />
+    <point x="70" y="46.666667" />
+    <point x="80" y="48.333333" />
+    <point x="90" y="50.333333" />
+    <point x="100" y="51.666667" />
+    <point x="110" y="53.333333" />
+    <point x="120" y="54.333333" />
+    <point x="130" y="55.000000" />
+    <point x="140" y="56.000000" />
+    <point x="150" y="56.666667" />
+    <point x="160" y="57.333333" />
+    <point x="170" y="58.000000" />
+  </curve>
+  <curve id="managed_62">
+    <point x="0" y="17.141108" />
+    <point x="10" y="22.169565" />
+    <point x="20" y="24.370496" />
+    <point x="30" y="26.400622" />
+    <point x="40" y="28.240046" />
+    <point x="50" y="29.974622" />
+    <point x="60" y="31.566993" />
+    <point x="70" y="33.043087" />
+    <point x="80" y="34.409108" />
+    <point x="90" y="35.687302" />
+    <point x="100" y="36.871866" />
+    <point x="110" y="37.973729" />
+    <point x="120" y="39.004679" />
+    <point x="130" y="40.007142" />
+    <point x="140" y="40.948747" />
+    <point x="150" y="41.847949" />
+    <point x="160" y="42.713309" />
+    <point x="170" y="43.539664" />
+  </curve>
+  <curve id="managed_63">
+    <point x="0" y="2660.000000" />
+    <point x="10" y="727.000000" />
+    <point x="20" y="694.666667" />
+    <point x="30" y="662.666667" />
+    <point x="40" y="634.333333" />
+    <point x="50" y="609.000000" />
+    <point x="60" y="584.333333" />
+    <point x="70" y="562.000000" />
+    <point x="80" y="540.000000" />
+    <point x="90" y="519.000000" />
+    <point x="100" y="501.000000" />
+    <point x="110" y="483.666667" />
+    <point x="120" y="468.333333" />
+    <point x="130" y="452.333333" />
+    <point x="140" y="437.666667" />
+    <point x="150" y="424.333333" />
+    <point x="160" y="411.000000" />
+    <point x="170" y="398.333333" />
+  </curve>
+  <curve id="managed_64">
+    <point x="0" y="414.666667" />
+    <point x="10" y="226.666667" />
+    <point x="20" y="280.000000" />
+    <point x="30" y="334.666667" />
+    <point x="40" y="387.000000" />
+    <point x="50" y="438.000000" />
+    <point x="60" y="486.333333" />
+    <point x="70" y="530.333333" />
+    <point x="80" y="571.333333" />
+    <point x="90" y="608.333333" />
+    <point x="100" y="642.333333" />
+    <point x="110" y="673.000000" />
+    <point x="120" y="701.000000" />
+    <point x="130" y="727.000000" />
+    <point x="140" y="751.000000" />
+    <point x="150" y="772.666667" />
+    <point x="160" y="792.666667" />
+    <point x="170" y="810.666667" />
+  </curve>
+  <curve id="managed_65">
+    <point x="0" y="309.666667" />
+    <point x="10" y="131.000000" />
+    <point x="20" y="146.666667" />
+    <point x="30" y="159.333333" />
+    <point x="40" y="169.666667" />
+    <point x="50" y="178.666667" />
+    <point x="60" y="186.000000" />
+    <point x="70" y="192.000000" />
+    <point x="80" y="197.000000" />
+    <point x="90" y="200.333333" />
+    <point x="100" y="204.000000" />
+    <point x="110" y="206.333333" />
+    <point x="120" y="208.000000" />
+    <point x="130" y="209.666667" />
+    <point x="140" y="210.333333" />
+    <point x="150" y="211.333333" />
+    <point x="160" y="211.666667" />
+    <point x="170" y="211.666667" />
+  </curve>
+  <curve id="cut_66">
+    <point x="0" y="236.333333" />
+  </curve>
+  <select statement="AU eq 'KC_IDFxm_FDI_M' and SILV eq 'natural'">
+    <features>
+      <attribute label="feature.habitat.basal_area">
+        <curve idref="natural_56" />
+      </attribute>
+      <attribute label="feature.habitat.qmd">
+        <curve idref="natural_57" />
+      </attribute>
+      <attribute label="feature.habitat.tph">
+        <curve idref="natural_58" />
+      </attribute>
+      <attribute label="feature.yield.managed.total">
+        <curve idref="natural_59" />
+      </attribute>
+      <attribute label="feature.habitat.canopy_ccf">
+        <curve idref="natural_60" />
+      </attribute>
+      <attribute label="feature.area.managed.total">
+        <curve idref="kc_area" />
+      </attribute>
+    </features>
+    <track>
+      <treatment label="GWM_MODERATE" minage="30" maxage="200">
+        <transition>
+          <assign field="SILV" value="'managed'" />
+        </transition>
+      </treatment>
+    </track>
+  </select>
+  <select statement="AU eq 'KC_IDFxm_FDI_M' and SILV eq 'managed'">
+    <features>
+      <attribute label="feature.habitat.basal_area">
+        <curve idref="managed_61" />
+      </attribute>
+      <attribute label="feature.habitat.qmd">
+        <curve idref="managed_62" />
+      </attribute>
+      <attribute label="feature.habitat.tph">
+        <curve idref="managed_63" />
+      </attribute>
+      <attribute label="feature.yield.managed.total">
+        <curve idref="managed_64" />
+      </attribute>
+      <attribute label="feature.habitat.canopy_ccf">
+        <curve idref="managed_65" />
+      </attribute>
+      <attribute label="feature.area.managed.total">
+        <curve idref="kc_area" />
+      </attribute>
+    </features>
+    <track>
+      <treatment label="GWM_MODERATE" minage="30" maxage="200">
+        <transition>
+          <assign field="SILV" value="'managed'" />
+        </transition>
+      </treatment>
+    </track>
+  </select>
+  <select statement="AU eq 'KC_IDFxm_FDI_M' and treatment eq 'GWM_MODERATE'">
+    <products>
+      <attribute label="product.yield.managed.total">
+        <curve idref="cut_66" />
+      </attribute>
+    </products>
+  </select>
+</ForestModel>
