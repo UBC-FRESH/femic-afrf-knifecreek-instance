@@ -21,6 +21,7 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
+from itertools import pairwise
 from pathlib import Path
 
 import numpy as np
@@ -96,6 +97,42 @@ def _records(state: pd.Series, trees: pd.DataFrame) -> list[dict[str, object]]:
             }
         )
     return records
+
+
+def _q_factor(frame: pd.DataFrame) -> float:
+    """Return the median 5 cm TPH-class ratio."""
+    if frame.empty or frame["TPH"].sum() <= 0:
+        return 0.0
+    classes = (frame["DBH"] // 5 * 5 + 2.5).astype(float)
+    density = frame.assign(dbh_class=classes).groupby("dbh_class")["TPH"].sum()
+    grid = np.arange(classes.min(), classes.max() + 5.0, 5.0)
+    density = density.reindex(grid, fill_value=0.0)
+    ratios = [
+        float(density.loc[lower] / density.loc[upper])
+        for lower, upper in pairwise(grid)
+        if density.loc[lower] > 0 and density.loc[upper] > 0
+    ]
+    return float(np.median(ratios)) if ratios else 0.0
+
+
+def _tree_metrics(frame: pd.DataFrame) -> dict[str, float]:
+    """Return max DBH, q and large-tree metrics for one tree list."""
+    if frame.empty:
+        return {
+            "max_dbh_cm": 0.0,
+            "q_factor": 0.0,
+            "large_ba_m2_ha": 0.0,
+            "large_tph": 0.0,
+        }
+    frame = frame.copy()
+    frame["ba"] = 0.00007854 * frame["DBH"] ** 2 * frame["TPH"]
+    large = frame[frame["DBH"] >= 37.5]
+    return {
+        "max_dbh_cm": float(frame["DBH"].max()),
+        "q_factor": _q_factor(frame),
+        "large_ba_m2_ha": float(large["ba"].sum()),
+        "large_tph": float(large["TPH"].sum()),
+    }
 
 
 def _keywords() -> list[Keyword]:
@@ -210,14 +247,17 @@ def main() -> None:
             summary = summary[summary["CaseID"] == result.provenance.case_id]
             tree_list = read_table(result.database, "FVS_TreeList_Metric")
             tree_list = tree_list[tree_list["CaseID"] == result.provenance.case_id].copy()
-            large = (
-                tree_list[tree_list["DBH"] >= 37.5]
-                .assign(ba=lambda frame: 0.00007854 * frame["DBH"] ** 2 * frame["TPH"])
-                .groupby("Year", as_index=False)
-                .agg(large_ba_m2_ha=("ba", "sum"), large_tph=("TPH", "sum"))
-            )
-            summary = summary.merge(large, on="Year", how="left").fillna(
-                {"large_ba_m2_ha": 0.0, "large_tph": 0.0}
+            metrics = [
+                {"Year": int(year), **_tree_metrics(group)}
+                for year, group in tree_list.groupby("Year")
+            ]
+            summary = summary.merge(pd.DataFrame(metrics), on="Year", how="left").fillna(
+                {
+                    "max_dbh_cm": 0.0,
+                    "q_factor": 0.0,
+                    "large_ba_m2_ha": 0.0,
+                    "large_tph": 0.0,
+                }
             )
             summary["reserve_ba_m2_ha"] = 0.0
             summary["reserve_tph"] = 0.0
@@ -232,6 +272,8 @@ def main() -> None:
                         "CCF",
                         "large_ba_m2_ha",
                         "large_tph",
+                        "max_dbh_cm",
+                        "q_factor",
                         "reserve_ba_m2_ha",
                         "reserve_tph",
                     ]

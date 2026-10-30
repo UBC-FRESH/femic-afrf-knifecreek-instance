@@ -22,6 +22,7 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
+from itertools import pairwise
 from pathlib import Path
 
 import numpy as np
@@ -44,7 +45,7 @@ REGIMES = {
 SPECIES_MAP = {"FDI": "FD", "PLI": "PL", "SX": "SW", "AT": "AT"}
 LARGE_THRESHOLD = 37.5
 CLUMP_SIZE = 6
-RESERVE_TREES = 3
+RESERVE_TREES = 2
 
 
 def _reserved_ids(after: pd.DataFrame, regime: str) -> set[str]:
@@ -70,6 +71,32 @@ def _reserve_metrics(frame: pd.DataFrame, ids: set[str]) -> tuple[float, float]:
         return 0.0, 0.0
     ba = float((0.00007854 * selected["DBH"] ** 2 * selected["TPH"]).sum())
     return ba, float(selected["TPH"].sum())
+
+
+def _q_factor(frame: pd.DataFrame) -> float:
+    """Return the median 5 cm TPH-class ratio."""
+    if frame.empty or frame["TPH"].sum() <= 0:
+        return 0.0
+    classes = (frame["DBH"] // 5 * 5 + 2.5).astype(float)
+    density = frame.assign(dbh_class=classes).groupby("dbh_class")["TPH"].sum()
+    grid = np.arange(classes.min(), classes.max() + 5.0, 5.0)
+    density = density.reindex(grid, fill_value=0.0)
+    ratios = [
+        float(density.loc[lower] / density.loc[upper])
+        for lower, upper in pairwise(grid)
+        if density.loc[lower] > 0 and density.loc[upper] > 0
+    ]
+    return float(np.median(ratios)) if ratios else 0.0
+
+
+def _tree_metrics(frame: pd.DataFrame) -> dict[str, float]:
+    """Return max DBH and q for one tree list."""
+    if frame.empty:
+        return {"max_dbh_cm": 0.0, "q_factor": 0.0}
+    return {
+        "max_dbh_cm": float(frame["DBH"].max()),
+        "q_factor": _q_factor(frame),
+    }
 
 
 def _bec_variant(row: pd.Series) -> str:
@@ -273,6 +300,7 @@ def main() -> None:
                     )
                 reserved = _reserved_ids(after, args.regime)
                 reserve_ba, reserve_tph = _reserve_metrics(after, reserved)
+                residual_metrics = _tree_metrics(after)
                 stage_rows.append(
                     {
                         "stage": stage,
@@ -286,6 +314,8 @@ def main() -> None:
                         "large_tph": 0.0,
                         "reserve_ba_m2_ha": reserve_ba,
                         "reserve_tph": reserve_tph,
+                        "max_dbh_cm": residual_metrics["max_dbh_cm"],
+                        "q_factor": residual_metrics["q_factor"],
                         "cut_tph": cut_tph,
                         "cut_m3_ha": cut_volume,
                     }
@@ -295,6 +325,7 @@ def main() -> None:
                 for point in post.itertuples(index=False):
                     year_trees = tree_list[tree_list["Year"] == int(point.Year)]
                     reserve_ba, reserve_tph = _reserve_metrics(year_trees, reserved)
+                    year_metrics = _tree_metrics(year_trees)
                     stage_rows.append(
                         {
                             "stage": stage,
@@ -308,6 +339,8 @@ def main() -> None:
                             "large_tph": float(point.large_tph),
                             "reserve_ba_m2_ha": reserve_ba,
                             "reserve_tph": reserve_tph,
+                            "max_dbh_cm": year_metrics["max_dbh_cm"],
+                            "q_factor": year_metrics["q_factor"],
                             "cut_tph": 0.0,
                             "cut_m3_ha": 0.0,
                         }

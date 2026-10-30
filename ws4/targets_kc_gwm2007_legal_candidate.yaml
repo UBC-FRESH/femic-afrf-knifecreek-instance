@@ -1,10 +1,9 @@
 # KC GWM 2007 legal-candidate structural targets by AU/HMZ.
 #
-# This file is NOT a legal-compliance certification. It covers total BA,
-# large-tree BA and reserve ceiling only. Max DBH, q, spatial 4-10-tree clumps,
-# canopy openings and pre-2026 80% retention are not represented.
-#
-# HMZ M uses Moderate, L uses Low, U no harvest. A uses High.
+# Covers total BA, large-tree BA, max DBH, q range and reserve ceiling.
+# NOT a legal-compliance certification: spatial 4-10-tree clumps, canopy
+# openings, pre-2026 80% retention and current order verification are missing.
+# HMZ M uses Moderate, L uses Low, A uses High. U is outside the tested set.
 
 targets:
 - account: feature.habitat.basal_area.KC_IDFdk3_FDI_H.L
@@ -19,6 +18,22 @@ targets:
   period_width: 10
   minimum: 1491.918707
   min_weight: 1000.0
+  shape: linear
+  priority: 2
+- account: feature.habitat.max_dbh.KC_IDFdk3_FDI_H.L
+  period: 20
+  period_width: 10
+  minimum: 12432.655889
+  min_weight: 1000.0
+  shape: linear
+  priority: 2
+- account: feature.habitat.q_factor.KC_IDFdk3_FDI_H.L
+  period: 20
+  period_width: 10
+  minimum: 310.816397
+  maximum: 348.114365
+  min_weight: 1000.0
+  max_weight: 1000.0
   shape: linear
   priority: 2
 - account: feature.habitat.reserve_ba.KC_IDFdk3_FDI_H.L
@@ -42,25 +57,27 @@ targets:
   min_weight: 1000.0
   shape: linear
   priority: 2
+- account: feature.habitat.max_dbh.KC_IDFdk3_FDI_H.M
+  period: 20
+  period_width: 10
+  minimum: 62252.624982
+  min_weight: 1000.0
+  shape: linear
+  priority: 2
+- account: feature.habitat.q_factor.KC_IDFdk3_FDI_H.M
+  period: 20
+  period_width: 10
+  minimum: 1296.929687
+  maximum: 1400.684062
+  min_weight: 1000.0
+  max_weight: 1000.0
+  shape: linear
+  priority: 2
 - account: feature.habitat.reserve_ba.KC_IDFdk3_FDI_H.M
   period: 20
   period_width: 10
   maximum: 2282.596249
   max_weight: 1000.0
-  shape: linear
-  priority: 2
-- account: feature.habitat.basal_area.KC_IDFdk3_FDI_H.U
-  period: 20
-  period_width: 10
-  minimum: 0.0
-  min_weight: 1000.0
-  shape: linear
-  priority: 2
-- account: feature.habitat.large_tree_ba.KC_IDFdk3_FDI_H.U
-  period: 20
-  period_width: 10
-  minimum: 0.0
-  min_weight: 1000.0
   shape: linear
   priority: 2
 - account: feature.habitat.basal_area.KC_IDFdk3_FDI_L.L
@@ -75,6 +92,22 @@ targets:
   period_width: 10
   minimum: 2359.90777
   min_weight: 1000.0
+  shape: linear
+  priority: 2
+- account: feature.habitat.max_dbh.KC_IDFdk3_FDI_L.L
+  period: 20
+  period_width: 10
+  minimum: 19665.898082
+  min_weight: 1000.0
+  shape: linear
+  priority: 2
+- account: feature.habitat.q_factor.KC_IDFdk3_FDI_L.L
+  period: 20
+  period_width: 10
+  minimum: 491.647452
+  maximum: 550.645146
+  min_weight: 1000.0
+  max_weight: 1000.0
   shape: linear
   priority: 2
 - account: feature.habitat.reserve_ba.KC_IDFdk3_FDI_L.L
@@ -98,25 +131,27 @@ targets:
   min_weight: 1000.0
   shape: linear
   priority: 2
+- account: feature.habitat.max_dbh.KC_IDFdk3_FDI_L.M
+  period: 20
+  period_width: 10
+  minimum: 23376.321491
+  min_weight: 1000.0
+  shape: linear
+  priority: 2
+- account: feature.habitat.q_factor.KC_IDFdk3_FDI_L.M
+  period: 20
+  period_width: 10
+  minimum: 487.006698
+  maximum: 525.967234
+  min_weight: 1000.0
+  max_weight: 1000.0
+  shape: linear
+  priority: 2
 - account: feature.habitat.reserve_ba.KC_IDFdk3_FDI_L.M
   period: 20
   period_width: 10
   maximum: 857.131788
   max_weight: 1000.0
-  shape: linear
-  priority: 2
-- account: feature.habitat.basal_area.KC_IDFdk3_FDI_L.U
-  period: 20
-  period_width: 10
-  minimum: 0.0
-  min_weight: 1000.0
-  shape: linear
-  priority: 2
-- account: feature.habitat.large_tree_ba.KC_IDFdk3_FDI_L.U
-  period: 20
-  period_width: 10
-  minimum: 0.0
-  min_weight: 1000.0
   shape: linear
   priority: 2
 - account: feature.habitat.basal_area.KC_IDFdk3_FDI_M.L
@@ -131,6 +166,22 @@ targets:
   period_width: 10
   minimum: 2011.950612
   min_weight: 1000.0
+  shape: linear
+  priority: 2
+- account: feature.habitat.max_dbh.KC_IDFdk3_FDI_M.L
+  period: 20
+  period_width: 10
+  minimum: 16766.255103
+  min_weight: 1000.0
+  shape: linear
+  priority: 2
+- account: feature.habitat.q_factor.KC_IDFdk3_FDI_M.L
+  period: 20
+  period_width: 10
+  minimum: 419.156378
+  maximum: 469.455143
+  min_weight: 1000.0
+  max_weight: 1000.0
   shape: linear
   priority: 2
 - account: feature.habitat.reserve_ba.KC_IDFdk3_FDI_M.L
@@ -154,6 +205,22 @@ targets:
   min_weight: 1000.0
   shape: linear
   priority: 2
+- account: feature.habitat.max_dbh.KC_IDFdk3_FDI_M.M
+  period: 20
+  period_width: 10
+  minimum: 29926.265926
+  min_weight: 1000.0
+  shape: linear
+  priority: 2
+- account: feature.habitat.q_factor.KC_IDFdk3_FDI_M.M
+  period: 20
+  period_width: 10
+  minimum: 623.463873
+  maximum: 673.340983
+  min_weight: 1000.0
+  max_weight: 1000.0
+  shape: linear
+  priority: 2
 - account: feature.habitat.reserve_ba.KC_IDFdk3_FDI_M.M
   period: 20
   period_width: 10
@@ -173,6 +240,22 @@ targets:
   period_width: 10
   minimum: 2908.030468
   min_weight: 1000.0
+  shape: linear
+  priority: 2
+- account: feature.habitat.max_dbh.KC_IDFxm_FDI_H.M
+  period: 20
+  period_width: 10
+  minimum: 15861.984372
+  min_weight: 1000.0
+  shape: linear
+  priority: 2
+- account: feature.habitat.q_factor.KC_IDFxm_FDI_H.M
+  period: 20
+  period_width: 10
+  minimum: 330.458008
+  maximum: 356.894648
+  min_weight: 1000.0
+  max_weight: 1000.0
   shape: linear
   priority: 2
 - account: feature.habitat.reserve_ba.KC_IDFxm_FDI_H.M
@@ -196,6 +279,22 @@ targets:
   min_weight: 1000.0
   shape: linear
   priority: 2
+- account: feature.habitat.max_dbh.KC_IDFxm_FDI_L.L
+  period: 20
+  period_width: 10
+  minimum: 856.495489
+  min_weight: 1000.0
+  shape: linear
+  priority: 2
+- account: feature.habitat.q_factor.KC_IDFxm_FDI_L.L
+  period: 20
+  period_width: 10
+  minimum: 21.412387
+  maximum: 23.981874
+  min_weight: 1000.0
+  max_weight: 1000.0
+  shape: linear
+  priority: 2
 - account: feature.habitat.reserve_ba.KC_IDFxm_FDI_L.L
   period: 20
   period_width: 10
@@ -215,6 +314,22 @@ targets:
   period_width: 10
   minimum: 667.015686
   min_weight: 1000.0
+  shape: linear
+  priority: 2
+- account: feature.habitat.max_dbh.KC_IDFxm_FDI_L.M
+  period: 20
+  period_width: 10
+  minimum: 3638.267377
+  min_weight: 1000.0
+  shape: linear
+  priority: 2
+- account: feature.habitat.q_factor.KC_IDFxm_FDI_L.M
+  period: 20
+  period_width: 10
+  minimum: 75.797237
+  maximum: 81.861016
+  min_weight: 1000.0
+  max_weight: 1000.0
   shape: linear
   priority: 2
 - account: feature.habitat.reserve_ba.KC_IDFxm_FDI_L.M
@@ -238,6 +353,22 @@ targets:
   min_weight: 1000.0
   shape: linear
   priority: 2
+- account: feature.habitat.max_dbh.KC_IDFxm_FDI_M.L
+  period: 20
+  period_width: 10
+  minimum: 3625.078764
+  min_weight: 1000.0
+  shape: linear
+  priority: 2
+- account: feature.habitat.q_factor.KC_IDFxm_FDI_M.L
+  period: 20
+  period_width: 10
+  minimum: 90.626969
+  maximum: 101.502205
+  min_weight: 1000.0
+  max_weight: 1000.0
+  shape: linear
+  priority: 2
 - account: feature.habitat.reserve_ba.KC_IDFxm_FDI_M.L
   period: 20
   period_width: 10
@@ -257,6 +388,22 @@ targets:
   period_width: 10
   minimum: 1785.870629
   min_weight: 1000.0
+  shape: linear
+  priority: 2
+- account: feature.habitat.max_dbh.KC_IDFxm_FDI_M.M
+  period: 20
+  period_width: 10
+  minimum: 9741.112521
+  min_weight: 1000.0
+  shape: linear
+  priority: 2
+- account: feature.habitat.q_factor.KC_IDFxm_FDI_M.M
+  period: 20
+  period_width: 10
+  minimum: 202.939844
+  maximum: 219.175032
+  min_weight: 1000.0
+  max_weight: 1000.0
   shape: linear
   priority: 2
 - account: feature.habitat.reserve_ba.KC_IDFxm_FDI_M.M

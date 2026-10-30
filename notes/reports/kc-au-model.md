@@ -32,8 +32,8 @@ Files:
 - 160 fragments/blocks
 - 115 tracks
 - 102 treatments
-- 1840 feature rows
-- 112 feature labels
+- 2,300 feature rows
+- 182 feature labels including max DBH and q
 - HMZ-specific large-tree/reserve/yield/area accounts
 - 102 product rows
 - 6 AUs
