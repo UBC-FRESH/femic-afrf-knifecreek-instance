@@ -122,13 +122,48 @@ def main() -> None:
             new_features.append(
                 {"TRACK": int(row.TRACK), "LABEL": label, "METHOD": "", "CURVE": curve_id}
             )
-    product_curve_ids = set(products["CURVE"].astype(int))
+        area_curve = next_curve
+        next_curve += 1
+        for year in sorted(curves["year"].unique()):
+            new_curves.append({"CURVE": area_curve, "X": int(year), "Y": 1.0})
+        new_features.append(
+            {
+                "TRACK": int(row.TRACK),
+                "LABEL": "feature.area.managed.total",
+                "METHOD": "",
+                "CURVE": area_curve,
+            }
+        )
+    area_products = []
+    for product in products.itertuples(index=False):
+        curve_id = next_curve
+        next_curve += 1
+        for year in sorted(curves["year"].unique()):
+            new_curves.append({"CURVE": curve_id, "X": int(year), "Y": 1.0})
+        area_products.append(
+            {
+                "TRACK": int(product.TRACK),
+                "TREATMENT": product.TREATMENT,
+                "LABEL": "product.area.managed.total",
+                "FUTURE": 0,
+                "ADJUST": "R",
+                "METHOD": "",
+                "CURVE": curve_id,
+            }
+        )
+    products_out = pd.concat([products, pd.DataFrame(area_products)], ignore_index=True)
+    product_curve_ids = set(products_out["CURVE"].astype(int))
     kept_curves = old_curves[old_curves["CURVE"].astype(int).isin(product_curve_ids)].copy()
     all_curves = pd.concat([kept_curves, pd.DataFrame(new_curves)], ignore_index=True)
     all_curves = all_curves.sort_values(["CURVE", "X"])
     features = pd.DataFrame(new_features)
 
-    account_labels = [*list(FEATURE_MAP), "product.yield.managed.total"]
+    account_labels = [
+        *list(FEATURE_MAP),
+        "feature.area.managed.total",
+        "product.area.managed.total",
+        "product.yield.managed.total",
+    ]
     accounts = pd.DataFrame(
         {
             "GROUP": "_MANAGED_",
@@ -140,6 +175,7 @@ def main() -> None:
     accounts.to_csv(args.h_dir / "accounts.csv", index=False)
     accounts.to_csv(args.h_dir / "protoaccounts.csv", index=False)
     features.to_csv(args.h_dir / "features.csv", index=False)
+    products_out.to_csv(args.h_dir / "products.csv", index=False)
     all_curves.to_csv(args.h_dir / "curves.csv", index=False)
     manifest_path = args.h_dir / "manifest.json"
     manifest = json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
@@ -154,6 +190,7 @@ def main() -> None:
             "feature_curves": int(features["CURVE"].nunique()),
             "feature_rows": len(features),
             "product_curves": len(product_curve_ids),
+            "product_rows": len(products_out),
             "accounts": len(accounts),
             "space_for_time_mapping": "space_for_time_mapping.csv",
             "caveats": [

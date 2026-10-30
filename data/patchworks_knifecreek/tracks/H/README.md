@@ -30,7 +30,8 @@ Feature labels:
 ## Horizon
 
 - Feature curves: 0–100 years at 10-year steps.
-- Product curves: existing 0–30 year GWM treatment runs.
+- Product area curves: 0–100 years.
+- Product yield curves: point yields from the existing GWM treatment runs.
 
 The horizons differ. Do not present this as a 300-year matrix.
 

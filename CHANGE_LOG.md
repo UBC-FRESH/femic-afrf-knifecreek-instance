@@ -413,3 +413,8 @@ status and the GitHub issue comments.
   were regenerated at 100 years; products remain 30 years. The BA asymptote
   table remains experimental because even 100 years does not reliably reach
   an asymptote. `ws4 ingest` and `ws4 validate` pass.
+- P3.4 partial account wiring: added `feature.area.managed.total`,
+  `product.area.managed.total` and product area curves; accounts now have eight
+  `_MANAGED_` rows. H matrix has 552 feature rows, 98 product rows and 6,660
+  curve points; `ws4 ingest` and `ws4 validate` pass. Large-tree/reserve,
+  softwood/hardwood split and full group accounts remain open.

@@ -3,9 +3,9 @@
   "blocks": 160,
   "tracks": 92,
   "treatments": 49,
-  "curves": 509,
-  "curve_points": 5109,
-  "features": 460,
+  "curves": 650,
+  "curve_points": 6660,
+  "features": 552,
   "products": 49,
   "horizon_years": 30,
   "period_years": 10,
@@ -19,9 +19,10 @@
   ],
   "feature_horizon_years": 100,
   "product_horizon_years": 30,
-  "feature_curves": 460,
-  "feature_rows": 460,
-  "product_curves": 49,
+  "feature_curves": 552,
+  "feature_rows": 552,
+  "product_curves": 98,
   "space_for_time_mapping": "space_for_time_mapping.csv",
-  "accounts": 6
+  "accounts": 8,
+  "product_rows": 98
 }

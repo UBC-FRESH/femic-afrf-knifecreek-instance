@@ -288,9 +288,11 @@ because no valid example, schema or compiler is available; see
 parity until that changes.
 
 P3.3 status: met with limits. The H feature layer uses 100-year IDF Cariboo
-space-for-time curves for five labels; product curves remain 30 years. The H
-matrix ingests and validates. Full product/feature accounts, roads, topology,
-pin and ForestModelXML remain open. The feature and product horizons differ and
+space-for-time curves for six labels; product area curves are 100-year and
+product yield remains a point estimate. The H
+matrix ingests and validates. Partial accounts are now wired; large-tree/reserve,
+softwood/hardwood split, full group accounts, roads, topology, pin and
+ForestModelXML remain open. The feature and product horizons differ and
 are declared.
 
 ## Phase 4: Verification and scenarios
