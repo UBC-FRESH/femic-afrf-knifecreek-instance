@@ -28,18 +28,20 @@ The calibrated growth is more conservative. Mean no-cut AU BA:
 
 ## Structural result
 
-The HMZ-mixed legal-candidate run on the calibrated stage graph meets **45 of
-55** structural targets:
+The HMZ-mixed legal-candidate run on the calibrated stage graph meets **51 of
+55** structural targets after retuning the reserve cap and AU q targets:
 
-- 5 above, 5 below.
-- Reserve-ceiling failures in `KC_IDFdk3_FDI_H.L`,
-  `KC_IDFdk3_FDI_L.L` and `KC_IDFxm_FDI_L.L`.
-- q-factor misses on both sides of the legal range.
-- One large-tree BA floor miss.
+- 1 above, 3 below.
+- All reserve ceilings, BA floors, large-tree floors and max-DBH floors pass.
+- Four q-factor misses remain: `KC_IDFdk3_FDI_H.L`,
+  `KC_IDFdk3_FDI_H.M`, `KC_IDFdk3_FDI_M.M` and `KC_IDFxm_FDI_L.M`.
+- The q targets could not close those four groups; further q-target tuning
+  either saturated or moved the measured q the wrong way.
 
 The uncalibrated legal-candidate run still meets **55 of 55** structural
 targets. The difference shows that the q/reserve treatment targets are
-growth-sensitive; they need retuning if the calibrated growth model is adopted.
+growth-sensitive; some q misses need a treatment or small-tree-retention
+change, not another q-target adjustment.
 
 ## Interpretation
 

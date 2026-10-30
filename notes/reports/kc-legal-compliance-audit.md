@@ -57,10 +57,11 @@ Legal-candidate run:
 This is a structural pass only. It does not certify legal compliance.
 
 A calibrated sensitivity using the v1 PSP `BAIMULT`/`MORTMULT` parameters
-meets 45/55 targets: 5 above and 5 below, with reserve-ceiling and q-factor
-misses. The calibrated growth is more conservative and moves the structural
-targets. See `notes/reports/kc-au-calibrated-sensitivity.md`. The uncalibrated
-run remains the structural baseline.
+meets 51/55 targets after retuning the reserve cap and AU q targets: 1 above
+and 3 below, all four remaining misses are q-factor. The calibrated growth is
+more conservative and moves the structural targets. See
+`notes/reports/kc-au-calibrated-sensitivity.md`. The uncalibrated run remains
+the structural baseline.
 
 ## Not tested / not compliant
 

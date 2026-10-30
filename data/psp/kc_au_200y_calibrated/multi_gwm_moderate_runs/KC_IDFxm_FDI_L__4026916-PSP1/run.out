@@ -1,6 +1,6 @@
 
 
-     FOREST VEGETATION SIMULATOR     VERSION unknown                          -- BC             RV:unknown     10-30-2026  15:56:38
+     FOREST VEGETATION SIMULATOR     VERSION unknown                          -- BC             RV:unknown     10-30-2026  16:19:00
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
@@ -140,7 +140,7 @@ THINABA    DATE/CYCLE=    4; RESIDUAL=    2.20; PROPORTION OF SELECTED TREES REM
 
 THINQFA    DATE/CYCLE=    4; MINIMUM      2.5; MAXIMUM     37.5
            ALL SPECIES (CODE=   0) ARE TARGETED FOR THIS CUT.
-           Q FACTOR=    1.380
+           Q FACTOR=    1.750
            DIA. CLASS WIDTH=    5.0
            TARGET BA=   47.9
 
@@ -154,7 +154,7 @@ THINABA    DATE/CYCLE=    7; RESIDUAL=    2.20; PROPORTION OF SELECTED TREES REM
 
 THINQFA    DATE/CYCLE=    7; MINIMUM      2.5; MAXIMUM     37.5
            ALL SPECIES (CODE=   0) ARE TARGETED FOR THIS CUT.
-           Q FACTOR=    1.380
+           Q FACTOR=    1.750
            DIA. CLASS WIDTH=    5.0
            TARGET BA=   47.9
 
@@ -168,7 +168,7 @@ THINABA    DATE/CYCLE=   10; RESIDUAL=    2.20; PROPORTION OF SELECTED TREES REM
 
 THINQFA    DATE/CYCLE=   10; MINIMUM      2.5; MAXIMUM     37.5
            ALL SPECIES (CODE=   0) ARE TARGETED FOR THIS CUT.
-           Q FACTOR=    1.380
+           Q FACTOR=    1.750
            DIA. CLASS WIDTH=    5.0
            TARGET BA=   47.9
 
@@ -182,7 +182,7 @@ THINABA    DATE/CYCLE=   13; RESIDUAL=    2.20; PROPORTION OF SELECTED TREES REM
 
 THINQFA    DATE/CYCLE=   13; MINIMUM      2.5; MAXIMUM     37.5
            ALL SPECIES (CODE=   0) ARE TARGETED FOR THIS CUT.
-           Q FACTOR=    1.380
+           Q FACTOR=    1.750
            DIA. CLASS WIDTH=    5.0
            TARGET BA=   47.9
 
@@ -196,7 +196,7 @@ THINABA    DATE/CYCLE=   16; RESIDUAL=    2.20; PROPORTION OF SELECTED TREES REM
 
 THINQFA    DATE/CYCLE=   16; MINIMUM      2.5; MAXIMUM     37.5
            ALL SPECIES (CODE=   0) ARE TARGETED FOR THIS CUT.
-           Q FACTOR=    1.380
+           Q FACTOR=    1.750
            DIA. CLASS WIDTH=    5.0
            TARGET BA=   47.9
 
@@ -210,7 +210,7 @@ THINABA    DATE/CYCLE=   19; RESIDUAL=    2.20; PROPORTION OF SELECTED TREES REM
 
 THINQFA    DATE/CYCLE=   19; MINIMUM      2.5; MAXIMUM     37.5
            ALL SPECIES (CODE=   0) ARE TARGETED FOR THIS CUT.
-           Q FACTOR=    1.380
+           Q FACTOR=    1.750
            DIA. CLASS WIDTH=    5.0
            TARGET BA=   47.9
 
@@ -325,7 +325,7 @@ SITECODE   SITE INDEX INFORMATION:
                BASE     ATRTLIST    30       3.0000     0.0000
                BASE     THINABA     30      11.0000     1.0000    37.4999    59.9999     0.0000   999.0000
                BASE     THINABA     30       2.2000     1.0000    59.9999   998.9980     0.0000   999.0000
-               BASE     THINQFA     30       0.9843    14.7638     0.0000     1.3800     1.9685    47.9200     0.0000
+               BASE     THINQFA     30       0.9843    14.7638     0.0000     1.7500     1.9685    47.9200     0.0000
 
    5     40
                BASE     TREELIST    40       3.0000     0.0000
@@ -338,7 +338,7 @@ SITECODE   SITE INDEX INFORMATION:
                BASE     ATRTLIST    60       3.0000     0.0000
                BASE     THINABA     60      11.0000     1.0000    37.4999    59.9999     0.0000   999.0000
                BASE     THINABA     60       2.2000     1.0000    59.9999   998.9980     0.0000   999.0000
-               BASE     THINQFA     60       0.9843    14.7638     0.0000     1.3800     1.9685    47.9200     0.0000
+               BASE     THINQFA     60       0.9843    14.7638     0.0000     1.7500     1.9685    47.9200     0.0000
 
    8     70
                BASE     TREELIST    70       3.0000     0.0000
@@ -351,7 +351,7 @@ SITECODE   SITE INDEX INFORMATION:
                BASE     ATRTLIST    90       3.0000     0.0000
                BASE     THINABA     90      11.0000     1.0000    37.4999    59.9999     0.0000   999.0000
                BASE     THINABA     90       2.2000     1.0000    59.9999   998.9980     0.0000   999.0000
-               BASE     THINQFA     90       0.9843    14.7638     0.0000     1.3800     1.9685    47.9200     0.0000
+               BASE     THINQFA     90       0.9843    14.7638     0.0000     1.7500     1.9685    47.9200     0.0000
 
   11    100
                BASE     TREELIST   100       3.0000     0.0000
@@ -364,7 +364,7 @@ SITECODE   SITE INDEX INFORMATION:
                BASE     ATRTLIST   120       3.0000     0.0000
                BASE     THINABA    120      11.0000     1.0000    37.4999    59.9999     0.0000   999.0000
                BASE     THINABA    120       2.2000     1.0000    59.9999   998.9980     0.0000   999.0000
-               BASE     THINQFA    120       0.9843    14.7638     0.0000     1.3800     1.9685    47.9200     0.0000
+               BASE     THINQFA    120       0.9843    14.7638     0.0000     1.7500     1.9685    47.9200     0.0000
 
   14    130
                BASE     TREELIST   130       3.0000     0.0000
@@ -377,7 +377,7 @@ SITECODE   SITE INDEX INFORMATION:
                BASE     ATRTLIST   150       3.0000     0.0000
                BASE     THINABA    150      11.0000     1.0000    37.4999    59.9999     0.0000   999.0000
                BASE     THINABA    150       2.2000     1.0000    59.9999   998.9980     0.0000   999.0000
-               BASE     THINQFA    150       0.9843    14.7638     0.0000     1.3800     1.9685    47.9200     0.0000
+               BASE     THINQFA    150       0.9843    14.7638     0.0000     1.7500     1.9685    47.9200     0.0000
 
   17    160
                BASE     TREELIST   160       3.0000     0.0000
@@ -390,7 +390,7 @@ SITECODE   SITE INDEX INFORMATION:
                BASE     ATRTLIST   180       3.0000     0.0000
                BASE     THINABA    180      11.0000     1.0000    37.4999    59.9999     0.0000   999.0000
                BASE     THINABA    180       2.2000     1.0000    59.9999   998.9980     0.0000   999.0000
-               BASE     THINQFA    180       0.9843    14.7638     0.0000     1.3800     1.9685    47.9200     0.0000
+               BASE     THINQFA    180       0.9843    14.7638     0.0000     1.7500     1.9685    47.9200     0.0000
 
   20    190
                BASE     TREELIST   190       3.0000     0.0000
@@ -432,7 +432,7 @@ SITECODE   SITE INDEX INFORMATION:
  NUMBER OF RECORDS WITH MISTLETOE                  0
 
 
-     FOREST VEGETATION SIMULATOR     VERSION unknown                          -- BC             RV:unknown     10-30-2026  15:56:38
+     FOREST VEGETATION SIMULATOR     VERSION unknown                          -- BC             RV:unknown     10-30-2026  16:19:00
 
 STAND ID: KC-AU-GWM_MODERATE-MULTI-2    MGMT ID: NONE    00Y
 
@@ -728,7 +728,7 @@ YEAR  ATTRIBUTES      10     30     50     70     90    100       ATTRIBUTES    
         MERCH        39.9   44.0   48.8   60.3   68.3    73.6     277. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
 
 
-     FOREST VEGETATION SIMULATOR     VERSION unknown                          -- BC             RV:unknown     10-30-2026  15:56:38
+     FOREST VEGETATION SIMULATOR     VERSION unknown                          -- BC             RV:unknown     10-30-2026  16:19:00
 
 STAND ID: KC-AU-GWM_MODERATE-MULTI-2    MGMT ID: NONE    00Y
 
@@ -960,7 +960,7 @@ YEAR    %TILE SPECIES     (CM)      (M)  RATIO      (CM)   %TILE     HA    AGE  
 ** NOTE:  DUE TO HARVEST, COMPRESSION, OR REGENERATION ESTABLISHMENT, NEW SAMPLE TREES WERE SELECTED.
 
 
-     FOREST VEGETATION SIMULATOR     VERSION unknown                          -- BC             RV:unknown     10-30-2026  15:56:38
+     FOREST VEGETATION SIMULATOR     VERSION unknown                          -- BC             RV:unknown     10-30-2026  16:19:00
 
 STAND ID: KC-AU-GWM_MODERATE-MULTI-2    MGMT ID: NONE    00Y
 
@@ -1029,7 +1029,7 @@ YEAR AGE TREES  BA  SDI CCF  HT  QMD  CU M  CU M       TREES  CU M  CU M        
                BASE     TREELIST    20  DONE IN   29               3.0000     0.0000
 
    4     30
-               BASE     THINQFA     30  DELETED OR CANCELED        0.9843    14.7638     0.0000     1.3800     1.9685    47.9200
+               BASE     THINQFA     30  DELETED OR CANCELED        0.9843    14.7638     0.0000     1.7500     1.9685    47.9200
                                                                    0.0000
                BASE     THINABA     30  DONE IN   30              11.0000     1.0000    37.4999    59.9999     0.0000   999.0000
                BASE     THINABA     30  DONE IN   30               2.2000     1.0000    59.9999   998.9980     0.0000   999.0000
@@ -1043,7 +1043,7 @@ YEAR AGE TREES  BA  SDI CCF  HT  QMD  CU M  CU M       TREES  CU M  CU M        
                BASE     TREELIST    50  DONE IN   59               3.0000     0.0000
 
    7     60
-               BASE     THINQFA     60  DELETED OR CANCELED        0.9843    14.7638     0.0000     1.3800     1.9685    47.9200
+               BASE     THINQFA     60  DELETED OR CANCELED        0.9843    14.7638     0.0000     1.7500     1.9685    47.9200
                                                                    0.0000
                BASE     THINABA     60  DONE IN   60              11.0000     1.0000    37.4999    59.9999     0.0000   999.0000
                BASE     THINABA     60  DONE IN   60               2.2000     1.0000    59.9999   998.9980     0.0000   999.0000
@@ -1058,7 +1058,7 @@ YEAR AGE TREES  BA  SDI CCF  HT  QMD  CU M  CU M       TREES  CU M  CU M        
 
   10     90
                BASE     THINABA     90  DELETED OR CANCELED       11.0000     1.0000    37.4999    59.9999     0.0000   999.0000
-               BASE     THINQFA     90  DELETED OR CANCELED        0.9843    14.7638     0.0000     1.3800     1.9685    47.9200
+               BASE     THINQFA     90  DELETED OR CANCELED        0.9843    14.7638     0.0000     1.7500     1.9685    47.9200
                                                                    0.0000
                BASE     THINABA     90  DONE IN   90               2.2000     1.0000    59.9999   998.9980     0.0000   999.0000
                BASE     ATRTLIST    90  DONE IN   90               3.0000     0.0000
@@ -1072,7 +1072,7 @@ YEAR AGE TREES  BA  SDI CCF  HT  QMD  CU M  CU M       TREES  CU M  CU M        
 
   13    120
                BASE     THINABA    120  DELETED OR CANCELED       11.0000     1.0000    37.4999    59.9999     0.0000   999.0000
-               BASE     THINQFA    120  DELETED OR CANCELED        0.9843    14.7638     0.0000     1.3800     1.9685    47.9200
+               BASE     THINQFA    120  DELETED OR CANCELED        0.9843    14.7638     0.0000     1.7500     1.9685    47.9200
                                                                    0.0000
                BASE     THINABA    120  DONE IN  120               2.2000     1.0000    59.9999   998.9980     0.0000   999.0000
                BASE     ATRTLIST   120  DONE IN  120               3.0000     0.0000
@@ -1086,7 +1086,7 @@ YEAR AGE TREES  BA  SDI CCF  HT  QMD  CU M  CU M       TREES  CU M  CU M        
 
   16    150
                BASE     THINABA    150  DELETED OR CANCELED       11.0000     1.0000    37.4999    59.9999     0.0000   999.0000
-               BASE     THINQFA    150  DELETED OR CANCELED        0.9843    14.7638     0.0000     1.3800     1.9685    47.9200
+               BASE     THINQFA    150  DELETED OR CANCELED        0.9843    14.7638     0.0000     1.7500     1.9685    47.9200
                                                                    0.0000
                BASE     THINABA    150  DONE IN  150               2.2000     1.0000    59.9999   998.9980     0.0000   999.0000
                BASE     ATRTLIST   150  DONE IN  150               3.0000     0.0000
@@ -1099,7 +1099,7 @@ YEAR AGE TREES  BA  SDI CCF  HT  QMD  CU M  CU M       TREES  CU M  CU M        
                BASE     TREELIST   170  DONE IN  179               3.0000     0.0000
 
   19    180
-               BASE     THINQFA    180  DELETED OR CANCELED        0.9843    14.7638     0.0000     1.3800     1.9685    47.9200
+               BASE     THINQFA    180  DELETED OR CANCELED        0.9843    14.7638     0.0000     1.7500     1.9685    47.9200
                                                                    0.0000
                BASE     THINABA    180  DONE IN  180              11.0000     1.0000    37.4999    59.9999     0.0000   999.0000
                BASE     THINABA    180  DONE IN  180               2.2000     1.0000    59.9999   998.9980     0.0000   999.0000
