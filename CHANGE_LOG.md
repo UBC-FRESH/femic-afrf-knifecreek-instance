@@ -464,3 +464,8 @@ status and the GitHub issue comments.
   destination, eligibility, access or cost inputs exist.
 - P3.7 rerun after the account/topology updates: `ws4 build`, validation,
   account audit, baseline/selection simulations and reports all pass.
+
+- P3.8 evidence and closeout: added `notes/reports/p3-closeout.md` with the
+  ForestModelXML build evidence, compiled counts, baseline/selection summaries,
+  account audit, Gavin functional comparison and explicit data gaps. Phase P3
+  is queued for maintainer approval; it is not merged.

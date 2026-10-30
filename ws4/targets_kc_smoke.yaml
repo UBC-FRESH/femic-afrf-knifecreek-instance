@@ -9,7 +9,7 @@ targets:
     period_width: 10
     min_weight: 1.0
   - account: feature.yield.managed.total
-    period: 10
+    period: 1
     minimum: 0
     period_width: 10
     min_weight: 1.0

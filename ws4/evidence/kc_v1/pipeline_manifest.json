@@ -18,6 +18,8 @@
     "The recipe is generated from the KC H-matrix source tables.",
     "Selection smoke applies the first available treatment to every block at offset 0.",
     "Product yield curves are point estimates; features are 100-year space-for-time curves.",
-    "Patch account uses managed area, not a seral/opening criterion."
+    "Patch account uses managed area, not a seral/opening criterion.",
+    "Large-tree BA, reserve BA, seral/opening and species-split features are unavailable and not fabricated.",
+    "Route configuration is unavailable; the public road layer is map context only."
   ]
 }

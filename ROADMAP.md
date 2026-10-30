@@ -267,7 +267,7 @@ accounts, targets, baseline and selection runs, reports and web UI.
 - [x] P3.5 Build topology, roads and patch accounts (#65)
 - [x] P3.6 Build targets, schedules and scenarios (#66)
 - [x] P3.7 Compile, validate, run, report and serve (#67)
-- [ ] P3.8 Record evidence and close out (#68)
+- [x] P3.8 Record evidence and queue closeout (#68)
 
 Acceptance criteria:
 
@@ -300,6 +300,10 @@ P3.5 status: topology covers all 160 blocks (500 pairs), the public road layer
 has 44 sections (59.6 km), and the managed-area patch account runs. Route
 configuration is explicitly unavailable because destination, eligibility,
 access and cost inputs are missing.
+
+P3.8 status: `notes/reports/p3-closeout.md` records the parity table, counts,
+run summaries, target status and gaps. The phase pull request is queued for
+maintainer approval; P3 is not merged.
 
 ## Phase 4: Verification and scenarios
 
