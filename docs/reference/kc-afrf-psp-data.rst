@@ -420,6 +420,19 @@ It produces BA, TPH, QMD and large-tree BA curves only. It does not generate
 volume, canopy cover, treatment response or a compiled ws4 dataset. The 30-year
 projection is an extrapolation; no 30-year observed validation exists.
 
+Regional space-for-time panel
+-----------------------------
+
+``data/psp/idf_cariboo_space_for_time_plots.csv`` and
+``idf_cariboo_space_for_time_curves.csv`` hold 92 stratified IDF visit states
+from the Williams Lake and 100 Mile House TSAs. They span projected ages
+44–239 years and 5.3–52.5 m²/ha BA, with 50-year no-cut FVS-BC curves at
+10-year steps.
+
+This is a space-for-time substitution, not a growth chronology. Repeated visits
+are not independent plots, and the curves are not observed 50-year growth. It
+fills the yield-domain gap without pretending to be a KC chronology.
+
 What it unblocks
 ----------------
 

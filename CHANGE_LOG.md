@@ -388,3 +388,9 @@ status and the GitHub issue comments.
   treatments, 174 curves and 549 points. `ws4 ingest` succeeds and
   `ws4 validate` passes. Curves cover 0–30 years only; the 300-year extension,
   accounts, roads, pin and ForestModelXML remain open.
+- P3.3a space-for-time PSP panel: added
+  `runbooks/build_psp_space_for_time.py` and public IDF Cariboo tables.
+  Across 338 IDF plots and 697 visits, 590 visit states pass the screen;
+  92 stratified states (age 44–239, BA 5.3–52.5 m²/ha) have 50-year no-cut
+  FVS-BC curves. This is a space-for-time design, not a growth chronology and
+  not a KC CFI. H-matrix integration remains open.
