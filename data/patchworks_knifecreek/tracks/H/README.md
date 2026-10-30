@@ -1,54 +1,33 @@
-# Knife Creek H matrix
+# Knife Creek Patchworks-compatible package
 
-Status: **scaffold with space-for-time feature curves; product curves remain 30 years.**
+Status: **intermediate ws4 source tables; this is not a Patchworks model.**
 
-Generated from `ws4/dataset_kc_spatial_v3`, then feature curves were replaced by
-nearest-neighbour IDF Cariboo space-for-time FVS-BC curves (132 site states).
+## Contents
 
-## Tables
+| File | Purpose |
+| --- | --- |
+| `spatial/fragments.shp` | 160 VRI blocks clipped to SUP S15382, EPSG:3005 |
+| `fragments.csv` | Derived fragment attributes |
+| `spatial/topo_fragments.csv` | Block pair distances and shared boundary lengths |
+| `spatial/roads.gpkg` | 44 public BC Forest Tenure road sections, clipped to SUP |
+| `analysis/patch_accounts.yaml` | Structural adjacency patch account |
+| `../../ws4/targets_kc_smoke.yaml` | Runnable smoke targets |
+| `../../ws4/targets_kc_gwm2007.yaml` | Draft GWM structural targets, not legal compliance |
+| `tracks/H/` | 160 blocks, 92 tracks, 49 treatments, feature/product curves |
 
-- 160 blocks
-- 92 tracks
-- 49 treatments
-- 5,109 curve points
-- 460 feature rows: 5 labels × 92 tracks
-- 49 product rows
-- 6 account rows
-- space-for-time mapping: `space_for_time_mapping.csv`
+## Keys and features
 
-Feature labels:
-
-- `feature.habitat.basal_area`
-- `feature.habitat.qmd`
-- `feature.habitat.tph`
-- `feature.habitat.canopy_ccf`
-- `feature.yield.managed.total`
-
-`ws4 ingest --matrix .../tracks/H --fragments .../fragments.csv` succeeds, and
-`ws4 validate` passes.
-
-## Horizon
-
-- Feature curves: 0–100 years at 10-year steps.
-- Product area curves: 0–100 years.
-- Product yield curves: point yields from the existing GWM treatment runs.
-
-The horizons differ. Do not present this as a 300-year matrix.
-
-## Mapping
-
-Each unique canonical track state is matched to one FAIB IDF space-for-time
-site state by BA/QMD midpoint. The panel uses one first-measurement state per
-site, not repeated visits. All HMZ variants of the same state share the same
-feature curves. See `space_for_time_mapping.csv`.
+- `RES_KEY` / `BLOCK` — stable block id, 1–160
+- `TRACK` — initial ws4 state track
+- `POLY_ID` — VRI polygon id
+- feature curves: BA, QMD, TPH, canopy, volume, area
+- product curves: area and point yield
 
 ## Limits
 
-- Feature curves are regional space-for-time FVS-BC projections, not KC
-  chronology and not a KC CFI.
-- Product curves are still the original 30-year structural runs.
-- No large-tree-BA feature is claimed from this panel.
-- Accounts are minimal `_MANAGED_` rows; full product/feature account wiring is
-  P3.4.
-- No roads, patch accounts, pin or ForestModelXML.
-- No clearcut treatment.
+- Patches are currently based on managed area, not a seral/opening feature.
+- No road route configuration or haul cost yet.
+- Product yield curves are point estimates from the existing GWM runs.
+- Feature curves are 100-year regional space-for-time FVS-BC projections, not KC chronology.
+- No ForestModelXML; see `../../notes/reference/patchworks-forestmodelxml-format-spike.md`.
+- No legal-compliance claim.

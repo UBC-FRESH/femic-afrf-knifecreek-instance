@@ -2,7 +2,7 @@
 
 Date: 2026-10-29
 Task: P3.1 / issue #61
-Status: **H-matrix lane buildable; ForestModelXML blocked**
+Status: **out of scope for KC ws4; K3Z template exists**
 
 ## Question
 
@@ -23,7 +23,8 @@ from the material in this repository?
 
 ## Decision
 
-Proceed with the **compiled H-matrix lane**:
+The KC deliverable is a ws4 dataset, not a Patchworks model. Proceed with the
+**compiled source-matrix lane**:
 
 - `fragments.shp`;
 - `tracks/H/` tables;

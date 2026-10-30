@@ -15,7 +15,7 @@ after its parent issue exists and the maintainer approves it.
 | P0 Bootstrap and growth-engine contract | #1 | `feature/p0-bootstrap` | complete |
 | P1 Data acquisition and stem lists | #7 | `feature/p1-data-acquisition` | active |
 | P2 FVS-BC state-transition library | TBD | `feature/p2-state-library` | planned |
-| P3 Patchworks-compatible KC package | #60 | `feature/p3-patchworks-package` | active |
+| P3 ws4 instance assembly | #60 | `feature/p3-patchworks-package` | active |
 | P4 Verification and scenarios | TBD | `feature/p4-verification` | planned |
 | P5 Release v0.1 | TBD | `feature/p5-release` | planned |
 | P6 Maintain and merge readiness | TBD | `feature/p6-maintain` | planned |
@@ -250,51 +250,42 @@ Acceptance criteria:
 - The library validates against the ws4 schema.
 - The known limits of FVS-BC and the wrapper are recorded.
 
-## Phase 3: Patchworks-compatible Knife Creek package
+## Phase 3: ws4 instance assembly
 
 Parent issue: #60
 Branch: `feature/p3-patchworks-package`
 Status: active
 
-Goal: build a Patchworks-compatible Knife Creek package (fragments, tracks/H
-matrix, product and feature accounts, topology, roads, pin, ForestModelXML,
-targets), ingest it into ws4, and run the baseline, selection, reports and web
-UI.
+Goal: assemble the Knife Creek ws4 model from the source tables: block input
+layer, tracks, treatments, curves, product/feature accounts, topology, patch
+accounts, targets, baseline and selection runs, reports and web UI.
 
-- [ ] P3.1 Format spike and ForestModelXML decision (#61)
-- [x] P3.2 Build `fragments.shp` and stable block identity (#62)
-- [x] P3.3 Build `tracks/H` matrix and 30–50-year selection-rotation curves (#63)
-- [ ] P3.4 Build product, feature, accounts and protoaccounts (#64)
+- [x] P3.1 Defer the legacy Patchworks recipe lane; it is not a KC ws4 deliverable (#61)
+- [x] P3.2 Build the block input layer and stable block identity (#62)
+- [x] P3.3 Build source track, treatment and curve tables (#63)
+- [ ] P3.4 Complete product, feature, accounts and protoaccounts (#64)
 - [ ] P3.5 Build topology, roads and patch accounts (#65)
-- [x] P3.6 Build pin, scenarios and targets (#66)
-- [ ] P3.7 Ingest, validate, run, report and serve (#67)
-- [ ] P3.8 Record parity evidence and close out (#68)
+- [x] P3.6 Build targets, schedules and scenarios (#66)
+- [x] P3.7 Ingest, validate, run, report and serve (#67)
+- [ ] P3.8 Record evidence and close out (#68)
 
 Acceptance criteria:
 
-- A Patchworks-compatible package exists with the documented spatial and
-  matrix layers.
-- `ws4 ingest` produces a dataset that passes `ws4 validate`.
-- Product and feature accounts resolve for every target.
-- Topology, roads and patch accounts exist or their absence is explicitly
-  recorded.
-- A no-cut baseline and a selection scenario produce reports.
-- The web UI serves the dataset, runs and targets.
+- `ws4/dataset_kc_h_v1` is the compiled ws4 dataset.
+- `ws4 validate` accepts the dataset.
+- `ws4 simulate` produces a no-cut baseline and a selection-smoke run.
+- `ws4 report` writes target status for both runs.
+- `ws4 serve` exposes the dataset, runs, targets, topology and patch accounts.
+- Product and feature accounts resolve for every active target.
 - No clearcut and no legal-compliance claim.
 
-P3.1 status: the compiled H-matrix lane is buildable. ForestModelXML is blocked
-because no valid example, schema or compiler is available; see
-`notes/reference/patchworks-forestmodelxml-format-spike.md`. Do not claim recipe
-parity until that changes.
+P3.1 status: the legacy Patchworks/ForestModelXML lane is deferred. KC is a ws4
+instance bootstrapped from source data; Patchworks is only Gavin's legacy
+reference. No KC Patchworks recipe is a deliverable.
 
-P3.3 status: met with limits. The H feature layer uses 100-year IDF Cariboo
-space-for-time curves for six labels; product area curves are 100-year and
-product yield remains a point estimate. The H
-matrix ingests and validates. Topology, public roads, a structural patch account, a pin, scenarios and
-smoke/GWM target drafts are now present. Route configuration, large-tree/reserve
-accounts, softwood/hardwood split, full group accounts and ForestModelXML remain
-open. The feature and product horizons differ and
-are declared.
+P3.7 status: compiled dataset, baseline/selection runs and reports exist under
+`ws4/dataset_kc_h_v1` and `ws4/runtime/kc_h`; the web service is running on
+port 8766. P3.4/P3.5 remain partial.
 
 ## Phase 4: Verification and scenarios
 

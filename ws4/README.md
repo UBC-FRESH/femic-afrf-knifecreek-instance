@@ -68,8 +68,10 @@ spatial reserve class; `block_features.csv` and
 scenario. `ws4 validate` passes. It is closer to a KC dataset but still uses
 PSP-derived tree lists, not KC CFI. See `dataset_kc_spatial_v3/README.md`.
 
-The contract is in `state_transition_contract.md`; the target and
-patch-account files remain templates.
+The current compiled ws4 model is `dataset_kc_h_v1/`: 160 blocks, 92 tracks,
+49 treatments, 100-year feature curves and 30-year point product curves. It
+validates, has baseline/selection-smoke runs under `runtime/kc_h/`, and is
+served by the ws4 web UI. The contract is in `state_transition_contract.md`.
 
 ## Planned files
 

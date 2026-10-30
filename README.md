@@ -31,8 +31,10 @@ are acquired; GWM 2007 is the default basis and Table 29 is a named AFRF
 alternative. The georeferenced site-series map and the legal UWR/HMZ spatial
 layer are still blocked under P1.2a (#15). A public
 PSP-derived IDF Cariboo stem-list analog is committed under `data/psp/` for the
-interim FVS-BC pilot; the KC CFI is still preferred. The repository does **not**
-yet carry a calibrated FVS-BC library or a runnable ws4 dataset. See
+interim FVS-BC pilot; the KC CFI is still preferred. The repository now carries a compiled structural ws4 dataset at
+`ws4/dataset_kc_h_v1`, a no-cut baseline, a selection-smoke run, reports and a
+web service. It is still **not calibrated** and is not a legal-compliance
+model. See
 `ROADMAP.md` and `CHANGE_LOG.md`. The persistent session record is
 `notes/reports/2026-10-27-public-data-and-fvsbc-handoff.md`.
 

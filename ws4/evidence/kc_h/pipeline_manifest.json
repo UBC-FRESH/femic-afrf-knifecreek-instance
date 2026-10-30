@@ -1,0 +1,18 @@
+{
+  "phase": "P3.7",
+  "dataset": "ws4/dataset_kc_h_v1",
+  "years": 10,
+  "baseline_schedule": "ws4/runtime/kc_h/kc_baseline_no_cut.csv",
+  "selection_schedule": "ws4/runtime/kc_h/kc_selection_smoke.csv",
+  "runs": [
+    "baseline_no_cut",
+    "selection_smoke"
+  ],
+  "serve": "ws4 serve --dataset ws4/dataset_kc_h_v1 --runs ws4/runtime/kc_h --targets ws4/targets_kc_smoke.yaml --geometry ws4/runtime/kc_h/kc_blocks.geojson --topology ws4/topology.csv --patch-accounts ws4/patch_accounts.yaml --port 8766",
+  "caveats": [
+    "Structural model, not a calibrated KC growth model.",
+    "Selection smoke applies the first available treatment to every block at offset 0.",
+    "Product yield curves are point estimates; features are 100-year space-for-time curves.",
+    "Patch account uses managed area, not a seral/opening criterion."
+  ]
+}
