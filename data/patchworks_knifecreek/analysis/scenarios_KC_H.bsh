@@ -1,0 +1,32 @@
+/*
+ * Knife Creek selection-only scenarios.
+ * Structural examples, not legal compliance or an approved management plan.
+ */
+double default_improvement = 0.05;
+
+void kc_clear() {
+  clearTargets();
+  control.cancelTreatments();
+}
+
+void run_baseline_no_cut(double improvement) {
+  kc_clear();
+  analyze("KC/baseline-no-cut", 5000, improvement);
+}
+
+void run_selection_smoke(double improvement) {
+  kc_clear();
+  setActive("feature.habitat.basal_area", true, true, false);
+  setMinimumPeriodic("feature.habitat.basal_area", 16, 1, 10);
+  setMinWeight("feature.habitat.basal_area", 1, 1, 10);
+  setActive("feature.yield.managed.total", true, true, false);
+  setMinimumPeriodic("feature.yield.managed.total", 0, 10, 10);
+  setMinWeight("feature.yield.managed.total", 1, 10, 10);
+  setActive("product.yield.managed.total", true, true, false);
+  setMinimumPeriodic("product.yield.managed.total", 0, 1, 10);
+  setMinWeight("product.yield.managed.total", 1, 1, 10);
+  analyze("KC/selection-smoke", 5000, improvement);
+}
+
+void run_baseline_no_cut() { run_baseline_no_cut(default_improvement); }
+void run_selection_smoke() { run_selection_smoke(default_improvement); }

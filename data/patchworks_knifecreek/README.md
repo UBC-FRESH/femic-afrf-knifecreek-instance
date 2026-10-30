@@ -10,7 +10,12 @@ Status: **fragment layer, H matrix, topology, roads and structural patch account
 | `fragments.csv` | Derived fragment attributes |
 | `spatial/topo_fragments.csv` | Block pair distances and shared boundary lengths |
 | `spatial/roads.gpkg` | 44 public BC Forest Tenure road sections, clipped to SUP |
+| `analysis/KC_H.pin` | Patchworks control surface: horizon, topology, patches |
+| `analysis/scenarios_KC_H.bsh` | Structural baseline and selection scenarios |
+| `analysis/RATIO_ACCOUNTS.bsh` | Placeholder ratio accounts |
 | `analysis/patch_accounts.yaml` | Structural adjacency patch account |
+| `../../ws4/targets_kc_smoke.yaml` | Runnable smoke targets |
+| `../../ws4/targets_kc_gwm2007.yaml` | Draft GWM structural targets, not legal compliance |
 | `tracks/H/` | 160 blocks, 92 tracks, 49 treatments, feature/product curves |
 
 ## Keys and features

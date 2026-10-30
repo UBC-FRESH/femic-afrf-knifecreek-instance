@@ -423,3 +423,8 @@ status and the GitHub issue comments.
   managed-area patch account. `ws4 simulate --topology --patch-accounts` writes
   patch membership and metrics. Roads are public-derived, not field-verified;
   route configuration remains open.
+- P3.6 pin, scenarios and targets: added `KC_H.pin`, `scenarios_KC_H.bsh`,
+  `RATIO_ACCOUNTS.bsh`, structural patch targets, `ws4/targets_kc_smoke.yaml`
+  and a draft `ws4/targets_kc_gwm2007.yaml`. The GWM draft explicitly lacks
+  large-tree, reserve, maximum-DBH and seral accounts and is not legal
+  compliance.

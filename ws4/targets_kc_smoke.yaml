@@ -1,0 +1,19 @@
+# Structural smoke targets; not a management or legal target set.
+# The H matrix has feature and product area/yield accounts but no large-tree,
+# reserve, softwood/hardwood or seral accounts yet.
+targets:
+  - account: product.yield.managed.total
+    period: 1
+    minimum: 0
+    period_width: 10
+    min_weight: 1.0
+  - account: feature.yield.managed.total
+    period: 10
+    minimum: 0
+    period_width: 10
+    min_weight: 1.0
+  - account: feature.habitat.basal_area
+    period: 1
+    minimum: 0
+    period_width: 10
+    min_weight: 1.0
