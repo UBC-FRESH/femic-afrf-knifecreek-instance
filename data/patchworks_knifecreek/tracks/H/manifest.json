@@ -3,18 +3,25 @@
   "blocks": 160,
   "tracks": 92,
   "treatments": 49,
-  "curves": 174,
-  "curve_points": 549,
-  "features": 147,
+  "curves": 509,
+  "curve_points": 2809,
+  "features": 460,
   "products": 49,
   "horizon_years": 30,
   "period_years": 10,
-  "status": "matrix-scaffold-30-year-curves",
+  "status": "matrix-scaffold-space-for-time-features",
   "caveats": [
-    "Curves currently cover years 0-30 only; the 300-year extension is not generated.",
-    "accounts.csv and protoaccounts.csv are empty; product/feature account wiring is P3.4.",
-    "No clearcut treatment exists.",
-    "No ForestModelXML is claimed.",
-    "The source is dataset_kc_spatial_v3, which is a structural PSP-derived library."
-  ]
+    "Feature curves are regional FAIB IDF space-for-time FVS-BC runs.",
+    "Product curves remain the existing 30-year GWM treatment runs.",
+    "Feature and product horizons differ (50 vs 30 years).",
+    "Space-for-time is not a growth chronology and not a KC CFI.",
+    "No large-tree-BA feature is claimed from this panel."
+  ],
+  "feature_horizon_years": 50,
+  "product_horizon_years": 30,
+  "feature_curves": 460,
+  "feature_rows": 460,
+  "product_curves": 49,
+  "space_for_time_mapping": "space_for_time_mapping.csv",
+  "accounts": 6
 }

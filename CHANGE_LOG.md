@@ -394,3 +394,8 @@ status and the GitHub issue comments.
   92 stratified states (age 44–239, BA 5.3–52.5 m²/ha) have 50-year no-cut
   FVS-BC curves. This is a space-for-time design, not a growth chronology and
   not a KC CFI. H-matrix integration remains open.
+- P3.3b H feature integration: added `runbooks/integrate_psp_space_for_time.py`
+  and mapped the 92 IDF Cariboo space-for-time states to the H track states.
+  Feature curves now cover 0–50 years for BA, QMD, TPH, canopy and volume;
+  products remain 0–30 years. `ws4 ingest` succeeds and `ws4 validate` passes.
+  The mismatch in horizon and the minimal accounts remain explicit.

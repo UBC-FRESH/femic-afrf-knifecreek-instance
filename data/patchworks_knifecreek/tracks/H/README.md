@@ -1,31 +1,52 @@
-# Knife Creek H matrix scaffold
+# Knife Creek H matrix
 
-Status: **scaffold; curves cover 30 years, not 300.**
+Status: **scaffold with space-for-time feature curves; product curves remain 30 years.**
 
-Generated from `ws4/dataset_kc_spatial_v3`.
+Generated from `ws4/dataset_kc_spatial_v3`, then feature curves were replaced by
+nearest-neighbour IDF Cariboo space-for-time FVS-BC curves.
 
 ## Tables
 
 - 160 blocks
 - 92 tracks
 - 49 treatments
-- 174 curves, 549 points
-- 147 feature rows
+- 2,809 curve points
+- 460 feature rows: 5 labels × 92 tracks
 - 49 product rows
-- empty accounts/protoaccounts (P3.4)
-- 160 groups
+- 6 account rows
+- space-for-time mapping: `space_for_time_mapping.csv`
 
-`ws4 ingest --matrix data/patchworks_knifecreek/tracks/H --fragments data/patchworks_knifecreek/fragments.csv` succeeds, and `ws4 validate` passes.
+Feature labels:
+
+- `feature.habitat.basal_area`
+- `feature.habitat.qmd`
+- `feature.habitat.tph`
+- `feature.habitat.canopy_ccf`
+- `feature.yield.managed.total`
+
+`ws4 ingest --matrix .../tracks/H --fragments .../fragments.csv` succeeds, and
+`ws4 validate` passes.
+
+## Horizon
+
+- Feature curves: 0–50 years at 10-year steps.
+- Product curves: existing 0–30 year GWM treatment runs.
+
+The horizons differ. Do not present this as a 300-year matrix.
+
+## Mapping
+
+Each unique canonical track state is matched to one FAIB IDF space-for-time
+state by BA/QMD midpoint. All HMZ variants of the same state share the same
+feature curves. See `space_for_time_mapping.csv`.
 
 ## Limits
 
-- Curves are years 0–30 only. The 300-year extension is not generated and is
-  not simulated by repeating the 30-year curve.
-- Product and feature accounts are not yet wired.
+- Feature curves are regional space-for-time FVS-BC projections, not KC
+  chronology and not a KC CFI.
+- Product curves are still the original 30-year structural runs.
+- No large-tree-BA feature is claimed from this panel.
+- Accounts are minimal `_MANAGED_` rows; full product/feature account wiring is
+  P3.4.
 - No roads, patch accounts, pin or ForestModelXML.
 - No clearcut treatment.
-- The source library is structural and PSP-derived, not KC-calibrated.
-
-## Generator
-
-`runbooks/build_kc_patchworks_h.py`

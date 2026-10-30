@@ -287,10 +287,11 @@ because no valid example, schema or compiler is available; see
 `notes/reference/patchworks-forestmodelxml-format-spike.md`. Do not claim recipe
 parity until that changes.
 
-P3.3 status: the H matrix scaffold ingests and validates, but its curves cover
-0–30 years. A 92-state IDF Cariboo space-for-time panel now provides 50-year
-curves across 44–239 projected years and 5.3–52.5 m²/ha BA. H-matrix
-integration, account wiring and the 300-year question remain open.
+P3.3 status: the H matrix feature layer now uses 50-year IDF Cariboo
+space-for-time curves for five feature labels; product curves remain 30 years.
+The H matrix ingests and validates. Full product/feature accounts, roads,
+topology, pin and ForestModelXML remain open. The feature and product horizons
+differ and are declared.
 
 ## Phase 4: Verification and scenarios
 
