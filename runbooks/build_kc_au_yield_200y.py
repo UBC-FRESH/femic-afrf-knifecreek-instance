@@ -135,7 +135,30 @@ def _tree_metrics(frame: pd.DataFrame) -> dict[str, float]:
     }
 
 
-def _keywords() -> list[Keyword]:
+def _calibration_keywords(path: Path) -> list[Keyword]:
+    """Return BAIMULT/MORTMULT keywords from a calibration file."""
+    parameters = json.loads(path.read_text())
+    groups = {"FD": ("FD",), "SE": ("SE",), "PL": ("PL",), "HW": ("EP", "AT", "OH")}
+    ba = {
+        species: parameters["ba_multiplier"][group]
+        for group, species_plan in groups.items()
+        for species in species_plan
+    }
+    mort = {
+        species: parameters["mortality_multiplier"][group]
+        for group, species_plan in groups.items()
+        for species in species_plan
+    }
+    return [
+        *[Keyword("BAIMULT", ("1", species, f"{value:.4f}")) for species, value in ba.items()],
+        *[
+            Keyword("MORTMULT", ("1", species, f"{value:.4f}", "0", "999"))
+            for species, value in mort.items()
+        ],
+    ]
+
+
+def _keywords(calibration: Path | None = None) -> list[Keyword]:
     """Return the no-cut 200-year FVS-BC key set."""
     return [
         Keyword("DATABASE", (), ("DSNOut", "FVSOut.db", "Summary", "TREELIDB")),
@@ -149,6 +172,7 @@ def _keywords() -> list[Keyword]:
         Keyword("NUMCYCLE", (str(HORIZON_YEARS // STEP_YEARS),)),
         Keyword("RANNSEED", ("1",)),
         *[Keyword("TREELIST", (str(cycle),)) for cycle in range(1, 21)],
+        *(_calibration_keywords(calibration) if calibration else []),
         Keyword("PROCESS"),
         Keyword("STOP"),
     ]
@@ -162,6 +186,7 @@ def main() -> None:
     parser.add_argument("--raw-dir", type=Path, required=True)
     parser.add_argument("--out-dir", type=Path, required=True)
     parser.add_argument("--plots-per-au", type=int, default=5)
+    parser.add_argument("--calibration", type=Path)
     args = parser.parse_args()
 
     au = pd.read_csv(args.au_table)
@@ -242,7 +267,7 @@ def main() -> None:
             if not records:
                 continue
             case_dir = run_root / f"{au_row.au_id}__{state_series['CLSTR_ID']}"
-            result = run_case(records, _keywords(), directory=case_dir)
+            result = run_case(records, _keywords(args.calibration), directory=case_dir)
             summary = read_table(result.database, "FVS_Summary_Metric").sort_values("Year")
             summary = summary[summary["CaseID"] == result.provenance.case_id]
             tree_list = read_table(result.database, "FVS_TreeList_Metric")
@@ -325,6 +350,7 @@ def main() -> None:
         "horizon_years": HORIZON_YEARS,
         "step_years": STEP_YEARS,
         "plots_per_au": args.plots_per_au,
+        "calibration": str(args.calibration) if args.calibration else None,
         "aus": len(au),
         "matched_plots": len(matches),
         "curve_rows": len(curves),
@@ -333,7 +359,10 @@ def main() -> None:
             "No-cut FVS-BC curves, not observed 200-year growth.",
             "Site index and tree age are structural inputs from the FAIB panel.",
             "AU matching is BEC + leading species + SI band, then nearest SI.",
-            "No KC calibration or legal-compliance claim.",
+            "V1 PSP calibration applied as a sensitivity."
+            if args.calibration
+            else "No KC calibration applied.",
+            "Not a legal-compliance claim.",
         ],
     }
     (args.out_dir / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")

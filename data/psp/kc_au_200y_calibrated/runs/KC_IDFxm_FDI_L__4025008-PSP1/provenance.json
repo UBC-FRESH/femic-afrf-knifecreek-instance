@@ -1,0 +1,14 @@
+{
+  "fresh_fvsbc_version": "0.20.0",
+  "pyfvs_commit": "e95172b",
+  "fvs_source_commit": "ef5fa847",
+  "variant": "bc",
+  "variant_list": [
+    "BC"
+  ],
+  "keyword_set_hash": "sha256:cc890c990ce4578fcbd3175696d47effe58a81bff4ccaae105074a7cbad8d446",
+  "treelist_hash": "sha256:9f3826c4cabe36c3227e27c7312136c914f74d3ee2cb40b9181f8e7d10fca6ae",
+  "case_id": "75e14861-c735-43c9-b354-3091297174ac",
+  "run_datetime": "2026-10-30-15:55:31",
+  "random_seed": 1
+}

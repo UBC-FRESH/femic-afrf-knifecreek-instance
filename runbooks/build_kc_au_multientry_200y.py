@@ -162,7 +162,35 @@ def _records(state: pd.Series, trees: pd.DataFrame) -> list[dict[str, object]]:
     return records
 
 
-def _keywords(site_index: float, regime: str, au_id: str | None = None) -> list[Keyword]:
+def _calibration_keywords(path: Path) -> list[Keyword]:
+    """Return BAIMULT/MORTMULT keywords from a calibration file."""
+    parameters = json.loads(path.read_text())
+    groups = {"FD": ("FD",), "SE": ("SE",), "PL": ("PL",), "HW": ("EP", "AT", "OH")}
+    ba = {
+        species: parameters["ba_multiplier"][group]
+        for group, species_plan in groups.items()
+        for species in species_plan
+    }
+    mort = {
+        species: parameters["mortality_multiplier"][group]
+        for group, species_plan in groups.items()
+        for species in species_plan
+    }
+    return [
+        *[Keyword("BAIMULT", ("1", species, f"{value:.4f}")) for species, value in ba.items()],
+        *[
+            Keyword("MORTMULT", ("1", species, f"{value:.4f}", "0", "999"))
+            for species, value in mort.items()
+        ],
+    ]
+
+
+def _keywords(
+    site_index: float,
+    regime: str,
+    au_id: str | None = None,
+    calibration: Path | None = None,
+) -> list[Keyword]:
     """Return the 200-year multi-entry key set."""
     spec = REGIMES[regime]
     q_target = Q_BY_AU.get((au_id, regime), spec["q"]) if au_id else spec["q"]
@@ -225,6 +253,7 @@ def _keywords(site_index: float, regime: str, au_id: str | None = None) -> list[
         *[Keyword("TREELIST", (str(cycle),)) for cycle in range(1, 21)],
         *[Keyword("ATRTLIST", (str(cycle),)) for cycle in CYCLES],
         *thinning,
+        *(_calibration_keywords(calibration) if calibration else []),
         Keyword("PROCESS"),
         Keyword("STOP"),
     ]
@@ -239,6 +268,7 @@ def main() -> None:
     parser.add_argument("--raw-dir", type=Path, required=True)
     parser.add_argument("--out-dir", type=Path, required=True)
     parser.add_argument("--regime", choices=sorted(REGIMES), default="GWM_MODERATE")
+    parser.add_argument("--calibration", type=Path)
     args = parser.parse_args()
 
     au = pd.read_csv(args.au_table).set_index("au_id")
@@ -291,7 +321,12 @@ def main() -> None:
                 continue
             result = run_case(
                 records,
-                _keywords(float(au_row.site_index_median), args.regime, au_id),
+                _keywords(
+                    float(au_row.site_index_median),
+                    args.regime,
+                    au_id,
+                    args.calibration,
+                ),
                 directory=run_root / f"{au_id}__{match.CLSTR_ID}",
             )
             summary = read_table(result.database, "FVS_Summary_Metric").sort_values("Year")
@@ -424,12 +459,16 @@ def main() -> None:
         "regime": args.regime,
         "horizon_years": HORIZON_YEARS,
         "entries": list(zip(CYCLES, ENTRY_YEARS, strict=True)),
+        "calibration": str(args.calibration) if args.calibration else None,
         "aus": int(curves["au_id"].nunique()),
         "curve_rows": len(curves),
         "caveats": [
             "Six entries, then residual growth to 200 years.",
             "Residual x=0 uses ATBA, ATQMD, ATCCF and pre-cut minus removed TPH/volume.",
-            "No calibration or legal-compliance claim.",
+            "V1 PSP calibration applied as a sensitivity."
+            if args.calibration
+            else "No KC calibration applied.",
+            "Not a legal-compliance claim.",
         ],
     }
     pd.DataFrame(plot_rows).to_csv(

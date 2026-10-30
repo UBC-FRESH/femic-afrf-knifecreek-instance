@@ -1,0 +1,1111 @@
+
+
+     FOREST VEGETATION SIMULATOR     VERSION unknown                          -- BC             RV:unknown     10-30-2026  15:57:41
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+                                                OPTIONS SELECTED BY INPUT
+
+KEYWORD FILE NAME: run
+----------------------------------------------------------------------------------------------------------------------------------
+KEYWORD    PARAMETERS:
+--------   -----------------------------------------------------------------------------------------------------------------------
+
+DATABASE   DATABASE KEYWORDS:
+
+DSNOUT     DSN FOR OUTPUT DATA BASE IS FVSOut.db
+
+SUMMARY    SUMMARY STATISTICS SENT TO DATABASE.
+
+TREELIDB   TREE INFORMATION FROM OUTPUT SENT TO SPECIFIED DATABASE.
+           CREATE TEXT FILE REPORT: YES
+           SPECIES CODE OUTPUT FORMAT: NORMAL  
+
+ATRTLIDB   TREE INFORMATION FROM OUTPUT SENT TO SPECIFIED DATABASE.
+           SPECIES CODE OUTPUT FORMAT: NORMAL  
+           CREATE TEXT FILE REPORT: YES
+
+END        END OF DATA BASE OPTIONS.
+
+STDIDENT
+           STAND ID= KC-AU-GWM_LOW-MULTI-200Y                                                                                  
+
+********   FVS03 WARNING:  FOREST CODE INDICATES THE GEOGRAPHIC LOCATION IS OUTSIDE THE RANGE OF THE MODEL.  DEFAULT CODE IS USED.
+
+STDINFO    BEC=ICHmw2/01      ; AGE=    0; ASPECT AZIMUTH IN DEGREES= 200.; SLOPE=  35.%
+           ELEVATION (M)=   16.0; REFERENCE CODE=     
+
+MANAGED    DATE/CYCLE=    0; MANAGED = 1 (YES)
+
+SITECODE   SITE INDEX SPECIES= FD  (CODE=   3);  SITE CODE FOR LARGE AND SMALL TREES=    11.3
+
+INVYEAR    INVENTORY YEAR=    0
+
+DESIGN     BASAL AREA FACTOR=    0.0; INVERSE OF FIXED PLOT AREA=    1.0; BREAK DBH=  999.0
+           NUMBER OF PLOTS=     1; NON-STOCKABLE PLOTS=     0; STAND SAMPLING WEIGHT=     1.00000
+           PROPORTION OF STAND CONSIDERED STOCKABLE=  1.000
+           SEE "OPTIONS SELECTED BY DEFAULT" FOR FINAL DESIGN VALUES.
+
+TIMEINT    ALL CYCLES;  PERIOD LENGTH= 10
+
+NUMCYCLE   NUMBER OF CYCLES= 20
+
+RANNSEED   RANDOM SEED IS:           1.0
+
+TREELIST   DATE/CYCLE=    1; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+TREELIST   DATE/CYCLE=    2; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+TREELIST   DATE/CYCLE=    3; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+TREELIST   DATE/CYCLE=    4; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+TREELIST   DATE/CYCLE=    5; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+TREELIST   DATE/CYCLE=    6; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+TREELIST   DATE/CYCLE=    7; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+TREELIST   DATE/CYCLE=    8; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+TREELIST   DATE/CYCLE=    9; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+TREELIST   DATE/CYCLE=   10; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+TREELIST   DATE/CYCLE=   11; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+TREELIST   DATE/CYCLE=   12; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+TREELIST   DATE/CYCLE=   13; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+TREELIST   DATE/CYCLE=   14; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+TREELIST   DATE/CYCLE=   15; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+TREELIST   DATE/CYCLE=   16; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+TREELIST   DATE/CYCLE=   17; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+TREELIST   DATE/CYCLE=   18; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+TREELIST   DATE/CYCLE=   19; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+TREELIST   DATE/CYCLE=   20; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+ATRTLIST   DATE/CYCLE=    4; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+ATRTLIST   DATE/CYCLE=    7; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+ATRTLIST   DATE/CYCLE=   10; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+ATRTLIST   DATE/CYCLE=   13; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+ATRTLIST   DATE/CYCLE=   16; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+ATRTLIST   DATE/CYCLE=   19; DATA SET REFERENCE NUMBER =  3.; HEADING SUPPRESSION CODE = 0.
+           (0=WITH HEADING, OTHER VALUES=SUPPRESS HEADING).
+
+THINABA    DATE/CYCLE=    4; RESIDUAL=    6.00; PROPORTION OF SELECTED TREES REMOVED= 1.000
+           DBH OF REMOVED TREES WILL RANGE FROM  37.5 TO  50.0 CMS, AND
+           HEIGHT OF REMOVED TREES WILL RANGE FROM   0.0 TO 999.0 METERS.
+
+THINABA    DATE/CYCLE=    4; RESIDUAL=    1.60; PROPORTION OF SELECTED TREES REMOVED= 1.000
+           DBH OF REMOVED TREES WILL RANGE FROM  50.0 TO 999.0 CMS, AND
+           HEIGHT OF REMOVED TREES WILL RANGE FROM   0.0 TO 999.0 METERS.
+
+THINQFA    DATE/CYCLE=    4; MINIMUM      2.5; MAXIMUM     37.5
+           ALL SPECIES (CODE=   0) ARE TARGETED FOR THIS CUT.
+           Q FACTOR=    1.550
+           DIA. CLASS WIDTH=    5.0
+           TARGET BA=   43.6
+
+THINABA    DATE/CYCLE=    7; RESIDUAL=    6.00; PROPORTION OF SELECTED TREES REMOVED= 1.000
+           DBH OF REMOVED TREES WILL RANGE FROM  37.5 TO  50.0 CMS, AND
+           HEIGHT OF REMOVED TREES WILL RANGE FROM   0.0 TO 999.0 METERS.
+
+THINABA    DATE/CYCLE=    7; RESIDUAL=    1.60; PROPORTION OF SELECTED TREES REMOVED= 1.000
+           DBH OF REMOVED TREES WILL RANGE FROM  50.0 TO 999.0 CMS, AND
+           HEIGHT OF REMOVED TREES WILL RANGE FROM   0.0 TO 999.0 METERS.
+
+THINQFA    DATE/CYCLE=    7; MINIMUM      2.5; MAXIMUM     37.5
+           ALL SPECIES (CODE=   0) ARE TARGETED FOR THIS CUT.
+           Q FACTOR=    1.550
+           DIA. CLASS WIDTH=    5.0
+           TARGET BA=   43.6
+
+THINABA    DATE/CYCLE=   10; RESIDUAL=    6.00; PROPORTION OF SELECTED TREES REMOVED= 1.000
+           DBH OF REMOVED TREES WILL RANGE FROM  37.5 TO  50.0 CMS, AND
+           HEIGHT OF REMOVED TREES WILL RANGE FROM   0.0 TO 999.0 METERS.
+
+THINABA    DATE/CYCLE=   10; RESIDUAL=    1.60; PROPORTION OF SELECTED TREES REMOVED= 1.000
+           DBH OF REMOVED TREES WILL RANGE FROM  50.0 TO 999.0 CMS, AND
+           HEIGHT OF REMOVED TREES WILL RANGE FROM   0.0 TO 999.0 METERS.
+
+THINQFA    DATE/CYCLE=   10; MINIMUM      2.5; MAXIMUM     37.5
+           ALL SPECIES (CODE=   0) ARE TARGETED FOR THIS CUT.
+           Q FACTOR=    1.550
+           DIA. CLASS WIDTH=    5.0
+           TARGET BA=   43.6
+
+THINABA    DATE/CYCLE=   13; RESIDUAL=    6.00; PROPORTION OF SELECTED TREES REMOVED= 1.000
+           DBH OF REMOVED TREES WILL RANGE FROM  37.5 TO  50.0 CMS, AND
+           HEIGHT OF REMOVED TREES WILL RANGE FROM   0.0 TO 999.0 METERS.
+
+THINABA    DATE/CYCLE=   13; RESIDUAL=    1.60; PROPORTION OF SELECTED TREES REMOVED= 1.000
+           DBH OF REMOVED TREES WILL RANGE FROM  50.0 TO 999.0 CMS, AND
+           HEIGHT OF REMOVED TREES WILL RANGE FROM   0.0 TO 999.0 METERS.
+
+THINQFA    DATE/CYCLE=   13; MINIMUM      2.5; MAXIMUM     37.5
+           ALL SPECIES (CODE=   0) ARE TARGETED FOR THIS CUT.
+           Q FACTOR=    1.550
+           DIA. CLASS WIDTH=    5.0
+           TARGET BA=   43.6
+
+THINABA    DATE/CYCLE=   16; RESIDUAL=    6.00; PROPORTION OF SELECTED TREES REMOVED= 1.000
+           DBH OF REMOVED TREES WILL RANGE FROM  37.5 TO  50.0 CMS, AND
+           HEIGHT OF REMOVED TREES WILL RANGE FROM   0.0 TO 999.0 METERS.
+
+THINABA    DATE/CYCLE=   16; RESIDUAL=    1.60; PROPORTION OF SELECTED TREES REMOVED= 1.000
+           DBH OF REMOVED TREES WILL RANGE FROM  50.0 TO 999.0 CMS, AND
+           HEIGHT OF REMOVED TREES WILL RANGE FROM   0.0 TO 999.0 METERS.
+
+THINQFA    DATE/CYCLE=   16; MINIMUM      2.5; MAXIMUM     37.5
+           ALL SPECIES (CODE=   0) ARE TARGETED FOR THIS CUT.
+           Q FACTOR=    1.550
+           DIA. CLASS WIDTH=    5.0
+           TARGET BA=   43.6
+
+THINABA    DATE/CYCLE=   19; RESIDUAL=    6.00; PROPORTION OF SELECTED TREES REMOVED= 1.000
+           DBH OF REMOVED TREES WILL RANGE FROM  37.5 TO  50.0 CMS, AND
+           HEIGHT OF REMOVED TREES WILL RANGE FROM   0.0 TO 999.0 METERS.
+
+THINABA    DATE/CYCLE=   19; RESIDUAL=    1.60; PROPORTION OF SELECTED TREES REMOVED= 1.000
+           DBH OF REMOVED TREES WILL RANGE FROM  50.0 TO 999.0 CMS, AND
+           HEIGHT OF REMOVED TREES WILL RANGE FROM   0.0 TO 999.0 METERS.
+
+THINQFA    DATE/CYCLE=   19; MINIMUM      2.5; MAXIMUM     37.5
+           ALL SPECIES (CODE=   0) ARE TARGETED FOR THIS CUT.
+           Q FACTOR=    1.550
+           DIA. CLASS WIDTH=    5.0
+           TARGET BA=   43.6
+
+BAIMULT    DATE/CYCLE=    1; SPECIES=FD  (CODE=   3); MULTIPLIER=    1.6213
+
+BAIMULT    DATE/CYCLE=    1; SPECIES=SE  (CODE=   8); MULTIPLIER=    1.3948
+
+BAIMULT    DATE/CYCLE=    1; SPECIES=PL  (CODE=   7); MULTIPLIER=    1.0000
+
+BAIMULT    DATE/CYCLE=    1; SPECIES=EP  (CODE=  11); MULTIPLIER=    1.0000
+
+BAIMULT    DATE/CYCLE=    1; SPECIES=AT  (CODE=  12); MULTIPLIER=    1.0000
+
+BAIMULT    DATE/CYCLE=    1; SPECIES=OH  (CODE=  15); MULTIPLIER=    1.0000
+
+MORTMULT   DATE/CYCLE=    1; SPECIES= FD  (CODE=   3); MULTIPLIER=      1.76
+           ONLY TREES GREATER THAN    0.00 AND LESS THAN  999.00 CM DBH ARE AFFECTED.
+
+MORTMULT   DATE/CYCLE=    1; SPECIES= SE  (CODE=   8); MULTIPLIER=      3.83
+           ONLY TREES GREATER THAN    0.00 AND LESS THAN  999.00 CM DBH ARE AFFECTED.
+
+MORTMULT   DATE/CYCLE=    1; SPECIES= PL  (CODE=   7); MULTIPLIER=      8.00
+           ONLY TREES GREATER THAN    0.00 AND LESS THAN  999.00 CM DBH ARE AFFECTED.
+
+MORTMULT   DATE/CYCLE=    1; SPECIES= EP  (CODE=  11); MULTIPLIER=      1.20
+           ONLY TREES GREATER THAN    0.00 AND LESS THAN  999.00 CM DBH ARE AFFECTED.
+
+MORTMULT   DATE/CYCLE=    1; SPECIES= AT  (CODE=  12); MULTIPLIER=      1.20
+           ONLY TREES GREATER THAN    0.00 AND LESS THAN  999.00 CM DBH ARE AFFECTED.
+
+MORTMULT   DATE/CYCLE=    1; SPECIES= OH  (CODE=  15); MULTIPLIER=      1.20
+           ONLY TREES GREATER THAN    0.00 AND LESS THAN  999.00 CM DBH ARE AFFECTED.
+
+TREEFMT 
+          (I4,T1,I7,F6.0,I1,A3,F5.1,F4.1,2F5.1,F5.1,I1,3(I2,I2),2I1,I2,2I3,               
+          2I1,F3.0)                                                                       
+
+TREEDATA   DATA SET REFERENCE NUMBER=  2
+
+PROCESS    PROCESS THE STAND.
+----------------------------------------------------------------------------------------------------------------------------------
+
+                                                OPTIONS SELECTED BY DEFAULT
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+DESIGN     BASAL AREA FACTOR=    0.0; INVERSE OF FIXED PLOT AREA=    1.0; BREAK DBH=  999.0
+           NUMBER OF PLOTS=     1; NON-STOCKABLE PLOTS=     0; STAND SAMPLING WEIGHT=     1.00000
+           PROPORTION OF STAND CONSIDERED STOCKABLE=  1.000
+
+STDINFO    BEC=ICHmw2/01      ; AGE=    0; ASPECT AZIMUTH IN DEGREES= 200.; SLOPE=  35.%
+           ELEVATION (M)=   16.0; REFERENCE CODE=     
+
+ MAXIMUM BASAL AREA FOR ICHmw2/01      IS SET BY DEFAULT TO:  89.0 SQ M/HA.
+
+ SPECIES      PW      LW      FD      BG      HW      CW      PL      SE      BL      PY
+ SDI MAX    2066.   2066.   2066.   2066.   2066.   2066.   2066.   2066.   2066.   2066.
+
+ SPECIES      EP      AT      AC      OC      OH
+ SDI MAX    2066.   2066.   2066.   2066.   2066.
+
+                                  NATIONAL VOLUME ESTIMATOR LIBRARY EQUATION NUMBERS
+SPECIES CUBIC FOOT BOARD FOOT SPECIES CUBIC FOOT BOARD FOOT SPECIES CUBIC FOOT BOARD FOOT SPECIES CUBIC FOOT BOARD FOOT 
+------- ---------- ---------- ------- ---------- ---------- ------- ---------- ---------- ------- ---------- ---------- 
+  PW    ---        ---         LW    ---        ---         FD    ---        ---         BG    ---        ---       
+  HW    ---        ---         CW    ---        ---         PL    ---        ---         SE    ---        ---       
+  BL    ---        ---         PY    ---        ---         EP    ---        ---         AT    ---        ---       
+  AC    ---        ---         OC    ---        ---         OH    ---        ---       
+SITECODE   SITE INDEX INFORMATION:
+            PW=   0.0;  LW=   0.0;  FD=  11.3;  BG=   0.0;  HW=   0.0;  CW=   0.0;  PL=   0.0;  SE=   0.0; BL=   0.0
+            PY=   0.0;  EP=   0.0;  AT=   0.0;  AC=   0.0;  OC=   0.0;  OH=   0.0
+           SITE SPECIES=FD CODE=    3
+           NOTE: SITE INDEX IS NOT USED IN THIS VARIANT.  VALUES ARE PRINTED FOR INFORMATIONAL PURPOSES.
+
+ INVENTORY POINT CROSS REFERENCE (FVS SEQUENTIAL POINT NUMBER = POINT NUMBER AS ENTERED IN THE INPUT DATA):
+  1=       1
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+                                                     ACTIVITY SCHEDULE
+
+ STAND ID= KC-AU-GWM_LOW-MULTI-200Y      MGMT ID= NONE                                                                            
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+ CYCLE  DATE  EXTENSION  KEYWORD   DATE  PARAMETERS:
+ -----  ----  ---------  --------  ----  ------------------------------------------------------------------------------------------
+
+   1      0
+               BASE     TREELIST     1       3.0000     0.0000
+               BASE     BAIMULT      1       3.0000     1.6213
+               BASE     BAIMULT      1       8.0000     1.3948
+               BASE     BAIMULT      1       7.0000     1.0000
+               BASE     BAIMULT      1      11.0000     1.0000
+               BASE     BAIMULT      1      12.0000     1.0000
+               BASE     BAIMULT      1      15.0000     1.0000
+               BASE     MORTMULT     1       3.0000     1.7593     0.0000   998.9980
+               BASE     MORTMULT     1       8.0000     3.8261     0.0000   998.9980
+               BASE     MORTMULT     1       7.0000     8.0000     0.0000   998.9980
+               BASE     MORTMULT     1      11.0000     1.2012     0.0000   998.9980
+               BASE     MORTMULT     1      12.0000     1.2012     0.0000   998.9980
+               BASE     MORTMULT     1      15.0000     1.2012     0.0000   998.9980
+
+   2     10
+               BASE     TREELIST    10       3.0000     0.0000
+
+   3     20
+               BASE     TREELIST    20       3.0000     0.0000
+
+   4     30
+               BASE     TREELIST    30       3.0000     0.0000
+               BASE     ATRTLIST    30       3.0000     0.0000
+               BASE     THINABA     30       6.0000     1.0000    37.4999    49.9999     0.0000   999.0000
+               BASE     THINABA     30       1.6000     1.0000    49.9999   998.9980     0.0000   999.0000
+               BASE     THINQFA     30       0.9843    14.7638     0.0000     1.5500     1.9685    43.5600     0.0000
+
+   5     40
+               BASE     TREELIST    40       3.0000     0.0000
+
+   6     50
+               BASE     TREELIST    50       3.0000     0.0000
+
+   7     60
+               BASE     TREELIST    60       3.0000     0.0000
+               BASE     ATRTLIST    60       3.0000     0.0000
+               BASE     THINABA     60       6.0000     1.0000    37.4999    49.9999     0.0000   999.0000
+               BASE     THINABA     60       1.6000     1.0000    49.9999   998.9980     0.0000   999.0000
+               BASE     THINQFA     60       0.9843    14.7638     0.0000     1.5500     1.9685    43.5600     0.0000
+
+   8     70
+               BASE     TREELIST    70       3.0000     0.0000
+
+   9     80
+               BASE     TREELIST    80       3.0000     0.0000
+
+  10     90
+               BASE     TREELIST    90       3.0000     0.0000
+               BASE     ATRTLIST    90       3.0000     0.0000
+               BASE     THINABA     90       6.0000     1.0000    37.4999    49.9999     0.0000   999.0000
+               BASE     THINABA     90       1.6000     1.0000    49.9999   998.9980     0.0000   999.0000
+               BASE     THINQFA     90       0.9843    14.7638     0.0000     1.5500     1.9685    43.5600     0.0000
+
+  11    100
+               BASE     TREELIST   100       3.0000     0.0000
+
+  12    110
+               BASE     TREELIST   110       3.0000     0.0000
+
+  13    120
+               BASE     TREELIST   120       3.0000     0.0000
+               BASE     ATRTLIST   120       3.0000     0.0000
+               BASE     THINABA    120       6.0000     1.0000    37.4999    49.9999     0.0000   999.0000
+               BASE     THINABA    120       1.6000     1.0000    49.9999   998.9980     0.0000   999.0000
+               BASE     THINQFA    120       0.9843    14.7638     0.0000     1.5500     1.9685    43.5600     0.0000
+
+  14    130
+               BASE     TREELIST   130       3.0000     0.0000
+
+  15    140
+               BASE     TREELIST   140       3.0000     0.0000
+
+  16    150
+               BASE     TREELIST   150       3.0000     0.0000
+               BASE     ATRTLIST   150       3.0000     0.0000
+               BASE     THINABA    150       6.0000     1.0000    37.4999    49.9999     0.0000   999.0000
+               BASE     THINABA    150       1.6000     1.0000    49.9999   998.9980     0.0000   999.0000
+               BASE     THINQFA    150       0.9843    14.7638     0.0000     1.5500     1.9685    43.5600     0.0000
+
+  17    160
+               BASE     TREELIST   160       3.0000     0.0000
+
+  18    170
+               BASE     TREELIST   170       3.0000     0.0000
+
+  19    180
+               BASE     TREELIST   180       3.0000     0.0000
+               BASE     ATRTLIST   180       3.0000     0.0000
+               BASE     THINABA    180       6.0000     1.0000    37.4999    49.9999     0.0000   999.0000
+               BASE     THINABA    180       1.6000     1.0000    49.9999   998.9980     0.0000   999.0000
+               BASE     THINQFA    180       0.9843    14.7638     0.0000     1.5500     1.9685    43.5600     0.0000
+
+  20    190
+               BASE     TREELIST   190       3.0000     0.0000
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+ CALIBRATION STATISTICS:
+
+
+                                                 FD
+                                                ----
+
+ NUMBER OF RECORDS PER SPECIES                    60
+
+ NUMBER OF RECORDS WITH MISSING HEIGHTS            0
+
+ NUMBER OF RECORDS WITH BROKEN OR DEAD TOPS        0
+
+ NUMBER OF RECORDS WITH MISSING CROWN RATIOS       0
+
+ NUMBER OF RECORDS AVAILABLE FOR SCALING
+ THE DIAMETER INCREMENT MODEL                      0
+
+ RATIO OF STANDARD ERRORS
+ (INPUT DBH GROWTH DATA : MODEL)                1.00
+
+ WEIGHT GIVEN TO THE INPUT GROWTH DATA WHEN
+ DBH GROWTH MODEL SCALE FACTORS WERE COMPUTED   0.00
+
+ INITIAL SCALE FACTORS FOR THE
+ DBH INCREMENT MODEL                            1.00
+
+ NUMBER OF RECORDS AVAILABLE FOR SCALING
+ THE SMALL TREE HEIGHT INCREMENT MODEL            0
+
+ INITIAL SCALE FACTORS FOR THE SMALL TREE
+ HEIGHT INCREMENT MODEL                         1.00
+
+ NUMBER OF RECORDS WITH MISTLETOE                  0
+
+
+     FOREST VEGETATION SIMULATOR     VERSION unknown                          -- BC             RV:unknown     10-30-2026  15:57:41
+
+STAND ID: KC-AU-GWM_LOW-MULTI-200Y      MGMT ID: NONE     
+
+
+                                        STAND COMPOSITION (BASED ON STOCKABLE AREA)
+--------------------------------------------------------------------------------------------------------------------------
+                            PERCENTILE POINTS IN THE
+                     DISTRIBUTION OF STAND ATTRIBUTES BY DBH       TOTAL/HA
+        STAND       -----------------------------------------      OF STAND         DISTRIBUTION OF STAND ATTRIBUTES BY
+YEAR  ATTRIBUTES      10     30     50     70     90    100       ATTRIBUTES       SPECIES AND 3 USER-DEFINED SUBCLASSES
+----  -----------   ------ ------ ------ ------ ------ ------   --------------  ------------------------------------------
+                                 (DBH IN CM)
+
+
+
+   0  TREES           4.4    6.9   12.1   20.0   51.2    83.0     600. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        26.2   44.7   60.1   76.6   83.0    83.0     211. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        29.1   44.7   65.3   76.6   83.0    83.0     190. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      ACCRETION      14.5   28.8   38.4   51.2   65.3    83.0       5. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      USER MORT      24.4   41.1   60.1   76.6   83.0    83.0       1. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+
+  10  TREES           5.8    9.3   13.6   22.5   54.5    83.8     552. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        27.1   45.0   57.2   67.5   83.6    83.8     247. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        32.0   46.2   62.9   77.2   83.6    83.8     222. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      ACCRETION      16.6   31.8   43.3   54.5   65.1    83.8       5. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      USER MORT      23.9   44.9   57.2   67.5   83.6    83.8       2. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+
+  20  TREES           7.7   10.4   15.4   25.6   59.4    84.5     509. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        24.9   47.9   60.1   68.5   84.1    84.5     282. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        32.8   49.1   61.0   69.0   84.1    84.5     258. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      ACCRETION      18.5   33.4   42.1   51.4   68.0    84.5       5. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      USER MORT      24.3   47.7   59.6   68.5   84.1    84.5       2. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+
+  30  TREES           9.4   11.5   17.3   28.8   62.2    85.0     470. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        26.3   47.0   60.0   69.7   84.4    85.0     317. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        33.7   51.3   62.4   69.9   84.6    85.0     289. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      REMOVAL        52.5   56.8   65.2   70.6   84.3    85.0      74. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        53.5   63.3   69.3   78.8   84.6    85.0     206. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        53.5   63.3   69.3   78.8   84.6    85.0     197. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      RESIDUAL        9.2   11.2   14.9   21.6   39.6    51.7     396. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      ACCRETION      16.2   26.3   36.5   41.0   47.0    51.7       6. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      USER MORT      17.1   27.8   38.9   42.5   50.4    51.7       0. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+
+  40  TREES          11.0   12.8   16.7   25.5   45.0    58.5     384. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        19.2   31.7   43.7   48.3   55.1    58.5     164. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        24.8   34.3   44.7   49.1   56.7    58.5     143. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      ACCRETION      18.4   30.2   42.4   46.7   53.9    58.5       7. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      USER MORT      19.8   32.4   43.7   48.5   56.7    58.5       1. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+
+  50  TREES          12.8   14.8   19.0   29.5   51.5    65.4     370. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        21.6   36.0   50.4   55.3   60.5    65.4     231. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        28.7   39.6   50.7   55.5   62.5    65.4     205. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      ACCRETION      18.9   32.1   42.9   52.3   59.8    65.4       7. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      USER MORT      23.4   36.8   50.4   55.4   60.5    65.4       1. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+
+  60  TREES          14.0   16.5   21.0   33.7   57.0    68.9     351. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        24.1   39.7   55.1   60.4   65.4    68.9     289. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        30.6   41.6   55.5   60.4   65.4    68.9     263. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      REMOVAL        55.5   57.9   60.4   63.5   67.9    68.9      46. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        55.5   59.2   61.0   64.5   68.3    68.9     146. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        55.5   59.2   61.0   64.5   68.3    68.9     141. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      RESIDUAL       13.7   16.2   18.7   28.0   40.5    55.1     306. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      ACCRETION      17.3   30.1   34.5   41.5   49.9    55.1       6. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      USER MORT      18.4   31.6   37.0   42.4   50.7    55.1       0. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+
+  70  TREES          15.6   18.4   21.4   31.3   47.2    61.3     297. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        19.7   35.8   41.3   47.8   56.3    61.3     199. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        22.1   37.3   42.2   48.6   56.3    61.3     180. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      ACCRETION      19.6   34.9   40.4   47.4   56.2    61.3       7. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      USER MORT      21.3   36.8   41.3   48.6   56.3    61.3       1. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+
+  80  TREES          17.4   20.2   24.1   36.2   53.9    67.3     284. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        22.2   40.4   46.6   54.5   62.7    67.3     257. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        23.4   41.5   47.7   54.5   63.2    67.3     240. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      ACCRETION      21.6   33.9   44.1   52.2   59.1    67.3       6. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      USER MORT      23.5   41.3   47.6   54.5   63.2    67.3       1. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+
+  90  TREES          18.8   22.2   26.3   39.2   57.7    71.3     270. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        24.2   44.0   51.4   58.2   66.8    71.3     308. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        25.2   45.6   51.7   58.2   66.8    71.3     292. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      REMOVAL        54.0   57.5   58.8   62.0   67.1    71.3      41. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        54.6   57.8   59.7   63.7   68.4    71.3     143. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        54.6   57.8   59.7   63.7   68.4    71.3     139. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      RESIDUAL       18.7   21.5   24.6   31.3   46.7    53.7     229. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      ACCRETION      21.9   27.8   37.7   46.6   49.6    53.7       5. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      USER MORT      22.5   29.5   39.0   46.8   50.7    53.7       0. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+
+ 100  TREES          20.3   23.5   27.5   35.0   52.9    60.5     223. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        23.6   30.6   44.9   53.0   56.1    60.5     214. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        24.3   30.8   45.3   53.0   56.1    60.5     203. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      ACCRETION      23.6   30.3   40.8   51.8   55.9    60.5       6. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      USER MORT      25.5   30.9   45.2   53.0   56.1    60.5       1. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+
+ 110  TREES          22.5   25.7   30.3   38.3   57.9    65.0     216. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        26.2   34.1   47.7   57.7   61.6    65.0     267. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        26.7   34.4   49.3   57.9   61.6    65.0     255. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      ACCRETION      25.6   33.3   43.6   55.7   60.6    65.0       6. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      USER MORT      27.5   34.4   47.7   57.7   61.6    65.0       1. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+
+ 120  TREES          24.2   28.0   33.5   43.3   61.8    69.8     206. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        28.8   37.3   51.5   61.3   65.2    69.8     310. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        28.9   37.9   51.7   61.4   65.2    69.8     298. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      REMOVAL        57.1   60.6   62.3   65.0   67.0    69.8      36. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        57.8   61.3   63.2   65.0   67.0    69.8     142. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        57.8   61.3   63.2   65.0   67.0    69.8     138. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      RESIDUAL       23.5   27.3   32.0   36.3   45.9    55.6     170. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      ACCRETION      26.3   32.2   36.4   43.4   50.2    55.6       4. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      USER MORT      26.5   32.2   36.7   44.2   51.2    55.6       0. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+
+ 130  TREES          25.2   29.5   34.9   40.0   49.8    61.9     165. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        28.6   35.3   40.5   48.7   55.6    61.9     208. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        28.8   35.4   40.5   48.7   55.6    61.9     199. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      ACCRETION      28.8   35.3   39.8   44.6   55.2    61.9       5. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      USER MORT      28.8   35.3   40.4   48.3   55.6    61.9       1. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+
+ 140  TREES          27.7   32.0   38.6   44.0   53.4    67.0     160. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        30.9   39.3   44.7   52.3   60.9    67.0     250. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        30.9   39.4   44.7   52.7   60.9    67.0     241. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      ACCRETION      30.7   38.9   43.6   48.9   59.5    67.0       5. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      USER MORT      30.9   39.1   44.6   52.3   60.5    67.0       1. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+
+ 150  TREES          29.7   34.5   41.9   48.0   57.4    71.0     153. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        33.0   42.3   48.1   55.5   64.2    71.0     287. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        33.1   42.8   48.4   55.5   64.2    71.0     277. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      REMOVAL        47.6   49.2   55.5   58.1   65.2    71.0      45. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        47.9   53.3   56.3   61.9   65.6    71.0     142. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        47.9   53.3   56.3   61.9   65.6    71.0     138. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      RESIDUAL       28.9   32.7   36.5   41.8   46.1    52.0     108. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      ACCRETION      31.5   35.2   40.6   43.6   50.2    52.0       3. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      USER MORT      31.5   35.0   40.3   43.6   50.5    52.0       0. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+
+ 160  TREES          31.2   35.9   40.2   45.2   50.3    57.1     105. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        34.2   38.6   44.5   47.7   54.0    57.1     174. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        34.3   38.7   44.5   48.0   54.0    57.1     168. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      ACCRETION      34.3   38.6   44.2   47.3   53.9    57.1       4. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      USER MORT      34.2   38.3   44.2   47.6   54.0    57.1       0. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+
+ 170  TREES          33.8   38.6   43.5   50.0   54.5    62.6     102. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        36.8   41.8   48.8   52.3   58.0    62.6     208. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        36.8   42.0   48.8   52.3   58.0    62.6     201. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      ACCRETION      36.7   41.5   48.4   51.4   55.9    62.6       4. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      USER MORT      36.7   41.5   48.7   52.2   57.6    62.6       1. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+
+ 180  TREES          36.1   41.6   46.7   53.3   58.7    66.2     100. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        39.1   44.9   52.7   56.2   60.3    66.2     239. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        39.2   45.0   52.7   56.2   60.3    66.2     232. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      REMOVAL        49.7   54.4   56.2   58.5   61.2    66.2      38. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        49.8   54.6   57.0   58.7   62.2    66.2     129. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        49.8   54.6   57.0   58.7   62.2    66.2     126. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      RESIDUAL       34.3   39.0   41.7   44.1   50.7    53.3      62. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      ACCRETION      35.3   40.7   43.3   45.4   52.1    53.3       2. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      USER MORT      36.1   40.6   43.3   46.4   52.3    53.3       0. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+
+ 190  TREES          37.4   42.1   45.4   48.6   55.2    58.1      60. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        39.1   43.9   47.0   50.3   55.9    58.1     130. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        39.4   43.9   47.0   50.3   55.9    58.1     126. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+      ACCRETION      39.1   43.9   46.3   49.8   55.9    58.1       2. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      USER MORT      38.2   43.9   46.9   50.0   55.9    58.1       0. CU M/YR  100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+
+ 200  TREES          39.9   45.1   48.9   51.8   58.8    61.5      59. TREES    100.% FD1,   0.% ---,   0.% ---,   0.% ---
+      VOLUME:  
+        TOTAL        42.0   46.7   50.2   53.9   60.1    61.5     150. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+        MERCH        42.0   46.9   50.2   53.9   60.1    61.5     146. CU M     100.% FD1,   0.% ---,   0.% ---,   0.% ---
+
+
+     FOREST VEGETATION SIMULATOR     VERSION unknown                          -- BC             RV:unknown     10-30-2026  15:57:41
+
+STAND ID: KC-AU-GWM_LOW-MULTI-200Y      MGMT ID: NONE     
+
+
+------------------------------------------------------------------------------------------------------------------------------
+                     ATTRIBUTES OF SELECTED SAMPLE TREES                 ADDITIONAL STAND ATTRIBUTES (BASED ON STOCKABLE AREA)
+      -----------------------------------------------------------------  -----------------------------------------------------
+      INITIAL                             LIVE  PAST DBH   BASAL  TREES         QUADRATIC    TREES     BASAL     TOPHT   CROWN
+      TREE/HA              DBH   HEIGHT  CROWN    GROWTH    AREA    PER  STAND   MEAN DBH      PER      AREA   LARGEST    COMP
+YEAR    %TILE SPECIES     (CM)      (M)  RATIO      (CM)   %TILE     HA    AGE       (CM)       HA   (M2/HA)     40/HA  FACTOR
+----  ------- ------- -------- -------- ------ --------- ------- ------  -----  ---------   ------ --------- --------- -------
+
+   0                                          ( 10 YRS)
+
+        10     FD1       4.40     3.60    45     0.42      0.3   10.00
+        30     FD1       6.90     4.70    55     0.72      1.3   10.00
+        50     FD1      12.10    10.50    55     0.62      4.0   10.00
+        70     FD1      20.00    12.40    55     1.68     11.3   10.00
+        90     FD1      51.20    18.40    65     2.00     45.1   10.00
+       100     FD1      83.00    24.70    35     0.38    100.0   10.00
+                                                                           0      26.7      600.      33.       20.3    133.4
+
+  10                                          ( 10 YRS)
+
+        10     FD1       5.94     4.87    45     1.34      0.5    8.99
+        30     FD1       9.35     6.58    55     2.12      2.0    8.99
+        50     FD1      13.58    12.80    51     1.28      4.8    9.34
+        70     FD1      22.50    14.83    52     2.17     12.9    9.34
+        90     FD1      55.62    20.67    64     3.83     48.1    9.39
+       100     FD1      83.58    25.33    35     0.50     96.5    9.39
+                                                                          10      29.0      552.      37.       22.3    143.3
+
+  20                                          ( 10 YRS)
+
+        10     FD1       7.78     6.28    45     1.59      0.6    8.07
+        30     FD1      10.58     8.85    50     1.07      2.5    8.07
+        50     FD1      15.04    14.97    47     1.26      5.3    8.72
+        70     FD1      24.87    17.07    49     2.05     14.2    8.72
+        90     FD1      59.48    22.53    64     3.35     51.2    8.82
+       100     FD1      84.09    25.93    35     0.45     95.0    8.82
+                                                                          20      31.3      509.      39.       23.9    151.3
+
+  30                                          ( 10 YRS)
+
+        10     FD1       8.48     8.12    41     0.61      0.1    7.26
+        30     FD1      11.80    11.17    45     1.05      3.1    7.53
+        50     FD1      16.84    17.15    44     1.56      6.1    8.12
+        70     FD1      27.76    19.40    47     2.51     15.5    8.12
+        90     FD1      62.36    23.95    64     2.49     54.8    8.26
+       100     FD1      84.62    26.52    35     0.46     95.9    8.26
+                                                                          30      33.5      470.      41.       25.4    157.9
+                                                                     RESIDUAL:    22.2      396.      15.       22.6     74.7
+
+  40 **                                       ( 10 YRS)
+
+        10     FD1      11.22     9.57    47     1.75      2.0    2.47
+        30     FD1      12.46    13.70    48     1.09      4.7    1.06
+        50     FD1      17.14    17.55    47     1.97     12.4    1.19
+        70     FD1      24.18    20.52    48     2.20     21.9    0.71
+        90     FD1      47.82    26.80    62     7.12     72.6    0.71
+       100     FD1      54.54    25.68    33     2.44     90.2    0.65
+                                                                          40      25.7      384.      20.       26.0     90.7
+
+  50                                          ( 10 YRS)
+
+        10     FD1      13.13    12.08    42     1.65      2.2    2.39
+        30     FD1      14.24    15.98    44     1.55      4.4    1.03
+        50     FD1      19.14    19.67    44     1.73     12.3    1.15
+        70     FD1      27.48    22.95    45     2.86     20.6    0.69
+        90     FD1      54.96    30.56    61     6.19     74.1    0.69
+       100     FD1      58.64    27.51    33     3.56     83.9    0.63
+                                                                          50      29.5      370.      25.       29.2    108.3
+
+  60                                          ( 10 YRS)
+
+        10     FD1      15.05    14.46    38     1.67      3.0    2.28
+        30     FD1      15.59    17.98    40     1.17      3.7    0.98
+        50     FD1      21.75    21.94    41     2.27     12.5    1.10
+        70     FD1      30.64    25.14    43     2.74     21.1    0.65
+        90     FD1      59.46    32.39    61     3.90     71.0    0.65
+       100     FD1      61.81    28.89    33     2.74     83.0    0.59
+                                                                          60      32.7      351.      30.       31.4    120.6
+                                                                     RESIDUAL:    26.0      306.      16.       27.5     76.2
+
+  70 **                                       ( 10 YRS)
+
+        10     FD1      15.63    16.31    37     1.63      2.7    2.23
+        30     FD1      17.90    17.18    39     1.48      8.3    0.56
+        50     FD1      21.58    20.82    47     2.49     17.9    0.41
+        70     FD1      31.76    27.18    54     3.25     33.1    0.27
+        90     FD1      45.02    30.16    50     3.93     63.8    0.62
+       100     FD1      61.12    36.84    67     5.25     99.8    0.94
+                                                                          70      29.7      297.      21.       30.5     90.6
+
+  80                                          ( 10 YRS)
+
+        10     FD1      17.64    18.52    34     1.74      3.1    2.14
+        30     FD1      20.10    19.38    36     1.91      8.4    0.54
+        50     FD1      24.34    23.05    45     2.39     18.4    0.40
+        70     FD1      36.52    29.94    52     4.13     33.2    0.25
+        90     FD1      49.73    32.37    49     4.08     63.1    0.58
+       100     FD1      67.31    39.09    68     5.36    100.0    0.89
+                                                                          80      33.2      284.      25.       32.9    102.6
+
+  90                                          ( 10 YRS)
+
+        10     FD1      19.68    20.62    31     1.77      3.6    2.05
+        30     FD1      22.50    21.54    33     2.08      9.2    0.51
+        50     FD1      27.60    25.37    43     2.83     20.1    0.38
+        70     FD1      40.10    31.87    51     3.10     33.5    0.24
+        90     FD1      53.74    34.08    49     3.48     60.2    0.55
+       100     FD1      71.28    40.26    69     3.44    100.0    0.84
+                                                                          90      36.4      270.      28.       34.7    112.8
+                                                                     RESIDUAL:    30.1      229.      16.       30.3     73.5
+
+ 100 **                                       ( 10 YRS)
+
+        10     FD1      20.38    22.25    32     1.47      3.5    0.50
+        30     FD1      23.50    23.78    34     1.73     11.8    2.01
+        50     FD1      26.90    24.83    35     2.00     22.3    0.84
+        70     FD1      36.63    32.64    42     4.61     42.7    0.56
+        90     FD1      52.90    36.84    59     5.38     73.3    0.91
+       100     FD1      57.87    38.40    61     3.64     96.7    0.17
+                                                                         100      33.7      223.      20.       32.7     85.2
+
+ 110                                          ( 10 YRS)
+
+        10     FD1      22.03    24.03    29     1.44      2.6    0.49
+        30     FD1      25.55    25.59    32     1.78     11.0    1.96
+        50     FD1      29.79    26.86    33     2.50     22.4    0.81
+        70     FD1      40.44    34.58    41     3.30     41.0    0.54
+        90     FD1      58.78    39.18    60     5.10     81.4    0.88
+       100     FD1      62.81    40.11    62     4.29     94.8    0.17
+                                                                         110      37.2      216.      23.       34.7     96.1
+
+ 120                                          ( 10 YRS)
+
+        10     FD1      23.71    25.73    27     1.46      2.5    0.47
+        30     FD1      27.82    27.38    30     1.97     11.0    1.85
+        50     FD1      32.96    28.88    32     2.75     22.4    0.76
+        70     FD1      44.20    36.35    41     3.26     41.9    0.51
+        90     FD1      63.05    40.60    61     3.70     78.8    0.83
+       100     FD1      68.82    42.11    64     5.21     98.1    0.16
+                                                                         120      40.3      206.      26.       36.2    103.7
+                                                                     RESIDUAL:    33.8      170.      15.       32.7     67.7
+
+ 130 **                                       ( 10 YRS)
+
+        10     FD1      25.65    27.16    29     1.88      4.1    0.19
+        30     FD1      29.45    30.98    24     1.86     15.2    1.93
+        50     FD1      34.71    31.71    37     2.39     29.5    1.91
+        70     FD1      40.40    33.76    42     3.59     52.7    1.82
+        90     FD1      49.58    37.77    46     3.22     78.3    1.98
+       100     FD1      61.64    41.24    61     5.23     99.4    0.04
+                                                                         130      37.2      165.      18.       34.6     75.7
+
+ 140                                          ( 10 YRS)
+
+        10     FD1      27.64    28.81    27     1.73      3.9    0.19
+        30     FD1      31.97    32.62    23     2.18     14.7    1.87
+        50     FD1      38.09    33.55    36     2.93     29.5    1.85
+        70     FD1      46.21    36.63    42     5.04     60.3    1.77
+        90     FD1      53.17    39.18    46     3.11     78.7    1.93
+       100     FD1      66.85    42.87    62     4.51     99.4    0.04
+                                                                         140      40.6      160.      21.       36.4     83.5
+
+ 150                                          ( 10 YRS)
+
+        10     FD1      29.97    30.48    26     2.02      4.1    0.18
+        30     FD1      34.23    34.08    22     1.96     14.7    1.77
+        50     FD1      41.16    35.13    35     2.66     29.3    1.76
+        70     FD1      50.46    38.39    42     3.68     61.5    1.69
+        90     FD1      58.08    40.97    47     4.26     83.3    1.84
+       100     FD1      70.97    44.00    63     3.57    100.0    0.04
+                                                                         150      43.8      153.      23.       37.7     89.0
+                                                                     RESIDUAL:    37.9      108.      12.       34.4     51.2
+
+ 160 **                                       ( 10 YRS)
+
+        10     FD1      31.15    33.18    27     1.98      4.9    0.70
+        30     FD1      34.86    35.08    23     1.85     15.1    0.73
+        50     FD1      38.76    36.03    25     2.00     33.2    0.72
+        70     FD1      45.99    37.53    37     3.67     57.8    0.71
+        90     FD1      50.57    39.20    42     3.89     85.3    0.74
+       100     FD1      57.07    40.98    45     4.44    100.0    0.26
+                                                                         160      41.3      105.      14.       36.0     56.5
+
+ 170                                          ( 10 YRS)
+
+        10     FD1      33.99    34.84    26     2.46      5.5    0.68
+        30     FD1      36.65    36.28    22     1.55     10.5    0.71
+        50     FD1      41.52    37.43    24     2.39     31.1    0.70
+        70     FD1      50.33    39.31    37     3.76     58.5    0.70
+        90     FD1      55.59    41.10    43     4.35     86.2    0.72
+       100     FD1      61.21    42.34    46     3.59     99.4    0.25
+                                                                         170      44.9      102.      16.       37.6     62.2
+
+ 180                                          ( 10 YRS)
+
+        10     FD1      36.10    36.15    25     1.83      5.0    0.66
+        30     FD1      38.39    37.41    21     1.51      8.2    0.69
+        50     FD1      44.92    38.95    24     2.95     31.5    0.68
+        70     FD1      54.22    40.76    37     3.37     58.2    0.68
+        90     FD1      59.06    42.27    44     3.01     86.5    0.70
+       100     FD1      65.92    43.77    47     4.09     99.5    0.25
+                                                                         180      48.2      100.      18.       38.9     67.2
+                                                                     RESIDUAL:    42.4       62.       9.       37.3     34.4
+
+ 190 **                                       ( 10 YRS)
+
+        10     FD1      37.71    36.42    25     2.92      7.9    1.50
+        30     FD1      42.00    38.63    25     2.64     21.4    1.62
+        50     FD1      44.35    37.80    29     2.30     32.5    0.37
+        70     FD1      48.60    38.63    34     3.91     63.3    1.52
+        90     FD1      55.92    42.39    41     4.54     91.6    0.65
+       100     FD1      56.79    41.57    41     3.06     98.4    0.33
+                                                                         190      45.9       60.      10.       38.9     37.8
+
+ 200                                          ( 10 YRS)
+
+        10     FD1      40.40    37.80    25     2.33      8.1    1.47
+        30     FD1      44.00    39.68    25     1.73     16.8    1.59
+        50     FD1      46.94    39.00    29     2.25     31.8    0.36
+        70     FD1      53.13    40.39    35     3.92     70.3    1.49
+        90     FD1      60.44    43.87    42     3.93     95.8    0.63
+       100     FD1      60.41    42.75    42     3.14     94.1    0.32
+                                                                         200      49.2       59.      11.       40.2     41.0
+
+** NOTE:  DUE TO HARVEST, COMPRESSION, OR REGENERATION ESTABLISHMENT, NEW SAMPLE TREES WERE SELECTED.
+
+
+     FOREST VEGETATION SIMULATOR     VERSION unknown                          -- BC             RV:unknown     10-30-2026  15:57:41
+
+STAND ID: KC-AU-GWM_LOW-MULTI-200Y      MGMT ID: NONE    
+
+
+
+                                SUMMARY STATISTICS (PER HA OR STAND BASED ON TOTAL   STAND AREA)
+--------------------------------------------------------------------------------------------------------------------------------------
+               START OF SIMULATION PERIOD                     REMOVALS            AFTER TREATMENT     GROWTH THIS PERIOD
+         --------------------------------------------- ----------------------- ---------------------  ------------------    MAI ------
+         NO OF              TOP      TOTAL MERCH   N/A NO OF TOTAL MERCH   N/A              TOP  RES  PERIOD ACCRE MORT   TOTAL FOR SS
+YEAR AGE TREES  BA  SDI CCF  HT  QMD  CU M  CU M       TREES  CU M  CU M        BA  SDI CCF  HT  QMD   YEARS  PER  YEAR    CU M TYP ZT
+---- --- ----- --- ---- --- --- ---- ----- ----- ----- ----- ----- ----- ----- --- ---- --- --- ----  ------ ---- -----   ----- ------
+   0   0   600  33  647 133  20 26.7   210   190     0     0     0     0     0  33  647 133  20 26.7      10    4     1     0.0 201 13
+  10  10   551  36  684 143  22 29.0   246   222     0     0     0     0     0  36  684 143  22 29.0      10    5     1     0.0 201 13
+  20  20   509  39  711 151  23 31.3   282   257     0     0     0     0     0  39  711 151  23 31.3      10    5     1     0.0 201 12
+  30  30   469  41  731 158  25 33.5   316   288     0    74   206   197     0  15  318  75  22 22.2      10    5     0     0.0 201 12
+  40  40   383  19  390  91  25 25.7   163   142     0     0     0     0     0  19  390  91  25 25.7      10    7     0     0.0 201 13
+  50  50   370  25  469 108  29 29.5   231   205     0     0     0     0     0  25  469 108  29 29.5      10    7     1     0.0 201 13
+  60  60   350  29  526 121  31 32.7   289   262     0    46   146   141     0  16  316  76  27 26.0      10    6     0     0.0 201 13
+  70  70   296  20  380  91  30 29.7   199   180     0     0     0     0     0  20  380  91  30 29.7      10    6     1     0.0 201 13
+  80  80   284  24  437 103  32 33.2   256   239     0     0     0     0     0  24  437 103  32 33.2      10    6     1     0.0 201 13
+  90  90   269  28  481 113  34 36.4   307   291     0    42   143   139     0  16  301  73  30 30.1      10    5     0     0.0 201 13
+ 100 100   222  19  350  85  32 33.7   214   203     0     0     0     0     0  19  350  85  32 33.7      10    5     0     0.0 201 13
+ 110 110   214  23  397  96  34 37.2   266   255     0     0     0     0     0  23  397  96  34 37.2      10    5     1     0.0 201 13
+ 120 120   205  26  429 104  36 40.3   309   298     0    34   142   138     0  15  269  68  32 33.8      10    4     0     0.0 201 13
+ 130 130   165  17  306  76  34 37.2   207   199     0     0     0     0     0  17  306  76  34 37.2      10    4     0     0.0 201 14
+ 140 140   160  20  340  83  36 40.6   250   240     0     0     0     0     0  20  340  83  36 40.6      10    4     1     0.0 201 14
+ 150 150   153  23  368  89  37 43.8   286   277     0    44   142   138     0  12  205  51  34 37.9      10    3     0     0.0 201 13
+ 160 160   106  14  229  57  35 41.3   174   168     0     0     0     0     0  14  229  57  35 41.3      10    3     0     0.0 201 14
+ 170 170   101  16  256  62  37 44.9   207   201     0     0     0     0     0  16  256  62  37 44.9      10    3     0     0.0 201 14
+ 180 180    98  18  279  67  39 48.2   239   232     0    37   129   125     0   8  140  34  37 42.4      10    2     0     0.0 201 14
+ 190 190    59   9  155  38  39 45.9   130   126     0     0     0     0     0   9  155  38  39 45.9      10    2     0     0.0 201 14
+ 200 200    59  11  170  41  40 49.2   150   145     0     0     0     0     0  11  170  41  40 49.2       0    0     0     0.0 201 14
+
+
+
+
+                                                     ACTIVITY SUMMARY 
+
+ STAND ID= KC-AU-GWM_LOW-MULTI-200Y      MGMT ID= NONE                                                                            
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+ CYCLE  DATE  EXTENSION  KEYWORD   DATE  ACTIVITY DISPOSITION  PARAMETERS:
+ -----  ----  ---------  --------  ----  --------------------  --------------------------------------------------------------------
+
+   1      0
+               BASE     BAIMULT      1  DONE IN    1               3.0000     1.6213
+               BASE     BAIMULT      1  DONE IN    1               8.0000     1.3948
+               BASE     BAIMULT      1  DONE IN    1               7.0000     1.0000
+               BASE     BAIMULT      1  DONE IN    1              11.0000     1.0000
+               BASE     BAIMULT      1  DONE IN    1              12.0000     1.0000
+               BASE     BAIMULT      1  DONE IN    1              15.0000     1.0000
+               BASE     MORTMULT     1  DONE IN    1               3.0000     1.7593     0.0000   998.9980
+               BASE     MORTMULT     1  DONE IN    1               8.0000     3.8261     0.0000   998.9980
+               BASE     MORTMULT     1  DONE IN    1               7.0000     8.0000     0.0000   998.9980
+               BASE     MORTMULT     1  DONE IN    1              11.0000     1.2012     0.0000   998.9980
+               BASE     MORTMULT     1  DONE IN    1              12.0000     1.2012     0.0000   998.9980
+               BASE     MORTMULT     1  DONE IN    1              15.0000     1.2012     0.0000   998.9980
+               BASE     TREELIST     1  DONE IN    9               3.0000     0.0000
+
+   2     10
+               BASE     TREELIST    10  DONE IN   19               3.0000     0.0000
+
+   3     20
+               BASE     TREELIST    20  DONE IN   29               3.0000     0.0000
+
+   4     30
+               BASE     THINABA     30  DELETED OR CANCELED        6.0000     1.0000    37.4999    49.9999     0.0000   999.0000
+               BASE     THINQFA     30  DELETED OR CANCELED        0.9843    14.7638     0.0000     1.5500     1.9685    43.5600
+                                                                   0.0000
+               BASE     THINABA     30  DONE IN   30               1.6000     1.0000    49.9999   998.9980     0.0000   999.0000
+               BASE     ATRTLIST    30  DONE IN   30               3.0000     0.0000
+               BASE     TREELIST    30  DONE IN   39               3.0000     0.0000
+
+   5     40
+               BASE     TREELIST    40  DONE IN   49               3.0000     0.0000
+
+   6     50
+               BASE     TREELIST    50  DONE IN   59               3.0000     0.0000
+
+   7     60
+               BASE     THINABA     60  DELETED OR CANCELED        6.0000     1.0000    37.4999    49.9999     0.0000   999.0000
+               BASE     THINQFA     60  DELETED OR CANCELED        0.9843    14.7638     0.0000     1.5500     1.9685    43.5600
+                                                                   0.0000
+               BASE     THINABA     60  DONE IN   60               1.6000     1.0000    49.9999   998.9980     0.0000   999.0000
+               BASE     ATRTLIST    60  DONE IN   60               3.0000     0.0000
+               BASE     TREELIST    60  DONE IN   69               3.0000     0.0000
+
+   8     70
+               BASE     TREELIST    70  DONE IN   79               3.0000     0.0000
+
+   9     80
+               BASE     TREELIST    80  DONE IN   89               3.0000     0.0000
+
+  10     90
+               BASE     THINQFA     90  DELETED OR CANCELED        0.9843    14.7638     0.0000     1.5500     1.9685    43.5600
+                                                                   0.0000
+               BASE     THINABA     90  DONE IN   90               6.0000     1.0000    37.4999    49.9999     0.0000   999.0000
+               BASE     THINABA     90  DONE IN   90               1.6000     1.0000    49.9999   998.9980     0.0000   999.0000
+               BASE     ATRTLIST    90  DONE IN   90               3.0000     0.0000
+               BASE     TREELIST    90  DONE IN   99               3.0000     0.0000
+
+  11    100
+               BASE     TREELIST   100  DONE IN  109               3.0000     0.0000
+
+  12    110
+               BASE     TREELIST   110  DONE IN  119               3.0000     0.0000
+
+  13    120
+               BASE     THINABA    120  DELETED OR CANCELED        6.0000     1.0000    37.4999    49.9999     0.0000   999.0000
+               BASE     THINQFA    120  DELETED OR CANCELED        0.9843    14.7638     0.0000     1.5500     1.9685    43.5600
+                                                                   0.0000
+               BASE     THINABA    120  DONE IN  120               1.6000     1.0000    49.9999   998.9980     0.0000   999.0000
+               BASE     ATRTLIST   120  DONE IN  120               3.0000     0.0000
+               BASE     TREELIST   120  DONE IN  129               3.0000     0.0000
+
+  14    130
+               BASE     TREELIST   130  DONE IN  139               3.0000     0.0000
+
+  15    140
+               BASE     TREELIST   140  DONE IN  149               3.0000     0.0000
+
+  16    150
+               BASE     THINQFA    150  DELETED OR CANCELED        0.9843    14.7638     0.0000     1.5500     1.9685    43.5600
+                                                                   0.0000
+               BASE     THINABA    150  DONE IN  150               6.0000     1.0000    37.4999    49.9999     0.0000   999.0000
+               BASE     THINABA    150  DONE IN  150               1.6000     1.0000    49.9999   998.9980     0.0000   999.0000
+               BASE     ATRTLIST   150  DONE IN  150               3.0000     0.0000
+               BASE     TREELIST   150  DONE IN  159               3.0000     0.0000
+
+  17    160
+               BASE     TREELIST   160  DONE IN  169               3.0000     0.0000
+
+  18    170
+               BASE     TREELIST   170  DONE IN  179               3.0000     0.0000
+
+  19    180
+               BASE     THINQFA    180  DELETED OR CANCELED        0.9843    14.7638     0.0000     1.5500     1.9685    43.5600
+                                                                   0.0000
+               BASE     THINABA    180  DONE IN  180               6.0000     1.0000    37.4999    49.9999     0.0000   999.0000
+               BASE     THINABA    180  DONE IN  180               1.6000     1.0000    49.9999   998.9980     0.0000   999.0000
+               BASE     ATRTLIST   180  DONE IN  180               3.0000     0.0000
+               BASE     TREELIST   180  DONE IN  189               3.0000     0.0000
+
+  20    190
+               BASE     TREELIST   190  DONE IN  199               3.0000     0.0000
+----------------------------------------------------------------------------------------------------------------------------------
