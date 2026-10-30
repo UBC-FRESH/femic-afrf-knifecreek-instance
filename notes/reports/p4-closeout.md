@@ -2,7 +2,7 @@
 
 Phase: P4 verification and scenarios
 Parent issue: #70
-Pull request: pending
+Pull request: #75
 Branch: `feature/p4-verification` into `main`
 Evidence head: `e603408`, plus the P4.3/P4.4 commits
 Date: 2026-10-30
