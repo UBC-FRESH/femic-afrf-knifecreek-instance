@@ -1,7 +1,7 @@
 # KC large-tree BA extraction
 
-Status: extracted for the AU no-cut curve set; not yet wired into the compiled
-stage graph.
+Status: extracted for the AU no-cut and multi-entry curve sets, and wired into
+the compiled stage graph.
 
 ## What was added
 
@@ -19,11 +19,18 @@ The values come from the FVS tree-list output, requested at each 10-year cycle.
 - 0–200 years
 - large-tree BA at year 200: 46.5–64.5 m²/ha depending on AU
 
+## Compiled model
+
+`ws4/dataset_kc_au_stages_v1` now includes
+`feature.habitat.large_tree_ba` for natural and managed stages.
+
+- 115 tracks
+- 115 feature rows for each feature label
+- `ws4 validate` passes
+
 ## Not done
 
-- Large-tree BA is not yet a compiled `feature.habitat.large_tree_ba` account
-  in the stage graph.
-- Reserve BA is not yet added. It needs the clump-reserve marking rule applied
-  to the after-treatment tree list; total large-tree BA is not reserve.
+Reserve BA is not yet added. It needs the clump-reserve marking rule applied to
+the after-treatment tree list; total large-tree BA is not reserve.
 
 No KC calibration or legal-compliance claim.

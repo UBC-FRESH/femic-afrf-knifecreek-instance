@@ -125,7 +125,7 @@ def _keywords(site_index: float, regime: str) -> list[Keyword]:
         for cycle in CYCLES
     ]
     return [
-        Keyword("DATABASE", (), ("DSNOut", "FVSOut.db", "Summary")),
+        Keyword("DATABASE", (), ("DSNOut", "FVSOut.db", "Summary", "TREELIDB", "ATRTLIDB")),
         Keyword("STDIDENT", (f"KC-AU-{regime}-MULTI-200Y",)),
         Keyword("STDINFO", ("712", "CHS131", "0", str(HORIZON_YEARS), "35", "16")),
         Keyword("MANAGED", ("0", "1")),
@@ -135,6 +135,8 @@ def _keywords(site_index: float, regime: str) -> list[Keyword]:
         Keyword("TIMEINT", ("", str(STEP_YEARS))),
         Keyword("NUMCYCLE", (str(HORIZON_YEARS // STEP_YEARS),)),
         Keyword("RANNSEED", ("1",)),
+        *[Keyword("TREELIST", (str(cycle),)) for cycle in range(1, 21)],
+        *[Keyword("ATRTLIST", (str(cycle),)) for cycle in CYCLES],
         *thinning,
         Keyword("PROCESS"),
         Keyword("STOP"),
@@ -207,6 +209,22 @@ def main() -> None:
             )
             summary = read_table(result.database, "FVS_Summary_Metric").sort_values("Year")
             summary = summary[summary["CaseID"] == result.provenance.case_id]
+            tree_list = read_table(result.database, "FVS_TreeList_Metric")
+            tree_list = tree_list[tree_list["CaseID"] == result.provenance.case_id].copy()
+            tree_list["large_ba"] = 0.00007854 * tree_list["DBH"] ** 2 * tree_list["TPH"]
+            large = (
+                tree_list[tree_list["DBH"] >= 37.5]
+                .groupby("Year", as_index=False)
+                .agg(large_ba_m2_ha=("large_ba", "sum"), large_tph=("TPH", "sum"))
+            )
+            summary = summary.merge(large, on="Year", how="left").fillna(
+                {"large_ba_m2_ha": 0.0, "large_tph": 0.0}
+            )
+            try:
+                atrt = read_table(result.database, "FVS_ATRTList_Metric")
+                atrt = atrt[atrt["CaseID"] == result.provenance.case_id]
+            except Exception:
+                atrt = pd.DataFrame()
             stage_rows: list[dict[str, object]] = []
             for stage, (_cycle, entry_year) in enumerate(
                 zip(CYCLES, ENTRY_YEARS, strict=True), start=1
@@ -217,6 +235,14 @@ def main() -> None:
                 entry = entry.iloc[0]
                 cut_tph = float(entry["RTph"])
                 cut_volume = float(entry["RTCuM"])
+                after = atrt[atrt["Year"] == entry_year] if not atrt.empty else pd.DataFrame()
+                after_large = 0.0
+                if not after.empty:
+                    after_large = float(
+                        (
+                            0.00007854 * after["DBH"] ** 2 * after["TPH"] * (after["DBH"] >= 37.5)
+                        ).sum()
+                    )
                 stage_rows.append(
                     {
                         "stage": stage,
@@ -226,6 +252,8 @@ def main() -> None:
                         "qmd_cm": float(entry["ATQMD"]),
                         "volume_m3_ha": float(entry["TCuM"]) - cut_volume,
                         "canopy_ccf": float(entry["ATCCF"]),
+                        "large_ba_m2_ha": after_large,
+                        "large_tph": 0.0,
                         "cut_tph": cut_tph,
                         "cut_m3_ha": cut_volume,
                     }
@@ -242,6 +270,8 @@ def main() -> None:
                             "qmd_cm": float(point.QMD),
                             "volume_m3_ha": float(point.TCuM),
                             "canopy_ccf": float(point.CCF),
+                            "large_ba_m2_ha": float(point.large_ba_m2_ha),
+                            "large_tph": float(point.large_tph),
                             "cut_tph": 0.0,
                             "cut_m3_ha": 0.0,
                         }
@@ -262,6 +292,8 @@ def main() -> None:
                             "qmd_cm": float(point.qmd_cm),
                             "volume_m3_ha": float(point.volume_m3_ha),
                             "canopy_ccf": float(point.canopy_ccf),
+                            "large_ba_m2_ha": float(point.large_ba_m2_ha),
+                            "large_tph": float(point.large_tph),
                             "cut_tph": float(point.cut_tph),
                             "cut_m3_ha": float(point.cut_m3_ha),
                         }
