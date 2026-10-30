@@ -440,5 +440,7 @@ Order of work:
 3. [x] Port the Kozak taper/merchantable-volume calculations and compute
    tree-level volumes.
 4. [~] Calibrate LiDAR tree detection and build spatial clump/opening accounts.
-5. [ ] Run the 20-period AAC/estate optimization with the v1/v2c ensemble and
-   report an AAC range, harvest schedule, and structural/legal scorecard.
+5. [~] Run the 20-period AAC/estate optimization. The uncalibrated 50k search
+   gives a provisional 3,084–3,797 m³/year range (mean 3,398) and meets the
+   27,000 m³/period floors, but not the ±5% even-flow band. The calibrated
+   sensitivity is about 2,616 m³/year and misses the floors.
