@@ -31,6 +31,7 @@ FEATURE_COLUMNS = {
     "feature.habitat.tph": "tph",
     "feature.yield.managed.total": "volume_m3_ha",
     "feature.habitat.canopy_ccf": "canopy_ccf",
+    "feature.habitat.large_tree_ba": "large_ba_m2_ha",
 }
 REGIMES = ("GWM_LOW", "GWM_MODERATE")
 ALLOWED_BY_HMZ = {"M": REGIMES, "A": REGIMES, "L": ("GWM_LOW",), "U": ()}
