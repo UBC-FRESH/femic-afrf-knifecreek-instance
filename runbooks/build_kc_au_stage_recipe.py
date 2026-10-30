@@ -33,6 +33,8 @@ FEATURE_COLUMNS = {
     "feature.habitat.canopy_ccf": "canopy_ccf",
     "feature.habitat.large_tree_ba": "large_ba_m2_ha",
     "feature.habitat.reserve_ba": "reserve_ba_m2_ha",
+    "feature.habitat.max_dbh": "max_dbh_cm",
+    "feature.habitat.q_factor": "q_factor",
 }
 REGIMES = ("GWM_LOW", "GWM_MODERATE")
 ALLOWED_BY_HMZ = {"M": REGIMES, "A": REGIMES, "L": ("GWM_LOW",), "U": ()}

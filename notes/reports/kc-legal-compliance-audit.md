@@ -24,15 +24,17 @@ tests.
 
 GWM low:
 
-- 27 of 37 targets met
+- 37 of 55 targets met
+- 8 below (q-factor and one max-DBH group)
 - 10 reserve-ceiling failures
-- all total-BA and large-tree-BA floors met
+- total-BA and large-tree-BA floors met
 
 GWM moderate:
 
-- 31 of 37 targets met
+- 42 of 55 targets met
+- 7 below (q-factor and max-DBH groups)
 - 6 reserve-ceiling failures
-- all total-BA and large-tree-BA floors met
+- total-BA and large-tree-BA floors met
 
 The failures are concentrated in the non-spatial reserve proxy, especially
 HMZ L and several Moderate groups. The proxy reserves too much above D for the
@@ -40,8 +42,8 @@ legal ceilings.
 
 ## Not tested / not compliant
 
-- Maximum DBH ≥70/60/50 cm.
-- q within 1.20–1.35 / 1.25–1.35 / 1.25–1.40.
+- Maximum DBH is now tested and fails in some groups.
+- q is now tested and is below the legal range in several groups.
 - Spatial clumps of 4–10 mature trees with interlocking crowns.
 - Canopy openings 0.3–1.0 tree heights, mean 0.5.
 - Pre-2026 retention of ≥80% of pre-harvest merchantable Douglas-fir BA.
