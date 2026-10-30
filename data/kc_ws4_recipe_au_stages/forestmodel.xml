@@ -230,40 +230,40 @@
     <point x="30" y="26.000000" />
   </curve>
   <curve id="m1_low_11">
-    <point x="0" y="20.376753" />
-    <point x="10" y="21.171950" />
-    <point x="20" y="23.967564" />
-    <point x="30" y="26.452831" />
+    <point x="0" y="20.015330" />
+    <point x="10" y="20.891235" />
+    <point x="20" y="23.639224" />
+    <point x="30" y="26.083785" />
   </curve>
   <curve id="m1_low_12">
-    <point x="0" y="491.200000" />
-    <point x="10" y="595.000000" />
-    <point x="20" y="544.200000" />
-    <point x="30" y="512.400000" />
+    <point x="0" y="513.000000" />
+    <point x="10" y="615.400000" />
+    <point x="20" y="563.400000" />
+    <point x="30" y="531.200000" />
   </curve>
   <curve id="m1_low_13">
-    <point x="0" y="140.200000" />
-    <point x="10" y="185.600000" />
-    <point x="20" y="235.800000" />
-    <point x="30" y="287.200000" />
+    <point x="0" y="139.600000" />
+    <point x="10" y="185.000000" />
+    <point x="20" y="235.400000" />
+    <point x="30" y="286.600000" />
   </curve>
   <curve id="m1_low_14">
-    <point x="0" y="74.400000" />
-    <point x="10" y="91.200000" />
-    <point x="20" y="104.600000" />
-    <point x="30" y="117.200000" />
+    <point x="0" y="74.600000" />
+    <point x="10" y="92.200000" />
+    <point x="20" y="105.600000" />
+    <point x="30" y="118.400000" />
   </curve>
   <curve id="m1_low_15">
     <point x="0" y="5.461285" />
-    <point x="10" y="7.775878" />
-    <point x="20" y="10.934204" />
-    <point x="30" y="14.184788" />
+    <point x="10" y="7.686284" />
+    <point x="20" y="10.750733" />
+    <point x="30" y="13.865090" />
   </curve>
   <curve id="m1_low_16">
     <point x="0" y="1.097314" />
-    <point x="10" y="1.228588" />
-    <point x="20" y="1.347010" />
-    <point x="30" y="1.432895" />
+    <point x="10" y="1.228561" />
+    <point x="20" y="1.346944" />
+    <point x="30" y="1.432767" />
   </curve>
   <curve id="m1_low_17">
     <point x="0" y="53.491718" />
@@ -272,331 +272,331 @@
     <point x="30" y="66.592636" />
   </curve>
   <curve id="m1_low_18">
-    <point x="0" y="1.431354" />
-    <point x="10" y="1.460766" />
-    <point x="20" y="1.325169" />
-    <point x="30" y="1.226552" />
+    <point x="0" y="1.466013" />
+    <point x="10" y="1.480314" />
+    <point x="20" y="1.331801" />
+    <point x="30" y="1.264914" />
   </curve>
   <curve id="cut_m1_low_19">
-    <point x="0" y="360.800000" />
+    <point x="0" y="361.400000" />
   </curve>
   <curve id="m2_low_20">
-    <point x="0" y="16.800000" />
-    <point x="10" y="19.600000" />
+    <point x="0" y="16.400000" />
+    <point x="10" y="19.400000" />
     <point x="20" y="22.600000" />
     <point x="30" y="25.400000" />
   </curve>
   <curve id="m2_low_21">
-    <point x="0" y="24.028666" />
-    <point x="10" y="25.181305" />
-    <point x="20" y="27.745894" />
-    <point x="30" y="30.077705" />
+    <point x="0" y="23.686982" />
+    <point x="10" y="24.879499" />
+    <point x="20" y="27.403185" />
+    <point x="30" y="29.695609" />
   </curve>
   <curve id="m2_low_22">
-    <point x="0" y="383.000000" />
-    <point x="10" y="433.600000" />
-    <point x="20" y="399.800000" />
-    <point x="30" y="376.600000" />
+    <point x="0" y="393.200000" />
+    <point x="10" y="441.600000" />
+    <point x="20" y="409.800000" />
+    <point x="30" y="386.200000" />
   </curve>
   <curve id="m2_low_23">
-    <point x="0" y="184.200000" />
-    <point x="10" y="227.600000" />
-    <point x="20" y="273.000000" />
-    <point x="30" y="317.400000" />
+    <point x="0" y="181.800000" />
+    <point x="10" y="225.400000" />
+    <point x="20" y="271.400000" />
+    <point x="30" y="315.400000" />
   </curve>
   <curve id="m2_low_24">
     <point x="0" y="79.800000" />
-    <point x="10" y="91.400000" />
-    <point x="20" y="101.400000" />
-    <point x="30" y="110.400000" />
+    <point x="10" y="91.800000" />
+    <point x="20" y="102.000000" />
+    <point x="30" y="110.600000" />
   </curve>
   <curve id="m2_low_25">
-    <point x="0" y="7.192752" />
-    <point x="10" y="10.016358" />
-    <point x="20" y="12.982971" />
-    <point x="30" y="15.835653" />
+    <point x="0" y="7.073296" />
+    <point x="10" y="9.871070" />
+    <point x="20" y="12.610396" />
+    <point x="30" y="15.478095" />
   </curve>
   <curve id="m2_low_26">
     <point x="0" y="1.279997" />
-    <point x="10" y="1.452544" />
-    <point x="20" y="1.606649" />
-    <point x="30" y="1.723278" />
+    <point x="10" y="1.461766" />
+    <point x="20" y="1.629260" />
+    <point x="30" y="1.759247" />
   </curve>
   <curve id="m2_low_27">
-    <point x="0" y="56.057964" />
-    <point x="10" y="59.506615" />
-    <point x="20" y="62.591480" />
-    <point x="30" y="65.613861" />
+    <point x="0" y="56.058003" />
+    <point x="10" y="59.506649" />
+    <point x="20" y="62.591518" />
+    <point x="30" y="65.613892" />
   </curve>
   <curve id="m2_low_28">
-    <point x="0" y="1.256582" />
-    <point x="10" y="1.225275" />
-    <point x="20" y="1.171053" />
-    <point x="30" y="1.166527" />
+    <point x="0" y="1.254900" />
+    <point x="10" y="1.245433" />
+    <point x="20" y="1.254416" />
+    <point x="30" y="1.141727" />
   </curve>
   <curve id="cut_m2_low_29">
-    <point x="0" y="103.000000" />
+    <point x="0" y="104.800000" />
   </curve>
   <curve id="m3_low_30">
     <point x="0" y="16.600000" />
     <point x="10" y="19.000000" />
-    <point x="20" y="21.800000" />
+    <point x="20" y="21.600000" />
     <point x="30" y="23.600000" />
   </curve>
   <curve id="m3_low_31">
-    <point x="0" y="26.049449" />
-    <point x="10" y="28.139455" />
-    <point x="20" y="30.362431" />
-    <point x="30" y="32.451462" />
+    <point x="0" y="25.708368" />
+    <point x="10" y="27.850483" />
+    <point x="20" y="30.014958" />
+    <point x="30" y="32.062777" />
   </curve>
   <curve id="m3_low_32">
-    <point x="0" y="332.600000" />
-    <point x="10" y="325.600000" />
-    <point x="20" y="312.400000" />
-    <point x="30" y="299.600000" />
+    <point x="0" y="341.600000" />
+    <point x="10" y="331.800000" />
+    <point x="20" y="319.200000" />
+    <point x="30" y="307.200000" />
   </curve>
   <curve id="m3_low_33">
-    <point x="0" y="204.000000" />
-    <point x="10" y="242.600000" />
-    <point x="20" y="282.800000" />
-    <point x="30" y="320.400000" />
+    <point x="0" y="202.800000" />
+    <point x="10" y="241.400000" />
+    <point x="20" y="281.200000" />
+    <point x="30" y="319.000000" />
   </curve>
   <curve id="m3_low_34">
-    <point x="0" y="79.400000" />
-    <point x="10" y="87.200000" />
-    <point x="20" y="95.200000" />
-    <point x="30" y="101.800000" />
+    <point x="0" y="79.800000" />
+    <point x="10" y="87.800000" />
+    <point x="20" y="95.600000" />
+    <point x="30" y="102.400000" />
   </curve>
   <curve id="m3_low_35">
-    <point x="0" y="7.468026" />
-    <point x="10" y="10.240854" />
-    <point x="20" y="13.137771" />
-    <point x="30" y="15.624879" />
+    <point x="0" y="7.435614" />
+    <point x="10" y="10.006080" />
+    <point x="20" y="12.668595" />
+    <point x="30" y="15.356329" />
   </curve>
   <curve id="m3_low_36">
-    <point x="0" y="1.599998" />
-    <point x="10" y="1.513641" />
-    <point x="20" y="1.660264" />
-    <point x="30" y="1.770572" />
+    <point x="0" y="1.599997" />
+    <point x="10" y="1.584530" />
+    <point x="20" y="1.731932" />
+    <point x="30" y="1.850030" />
   </curve>
   <curve id="m3_low_37">
-    <point x="0" y="52.978702" />
-    <point x="10" y="58.149406" />
-    <point x="20" y="62.857685" />
-    <point x="30" y="65.904358" />
+    <point x="0" y="52.988060" />
+    <point x="10" y="58.353245" />
+    <point x="20" y="62.214088" />
+    <point x="30" y="65.438278" />
   </curve>
   <curve id="m3_low_38">
-    <point x="0" y="1.204124" />
-    <point x="10" y="1.100883" />
-    <point x="20" y="1.106049" />
-    <point x="30" y="1.064563" />
+    <point x="0" y="1.263383" />
+    <point x="10" y="1.169988" />
+    <point x="20" y="1.100399" />
+    <point x="30" y="1.104773" />
   </curve>
   <curve id="cut_m3_low_39">
-    <point x="0" y="113.400000" />
+    <point x="0" y="112.600000" />
   </curve>
   <curve id="m4_low_40">
     <point x="0" y="15.600000" />
-    <point x="10" y="17.600000" />
-    <point x="20" y="20.000000" />
+    <point x="10" y="17.800000" />
+    <point x="20" y="20.200000" />
     <point x="30" y="21.800000" />
   </curve>
   <curve id="m4_low_41">
-    <point x="0" y="28.209270" />
-    <point x="10" y="30.335270" />
-    <point x="20" y="32.453698" />
-    <point x="30" y="34.466341" />
+    <point x="0" y="27.960625" />
+    <point x="10" y="30.056575" />
+    <point x="20" y="32.133806" />
+    <point x="30" y="34.121630" />
   </curve>
   <curve id="m4_low_42">
-    <point x="0" y="265.400000" />
-    <point x="10" y="258.000000" />
-    <point x="20" y="251.000000" />
-    <point x="30" y="243.000000" />
+    <point x="0" y="274.400000" />
+    <point x="10" y="265.800000" />
+    <point x="20" y="258.600000" />
+    <point x="30" y="250.000000" />
   </curve>
   <curve id="m4_low_43">
-    <point x="0" y="203.400000" />
-    <point x="10" y="237.000000" />
-    <point x="20" y="272.400000" />
-    <point x="30" y="306.400000" />
+    <point x="0" y="205.800000" />
+    <point x="10" y="239.600000" />
+    <point x="20" y="275.000000" />
+    <point x="30" y="309.000000" />
   </curve>
   <curve id="m4_low_44">
-    <point x="0" y="73.400000" />
-    <point x="10" y="80.200000" />
-    <point x="20" y="86.800000" />
-    <point x="30" y="93.000000" />
+    <point x="0" y="74.800000" />
+    <point x="10" y="81.600000" />
+    <point x="20" y="88.200000" />
+    <point x="30" y="94.200000" />
   </curve>
   <curve id="m4_low_45">
-    <point x="0" y="7.492872" />
-    <point x="10" y="10.030147" />
-    <point x="20" y="12.238466" />
-    <point x="30" y="14.591846" />
+    <point x="0" y="7.466963" />
+    <point x="10" y="9.918172" />
+    <point x="20" y="12.130556" />
+    <point x="30" y="14.406077" />
   </curve>
   <curve id="m4_low_46">
-    <point x="0" y="1.599996" />
-    <point x="10" y="1.649998" />
-    <point x="20" y="1.799592" />
-    <point x="30" y="1.919779" />
+    <point x="0" y="1.599997" />
+    <point x="10" y="1.646487" />
+    <point x="20" y="1.787683" />
+    <point x="30" y="1.902321" />
   </curve>
   <curve id="m4_low_47">
-    <point x="0" y="52.398098" />
-    <point x="10" y="57.354332" />
-    <point x="20" y="61.671066" />
-    <point x="30" y="64.923141" />
+    <point x="0" y="52.622551" />
+    <point x="10" y="57.593472" />
+    <point x="20" y="60.952312" />
+    <point x="30" y="64.559418" />
   </curve>
   <curve id="m4_low_48">
-    <point x="0" y="1.008679" />
-    <point x="10" y="1.283143" />
-    <point x="20" y="1.204917" />
-    <point x="30" y="1.095698" />
+    <point x="0" y="1.108121" />
+    <point x="10" y="1.296111" />
+    <point x="20" y="1.190776" />
+    <point x="30" y="1.186675" />
   </curve>
   <curve id="cut_m4_low_49">
-    <point x="0" y="117.000000" />
+    <point x="0" y="113.200000" />
   </curve>
   <curve id="m5_low_50">
-    <point x="0" y="14.200000" />
-    <point x="10" y="16.000000" />
-    <point x="20" y="17.400000" />
-    <point x="30" y="19.400000" />
+    <point x="0" y="15.000000" />
+    <point x="10" y="16.600000" />
+    <point x="20" y="18.600000" />
+    <point x="30" y="20.000000" />
   </curve>
   <curve id="m5_low_51">
-    <point x="0" y="30.214936" />
-    <point x="10" y="32.235650" />
-    <point x="20" y="34.264117" />
-    <point x="30" y="36.217928" />
+    <point x="0" y="30.236776" />
+    <point x="10" y="32.233976" />
+    <point x="20" y="34.233680" />
+    <point x="30" y="36.142399" />
   </curve>
   <curve id="m5_low_52">
-    <point x="0" y="211.800000" />
-    <point x="10" y="205.600000" />
-    <point x="20" y="201.200000" />
-    <point x="30" y="195.800000" />
+    <point x="0" y="221.400000" />
+    <point x="10" y="215.600000" />
+    <point x="20" y="211.000000" />
+    <point x="30" y="204.600000" />
   </curve>
   <curve id="m5_low_53">
-    <point x="0" y="196.000000" />
-    <point x="10" y="224.200000" />
-    <point x="20" y="253.800000" />
-    <point x="30" y="283.600000" />
+    <point x="0" y="205.200000" />
+    <point x="10" y="234.200000" />
+    <point x="20" y="264.800000" />
+    <point x="30" y="294.200000" />
   </curve>
   <curve id="m5_low_54">
-    <point x="0" y="66.600000" />
-    <point x="10" y="72.000000" />
-    <point x="20" y="77.400000" />
-    <point x="30" y="82.200000" />
+    <point x="0" y="69.600000" />
+    <point x="10" y="75.200000" />
+    <point x="20" y="80.800000" />
+    <point x="30" y="85.200000" />
   </curve>
   <curve id="m5_low_55">
-    <point x="0" y="7.134930" />
-    <point x="10" y="9.199814" />
-    <point x="20" y="11.420640" />
-    <point x="30" y="13.366352" />
+    <point x="0" y="7.410237" />
+    <point x="10" y="9.515558" />
+    <point x="20" y="11.619482" />
+    <point x="30" y="13.694718" />
   </curve>
   <curve id="m5_low_56">
     <point x="0" y="1.599997" />
-    <point x="10" y="1.686380" />
-    <point x="20" y="1.829376" />
-    <point x="30" y="1.954812" />
+    <point x="10" y="1.658041" />
+    <point x="20" y="1.802918" />
+    <point x="30" y="1.921139" />
   </curve>
   <curve id="m5_low_57">
-    <point x="0" y="53.104557" />
-    <point x="10" y="57.131477" />
-    <point x="20" y="61.378105" />
-    <point x="30" y="64.916573" />
+    <point x="0" y="53.494446" />
+    <point x="10" y="58.141605" />
+    <point x="20" y="61.944126" />
+    <point x="30" y="65.567047" />
   </curve>
   <curve id="m5_low_58">
-    <point x="0" y="1.109695" />
-    <point x="10" y="1.117880" />
-    <point x="20" y="1.119414" />
-    <point x="30" y="1.129803" />
+    <point x="0" y="1.263640" />
+    <point x="10" y="1.080091" />
+    <point x="20" y="1.243370" />
+    <point x="30" y="1.321323" />
   </curve>
   <curve id="cut_m5_low_59">
-    <point x="0" y="110.400000" />
+    <point x="0" y="103.800000" />
   </curve>
   <curve id="m6_low_60">
-    <point x="0" y="13.000000" />
-    <point x="10" y="14.600000" />
-    <point x="20" y="15.800000" />
+    <point x="0" y="13.600000" />
+    <point x="10" y="15.000000" />
+    <point x="20" y="16.200000" />
   </curve>
   <curve id="m6_low_61">
-    <point x="0" y="32.259041" />
-    <point x="10" y="34.208727" />
-    <point x="20" y="36.195628" />
+    <point x="0" y="32.143890" />
+    <point x="10" y="34.071139" />
+    <point x="20" y="36.013881" />
   </curve>
   <curve id="m6_low_62">
-    <point x="0" y="169.600000" />
-    <point x="10" y="166.600000" />
-    <point x="20" y="162.000000" />
+    <point x="0" y="178.400000" />
+    <point x="10" y="174.000000" />
+    <point x="20" y="170.600000" />
   </curve>
   <curve id="m6_low_63">
-    <point x="0" y="188.400000" />
-    <point x="10" y="211.600000" />
-    <point x="20" y="237.400000" />
+    <point x="0" y="195.200000" />
+    <point x="10" y="219.600000" />
+    <point x="20" y="245.400000" />
   </curve>
   <curve id="m6_low_64">
-    <point x="0" y="60.200000" />
-    <point x="10" y="64.400000" />
-    <point x="20" y="69.000000" />
+    <point x="0" y="62.600000" />
+    <point x="10" y="67.000000" />
+    <point x="20" y="71.400000" />
   </curve>
   <curve id="m6_low_65">
-    <point x="0" y="7.041022" />
-    <point x="10" y="8.803467" />
-    <point x="20" y="10.821859" />
+    <point x="0" y="7.149142" />
+    <point x="10" y="9.153324" />
+    <point x="20" y="11.011268" />
   </curve>
   <curve id="m6_low_66">
-    <point x="0" y="1.599997" />
-    <point x="10" y="1.643053" />
-    <point x="20" y="1.780627" />
+    <point x="0" y="1.599996" />
+    <point x="10" y="1.579648" />
+    <point x="20" y="1.716805" />
   </curve>
   <curve id="m6_low_67">
-    <point x="0" y="55.214085" />
-    <point x="10" y="58.755676" />
-    <point x="20" y="62.245663" />
+    <point x="0" y="55.533935" />
+    <point x="10" y="58.843506" />
+    <point x="20" y="62.138397" />
   </curve>
   <curve id="m6_low_68">
-    <point x="0" y="1.189022" />
-    <point x="10" y="1.221310" />
-    <point x="20" y="1.269279" />
+    <point x="0" y="1.258841" />
+    <point x="10" y="1.193408" />
+    <point x="20" y="1.271784" />
   </curve>
   <curve id="cut_m6_low_69">
-    <point x="0" y="95.200000" />
+    <point x="0" y="99.000000" />
   </curve>
   <curve id="m1_moderate_70">
     <point x="0" y="19.600000" />
-    <point x="10" y="23.200000" />
-    <point x="20" y="27.000000" />
-    <point x="30" y="30.800000" />
+    <point x="10" y="23.400000" />
+    <point x="20" y="27.400000" />
+    <point x="30" y="31.200000" />
   </curve>
   <curve id="m1_moderate_71">
-    <point x="0" y="22.023562" />
-    <point x="10" y="22.807325" />
-    <point x="20" y="25.607519" />
-    <point x="30" y="28.061451" />
+    <point x="0" y="20.851394" />
+    <point x="10" y="21.870522" />
+    <point x="20" y="24.515296" />
+    <point x="30" y="26.845199" />
   </curve>
   <curve id="m1_moderate_72">
-    <point x="0" y="530.200000" />
-    <point x="10" y="626.600000" />
-    <point x="20" y="569.800000" />
-    <point x="30" y="533.800000" />
+    <point x="0" y="606.400000" />
+    <point x="10" y="696.000000" />
+    <point x="20" y="637.200000" />
+    <point x="30" y="596.200000" />
   </curve>
   <curve id="m1_moderate_73">
-    <point x="0" y="183.000000" />
-    <point x="10" y="232.800000" />
-    <point x="20" y="287.800000" />
-    <point x="30" y="342.200000" />
+    <point x="0" y="181.200000" />
+    <point x="10" y="231.400000" />
+    <point x="20" y="286.400000" />
+    <point x="30" y="340.400000" />
   </curve>
   <curve id="m1_moderate_74">
-    <point x="0" y="91.600000" />
-    <point x="10" y="108.200000" />
-    <point x="20" y="121.600000" />
-    <point x="30" y="133.600000" />
+    <point x="0" y="93.400000" />
+    <point x="10" y="110.800000" />
+    <point x="20" y="124.800000" />
+    <point x="30" y="136.800000" />
   </curve>
   <curve id="m1_moderate_75">
     <point x="0" y="8.794272" />
-    <point x="10" y="11.497338" />
-    <point x="20" y="15.140529" />
-    <point x="30" y="18.656271" />
+    <point x="10" y="11.226817" />
+    <point x="20" y="14.532951" />
+    <point x="30" y="17.784432" />
   </curve>
   <curve id="m1_moderate_76">
     <point x="0" y="0.472448" />
-    <point x="10" y="0.420317" />
-    <point x="20" y="0.414023" />
-    <point x="30" y="0.407410" />
+    <point x="10" y="0.420248" />
+    <point x="20" y="0.413919" />
+    <point x="30" y="0.406695" />
   </curve>
   <curve id="m1_moderate_77">
     <point x="0" y="79.538796" />
@@ -605,289 +605,289 @@
     <point x="30" y="81.074539" />
   </curve>
   <curve id="m1_moderate_78">
-    <point x="0" y="1.309131" />
-    <point x="10" y="1.388649" />
-    <point x="20" y="1.281273" />
-    <point x="30" y="1.181528" />
+    <point x="0" y="1.432543" />
+    <point x="10" y="1.475594" />
+    <point x="20" y="1.347334" />
+    <point x="30" y="1.250316" />
   </curve>
   <curve id="cut_m1_moderate_79">
-    <point x="0" y="318.000000" />
+    <point x="0" y="319.800000" />
   </curve>
   <curve id="m2_moderate_80">
-    <point x="0" y="21.800000" />
-    <point x="10" y="24.600000" />
-    <point x="20" y="27.800000" />
-    <point x="30" y="30.200000" />
+    <point x="0" y="21.400000" />
+    <point x="10" y="24.400000" />
+    <point x="20" y="27.400000" />
+    <point x="30" y="30.000000" />
   </curve>
   <curve id="m2_moderate_81">
-    <point x="0" y="26.139708" />
-    <point x="10" y="27.249225" />
-    <point x="20" y="29.704373" />
-    <point x="30" y="31.944482" />
+    <point x="0" y="25.043487" />
+    <point x="10" y="26.273153" />
+    <point x="20" y="28.555028" />
+    <point x="30" y="30.641595" />
   </curve>
   <curve id="m2_moderate_82">
-    <point x="0" y="415.600000" />
-    <point x="10" y="456.600000" />
-    <point x="20" y="419.600000" />
-    <point x="30" y="395.200000" />
+    <point x="0" y="453.400000" />
+    <point x="10" y="488.800000" />
+    <point x="20" y="453.200000" />
+    <point x="30" y="429.200000" />
   </curve>
   <curve id="m2_moderate_83">
-    <point x="0" y="240.200000" />
-    <point x="10" y="285.800000" />
-    <point x="20" y="332.800000" />
-    <point x="30" y="378.800000" />
+    <point x="0" y="235.600000" />
+    <point x="10" y="280.600000" />
+    <point x="20" y="326.800000" />
+    <point x="30" y="371.600000" />
   </curve>
   <curve id="m2_moderate_84">
-    <point x="0" y="97.800000" />
-    <point x="10" y="109.000000" />
-    <point x="20" y="118.200000" />
-    <point x="30" y="127.000000" />
+    <point x="0" y="98.800000" />
+    <point x="10" y="109.600000" />
+    <point x="20" y="119.000000" />
+    <point x="30" y="127.400000" />
   </curve>
   <curve id="m2_moderate_85">
-    <point x="0" y="11.234761" />
-    <point x="10" y="14.214318" />
-    <point x="20" y="17.565867" />
-    <point x="30" y="20.642844" />
+    <point x="0" y="11.007452" />
+    <point x="10" y="13.649958" />
+    <point x="20" y="16.625021" />
+    <point x="30" y="19.422527" />
   </curve>
   <curve id="m2_moderate_86">
-    <point x="0" y="1.015668" />
-    <point x="10" y="1.046144" />
-    <point x="20" y="1.073335" />
-    <point x="30" y="1.092055" />
+    <point x="0" y="1.015021" />
+    <point x="10" y="1.008558" />
+    <point x="20" y="1.029233" />
+    <point x="30" y="1.043142" />
   </curve>
   <curve id="m2_moderate_87">
     <point x="0" y="81.074539" />
-    <point x="10" y="81.542725" />
-    <point x="20" y="81.990433" />
-    <point x="30" y="82.488266" />
+    <point x="10" y="81.536217" />
+    <point x="20" y="81.883728" />
+    <point x="30" y="82.266479" />
   </curve>
   <curve id="m2_moderate_88">
-    <point x="0" y="1.155300" />
-    <point x="10" y="1.182037" />
-    <point x="20" y="1.097002" />
-    <point x="30" y="1.184508" />
+    <point x="0" y="1.223923" />
+    <point x="10" y="1.239707" />
+    <point x="20" y="1.135079" />
+    <point x="30" y="1.248577" />
   </curve>
   <curve id="cut_m2_moderate_89">
-    <point x="0" y="102.000000" />
+    <point x="0" y="104.800000" />
   </curve>
   <curve id="m3_moderate_90">
-    <point x="0" y="22.200000" />
-    <point x="10" y="25.000000" />
-    <point x="20" y="27.200000" />
-    <point x="30" y="29.400000" />
+    <point x="0" y="22.800000" />
+    <point x="10" y="25.200000" />
+    <point x="20" y="27.800000" />
+    <point x="30" y="30.000000" />
   </curve>
   <curve id="m3_moderate_91">
-    <point x="0" y="28.543157" />
-    <point x="10" y="30.667245" />
-    <point x="20" y="32.762033" />
-    <point x="30" y="34.752868" />
+    <point x="0" y="27.708796" />
+    <point x="10" y="29.707775" />
+    <point x="20" y="31.677416" />
+    <point x="30" y="33.539627" />
   </curve>
   <curve id="m3_moderate_92">
-    <point x="0" y="365.000000" />
-    <point x="10" y="349.000000" />
-    <point x="20" y="334.600000" />
-    <point x="30" y="319.600000" />
+    <point x="0" y="398.400000" />
+    <point x="10" y="381.000000" />
+    <point x="20" y="365.800000" />
+    <point x="30" y="351.000000" />
   </curve>
   <curve id="m3_moderate_93">
-    <point x="0" y="274.800000" />
-    <point x="10" y="316.400000" />
-    <point x="20" y="358.400000" />
-    <point x="30" y="398.400000" />
+    <point x="0" y="277.200000" />
+    <point x="10" y="318.400000" />
+    <point x="20" y="360.000000" />
+    <point x="30" y="399.800000" />
   </curve>
   <curve id="m3_moderate_94">
-    <point x="0" y="99.200000" />
-    <point x="10" y="106.600000" />
-    <point x="20" y="114.000000" />
-    <point x="30" y="120.200000" />
+    <point x="0" y="102.200000" />
+    <point x="10" y="109.800000" />
+    <point x="20" y="117.200000" />
+    <point x="30" y="123.600000" />
   </curve>
   <curve id="m3_moderate_95">
-    <point x="0" y="12.580934" />
-    <point x="10" y="15.551512" />
-    <point x="20" y="18.590452" />
-    <point x="30" y="21.414607" />
+    <point x="0" y="12.581171" />
+    <point x="10" y="15.120708" />
+    <point x="20" y="17.952012" />
+    <point x="30" y="20.590832" />
   </curve>
   <curve id="m3_moderate_96">
-    <point x="0" y="1.580953" />
-    <point x="10" y="1.625702" />
-    <point x="20" y="1.714116" />
-    <point x="30" y="1.790789" />
+    <point x="0" y="1.581195" />
+    <point x="10" y="1.665135" />
+    <point x="20" y="1.754032" />
+    <point x="30" y="1.824134" />
   </curve>
   <curve id="m3_moderate_97">
-    <point x="0" y="76.310646" />
-    <point x="10" y="77.846611" />
-    <point x="20" y="79.503151" />
-    <point x="30" y="80.775604" />
+    <point x="0" y="76.311226" />
+    <point x="10" y="77.331467" />
+    <point x="20" y="78.220276" />
+    <point x="30" y="79.240761" />
   </curve>
   <curve id="m3_moderate_98">
-    <point x="0" y="1.158044" />
-    <point x="10" y="1.166498" />
-    <point x="20" y="1.107042" />
-    <point x="30" y="1.119484" />
+    <point x="0" y="1.263303" />
+    <point x="10" y="1.147226" />
+    <point x="20" y="1.137809" />
+    <point x="30" y="1.130340" />
   </curve>
   <curve id="cut_m3_moderate_99">
-    <point x="0" y="104.000000" />
+    <point x="0" y="94.400000" />
   </curve>
   <curve id="m4_moderate_100">
-    <point x="0" y="20.600000" />
-    <point x="10" y="23.000000" />
-    <point x="20" y="25.200000" />
-    <point x="30" y="26.600000" />
+    <point x="0" y="22.000000" />
+    <point x="10" y="23.800000" />
+    <point x="20" y="26.200000" />
+    <point x="30" y="28.200000" />
   </curve>
   <curve id="m4_moderate_101">
-    <point x="0" y="30.918770" />
-    <point x="10" y="32.948866" />
-    <point x="20" y="34.927132" />
-    <point x="30" y="36.784090" />
+    <point x="0" y="30.118597" />
+    <point x="10" y="32.039228" />
+    <point x="20" y="33.919594" />
+    <point x="30" y="35.680079" />
   </curve>
   <curve id="m4_moderate_102">
-    <point x="0" y="288.000000" />
-    <point x="10" y="278.800000" />
-    <point x="20" y="268.800000" />
-    <point x="30" y="259.400000" />
+    <point x="0" y="324.200000" />
+    <point x="10" y="313.400000" />
+    <point x="20" y="302.400000" />
+    <point x="30" y="292.000000" />
   </curve>
   <curve id="m4_moderate_103">
-    <point x="0" y="277.800000" />
-    <point x="10" y="314.200000" />
-    <point x="20" y="350.200000" />
-    <point x="30" y="384.400000" />
+    <point x="0" y="292.000000" />
+    <point x="10" y="328.800000" />
+    <point x="20" y="366.000000" />
+    <point x="30" y="401.000000" />
   </curve>
   <curve id="m4_moderate_104">
-    <point x="0" y="90.800000" />
-    <point x="10" y="97.400000" />
-    <point x="20" y="103.200000" />
-    <point x="30" y="108.600000" />
+    <point x="0" y="97.400000" />
+    <point x="10" y="103.800000" />
+    <point x="20" y="110.000000" />
+    <point x="30" y="115.600000" />
   </curve>
   <curve id="m4_moderate_105">
-    <point x="0" y="12.759977" />
-    <point x="10" y="15.456193" />
-    <point x="20" y="18.136465" />
-    <point x="30" y="20.197141" />
+    <point x="0" y="12.759975" />
+    <point x="10" y="15.542403" />
+    <point x="20" y="17.953123" />
+    <point x="30" y="20.298670" />
   </curve>
   <curve id="m4_moderate_106">
-    <point x="0" y="1.759997" />
-    <point x="10" y="1.832420" />
-    <point x="20" y="1.924747" />
-    <point x="30" y="1.997353" />
+    <point x="0" y="1.759996" />
+    <point x="10" y="1.839999" />
+    <point x="20" y="1.935843" />
+    <point x="30" y="2.005627" />
   </curve>
   <curve id="m4_moderate_107">
-    <point x="0" y="70.279038" />
-    <point x="10" y="72.580811" />
-    <point x="20" y="73.825348" />
-    <point x="30" y="75.202637" />
+    <point x="0" y="65.207725" />
+    <point x="10" y="67.869179" />
+    <point x="20" y="70.475777" />
+    <point x="30" y="73.457680" />
   </curve>
   <curve id="m4_moderate_108">
-    <point x="0" y="1.055746" />
-    <point x="10" y="1.102184" />
-    <point x="20" y="1.063603" />
-    <point x="30" y="1.046437" />
+    <point x="0" y="1.091471" />
+    <point x="10" y="1.081807" />
+    <point x="20" y="1.081999" />
+    <point x="30" y="1.040615" />
   </curve>
   <curve id="cut_m4_moderate_109">
-    <point x="0" y="120.600000" />
+    <point x="0" y="107.800000" />
   </curve>
   <curve id="m5_moderate_110">
-    <point x="0" y="19.200000" />
-    <point x="10" y="21.200000" />
-    <point x="20" y="23.000000" />
-    <point x="30" y="24.200000" />
+    <point x="0" y="20.400000" />
+    <point x="10" y="22.400000" />
+    <point x="20" y="24.200000" />
+    <point x="30" y="25.800000" />
   </curve>
   <curve id="m5_moderate_111">
-    <point x="0" y="33.176576" />
-    <point x="10" y="35.090736" />
-    <point x="20" y="36.966293" />
-    <point x="30" y="38.734663" />
+    <point x="0" y="32.184014" />
+    <point x="10" y="34.033083" />
+    <point x="20" y="35.816473" />
+    <point x="30" y="37.526113" />
   </curve>
   <curve id="m5_moderate_112">
-    <point x="0" y="233.200000" />
-    <point x="10" y="226.800000" />
-    <point x="20" y="220.200000" />
-    <point x="30" y="213.800000" />
+    <point x="0" y="266.200000" />
+    <point x="10" y="259.000000" />
+    <point x="20" y="250.800000" />
+    <point x="30" y="243.200000" />
   </curve>
   <curve id="m5_moderate_113">
-    <point x="0" y="273.000000" />
-    <point x="10" y="304.600000" />
-    <point x="20" y="335.400000" />
-    <point x="30" y="364.200000" />
+    <point x="0" y="288.200000" />
+    <point x="10" y="321.200000" />
+    <point x="20" y="352.800000" />
+    <point x="30" y="383.400000" />
   </curve>
   <curve id="m5_moderate_114">
-    <point x="0" y="83.600000" />
-    <point x="10" y="89.200000" />
-    <point x="20" y="94.000000" />
-    <point x="30" y="98.200000" />
+    <point x="0" y="90.000000" />
+    <point x="10" y="95.800000" />
+    <point x="20" y="101.000000" />
+    <point x="30" y="105.800000" />
   </curve>
   <curve id="m5_moderate_115">
-    <point x="0" y="12.759974" />
-    <point x="10" y="14.725187" />
-    <point x="20" y="16.832438" />
-    <point x="30" y="18.618416" />
+    <point x="0" y="12.759977" />
+    <point x="10" y="14.870938" />
+    <point x="20" y="16.907748" />
+    <point x="30" y="18.929919" />
   </curve>
   <curve id="m5_moderate_116">
     <point x="0" y="1.759997" />
-    <point x="10" y="1.687441" />
-    <point x="20" y="1.765594" />
-    <point x="30" y="1.827182" />
+    <point x="10" y="1.730885" />
+    <point x="20" y="1.811000" />
+    <point x="30" y="1.873169" />
   </curve>
   <curve id="m5_moderate_117">
-    <point x="0" y="72.543404" />
-    <point x="10" y="74.308861" />
-    <point x="20" y="75.752228" />
-    <point x="30" y="77.005249" />
+    <point x="0" y="70.337433" />
+    <point x="10" y="72.233116" />
+    <point x="20" y="73.914932" />
+    <point x="30" y="75.629974" />
   </curve>
   <curve id="m5_moderate_118">
-    <point x="0" y="1.160438" />
-    <point x="10" y="1.087427" />
-    <point x="20" y="1.125777" />
-    <point x="30" y="1.047199" />
+    <point x="0" y="1.078531" />
+    <point x="10" y="1.135359" />
+    <point x="20" y="1.111545" />
+    <point x="30" y="1.122836" />
   </curve>
   <curve id="cut_m5_moderate_119">
-    <point x="0" y="111.400000" />
+    <point x="0" y="112.800000" />
   </curve>
   <curve id="m6_moderate_120">
-    <point x="0" y="18.400000" />
-    <point x="10" y="19.800000" />
-    <point x="20" y="21.600000" />
+    <point x="0" y="19.600000" />
+    <point x="10" y="21.400000" />
+    <point x="20" y="22.800000" />
   </curve>
   <curve id="m6_moderate_121">
-    <point x="0" y="35.578497" />
-    <point x="10" y="37.375454" />
-    <point x="20" y="39.144258" />
+    <point x="0" y="34.446957" />
+    <point x="10" y="36.202856" />
+    <point x="20" y="37.898143" />
   </curve>
   <curve id="m6_moderate_122">
-    <point x="0" y="194.000000" />
-    <point x="10" y="190.400000" />
-    <point x="20" y="184.400000" />
+    <point x="0" y="222.400000" />
+    <point x="10" y="216.800000" />
+    <point x="20" y="211.600000" />
   </curve>
   <curve id="m6_moderate_123">
-    <point x="0" y="273.200000" />
-    <point x="10" y="300.800000" />
-    <point x="20" y="327.200000" />
+    <point x="0" y="288.200000" />
+    <point x="10" y="317.400000" />
+    <point x="20" y="345.200000" />
   </curve>
   <curve id="m6_moderate_124">
-    <point x="0" y="78.400000" />
-    <point x="10" y="83.000000" />
-    <point x="20" y="87.000000" />
+    <point x="0" y="85.000000" />
+    <point x="10" y="89.600000" />
+    <point x="20" y="93.800000" />
   </curve>
   <curve id="m6_moderate_125">
-    <point x="0" y="12.706550" />
-    <point x="10" y="14.463263" />
-    <point x="20" y="16.160989" />
+    <point x="0" y="12.759973" />
+    <point x="10" y="14.489540" />
+    <point x="20" y="16.199313" />
   </curve>
   <curve id="m6_moderate_126">
-    <point x="0" y="1.759996" />
-    <point x="10" y="1.807675" />
-    <point x="20" y="1.876992" />
+    <point x="0" y="1.759997" />
+    <point x="10" y="1.807174" />
+    <point x="20" y="1.875121" />
   </curve>
   <curve id="m6_moderate_127">
-    <point x="0" y="77.005249" />
-    <point x="10" y="77.948273" />
-    <point x="20" y="78.845062" />
+    <point x="0" y="75.197929" />
+    <point x="10" y="76.480652" />
+    <point x="20" y="77.388412" />
   </curve>
   <curve id="m6_moderate_128">
-    <point x="0" y="1.060562" />
-    <point x="10" y="1.123411" />
-    <point x="20" y="1.110031" />
+    <point x="0" y="1.079324" />
+    <point x="10" y="1.044551" />
+    <point x="20" y="1.107806" />
   </curve>
   <curve id="cut_m6_moderate_129">
-    <point x="0" y="91.000000" />
+    <point x="0" y="95.200000" />
   </curve>
   <select statement="AU eq 'KC_IDFdk3_FDI_H' and HMZ eq 'L' and SILV eq 'natural'">
     <features>
@@ -10651,40 +10651,40 @@
     <point x="30" y="29.000000" />
   </curve>
   <curve id="m1_moderate_587">
-    <point x="0" y="23.729357" />
-    <point x="10" y="25.994974" />
-    <point x="20" y="28.212290" />
-    <point x="30" y="30.203958" />
+    <point x="0" y="24.167435" />
+    <point x="10" y="26.473677" />
+    <point x="20" y="28.727401" />
+    <point x="30" y="30.753083" />
   </curve>
   <curve id="m1_moderate_588">
-    <point x="0" y="450.200000" />
-    <point x="10" y="438.000000" />
-    <point x="20" y="426.000000" />
-    <point x="30" y="416.000000" />
+    <point x="0" y="432.400000" />
+    <point x="10" y="421.000000" />
+    <point x="20" y="410.800000" />
+    <point x="30" y="399.600000" />
   </curve>
   <curve id="m1_moderate_589">
-    <point x="0" y="150.400000" />
-    <point x="10" y="189.200000" />
-    <point x="20" y="231.600000" />
-    <point x="30" y="273.800000" />
+    <point x="0" y="151.200000" />
+    <point x="10" y="190.000000" />
+    <point x="20" y="232.400000" />
+    <point x="30" y="274.400000" />
   </curve>
   <curve id="m1_moderate_590">
-    <point x="0" y="92.800000" />
-    <point x="10" y="104.000000" />
-    <point x="20" y="114.600000" />
-    <point x="30" y="124.000000" />
+    <point x="0" y="92.400000" />
+    <point x="10" y="103.400000" />
+    <point x="20" y="114.000000" />
+    <point x="30" y="123.000000" />
   </curve>
   <curve id="m1_moderate_591">
     <point x="0" y="8.992351" />
-    <point x="10" y="12.521283" />
-    <point x="20" y="16.471161" />
-    <point x="30" y="19.541453" />
+    <point x="10" y="12.633853" />
+    <point x="20" y="16.680348" />
+    <point x="30" y="19.898542" />
   </curve>
   <curve id="m1_moderate_592">
     <point x="0" y="0.506873" />
-    <point x="10" y="0.465028" />
-    <point x="20" y="0.483373" />
-    <point x="30" y="0.500122" />
+    <point x="10" y="0.465029" />
+    <point x="20" y="0.483374" />
+    <point x="30" y="0.500124" />
   </curve>
   <curve id="m1_moderate_593">
     <point x="0" y="66.143967" />
@@ -10693,55 +10693,55 @@
     <point x="30" y="71.813385" />
   </curve>
   <curve id="m1_moderate_594">
-    <point x="0" y="1.502625" />
-    <point x="10" y="1.330948" />
-    <point x="20" y="1.253054" />
-    <point x="30" y="1.369148" />
+    <point x="0" y="1.487015" />
+    <point x="10" y="1.303370" />
+    <point x="20" y="1.224867" />
+    <point x="30" y="1.348713" />
   </curve>
   <curve id="cut_m1_moderate_595">
-    <point x="0" y="100.800000" />
+    <point x="0" y="100.000000" />
   </curve>
   <curve id="m2_moderate_596">
-    <point x="0" y="21.400000" />
+    <point x="0" y="21.200000" />
     <point x="10" y="24.200000" />
-    <point x="20" y="27.200000" />
-    <point x="30" y="29.800000" />
+    <point x="20" y="27.000000" />
+    <point x="30" y="29.600000" />
   </curve>
   <curve id="m2_moderate_597">
-    <point x="0" y="27.289284" />
-    <point x="10" y="29.309254" />
-    <point x="20" y="31.219983" />
-    <point x="30" y="32.973191" />
+    <point x="0" y="27.686347" />
+    <point x="10" y="29.752226" />
+    <point x="20" y="31.715857" />
+    <point x="30" y="33.511028" />
   </curve>
   <curve id="m2_moderate_598">
-    <point x="0" y="385.800000" />
-    <point x="10" y="377.400000" />
-    <point x="20" y="368.200000" />
-    <point x="30" y="359.800000" />
+    <point x="0" y="371.000000" />
+    <point x="10" y="363.600000" />
+    <point x="20" y="355.200000" />
+    <point x="30" y="346.400000" />
   </curve>
   <curve id="m2_moderate_599">
-    <point x="0" y="201.200000" />
-    <point x="10" y="239.200000" />
-    <point x="20" y="278.200000" />
-    <point x="30" y="315.400000" />
+    <point x="0" y="199.400000" />
+    <point x="10" y="238.000000" />
+    <point x="20" y="277.000000" />
+    <point x="30" y="314.600000" />
   </curve>
   <curve id="m2_moderate_600">
-    <point x="0" y="99.400000" />
-    <point x="10" y="108.400000" />
-    <point x="20" y="116.600000" />
-    <point x="30" y="123.400000" />
+    <point x="0" y="98.200000" />
+    <point x="10" y="107.200000" />
+    <point x="20" y="115.400000" />
+    <point x="30" y="122.400000" />
   </curve>
   <curve id="m2_moderate_601">
-    <point x="0" y="12.539358" />
-    <point x="10" y="15.544546" />
-    <point x="20" y="18.446964" />
-    <point x="30" y="20.896912" />
+    <point x="0" y="12.539395" />
+    <point x="10" y="15.658061" />
+    <point x="20" y="18.613659" />
+    <point x="30" y="21.091508" />
   </curve>
   <curve id="m2_moderate_602">
-    <point x="0" y="1.539379" />
-    <point x="10" y="1.591840" />
-    <point x="20" y="1.678218" />
-    <point x="30" y="1.739033" />
+    <point x="0" y="1.539416" />
+    <point x="10" y="1.591884" />
+    <point x="20" y="1.677719" />
+    <point x="30" y="1.739337" />
   </curve>
   <curve id="m2_moderate_603">
     <point x="0" y="69.455109" />
@@ -10750,169 +10750,169 @@
     <point x="30" y="74.100395" />
   </curve>
   <curve id="m2_moderate_604">
-    <point x="0" y="1.247012" />
-    <point x="10" y="1.466156" />
-    <point x="20" y="1.270643" />
-    <point x="30" y="1.403031" />
+    <point x="0" y="1.306962" />
+    <point x="10" y="1.477266" />
+    <point x="20" y="1.315661" />
+    <point x="30" y="1.347715" />
   </curve>
   <curve id="cut_m2_moderate_605">
-    <point x="0" y="72.600000" />
+    <point x="0" y="75.000000" />
   </curve>
   <curve id="m3_moderate_606">
-    <point x="0" y="22.000000" />
-    <point x="10" y="24.000000" />
-    <point x="20" y="26.400000" />
-    <point x="30" y="28.400000" />
+    <point x="0" y="21.800000" />
+    <point x="10" y="23.800000" />
+    <point x="20" y="26.200000" />
+    <point x="30" y="28.200000" />
   </curve>
   <curve id="m3_moderate_607">
-    <point x="0" y="29.647926" />
-    <point x="10" y="31.458717" />
-    <point x="20" y="33.209240" />
-    <point x="30" y="34.838735" />
+    <point x="0" y="30.094607" />
+    <point x="10" y="31.941808" />
+    <point x="20" y="33.742247" />
+    <point x="30" y="35.408779" />
   </curve>
   <curve id="m3_moderate_608">
-    <point x="0" y="333.000000" />
-    <point x="10" y="324.800000" />
-    <point x="20" y="317.800000" />
-    <point x="30" y="310.600000" />
+    <point x="0" y="318.200000" />
+    <point x="10" y="310.400000" />
+    <point x="20" y="303.400000" />
+    <point x="30" y="297.400000" />
   </curve>
   <curve id="m3_moderate_609">
-    <point x="0" y="229.200000" />
-    <point x="10" y="262.800000" />
-    <point x="20" y="297.400000" />
-    <point x="30" y="330.000000" />
+    <point x="0" y="226.800000" />
+    <point x="10" y="260.200000" />
+    <point x="20" y="294.600000" />
+    <point x="30" y="327.200000" />
   </curve>
   <curve id="m3_moderate_610">
-    <point x="0" y="97.800000" />
-    <point x="10" y="104.800000" />
-    <point x="20" y="111.400000" />
-    <point x="30" y="117.400000" />
+    <point x="0" y="96.200000" />
+    <point x="10" y="103.000000" />
+    <point x="20" y="109.600000" />
+    <point x="30" y="115.200000" />
   </curve>
   <curve id="m3_moderate_611">
-    <point x="0" y="13.199977" />
-    <point x="10" y="15.299708" />
-    <point x="20" y="17.573508" />
-    <point x="30" y="20.217633" />
+    <point x="0" y="13.199974" />
+    <point x="10" y="15.271299" />
+    <point x="20" y="17.887048" />
+    <point x="30" y="20.418060" />
   </curve>
   <curve id="m3_moderate_612">
     <point x="0" y="2.199996" />
-    <point x="10" y="2.262845" />
-    <point x="20" y="2.371908" />
-    <point x="30" y="2.455283" />
+    <point x="10" y="2.213425" />
+    <point x="20" y="2.316472" />
+    <point x="30" y="2.385576" />
   </curve>
   <curve id="m3_moderate_613">
-    <point x="0" y="70.443687" />
-    <point x="10" y="71.711342" />
-    <point x="20" y="73.795914" />
-    <point x="30" y="75.411880" />
+    <point x="0" y="71.383270" />
+    <point x="10" y="73.557579" />
+    <point x="20" y="75.950050" />
+    <point x="30" y="76.911804" />
   </curve>
   <curve id="m3_moderate_614">
-    <point x="0" y="1.284253" />
-    <point x="10" y="1.371029" />
-    <point x="20" y="1.093783" />
-    <point x="30" y="1.429442" />
+    <point x="0" y="1.254924" />
+    <point x="10" y="1.291852" />
+    <point x="20" y="1.069948" />
+    <point x="30" y="1.290486" />
   </curve>
   <curve id="cut_m3_moderate_615">
-    <point x="0" y="86.200000" />
+    <point x="0" y="87.800000" />
   </curve>
   <curve id="m4_moderate_616">
-    <point x="0" y="21.200000" />
-    <point x="10" y="23.400000" />
-    <point x="20" y="25.200000" />
-    <point x="30" y="27.000000" />
+    <point x="0" y="20.800000" />
+    <point x="10" y="22.600000" />
+    <point x="20" y="24.600000" />
+    <point x="30" y="26.600000" />
   </curve>
   <curve id="m4_moderate_617">
-    <point x="0" y="31.407769" />
-    <point x="10" y="33.142286" />
-    <point x="20" y="34.832248" />
-    <point x="30" y="36.380913" />
+    <point x="0" y="31.772401" />
+    <point x="10" y="33.530774" />
+    <point x="20" y="35.258068" />
+    <point x="30" y="36.862251" />
   </curve>
   <curve id="m4_moderate_618">
-    <point x="0" y="289.400000" />
-    <point x="10" y="282.600000" />
-    <point x="20" y="276.600000" />
-    <point x="30" y="270.600000" />
+    <point x="0" y="274.600000" />
+    <point x="10" y="267.400000" />
+    <point x="20" y="261.400000" />
+    <point x="30" y="256.400000" />
   </curve>
   <curve id="m4_moderate_619">
-    <point x="0" y="243.800000" />
-    <point x="10" y="274.400000" />
-    <point x="20" y="305.800000" />
-    <point x="30" y="335.000000" />
+    <point x="0" y="237.000000" />
+    <point x="10" y="267.000000" />
+    <point x="20" y="297.600000" />
+    <point x="30" y="327.000000" />
   </curve>
   <curve id="m4_moderate_620">
-    <point x="0" y="94.000000" />
-    <point x="10" y="99.600000" />
-    <point x="20" y="105.000000" />
-    <point x="30" y="110.000000" />
+    <point x="0" y="90.800000" />
+    <point x="10" y="96.200000" />
+    <point x="20" y="101.800000" />
+    <point x="30" y="106.600000" />
   </curve>
   <curve id="m4_moderate_621">
-    <point x="0" y="13.009239" />
-    <point x="10" y="15.191328" />
-    <point x="20" y="17.189978" />
-    <point x="30" y="19.019341" />
+    <point x="0" y="12.900220" />
+    <point x="10" y="15.105518" />
+    <point x="20" y="17.156753" />
+    <point x="30" y="18.935773" />
   </curve>
   <curve id="m4_moderate_622">
-    <point x="0" y="2.199997" />
-    <point x="10" y="2.242791" />
-    <point x="20" y="2.351661" />
-    <point x="30" y="2.441556" />
+    <point x="0" y="2.199996" />
+    <point x="10" y="2.237356" />
+    <point x="20" y="2.348754" />
+    <point x="30" y="2.441639" />
   </curve>
   <curve id="m4_moderate_623">
-    <point x="0" y="69.515373" />
-    <point x="10" y="71.529259" />
-    <point x="20" y="73.337570" />
-    <point x="30" y="74.870239" />
+    <point x="0" y="73.934502" />
+    <point x="10" y="74.987991" />
+    <point x="20" y="76.337616" />
+    <point x="30" y="77.506248" />
   </curve>
   <curve id="m4_moderate_624">
-    <point x="0" y="1.435560" />
-    <point x="10" y="1.260067" />
-    <point x="20" y="1.317848" />
-    <point x="30" y="1.173961" />
+    <point x="0" y="1.254404" />
+    <point x="10" y="1.350320" />
+    <point x="20" y="1.136865" />
+    <point x="30" y="1.201265" />
   </curve>
   <curve id="cut_m4_moderate_625">
-    <point x="0" y="86.200000" />
+    <point x="0" y="90.200000" />
   </curve>
   <curve id="m5_moderate_626">
-    <point x="0" y="20.000000" />
-    <point x="10" y="22.000000" />
-    <point x="20" y="23.400000" />
-    <point x="30" y="25.000000" />
+    <point x="0" y="19.200000" />
+    <point x="10" y="20.800000" />
+    <point x="20" y="22.400000" />
+    <point x="30" y="24.000000" />
   </curve>
   <curve id="m5_moderate_627">
-    <point x="0" y="32.797976" />
-    <point x="10" y="34.442215" />
-    <point x="20" y="36.059354" />
-    <point x="30" y="37.578334" />
+    <point x="0" y="33.000513" />
+    <point x="10" y="34.672308" />
+    <point x="20" y="36.343065" />
+    <point x="30" y="37.904254" />
   </curve>
   <curve id="m5_moderate_628">
-    <point x="0" y="250.800000" />
-    <point x="10" y="245.000000" />
-    <point x="20" y="240.800000" />
-    <point x="30" y="235.200000" />
+    <point x="0" y="235.800000" />
+    <point x="10" y="230.600000" />
+    <point x="20" y="226.400000" />
+    <point x="30" y="221.400000" />
   </curve>
   <curve id="m5_moderate_629">
-    <point x="0" y="247.800000" />
-    <point x="10" y="275.600000" />
-    <point x="20" y="303.800000" />
-    <point x="30" y="330.200000" />
+    <point x="0" y="236.600000" />
+    <point x="10" y="263.200000" />
+    <point x="20" y="291.200000" />
+    <point x="30" y="317.400000" />
   </curve>
   <curve id="m5_moderate_630">
-    <point x="0" y="88.000000" />
-    <point x="10" y="93.000000" />
-    <point x="20" y="97.800000" />
-    <point x="30" y="102.000000" />
+    <point x="0" y="83.600000" />
+    <point x="10" y="88.600000" />
+    <point x="20" y="93.200000" />
+    <point x="30" y="97.600000" />
   </curve>
   <curve id="m5_moderate_631">
-    <point x="0" y="12.185781" />
-    <point x="10" y="13.808898" />
-    <point x="20" y="15.634912" />
-    <point x="30" y="17.459872" />
+    <point x="0" y="11.854490" />
+    <point x="10" y="13.455342" />
+    <point x="20" y="15.116599" />
+    <point x="30" y="17.051702" />
   </curve>
   <curve id="m5_moderate_632">
     <point x="0" y="2.199996" />
-    <point x="10" y="2.304126" />
-    <point x="20" y="2.414300" />
-    <point x="30" y="2.503591" />
+    <point x="10" y="2.306328" />
+    <point x="20" y="2.424868" />
+    <point x="30" y="2.527547" />
   </curve>
   <curve id="m5_moderate_633">
     <point x="0" y="64.423538" />
@@ -10921,61 +10921,61 @@
     <point x="30" y="72.631706" />
   </curve>
   <curve id="m5_moderate_634">
-    <point x="0" y="1.193418" />
-    <point x="10" y="1.147740" />
-    <point x="20" y="1.198126" />
-    <point x="30" y="1.380877" />
+    <point x="0" y="1.207905" />
+    <point x="10" y="1.282736" />
+    <point x="20" y="1.137779" />
+    <point x="30" y="1.287801" />
   </curve>
   <curve id="cut_m5_moderate_635">
-    <point x="0" y="87.200000" />
+    <point x="0" y="90.400000" />
   </curve>
   <curve id="m6_moderate_636">
-    <point x="0" y="20.000000" />
-    <point x="10" y="21.600000" />
-    <point x="20" y="23.000000" />
+    <point x="0" y="19.200000" />
+    <point x="10" y="20.800000" />
+    <point x="20" y="22.200000" />
   </curve>
   <curve id="m6_moderate_637">
-    <point x="0" y="34.903074" />
-    <point x="10" y="36.467395" />
-    <point x="20" y="37.993130" />
+    <point x="0" y="35.339558" />
+    <point x="10" y="36.932664" />
+    <point x="20" y="38.495582" />
   </curve>
   <curve id="m6_moderate_638">
-    <point x="0" y="221.400000" />
-    <point x="10" y="216.800000" />
-    <point x="20" y="212.600000" />
+    <point x="0" y="208.200000" />
+    <point x="10" y="203.600000" />
+    <point x="20" y="199.600000" />
   </curve>
   <curve id="m6_moderate_639">
-    <point x="0" y="265.600000" />
-    <point x="10" y="290.400000" />
-    <point x="20" y="315.800000" />
+    <point x="0" y="256.200000" />
+    <point x="10" y="280.800000" />
+    <point x="20" y="305.600000" />
   </curve>
   <curve id="m6_moderate_640">
-    <point x="0" y="86.000000" />
-    <point x="10" y="90.600000" />
-    <point x="20" y="94.400000" />
+    <point x="0" y="82.400000" />
+    <point x="10" y="86.800000" />
+    <point x="20" y="90.800000" />
   </curve>
   <curve id="m6_moderate_641">
-    <point x="0" y="12.553686" />
-    <point x="10" y="14.092719" />
-    <point x="20" y="15.489106" />
+    <point x="0" y="12.406420" />
+    <point x="10" y="13.927459" />
+    <point x="20" y="15.312187" />
   </curve>
   <curve id="m6_moderate_642">
     <point x="0" y="2.199996" />
-    <point x="10" y="2.264059" />
-    <point x="20" y="2.368111" />
+    <point x="10" y="2.253889" />
+    <point x="20" y="2.354372" />
   </curve>
   <curve id="m6_moderate_643">
-    <point x="0" y="66.659439" />
-    <point x="10" y="69.392235" />
-    <point x="20" y="71.310295" />
+    <point x="0" y="68.032036" />
+    <point x="10" y="70.302269" />
+    <point x="20" y="72.146683" />
   </curve>
   <curve id="m6_moderate_644">
-    <point x="0" y="1.220205" />
-    <point x="10" y="1.291263" />
-    <point x="20" y="1.230617" />
+    <point x="0" y="1.261953" />
+    <point x="10" y="1.478149" />
+    <point x="20" y="1.187528" />
   </curve>
   <curve id="cut_m6_moderate_645">
-    <point x="0" y="64.600000" />
+    <point x="0" y="61.200000" />
   </curve>
   <select statement="AU eq 'KC_IDFxm_FDI_L' and HMZ eq 'L' and SILV eq 'natural'">
     <features>

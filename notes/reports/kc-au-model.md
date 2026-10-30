@@ -19,6 +19,7 @@ not a legal-compliance product.
   pre-cut minus removed TPH and pre-cut minus removed volume.
 - The entry is a three-part cut: large trees 37.5 cm to D, surplus above D to
   the reserve ceiling, then small trees 2.5–37.5 cm.
+- The legal-candidate schedule is HMZ-mixed: M/A Moderate, L Low, U no harvest.
 - Product curves are the cut yields at the next entry.
 
 Files:

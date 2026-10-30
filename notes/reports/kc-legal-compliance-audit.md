@@ -23,7 +23,7 @@ pre-2026 80% Douglas-fir retention or the current approved order.
 
 ## Treatment tested
 
-The AU multi-entry runs now use a three-part legal-candidate cut at each entry:
+The AU multi-entry runs use a three-part legal-candidate cut at each entry:
 
 1. `THINABA` from 37.5 cm to D, removing surplus large trees to the legal
    large-tree minimum.
@@ -31,9 +31,18 @@ The AU multi-entry runs now use a three-part legal-candidate cut at each entry:
    ceiling.
 3. `THINQFA` from 2.5–37.5 cm, leaving the small-tree component.
 
-The `THINQFA` target is calibrated so the independently measured 5 cm q lands
-near the legal range: 1.55 for Low and 1.50 for Moderate. This is an FVS
-target, not a legal q value.
+The `THINQFA` q target is calibrated per AU so the independently measured 5 cm
+q lands inside the legal range. The overrides are:
+
+| AU | Regime | FVS q target |
+|---|---|---|
+| `KC_IDFdk3_FDI_H` | Low | 1.60 |
+| `KC_IDFdk3_FDI_H` | Moderate | 1.66 |
+| `KC_IDFxm_FDI_L` | Moderate | 1.38 |
+
+All other AU/regime pairs use 1.55 (Low) or 1.50 (Moderate). These are FVS
+targets, not legal q values. The measured q is calculated independently from
+the FVS tree list.
 
 ## Result
 
@@ -42,18 +51,10 @@ It is `selection_gwm_legal` under `ws4/runtime/kc_au_stages`.
 
 Legal-candidate run:
 
-- 52 of 55 targets met.
-- 2 below: q in `KC_IDFdk3_FDI_H.L` and `KC_IDFdk3_FDI_H.M`.
-- 1 above: q in `KC_IDFxm_FDI_L.M`.
-- Total BA, large-tree BA, maximum DBH and reserve ceilings pass.
+- **55 of 55** structural targets met.
+- Total BA, large-tree BA, maximum DBH, q and reserve ceilings all pass.
 
-Global-regime comparisons:
-
-- `selection_gwm_low`: 51 of 55 met; 3 below, 1 above.
-- `selection_gwm_moderate`: 52 of 55 met; 2 below, 1 above.
-
-The three remaining failures are marginal q-factor misses, not reserve or BA
-failures.
+This is a structural pass only. It does not certify legal compliance.
 
 ## Not tested / not compliant
 
@@ -64,11 +65,13 @@ failures.
 - Current approved UWR order and legal HMZ/stand-structure map.
 - Skid-trail and residual-damage checks.
 - KC-calibrated growth and mortality.
+- Independent validation of the AU-specific q target calibration.
 
 ## Consequence
 
 Do not present the current model or the legal-candidate run as legal
 compliance. The reserve account is a basal-area cap, not a spatial clump
-check. The remaining work is to place and verify clumps and openings, add the
-80% retention test, verify the current order and spatial layer, and close the
-three q-factor misses without using the q target as a compliance claim.
+check. The q pass depends on AU-specific FVS calibration and is not an
+independent validation. The remaining work is to place and verify clumps and
+openings, add the 80% retention test, verify the current order and spatial
+layer, and calibrate growth to KC data.
