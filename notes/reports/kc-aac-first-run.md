@@ -48,6 +48,34 @@ current treatment set. This is a material finding: the uncalibrated AAC is
 optimistic relative to the calibrated sensitivity, and the calibrated case
 needs either a lighter treatment, a different entry cycle, or a lower floor.
 
+## Split-block correction
+
+The first schedule had a single-period spike of **67,744 m³** in period 7. It
+came from one block: block 104, 210.4 ha, harvested in one entry. That was a
+block-size granularity artifact, not an operability-window alignment.
+
+The large blocks were split spatially above 40 ha:
+
+- 160 source blocks -> **211 split blocks**
+- maximum block size: **39.94 ha**
+- total area preserved: 3,481.77 ha
+- split source: `data/patchworks_knifecreek/spatial_split/`
+- compiled dataset: `ws4/dataset_kc_au_stages_split_v1`
+
+The 50k split-block search gives:
+
+| Metric | Split blocks |
+| --- | ---: |
+| Mean AAC | **3,453 m³/year** |
+| Period range | **3,209–3,797 m³/year** |
+| Period-7 harvest | 35,114 m³ |
+| 27,000 m³ floors | all met |
+| Target status | 22 met, 19 below |
+
+The period-7 spike is gone. The ±5% even-flow band is still not converged; the
+later periods are about 15% below period 1. That is now a flow-target issue, not
+a block-granularity artifact.
+
 ## Schedule shape
 
 The uncalibrated schedule has 201 entries across 110 blocks, with offsets from
@@ -65,7 +93,8 @@ period volumes are in `aac_periods.csv`; the block-level schedule is
   to the FVS product curves.
 - The AAC is not a statutory determination; the current order and HMZ layer
   still require verification.
-- The even-flow band is not converged.
+- The split-block AAC removes the single-block spike but the even-flow band is
+  still not converged.
 
 ## Next
 
