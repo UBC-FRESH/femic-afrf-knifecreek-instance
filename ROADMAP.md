@@ -433,12 +433,12 @@ run.
 
 Order of work:
 
-1. Normalize the eight Marshal tree shapefiles and 24 plot polygons into one
-   spatial tree table; resolve the plot2/plot5/plot6 duplication.
-2. Derive 2019 LiDAR canopy height, cover, clump and opening metrics around the
-   24 plot polygons; use the 2013 LAS for pre-treatment structure.
-3. Port the Kozak taper/merchantable-volume R functions and replace or
-   cross-check generic volume coefficients.
-4. Add spatial clump/opening and retention accounts to the stage graph.
-5. Run the 20-period AAC/estate optimization with the v1/v2c ensemble and report
-   an AAC range, harvest schedule, and structural/legal scorecard.
+1. [x] Normalize the eight Marshal tree shapefiles and 24 plot polygons into
+   one spatial tree table; resolve the plot2/plot5/plot6 duplication.
+2. [x] Derive 2019 LiDAR canopy height and cover metrics around the 24 plot
+   polygons.
+3. [x] Port the Kozak taper/merchantable-volume calculations and compute
+   tree-level volumes.
+4. [~] Calibrate LiDAR tree detection and build spatial clump/opening accounts.
+5. [ ] Run the 20-period AAC/estate optimization with the v1/v2c ensemble and
+   report an AAC range, harvest schedule, and structural/legal scorecard.

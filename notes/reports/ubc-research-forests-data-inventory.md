@@ -115,16 +115,26 @@ The first pipeline step is built in the private store under
   mean height 6.5–11.9 m, cover ≥2 m 72–94%, gap fraction <2 m 6–28%.
 
 This confirms the LiDAR and plot datasets line up spatially and gives the first
-AU/plot structural table. It is not yet a clump/opening classification.
+AU/plot structural table. It is not yet a legal clump/opening classification.
+
+The Kozak taper package is now wired to the normalized tree table. Merchantable
+volume across the eight mapped plots is about **100.9 m³/ha** (range 52.8–121.9),
+with whole-stem volume about 125 m³/ha. These are plot-map volumes, not an
+inventory estimate.
+
+The first 2019-CHM clump proxy detects 28–55 tree tops per plot and mostly
+1–3-tree groups; it does not reproduce 4–10-tree interlocking-crown clumps. This
+is a calibration signal, not a finding that the stand fails the legal rule. Use
+the 2013 point cloud and the eight tree maps to calibrate tree detection before
+interpreting clump counts.
 
 ## Immediate next steps
 
-1. Port the Kozak taper functions and bench-test against the R outputs.
-2. Derive clump/opening classifications from the 2019 CHM and validate them
-   against the eight tree maps.
-3. Use the 2013 LAS and Marshal tree maps to validate 2019 LiDAR structure.
-4. Add spatial feature accounts to the stage graph and rerun the AAC/estate
-   model.
+1. Calibrate 2019 LiDAR tree detection against the eight Marshal tree maps and
+   2013 LAS; replace the naive CHM local-maxima clump proxy.
+2. Build the spatial clump/opening accounts from the calibrated LiDAR layer.
+3. Add those accounts to the stage graph.
+4. Rerun the AAC/estate model with Kozak volumes and the v1/v2c ensemble.
 
 ## Caveats
 
