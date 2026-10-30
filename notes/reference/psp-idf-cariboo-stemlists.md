@@ -196,13 +196,18 @@ space-for-time panel from all live-tree visits, not only first measurements.
 - 338 IDF plots, 697 visits in the Williams Lake and 100 Mile House TSAs.
 - 590 visit states pass the data screen: live trees ≥9.1 cm DBH, BA 5–60,
   QMD 5–50, TPH 100–5000, projected age 20–250.
-- 92 states are stratified across age and BA bins for FVS-BC runs.
-- The selected states span projected ages 44–239 and BA 5.3–52.5 m²/ha.
+- The 697 visits belong to 338 stable sites; repeated visits are time-for-time
+  data, not independent space-for-time states.
+- 87 site states are stratified across age and BA bins for FVS-BC runs.
+- The selected states span projected ages 48–247 and BA 5.4–52.5 m²/ha.
 - Each state has a 50-year no-cut FVS-BC curve at 10-year steps.
+- `idf_cariboo_ba_for_time.csv` adds an experimental asymptotic BA fit; the
+  50-year curves do not reliably reach the asymptote, so those values are a
+  rectification aid, not a calibrated carrying capacity.
 
-This is a **space-for-time substitution**: each visit is a state, not a growth
-chronology. The repeated visits are not independent plots. The curves are not
-observed 50-year growth and do not replace the KC CFI.
+This is **BA/age space-for-time substitution**: one first-measurement state per
+site, not a growth chronology. The curves are not observed 50-year growth and
+do not replace the KC CFI.
 
 Files:
 

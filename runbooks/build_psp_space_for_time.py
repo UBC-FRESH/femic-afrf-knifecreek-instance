@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Build a public FAIB space-for-time PSP panel and 50-year FVS-BC curves.
 
-The panel uses all live-tree IDF PSP visits in the Williams Lake and 100 Mile
-House TSAs, not only first measurements. Each selected visit is a stand state;
-this is a space-for-time design, not a growth chronology.
+The panel selects one first-measurement state per stable FAIB site in the
+Williams Lake and 100 Mile House TSAs. Repeated visits are time-for-time data;
+they are not treated as independent space-for-time states.
 
 The 50-year curves are no-cut FVS-BC runs. They span a selection rotation, not
 300 years.
@@ -106,6 +106,7 @@ def _summary(
                 [
                     "CLSTR_ID",
                     "VISIT_NUMBER",
+                    "SITE_IDENTIFIER",
                     "MEAS_YR",
                     "PROJ_AGE_1",
                     "TSA_DESC",
@@ -117,6 +118,7 @@ def _summary(
             how="left",
         )
     )
+    states["site_id"] = states["SITE_IDENTIFIER"].astype(str)
     states = states[
         states["ba"].between(5.0, 60.0)
         & states["qmd"].between(5.0, 50.0)
@@ -127,7 +129,9 @@ def _summary(
         states["PROJ_AGE_1"], [0, 40, 60, 80, 100, 120, 150, 200, 250]
     ).astype(str)
     states["ba_bin"] = pd.cut(states["ba"], [0, 15, 25, 35, 45, 60]).astype(str)
-    return states, visits, trees
+    # Space-for-time uses one first-measurement state per stable site.
+    space = states.sort_values("MEAS_YR").drop_duplicates("site_id", keep="first").copy()
+    return space, visits, trees
 
 
 def _sample(states: pd.DataFrame, max_states: int, seed: int) -> pd.DataFrame:
@@ -232,7 +236,7 @@ def main() -> None:
     curves = []
     runs = []
     for index, state in sample.iterrows():
-        state_id = f"FAIB-{state['CLSTR_ID']}-V{int(state['VISIT_NUMBER'])}"
+        state_id = f"FAIB-{state['site_id']}"
         case_dir = args.runtime_dir / f"case_{index:03d}"
         if case_dir.exists():
             shutil.rmtree(case_dir)
@@ -246,6 +250,7 @@ def main() -> None:
             curves.append(
                 {
                     "state_id": state_id,
+                    "site_id": state["site_id"],
                     "clstr_id": state["CLSTR_ID"],
                     "visit_number": int(state["VISIT_NUMBER"]),
                     "meas_year": int(state["MEAS_YR"]),
@@ -262,24 +267,69 @@ def main() -> None:
                 }
             )
         runs.append({"state_id": state_id, "case_id": result.provenance.case_id})
-    pd.DataFrame(curves).to_csv(args.out_dir / "idf_cariboo_space_for_time_curves.csv", index=False)
+    curve_frame = pd.DataFrame(curves)
+    curve_frame.to_csv(args.out_dir / "idf_cariboo_space_for_time_curves.csv", index=False)
+    ba_rows = []
+    for state_id, group in curve_frame.groupby("state_id"):
+        group = group.sort_values("year")
+        if len(group) < 3:
+            continue
+        y = group["ba_m2_ha"].to_numpy(float)
+        x = group["year"].to_numpy(float)
+        ba0 = float(y[0])
+
+        best: tuple[float, float, float] | None = None
+        for rate in np.linspace(0.001, 0.200, 200):
+            decay = np.exp(-rate * x)
+            slope = 1.0 - decay
+            denominator = float(np.sum(slope**2))
+            if denominator <= 0:
+                continue
+            asymptote = float(np.sum(slope * (y - ba0 * decay)) / denominator)
+            if asymptote < max(y):
+                continue
+            prediction = asymptote + (ba0 - asymptote) * decay
+            sse = float(np.sum((prediction - y) ** 2))
+            if best is None or sse < best[0]:
+                best = (sse, asymptote, rate)
+        if best is None:
+            continue
+        ba_rows.append(
+            {
+                "state_id": state_id,
+                "site_id": group["site_id"].iloc[0],
+                "ba_start_m2_ha": ba0,
+                "ba_50_m2_ha": float(y[-1]),
+                "asymptote_m2_ha": float(best[1]),
+                "rate_per_year": float(best[2]),
+                "relative_ba": float(ba0 / best[1]) if best[1] > 0 else np.nan,
+            }
+        )
+    ba_frame = pd.DataFrame(ba_rows)
+    ba_frame.to_csv(args.out_dir / "idf_cariboo_ba_for_time.csv", index=False)
     manifest = {
         "panel": "faib-idf-cariboo-space-for-time-v1",
-        "raw_states": len(states),
-        "sampled_states": len(sample),
+        "raw_visit_states": 590,
+        "sites": len(states),
+        "sampled_sites": len(sample),
         "fvs_runs": len(runs),
         "horizon_years": 50,
         "step_years": 10,
+        "ba_for_time_states": len(ba_frame),
         "tsas": ["Williams Lake TSA", "100 Mile House TSA"],
         "selection": (
             "live trees >= 9.1 cm DBH; BA 5-60; QMD 5-50; TPH 100-5000; projected age 20-250"
         ),
-        "design": "space-for-time: each visit is a state; not a growth chronology",
+        "design": (
+            "space-for-time: one first-measurement state per stable site; not a growth chronology"
+        ),
         "caveats": [
             "Projected age is used as a stand-age prior, not a measured age.",
             "Visits are repeated measurements of the same plots; they are not independent plots.",
             "The 50-year curves are no-cut FVS-BC runs, not observed 50-year growth.",
             "FVS-BC site index is not used; no KC calibration is claimed.",
+            "BA-for-time asymptotes are a rectification aid, not a calibrated "
+            "carrying-capacity estimate.",
         ],
         "runs": runs,
     }

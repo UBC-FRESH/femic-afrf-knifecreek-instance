@@ -390,10 +390,11 @@ status and the GitHub issue comments.
   accounts, roads, pin and ForestModelXML remain open.
 - P3.3a space-for-time PSP panel: added
   `runbooks/build_psp_space_for_time.py` and public IDF Cariboo tables.
-  Across 338 IDF plots and 697 visits, 590 visit states pass the screen;
-  92 stratified states (age 44–239, BA 5.3–52.5 m²/ha) have 50-year no-cut
-  FVS-BC curves. This is a space-for-time design, not a growth chronology and
-  not a KC CFI. H-matrix integration remains open.
+  Across 338 IDF sites and 697 visits, 590 visit states pass the screen; 87
+  first-measurement site states (age 48–247, BA 5.4–52.5 m²/ha) have 50-year
+  no-cut FVS-BC curves. Repeated visits are time-for-time data, not independent
+  space-for-time states. This is not a growth chronology and not a KC CFI. H
+  feature integration is in P3.3b.
 - P3.3b H feature integration: added `runbooks/integrate_psp_space_for_time.py`
   and mapped the 92 IDF Cariboo space-for-time states to the H track states.
   Feature curves now cover 0–50 years for BA, QMD, TPH, canopy and volume;

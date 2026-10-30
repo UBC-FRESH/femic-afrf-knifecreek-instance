@@ -1,390 +1,373 @@
 {
   "panel": "faib-idf-cariboo-space-for-time-v1",
-  "raw_states": 590,
-  "sampled_states": 92,
-  "fvs_runs": 92,
+  "raw_visit_states": 590,
+  "sites": 288,
+  "sampled_sites": 87,
+  "fvs_runs": 87,
   "horizon_years": 50,
   "step_years": 10,
+  "ba_for_time_states": 87,
   "tsas": [
     "Williams Lake TSA",
     "100 Mile House TSA"
   ],
   "selection": "live trees >= 9.1 cm DBH; BA 5-60; QMD 5-50; TPH 100-5000; projected age 20-250",
-  "design": "space-for-time: each visit is a state; not a growth chronology",
+  "design": "space-for-time: one first-measurement state per stable site; not a growth chronology",
   "caveats": [
     "Projected age is used as a stand-age prior, not a measured age.",
     "Visits are repeated measurements of the same plots; they are not independent plots.",
     "The 50-year curves are no-cut FVS-BC runs, not observed 50-year growth.",
-    "FVS-BC site index is not used; no KC calibration is claimed."
+    "FVS-BC site index is not used; no KC calibration is claimed.",
+    "BA-for-time asymptotes are a rectification aid, not a calibrated carrying-capacity estimate."
   ],
   "runs": [
     {
-      "state_id": "FAIB-4024428-PSP2-V2",
-      "case_id": "28048b14-8fe9-49e0-a4fd-039141a664be"
+      "state_id": "FAIB-4025304",
+      "case_id": "1063fb48-64c3-49c0-aeb0-82bee61b9563"
     },
     {
-      "state_id": "FAIB-4025302-PSP5-V5",
-      "case_id": "47faa5d3-3e0d-4614-b0c1-64b7464ebe50"
+      "state_id": "FAIB-4024960",
+      "case_id": "e9c4419e-dffd-44c3-95c0-bd9e97bf23a0"
     },
     {
-      "state_id": "FAIB-4025298-PSP3-V3",
-      "case_id": "101a5ea2-1f7c-4314-a370-29bba6d04868"
+      "state_id": "FAIB-4024428",
+      "case_id": "c64fd00a-4fb9-4ffa-9ded-f589c2ee0edc"
     },
     {
-      "state_id": "FAIB-4024832-PSP2-V2",
-      "case_id": "7b7aecb2-775c-48f8-be26-7c4aa2b8e1ab"
+      "state_id": "FAIB-4025096",
+      "case_id": "3337adad-1bc1-42a8-aeed-35e7aa814362"
     },
     {
-      "state_id": "FAIB-4025299-PSP1-V1",
-      "case_id": "6ab98d90-c5ca-4b96-b66b-6c043e71744d"
+      "state_id": "FAIB-4027489",
+      "case_id": "2b33c0c5-1cd0-4710-a49e-6b74e7df5f89"
     },
     {
-      "state_id": "FAIB-4024834-PSP1-V1",
-      "case_id": "1e55b579-449d-4e7d-a411-0351cfe258c4"
+      "state_id": "FAIB-4025515",
+      "case_id": "5c772d52-3300-416e-b449-ab102016f018"
     },
     {
-      "state_id": "FAIB-4024627-PSP1-V1",
-      "case_id": "58bfa2b9-75d2-42f7-b5f1-23559f08008f"
+      "state_id": "FAIB-4024627",
+      "case_id": "e323d408-e41f-49cd-8279-c1d0e73da3c9"
     },
     {
-      "state_id": "FAIB-4024194-PSP3-V3",
-      "case_id": "63f714b7-c5e3-4917-b0d2-651cf66c7e68"
+      "state_id": "FAIB-4026630",
+      "case_id": "3944196e-dd9f-4d25-a095-5508c182160a"
     },
     {
-      "state_id": "FAIB-4024194-PSP2-V2",
-      "case_id": "2244d75b-8881-451d-aae5-47ba79f87316"
+      "state_id": "FAIB-4024194",
+      "case_id": "14e6064b-961c-4ecb-a63b-1126911e84b3"
     },
     {
-      "state_id": "FAIB-4024440-PSP2-V2",
-      "case_id": "56d0ca70-56d5-4cd7-b443-5db04faa4b65"
+      "state_id": "FAIB-4024441",
+      "case_id": "3bf0b8c4-594b-4a9d-8580-2fdc8ce5c7a4"
     },
     {
-      "state_id": "FAIB-4024456-PSP1-V1",
-      "case_id": "5ed6894b-7a91-4650-b429-9b2ce84c3ad9"
+      "state_id": "FAIB-4024440",
+      "case_id": "402f366b-0cd1-4564-be92-5bba03aa3d2a"
     },
     {
-      "state_id": "FAIB-4024627-PSP2-V2",
-      "case_id": "aaf8f580-a0a0-4b5e-972c-5213415ac6f8"
+      "state_id": "FAIB-4024547",
+      "case_id": "a75f9587-9765-41c3-9c4b-11bd91e8bb88"
     },
     {
-      "state_id": "FAIB-4024289-PSP1-V1",
-      "case_id": "c47ac7c7-9fce-4daa-95bd-29c4eb1d18af"
+      "state_id": "FAIB-4024439",
+      "case_id": "5f816e35-015f-4c60-be8b-28de0f77a9ca"
     },
     {
-      "state_id": "FAIB-4024747-PSP1-V1",
-      "case_id": "1e6a3cb1-6546-4b86-a4f7-aa5a8ce5448e"
+      "state_id": "FAIB-4024747",
+      "case_id": "77bfa9ec-6bb3-4e71-bde3-3887030cc407"
     },
     {
-      "state_id": "FAIB-4024445-PSP1-V1",
-      "case_id": "41dede86-4a37-4afb-b7af-00404c4323f7"
+      "state_id": "FAIB-4024445",
+      "case_id": "7db9b17c-0850-40c3-8d7b-4fc0faf92bfb"
     },
     {
-      "state_id": "FAIB-4024731-PSP1-V1",
-      "case_id": "8bc73999-43c1-4c63-9b6e-5ed3050ecabd"
+      "state_id": "FAIB-4024731",
+      "case_id": "21184b06-b941-4b1f-841d-f1234b08090f"
     },
     {
-      "state_id": "FAIB-4024336-PSP1-V1",
-      "case_id": "2ceb42ee-0868-449c-82ed-482b53582127"
+      "state_id": "FAIB-4024432",
+      "case_id": "4be2c881-0411-4dae-b07e-e717d98378d3"
     },
     {
-      "state_id": "FAIB-4026094-PSP1-V1",
-      "case_id": "04dfe1d4-0aeb-4e67-ab93-dbc9d6cf013f"
+      "state_id": "FAIB-4024979",
+      "case_id": "43f466f7-9119-48a7-87e3-4a5bf46d4630"
     },
     {
-      "state_id": "FAIB-4024522-PSP3-V3",
-      "case_id": "b2b0d7eb-11d7-4a06-9594-d078d06ab372"
+      "state_id": "FAIB-4024958",
+      "case_id": "563b93c7-3cfa-47d1-85f0-1b91f9c5044a"
     },
     {
-      "state_id": "FAIB-4024836-PSP2-V2",
-      "case_id": "2c4b061a-bff8-4040-80cf-70abf48ff12e"
+      "state_id": "FAIB-4025174",
+      "case_id": "c2044389-7740-4fbe-95cb-7eaa59f8376b"
     },
     {
-      "state_id": "FAIB-4024754-PSP1-V1",
-      "case_id": "0d037b00-79d4-4d6d-8e79-39e85a8118c4"
+      "state_id": "FAIB-4025093",
+      "case_id": "fbd22bb0-65ef-4704-9812-cc69730e71bd"
     },
     {
-      "state_id": "FAIB-4024283-PSP3-V3",
-      "case_id": "84a050c4-acd1-4501-9503-65ff985e3ff4"
+      "state_id": "FAIB-4024955",
+      "case_id": "2dc0cb28-2092-4200-a1a7-e43f2157840d"
     },
     {
-      "state_id": "FAIB-4024284-PSP3-V3",
-      "case_id": "53a21b1a-0f9a-4883-b6b3-4b20017111b8"
+      "state_id": "FAIB-4024956",
+      "case_id": "f822f1ad-f1a6-4c11-96ec-41567b712904"
     },
     {
-      "state_id": "FAIB-4024453-PSP1-V1",
-      "case_id": "983a8b87-1fe2-4800-9f8a-3711aa0d20d4"
+      "state_id": "FAIB-4024962",
+      "case_id": "e7f4ed38-35d8-4f26-9ca4-9083bfb367a8"
     },
     {
-      "state_id": "FAIB-4026687-PSP3-V3",
-      "case_id": "8a8147be-e349-435e-91d4-8b89b569194e"
+      "state_id": "FAIB-4026100",
+      "case_id": "0d6a5d10-562b-424a-ad38-2990cade78e6"
     },
     {
-      "state_id": "FAIB-4024837-PSP1-V1",
-      "case_id": "65dddd4d-8f36-4a13-8713-820603842825"
+      "state_id": "FAIB-4026687",
+      "case_id": "3a6af6f6-47ff-4e2c-a6f4-4c8ca886479f"
     },
     {
-      "state_id": "FAIB-4026687-PSP1-V1",
-      "case_id": "3ecd6996-3b6b-4b0b-a79d-549f3b963a72"
+      "state_id": "FAIB-4026101",
+      "case_id": "254610bb-ba17-4698-818f-e7171c75423e"
     },
     {
-      "state_id": "FAIB-4024802-PSP1-V1",
-      "case_id": "51926468-08c6-4f45-bce5-d186970f6bc3"
+      "state_id": "FAIB-4025001",
+      "case_id": "734da41b-43bc-41bd-bcb0-f1ef903d0ad1"
     },
     {
-      "state_id": "FAIB-4024183-PSP1-V1",
-      "case_id": "9dfec534-24d4-4bed-9ad1-58396fea634a"
+      "state_id": "FAIB-4024183",
+      "case_id": "1dc81f13-3e1f-43fe-8e21-690ac3f7a25f"
     },
     {
-      "state_id": "FAIB-4026152-PSP1-V1",
-      "case_id": "05c4e0c5-9aaf-4c6a-af2a-751491287559"
+      "state_id": "FAIB-4024802",
+      "case_id": "5f30160c-4126-492e-82bc-1c4462ea9d77"
     },
     {
-      "state_id": "FAIB-4025009-PSP1-V1",
-      "case_id": "d38ac0f0-1b77-4fa6-9c49-4140afd876e9"
+      "state_id": "FAIB-4024980",
+      "case_id": "f481fdb4-7c9f-46c8-9d6b-e10c8c1ade2e"
     },
     {
-      "state_id": "FAIB-4026888-PSP1-V1",
-      "case_id": "f1f03db4-15fa-4097-93d0-2a52af24110b"
+      "state_id": "FAIB-4026888",
+      "case_id": "3c970592-6dc1-409f-82cf-87675043980c"
     },
     {
-      "state_id": "FAIB-4024980-PSP1-V1",
-      "case_id": "c6a01734-314b-46d4-95f1-4396cb4c616c"
+      "state_id": "FAIB-4026793",
+      "case_id": "face2d7d-208c-4aea-9237-5ccccf170ecb"
     },
     {
-      "state_id": "FAIB-4024295-PSP1-V1",
-      "case_id": "2dbbc08b-ff3c-49aa-8f06-a99d87e6483c"
+      "state_id": "FAIB-4025419",
+      "case_id": "50af5d0e-da34-4211-b556-0d3b0a683be1"
     },
     {
-      "state_id": "FAIB-4025419-PSP2-V2",
-      "case_id": "efe3293a-7470-406a-9542-d580f1a603f5"
+      "state_id": "FAIB-4024800",
+      "case_id": "514078c8-0513-4e45-b35b-9d5034eafe26"
     },
     {
-      "state_id": "FAIB-4025419-PSP3-V3",
-      "case_id": "3221fc8b-bdf4-486f-ae0f-44be604219a2"
+      "state_id": "FAIB-4024839",
+      "case_id": "5b367f01-4297-4afc-8fd2-00097a121d91"
     },
     {
-      "state_id": "FAIB-4024734-PSP2-V2",
-      "case_id": "cecf821f-3ba5-4c12-9ea9-24e4c2085509"
+      "state_id": "FAIB-4024280",
+      "case_id": "30681218-1f96-4733-a53b-2d3cb2144449"
     },
     {
-      "state_id": "FAIB-4024750-PSP2-V2",
-      "case_id": "50f2b564-6cbd-42f7-baeb-c556fdaf6511"
+      "state_id": "FAIB-4025008",
+      "case_id": "965a0d17-98e0-46c2-933b-f8b44bd500fb"
     },
     {
-      "state_id": "FAIB-4024282-PSP2-V2",
-      "case_id": "138fe4f0-2e9c-4df2-ad18-0d4328837688"
+      "state_id": "FAIB-4024734",
+      "case_id": "cffb4a6d-0725-4a8d-9484-fe6c647ff420"
     },
     {
-      "state_id": "FAIB-4024279-PSP2-V2",
-      "case_id": "ec9d4ffd-164c-4768-9491-8ce067101d2d"
+      "state_id": "FAIB-4024752",
+      "case_id": "1ed215b8-7f02-4790-8b9a-6081ba076661"
     },
     {
-      "state_id": "FAIB-4025091-PSP3-V3",
-      "case_id": "5e1e831f-675c-4179-80f2-2a6086591165"
+      "state_id": "FAIB-4024751",
+      "case_id": "4a5211d6-7466-43af-b6cb-496afa88608b"
     },
     {
-      "state_id": "FAIB-4024280-PSP2-V2",
-      "case_id": "0d732b2e-5d33-4c24-ad09-e6b4b255a105"
+      "state_id": "FAIB-4024286",
+      "case_id": "22b97a38-91c8-4620-8531-1a8d846f01bc"
     },
     {
-      "state_id": "FAIB-4024291-PSP1-V1",
-      "case_id": "c8059a50-6d48-446f-946d-067c6ad7ccae"
+      "state_id": "FAIB-4024291",
+      "case_id": "2194298a-6469-4a76-aa63-edef41cb5992"
     },
     {
-      "state_id": "FAIB-4024290-PSP2-V2",
-      "case_id": "03be02d8-8ebf-4d1b-8c53-774de373113a"
+      "state_id": "FAIB-4024281",
+      "case_id": "208d2923-3738-4d89-a42d-4f2401dc5952"
     },
     {
-      "state_id": "FAIB-4024277-PSP1-V1",
-      "case_id": "08c8fcc3-a912-4a80-a6c8-53affa72791c"
+      "state_id": "FAIB-4027481",
+      "case_id": "14676a40-6b1b-445f-8041-350003475a37"
     },
     {
-      "state_id": "FAIB-4024821-PSP2-V2",
-      "case_id": "2cd86082-bd5b-45cf-af22-df20b0bb43c4"
+      "state_id": "FAIB-4025305",
+      "case_id": "ca82d09c-0452-44c8-9f09-79c2249a4f92"
     },
     {
-      "state_id": "FAIB-4025305-PSP1-V1",
-      "case_id": "6dccf798-c318-4e98-b8fa-18fc1bb81837"
+      "state_id": "FAIB-4025177",
+      "case_id": "83b07ccb-75d5-4c29-91d8-45faaf1f9c06"
     },
     {
-      "state_id": "FAIB-4025422-PSP2-V2",
-      "case_id": "86deae35-26f2-46f0-9565-34f6354a6ac5"
+      "state_id": "FAIB-4024821",
+      "case_id": "f1c7639b-1b3f-4ef0-9b91-31bc4683d4ee"
     },
     {
-      "state_id": "FAIB-4025305-PSP2-V2",
-      "case_id": "2c4dc3fe-0ad7-4436-a626-0a6a3b1bd3dd"
+      "state_id": "FAIB-4025172",
+      "case_id": "c7d922aa-24f5-47e8-9c61-5e3d998d1d85"
     },
     {
-      "state_id": "FAIB-4025422-PSP3-V3",
-      "case_id": "7ef7f28c-864f-479c-b5f8-2e545fe26c73"
+      "state_id": "FAIB-4024964",
+      "case_id": "261f2d26-d8d2-471a-842b-2bbce02d79ce"
     },
     {
-      "state_id": "FAIB-4024961-PSP1-V1",
-      "case_id": "47452812-2807-4a7a-b1d1-1a39953ffa38"
+      "state_id": "FAIB-4024961",
+      "case_id": "6dc45a21-fc33-4b09-b02b-585cdf7bc994"
     },
     {
-      "state_id": "FAIB-4024963-PSP1-V1",
-      "case_id": "6d9069b0-0a5a-44ee-8010-32108870b987"
+      "state_id": "FAIB-4024629",
+      "case_id": "4bc00ce5-58f9-4517-8a36-e04c0ead1e2a"
     },
     {
-      "state_id": "FAIB-4026915-PSP1-V1",
-      "case_id": "3810536a-528e-4e63-a102-0d49a83e6ed6"
+      "state_id": "FAIB-4024965",
+      "case_id": "f9dfde90-7e0e-4dc8-8499-bc049efa9435"
     },
     {
-      "state_id": "FAIB-4025098-PSP1-V1",
-      "case_id": "79963a28-7b2a-4621-b938-3969681d03a5"
+      "state_id": "FAIB-4026915",
+      "case_id": "36ff68e0-15ea-4f56-a5b7-c3d6d787f3e4"
     },
     {
-      "state_id": "FAIB-4025098-PSP3-V3",
-      "case_id": "3ffc3a34-13ef-44d8-a4a7-2b058464aef8"
+      "state_id": "FAIB-4024180",
+      "case_id": "a9b98639-7d36-4fbb-836f-7ca66f575e4f"
     },
     {
-      "state_id": "FAIB-4024449-PSP2-V2",
-      "case_id": "1f5e29d4-b5fd-4aa2-a85b-6dc1807a5097"
+      "state_id": "FAIB-4025995",
+      "case_id": "9f28613c-ec2f-4db1-93a2-364d9b257d0d"
     },
     {
-      "state_id": "FAIB-4033798-PSP1-V1",
-      "case_id": "23442e68-0f84-447f-a359-390462fc2f41"
+      "state_id": "FAIB-4024521",
+      "case_id": "b523f5dd-eb0f-4f03-8537-0cfe7452391f"
     },
     {
-      "state_id": "FAIB-4024180-PSP1-V1",
-      "case_id": "1e917e8f-91b3-4b59-a7d3-b23e05f08baf"
+      "state_id": "FAIB-4032990",
+      "case_id": "dfc5085f-dccc-4462-87bd-83bbae60452c"
     },
     {
-      "state_id": "FAIB-4032992-PSP1-V1",
-      "case_id": "387f3661-08f5-4535-823a-0c1f93aa994a"
+      "state_id": "FAIB-4025421",
+      "case_id": "05d8fb1b-b434-495d-a04c-57f00eec34c6"
     },
     {
-      "state_id": "FAIB-4024450-PSP2-V2",
-      "case_id": "be595e84-2a77-4685-9fd6-6b1e76142a10"
+      "state_id": "FAIB-4032992",
+      "case_id": "526f8ef6-b7c9-4bc4-b544-33fcf0333651"
     },
     {
-      "state_id": "FAIB-4033798-PSP2-V2",
-      "case_id": "23acd652-6894-4ab4-a469-752da32bdb76"
+      "state_id": "FAIB-4024449",
+      "case_id": "4885c597-7160-48dc-b212-6d772d2d6a18"
     },
     {
-      "state_id": "FAIB-4033798-PSP3-V3",
-      "case_id": "154dfb1c-ef60-4079-a257-0e9d785d45cb"
+      "state_id": "FAIB-4024450",
+      "case_id": "ba42b674-d449-44e2-991d-5d5d13b829a0"
     },
     {
-      "state_id": "FAIB-4024693-PSP2-V2",
-      "case_id": "682ebc20-8648-43cd-b929-2ed7c9a64724"
+      "state_id": "FAIB-4024977",
+      "case_id": "7ff7d23b-0b88-4cdb-b6d6-cd74feab1ee0"
     },
     {
-      "state_id": "FAIB-4024521-PSP4-V4",
-      "case_id": "51752a0d-8705-4bde-b01f-d01df0c02e7f"
+      "state_id": "FAIB-4026794",
+      "case_id": "14c82ff1-c6e1-447c-8474-4448d44b66b2"
     },
     {
-      "state_id": "FAIB-4024450-PSP1-V1",
-      "case_id": "667de31c-4a4d-4568-b133-37f8e4f30d0e"
+      "state_id": "FAIB-4024905",
+      "case_id": "66ada4dd-ea71-4572-81ae-b1085faab278"
     },
     {
-      "state_id": "FAIB-4024976-PSP1-V1",
-      "case_id": "5e2d068d-0acf-4443-b01a-8866c5409c06"
+      "state_id": "FAIB-4024434",
+      "case_id": "9df5cf9c-158f-4f76-849b-2d89f34a1206"
     },
     {
-      "state_id": "FAIB-4026089-PSP1-V1",
-      "case_id": "168dc4e0-1d12-4335-aa68-1f47eded6f57"
+      "state_id": "FAIB-4024966",
+      "case_id": "1af31aaf-5bba-4bdd-a597-32f9eb54b95f"
     },
     {
-      "state_id": "FAIB-4024971-PSP2-V2",
-      "case_id": "c7ec1ca0-20e1-46d0-9396-873634ede31b"
+      "state_id": "FAIB-4026910",
+      "case_id": "bbfc79ff-6e34-4f03-9ba5-6e2ccd5a304d"
     },
     {
-      "state_id": "FAIB-4025297-PSP3-V3",
-      "case_id": "ec0b6cd9-e320-4e97-98d4-1e6da807558c"
+      "state_id": "FAIB-4026662",
+      "case_id": "02e97713-2840-4276-a8d9-414c5b926ccf"
     },
     {
-      "state_id": "FAIB-4024429-PSP2-V2",
-      "case_id": "b3ac9425-bf7d-4f71-91a6-15b714cd9463"
+      "state_id": "FAIB-4026663",
+      "case_id": "4c5ff056-0961-409f-8227-4cd4a9b84c1a"
     },
     {
-      "state_id": "FAIB-4025303-PSP4-V4",
-      "case_id": "3f0aa762-7d1d-4870-a60d-5229f95408ae"
+      "state_id": "FAIB-4025181",
+      "case_id": "2cbcbfb4-6e74-4a51-a6bc-1ab79c4d79b9"
     },
     {
-      "state_id": "FAIB-4026662-PSP2-V2",
-      "case_id": "58701b8c-53d5-4d7c-b444-eb3ec98b1df5"
+      "state_id": "FAIB-4032996",
+      "case_id": "1ca20a6a-c0f5-40c1-a050-f2bef06cf55f"
     },
     {
-      "state_id": "FAIB-4024429-PSP3-V3",
-      "case_id": "243a169c-c22a-403a-a0e4-3079b7b80157"
+      "state_id": "FAIB-4032997",
+      "case_id": "2178ff16-261f-4975-aba3-36e4f46cebdf"
     },
     {
-      "state_id": "FAIB-4026910-PSP2-V2",
-      "case_id": "fde14c5c-de7c-4123-965d-c923cabf50c7"
+      "state_id": "FAIB-4024185",
+      "case_id": "4257d3b6-329a-4798-b342-41b54a17aafd"
     },
     {
-      "state_id": "FAIB-4032997-PSP1-V1",
-      "case_id": "9b2342b8-4100-4865-9f8d-02aa765e348f"
+      "state_id": "FAIB-4024187",
+      "case_id": "287237ec-7565-4346-af89-381494377743"
     },
     {
-      "state_id": "FAIB-4024429-PSP4-V4",
-      "case_id": "b51cf134-1688-4688-9fe7-91e525410baa"
+      "state_id": "FAIB-4024186",
+      "case_id": "83ccae0a-585d-4671-8a94-7c9a4fb59848"
     },
     {
-      "state_id": "FAIB-4032996-PSP2-V2",
-      "case_id": "34962ff4-4865-47be-8087-5447851b7cef"
+      "state_id": "FAIB-4025246",
+      "case_id": "91026da7-ad69-488a-9f0a-c190fa9b74b9"
     },
     {
-      "state_id": "FAIB-4024187-PSP1-V1",
-      "case_id": "ac90a61c-5479-4eb8-90f6-ae708a145185"
+      "state_id": "FAIB-4024427",
+      "case_id": "17a898d9-3af0-4e14-8295-c8883ebe2ae7"
     },
     {
-      "state_id": "FAIB-4024186-PSP1-V1",
-      "case_id": "1ca0d7f4-b3f2-4523-86aa-3c211bbe2b56"
+      "state_id": "FAIB-4024973",
+      "case_id": "9647a84e-633b-44b7-8686-60c4a8f84506"
     },
     {
-      "state_id": "FAIB-4032997-PSP2-V2",
-      "case_id": "e9a27159-4683-4320-8a93-7cc4e4e272d7"
+      "state_id": "FAIB-4024300",
+      "case_id": "535579f3-e14a-4e75-be38-2ac5bd419363"
     },
     {
-      "state_id": "FAIB-4024913-PSP1-V1",
-      "case_id": "6dd69a00-05c6-45f7-b3da-aa4b0a2739c3"
+      "state_id": "FAIB-4024458",
+      "case_id": "5055376f-03fc-4997-8420-0fd4b84e36a4"
     },
     {
-      "state_id": "FAIB-4024974-PSP1-V1",
-      "case_id": "4aea5433-76e5-4cbb-85e0-6061c6307860"
+      "state_id": "FAIB-4024911",
+      "case_id": "215cecb3-1f92-4485-ac9f-5470525dcf8f"
     },
     {
-      "state_id": "FAIB-4024736-PSP1-V1",
-      "case_id": "e5163062-0e55-4001-905c-fe3558ff2c17"
+      "state_id": "FAIB-4025004",
+      "case_id": "42d44457-2f54-401c-b3ef-578505cefcf8"
     },
     {
-      "state_id": "FAIB-4024300-PSP1-V1",
-      "case_id": "8b75727c-5ddc-4e0a-93bf-4641a6b4ee29"
+      "state_id": "FAIB-4024544",
+      "case_id": "5e3f857d-c930-4ca1-8274-3ddc5b867636"
     },
     {
-      "state_id": "FAIB-4024539-PSP1-V1",
-      "case_id": "0da922e5-2013-469e-a1d1-8695f628398e"
+      "state_id": "FAIB-4024540",
+      "case_id": "43d7fbc2-d546-4e85-b929-58b03062839b"
     },
     {
-      "state_id": "FAIB-4026895-PSP1-V1",
-      "case_id": "077354b4-3585-47b6-a10c-c8b2addaaac6"
+      "state_id": "FAIB-4025005",
+      "case_id": "78fcc2c9-4a93-460c-b238-cb4cbf08f60a"
     },
     {
-      "state_id": "FAIB-4024745-PSP1-V1",
-      "case_id": "1c96dd5b-513a-4477-8234-0e7181b6aef1"
-    },
-    {
-      "state_id": "FAIB-4024191-PSP2-V2",
-      "case_id": "36498873-4d23-45a7-a151-33a06202048d"
-    },
-    {
-      "state_id": "FAIB-4025245-PSP3-V3",
-      "case_id": "33a1b62c-c09b-4ad3-a84f-30e2de26410f"
-    },
-    {
-      "state_id": "FAIB-4025006-PSP1-V1",
-      "case_id": "e6f0530d-1339-47ed-9f73-44476d4b098c"
-    },
-    {
-      "state_id": "FAIB-4025005-PSP1-V1",
-      "case_id": "e4b334f1-a6c8-43d8-9bab-6ac30153a3d1"
-    },
-    {
-      "state_id": "FAIB-4024745-PSP2-V2",
-      "case_id": "c2713cfc-f3c0-42a2-920f-23f8427146f8"
+      "state_id": "FAIB-4025006",
+      "case_id": "fd1eabae-8433-4bb0-9023-3dbcb3099107"
     }
   ]
 }

@@ -3,7 +3,7 @@
 Status: **scaffold with space-for-time feature curves; product curves remain 30 years.**
 
 Generated from `ws4/dataset_kc_spatial_v3`, then feature curves were replaced by
-nearest-neighbour IDF Cariboo space-for-time FVS-BC curves.
+nearest-neighbour IDF Cariboo space-for-time FVS-BC curves (87 site states).
 
 ## Tables
 
@@ -37,7 +37,8 @@ The horizons differ. Do not present this as a 300-year matrix.
 ## Mapping
 
 Each unique canonical track state is matched to one FAIB IDF space-for-time
-state by BA/QMD midpoint. All HMZ variants of the same state share the same
+site state by BA/QMD midpoint. The panel uses one first-measurement state per
+site, not repeated visits. All HMZ variants of the same state share the same
 feature curves. See `space_for_time_mapping.csv`.
 
 ## Limits

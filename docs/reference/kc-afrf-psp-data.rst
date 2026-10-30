@@ -424,14 +424,17 @@ Regional space-for-time panel
 -----------------------------
 
 ``data/psp/idf_cariboo_space_for_time_plots.csv`` and
-``idf_cariboo_space_for_time_curves.csv`` hold 92 stratified IDF visit states
+``idf_cariboo_space_for_time_curves.csv`` hold 87 stratified IDF site states
 from the Williams Lake and 100 Mile House TSAs. They span projected ages
-44–239 years and 5.3–52.5 m²/ha BA, with 50-year no-cut FVS-BC curves at
+48–247 years and 5.4–52.5 m²/ha BA, with 50-year no-cut FVS-BC curves at
 10-year steps.
 
-This is a space-for-time substitution, not a growth chronology. Repeated visits
-are not independent plots, and the curves are not observed 50-year growth. It
-fills the yield-domain gap without pretending to be a KC chronology.
+The 697 visits belong to 338 stable sites; repeated visits are time-for-time
+data, not independent space-for-time states. This panel uses one first-
+measurement state per site. It is not a growth chronology, and the curves are
+not observed 50-year growth. The experimental BA-asymptote table is in
+``idf_cariboo_ba_for_time.csv``; 50 years is too short to trust its asymptote
+as a carrying capacity.
 
 What it unblocks
 ----------------

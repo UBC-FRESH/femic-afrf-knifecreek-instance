@@ -73,9 +73,7 @@ def main() -> None:
     old_curves = pd.read_csv(args.h_dir / "curves.csv")
     products = pd.read_csv(args.h_dir / "products.csv")
 
-    panel["state_id"] = (
-        "FAIB-" + panel["CLSTR_ID"].astype(str) + "-V" + panel["VISIT_NUMBER"].astype(str)
-    )
+    panel["state_id"] = "FAIB-" + panel["site_id"].astype(str)
     panel = panel.set_index("state_id")
     state_ids = list(panel.index)
     panel_mid = panel[["ba", "qmd"]].to_numpy(float)
