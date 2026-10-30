@@ -14,7 +14,7 @@
     "baseline_no_cut",
     "selection_smoke"
   ],
-  "serve": "ws4 serve --dataset ws4/dataset_kc_v1 --runs ws4/runtime/kc_v1 --targets ws4/targets_kc_smoke.yaml --geometry ws4/runtime/kc_v1/kc_blocks.geojson --topology ws4/topology.csv --patch-accounts ws4/patch_accounts.yaml --port 8766",
+  "serve": "ws4 serve --dataset ws4/dataset_kc_v1 --runs ws4/runtime/kc_v1 --targets ws4/targets_kc_smoke.yaml --geometry ws4/runtime/kc_v1/kc_blocks.geojson --crs EPSG:3005 --topology ws4/topology.csv --patch-accounts ws4/patch_accounts.yaml --port 8766",
   "caveats": [
     "Structural model, not a calibrated KC growth model.",
     "The recipe is generated from the KC H-matrix source tables.",
