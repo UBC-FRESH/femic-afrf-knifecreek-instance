@@ -318,8 +318,13 @@ P4.1 status: `ws4/evidence/kc_v1/coverage_audit.json` confirms 160 blocks,
 reconciliation at 3,481.773591 ha. The 92-track source scaffold has 73
 unreachable combinations.
 
+P4.2 status: `ws4/evidence/kc_v1/integrity_audit.json` confirms all 650 source
+curves reproduce in the compile, all feature/product curve references resolve,
+all treatment targets exist, no clearcut is present and curve domains are
+strictly increasing. Strata cycles are normalized to the source 30-year cycle.
+
 - [x] P4.1 Verify area, AU and state coverage (#71)
-- [ ] P4.2 Verify transition and curve integrity (#72)
+- [x] P4.2 Verify transition and curve integrity (#72)
 - [ ] P4.3 Run the baseline and two selection regimes (#73)
 - [ ] P4.4 Record the scenario comparison and caveats (#74)
 

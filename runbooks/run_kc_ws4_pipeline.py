@@ -100,6 +100,16 @@ def main() -> None:
             str(args.spatial_fragments),
         ]
     )
+    _run(
+        [
+            "python",
+            "runbooks/normalize_kc_strata.py",
+            "--dataset",
+            str(args.dataset),
+            "--h-dir",
+            "data/patchworks_knifecreek/tracks/H",
+        ]
+    )
     _run(["ws4", "validate", "--dataset", str(args.dataset)])
     audit_path = args.evidence / "account_audit.json"
     _run(
@@ -132,6 +142,22 @@ def main() -> None:
             "ws4/topology.csv",
             "--out",
             str(coverage_path),
+        ]
+    )
+
+    integrity_path = args.evidence / "integrity_audit.json"
+    _run(
+        [
+            "python",
+            "runbooks/audit_kc_integrity.py",
+            "--dataset",
+            str(args.dataset),
+            "--recipe",
+            str(args.xml),
+            "--h-dir",
+            "data/patchworks_knifecreek/tracks/H",
+            "--out",
+            str(integrity_path),
         ]
     )
 
@@ -185,6 +211,7 @@ def main() -> None:
         "spatial_fragments": str(args.spatial_fragments),
         "account_audit": str(audit_path),
         "coverage_audit": str(coverage_path),
+        "integrity_audit": str(integrity_path),
         "dataset": str(args.dataset),
         "years": args.years,
         "baseline_schedule": str(baseline_path),

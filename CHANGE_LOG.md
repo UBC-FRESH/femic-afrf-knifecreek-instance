@@ -478,3 +478,10 @@ status and the GitHub issue comments.
   blocks, recipe fragments, source fragments and topology; area reconciles at
   3,481.773591 ha; AU=1; 19 reachable tracks from a 92-track source scaffold;
   HMZ/clump/reserve memberships cover every block. No issues.
+
+- P4.2 integrity audit: added `runbooks/audit_kc_integrity.py` and
+  `runbooks/normalize_kc_strata.py`. The compiled 651 curves reproduce all 650
+  source H curves (plus `unity`); all feature/product references resolve; all 19
+  treatment targets exist; no clearcut is present. Strata cycle metadata is
+  normalized to the source 30-year cycle. Evidence:
+  `ws4/evidence/kc_v1/integrity_audit.json`.
