@@ -287,6 +287,9 @@ because no valid example, schema or compiler is available; see
 `notes/reference/patchworks-forestmodelxml-format-spike.md`. Do not claim recipe
 parity until that changes.
 
+P3.3 status: the H matrix scaffold ingests and validates, but its curves cover
+0–30 years. The 300-year extension and account wiring remain open.
+
 ## Phase 4: Verification and scenarios
 
 Parent issue: TBD

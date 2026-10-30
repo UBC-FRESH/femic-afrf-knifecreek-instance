@@ -1,0 +1,20 @@
+{
+  "matrix": "kc-patchworks-H-scaffold-v1",
+  "blocks": 160,
+  "tracks": 92,
+  "treatments": 49,
+  "curves": 174,
+  "curve_points": 549,
+  "features": 147,
+  "products": 49,
+  "horizon_years": 30,
+  "period_years": 10,
+  "status": "matrix-scaffold-30-year-curves",
+  "caveats": [
+    "Curves currently cover years 0-30 only; the 300-year extension is not generated.",
+    "accounts.csv and protoaccounts.csv are empty; product/feature account wiring is P3.4.",
+    "No clearcut treatment exists.",
+    "No ForestModelXML is claimed.",
+    "The source is dataset_kc_spatial_v3, which is a structural PSP-derived library."
+  ]
+}

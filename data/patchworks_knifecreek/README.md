@@ -1,6 +1,6 @@
 # Knife Creek Patchworks-compatible package
 
-Status: **fragment layer complete; matrix, accounts, roads, pin and ForestModelXML pending.**
+Status: **fragment layer complete; H matrix scaffold complete; accounts, roads, pin and ForestModelXML pending.**
 
 P3.2 builds the spatial fragment layer that the later `tracks/H` matrix will join to.
 
@@ -31,10 +31,14 @@ P3.2 builds the spatial fragment layer that the later `tracks/H` matrix will joi
 `F_AGE` is the VRI projected age, not a measured stand age. The PSP plots are
 uneven-aged; do not treat `F_AGE` as a plot age.
 
+## Built
+
+- `tracks/H/` matrix scaffold: 160 blocks, 92 tracks, 49 treatments, 174 curves
+  and 549 curve points; `ws4 ingest` and `ws4 validate` pass.
+
 ## Not built yet
 
-- `tracks/H/` matrix tables
-- 300-year curves
+- 300-year curves (current curves are 0–30 years)
 - product and feature accounts
 - topology
 - roads

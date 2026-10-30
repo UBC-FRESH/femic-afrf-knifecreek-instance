@@ -383,3 +383,8 @@ status and the GitHub issue comments.
   matches `dataset_kc_spatial_v3`; `RES_KEY`/`BLOCK`, `TRACK`, `F_AGE`, BEC,
   HMZ, clump and reserve attributes are carried. Matrix, roads, topology, pin
   and ForestModelXML remain pending.
+- P3.3 H-matrix scaffold: added `runbooks/build_kc_patchworks_h.py` and
+  `data/patchworks_knifecreek/tracks/H/` with 160 blocks, 92 tracks, 49
+  treatments, 174 curves and 549 points. `ws4 ingest` succeeds and
+  `ws4 validate` passes. Curves cover 0–30 years only; the 300-year extension,
+  accounts, roads, pin and ForestModelXML remain open.
