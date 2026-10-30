@@ -1,0 +1,83 @@
+# Knife Creek even-flow harvest-volume parametrization.
+#
+# Structural scenario only. Not calibrated growth, not a legal-compliance test,
+# and not a reviewed management prescription.
+#
+# Important: the KC product curves cover 30 years, so the current runnable
+# horizon is three 10-year periods. Do not copy the 200-year TSA 27 horizon
+# until the product curves are extended.
+#
+# The harvest floor below is the tested structural level (190,000 m3/period).
+# A 3,000-iteration search met it in all three periods; 195,000 m3/period did
+# not. This is not a proof of a global maximum. The flow band is the shape
+# constraint; the floor is the level constraint.
+
+targets:
+  # Flow: every period is compared with period 1, within +/-5%.
+  - account: product.yield.managed.total
+    period: 1
+    period_width: 10
+    flow: even
+    minimum: -5
+    maximum: 5
+    min_weight: 10000
+    max_weight: 10000
+    shape: non_linear
+    flow_reference_period: 1
+    priority: 2
+
+  # Level pair: harvest volume is a flow, so the standing volume level must
+  # be present on the same account surface.
+  - account: feature.yield.managed.total
+    period: 1
+    period_width: 10
+    minimum: 0
+    min_weight: 0.1
+    shape: linear
+    priority: 2
+  - account: feature.yield.managed.total
+    period: 2
+    period_width: 10
+    minimum: 0
+    min_weight: 0.1
+    shape: linear
+    priority: 2
+  - account: feature.yield.managed.total
+    period: 3
+    period_width: 10
+    minimum: 0
+    min_weight: 0.1
+    shape: linear
+    priority: 2
+
+  # Level pair: harvested area is a flow; keep its level account visible too.
+  - account: feature.area.managed.total
+    period: 1
+    period_width: 10
+    minimum: 0
+    min_weight: 0.1
+    shape: linear
+    priority: 2
+
+  # Harvest floor: tested structural level. Periods 1-3.
+  - account: product.yield.managed.total
+    period: 1
+    period_width: 10
+    minimum: 190000
+    min_weight: 0.1
+    shape: linear
+    priority: 2
+  - account: product.yield.managed.total
+    period: 2
+    period_width: 10
+    minimum: 190000
+    min_weight: 0.1
+    shape: linear
+    priority: 2
+  - account: product.yield.managed.total
+    period: 3
+    period_width: 10
+    minimum: 190000
+    min_weight: 0.1
+    shape: linear
+    priority: 2
