@@ -5,35 +5,30 @@ legal-compliance test.
 
 ## Structure
 
-This mirrors the TSA 27 even-flow pattern:
+- 20 x 10-year periods (200 years).
+- Flow target on `product.yield.managed.total`.
+- Even-flow band of +/-5% against period 1.
+- One harvest-volume floor target per period.
+- No growing-stock or other level targets yet.
 
-- a flow target on `product.yield.managed.total`;
-- an even-flow band of +/-5% against period 1;
-- a matching level target on `feature.yield.managed.total`;
-- a paired area flow/level check on `product.area.managed.total` and
-  `feature.area.managed.total`;
-- one harvest floor target per period.
+The flow target is the shape. The floor targets are the level.
 
-The flow target is the shape. The floor targets are the level. Neither replaces
-the other.
+## Horizon and curve limit
 
-## Horizon limit
+The KC product curves end at 30 years. The 200-year run uses the simulator's
+terminal-value extension; it is not a calibrated 200-year yield. The feature
+curves are 100-year space-for-time curves.
 
-The KC product curves cover 30 years, so the runnable horizon is three
-10-year periods. TSA 27 uses 200 years; that pattern cannot be copied to KC
-until the product curves are extended.
-
-## Tested level
+## Tested floor
 
 Using the GWM moderate selection schedule as the starting schedule:
 
-- 150,000 m3/period: met;
-- 185,000 m3/period: met;
-- 190,000 m3/period: met in all three periods;
-- 195,000 m3/period: below in all three periods.
+- 25,000 m3/period: met in all periods;
+- 27,000 m3/period: met in all periods;
+- the even-flow +/-5% band did not converge in a 50,000-iteration probe.
 
-The current target file uses 190,000 m3/period as a tested structural floor.
-This is not a proof of the global maximum and not a calibrated AAC.
+The target file uses 27,000 m3/period as a provisional structural floor. It is
+not a proven maximum and not a calibrated AAC.
 
 ## Files
 
@@ -42,7 +37,6 @@ This is not a proof of the global maximum and not a calibrated AAC.
 
 ## Caveats
 
-- Product curves are 30-year point estimates.
-- Feature curves are 100-year space-for-time curves.
+- No 200-year product curve exists yet.
+- The even-flow band needs a longer search or a different reference-period setup.
 - The scenario uses the structural KC model; there is no KC calibration.
-- The level accounts are reported; they are not a legal habitat test.
