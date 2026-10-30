@@ -219,9 +219,22 @@ def main() -> None:
             summary = summary.merge(large, on="Year", how="left").fillna(
                 {"large_ba_m2_ha": 0.0, "large_tph": 0.0}
             )
+            summary["reserve_ba_m2_ha"] = 0.0
+            summary["reserve_tph"] = 0.0
             case_curves.append(
                 summary[
-                    ["Year", "BA", "Tph", "QMD", "TCuM", "CCF", "large_ba_m2_ha", "large_tph"]
+                    [
+                        "Year",
+                        "BA",
+                        "Tph",
+                        "QMD",
+                        "TCuM",
+                        "CCF",
+                        "large_ba_m2_ha",
+                        "large_tph",
+                        "reserve_ba_m2_ha",
+                        "reserve_tph",
+                    ]
                 ].rename(
                     columns={
                         "Year": "year",

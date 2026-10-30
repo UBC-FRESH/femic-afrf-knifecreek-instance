@@ -28,9 +28,15 @@ The values come from the FVS tree-list output, requested at each 10-year cycle.
 - 115 feature rows for each feature label
 - `ws4 validate` passes
 
-## Not done
+## Reserve BA
 
-Reserve BA is not yet added. It needs the clump-reserve marking rule applied to
-the after-treatment tree list; total large-tree BA is not reserve.
+Reserve BA is now added with the existing non-spatial clump-reserve proxy:
+
+- group large trees into DBH-ranked chunks of six;
+- reserve the largest three above the regime D target;
+- follow those TreeIds through the post-entry tree lists.
+
+`feature.habitat.reserve_ba` is present for all 115 stage tracks. This is a
+structural proxy, not the legal spatial 4–10-tree clump rule.
 
 No KC calibration or legal-compliance claim.
