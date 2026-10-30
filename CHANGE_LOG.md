@@ -469,3 +469,28 @@ status and the GitHub issue comments.
   ForestModelXML build evidence, compiled counts, baseline/selection summaries,
   account audit, Gavin functional comparison and explicit data gaps. Phase P3
   is queued for maintainer approval; it is not merged.
+
+## 2026-10-30
+
+- P4 activated under parent issue #70, branch `feature/p4-verification`.
+- P4.1 coverage audit: added `runbooks/audit_kc_coverage.py` and
+  `ws4/evidence/kc_v1/coverage_audit.json`. All 160 blocks appear in fragments,
+  blocks, recipe fragments, source fragments and topology; area reconciles at
+  3,481.773591 ha; AU=1; 19 reachable tracks from a 92-track source scaffold;
+  HMZ/clump/reserve memberships cover every block. No issues.
+
+- P4.2 integrity audit: added `runbooks/audit_kc_integrity.py` and
+  `runbooks/normalize_kc_strata.py`. The compiled 651 curves reproduce all 650
+  source H curves (plus `unity`); all feature/product references resolve; all 19
+  treatment targets exist; no clearcut is present. Strata cycle metadata is
+  normalized to the source 30-year cycle. Evidence:
+  `ws4/evidence/kc_v1/integrity_audit.json`.
+
+- P4.3 scenario runs: added `runbooks/run_kc_scenarios.py` and ran the no-cut
+  baseline plus GWM low and GWM moderate selection regimes for 30 years. Reports
+  and copied evidence are under `ws4/evidence/kc_v1/scenario_reports/`; the
+  manifest is `scenario_manifest.json`.
+- P4.4 closeout: added `notes/reports/p4-scenario-comparison.md` and
+  `notes/reports/p4-closeout.md`. The comparison reports residual BA/QMD/TPH and
+  canopy CCF, states that large-tree/reserve/seral/species indicators are
+  unavailable, and keeps calibration and legal compliance out of the claims.

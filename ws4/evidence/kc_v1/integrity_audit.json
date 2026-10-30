@@ -1,0 +1,35 @@
+{
+  "dataset": "ws4/dataset_kc_v1",
+  "recipe": "data/kc_ws4_recipe/forestmodel.xml",
+  "source_matrix": "data/patchworks_knifecreek/tracks/H",
+  "curves": {
+    "compiled_ids": 651,
+    "compiled_points": 6661,
+    "source_ids": 650,
+    "source_points": 6660,
+    "checked_against_source": 650,
+    "source_counts_match": true
+  },
+  "treatments": {
+    "rows": 19,
+    "labels": [
+      "GWM_LOW",
+      "GWM_MODERATE"
+    ],
+    "clearcut": false
+  },
+  "strata": {
+    "rows": 19,
+    "zero_cycle_tracks": 0,
+    "note": "cycle is compiler metadata and is not used by the annual simulator"
+  },
+  "features": 114,
+  "products": 38,
+  "issues": [],
+  "ok": true,
+  "limits": [
+    "Source curves are the KC H-matrix structural curves, not a fresh FVS-BC validation.",
+    "Feature curves cover 100 years; product curves cover 30 years.",
+    "No calibrated-growth or legal-compliance conclusion is drawn."
+  ]
+}

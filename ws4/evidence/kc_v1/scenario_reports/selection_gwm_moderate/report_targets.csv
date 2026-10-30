@@ -1,0 +1,4 @@
+account,period,year,value,minimum,maximum,raw_penalty,penalty,scale,normalization,priority,kind,status
+product.yield.managed.total,1,10,546222.9041283394,0,,0.0,0.0,1.0,none,1,level,met
+feature.yield.managed.total,1,10,609303.4790932182,0,,0.0,0.0,1.0,none,1,level,met
+feature.habitat.basal_area,1,10,72683.2858048424,0,,0.0,0.0,1.0,none,1,level,met

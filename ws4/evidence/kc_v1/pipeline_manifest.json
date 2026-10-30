@@ -4,6 +4,8 @@
   "fragments": "data/kc_ws4_recipe/fragments.csv",
   "spatial_fragments": "data/patchworks_knifecreek/fragments.csv",
   "account_audit": "ws4/evidence/kc_v1/account_audit.json",
+  "coverage_audit": "ws4/evidence/kc_v1/coverage_audit.json",
+  "integrity_audit": "ws4/evidence/kc_v1/integrity_audit.json",
   "dataset": "ws4/dataset_kc_v1",
   "years": 10,
   "baseline_schedule": "ws4/runtime/kc_v1/kc_baseline_no_cut.csv",

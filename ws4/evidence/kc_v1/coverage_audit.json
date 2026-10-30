@@ -1,0 +1,51 @@
+{
+  "dataset": "ws4/dataset_kc_v1",
+  "blocks": 160,
+  "fragments": 160,
+  "recipe_blocks": 160,
+  "source_blocks": 160,
+  "topology_blocks": 160,
+  "topology_pairs": 500,
+  "tracks_reachable": 19,
+  "tracks_source": 92,
+  "tracks_unreachable": 73,
+  "treatments": 19,
+  "aus": [
+    1
+  ],
+  "area_ha": {
+    "fragments": 3481.773591,
+    "blocks": 3481.773591,
+    "recipe": 3481.773591,
+    "source": 3481.773591
+  },
+  "groups": {
+    "count": 12,
+    "memberships": 800,
+    "families": {
+      "hmz": [
+        "hmz_l",
+        "hmz_m",
+        "hmz_u"
+      ],
+      "clump": [
+        "clump_clump10_20",
+        "clump_clump20_30",
+        "clump_clump30_plus",
+        "clump_clump_lt10"
+      ],
+      "reserve": [
+        "reserve_reserve20_30",
+        "reserve_reserve30_plus",
+        "reserve_reserve_lt20"
+      ]
+    }
+  },
+  "issues": [],
+  "ok": true,
+  "limits": [
+    "The source H scaffold has 92 possible tracks; only 19 are reachable from the current inventory and treatments.",
+    "Area is the net fragment area, not the gross SUP permit area.",
+    "No legal-compliance or calibrated-growth conclusion is drawn."
+  ]
+}
