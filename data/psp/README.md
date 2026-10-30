@@ -44,6 +44,7 @@ These are regional IDF analogs for the Knife Creek model, not KC data.
 | `idf_cariboo_space_for_time_curves.csv` | 100-year no-cut FVS-BC curves for those site states. |
 | `kc_afrf_psp_fvs_200y_curves.csv` | 200-year no-cut FVS-BC curves for 24 KC PSP plots. |
 | `kc_au_200y/` | AU-stratified 200-year FAIB PSP/FVS curves and plot matches. |
+| `kc_au_200y/kc_au_yield_200y.csv` | AU no-cut curves with large-tree BA/TPH. |
 | `idf_cariboo_ba_for_time.csv` | Experimental BA-asymptote and BA-for-time coordinates. |
 | `idf_cariboo_space_for_time_manifest.json` | Selection, design and caveats. |
 | `idf_cariboo_psp_plot_weibull_fits.csv` | Stable per-plot shifted-Weibull DBH fits. |

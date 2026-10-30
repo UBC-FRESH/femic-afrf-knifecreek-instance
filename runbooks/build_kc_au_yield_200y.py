@@ -101,7 +101,7 @@ def _records(state: pd.Series, trees: pd.DataFrame) -> list[dict[str, object]]:
 def _keywords() -> list[Keyword]:
     """Return the no-cut 200-year FVS-BC key set."""
     return [
-        Keyword("DATABASE", (), ("DSNOut", "FVSOut.db", "Summary")),
+        Keyword("DATABASE", (), ("DSNOut", "FVSOut.db", "Summary", "TREELIDB")),
         Keyword("STDIDENT", ("KC-AU-200Y",)),
         Keyword("STDINFO", ("712", "CHS131", "0", str(HORIZON_YEARS), "35", "16")),
         Keyword("MANAGED", ("0", "1")),
@@ -111,6 +111,7 @@ def _keywords() -> list[Keyword]:
         Keyword("TIMEINT", ("", str(STEP_YEARS))),
         Keyword("NUMCYCLE", (str(HORIZON_YEARS // STEP_YEARS),)),
         Keyword("RANNSEED", ("1",)),
+        *[Keyword("TREELIST", (str(cycle),)) for cycle in range(1, 21)],
         Keyword("PROCESS"),
         Keyword("STOP"),
     ]
@@ -207,8 +208,21 @@ def main() -> None:
             result = run_case(records, _keywords(), directory=case_dir)
             summary = read_table(result.database, "FVS_Summary_Metric").sort_values("Year")
             summary = summary[summary["CaseID"] == result.provenance.case_id]
+            tree_list = read_table(result.database, "FVS_TreeList_Metric")
+            tree_list = tree_list[tree_list["CaseID"] == result.provenance.case_id].copy()
+            large = (
+                tree_list[tree_list["DBH"] >= 37.5]
+                .assign(ba=lambda frame: 0.00007854 * frame["DBH"] ** 2 * frame["TPH"])
+                .groupby("Year", as_index=False)
+                .agg(large_ba_m2_ha=("ba", "sum"), large_tph=("TPH", "sum"))
+            )
+            summary = summary.merge(large, on="Year", how="left").fillna(
+                {"large_ba_m2_ha": 0.0, "large_tph": 0.0}
+            )
             case_curves.append(
-                summary[["Year", "BA", "Tph", "QMD", "TCuM", "CCF"]].rename(
+                summary[
+                    ["Year", "BA", "Tph", "QMD", "TCuM", "CCF", "large_ba_m2_ha", "large_tph"]
+                ].rename(
                     columns={
                         "Year": "year",
                         "BA": "ba_m2_ha",
