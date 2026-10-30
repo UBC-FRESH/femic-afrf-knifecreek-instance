@@ -17,7 +17,7 @@ after its parent issue exists and the maintainer approves it.
 | P2 FVS-BC state-transition library | TBD | `feature/p2-state-library` | planned |
 | P3 ws4 instance assembly | #60 | `feature/p3-ws4-assembly` | complete |
 | P4 Verification and scenarios | #70 | `feature/p4-verification` | complete |
-| P5 Release v0.1 | #76 | `feature/p5-release` | active |
+| P5 Release v0.1 | #76 | `feature/p5-release` | complete |
 | P6 Maintain and merge readiness | TBD | `feature/p6-maintain` | planned |
 
 ## Lifecycle Map
@@ -346,7 +346,7 @@ Acceptance criteria:
 
 Parent issue: #76
 Branch: `feature/p5-release`
-Status: active
+Status: complete
 
 Goal: tag and publish the Knife Creek instance with release notes and a clean
 checkout verification.
@@ -360,8 +360,11 @@ dataset and validates it. `fresh_fvsbc` is not installed, so the FVS-BC pilot is
 an explicit release prerequisite and is not claimed to have run. See
 `notes/reports/p5-clean-checkout.md`.
 
+P5.2 status: `v0.1.0` was tagged on `94a5300` and published as a GitHub release.
+See `notes/reports/p5-closeout.md`.
+
 - [x] P5.1 Write release notes and the known-gaps list (#77)
-- [ ] P5.2 Tag and publish after maintainer approval (#78)
+- [x] P5.2 Tag and publish after maintainer approval (#78)
 - [x] P5.3 Verify the release from a clean checkout (#79)
 
 Acceptance criteria:

@@ -508,3 +508,8 @@ status and the GitHub issue comments.
   build has 160 fragments/blocks, 19 tracks, 19 treatments, 6,661 curve points,
   114 features, 38 products and 8 accounts. `fresh_fvsbc` is not installed, so
   the FVS-BC pilot is recorded as a release prerequisite, not a completed run.
+
+- P5.2 release: tagged `v0.1.0` on `94a5300` and published the GitHub release.
+- P5 closeout: added `notes/reports/p5-closeout.md`; P5 is complete. The FVS-BC
+  pilot remains an explicit prerequisite because `fresh_fvsbc` is not installed
+  in the verification environment.
