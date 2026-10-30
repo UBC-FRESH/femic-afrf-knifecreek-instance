@@ -62,6 +62,12 @@ This is a structural pass only. It does not certify legal compliance.
 - The 2–5-tree maximum-diameter subgroup inside each clump.
 - Canopy openings 0.3–1.0 tree heights, mean 0.5.
 - Pre-2026 retention of ≥80% of pre-harvest merchantable Douglas-fir BA.
+  A first-entry proxy is in `data/psp/kc_au_200y/kc_au_fir_retention_low.csv`
+  and `..._moderate.csv`. Pooled first-entry retention is 0.39–0.79 under Low
+  and 0.42–0.95 under Moderate; only one AU/regime group reaches 0.80. This is
+  not yet a legal determination because the model has no calendar-2026 entry:
+  if year 0 is 2026 and the first entry is after 2026, the pre-2026 rule is not
+  triggered; if the first entry is the pre-2026 harvest, five of six AUs fail.
 - Current approved UWR order and legal HMZ/stand-structure map.
 - Skid-trail and residual-damage checks.
 - KC-calibrated growth and mortality.
