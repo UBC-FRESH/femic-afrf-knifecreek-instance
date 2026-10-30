@@ -1,0 +1,25 @@
+{
+  "dataset": "ws4/dataset_kc_au_stages_v1",
+  "years": 200,
+  "runs": {
+    "baseline_no_cut": {
+      "schedule": "ws4/runtime/kc_au_stages/baseline_no_cut.csv",
+      "blocks": 0,
+      "run": "ws4/runtime/kc_au_stages/baseline_no_cut"
+    },
+    "selection_gwm_low": {
+      "schedule": "ws4/runtime/kc_au_stages/selection_gwm_low.csv",
+      "blocks": 157,
+      "run": "ws4/runtime/kc_au_stages/selection_gwm_low"
+    },
+    "selection_gwm_moderate": {
+      "schedule": "ws4/runtime/kc_au_stages/selection_gwm_moderate.csv",
+      "blocks": 157,
+      "run": "ws4/runtime/kc_au_stages/selection_gwm_moderate"
+    }
+  },
+  "caveats": [
+    "Structural smoke regimes, not reviewed management prescriptions.",
+    "No calibrated-growth or legal-compliance claim."
+  ]
+}
