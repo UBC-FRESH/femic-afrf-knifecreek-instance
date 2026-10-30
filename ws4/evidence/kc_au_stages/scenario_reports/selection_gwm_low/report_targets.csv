@@ -19,7 +19,7 @@ product.yield.managed.total,17,169.0,170,-100.0,-5.0,5.0,90250000.0,90250000.0,1
 product.yield.managed.total,18,179.0,180,-100.0,-5.0,5.0,90250000.0,90250000.0,1.0,none,2,flow.even,below
 product.yield.managed.total,19,189.0,190,-100.0,-5.0,5.0,90250000.0,90250000.0,1.0,none,2,flow.even,below
 product.yield.managed.total,20,199.0,200,-100.0,-5.0,5.0,90250000.0,90250000.0,1.0,none,2,flow.even,below
-product.yield.managed.total,1,,10,1060286.298595416,27000.0,,0.0,0.0,1.0,none,2,level,met
+product.yield.managed.total,1,,10,1061058.0167159084,27000.0,,0.0,0.0,1.0,none,2,level,met
 product.yield.managed.total,2,,20,0.0,27000.0,,2700.0,2700.0,1.0,none,2,level,below
 product.yield.managed.total,3,,30,0.0,27000.0,,2700.0,2700.0,1.0,none,2,level,below
 product.yield.managed.total,4,,40,0.0,27000.0,,2700.0,2700.0,1.0,none,2,level,below
@@ -39,4 +39,4 @@ product.yield.managed.total,17,,170,0.0,27000.0,,2700.0,2700.0,1.0,none,2,level,
 product.yield.managed.total,18,,180,0.0,27000.0,,2700.0,2700.0,1.0,none,2,level,below
 product.yield.managed.total,19,,190,0.0,27000.0,,2700.0,2700.0,1.0,none,2,level,below
 product.yield.managed.total,20,,200,0.0,27000.0,,2700.0,2700.0,1.0,none,2,level,below
-feature.yield.managed.total,20,,200,928660.469179015,2306547.786034,,1377887316.854985,1377887316.854985,1.0,none,2,level,below
+feature.yield.managed.total,20,,200,927888.7510585232,2306547.786034,,1378659034.975477,1378659034.975477,1.0,none,2,level,below

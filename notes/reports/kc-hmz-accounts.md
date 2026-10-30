@@ -30,7 +30,7 @@ a maximum and is not represented by this file yet.
 - `ws4/dataset_kc_au_stages_v1` validates.
 - 115 tracks, 2,300 feature rows, 182 feature labels including max DBH and q.
 - Legal-candidate target file has 55 targets; the HMZ-mixed legal-candidate
-  run meets 52/55, with only three marginal q-factor misses.
+  run meets 55/55. This is a structural pass, not legal compliance.
 - Web API exposes 124 accounts including the 13 large-tree, 13 reserve, 13 max
   DBH and 13 q group labels.
 

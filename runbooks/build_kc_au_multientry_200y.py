@@ -46,6 +46,13 @@ REGIMES = {
     "GWM_MODERATE": {"B": 22.0, "large": 11.0, "reserve": 2.2, "D": 60.0, "q": 1.50},
 }
 SPECIES_MAP = {"FDI": "FD", "PLI": "PL", "SX": "SW", "AT": "AT"}
+# AU-specific FVS q targets used to land the independently measured 5 cm q
+# inside the legal range. Unlisted AU/regime pairs use the regime default.
+Q_BY_AU = {
+    ("KC_IDFdk3_FDI_H", "GWM_LOW"): 1.60,
+    ("KC_IDFdk3_FDI_H", "GWM_MODERATE"): 1.66,
+    ("KC_IDFxm_FDI_L", "GWM_MODERATE"): 1.38,
+}
 LARGE_THRESHOLD = 37.5
 
 
@@ -155,9 +162,10 @@ def _records(state: pd.Series, trees: pd.DataFrame) -> list[dict[str, object]]:
     return records
 
 
-def _keywords(site_index: float, regime: str) -> list[Keyword]:
+def _keywords(site_index: float, regime: str, au_id: str | None = None) -> list[Keyword]:
     """Return the 200-year multi-entry key set."""
     spec = REGIMES[regime]
+    q_target = Q_BY_AU.get((au_id, regime), spec["q"]) if au_id else spec["q"]
     thinning = []
     for cycle in CYCLES:
         thinning.append(
@@ -196,7 +204,7 @@ def _keywords(site_index: float, regime: str) -> list[Keyword]:
                     "2.5",
                     "37.5",
                     "0",
-                    str(spec["q"]),
+                    str(q_target),
                     "5.0",
                     str(round((spec["B"] - spec["large"]) * FT2_PER_M2, 2)),
                 ),
@@ -283,7 +291,7 @@ def main() -> None:
                 continue
             result = run_case(
                 records,
-                _keywords(float(au_row.site_index_median), args.regime),
+                _keywords(float(au_row.site_index_median), args.regime, au_id),
                 directory=run_root / f"{au_id}__{match.CLSTR_ID}",
             )
             summary = read_table(result.database, "FVS_Summary_Metric").sort_values("Year")
