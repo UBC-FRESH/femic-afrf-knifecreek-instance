@@ -36,10 +36,11 @@ HORIZON_YEARS = 200
 STEP_YEARS = 10
 ENTRY_CYCLE = 4  # year 30
 SPECIES_MAP = {"FDI": "FD", "PLI": "PL", "SX": "SW", "AT": "AT"}
-B_TARGET = 22.0
 FT2_PER_M2 = 4.356
-D_TARGET = 60.0
-Q_TARGET = 1.25
+REGIMES = {
+    "GWM_LOW": {"B": 16.0, "D": 50.0, "q": 1.30},
+    "GWM_MODERATE": {"B": 22.0, "D": 60.0, "q": 1.25},
+}
 
 
 def _bec_variant(row: pd.Series) -> str:
@@ -103,15 +104,16 @@ def _records(state: pd.Series, trees: pd.DataFrame) -> list[dict[str, object]]:
     return records
 
 
-def _keywords(site_index: float) -> list[Keyword]:
-    """Return the 200-year one-entry GWM moderate key set."""
+def _keywords(site_index: float, regime: str) -> list[Keyword]:
+    """Return the 200-year one-entry GWM key set for one regime."""
+    spec = REGIMES[regime]
     return [
         Keyword(
             "DATABASE",
             (),
             ("DSNOut", "FVSOut.db", "Summary", "CUTLIDB", "ATRTLIDB"),
         ),
-        Keyword("STDIDENT", ("KC-AU-GWM-MODERATE-200Y",)),
+        Keyword("STDIDENT", (f"KC-AU-{regime}-200Y",)),
         Keyword("STDINFO", ("712", "CHS131", "0", str(HORIZON_YEARS), "35", "16")),
         Keyword("MANAGED", ("0", "1")),
         Keyword("SITECODE", ("FD", f"{site_index:.1f}")),
@@ -128,11 +130,11 @@ def _keywords(site_index: float) -> list[Keyword]:
             (
                 str(ENTRY_CYCLE),
                 "0.0",
-                str(D_TARGET),
+                str(spec["D"]),
                 "0",
-                str(Q_TARGET),
+                str(spec["q"]),
                 "5.0",
-                str(round(B_TARGET * FT2_PER_M2, 2)),
+                str(round(spec["B"] * FT2_PER_M2, 2)),
             ),
             supplemental=("0",),
         ),
@@ -149,6 +151,7 @@ def main() -> None:
     parser.add_argument("--panel", type=Path, required=True)
     parser.add_argument("--raw-dir", type=Path, required=True)
     parser.add_argument("--out-dir", type=Path, required=True)
+    parser.add_argument("--regime", choices=sorted(REGIMES), default="GWM_MODERATE")
     args = parser.parse_args()
 
     au = pd.read_csv(args.au_table).set_index("au_id")
@@ -201,28 +204,57 @@ def main() -> None:
             case_dir = run_root / f"{au_id}__{match.CLSTR_ID}"
             result = run_case(
                 records,
-                _keywords(float(au_row.site_index_median)),
+                _keywords(float(au_row.site_index_median), args.regime),
                 directory=case_dir,
             )
             summary = read_table(result.database, "FVS_Summary_Metric").sort_values("Year")
             summary = summary[summary["CaseID"] == result.provenance.case_id]
-            case_curves.append(
-                summary[
-                    ["Year", "BA", "Tph", "QMD", "TCuM", "CCF", "RTph", "RTCuM", "ATBA"]
-                ].rename(
-                    columns={
-                        "Year": "year",
-                        "BA": "ba_m2_ha",
-                        "Tph": "tph",
-                        "QMD": "qmd_cm",
-                        "TCuM": "volume_m3_ha",
-                        "CCF": "canopy_ccf",
-                        "RTph": "cut_tph",
-                        "RTCuM": "cut_m3_ha",
-                        "ATBA": "after_ba_m2_ha",
-                    }
-                )
+            entry = summary[summary["Year"] == 30].iloc[0]
+            cut_tph = float(entry["RTph"])
+            cut_volume = float(entry["RTCuM"])
+            if cut_tph <= 0.0 or cut_volume <= 0.0:
+                # The GWM target was above the stand BA, so FVS made no removal.
+                continue
+            residual = pd.DataFrame(
+                {
+                    "year": [0],
+                    "ba_m2_ha": [float(entry["ATBA"])],
+                    "tph": [float(entry["Tph"]) - cut_tph],
+                    "qmd_cm": [float(entry["ATQMD"])],
+                    "volume_m3_ha": [float(entry["TCuM"]) - cut_volume],
+                    "canopy_ccf": [float(entry["ATCCF"])],
+                    "cut_tph": [cut_tph],
+                    "cut_m3_ha": [cut_volume],
+                    "after_ba_m2_ha": [float(entry["ATBA"])],
+                }
             )
+            post = summary[summary["Year"] > 30].copy()
+            post["year"] = post["Year"] - 30
+            post = post.rename(
+                columns={
+                    "BA": "ba_m2_ha",
+                    "Tph": "tph",
+                    "QMD": "qmd_cm",
+                    "TCuM": "volume_m3_ha",
+                    "CCF": "canopy_ccf",
+                    "RTph": "cut_tph",
+                    "RTCuM": "cut_m3_ha",
+                    "ATBA": "after_ba_m2_ha",
+                }
+            )[
+                [
+                    "year",
+                    "ba_m2_ha",
+                    "tph",
+                    "qmd_cm",
+                    "volume_m3_ha",
+                    "canopy_ccf",
+                    "cut_tph",
+                    "cut_m3_ha",
+                    "after_ba_m2_ha",
+                ]
+            ]
+            case_curves.append(pd.concat([residual, post], ignore_index=True))
         if not case_curves:
             raise ValueError(f"no managed FVS cases completed for {au_id}")
         stacked = pd.concat(case_curves, ignore_index=True)
@@ -233,17 +265,20 @@ def main() -> None:
         curve_rows.extend(mean.to_dict(orient="records"))
 
     curves = pd.DataFrame(curve_rows)
-    curves.to_csv(args.out_dir / "kc_au_selection_200y.csv", index=False)
+    suffix = (
+        "moderate" if args.regime == "GWM_MODERATE" else args.regime.lower().removeprefix("gwm_")
+    )
+    curves.to_csv(args.out_dir / f"kc_au_selection_{suffix}_200y.csv", index=False)
     manifest = {
         "au_table": str(args.au_table),
         "matches": str(args.matches),
         "horizon_years": HORIZON_YEARS,
         "entry_cycle": ENTRY_CYCLE,
         "entry_year": ENTRY_CYCLE * STEP_YEARS,
-        "regime": "GWM_MODERATE",
-        "b_target_m2_ha": B_TARGET,
-        "d_target_cm": D_TARGET,
-        "q_target": Q_TARGET,
+        "regime": args.regime,
+        "b_target_m2_ha": REGIMES[args.regime]["B"],
+        "d_target_cm": REGIMES[args.regime]["D"],
+        "q_target": REGIMES[args.regime]["q"],
         "aus": int(curves["au_id"].nunique()),
         "curve_rows": len(curves),
         "caveats": [
@@ -252,7 +287,12 @@ def main() -> None:
             "No calibration or legal-compliance claim.",
         ],
     }
-    (args.out_dir / "selection_manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
+    suffix = (
+        "moderate" if args.regime == "GWM_MODERATE" else args.regime.lower().removeprefix("gwm_")
+    )
+    (args.out_dir / f"selection_{suffix}_manifest.json").write_text(
+        json.dumps(manifest, indent=2) + "\n"
+    )
     print(json.dumps(manifest, indent=2))
 
 
