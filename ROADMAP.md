@@ -15,7 +15,7 @@ after its parent issue exists and the maintainer approves it.
 | P0 Bootstrap and growth-engine contract | #1 | `feature/p0-bootstrap` | complete |
 | P1 Data acquisition and stem lists | #7 | `feature/p1-data-acquisition` | active |
 | P2 FVS-BC state-transition library | TBD | `feature/p2-state-library` | planned |
-| P3 ws4 instance assembly | #60 | `feature/p3-patchworks-package` | active |
+| P3 ws4 instance assembly | #60 | `feature/p3-ws4-assembly` | active |
 | P4 Verification and scenarios | TBD | `feature/p4-verification` | planned |
 | P5 Release v0.1 | TBD | `feature/p5-release` | planned |
 | P6 Maintain and merge readiness | TBD | `feature/p6-maintain` | planned |
@@ -253,7 +253,7 @@ Acceptance criteria:
 ## Phase 3: ws4 instance assembly
 
 Parent issue: #60
-Branch: `feature/p3-patchworks-package`
+Branch: `feature/p3-ws4-assembly`
 Status: active
 
 Goal: assemble the Knife Creek ws4 model from the source tables: block input
