@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from itertools import pairwise
 from pathlib import Path
 
 import pandas as pd
@@ -27,7 +28,7 @@ QMD_BINS = [0.0, 20.0, 25.0, 30.0, 35.0, 40.0, 1000.0]
 
 def _bin_label(value: float, bins: list[float], prefix: str) -> str:
     """Return a stable label for a numeric bin."""
-    for lower, upper in zip(bins[:-1], bins[1:], strict=True):
+    for lower, upper in pairwise(bins):
         if lower <= value < upper:
             return f"{prefix}{int(lower)}_{int(upper) if upper < 1000 else 'PLUS'}"
     return f"{prefix}{int(bins[-2])}_PLUS"
@@ -53,7 +54,7 @@ def main() -> None:
     frame["state_id"] = frame.apply(_state_id, axis=1)
     entry = frame[frame["year"] == 0].copy()
     entry["next_state"] = None
-    for (au_id, plot), group in entry.groupby(["au_id", "CLSTR_ID"]):
+    for (_au_id, _plot), group in entry.groupby(["au_id", "CLSTR_ID"]):
         group = group.sort_values("stage")
         for index, row in group.iterrows():
             later = group[group["stage"] > row["stage"]]
@@ -74,16 +75,13 @@ def main() -> None:
         )
         .reset_index()
     )
-    curves = (
-        frame.groupby(["au_id", "state_id", "year"], as_index=False)
-        .agg(
-            ba_m2_ha=("ba_m2_ha", "mean"),
-            tph=("tph", "mean"),
-            qmd_cm=("qmd_cm", "mean"),
-            volume_m3_ha=("volume_m3_ha", "mean"),
-            canopy_ccf=("canopy_ccf", "mean"),
-            cut_m3_ha=("cut_m3_ha", "mean"),
-        )
+    curves = frame.groupby(["au_id", "state_id", "year"], as_index=False).agg(
+        ba_m2_ha=("ba_m2_ha", "mean"),
+        tph=("tph", "mean"),
+        qmd_cm=("qmd_cm", "mean"),
+        volume_m3_ha=("volume_m3_ha", "mean"),
+        canopy_ccf=("canopy_ccf", "mean"),
+        cut_m3_ha=("cut_m3_ha", "mean"),
     )
     edge_counts = (
         entry.dropna(subset=["next_state"])
