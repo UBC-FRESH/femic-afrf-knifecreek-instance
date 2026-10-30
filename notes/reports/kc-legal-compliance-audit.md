@@ -22,17 +22,20 @@ tests.
 
 ## Result on the stage runs
 
+After switching the FVS entries from `THINQFA` alone to the documented split
+cut (`THINABA` above 37.5 cm, then `THINQFA` on the small-tree component):
+
 GWM low:
 
 - 37 of 55 targets met
-- 8 below (q-factor and one max-DBH group)
+- 8 below (mostly q-factor)
 - 10 reserve-ceiling failures
 - total-BA and large-tree-BA floors met
 
 GWM moderate:
 
-- 42 of 55 targets met
-- 7 below (q-factor and max-DBH groups)
+- 39 of 55 targets met
+- 10 below (mostly q-factor and max DBH)
 - 6 reserve-ceiling failures
 - total-BA and large-tree-BA floors met
 

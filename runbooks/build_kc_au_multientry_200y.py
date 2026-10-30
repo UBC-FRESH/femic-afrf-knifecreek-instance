@@ -39,8 +39,8 @@ CYCLES = (4, 7, 10, 13, 16, 19)
 ENTRY_YEARS = tuple((cycle - 1) * STEP_YEARS for cycle in CYCLES)
 FT2_PER_M2 = 4.356
 REGIMES = {
-    "GWM_LOW": {"B": 16.0, "D": 50.0, "q": 1.30},
-    "GWM_MODERATE": {"B": 22.0, "D": 60.0, "q": 1.25},
+    "GWM_LOW": {"B": 16.0, "large": 6.0, "D": 50.0, "q": 1.30},
+    "GWM_MODERATE": {"B": 22.0, "large": 11.0, "D": 60.0, "q": 1.25},
 }
 SPECIES_MAP = {"FDI": "FD", "PLI": "PL", "SX": "SW", "AT": "AT"}
 LARGE_THRESHOLD = 37.5
@@ -163,22 +163,37 @@ def _records(state: pd.Series, trees: pd.DataFrame) -> list[dict[str, object]]:
 def _keywords(site_index: float, regime: str) -> list[Keyword]:
     """Return the 200-year multi-entry key set."""
     spec = REGIMES[regime]
-    thinning = [
-        Keyword(
-            "THINQFA",
-            (
-                str(cycle),
-                "0.0",
-                str(spec["D"]),
-                "0",
-                str(spec["q"]),
-                "5.0",
-                str(round(spec["B"] * FT2_PER_M2, 2)),
-            ),
-            supplemental=("0",),
+    thinning = []
+    for cycle in CYCLES:
+        thinning.append(
+            Keyword(
+                "THINABA",
+                (
+                    str(cycle),
+                    str(spec["large"]),
+                    "1.0",
+                    "37.5",
+                    str(spec["D"]),
+                    "0.0",
+                    "999.0",
+                ),
+            )
         )
-        for cycle in CYCLES
-    ]
+        thinning.append(
+            Keyword(
+                "THINQFA",
+                (
+                    str(cycle),
+                    "0.0",
+                    "37.5",
+                    "0",
+                    str(spec["q"]),
+                    "5.0",
+                    str(round((spec["B"] - spec["large"]) * FT2_PER_M2, 2)),
+                ),
+                supplemental=("0",),
+            )
+        )
     return [
         Keyword("DATABASE", (), ("DSNOut", "FVSOut.db", "Summary", "TREELIDB", "ATRTLIDB")),
         Keyword("STDIDENT", (f"KC-AU-{regime}-MULTI-200Y",)),
