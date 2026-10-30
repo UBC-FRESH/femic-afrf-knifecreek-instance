@@ -37,12 +37,14 @@ calibrated inventory objective.
 
 Using the GWM moderate selection schedule as the starting schedule:
 
-- 25,000 m3/period: met in all periods;
-- 27,000 m3/period: met in all periods;
-- the even-flow +/-5% band did not converge in a 50,000-iteration probe.
+- 20,000 m3/period: met in all 20 periods on the AU/HMZ stage graph;
+- 27,000 m3/period: fails from period 15 onward;
+- period 20 realizes 20,013 m3, so the floor is limited by the terminal stage
+  and the six-entry chain, not only by the optimizer;
+- the even-flow +/-5% band is not converged.
 
-The target file uses 27,000 m3/period as a provisional structural floor. It is
-not a proven maximum and not a calibrated AAC.
+The target file now uses 20,000 m3/period as a tested structural floor. It is
+not a proven global maximum and not a calibrated AAC.
 
 ## Files
 

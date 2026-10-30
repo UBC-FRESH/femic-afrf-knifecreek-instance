@@ -4,8 +4,9 @@
 # the 200-year run is defined by the curve contract. The source curves still
 # need a longer FVS horizon for a real 200-year rebuild; do not post-extend them.
 #
-# The 27,000 m3/period floor is a tested structural floor. The even-flow band
-# is the shape constraint and still needs a longer search to converge.
+# The 20,000 m3/period floor is the tested structural floor on the AU/HMZ
+# multi-entry stage graph. 27,000 fails from period 15 onward; 20,000 is met in
+# all 20 periods. The even-flow band still needs a longer search to converge.
 
 targets:
 - account: product.yield.managed.total
@@ -22,140 +23,140 @@ targets:
 - account: product.yield.managed.total
   period: 1
   period_width: 10
-  minimum: 27000
+  minimum: 20000
   min_weight: 0.1
   shape: linear
   priority: 2
 - account: product.yield.managed.total
   period: 2
   period_width: 10
-  minimum: 27000
+  minimum: 20000
   min_weight: 0.1
   shape: linear
   priority: 2
 - account: product.yield.managed.total
   period: 3
   period_width: 10
-  minimum: 27000
+  minimum: 20000
   min_weight: 0.1
   shape: linear
   priority: 2
 - account: product.yield.managed.total
   period: 4
   period_width: 10
-  minimum: 27000
+  minimum: 20000
   min_weight: 0.1
   shape: linear
   priority: 2
 - account: product.yield.managed.total
   period: 5
   period_width: 10
-  minimum: 27000
+  minimum: 20000
   min_weight: 0.1
   shape: linear
   priority: 2
 - account: product.yield.managed.total
   period: 6
   period_width: 10
-  minimum: 27000
+  minimum: 20000
   min_weight: 0.1
   shape: linear
   priority: 2
 - account: product.yield.managed.total
   period: 7
   period_width: 10
-  minimum: 27000
+  minimum: 20000
   min_weight: 0.1
   shape: linear
   priority: 2
 - account: product.yield.managed.total
   period: 8
   period_width: 10
-  minimum: 27000
+  minimum: 20000
   min_weight: 0.1
   shape: linear
   priority: 2
 - account: product.yield.managed.total
   period: 9
   period_width: 10
-  minimum: 27000
+  minimum: 20000
   min_weight: 0.1
   shape: linear
   priority: 2
 - account: product.yield.managed.total
   period: 10
   period_width: 10
-  minimum: 27000
+  minimum: 20000
   min_weight: 0.1
   shape: linear
   priority: 2
 - account: product.yield.managed.total
   period: 11
   period_width: 10
-  minimum: 27000
+  minimum: 20000
   min_weight: 0.1
   shape: linear
   priority: 2
 - account: product.yield.managed.total
   period: 12
   period_width: 10
-  minimum: 27000
+  minimum: 20000
   min_weight: 0.1
   shape: linear
   priority: 2
 - account: product.yield.managed.total
   period: 13
   period_width: 10
-  minimum: 27000
+  minimum: 20000
   min_weight: 0.1
   shape: linear
   priority: 2
 - account: product.yield.managed.total
   period: 14
   period_width: 10
-  minimum: 27000
+  minimum: 20000
   min_weight: 0.1
   shape: linear
   priority: 2
 - account: product.yield.managed.total
   period: 15
   period_width: 10
-  minimum: 27000
+  minimum: 20000
   min_weight: 0.1
   shape: linear
   priority: 2
 - account: product.yield.managed.total
   period: 16
   period_width: 10
-  minimum: 27000
+  minimum: 20000
   min_weight: 0.1
   shape: linear
   priority: 2
 - account: product.yield.managed.total
   period: 17
   period_width: 10
-  minimum: 27000
+  minimum: 20000
   min_weight: 0.1
   shape: linear
   priority: 2
 - account: product.yield.managed.total
   period: 18
   period_width: 10
-  minimum: 27000
+  minimum: 20000
   min_weight: 0.1
   shape: linear
   priority: 2
 - account: product.yield.managed.total
   period: 19
   period_width: 10
-  minimum: 27000
+  minimum: 20000
   min_weight: 0.1
   shape: linear
   priority: 2
 - account: product.yield.managed.total
   period: 20
   period_width: 10
-  minimum: 27000
+  minimum: 20000
   min_weight: 0.1
   shape: linear
   priority: 2
