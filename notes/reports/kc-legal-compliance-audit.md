@@ -14,49 +14,61 @@ layer still require verification.
 
 - total BA minimum (Moderate 22, Low 16 m²/ha);
 - large-tree BA minimum (Moderate 11, Low 6 m²/ha above 37.5 cm);
-- reserve BA ceiling (Moderate 2.2, Low 1.6, High 2.9 m²/ha).
+- maximum DBH minimum (Moderate 60, Low 50 cm);
+- q-factor range (Moderate 1.25–1.35, Low 1.25–1.40);
+- reserve BA ceiling (Moderate 2.2, Low 1.6 m²/ha above D).
 
-The target file excludes max DBH, q-factor, spatial 4–10-tree clumps, canopy
-openings and pre-2026 80% retention because the model does not yet carry those
-tests.
+The target file does not yet test spatial 4–10-tree clumps, canopy openings,
+pre-2026 80% Douglas-fir retention or the current approved order.
 
-## Result on the stage runs
+## Treatment tested
 
-After switching the FVS entries from `THINQFA` alone to the documented split
-cut (`THINABA` above 37.5 cm, then `THINQFA` on the small-tree component):
+The AU multi-entry runs now use a three-part legal-candidate cut at each entry:
 
-GWM low:
+1. `THINABA` from 37.5 cm to D, removing surplus large trees to the legal
+   large-tree minimum.
+2. `THINABA` above D, removing surplus reserve trees to the legal reserve
+   ceiling.
+3. `THINQFA` from 2.5–37.5 cm, leaving the small-tree component.
 
-- 37 of 55 targets met
-- 8 below (mostly q-factor)
-- 10 reserve-ceiling failures
-- total-BA and large-tree-BA floors met
+The `THINQFA` target is calibrated so the independently measured 5 cm q lands
+near the legal range: 1.55 for Low and 1.50 for Moderate. This is an FVS
+target, not a legal q value.
 
-GWM moderate:
+## Result
 
-- 39 of 55 targets met
-- 10 below (mostly q-factor and max DBH)
-- 6 reserve-ceiling failures
-- total-BA and large-tree-BA floors met
+The legal-candidate scenario is HMZ-mixed: M/A Moderate, L Low, U no harvest.
+It is `selection_gwm_legal` under `ws4/runtime/kc_au_stages`.
 
-The failures are concentrated in the non-spatial reserve proxy, especially
-HMZ L and several Moderate groups. The proxy reserves too much above D for the
-legal ceilings.
+Legal-candidate run:
+
+- 52 of 55 targets met.
+- 2 below: q in `KC_IDFdk3_FDI_H.L` and `KC_IDFdk3_FDI_H.M`.
+- 1 above: q in `KC_IDFxm_FDI_L.M`.
+- Total BA, large-tree BA, maximum DBH and reserve ceilings pass.
+
+Global-regime comparisons:
+
+- `selection_gwm_low`: 51 of 55 met; 3 below, 1 above.
+- `selection_gwm_moderate`: 52 of 55 met; 2 below, 1 above.
+
+The three remaining failures are marginal q-factor misses, not reserve or BA
+failures.
 
 ## Not tested / not compliant
 
-- Maximum DBH is now tested and fails in some groups.
-- q is now tested and is below the legal range in several groups.
 - Spatial clumps of 4–10 mature trees with interlocking crowns.
+- The 2–5-tree maximum-diameter subgroup inside each clump.
 - Canopy openings 0.3–1.0 tree heights, mean 0.5.
 - Pre-2026 retention of ≥80% of pre-harvest merchantable Douglas-fir BA.
 - Current approved UWR order and legal HMZ/stand-structure map.
 - Skid-trail and residual-damage checks.
+- KC-calibrated growth and mortality.
 
 ## Consequence
 
-Do not present the current model or the candidate target run as legal
-compliance. The next steps are: replace the reserve proxy with a rule that
-meets the legal ceiling, add max DBH and q accounts, add spatial clump/opening
-checks, add the 80% retention test, and verify the current order and spatial
-layer.
+Do not present the current model or the legal-candidate run as legal
+compliance. The reserve account is a basal-area cap, not a spatial clump
+check. The remaining work is to place and verify clumps and openings, add the
+80% retention test, verify the current order and spatial layer, and close the
+three q-factor misses without using the q target as a compliance claim.

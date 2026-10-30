@@ -28,6 +28,7 @@ REGIMES = {
     "selection_gwm_low": ("GWM_LOW", "GWM_MODERATE"),
     "selection_gwm_moderate": ("GWM_MODERATE", "GWM_LOW"),
 }
+LEGAL_BY_HMZ = {"M": "GWM_MODERATE", "A": "GWM_MODERATE", "L": "GWM_LOW"}
 
 
 def _run(command: list[str]) -> None:
@@ -52,6 +53,36 @@ def _schedule(dataset: Path, preferred: str, fallback: str) -> pd.DataFrame:
     return pd.DataFrame(rows, columns=["block_id", "treatment", "offset"])
 
 
+def _legal_schedule(dataset: Path) -> pd.DataFrame:
+    """Build the HMZ-mixed GWM schedule: M/A moderate, L low, U none."""
+    fragments = pd.read_parquet(dataset / "fragments.parquet")
+    treatments = pd.read_parquet(dataset / "treatments.parquet")
+    available = treatments[["track_id", "treatment"]].drop_duplicates()
+    tracks = pd.read_parquet(dataset / "tracks.parquet")
+    hmz_by_track = {
+        int(row.track_id): str(row.name).split("HMZ(")[1].split(")")[0]
+        for row in tracks.itertuples(index=False)
+    }
+    hmz_by_block = {
+        int(row.block_id): hmz_by_track.get(int(row.track_id), "U")
+        for row in fragments[["block_id", "track_id"]].drop_duplicates().itertuples(index=False)
+    }
+    rows: list[dict[str, object]] = []
+    for block_id, track_id in (
+        fragments[["block_id", "track_id"]].drop_duplicates().itertuples(index=False)
+    ):
+        hmz = str(hmz_by_block.get(block_id, "U"))
+        preferred = LEGAL_BY_HMZ.get(hmz)
+        if preferred is None:
+            continue
+        labels = set(available.loc[available["track_id"] == track_id, "treatment"].astype(str))
+        if preferred in labels:
+            rows.append({"block_id": int(block_id), "treatment": preferred, "offset": 0})
+        elif hmz in {"M", "A"} and "GWM_LOW" in labels:
+            rows.append({"block_id": int(block_id), "treatment": "GWM_LOW", "offset": 0})
+    return pd.DataFrame(rows, columns=["block_id", "treatment", "offset"])
+
+
 def main() -> None:
     """Build and run the baseline and two selection regimes."""
     parser = argparse.ArgumentParser(description=__doc__)
@@ -72,6 +103,11 @@ def main() -> None:
         schedule.to_csv(path, index=False)
         schedules[name] = path
         print(f"{name}: {len(schedule)} blocks")
+    legal = args.runtime / "selection_gwm_legal.csv"
+    legal_schedule = _legal_schedule(args.dataset)
+    legal_schedule.to_csv(legal, index=False)
+    schedules["selection_gwm_legal"] = legal
+    print(f"selection_gwm_legal: {len(legal_schedule)} blocks")
 
     evidence_dir = args.evidence.parent / "scenario_reports" if args.evidence else None
     manifests: dict[str, object] = {}
