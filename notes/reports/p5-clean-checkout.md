@@ -34,10 +34,14 @@ The clean build produced the expected tables:
 
 ## FVS-BC status
 
-`fresh_fvsbc` is not installed in this environment. The FVS-BC pilot cannot be
-reproduced from this checkout without building or installing the wrapper and
-its FVS runtime. This is a release prerequisite and a documented known gap, not
-a successful pilot claim.
+`fresh_fvsbc` was not installed in the original clean-checkout environment. The
+FVS-BC pilot cannot be reproduced from that checkout without the dependency
+install. This is a release prerequisite and a documented known gap, not a
+successful pilot claim.
+
+Post-release follow-up: `requirements-fvsbc.txt` now installs
+`fresh-fvsbc[fvs]==0.20.0`; a regional structural pilot exits 0. See
+`notes/reports/p5-fvsbc-pilot.md`.
 
 The ws4 compile, validation and dashboard checks do not depend on the FVS-BC
 package; they use the committed recipe, fragments and structural curves.
