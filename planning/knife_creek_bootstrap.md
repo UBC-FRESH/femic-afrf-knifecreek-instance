@@ -69,6 +69,13 @@ state-transition library.
 - report mule-deer indicators; and
 - record the caveats.
 
+### Scope boundary
+
+AAC scenario parameters, flow reference periods and harvest-flow targets belong
+to the downstream wood-supply analyst. This instance builds and validates the
+model they consume: inventory, growth, volume, spatial structure, legal
+accounts, provenance and uncertainty.
+
 ### Phase 5: production AAC/estate model
 
 - normalize the Marshal tree shapefiles and plot polygons;

@@ -124,9 +124,12 @@ inventory estimate.
 
 The first 2019-CHM clump proxy detects 28–55 tree tops per plot and mostly
 1–3-tree groups; it does not reproduce 4–10-tree interlocking-crown clumps. This
-is a calibration signal, not a finding that the stand fails the legal rule. Use
-the 2013 point cloud and the eight tree maps to calibrate tree detection before
-interpreting clump counts.
+is a calibration signal, not a finding that the stand fails the legal rule.
+
+The empirical tree-map baseline is stronger: at 3 m spacing and DBH >=10 cm,
+the eight mapped plots contain 6, 5, 1, 2, 5, 5, 3 and 4 legal 4–10-tree groups,
+plus larger merged groups. Legal clumps do exist in the measured stands; the
+LiDAR proxy needs calibration, not rejection.
 
 ## Immediate next steps
 
