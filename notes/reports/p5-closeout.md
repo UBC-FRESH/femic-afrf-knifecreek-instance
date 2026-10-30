@@ -27,7 +27,7 @@ each result.
 | Clean checkout builds ws4 | `/tmp/opencode/kc-clean`; `ws4 build` | met |
 | Clean checkout validates | `ws4 validate` | met |
 | Clean checkout dashboard | `python scripts/dashboard.py` | met |
-| FVS-BC pilot reproduced | `fresh_fvsbc` not installed | not met; documented prerequisite |
+| FVS-BC pilot reproduced | post-release `fresh-fvsbc[fvs]==0.20.0`; regional pilot exit 0 | met as a regional structural smoke; not KC calibration |
 | Tag and publish | `v0.1.0` on `94a5300`; GitHub release | met |
 | No private raw data published | release contains derived/public artifacts only | met |
 | No calibration or legal claim | release notes and closeouts | met |
@@ -51,8 +51,10 @@ At commit `41b2ada`:
 - counts: 160 fragments, 160 blocks, 19 tracks, 19 treatments, 6,661 curve
   points, 114 features, 38 products, 8 accounts.
 
-`fresh_fvsbc` is not installed in this environment. The FVS-BC pilot is a
-release prerequisite, not a claimed successful run.
+The original clean-checkout environment did not have `fresh_fvsbc` installed.
+Post-release follow-up added `requirements-fvsbc.txt` and ran a regional
+structural pilot successfully (exit 0, 3,644 cut-list rows). It is not a KC
+calibration or a reviewed KC selection prescription.
 
 ## 4. Known gaps
 

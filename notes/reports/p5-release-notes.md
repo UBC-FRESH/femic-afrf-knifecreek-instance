@@ -134,8 +134,9 @@ canopy.
 ### Runtime and data publication
 
 - The raw PSP workbook and tree data remain private.
-- The FVS-BC wrapper and its runtime prerequisites are documented separately.
-  A clean checkout may not have the built FVS-BC variant available.
+- `fresh-fvsbc[fvs]==0.20.0` is listed in `requirements-fvsbc.txt` and
+  `requirements-dev.txt`. A regional structural pilot exits 0; it is not a KC
+  calibration or a reviewed KC selection prescription.
 - The 92-track H scaffold is not a compiled-model count; only 19 strata are
   reachable from the current inventory and treatments.
 

@@ -1,0 +1,5 @@
+# FVS-BC growth engine for local model runs and evidence regeneration.
+#
+# 0.20.0 includes the THINQFA supplemental-record support and handles a run
+# whose FVS_Error table is absent. The compiled BC variant is a separate wheel.
+fresh-fvsbc[fvs]==0.20.0

@@ -82,7 +82,9 @@ and optimizes the estate-level objective.
   diameter distribution through repeated selection entries.
 
 `fresh-fvsbc` is pinned in `config/toolchain.yaml`. The current reference is
-commit `d86e78b0fc31386684aae1a0a1a9a821c0ee2baf` (package version 0.12.0, post-v0.12.0 main).
+commit `0ae47b5dda5d135f7a3293715ed42180d1bbdd6f` (package version 0.20.0).
+Install the pinned wrapper and compiled BC variant with
+`python -m pip install -r requirements-fvsbc.txt`.
 FVS itself is a USDA Forest Service model in the U.S. public domain; the
 wrapper is MIT. See the wrapper's own documentation for the build recipe and
 its known limits.

@@ -1,6 +1,7 @@
 # FVS-BC pilot runbook
 
-Status: Phase 2 procedure. Not yet run for Knife Creek.
+Status: Phase 2 procedure. A regional structural smoke run is recorded in
+`notes/reports/p5-fvsbc-pilot.md`; it is not a KC run.
 
 ## Prerequisites
 
@@ -31,11 +32,15 @@ This is a shape, not a reviewed run:
 python -m fresh_fvsbc data/fvsbc/populations/AU01.json \
   --directory runtime/fvsbc/AU01_sel_ba18 \
   --species FD --tree-age 60 \
+  --block "DATABASE|DSNOut|FVSOut.db|TREELIDB|CUTLIDB|ATRTLIDB|Summary|STRCLSDB" \
   --keyword SITECODE=FD,100 \
   --keyword NUMCYCLE=4 \
   --keyword THINBTA=1,18.0 \
+  --keyword TREELIST \
+  --keyword CUTLIST \
+  --keyword ATRTLIST \
+  --keyword STRCLASS \
   --keyword PROCESS \
-  --block "DATABASE|DSNOut|FVSOut.db|TreeLIDB|CutLIDB|ATRTLIDB|Summary|StrClass" \
   --keyword STOP
 ```
 
