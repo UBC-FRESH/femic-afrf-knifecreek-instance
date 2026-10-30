@@ -2,7 +2,7 @@
 
 Date: 2026-10-29
 Task: P3.1 / issue #61
-Status: **out of scope for KC ws4; K3Z template exists**
+Status: **ForestModelXML is the ws4 recipe; the KC recipe is built and compiled**
 
 ## Question
 
@@ -23,8 +23,9 @@ from the material in this repository?
 
 ## Decision
 
-The KC deliverable is a ws4 dataset, not a Patchworks model. Proceed with the
-**compiled source-matrix lane**:
+The KC deliverable is a ws4 dataset, not a Patchworks runtime model.
+ForestModelXML is the WS4 recipe format and is required for the matrix-builder
+path. Proceed with the **compiled source-matrix lane**:
 
 - `fragments.shp`;
 - `tracks/H/` tables;

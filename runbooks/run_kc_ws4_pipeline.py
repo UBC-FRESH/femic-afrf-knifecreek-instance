@@ -3,7 +3,8 @@
 
 This is the reproducible P3.7 lane:
 
-1. ingest the source matrix tables;
+1. compile the ForestModelXML recipe against the fragment inventory with
+   ``ws4 build`` (the matrix builder path);
 2. validate the compiled dataset;
 3. write no-cut and selection-smoke schedules;
 4. simulate and report both;
@@ -15,12 +16,12 @@ The script does not start a long-running web server; it prints the command.
 Usage::
 
     python runbooks/run_kc_ws4_pipeline.py \
-      --h-dir data/patchworks_knifecreek/tracks/H \
-      --fragments data/patchworks_knifecreek/fragments.csv \
+      --xml data/kc_ws4_recipe/forestmodel.xml \
+      --fragments data/kc_ws4_recipe/fragments.csv \
       --fragment-shapefile data/patchworks_knifecreek/spatial/fragments.shp \
-      --dataset ws4/dataset_kc_h_v1 \
-      --runtime ws4/runtime/kc_h \
-      --evidence ws4/evidence/kc_h
+      --dataset ws4/dataset_kc_v1 \
+      --runtime ws4/runtime/kc_v1 \
+      --evidence ws4/evidence/kc_v1
 """
 
 from __future__ import annotations
@@ -41,10 +42,29 @@ def _run(command: list[str]) -> None:
     subprocess.run(command, check=True)
 
 
+def _schedules(dataset: Path, runtime: Path) -> tuple[Path, Path]:
+    """Write the no-cut and first-treatment selection schedules."""
+    fragments = pd.read_parquet(dataset / "fragments.parquet")
+    treatments = pd.read_parquet(dataset / "treatments.parquet")
+    first_treatment = treatments.sort_values(["track_id", "begin"]).drop_duplicates("track_id")[
+        ["track_id", "treatment"]
+    ]
+    schedule = fragments[["block_id", "track_id", "age"]].merge(
+        first_treatment, on="track_id", how="left"
+    )
+    schedule = schedule.dropna(subset=["treatment"])
+    schedule = schedule[["block_id", "treatment"]].assign(offset=0)
+    baseline_path = runtime / "kc_baseline_no_cut.csv"
+    selection_path = runtime / "kc_selection_smoke.csv"
+    pd.DataFrame(columns=["block_id", "treatment", "offset"]).to_csv(baseline_path, index=False)
+    schedule.to_csv(selection_path, index=False)
+    return baseline_path, selection_path
+
+
 def main() -> None:
     """Assemble and run the model lane."""
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--h-dir", type=Path, required=True)
+    parser.add_argument("--xml", type=Path, required=True)
     parser.add_argument("--fragments", type=Path, required=True)
     parser.add_argument("--fragment-shapefile", type=Path, required=True)
     parser.add_argument("--dataset", type=Path, required=True)
@@ -54,15 +74,14 @@ def main() -> None:
     args = parser.parse_args()
     args.runtime.mkdir(parents=True, exist_ok=True)
     args.evidence.mkdir(parents=True, exist_ok=True)
-    for path in (args.dataset,):
-        if path.exists():
-            shutil.rmtree(path)
+    if args.dataset.exists():
+        shutil.rmtree(args.dataset)
     _run(
         [
             "ws4",
-            "ingest",
-            "--matrix",
-            str(args.h_dir),
+            "build",
+            "--xml",
+            str(args.xml),
             "--fragments",
             str(args.fragments),
             "--out",
@@ -71,20 +90,7 @@ def main() -> None:
     )
     _run(["ws4", "validate", "--dataset", str(args.dataset)])
 
-    blocks = pd.read_csv(args.h_dir / "blocks.csv")
-    treatments = pd.read_csv(args.h_dir / "treatments.csv")
-    first_treatment = treatments.sort_values(["TRACK", "BEGIN"]).drop_duplicates("TRACK")[
-        ["TRACK", "TREATMENT"]
-    ]
-    schedule = blocks.merge(first_treatment, on="TRACK", how="left")
-    schedule = schedule.dropna(subset=["TREATMENT"])
-    schedule = schedule[["BLOCK", "TREATMENT", "OFFSET"]].rename(
-        columns={"BLOCK": "block_id", "TREATMENT": "treatment", "OFFSET": "offset"}
-    )
-    baseline_path = args.runtime / "kc_baseline_no_cut.csv"
-    selection_path = args.runtime / "kc_selection_smoke.csv"
-    pd.DataFrame(columns=["block_id", "treatment", "offset"]).to_csv(baseline_path, index=False)
-    schedule.to_csv(selection_path, index=False)
+    baseline_path, selection_path = _schedules(args.dataset, args.runtime)
 
     for name, schedule_path in (
         ("baseline_no_cut", baseline_path),
@@ -129,6 +135,8 @@ def main() -> None:
     geometry.to_file(args.runtime / "kc_blocks.geojson", driver="GeoJSON")
     evidence = {
         "phase": "P3.7",
+        "recipe": str(args.xml),
+        "fragments": str(args.fragments),
         "dataset": str(args.dataset),
         "years": args.years,
         "baseline_schedule": str(baseline_path),
@@ -145,6 +153,7 @@ def main() -> None:
         ),
         "caveats": [
             "Structural model, not a calibrated KC growth model.",
+            "The recipe is generated from the KC H-matrix source tables.",
             "Selection smoke applies the first available treatment to every block at offset 0.",
             "Product yield curves are point estimates; features are 100-year "
             "space-for-time curves.",

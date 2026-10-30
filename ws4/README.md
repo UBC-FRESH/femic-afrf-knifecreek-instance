@@ -68,9 +68,11 @@ spatial reserve class; `block_features.csv` and
 scenario. `ws4 validate` passes. It is closer to a KC dataset but still uses
 PSP-derived tree lists, not KC CFI. See `dataset_kc_spatial_v3/README.md`.
 
-The current compiled ws4 model is `dataset_kc_h_v1/`: 160 blocks, 92 tracks,
-49 treatments, 100-year feature curves and 30-year point product curves. It
-validates, has baseline/selection-smoke runs under `runtime/kc_h/`, and is
+The current compiled ws4 model is `dataset_kc_v1/`. It is built with
+`ws4 build` from `../data/kc_ws4_recipe/forestmodel.xml` and
+`../data/kc_ws4_recipe/fragments.csv`. It has 160 blocks and 19 reachable
+track strata, with 100-year feature curves and 30-year point product curves. It
+validates, has baseline/selection-smoke runs under `runtime/kc_v1/`, and is
 served by the ws4 web UI. The contract is in `state_transition_contract.md`.
 
 ## Planned files
@@ -86,6 +88,7 @@ served by the ws4 web UI. The contract is in `state_transition_contract.md`.
 | `dataset_kc_spatial_v1/` | Spatial VRI/HMZ structural dataset |
 | `dataset_kc_spatial_v2/` | v1 plus observed LiDAR clump classes |
 | `dataset_kc_spatial_v3/` | v2 plus spatial reserve classes and tree assignments |
+| `dataset_kc_v1/` | ForestModelXML-built ws4 matrix; 160 blocks, 19 reachable strata |
 | `targets.template.yaml` | Harvest and habitat target template |
 | `patch_accounts.template.yaml` | Selection-opening patch account template |
 | `topology.csv` | Block topology, once the boundary exists |

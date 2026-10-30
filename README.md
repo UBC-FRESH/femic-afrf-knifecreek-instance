@@ -32,9 +32,10 @@ alternative. The georeferenced site-series map and the legal UWR/HMZ spatial
 layer are still blocked under P1.2a (#15). A public
 PSP-derived IDF Cariboo stem-list analog is committed under `data/psp/` for the
 interim FVS-BC pilot; the KC CFI is still preferred. The repository now carries a compiled structural ws4 dataset at
-`ws4/dataset_kc_h_v1`, a no-cut baseline, a selection-smoke run, reports and a
-web service. It is still **not calibrated** and is not a legal-compliance
-model. See
+`ws4/dataset_kc_v1`, built from the KC ForestModelXML recipe at
+`data/kc_ws4_recipe/forestmodel.xml`, plus a no-cut baseline, a selection-smoke
+run, reports and a web service. It is still **not calibrated** and is not a
+legal-compliance model. See
 `ROADMAP.md` and `CHANGE_LOG.md`. The persistent session record is
 `notes/reports/2026-10-27-public-data-and-fvsbc-handoff.md`.
 
@@ -107,9 +108,19 @@ source data, not from a legacy Patchworks matrix.
 
 ## Quick start
 
-The repository does not yet have a runnable model. The first executable
-milestone is a single FVS-BC selection-cut pilot once the boundary, inventory,
-and stem-list inputs exist. The intended shape is:
+The repository has a runnable structural ws4 model:
+
+```bash
+python runbooks/run_kc_ws4_pipeline.py \
+  --xml data/kc_ws4_recipe/forestmodel.xml \
+  --fragments data/kc_ws4_recipe/fragments.csv \
+  --fragment-shapefile data/patchworks_knifecreek/spatial/fragments.shp \
+  --dataset ws4/dataset_kc_v1 \
+  --runtime ws4/runtime/kc_v1 \
+  --evidence ws4/evidence/kc_v1
+```
+
+The FVS-BC selection-cut pilot shape remains:
 
 ```bash
 python -m fresh_fvsbc data/fvsbc/populations/AU01.json \

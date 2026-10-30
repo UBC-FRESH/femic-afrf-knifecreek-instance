@@ -428,3 +428,25 @@ status and the GitHub issue comments.
   and a draft `ws4/targets_kc_gwm2007.yaml`. The GWM draft explicitly lacks
   large-tree, reserve, maximum-DBH and seral accounts and is not legal
   compliance.
+
+## 2026-10-30
+
+- P3.1 corrected. ForestModelXML is the WS4 recipe format and the input to the
+  WS4 matrix builder. It is not an optional Patchworks artifact and it is not a
+  Gavin-only file.
+- Added `runbooks/build_kc_forestmodel_xml.py` and `data/kc_ws4_recipe/`:
+  `forestmodel.xml`, matrix-builder `fragments.csv`, and a manifest. The recipe
+  carries the six KC state dimensions (`GWM`, `BA`, `QMD`, `LT`, `RES`, `HMZ`),
+  the source feature/product curves, and selection treatments only.
+- Replaced the legacy `ws4 ingest` path with `ws4 build` in
+  `runbooks/run_kc_ws4_pipeline.py`. The canonical compiled dataset is
+  `ws4/dataset_kc_v1`; it validates and has baseline/selection-smoke runs and
+  reports under `ws4/runtime/kc_v1`.
+- Removed the provisional `ws4/dataset_kc_h_v1` legacy-ingest fixture and the
+  old `ws4/evidence/kc_h` evidence so the canonical build path is unambiguous.
+- The matrix builder reports 19 reachable track strata from the current 160
+  fragments. The 92-track H scaffold contains unreachable combinations; the
+  compiled matrix contains only strata reachable from the inventory and the
+  treatment transitions.
+- The model remains structural, not KC-calibrated, and is not a legal
+  compliance determination.

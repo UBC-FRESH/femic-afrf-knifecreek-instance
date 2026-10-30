@@ -4,9 +4,11 @@ ws4 Workflow
 Status
 ------
 
-The current structural ws4 dataset is ``ws4/dataset_kc_h_v1``: 160 blocks, 92
-tracks, 49 treatments, 100-year feature curves and 30-year point product
-curves. It validates and has baseline/selection-smoke runs. Older fixtures:
+The current structural ws4 dataset is ``ws4/dataset_kc_v1``. It is compiled by
+``ws4 build`` from ``data/kc_ws4_recipe/forestmodel.xml`` and
+``data/kc_ws4_recipe/fragments.csv``: 160 blocks, 19 reachable track strata,
+100-year feature curves and 30-year point product curves. It validates and has
+baseline/selection-smoke runs. Older fixtures:
 
 - ``ws4/dataset_v1_synthetic`` — 4 synthetic 1 ha blocks, 23 canonical tracks,
   25 treatments, 575 curves;

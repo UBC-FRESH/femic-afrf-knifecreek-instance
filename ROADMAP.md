@@ -260,18 +260,19 @@ Goal: assemble the Knife Creek ws4 model from the source tables: block input
 layer, tracks, treatments, curves, product/feature accounts, topology, patch
 accounts, targets, baseline and selection runs, reports and web UI.
 
-- [x] P3.1 Defer the legacy Patchworks recipe lane; it is not a KC ws4 deliverable (#61)
+- [x] P3.1 Build and validate the KC ForestModelXML recipe (#61)
 - [x] P3.2 Build the block input layer and stable block identity (#62)
 - [x] P3.3 Build source track, treatment and curve tables (#63)
 - [ ] P3.4 Complete product, feature, accounts and protoaccounts (#64)
 - [ ] P3.5 Build topology, roads and patch accounts (#65)
 - [x] P3.6 Build targets, schedules and scenarios (#66)
-- [x] P3.7 Ingest, validate, run, report and serve (#67)
+- [x] P3.7 Compile, validate, run, report and serve (#67)
 - [ ] P3.8 Record evidence and close out (#68)
 
 Acceptance criteria:
 
-- `ws4/dataset_kc_h_v1` is the compiled ws4 dataset.
+- `data/kc_ws4_recipe/forestmodel.xml` is the KC recipe.
+- `ws4/dataset_kc_v1` is the compiled ws4 dataset.
 - `ws4 validate` accepts the dataset.
 - `ws4 simulate` produces a no-cut baseline and a selection-smoke run.
 - `ws4 report` writes target status for both runs.
@@ -279,13 +280,14 @@ Acceptance criteria:
 - Product and feature accounts resolve for every active target.
 - No clearcut and no legal-compliance claim.
 
-P3.1 status: the legacy Patchworks/ForestModelXML lane is deferred. KC is a ws4
-instance bootstrapped from source data; Patchworks is only Gavin's legacy
-reference. No KC Patchworks recipe is a deliverable.
+P3.1 status: the KC ForestModelXML recipe is generated from the source matrix
+and compiled by `ws4 build`; this is the WS4 matrix-builder path, not a
+Patchworks runtime deliverable. The recipe is `data/kc_ws4_recipe/forestmodel.xml`
+with matrix-builder fragments in `data/kc_ws4_recipe/fragments.csv`.
 
-P3.7 status: compiled dataset, baseline/selection runs and reports exist under
-`ws4/dataset_kc_h_v1` and `ws4/runtime/kc_h`; the web service is running on
-port 8766. P3.4/P3.5 remain partial.
+P3.7 status: `ws4 build` produced `ws4/dataset_kc_v1`; it validates and has
+baseline/selection-smoke runs and reports under `ws4/runtime/kc_v1`. The web
+service is running on port 8766. P3.4/P3.5 remain partial.
 
 ## Phase 4: Verification and scenarios
 
