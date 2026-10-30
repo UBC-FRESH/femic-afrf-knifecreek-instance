@@ -8,13 +8,16 @@
 #   bash runbooks/watch_kc_aac.sh 50000
 #   PLAIN=1 bash runbooks/watch_kc_aac.sh 50000
 #   MODEL=calibrated bash runbooks/watch_kc_aac.sh 50000
+#   MODEL=split bash runbooks/watch_kc_aac.sh 50000
 #   ISLANDS=8 bash runbooks/watch_kc_aac.sh 100000
 #
 # Environment:
-#   MODEL       uncalibrated (default) or calibrated
+#   MODEL       uncalibrated (default), calibrated, or split
 #   DATASET     override the compiled dataset
 #   INITIAL     override the starting schedule
 #   TARGETS     override the targets YAML
+#   TOPOLOGY    override the ws4 topology CSV
+#   PATCH_ACCOUNTS override the patch-account YAML
 #   PLAIN=1     print one final frame instead of the live TUI
 #   ISLANDS     parallel search islands (0 = one search)
 #   REFRESH     live repaint interval in seconds
@@ -38,13 +41,20 @@ case "$MODEL" in
   uncalibrated)
     DEFAULT_DATASET="$ROOT/ws4/dataset_kc_au_stages_v1"
     DEFAULT_INITIAL="$ROOT/ws4/runtime/kc_au_stages/selection_gwm_legal.csv"
+    DEFAULT_TOPOLOGY="$ROOT/ws4/topology.csv"
     ;;
   calibrated)
     DEFAULT_DATASET="$ROOT/ws4/dataset_kc_au_stages_calibrated_v1"
     DEFAULT_INITIAL="$ROOT/ws4/runtime/kc_au_stages_calibrated/selection_gwm_legal.csv"
+    DEFAULT_TOPOLOGY="$ROOT/ws4/topology.csv"
+    ;;
+  split)
+    DEFAULT_DATASET="$ROOT/ws4/dataset_kc_au_stages_split_v1"
+    DEFAULT_INITIAL="$ROOT/data/kc_ws4_recipe_au_stages_split/selection_gwm_legal.csv"
+    DEFAULT_TOPOLOGY="$ROOT/ws4/topology_split.csv"
     ;;
   *)
-    echo "MODEL must be 'uncalibrated' or 'calibrated' (got '$MODEL')" >&2
+    echo "MODEL must be 'uncalibrated', 'calibrated' or 'split' (got '$MODEL')" >&2
     exit 2
     ;;
 esac
@@ -52,8 +62,10 @@ esac
 DATASET="${DATASET:-$DEFAULT_DATASET}"
 INITIAL="${INITIAL:-$DEFAULT_INITIAL}"
 TARGETS="${TARGETS:-$ROOT/ws4/targets_kc_evenflow.yaml}"
+TOPOLOGY="${TOPOLOGY:-$DEFAULT_TOPOLOGY}"
+PATCH_ACCOUNTS="${PATCH_ACCOUNTS:-$ROOT/ws4/patch_accounts.yaml}"
 
-for path in "$DATASET" "$INITIAL" "$TARGETS" "$ROOT/ws4/topology.csv" "$ROOT/ws4/patch_accounts.yaml"; do
+for path in "$DATASET" "$INITIAL" "$TARGETS" "$TOPOLOGY" "$PATCH_ACCOUNTS"; do
   if [[ ! -e "$path" ]]; then
     echo "missing required path: $path" >&2
     exit 2
@@ -74,8 +86,8 @@ args=(
   --seed 1
   --refresh "$REFRESH"
   --islands "$ISLANDS"
-  --topology "$ROOT/ws4/topology.csv"
-  --patch-accounts "$ROOT/ws4/patch_accounts.yaml"
+  --topology "$TOPOLOGY"
+  --patch-accounts "$PATCH_ACCOUNTS"
   --initial-schedule "$INITIAL"
 )
 

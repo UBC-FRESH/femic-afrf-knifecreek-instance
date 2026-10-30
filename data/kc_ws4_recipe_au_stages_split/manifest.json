@@ -1,0 +1,35 @@
+{
+  "recipe": "kc-au-hmz-multientry-v1",
+  "aus": 6,
+  "hmz_values": [
+    "L",
+    "M",
+    "U"
+  ],
+  "stages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "entry_years": [
+    30,
+    60,
+    90,
+    120,
+    150,
+    180
+  ],
+  "treatments": [
+    "GWM_LOW",
+    "GWM_MODERATE"
+  ],
+  "caveats": [
+    "Stage states are entry-sequence states, not a BA/QMD continuum.",
+    "Residual x=0 uses the FVS post-treatment accounting.",
+    "HMZ M/A both regimes, L low only, U none.",
+    "No calibration or legal-compliance claim."
+  ]
+}

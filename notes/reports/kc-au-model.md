@@ -28,6 +28,7 @@ Files:
 - `data/kc_ws4_recipe_au_stages/fragments.csv`
 - `ws4/dataset_kc_au_stages_v1`
 - `ws4/dataset_kc_au_stages_calibrated_v1` (v1 PSP calibration sensitivity)
+- `ws4/dataset_kc_au_stages_split_v1` (211 split blocks, max 39.94 ha)
 - `runbooks/build_kc_au_multientry_200y.py`
 - `runbooks/build_kc_au_stage_recipe.py`
 
