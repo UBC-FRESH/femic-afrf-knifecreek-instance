@@ -1,0 +1,16 @@
+{
+  "run": "ws4/runtime/kc_aac_50k_cal",
+  "periods": 20,
+  "period_width_years": 10,
+  "mean_period_m3": 26155.047945331764,
+  "min_period_m3": 20215.601700129933,
+  "max_period_m3": 34171.97353919107,
+  "mean_aac_m3_year": 2615.5047945331767,
+  "min_aac_m3_year": 2021.5601700129932,
+  "max_aac_m3_year": 3417.197353919107,
+  "total_m3": 523100.9589066353,
+  "target_status": {
+    "below": 37,
+    "met": 4
+  }
+}
