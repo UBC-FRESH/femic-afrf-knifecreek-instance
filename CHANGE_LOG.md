@@ -400,3 +400,10 @@ status and the GitHub issue comments.
   Feature curves now cover 0–50 years for BA, QMD, TPH, canopy and volume;
   products remain 0–30 years. `ws4 ingest` succeeds and `ws4 validate` passes.
   The mismatch in horizon and the minimal accounts remain explicit.
+- P3.3c time/space correction: FAIB `CLSTR_ID` is visit-specific; repeated
+  visits must be grouped by `SITE_IDENTIFIER`. The panel now uses one first-
+  measurement state per stable site: 338 sites, 590 qualifying visits, 87
+  sampled site states (age 48–247, BA 5.4–52.5). Added an experimental
+  BA-asymptote table; 50 years is too short to treat it as carrying capacity.
+  H feature curves were regenerated from the corrected panel and still ingest
+  and validate.

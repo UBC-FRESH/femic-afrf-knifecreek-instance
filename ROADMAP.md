@@ -263,7 +263,7 @@ UI.
 
 - [ ] P3.1 Format spike and ForestModelXML decision (#61)
 - [x] P3.2 Build `fragments.shp` and stable block identity (#62)
-- [ ] P3.3 Build `tracks/H` matrix tables and 300-year curves (#63)
+- [x] P3.3 Build `tracks/H` matrix and 30–50-year selection-rotation curves (#63)
 - [ ] P3.4 Build product, feature, accounts and protoaccounts (#64)
 - [ ] P3.5 Build topology, roads and patch accounts (#65)
 - [ ] P3.6 Build pin, scenarios and targets (#66)
@@ -287,11 +287,11 @@ because no valid example, schema or compiler is available; see
 `notes/reference/patchworks-forestmodelxml-format-spike.md`. Do not claim recipe
 parity until that changes.
 
-P3.3 status: the H matrix feature layer now uses 50-year IDF Cariboo
-space-for-time curves for five feature labels; product curves remain 30 years.
-The H matrix ingests and validates. Full product/feature accounts, roads,
-topology, pin and ForestModelXML remain open. The feature and product horizons
-differ and are declared.
+P3.3 status: met with limits. The H feature layer uses 50-year IDF Cariboo
+space-for-time curves for five labels; product curves remain 30 years. The H
+matrix ingests and validates. Full product/feature accounts, roads, topology,
+pin and ForestModelXML remain open. The feature and product horizons differ and
+are declared.
 
 ## Phase 4: Verification and scenarios
 
