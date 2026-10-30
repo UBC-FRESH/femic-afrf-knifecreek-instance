@@ -15,8 +15,8 @@ after its parent issue exists and the maintainer approves it.
 | P0 Bootstrap and growth-engine contract | #1 | `feature/p0-bootstrap` | complete |
 | P1 Data acquisition and stem lists | #7 | `feature/p1-data-acquisition` | active |
 | P2 FVS-BC state-transition library | TBD | `feature/p2-state-library` | planned |
-| P3 ws4 instance assembly | #60 | `feature/p3-ws4-assembly` | active |
-| P4 Verification and scenarios | TBD | `feature/p4-verification` | planned |
+| P3 ws4 instance assembly | #60 | `feature/p3-ws4-assembly` | complete |
+| P4 Verification and scenarios | #70 | `feature/p4-verification` | active |
 | P5 Release v0.1 | TBD | `feature/p5-release` | planned |
 | P6 Maintain and merge readiness | TBD | `feature/p6-maintain` | planned |
 
@@ -254,7 +254,7 @@ Acceptance criteria:
 
 Parent issue: #60
 Branch: `feature/p3-ws4-assembly`
-Status: active
+Status: complete
 
 Goal: assemble the Knife Creek ws4 model from the source tables: block input
 layer, tracks, treatments, curves, product/feature accounts, topology, patch
@@ -302,21 +302,26 @@ configuration is explicitly unavailable because destination, eligibility,
 access and cost inputs are missing.
 
 P3.8 status: `notes/reports/p3-closeout.md` records the parity table, counts,
-run summaries, target status and gaps. The phase pull request is queued for
-maintainer approval; P3 is not merged.
+run summaries, target status and gaps. P3 merged in pull request #69 (commit
+`c50f181`).
 
 ## Phase 4: Verification and scenarios
 
-Parent issue: TBD
+Parent issue: #70
 Branch: `feature/p4-verification`
-Status: planned
+Status: active
 
 Goal: verify the model and compare selection regimes and estate-level targets.
 
-- [ ] P4.1 Verify area, AU, and state coverage
-- [ ] P4.2 Verify the FVS-BC transition and growth curves
-- [ ] P4.3 Run the baseline and at least two selection regimes
-- [ ] P4.4 Record the scenario comparison and caveats
+P4.1 status: `ws4/evidence/kc_v1/coverage_audit.json` confirms 160 blocks,
+160 fragments, one AU, 19 reachable tracks, 12 groups and exact area
+reconciliation at 3,481.773591 ha. The 92-track source scaffold has 73
+unreachable combinations.
+
+- [x] P4.1 Verify area, AU and state coverage (#71)
+- [ ] P4.2 Verify transition and curve integrity (#72)
+- [ ] P4.3 Run the baseline and two selection regimes (#73)
+- [ ] P4.4 Record the scenario comparison and caveats (#74)
 
 Acceptance criteria:
 

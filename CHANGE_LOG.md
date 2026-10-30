@@ -469,3 +469,12 @@ status and the GitHub issue comments.
   ForestModelXML build evidence, compiled counts, baseline/selection summaries,
   account audit, Gavin functional comparison and explicit data gaps. Phase P3
   is queued for maintainer approval; it is not merged.
+
+## 2026-10-30
+
+- P4 activated under parent issue #70, branch `feature/p4-verification`.
+- P4.1 coverage audit: added `runbooks/audit_kc_coverage.py` and
+  `ws4/evidence/kc_v1/coverage_audit.json`. All 160 blocks appear in fragments,
+  blocks, recipe fragments, source fragments and topology; area reconciles at
+  3,481.773591 ha; AU=1; 19 reachable tracks from a 92-track source scaffold;
+  HMZ/clump/reserve memberships cover every block. No issues.

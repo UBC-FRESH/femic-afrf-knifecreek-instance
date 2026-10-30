@@ -117,6 +117,24 @@ def main() -> None:
         ]
     )
 
+    coverage_path = args.evidence / "coverage_audit.json"
+    _run(
+        [
+            "python",
+            "runbooks/audit_kc_coverage.py",
+            "--dataset",
+            str(args.dataset),
+            "--recipe-fragments",
+            str(args.fragments),
+            "--source-fragments",
+            str(args.spatial_fragments),
+            "--topology",
+            "ws4/topology.csv",
+            "--out",
+            str(coverage_path),
+        ]
+    )
+
     baseline_path, selection_path = _schedules(args.dataset, args.runtime)
 
     for name, schedule_path in (
@@ -166,6 +184,7 @@ def main() -> None:
         "fragments": str(args.fragments),
         "spatial_fragments": str(args.spatial_fragments),
         "account_audit": str(audit_path),
+        "coverage_audit": str(coverage_path),
         "dataset": str(args.dataset),
         "years": args.years,
         "baseline_schedule": str(baseline_path),
