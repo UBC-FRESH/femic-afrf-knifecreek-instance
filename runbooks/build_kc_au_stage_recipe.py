@@ -53,6 +53,11 @@ def _attribute(parent: ET.Element, label: str, curve_id: str) -> None:
     ET.SubElement(attribute, "curve", idref=curve_id)
 
 
+def _group_label(label: str, au_id: str, hmz: str) -> str:
+    """Return a group-specific account label."""
+    return f"{label}.{au_id}.{hmz}"
+
+
 def _state(regime: str, stage: int) -> str:
     """Return the managed state name for a regime and entry stage."""
     return f"M{stage}_{regime.lower().removeprefix('gwm_')}"
@@ -163,7 +168,17 @@ def main() -> None:
             natural_features = ET.SubElement(natural_select, "features")
             for label in FEATURE_COLUMNS:
                 _attribute(natural_features, label, features["natural"][label])
+                _attribute(
+                    natural_features,
+                    _group_label(label, au_id, hmz),
+                    features["natural"][label],
+                )
             _attribute(natural_features, "feature.area.managed.total", "kc_area")
+            _attribute(
+                natural_features,
+                _group_label("feature.area.managed.total", au_id, hmz),
+                "kc_area",
+            )
             natural_track = ET.SubElement(natural_select, "track")
             for regime in allowed:
                 treatment = ET.SubElement(
@@ -188,9 +203,15 @@ def main() -> None:
                         f"SILV eq 'natural' and treatment eq '{regime}'"
                     ),
                 )
+                product_attributes = ET.SubElement(product, "products")
                 _attribute(
-                    ET.SubElement(product, "products"),
+                    product_attributes,
                     "product.yield.managed.total",
+                    products[_state(regime, 1)],
+                )
+                _attribute(
+                    product_attributes,
+                    _group_label("product.yield.managed.total", au_id, hmz),
                     products[_state(regime, 1)],
                 )
             for regime in allowed:
@@ -204,7 +225,17 @@ def main() -> None:
                     managed_features = ET.SubElement(managed_select, "features")
                     for label in FEATURE_COLUMNS:
                         _attribute(managed_features, label, features[state][label])
+                        _attribute(
+                            managed_features,
+                            _group_label(label, au_id, hmz),
+                            features[state][label],
+                        )
                     _attribute(managed_features, "feature.area.managed.total", "kc_area")
+                    _attribute(
+                        managed_features,
+                        _group_label("feature.area.managed.total", au_id, hmz),
+                        "kc_area",
+                    )
                     if stage < STAGES[-1]:
                         managed_track = ET.SubElement(managed_select, "track")
                         treatment = ET.SubElement(
@@ -233,6 +264,11 @@ def main() -> None:
                         _attribute(
                             product_attributes,
                             "product.yield.managed.total",
+                            products[_state(regime, stage + 1)],
+                        )
+                        _attribute(
+                            product_attributes,
+                            _group_label("product.yield.managed.total", au_id, hmz),
                             products[_state(regime, stage + 1)],
                         )
 
