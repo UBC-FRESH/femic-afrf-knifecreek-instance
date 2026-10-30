@@ -266,7 +266,7 @@ UI.
 - [x] P3.3 Build `tracks/H` matrix and 30–50-year selection-rotation curves (#63)
 - [ ] P3.4 Build product, feature, accounts and protoaccounts (#64)
 - [ ] P3.5 Build topology, roads and patch accounts (#65)
-- [ ] P3.6 Build pin, scenarios and targets (#66)
+- [x] P3.6 Build pin, scenarios and targets (#66)
 - [ ] P3.7 Ingest, validate, run, report and serve (#67)
 - [ ] P3.8 Record parity evidence and close out (#68)
 
