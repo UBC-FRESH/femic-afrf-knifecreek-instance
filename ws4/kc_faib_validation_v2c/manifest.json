@@ -1,0 +1,18 @@
+{
+  "validation": "faib-idf-independent-site-v1",
+  "sites": 92,
+  "filter": {
+    "BEC": "IDFdk3 and IDFxm",
+    "min_visits": 2,
+    "min_interval_years": 10,
+    "min_fd_share": 0.5
+  },
+  "parameters": "/tmp/opencode/faib_grid/v2_c.json",
+  "caveats": [
+    "FAIB plots are independent of the 24 Marshall plots but are not a whole-block sample.",
+    "Plot designs and expansion factors vary across FAIB sites.",
+    "No cutting is simulated.",
+    "No age or site index is assigned.",
+    "This is a growth-model validation, not a legal-compliance determination."
+  ]
+}

@@ -78,8 +78,9 @@ the structural baseline.
 - Current approved UWR order and legal HMZ/stand-structure map.
 - Skid-trail and residual-damage checks.
 - KC-calibrated growth and mortality. The 2024 Marshall temporal holdout
-  supports the v1 total-TPH calibration, but it is not independent-site or
-  whole-block validation; the AU stage curves still use uncalibrated FVS.
+  supports v1 total TPH. The independent FAIB IDFdk/IDFxm check (92 sites)
+  shows v1 regional BA bias and supports a v2c regional alternative. The AU
+  stage curves use uncalibrated FVS; calibrated runs are sensitivities.
 - Independent validation of the AU-specific q target calibration.
 
 ## Consequence

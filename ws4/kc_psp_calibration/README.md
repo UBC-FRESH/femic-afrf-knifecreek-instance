@@ -9,6 +9,17 @@ transfer consistently, so these parameters are diagnostic only.
 The calibration matches the non-pine species groups and total TPH, but it does
 not reproduce the lodgepole-pine collapse or the observed QMD.
 
+## Independent-site check and v2c
+
+The FAIB IDFdk/IDFxm archive provides 92 independent sites with repeated
+measurements and >=50% Douglas-fir. The v1 parameters still overpredict BA by
++4.93 m²/ha on those sites. A regional refit (`calibration_parameters_faib_v2c.json`;
+FD `BAIMULT` 1.2, FD `MORTMULT` 2.8) removes that bias: BA −0.21 m²/ha,
+TPH −6, QMD +0.37. Tested back on the 2024 Marshall plots, v2c underpredicts BA
+by −2.59 m²/ha and TPH by −71, while v1 overpredicts BA by +1.33 and TPH by
++24. Use v1 and v2c as an ensemble, not one as universal truth. See
+`notes/reports/kc-faib-independent-validation.md`.
+
 ## Method
 
 - 24 PSP plots, initialised from the 1993 interior trees with 20× expansion.
