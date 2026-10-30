@@ -32,15 +32,27 @@ Outputs:
 - `data/psp/kc_au_200y/kc_au_yield_200y.csv`
 - `data/psp/kc_au_200y/manifest.json`
 
+## Managed/selection curves
+
+`runbooks/build_kc_au_managed_200y.py` adds one GWM moderate entry at the
+fourth 10-year cycle for each matched AU plot, then grows the residual stand to
+year 200. The AU curves are averaged across the matched plots.
+
+- `data/psp/kc_au_200y/kc_au_selection_200y.csv`
+- `data/psp/kc_au_200y/selection_manifest.json`
+- 6 AUs, 126 curve rows
+
+The entry is one selection entry, not yet a multi-entry state graph.
+
 ## Limits
 
-- These are no-cut yield curves.
-- The selection-state/managed curves are not yet rebuilt from these AUs.
+- The no-cut and one-entry managed curves are FVS projections, not observed
+  growth.
 - Site index is the FAIB leading-species SI, and tree age is the FAIB projected
   age; neither is a KC calibration.
 - No legal-compliance claim.
 
 ## Next
 
-Run the selection-cut state-transition build per AU, then compile the ws4
+Build the multi-entry selection-state graph per AU, then compile the ws4
 dataset with an AU dimension and rerun the 20-period even-flow scenario.
