@@ -114,6 +114,7 @@ The repository has a runnable structural ws4 model:
 python runbooks/run_kc_ws4_pipeline.py \
   --xml data/kc_ws4_recipe/forestmodel.xml \
   --fragments data/kc_ws4_recipe/fragments.csv \
+  --spatial-fragments data/patchworks_knifecreek/fragments.csv \
   --fragment-shapefile data/patchworks_knifecreek/spatial/fragments.shp \
   --dataset ws4/dataset_kc_v1 \
   --runtime ws4/runtime/kc_v1 \

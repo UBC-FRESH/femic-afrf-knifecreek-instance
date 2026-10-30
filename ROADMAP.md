@@ -263,8 +263,8 @@ accounts, targets, baseline and selection runs, reports and web UI.
 - [x] P3.1 Build and validate the KC ForestModelXML recipe (#61)
 - [x] P3.2 Build the block input layer and stable block identity (#62)
 - [x] P3.3 Build source track, treatment and curve tables (#63)
-- [ ] P3.4 Complete product, feature, accounts and protoaccounts (#64)
-- [ ] P3.5 Build topology, roads and patch accounts (#65)
+- [x] P3.4 Complete the supported product/feature/account wiring (#64)
+- [x] P3.5 Build topology, roads and patch accounts (#65)
 - [x] P3.6 Build targets, schedules and scenarios (#66)
 - [x] P3.7 Compile, validate, run, report and serve (#67)
 - [ ] P3.8 Record evidence and close out (#68)
@@ -278,6 +278,8 @@ Acceptance criteria:
 - `ws4 report` writes target status for both runs.
 - `ws4 serve` exposes the dataset, runs, targets, topology and patch accounts.
 - Product and feature accounts resolve for every active target.
+- Account groups exist for HMZ, clump and reserve classes.
+- Route configuration is explicitly marked unavailable.
 - No clearcut and no legal-compliance claim.
 
 P3.1 status: the KC ForestModelXML recipe is generated from the source matrix
@@ -287,7 +289,17 @@ with matrix-builder fragments in `data/kc_ws4_recipe/fragments.csv`.
 
 P3.7 status: `ws4 build` produced `ws4/dataset_kc_v1`; it validates and has
 baseline/selection-smoke runs and reports under `ws4/runtime/kc_v1`. The web
-service is running on port 8766. P3.4/P3.5 remain partial.
+service is running on port 8766.
+
+P3.4 status: the supported accounts are complete and audited. There are eight
+accounts over six feature labels and two product labels, with HMZ/clump/reserve
+group memberships. Large-tree BA, reserve BA, seral/opening and species-split
+feature curves remain unavailable; they are not fabricated.
+
+P3.5 status: topology covers all 160 blocks (500 pairs), the public road layer
+has 44 sections (59.6 km), and the managed-area patch account runs. Route
+configuration is explicitly unavailable because destination, eligibility,
+access and cost inputs are missing.
 
 ## Phase 4: Verification and scenarios
 

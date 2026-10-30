@@ -450,3 +450,17 @@ status and the GitHub issue comments.
   treatment transitions.
 - The model remains structural, not KC-calibrated, and is not a legal
   compliance determination.
+
+- P3.4 supported account wiring: added HMZ, clump and reserve group
+  memberships (12 groups, 800 block-group rows) and `runbooks/audit_kc_accounts.py`.
+  The audit resolves all eight accounts against six feature labels and two
+  product labels; no target names a missing account. Large-tree BA, reserve BA,
+  seral/opening and species-split feature curves remain unavailable and are
+  recorded as limits, not fabricated.
+- P3.5 topology and route status: regenerated `ws4/topology.csv` so all 160
+  blocks appear (500 pairs, 352 touching). The public road layer remains 44
+  sections over 59.6 km. Route configuration is explicitly unavailable in
+  `data/patchworks_knifecreek/spatial/ROUTE_CONFIG_UNAVAILABLE.md` because no
+  destination, eligibility, access or cost inputs exist.
+- P3.7 rerun after the account/topology updates: `ws4 build`, validation,
+  account audit, baseline/selection simulations and reports all pass.

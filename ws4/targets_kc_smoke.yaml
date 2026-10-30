@@ -1,6 +1,7 @@
 # Structural smoke targets; not a management or legal target set.
-# The H matrix has feature and product area/yield accounts but no large-tree,
-# reserve, softwood/hardwood or seral accounts yet.
+# The ForestModelXML-built dataset has feature and product area/yield accounts
+# plus HMZ/clump/reserve group memberships, but no large-tree, reserve,
+# softwood/hardwood or seral feature curves yet.
 targets:
   - account: product.yield.managed.total
     period: 1

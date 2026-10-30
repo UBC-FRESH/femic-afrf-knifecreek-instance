@@ -73,7 +73,10 @@ The current compiled ws4 model is `dataset_kc_v1/`. It is built with
 `../data/kc_ws4_recipe/fragments.csv`. It has 160 blocks and 19 reachable
 track strata, with 100-year feature curves and 30-year point product curves. It
 validates, has baseline/selection-smoke runs under `runtime/kc_v1/`, and is
-served by the ws4 web UI. The contract is in `state_transition_contract.md`.
+served by the ws4 web UI. The account audit is
+`evidence/kc_v1/account_audit.json`; it records the supported accounts and the
+missing large-tree/reserve/seral/species curves. The contract is in
+`state_transition_contract.md`.
 
 ## Planned files
 

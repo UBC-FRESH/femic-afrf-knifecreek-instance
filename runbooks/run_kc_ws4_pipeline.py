@@ -18,6 +18,7 @@ Usage::
     python runbooks/run_kc_ws4_pipeline.py \
       --xml data/kc_ws4_recipe/forestmodel.xml \
       --fragments data/kc_ws4_recipe/fragments.csv \
+      --spatial-fragments data/patchworks_knifecreek/fragments.csv \
       --fragment-shapefile data/patchworks_knifecreek/spatial/fragments.shp \
       --dataset ws4/dataset_kc_v1 \
       --runtime ws4/runtime/kc_v1 \
@@ -66,6 +67,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--xml", type=Path, required=True)
     parser.add_argument("--fragments", type=Path, required=True)
+    parser.add_argument("--spatial-fragments", type=Path, required=True)
     parser.add_argument("--fragment-shapefile", type=Path, required=True)
     parser.add_argument("--dataset", type=Path, required=True)
     parser.add_argument("--runtime", type=Path, required=True)
@@ -88,7 +90,32 @@ def main() -> None:
             str(args.dataset),
         ]
     )
+    _run(
+        [
+            "python",
+            "runbooks/build_kc_account_groups.py",
+            "--dataset",
+            str(args.dataset),
+            "--fragments",
+            str(args.spatial_fragments),
+        ]
+    )
     _run(["ws4", "validate", "--dataset", str(args.dataset)])
+    audit_path = args.evidence / "account_audit.json"
+    _run(
+        [
+            "python",
+            "runbooks/audit_kc_accounts.py",
+            "--dataset",
+            str(args.dataset),
+            "--targets",
+            "ws4/targets_kc_smoke.yaml",
+            "--targets",
+            "ws4/targets_kc_gwm2007.yaml",
+            "--out",
+            str(audit_path),
+        ]
+    )
 
     baseline_path, selection_path = _schedules(args.dataset, args.runtime)
 
@@ -137,6 +164,8 @@ def main() -> None:
         "phase": "P3.7",
         "recipe": str(args.xml),
         "fragments": str(args.fragments),
+        "spatial_fragments": str(args.spatial_fragments),
+        "account_audit": str(audit_path),
         "dataset": str(args.dataset),
         "years": args.years,
         "baseline_schedule": str(baseline_path),
@@ -158,6 +187,9 @@ def main() -> None:
             "Product yield curves are point estimates; features are 100-year "
             "space-for-time curves.",
             "Patch account uses managed area, not a seral/opening criterion.",
+            "Large-tree BA, reserve BA, seral/opening and species-split features "
+            "are unavailable and not fabricated.",
+            "Route configuration is unavailable; the public road layer is map context only.",
         ],
     }
     (args.evidence / "pipeline_manifest.json").write_text(json.dumps(evidence, indent=2) + "\n")

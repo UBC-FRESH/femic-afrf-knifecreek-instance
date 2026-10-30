@@ -17,6 +17,12 @@
   "caveats": [
     "Derived public road sections, not a field-verified AFRF access inventory.",
     "No legal access, gate, bridge or haul-cost claim.",
-    "Route configuration remains a separate task."
-  ]
+    "Route configuration is explicitly unavailable; see route_config."
+  ],
+  "route_config": {
+    "status": "unavailable",
+    "reason": "No reviewed destination/mill assignment, product eligibility, gate/bridge status or haul-cost inputs are available.",
+    "road_layer": "roads.gpkg",
+    "route_tables": []
+  }
 }

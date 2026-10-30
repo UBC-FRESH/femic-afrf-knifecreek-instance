@@ -1,6 +1,8 @@
 # ws4 state-transition contract
 
-Status: v0 transition library exists; no compiled ws4 dataset yet.
+Status: `ws4/dataset_kc_v1` is compiled from the ForestModelXML recipe and
+passes `ws4 validate`. Large-tree BA, reserve BA, seral/opening and species-split
+features remain unavailable and are not faked in the contract.
 
 ## Required tables
 
