@@ -40,7 +40,7 @@ The release contains:
 | Public road sections | 44 |
 | Public road length | 59.6 km |
 
-Graphical area is 3,481.773591 ha of net fragment area, not the gross SUP permit
+Model area is 3,481.773591 ha of net fragment area, not the gross SUP permit
 area.
 
 ## What was verified
