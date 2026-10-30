@@ -1,6 +1,8 @@
 # KC even-flow harvest-volume scenario: 20 x 10-year periods.
-# Structural only. No growing-stock/level targets yet. Product curves currently
-# end at 30 years; this run uses the terminal extension, not a calibrated 200-year yield.
+# Structural only. No growing-stock/level targets yet. WS4 clamps yield curves
+# to their endpoint values before the first point and after the last point, so
+# the 200-year run is defined by the curve contract. The source curves still
+# need a longer FVS horizon for a real 200-year rebuild; do not post-extend them.
 #
 # The 27,000 m3/period floor is a tested structural floor. The even-flow band
 # is the shape constraint and still needs a longer search to converge.

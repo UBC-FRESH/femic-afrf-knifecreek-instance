@@ -4,8 +4,9 @@
 # Usage:
 #   bash runbooks/run_kc_evenflow.sh [iterations]
 #
-# The KC product curves currently end at 30 years. The 200-year run uses the
-# simulator's terminal-value extension; it is not a calibrated 200-year yield.
+# WS4 clamps yield curves to their endpoint values after the last point, so the
+# 200-year run is defined. The source curves still need a full FVS horizon for a
+# real 200-year rebuild.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"

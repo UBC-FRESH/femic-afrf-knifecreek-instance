@@ -13,11 +13,13 @@ legal-compliance test.
 
 The flow target is the shape. The floor targets are the level.
 
-## Horizon and curve limit
+## Horizon and curve contract
 
-The KC product curves end at 30 years. The 200-year run uses the simulator's
-terminal-value extension; it is not a calibrated 200-year yield. The feature
-curves are 100-year space-for-time curves.
+WS4 clamps yield curves to their endpoint values before the first point and
+after the last point. The 200-year run is therefore defined by the WS4 curve
+contract, not by a separate post-extend step. The current source product curves
+end at 30 years; a real 200-year rebuild should run FVS for the full horizon
+rather than relying on the flat clamp.
 
 ## Tested floor
 
@@ -37,6 +39,6 @@ not a proven maximum and not a calibrated AAC.
 
 ## Caveats
 
-- No 200-year product curve exists yet.
+- The current source product curves end at 30 years; the 200-year run uses the documented flat clamp.
 - The even-flow band needs a longer search or a different reference-period setup.
 - The scenario uses the structural KC model; there is no KC calibration.
