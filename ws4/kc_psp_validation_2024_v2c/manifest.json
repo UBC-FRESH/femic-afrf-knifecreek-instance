@@ -1,0 +1,310 @@
+{
+  "validation": "afrf-kc-psp-2024-backtest-v1",
+  "status": "temporal-out-of-sample-diagnostic",
+  "start_year": 2013,
+  "plots": 24,
+  "end_years": {
+    "2025": 22,
+    "2024": 2
+  },
+  "parameters": "/tmp/opencode/faib_grid/v2_c.json",
+  "calibrated_runs": [
+    {
+      "plot": 1,
+      "case_id": "a6f36c88-de9b-47d6-9a31-7a77a48d778b",
+      "keyword_hash": "sha256:ec7d3ad2bc768f6ba6748a75a3a368c392f10ae06950103209cb918983743f2a",
+      "treelist_hash": "sha256:1c093323a8ca566a13be454d15241e1a8b44bb0266ac89d177007b3d37a77ef1"
+    },
+    {
+      "plot": 2,
+      "case_id": "34a961b2-ead0-4757-a6ab-16bc912d7249",
+      "keyword_hash": "sha256:d73a991c9fd6525faae8bc3c1da38b599d62158d6f597f28fc65a8271175aef1",
+      "treelist_hash": "sha256:5126e0ce7509c6574b3498ef3f907f0517527ea6a5150f0c71246f19d28f70c2"
+    },
+    {
+      "plot": 3,
+      "case_id": "61fe7f21-9663-4ea4-b1f5-f8e8ec671cfc",
+      "keyword_hash": "sha256:fa886a687c32b9e024b5160f8dbd7718282e95eab154c0aa30119a10c5285fef",
+      "treelist_hash": "sha256:70bb8d65111ef61a34fb5e3601f395e1b5364f4cd904ab6e3020401148ff3cc9"
+    },
+    {
+      "plot": 4,
+      "case_id": "41bd0b28-22c8-4ce8-b7a0-225a6d2e644b",
+      "keyword_hash": "sha256:04a372de07e2f66cd3419dd175b4517a335d74eb0ff04dedba7810e72d8ee088",
+      "treelist_hash": "sha256:6aca33347494dd145e8d94c7939d9f7a34ba50eb58a24582e78759a1db20ea76"
+    },
+    {
+      "plot": 5,
+      "case_id": "e9db0499-facb-493e-8809-15a5db5aaab4",
+      "keyword_hash": "sha256:8222f11a02954d4e033ef07a1355c48fccecdb47a1beee59006f9aeadb9141b9",
+      "treelist_hash": "sha256:3e65e941d122da7925178b6dc390cbf259c37959bd5aec9d63c65ca0b99751fe"
+    },
+    {
+      "plot": 6,
+      "case_id": "5b434f98-45c6-4545-b7fb-6411d497ce6d",
+      "keyword_hash": "sha256:23cc587a033e737e4d154e355b8d9c60f746ce9d3233e9fc5f8c557992afaa11",
+      "treelist_hash": "sha256:5658f4d7ef6813c3a78e9c0cf517749af35c211b6b5b1060b67b932d6ab570b2"
+    },
+    {
+      "plot": 7,
+      "case_id": "cfcce767-1d13-4109-93a0-08dbb9c29dbc",
+      "keyword_hash": "sha256:84a534f98aa137016430bfc47c4bfe5da0773197188a8cc4fe0e1e0c4a15034e",
+      "treelist_hash": "sha256:039556b1d04952183d911fc9396fa3ce784cd6fa1c11a5e55c1510efe9659297"
+    },
+    {
+      "plot": 8,
+      "case_id": "1de90725-78d9-4bfd-a33f-6a13b5668a6b",
+      "keyword_hash": "sha256:c3ba2bf8f48efb734d6f489d68a0842d5afc71f4e50546268110255e582cea11",
+      "treelist_hash": "sha256:d54000268243ff4f17eee8a5aba662a36df4b87310490ddabee7de8a73a538c0"
+    },
+    {
+      "plot": 9,
+      "case_id": "8910e25e-3b4c-485f-9d71-0686dddef662",
+      "keyword_hash": "sha256:df004f6a1d3bc5282a7a4bab0ea165ce10fc5620f522475c3202db4dd32eecb1",
+      "treelist_hash": "sha256:9a37b351af8c5e9fcc655493ea087d9db40b9294288f599551c9465c94f8a4cd"
+    },
+    {
+      "plot": 10,
+      "case_id": "dc71e1ac-cc45-4352-96b3-0028ab666427",
+      "keyword_hash": "sha256:ad55a0a6b0cb73cfbf883e90c851fb0168931876cfc686c77df7b38586d8253a",
+      "treelist_hash": "sha256:558576a93c974b4977d1ca6633e0d7dffc58e86b4d76915e51fe8a88d94f3cc2"
+    },
+    {
+      "plot": 11,
+      "case_id": "e95423e5-e0b6-476a-84da-0c11b63e39c6",
+      "keyword_hash": "sha256:8b8bba2b037366258cbceeae8029acee2dddf285d1085d332425cec41d52d9e3",
+      "treelist_hash": "sha256:723b0172e672cf88a326fe87462d65e028273cfeae69a47b30bdcb64be65bb19"
+    },
+    {
+      "plot": 12,
+      "case_id": "2caa47d4-a81c-4a7d-a7d7-4c5a68ca3634",
+      "keyword_hash": "sha256:2d2046586b2fda1bebe03540a41d993998130e5835eb591a29517d182de1d246",
+      "treelist_hash": "sha256:7e3b396d3f76172b062683e504bdd4003b03b6f8a16e7677024cdcec359d4342"
+    },
+    {
+      "plot": 13,
+      "case_id": "4a0b4cb7-bfc5-42e1-b68d-5f280e365eb0",
+      "keyword_hash": "sha256:e9e3a5ba4bc8b18a444d2c288335068b55b945e3669eab19c914577f54ea2c5e",
+      "treelist_hash": "sha256:695e081fcd1fdf47de0e5d01509182fec2ac8c97c9cdf1516f60fa65223fd0c1"
+    },
+    {
+      "plot": 14,
+      "case_id": "1108e221-b2b9-422f-8d06-58512ed1910a",
+      "keyword_hash": "sha256:8c2ec2d40409b1fedc6acec72b967075d585dba6542f9d1819a63f0f3fddfcdf",
+      "treelist_hash": "sha256:77e8b49eb2032ff643a9b23381f3838b9411a49437b08b3dd8d06d66eddc4eef"
+    },
+    {
+      "plot": 15,
+      "case_id": "76896a3b-10db-48e6-bdbc-0555f329b809",
+      "keyword_hash": "sha256:d1f9f4483bcabd72b50798222ddaca806d5316727f68647f3ed879487052498d",
+      "treelist_hash": "sha256:7521e3f807ca2622ca5b24dcc7d39f1886e6040f55cdc79918113a7683761252"
+    },
+    {
+      "plot": 16,
+      "case_id": "455a19ac-855f-46d7-b71f-d11d4e3cbd13",
+      "keyword_hash": "sha256:02c44ddaae4b7401efbbedf989bfb9ae89eb106761dbd8c6840ce3e8da65a3d7",
+      "treelist_hash": "sha256:4d4f66f0a1ee88bdec946fd5e405d92d4506597d339349c8f78b94d93d02b470"
+    },
+    {
+      "plot": 17,
+      "case_id": "6f75103f-e156-47fe-8e59-7fa8606a6a89",
+      "keyword_hash": "sha256:f996950439588c2f36e2df5ba367ae08a039b589c1e9d4f6c6afb57ac40a6d88",
+      "treelist_hash": "sha256:985e8c80ba291ba1fd30b1ed7c32b019b4fb9632db5b3f1566659e3b649bc09d"
+    },
+    {
+      "plot": 18,
+      "case_id": "1752ea69-7010-44d7-a31f-03bb77c94940",
+      "keyword_hash": "sha256:fd56bb66ad58c0f415f0cc1ff501d2c7a90446b74ebfef5d1ca34ae7d6061077",
+      "treelist_hash": "sha256:cb4cd57299aee941cc21e0ce2f631c76872eaeabf26338bc348a15a3eda4229d"
+    },
+    {
+      "plot": 19,
+      "case_id": "95a2311c-4111-4d3f-978e-565cb23bbab8",
+      "keyword_hash": "sha256:3dbf224c1516720d937e70b9bf8f5d0cc0d94f046310426e90db4b8a4a1fe8f7",
+      "treelist_hash": "sha256:464f6a1cea021b5de7661a68d41a26ee0ec857b96dc58913d7e9db9c84fae3db"
+    },
+    {
+      "plot": 20,
+      "case_id": "b0b235da-09f2-4acf-9b03-a803a4ab069b",
+      "keyword_hash": "sha256:d7b6d487f83805f4d40796dcfa780a0f61f8b35b87b117c07d966de54c534a71",
+      "treelist_hash": "sha256:5f242df7275332dcb9b4835043608bd350e8f0c07d4bfc21df133c192f916e3f"
+    },
+    {
+      "plot": 21,
+      "case_id": "7ebf5569-2c90-4336-b6ee-68f1ca6e0cb2",
+      "keyword_hash": "sha256:526e704623a3e4047d924abd33346076f1f96f5740fb472c8a0240bc693d3707",
+      "treelist_hash": "sha256:6f3cf0acbddd2c85d226a1cd0aa325cf33332187b5bcd71efac8fb3222035858"
+    },
+    {
+      "plot": 22,
+      "case_id": "49c915c4-7e38-45b4-b4aa-093c29ee53e5",
+      "keyword_hash": "sha256:3fdd5d334b28c1ebe9d433ba85efde2ed557e1381164bc453c1b917cd5eabd9b",
+      "treelist_hash": "sha256:593e67fb5e93b41f891e3a07c085beb0dadea8958d572f5c68057a6227ad2dbf"
+    },
+    {
+      "plot": 23,
+      "case_id": "a5515140-79d8-43af-9ef6-ee83b1b256ba",
+      "keyword_hash": "sha256:f70ab04035168599cd2a64fd88d15dcddca00b694051ac30fadb9d5ba921cf5c",
+      "treelist_hash": "sha256:c02efbfbd6cbbfc41bfc5ce9a0875303d7c09c8fd9023dee77cdd97ea0ab94cb"
+    },
+    {
+      "plot": 24,
+      "case_id": "09a30fd2-197e-4cce-8c1d-edc7d507751b",
+      "keyword_hash": "sha256:3e8a0d7333d46c9324026543dd08e545841debbc4a104a76840ee689877ea956",
+      "treelist_hash": "sha256:c5f258a6a1e30fa72c669afcd33432ae6e4e8efb7f4bc972415427b8b720a145"
+    }
+  ],
+  "uncalibrated_runs": [
+    {
+      "plot": 1,
+      "case_id": "14211b94-1118-42d6-800a-373d0a795de4",
+      "keyword_hash": "sha256:3dff074fdf00995bea1f9b86e0b0afde559636a8d90fea80d66a7123cdcbd79d",
+      "treelist_hash": "sha256:1c093323a8ca566a13be454d15241e1a8b44bb0266ac89d177007b3d37a77ef1"
+    },
+    {
+      "plot": 2,
+      "case_id": "13ce474c-9cb4-4edc-a4df-c00ffc554a7c",
+      "keyword_hash": "sha256:1c16fe8c21617359dc991682002d91736b46ad159a35f7e6143147cb2d49210b",
+      "treelist_hash": "sha256:5126e0ce7509c6574b3498ef3f907f0517527ea6a5150f0c71246f19d28f70c2"
+    },
+    {
+      "plot": 3,
+      "case_id": "933a7c0b-fa3c-44f5-8817-05d33b2ce6e7",
+      "keyword_hash": "sha256:c0dffb739f27960b2af879da01df902ddd3b3ce59044fe556511373e71a82a9e",
+      "treelist_hash": "sha256:70bb8d65111ef61a34fb5e3601f395e1b5364f4cd904ab6e3020401148ff3cc9"
+    },
+    {
+      "plot": 4,
+      "case_id": "50b115c4-36dd-490e-b4dd-47a3ddefc3ae",
+      "keyword_hash": "sha256:6c00eed3d9dde3cd4cb80356f4eed6c2537921d3e4549f85743f3c3cda30c9f7",
+      "treelist_hash": "sha256:6aca33347494dd145e8d94c7939d9f7a34ba50eb58a24582e78759a1db20ea76"
+    },
+    {
+      "plot": 5,
+      "case_id": "f1962930-797f-4ec0-8195-9f7313983136",
+      "keyword_hash": "sha256:b0e74f66cbb911fede4339257c833b869ae93f367912f2150224dc7bb15b789a",
+      "treelist_hash": "sha256:3e65e941d122da7925178b6dc390cbf259c37959bd5aec9d63c65ca0b99751fe"
+    },
+    {
+      "plot": 6,
+      "case_id": "ca0cd02c-0507-46a2-9907-46bb90c33077",
+      "keyword_hash": "sha256:a1220a4fed893326db6e2e0f641f7ee31cb19969c83fcb147c406a57bedc66e6",
+      "treelist_hash": "sha256:5658f4d7ef6813c3a78e9c0cf517749af35c211b6b5b1060b67b932d6ab570b2"
+    },
+    {
+      "plot": 7,
+      "case_id": "0f823f2c-6dde-470b-a1fa-e84bc04534dd",
+      "keyword_hash": "sha256:603ef6970f44835eacc9c0a7465cde03dfe2dfe141cf7acaa40e79b2c1741780",
+      "treelist_hash": "sha256:039556b1d04952183d911fc9396fa3ce784cd6fa1c11a5e55c1510efe9659297"
+    },
+    {
+      "plot": 8,
+      "case_id": "3ba81b05-692e-4c6a-a37b-2e27e11e713f",
+      "keyword_hash": "sha256:66c5d4bf912bf0637e818b28a852e939a1766fbb024b58f96ff68b83fb350506",
+      "treelist_hash": "sha256:d54000268243ff4f17eee8a5aba662a36df4b87310490ddabee7de8a73a538c0"
+    },
+    {
+      "plot": 9,
+      "case_id": "936d96cb-0bbb-4fb6-95cc-020e433f0f63",
+      "keyword_hash": "sha256:ee803febe177ae1154924434e99158a49c692b23d97cc4d21535bed1c5c608a9",
+      "treelist_hash": "sha256:9a37b351af8c5e9fcc655493ea087d9db40b9294288f599551c9465c94f8a4cd"
+    },
+    {
+      "plot": 10,
+      "case_id": "ec457a6e-e54b-4203-9a47-7377775a7dbf",
+      "keyword_hash": "sha256:73defe54e9d945c7b95df556607d9d662dffb1ede2100b1e136e9f2f383829d7",
+      "treelist_hash": "sha256:558576a93c974b4977d1ca6633e0d7dffc58e86b4d76915e51fe8a88d94f3cc2"
+    },
+    {
+      "plot": 11,
+      "case_id": "6b0df547-3bb7-4c19-bd1a-66ae07533941",
+      "keyword_hash": "sha256:1dfd93f15e123188b8783e90e3de8a7bbacd55d5f9f373b73cb7bbd3e0228989",
+      "treelist_hash": "sha256:723b0172e672cf88a326fe87462d65e028273cfeae69a47b30bdcb64be65bb19"
+    },
+    {
+      "plot": 12,
+      "case_id": "c15ae253-26be-4bd3-81bd-7357749f66dd",
+      "keyword_hash": "sha256:78668156162bc8e0a947ddf12dcba0decc5bbe676748dd130f1f60c3d5a2bb35",
+      "treelist_hash": "sha256:7e3b396d3f76172b062683e504bdd4003b03b6f8a16e7677024cdcec359d4342"
+    },
+    {
+      "plot": 13,
+      "case_id": "573f679a-48df-4c98-b1d3-6b032670e688",
+      "keyword_hash": "sha256:a5adc264dadee3e0398ab5c8398d2646faa8fa89debf27a2c1030d8688be415e",
+      "treelist_hash": "sha256:695e081fcd1fdf47de0e5d01509182fec2ac8c97c9cdf1516f60fa65223fd0c1"
+    },
+    {
+      "plot": 14,
+      "case_id": "9c311ddd-586b-4e0b-9ec1-217002965062",
+      "keyword_hash": "sha256:7b120fc0d8d6c237801ce4d9692c79174345d2c1d7bafa75d0be3ecc6e976586",
+      "treelist_hash": "sha256:77e8b49eb2032ff643a9b23381f3838b9411a49437b08b3dd8d06d66eddc4eef"
+    },
+    {
+      "plot": 15,
+      "case_id": "8b746f7b-04d6-459a-9430-3c5df4a98084",
+      "keyword_hash": "sha256:de8b50197cb6325139cf83076a623518dfa592e3ab48848c7d0f1d866270eb72",
+      "treelist_hash": "sha256:7521e3f807ca2622ca5b24dcc7d39f1886e6040f55cdc79918113a7683761252"
+    },
+    {
+      "plot": 16,
+      "case_id": "9e853037-36c8-479b-994e-18c5882ba91e",
+      "keyword_hash": "sha256:d3b015c5e6f9697ca178edf93a2ab2cfa021f13f7d0d8d6f14e5f248cee6a82a",
+      "treelist_hash": "sha256:4d4f66f0a1ee88bdec946fd5e405d92d4506597d339349c8f78b94d93d02b470"
+    },
+    {
+      "plot": 17,
+      "case_id": "ea6b7d40-617d-4ee7-94d3-73b54eac1bb8",
+      "keyword_hash": "sha256:18868b6824f1f86e5a7d5746234c8237ffe59185dda3d05701fba7c972a159a9",
+      "treelist_hash": "sha256:985e8c80ba291ba1fd30b1ed7c32b019b4fb9632db5b3f1566659e3b649bc09d"
+    },
+    {
+      "plot": 18,
+      "case_id": "6f43900b-7433-489d-b1b8-22a2e64dcc20",
+      "keyword_hash": "sha256:b96aee2108c8463f1172df1907dba351bb1bcdce30eee55052dcd98f5802fb94",
+      "treelist_hash": "sha256:cb4cd57299aee941cc21e0ce2f631c76872eaeabf26338bc348a15a3eda4229d"
+    },
+    {
+      "plot": 19,
+      "case_id": "ac08dcc5-6ab9-430f-91a3-7c2bf1c56c9c",
+      "keyword_hash": "sha256:16fa5d8de88d379f18fb0cb009fed3bfbd54f1e8b610abc091e3448ac30af78c",
+      "treelist_hash": "sha256:464f6a1cea021b5de7661a68d41a26ee0ec857b96dc58913d7e9db9c84fae3db"
+    },
+    {
+      "plot": 20,
+      "case_id": "736bc4bc-ef9e-48c8-b0a5-f8b6062ec250",
+      "keyword_hash": "sha256:75a9fb79063063be440e44d6fdb157369f3b26fffb2e81bb8e2cc3ebf8312d75",
+      "treelist_hash": "sha256:5f242df7275332dcb9b4835043608bd350e8f0c07d4bfc21df133c192f916e3f"
+    },
+    {
+      "plot": 21,
+      "case_id": "3986226b-f13a-4af6-a02a-c4ee4a53ecf7",
+      "keyword_hash": "sha256:344768d12e1a88a5dee82d01e8e31f122b8599c299d541708775d36e71dd9e77",
+      "treelist_hash": "sha256:6f3cf0acbddd2c85d226a1cd0aa325cf33332187b5bcd71efac8fb3222035858"
+    },
+    {
+      "plot": 22,
+      "case_id": "793ceae1-caa1-4a02-8cfc-1d21e0a8e60c",
+      "keyword_hash": "sha256:94d1969e9f2191b48eb6f31bad5f1b2541472773796b629670ccd8ce0f114c64",
+      "treelist_hash": "sha256:593e67fb5e93b41f891e3a07c085beb0dadea8958d572f5c68057a6227ad2dbf"
+    },
+    {
+      "plot": 23,
+      "case_id": "8495bc42-6f24-49a5-9572-3e8c7cad66ca",
+      "keyword_hash": "sha256:f827f20bac6d05c1cd972ab19a1cc00d306cc73d90d7d81218aac55672a15d74",
+      "treelist_hash": "sha256:c02efbfbd6cbbfc41bfc5ce9a0875303d7c09c8fd9023dee77cdd97ea0ab94cb"
+    },
+    {
+      "plot": 24,
+      "case_id": "6d7891b8-1fa7-41ba-b9de-3627fb0116f0",
+      "keyword_hash": "sha256:7e3884782e51aab3426a27e919b175950b18c372bdfd2a86b7f8edd62936ee5b",
+      "treelist_hash": "sha256:c5f258a6a1e30fa72c669afcd33432ae6e4e8efb7f4bc972415427b8b720a145"
+    }
+  ],
+  "caveats": [
+    "The calibration was fitted to 2013 on these same plots; 2024 is a temporal holdout, not an independent site holdout.",
+    "No cutting is simulated.",
+    "No stand age or site index is assigned.",
+    "The 24-plot thinning experiment is not a whole-block sample.",
+    "Not a legal-compliance or production-growth claim."
+  ]
+}
