@@ -2,7 +2,7 @@
 
 Phase: P3 ws4 instance assembly
 Parent issue: #60
-Pull request: pending
+Pull request: #69
 Branch: `feature/p3-ws4-assembly` into `main`
 Evidence head: `39438d3`, plus the P3.8 report commit
 Date: 2026-10-30
