@@ -502,3 +502,9 @@ status and the GitHub issue comments.
   structural release description, model counts, verified surfaces, scenario
   snapshot, run commands and the known-gaps list. Tagging remains gated on
   maintainer approval.
+
+- P5.3 clean-checkout verification: cloned `feature/p5-release` at `41b2ada`,
+  ran the dashboard (green), built the ws4 dataset and validated it. The clean
+  build has 160 fragments/blocks, 19 tracks, 19 treatments, 6,661 curve points,
+  114 features, 38 products and 8 accounts. `fresh_fvsbc` is not installed, so
+  the FVS-BC pilot is recorded as a release prerequisite, not a completed run.

@@ -355,9 +355,14 @@ P5.1 status: `notes/reports/p5-release-notes.md` records the release candidate,
 model counts, verified surfaces, scenario snapshot, run commands and known gaps.
 Tagging remains gated on maintainer approval.
 
+P5.3 status: clean checkout at `41b2ada` passes the dashboard, builds the ws4
+dataset and validates it. `fresh_fvsbc` is not installed, so the FVS-BC pilot is
+an explicit release prerequisite and is not claimed to have run. See
+`notes/reports/p5-clean-checkout.md`.
+
 - [x] P5.1 Write release notes and the known-gaps list (#77)
 - [ ] P5.2 Tag and publish after maintainer approval (#78)
-- [ ] P5.3 Verify the release from a clean checkout (#79)
+- [x] P5.3 Verify the release from a clean checkout (#79)
 
 Acceptance criteria:
 
