@@ -1,0 +1,31 @@
+{
+  "regime": "GWM_LOW",
+  "states": 23,
+  "nodes": 82,
+  "edges": 79,
+  "curve_rows": 313,
+  "ba_bins": [
+    0.0,
+    15.0,
+    20.0,
+    25.0,
+    30.0,
+    35.0,
+    40.0,
+    1000.0
+  ],
+  "qmd_bins": [
+    0.0,
+    20.0,
+    25.0,
+    30.0,
+    35.0,
+    40.0,
+    1000.0
+  ],
+  "caveats": [
+    "State ids are BA/QMD bins from residual FVS states.",
+    "Edges use the majority next state for each source state.",
+    "No calibration or legal-compliance claim."
+  ]
+}

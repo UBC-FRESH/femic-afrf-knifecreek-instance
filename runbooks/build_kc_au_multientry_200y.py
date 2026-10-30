@@ -183,6 +183,7 @@ def main() -> None:
         shutil.rmtree(run_root)
     run_root.mkdir(parents=True)
     rows: list[dict[str, object]] = []
+    plot_rows: list[dict[str, object]] = []
     for au_id, group in matches.groupby("au_id"):
         au_row = au.loc[au_id]
         cases = []
@@ -246,7 +247,25 @@ def main() -> None:
                         }
                     )
             if stage_rows:
-                cases.append(pd.DataFrame(stage_rows))
+                stage_frame = pd.DataFrame(stage_rows)
+                cases.append(stage_frame)
+                for point in stage_frame.itertuples(index=False):
+                    plot_rows.append(
+                        {
+                            "au_id": au_id,
+                            "regime": args.regime,
+                            "CLSTR_ID": match.CLSTR_ID,
+                            "stage": int(point.stage),
+                            "year": int(point.year),
+                            "ba_m2_ha": float(point.ba_m2_ha),
+                            "tph": float(point.tph),
+                            "qmd_cm": float(point.qmd_cm),
+                            "volume_m3_ha": float(point.volume_m3_ha),
+                            "canopy_ccf": float(point.canopy_ccf),
+                            "cut_tph": float(point.cut_tph),
+                            "cut_m3_ha": float(point.cut_m3_ha),
+                        }
+                    )
         if not cases:
             raise ValueError(f"no multi-entry FVS cases completed for {au_id}")
         stacked = pd.concat(cases, ignore_index=True)
@@ -275,6 +294,9 @@ def main() -> None:
             "No calibration or legal-compliance claim.",
         ],
     }
+    pd.DataFrame(plot_rows).to_csv(
+        args.out_dir / f"kc_au_multientry_{suffix}_plot_states.csv", index=False
+    )
     (args.out_dir / f"multientry_{suffix}_manifest.json").write_text(
         json.dumps(manifest, indent=2) + "\n"
     )
