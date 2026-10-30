@@ -87,8 +87,8 @@ usable.
 | `P` | `I` = plot tree; `B` = 5 m buffer/border tree | Confirmed by FRDA 242 p. 4 |
 | `T` | Tree number; buffer numbers followed by B in field, numeric here | Confirmed |
 | `SP` | Species code: FD, SX, PL, EP/Ep, AT/At, W | Mostly confirmed; `W` likely willow; confirm authority list |
-| `X`, `Y` | Tree position, probably **feet from plot centre** | Strong inference, not a workbook label |
-| `TS` | Tree status; `1` likely live, `3` likely dead | Not documented; verify |
+| `X`, `Y` | Tree position in **metres from plot centre** | Confirmed by P. Marshall, 2026-10-29 |
+| `TS` | 2013 MoF status code; `3` is not confirmed dead | Not documented; do not use |
 | `V-YY` | Vigor 0–3 | Confirmed by FRDA 242 p. 5 |
 | `TC` | Tree/crown class 0–8 | Not documented; verify |
 | `D1`, `D2`, `DA`, `DS`, `WTA` | Unknown auxiliary measurements | Not documented; do not use |
@@ -96,16 +96,15 @@ usable.
 | `HT-YY` | Total height in m by year | Confirmed by methods |
 | `CW1-YY`, `CW2-YY` | Two perpendicular crown diameters in m | Confirmed by methods |
 | `LC1-YY`…`LC4-YY` | Heights to live-crown base in four quarters, m | Confirmed by methods |
-| `HT13`, `CW1-93.1` | Duplicate/renamed 2013 or repeated column | Unknown; drop duplicates after checking values |
+| `HT13` | 2013 tree height in m | Confirmed by P. Marshall, 2026-10-29 |
+| `CW1-93.1` | Typo for the first 1993 crown-width column | Confirmed; drop duplicate |
 
-### Why X/Y are probably feet
+### X/Y units confirmed
 
-The plot is 15.81 × 31.62 m (half-width 7.9 m, half-length 15.8 m) with a 5 m
-buffer. The observed X/Y ranges are roughly −24 to 40 and −23 to 39. If metres,
-they exceed the plot and buffer dimensions. If feet, 40 ft = 12.2 m and 39 ft =
-11.9 m, which fits within the 5 m buffer around the rectangle. The source says
-distances were measured to 0.1 m, so the spreadsheet likely converted to feet.
-This is still an inference, not a header definition.
+X/Y are **metres from the plot centre**, not feet. P. Marshall confirmed this on
+2026-10-29. No unit conversion is applied. The observed ranges, about −24 to 40
+and −23 to 39, are therefore metres relative to the centre; the 5 m buffer
+means some border trees extend beyond the rectangular plot.
 
 ## Working assumptions
 
@@ -114,14 +113,17 @@ This is still an inference, not a header definition.
 3. Plot population is all living trees >1.3 m tall; LiDAR does not see these
    understory stems, so LiDAR cannot replace this dataset.
 4. DBH is cm; height and crown dimensions are m.
-5. `X/Y` are relative to plot centre, probably feet; no absolute coordinates.
-6. `TS = 3` is treated as dead only after confirmation.
-7. `V = 0` is dead; `V = 1/2/3` is low/moderate/good vigor.
+5. `X/Y` are metres relative to the plot centre; no conversion is applied.
+6. `TS` is a 2013 Ministry of Forests code and is not used. `TS = 3` is not
+   assumed to mean dead.
+7. `V = 0` is dead; `V = 1/2/3` is low/moderate/good vigor. Vigor was not used
+   in Marshall's analyses.
 8. `LC1–4` are live-crown base heights in four quarters; crown ratio is
    `(HT − mean(LC)) / HT` after a range check.
 9. `CW1/CW2` are perpendicular crown diameters; crown radius is mean/2.
 10. 2013 is post-growing-season; earlier measurements are pre-growing-season.
-    Growth intervals are 4, 7, 4 and 5 years.
+    Growth intervals are 4, 7, 4 and 5 years. A 2024 remeasurement exists but
+    was not in the supplied workbook.
 11. The study is a thinning experiment in dense patches, not a random sample of
     the whole Knife Creek block. The 2020 paper uses 16 Block C/D plots.
 12. The raw workbook remains private until AFRF/PSP custodians clear release.
@@ -130,13 +132,16 @@ This is still an inference, not a header definition.
 
 - The workbook has no formal data dictionary for `TS`, `TC`, `D1`, `D2`, `DA`,
   `DS`, `WTA`, `HT13` or duplicate columns.
-- X/Y units and origin are a strong inference, not a documented header.
+- X/Y are confirmed metres from the plot centre, but absolute plot centres are
+  not in the workbook. P. Marshall says GPS coordinates should be available
+  from AFRF.
 - Plot 1 and other treated plots have post-spacing populations; pre-spacing
   Table 1 values should not be compared directly with 1993 tree counts.
 - The 5 m buffer population is essential for competition but must not be used
   for plot density or BA.
 - No absolute plot centres, block polygons or treatment polygons are in the
-  workbook.
+  workbook; AFRF may be able to supply GPS coordinates and the block/treatment
+  layout.
 - Small 0.05 ha plots, edge effects and thinning-experiment selection limit
   extrapolation to the whole block.
 - Mountain pine beetle mortality affected lodgepole pine over 2004–2013.
@@ -144,15 +149,14 @@ This is still an inference, not a header definition.
 
 ## Remaining QC questions (only the genuinely unresolved ones)
 
-1. What are the exact `TS` and `TC` codes?
-2. What are `D1`, `D2`, `DA`, `DS`, `WTA`, `HT13` and `CW1-93.1`?
-3. Are `X/Y` feet from plot centre, and can the coordinate conversion be
-   documented?
-4. Are dead-tree DBH/height retained in all year columns, and how should
-   mortality/ingrowth be handled?
-5. Which species authority should be used for `W` and case variants?
-6. Can absolute plot centres, block polygons and treatment polygons be supplied?
-7. Is the raw workbook cleared for publication?
+1. What are the exact `TS` and `TC` codes? Marshall does not have a current
+   definition; they are 2013 MoF codes and can be ignored for this analysis.
+2. What are `D1`, `D2`, `DA`, `DS` and `WTA`? Still undocumented; do not use.
+3. Can AFRF supply the GPS plot centres and block/treatment maps?
+4. Can the 2024 remeasurement be supplied?
+5. Which species authority should be used for `W` and case variants? `W` is
+   willow.
+6. Is the raw workbook cleared for publication?
 
 ## What this unblocks
 
@@ -265,3 +269,12 @@ block/treatment empirical scenario, not a fitted equation. It does not produce
 volume, canopy cover or treatment response, and it is not a compiled ws4
 dataset. The 30-year projection is an extrapolation beyond the 4–7-year model
 fit intervals.
+
+## Metadata response
+
+P. Marshall responded on 2026-10-29; the public-safe summary is in
+`kc-afrf-psp-metadata-response.md`. The response confirms X/Y in metres,
+`HT13` as 2013 height, `CW1-93.1` as a duplicate typo, dead-tree exclusion
+from later measurements, ingrowth in its first measured interval, and the
+existence of a 2024 remeasurement not present in the workbook. It does not
+define `TS`/`TC` or the remaining auxiliary columns.

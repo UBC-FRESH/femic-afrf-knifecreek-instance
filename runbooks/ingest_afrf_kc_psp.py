@@ -84,8 +84,8 @@ def _long(frame: pd.DataFrame) -> pd.DataFrame:
                 "position": frame["P"].astype(str).str.strip().str.upper(),
                 "tree": pd.to_numeric(frame["T"], errors="coerce"),
                 "species": frame["SP"].astype(str).str.strip().str.upper().replace(SPECIES),
-                "x_ft": pd.to_numeric(frame["X"], errors="coerce"),
-                "y_ft": pd.to_numeric(frame["Y"], errors="coerce"),
+                "x_m": pd.to_numeric(frame["X"], errors="coerce"),
+                "y_m": pd.to_numeric(frame["Y"], errors="coerce"),
                 "year": year,
                 "dbh_cm": _num(frame, f"D-{suffix}"),
                 "height_m": _num(frame, f"HT-{suffix}"),
@@ -102,8 +102,6 @@ def _long(frame: pd.DataFrame) -> pd.DataFrame:
         )
         rows.append(d)
     long = pd.concat(rows, ignore_index=True)
-    long["x_m"] = long["x_ft"] * 0.3048
-    long["y_m"] = long["y_ft"] * 0.3048
     long["crown_width_m"] = long[["cw1_m", "cw2_m"]].mean(axis=1)
     long["live_crown_base_m"] = long[["lc1_m", "lc2_m", "lc3_m", "lc4_m"]].mean(axis=1)
     long["crown_ratio"] = np.where(
@@ -185,7 +183,8 @@ def main() -> None:
         "assumptions": [
             "P=I is the plot population; P=B is the 5 m buffer.",
             "Plot area 0.05 ha, expansion 20.",
-            "X/Y are feet from plot centre; converted to metres.",
+            "X/Y are metres from plot centre; no conversion applied "
+            "(P. Marshall, pers. comm., 2026-10-29).",
             "DBH cm, height/crown/live-crown-base m.",
             "TS/TC/D1/D2/DA/DS/WTA are not used.",
         ],

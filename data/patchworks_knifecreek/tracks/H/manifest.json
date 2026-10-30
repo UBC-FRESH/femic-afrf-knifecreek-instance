@@ -1,0 +1,28 @@
+{
+  "matrix": "kc-patchworks-H-scaffold-v1",
+  "blocks": 160,
+  "tracks": 92,
+  "treatments": 49,
+  "curves": 650,
+  "curve_points": 6660,
+  "features": 552,
+  "products": 49,
+  "horizon_years": 30,
+  "period_years": 10,
+  "status": "matrix-scaffold-space-for-time-features",
+  "caveats": [
+    "Feature curves are regional FAIB IDF space-for-time FVS-BC runs.",
+    "Product curves remain the existing 30-year GWM treatment runs.",
+    "Feature and product horizons differ (100 vs 30 years).",
+    "Space-for-time is not a growth chronology and not a KC CFI.",
+    "No large-tree-BA feature is claimed from this panel."
+  ],
+  "feature_horizon_years": 100,
+  "product_horizon_years": 30,
+  "feature_curves": 552,
+  "feature_rows": 552,
+  "product_curves": 98,
+  "space_for_time_mapping": "space_for_time_mapping.csv",
+  "accounts": 8,
+  "product_rows": 98
+}

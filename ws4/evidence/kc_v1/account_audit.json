@@ -1,0 +1,25 @@
+{
+  "dataset": "ws4/dataset_kc_v1",
+  "accounts": 8,
+  "features": 6,
+  "products": 2,
+  "curves": 651,
+  "targets": {
+    "targets_kc_smoke.yaml": [
+      "product.yield.managed.total",
+      "feature.yield.managed.total",
+      "feature.habitat.basal_area"
+    ],
+    "targets_kc_gwm2007.yaml": [
+      "feature.habitat.basal_area",
+      "feature.habitat.basal_area",
+      "product.yield.managed.total"
+    ]
+  },
+  "issues": [],
+  "ok": true,
+  "limits": [
+    "Large-tree BA, reserve BA, seral/opening and species-split accounts are not present.",
+    "Group aggregation is membership only; it does not create new growth curves."
+  ]
+}

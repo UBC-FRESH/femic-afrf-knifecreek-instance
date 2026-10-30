@@ -1,0 +1,32 @@
+{
+  "layer": "kc-patchworks-fragments-v1",
+  "blocks": 160,
+  "area_ha": 3481.77359050953,
+  "crs": "EPSG:3005",
+  "source": {
+    "vri": "data/inventory/vri_2025_kc.gpkg",
+    "sup": "data/boundaries/knife_creek_sup_S15382.gpkg",
+    "dataset": "ws4/dataset_kc_spatial_v3"
+  },
+  "keys": {
+    "RES_KEY": "stable block key",
+    "BLOCK": "ws4/Patchworks block id",
+    "TRACK": "initial ws4 state track"
+  },
+  "attributes": [
+    "AREA_HA",
+    "F_AGE",
+    "BEC",
+    "CONTCLAS",
+    "HMZ",
+    "CLUMP",
+    "RESERVE",
+    "POLY_ID"
+  ],
+  "caveats": [
+    "The block order is inherited from dataset_kc_spatial_v3.",
+    "F_AGE is VRI projected age, not a measured stand age.",
+    "No absolute PSP plot centres or treatment polygons are included.",
+    "tracks/H, topology, roads, accounts and ForestModelXML are later P3 tasks."
+  ]
+}

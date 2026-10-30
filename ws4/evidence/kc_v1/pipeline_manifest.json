@@ -1,0 +1,25 @@
+{
+  "phase": "P3.7",
+  "recipe": "data/kc_ws4_recipe/forestmodel.xml",
+  "fragments": "data/kc_ws4_recipe/fragments.csv",
+  "spatial_fragments": "data/patchworks_knifecreek/fragments.csv",
+  "account_audit": "ws4/evidence/kc_v1/account_audit.json",
+  "dataset": "ws4/dataset_kc_v1",
+  "years": 10,
+  "baseline_schedule": "ws4/runtime/kc_v1/kc_baseline_no_cut.csv",
+  "selection_schedule": "ws4/runtime/kc_v1/kc_selection_smoke.csv",
+  "runs": [
+    "baseline_no_cut",
+    "selection_smoke"
+  ],
+  "serve": "ws4 serve --dataset ws4/dataset_kc_v1 --runs ws4/runtime/kc_v1 --targets ws4/targets_kc_smoke.yaml --geometry ws4/runtime/kc_v1/kc_blocks.geojson --topology ws4/topology.csv --patch-accounts ws4/patch_accounts.yaml --port 8766",
+  "caveats": [
+    "Structural model, not a calibrated KC growth model.",
+    "The recipe is generated from the KC H-matrix source tables.",
+    "Selection smoke applies the first available treatment to every block at offset 0.",
+    "Product yield curves are point estimates; features are 100-year space-for-time curves.",
+    "Patch account uses managed area, not a seral/opening criterion.",
+    "Large-tree BA, reserve BA, seral/opening and species-split features are unavailable and not fabricated.",
+    "Route configuration is unavailable; the public road layer is map context only."
+  ]
+}

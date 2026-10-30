@@ -110,8 +110,8 @@ Column interpretation
      - FD, SX, PL, EP/Ep, AT/At, W
      - Mostly confirmed; species authority for W/case variants still open
    * - ``X``, ``Y``
-     - Tree position, probably **feet from plot centre**
-     - Strong inference; not a workbook label
+     - Tree position in **metres from plot centre**
+     - Confirmed by P. Marshall, 2026-10-29
    * - ``V-YY``
      - Vigor 0 dead, 1 low, 2 moderate, 3 good
      - Confirmed by FRDA 242
@@ -128,31 +128,33 @@ Column interpretation
      - Heights to live-crown base in four quarters, m
      - Confirmed
    * - ``TS``, ``TC``
-     - Tree status / tree class, codes unresolved
-     - Not documented
+     - 2013 Ministry of Forests status/class codes; unresolved
+     - Not used
    * - ``D1``, ``D2``, ``DA``, ``DS``, ``WTA``
      - Unknown auxiliary measurements
      - Not documented; do not use
-   * - ``HT13``, ``CW1-93.1``
-     - Duplicate/renamed 2013 or repeated columns
-     - Unknown; drop duplicates after checking values
+   * - ``HT13``
+     - 2013 tree height in m
+     - Confirmed
+   * - ``CW1-93.1``
+     - Typo for the first 1993 crown-width column
+     - Confirmed; drop duplicate
 
-Why X/Y are probably feet
--------------------------
+X/Y units
+---------
 
-The plot is 15.81 × 31.62 m, with half-width 7.9 m and half-length 15.8 m, plus
-a 5 m buffer. Observed X/Y ranges are roughly −24 to 40 and −23 to 39. In
-metres they exceed the plot and buffer; in feet, 40 ft = 12.2 m and 39 ft =
-11.9 m, which fits the buffer around the rectangle. The source says distances
-were measured to 0.1 m, so the spreadsheet probably converted to feet. This is
-an inference, not a header definition.
+X/Y are **metres from the plot centre**, confirmed by P. Marshall on
+2026-10-29. No conversion is applied. Observed ranges of about −24 to 40 and
+−23 to 39 are metres relative to the centre; border trees can extend beyond the
+rectangular plot.
 
 Working rules and caveats
 -------------------------
 
 - Use 0.05 ha and expansion factor 20 for ``P = I``.
 - Use ``P = B`` only for border/competition context.
-- No absolute plot centres are present; do not join to VRI, HMZ or LiDAR.
+- X/Y are metres from the plot centre, but absolute plot centres are not in the
+  workbook. GPS coordinates should be available from AFRF.
 - Do not carry a missing DBH forward silently.
 - Do not use ``TS``/``TC``/``D1``/``D2``/``DA``/``DS``/``WTA`` until defined.
 - Use live-crown ratio only after checking `LC` values against height.
@@ -169,13 +171,12 @@ six-plot PSP study, not this workbook.
 Remaining QC questions
 ----------------------
 
-1. Exact `TS` and `TC` codes.
-2. Meaning of `D1`, `D2`, `DA`, `DS`, `WTA`, `HT13` and duplicate columns.
-3. Final confirmation of the X/Y unit conversion and origin.
-4. Dead-tree DBH/height handling and ingrowth rules.
-5. Species authority for `W` and case variants.
-6. Absolute plot centres, block polygons and treatment polygons.
-7. Publication clearance for the raw workbook.
+1. `TS` and `TC` code tables; both are 2013 MoF codes and are not used here.
+2. Meaning of `D1`, `D2`, `DA`, `DS` and `WTA`.
+3. GPS plot centres and block/treatment maps from AFRF.
+4. Acquisition of the 2024 remeasurement.
+5. Species authority for `W` and case variants; `W` is willow.
+6. Publication clearance for the raw workbook.
 
 First FVS-BC backtest
 ---------------------
@@ -418,6 +419,22 @@ block/treatment ingrowth scenario.
 It produces BA, TPH, QMD and large-tree BA curves only. It does not generate
 volume, canopy cover, treatment response or a compiled ws4 dataset. The 30-year
 projection is an extrapolation; no 30-year observed validation exists.
+
+Regional space-for-time panel
+-----------------------------
+
+``data/psp/idf_cariboo_space_for_time_plots.csv`` and
+``idf_cariboo_space_for_time_curves.csv`` hold 132 stratified IDF site states
+from the Williams Lake and 100 Mile House TSAs. They span projected ages
+44–248 years and 5.5–52.1 m²/ha BA, with 100-year no-cut FVS-BC curves at
+10-year steps.
+
+The 697 visits belong to 338 stable sites; repeated visits are time-for-time
+data, not independent space-for-time states. This panel uses one first-
+measurement state per site. It is not a growth chronology, and the curves are
+not observed 50-year growth. The experimental BA-asymptote table is in
+``idf_cariboo_ba_for_time.csv``; even 100 years is too short to trust its
+asymptote as a carrying capacity.
 
 What it unblocks
 ----------------

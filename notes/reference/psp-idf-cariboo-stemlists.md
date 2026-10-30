@@ -187,3 +187,32 @@ PSP FTP directory.
 Most of the 45 stable PSP plots are not fully stem-mapped, and only one has more
 than one mapped tree ≥50 cm. The public PSP analog cannot estimate large-tree
 clump size or spacing. See `psp-stem-map-limits.md`.
+
+## Space-for-time panel
+
+To stop waiting for a perfect KC chronology, we built a public IDF Cariboo
+space-for-time panel from all live-tree visits, not only first measurements.
+
+- 338 IDF plots, 697 visits in the Williams Lake and 100 Mile House TSAs.
+- 590 visit states pass the data screen: live trees ≥9.1 cm DBH, BA 5–60,
+  QMD 5–50, TPH 100–5000, projected age 20–250.
+- The 697 visits belong to 338 stable sites; repeated visits are time-for-time
+  data, not independent space-for-time states.
+- 132 site states are stratified across BEC, leading species, age and BA for
+  FVS-BC runs.
+- The selected states span projected ages 44–248 and BA 5.5–52.1 m²/ha.
+- Each state has a 100-year no-cut FVS-BC curve at 10-year steps.
+- `idf_cariboo_ba_for_time.csv` adds an experimental asymptotic BA fit; even
+  the 100-year curves do not reliably reach an asymptote, so those values are
+  a rectification aid, not a calibrated carrying capacity.
+
+This is **BA/age space-for-time substitution**: one first-measurement state per
+site, not a growth chronology. The curves are not observed 50-year growth and
+do not replace the KC CFI.
+
+Files:
+
+- `data/psp/idf_cariboo_space_for_time_plots.csv`
+- `data/psp/idf_cariboo_space_for_time_curves.csv`
+- `data/psp/idf_cariboo_space_for_time_manifest.json`
+- Generator: `runbooks/build_psp_space_for_time.py`

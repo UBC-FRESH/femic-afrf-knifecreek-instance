@@ -15,7 +15,7 @@ after its parent issue exists and the maintainer approves it.
 | P0 Bootstrap and growth-engine contract | #1 | `feature/p0-bootstrap` | complete |
 | P1 Data acquisition and stem lists | #7 | `feature/p1-data-acquisition` | active |
 | P2 FVS-BC state-transition library | TBD | `feature/p2-state-library` | planned |
-| P3 ws4 instance assembly | TBD | `feature/p3-ws4-assembly` | planned |
+| P3 ws4 instance assembly | #60 | `feature/p3-ws4-assembly` | active |
 | P4 Verification and scenarios | TBD | `feature/p4-verification` | planned |
 | P5 Release v0.1 | TBD | `feature/p5-release` | planned |
 | P6 Maintain and merge readiness | TBD | `feature/p6-maintain` | planned |
@@ -252,24 +252,58 @@ Acceptance criteria:
 
 ## Phase 3: ws4 instance assembly
 
-Parent issue: TBD
+Parent issue: #60
 Branch: `feature/p3-ws4-assembly`
-Status: planned
+Status: active
 
-Goal: compile the Knife Creek ws4 dataset and run a first baseline.
+Goal: assemble the Knife Creek ws4 model from the source tables: block input
+layer, tracks, treatments, curves, product/feature accounts, topology, patch
+accounts, targets, baseline and selection runs, reports and web UI.
 
-- [ ] P3.1 Map blocks and AUs to initial state tracks
-- [ ] P3.2 Compile the ws4 dataset
-- [ ] P3.3 Generate topology and patch accounts
-- [ ] P3.4 Build and run the baseline selection schedule
-- [ ] P3.5 Record the assembly evidence
+- [x] P3.1 Build and validate the KC ForestModelXML recipe (#61)
+- [x] P3.2 Build the block input layer and stable block identity (#62)
+- [x] P3.3 Build source track, treatment and curve tables (#63)
+- [x] P3.4 Complete the supported product/feature/account wiring (#64)
+- [x] P3.5 Build topology, roads and patch accounts (#65)
+- [x] P3.6 Build targets, schedules and scenarios (#66)
+- [x] P3.7 Compile, validate, run, report and serve (#67)
+- [x] P3.8 Record evidence and queue closeout (#68)
 
 Acceptance criteria:
 
+- `data/kc_ws4_recipe/forestmodel.xml` is the KC recipe.
+- `ws4/dataset_kc_v1` is the compiled ws4 dataset.
 - `ws4 validate` accepts the dataset.
-- The baseline uses selection entries only; no clearcut treatment exists.
-- The cutting cycle and mule-deer constraints are enforced or explicitly
-  reported as not yet enforced.
+- `ws4 simulate` produces a no-cut baseline and a selection-smoke run.
+- `ws4 report` writes target status for both runs.
+- `ws4 serve` exposes the dataset, runs, targets, topology and patch accounts.
+- Product and feature accounts resolve for every active target.
+- Account groups exist for HMZ, clump and reserve classes.
+- Route configuration is explicitly marked unavailable.
+- No clearcut and no legal-compliance claim.
+
+P3.1 status: the KC ForestModelXML recipe is generated from the source matrix
+and compiled by `ws4 build`; this is the WS4 matrix-builder path, not a
+Patchworks runtime deliverable. The recipe is `data/kc_ws4_recipe/forestmodel.xml`
+with matrix-builder fragments in `data/kc_ws4_recipe/fragments.csv`.
+
+P3.7 status: `ws4 build` produced `ws4/dataset_kc_v1`; it validates and has
+baseline/selection-smoke runs and reports under `ws4/runtime/kc_v1`. The web
+service is running on port 8766.
+
+P3.4 status: the supported accounts are complete and audited. There are eight
+accounts over six feature labels and two product labels, with HMZ/clump/reserve
+group memberships. Large-tree BA, reserve BA, seral/opening and species-split
+feature curves remain unavailable; they are not fabricated.
+
+P3.5 status: topology covers all 160 blocks (500 pairs), the public road layer
+has 44 sections (59.6 km), and the managed-area patch account runs. Route
+configuration is explicitly unavailable because destination, eligibility,
+access and cost inputs are missing.
+
+P3.8 status: `notes/reports/p3-closeout.md` records the parity table, counts,
+run summaries, target status and gaps. The phase pull request is queued for
+maintainer approval; P3 is not merged.
 
 ## Phase 4: Verification and scenarios
 

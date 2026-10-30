@@ -1,0 +1,28 @@
+{
+  "source": "BC Forest Tenure Road Section Lines",
+  "wfs_type": "pub:WHSE_FOREST_TENURE.FTEN_ROAD_SECTION_LINES_SVW",
+  "licence": "Open Government Licence - British Columbia",
+  "query_bbox_wgs84": [
+    -121.90489239040309,
+    52.02028208347028,
+    -121.76848897285876,
+    52.07351172546128
+  ],
+  "features": 44,
+  "length_m": 59637.8,
+  "life_cycle": {
+    "ACTIVE": 40,
+    "PENDING": 4
+  },
+  "caveats": [
+    "Derived public road sections, not a field-verified AFRF access inventory.",
+    "No legal access, gate, bridge or haul-cost claim.",
+    "Route configuration is explicitly unavailable; see route_config."
+  ],
+  "route_config": {
+    "status": "unavailable",
+    "reason": "No reviewed destination/mill assignment, product eligibility, gate/bridge status or haul-cost inputs are available.",
+    "road_layer": "roads.gpkg",
+    "route_tables": []
+  }
+}

@@ -365,3 +365,107 @@ status and the GitHub issue comments.
   curves (BA/TPH/QMD/large BA) in five-year steps, with block/treatment
   ingrowth scenarios held separately. It is not a compiled ws4 dataset and
   has no volume, canopy or treatment response.
+- P3.0 activate the Patchworks-compatible Knife Creek package: opened parent
+  issue #60, child issues #61–#68, and branch
+  `feature/p3-patchworks-package`. The phase now treats fragments.shp,
+  tracks/H, product and feature accounts, topology, roads, pin and
+  ForestModelXML as primary deliverables, with ws4 ingestion as the runtime
+  lane. No model claim is added.
+- P3.1 ForestModelXML format spike: checked the Gavin archive, local
+  repositories and public sources. No valid ForestModelXML, schema or compiler
+  was found. Decision: build the compiled `tracks/H` + `fragments.shp` + pin
+  package now, and keep the recipe lane blocked rather than hand-writing
+  unvalidated XML. Also corrected X/Y to metres from plot centre and recorded
+  the Marshall metadata response.
+- P3.2 Patchworks fragment layer: added
+  `data/patchworks_knifecreek/spatial/fragments.shp` and derived
+  `fragments.csv` for 160 VRI blocks, 3,481.77 ha, EPSG:3005. Block order
+  matches `dataset_kc_spatial_v3`; `RES_KEY`/`BLOCK`, `TRACK`, `F_AGE`, BEC,
+  HMZ, clump and reserve attributes are carried. Matrix, roads, topology, pin
+  and ForestModelXML remain pending.
+- P3.3 H-matrix scaffold: added `runbooks/build_kc_patchworks_h.py` and
+  `data/patchworks_knifecreek/tracks/H/` with 160 blocks, 92 tracks, 49
+  treatments, 174 curves and 549 points. `ws4 ingest` succeeds and
+  `ws4 validate` passes. Curves cover 0–30 years only; the 300-year extension,
+  accounts, roads, pin and ForestModelXML remain open.
+- P3.3a space-for-time PSP panel: added
+  `runbooks/build_psp_space_for_time.py` and public IDF Cariboo tables.
+  Across 338 IDF sites and 697 visits, 590 visit states pass the screen; 87
+  first-measurement site states (age 48–247, BA 5.4–52.5 m²/ha) have 50-year
+  no-cut FVS-BC curves. Repeated visits are time-for-time data, not independent
+  space-for-time states. This is not a growth chronology and not a KC CFI. H
+  feature integration is in P3.3b.
+- P3.3b H feature integration: added `runbooks/integrate_psp_space_for_time.py`
+  and mapped the 92 IDF Cariboo space-for-time states to the H track states.
+  Feature curves now cover 0–50 years for BA, QMD, TPH, canopy and volume;
+  products remain 0–30 years. `ws4 ingest` succeeds and `ws4 validate` passes.
+  The mismatch in horizon and the minimal accounts remain explicit.
+- P3.3c time/space correction: FAIB `CLSTR_ID` is visit-specific; repeated
+  visits must be grouped by `SITE_IDENTIFIER`. The panel now uses one first-
+  measurement state per stable site: 338 sites, 590 qualifying visits, 87
+  sampled site states (age 48–247, BA 5.4–52.5). Added an experimental
+  BA-asymptote table; 50 years is too short to treat it as carrying capacity.
+  H feature curves were regenerated from the corrected panel and still ingest
+  and validate.
+- P3.3d stratified space-for-time panel: expanded the public FAIB panel to 132
+  first-measurement site states stratified by BEC, leading species, age and BA.
+  Ages 44–248, BA 5.5–52.1; 100-year no-cut FVS-BC curves. H feature curves
+  were regenerated at 100 years; products remain 30 years. The BA asymptote
+  table remains experimental because even 100 years does not reliably reach
+  an asymptote. `ws4 ingest` and `ws4 validate` pass.
+- P3.4 partial account wiring: added `feature.area.managed.total`,
+  `product.area.managed.total` and product area curves; accounts now have eight
+  `_MANAGED_` rows. H matrix has 552 feature rows, 98 product rows and 6,660
+  curve points; `ws4 ingest` and `ws4 validate` pass. Large-tree/reserve,
+  softwood/hardwood split and full group accounts remain open.
+- P3.5 topology, roads and structural patch accounts: built 500 block pairs
+  (352 touching) at 100 m, 44 BC Forest Tenure road sections (59.6 km), and a
+  managed-area patch account. `ws4 simulate --topology --patch-accounts` writes
+  patch membership and metrics. Roads are public-derived, not field-verified;
+  route configuration remains open.
+- P3.6 pin, scenarios and targets: added `KC_H.pin`, `scenarios_KC_H.bsh`,
+  `RATIO_ACCOUNTS.bsh`, structural patch targets, `ws4/targets_kc_smoke.yaml`
+  and a draft `ws4/targets_kc_gwm2007.yaml`. The GWM draft explicitly lacks
+  large-tree, reserve, maximum-DBH and seral accounts and is not legal
+  compliance.
+
+## 2026-10-30
+
+- P3.1 corrected. ForestModelXML is the WS4 recipe format and the input to the
+  WS4 matrix builder. It is not an optional Patchworks artifact and it is not a
+  Gavin-only file.
+- Added `runbooks/build_kc_forestmodel_xml.py` and `data/kc_ws4_recipe/`:
+  `forestmodel.xml`, matrix-builder `fragments.csv`, and a manifest. The recipe
+  carries the six KC state dimensions (`GWM`, `BA`, `QMD`, `LT`, `RES`, `HMZ`),
+  the source feature/product curves, and selection treatments only.
+- Replaced the legacy `ws4 ingest` path with `ws4 build` in
+  `runbooks/run_kc_ws4_pipeline.py`. The canonical compiled dataset is
+  `ws4/dataset_kc_v1`; it validates and has baseline/selection-smoke runs and
+  reports under `ws4/runtime/kc_v1`.
+- Removed the provisional `ws4/dataset_kc_h_v1` legacy-ingest fixture and the
+  old `ws4/evidence/kc_h` evidence so the canonical build path is unambiguous.
+- The matrix builder reports 19 reachable track strata from the current 160
+  fragments. The 92-track H scaffold contains unreachable combinations; the
+  compiled matrix contains only strata reachable from the inventory and the
+  treatment transitions.
+- The model remains structural, not KC-calibrated, and is not a legal
+  compliance determination.
+
+- P3.4 supported account wiring: added HMZ, clump and reserve group
+  memberships (12 groups, 800 block-group rows) and `runbooks/audit_kc_accounts.py`.
+  The audit resolves all eight accounts against six feature labels and two
+  product labels; no target names a missing account. Large-tree BA, reserve BA,
+  seral/opening and species-split feature curves remain unavailable and are
+  recorded as limits, not fabricated.
+- P3.5 topology and route status: regenerated `ws4/topology.csv` so all 160
+  blocks appear (500 pairs, 352 touching). The public road layer remains 44
+  sections over 59.6 km. Route configuration is explicitly unavailable in
+  `data/patchworks_knifecreek/spatial/ROUTE_CONFIG_UNAVAILABLE.md` because no
+  destination, eligibility, access or cost inputs exist.
+- P3.7 rerun after the account/topology updates: `ws4 build`, validation,
+  account audit, baseline/selection simulations and reports all pass.
+
+- P3.8 evidence and closeout: added `notes/reports/p3-closeout.md` with the
+  ForestModelXML build evidence, compiled counts, baseline/selection summaries,
+  account audit, Gavin functional comparison and explicit data gaps. Phase P3
+  is queued for maintainer approval; it is not merged.

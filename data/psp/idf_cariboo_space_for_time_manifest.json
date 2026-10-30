@@ -1,0 +1,554 @@
+{
+  "panel": "faib-idf-cariboo-space-for-time-v1",
+  "raw_visit_states": 590,
+  "sites": 288,
+  "sampled_sites": 132,
+  "bec_strata": 5,
+  "fvs_runs": 132,
+  "horizon_years": 100,
+  "step_years": 10,
+  "ba_for_time_states": 129,
+  "tsas": [
+    "Williams Lake TSA",
+    "100 Mile House TSA"
+  ],
+  "selection": "live trees >= 9.1 cm DBH; BA 5-60; QMD 5-50; TPH 100-5000; projected age 20-250",
+  "design": "space-for-time: one first-measurement state per stable site; not a growth chronology",
+  "caveats": [
+    "Projected age is used as a stand-age prior, not a measured age.",
+    "Visits are repeated measurements of the same plots; they are not independent plots.",
+    "The 50-year curves are no-cut FVS-BC runs, not observed 50-year growth.",
+    "FVS-BC site index is not used; no KC calibration is claimed.",
+    "BA-for-time asymptotes are a rectification aid, not a calibrated carrying-capacity estimate."
+  ],
+  "runs": [
+    {
+      "state_id": "FAIB-4024695",
+      "case_id": "b90ac340-2a24-4418-8d27-63afeb3457bf"
+    },
+    {
+      "state_id": "FAIB-4025377",
+      "case_id": "7cd2952e-5702-4afd-b7c3-1ff55c03e564"
+    },
+    {
+      "state_id": "FAIB-4025376",
+      "case_id": "3cc3d54e-0712-4108-8d09-88b2708a8472"
+    },
+    {
+      "state_id": "FAIB-4024694",
+      "case_id": "caaa602f-58da-4cc7-9de4-ec7c357555f5"
+    },
+    {
+      "state_id": "FAIB-4024451",
+      "case_id": "ebc88b6b-5585-4e2e-879f-f2b81cc27c6f"
+    },
+    {
+      "state_id": "FAIB-4026795",
+      "case_id": "7523fe24-3f60-4df1-b2b8-0236314048f8"
+    },
+    {
+      "state_id": "FAIB-4024428",
+      "case_id": "55777132-1b1b-4261-bb4e-a20c116b70ee"
+    },
+    {
+      "state_id": "FAIB-4025958",
+      "case_id": "6a07d7e4-40d3-425b-8490-4f3e22bbbf62"
+    },
+    {
+      "state_id": "FAIB-4025515",
+      "case_id": "6b41643c-d6f5-45a4-b226-3480f7600dac"
+    },
+    {
+      "state_id": "FAIB-4024627",
+      "case_id": "cb6a2f0b-0f00-4b4d-83c8-3cef4abf250c"
+    },
+    {
+      "state_id": "FAIB-4024749",
+      "case_id": "8dc3c2e5-4146-4a18-9aa5-d9d4b4563e94"
+    },
+    {
+      "state_id": "FAIB-4024440",
+      "case_id": "9158751f-2e0b-4a2c-99a5-34151f4ed78c"
+    },
+    {
+      "state_id": "FAIB-4024441",
+      "case_id": "160cca78-3dfa-4697-a9d9-9b9993e0bb5a"
+    },
+    {
+      "state_id": "FAIB-4024289",
+      "case_id": "b8947a16-1aaf-406e-8da9-28607d1b29a0"
+    },
+    {
+      "state_id": "FAIB-4024445",
+      "case_id": "25a54cb7-5b31-4917-826e-348cba65268c"
+    },
+    {
+      "state_id": "FAIB-4024433",
+      "case_id": "b4ac969b-0747-41dc-987d-3ec1c7002a23"
+    },
+    {
+      "state_id": "FAIB-4024959",
+      "case_id": "2dc01eb9-9174-41bb-adca-ffb118463784"
+    },
+    {
+      "state_id": "FAIB-4024296",
+      "case_id": "149ab01b-9209-47fa-af9c-cd9b74c54a84"
+    },
+    {
+      "state_id": "FAIB-4024958",
+      "case_id": "0f65e54b-7c96-4730-a9c1-f44e5f88b77a"
+    },
+    {
+      "state_id": "FAIB-4024956",
+      "case_id": "935ba07d-46cf-46f1-9185-4899e4d92b5e"
+    },
+    {
+      "state_id": "FAIB-4024919",
+      "case_id": "dece3940-7733-481f-83fb-356f4bc09a56"
+    },
+    {
+      "state_id": "FAIB-4024285",
+      "case_id": "09b7faa7-3c32-4f82-833e-19740d924bbe"
+    },
+    {
+      "state_id": "FAIB-4024184",
+      "case_id": "0f3853fd-e216-4e70-a338-d809bed2b9bc"
+    },
+    {
+      "state_id": "FAIB-4024182",
+      "case_id": "8c10033a-4f18-4626-9e7d-73a3393bcfea"
+    },
+    {
+      "state_id": "FAIB-4025001",
+      "case_id": "1396c6f8-e530-4eb7-a043-aa147ff42b16"
+    },
+    {
+      "state_id": "FAIB-4026793",
+      "case_id": "7d1c2480-4974-4c41-8cc0-6b08810b0144"
+    },
+    {
+      "state_id": "FAIB-4024735",
+      "case_id": "f43de68c-0bb6-4f4f-9120-6a545145b028"
+    },
+    {
+      "state_id": "FAIB-4025420",
+      "case_id": "088f1ee6-7c93-43df-a634-2fa88bd9cfaa"
+    },
+    {
+      "state_id": "FAIB-4025091",
+      "case_id": "3b2b7241-9592-46a6-ae97-9894c3eecefc"
+    },
+    {
+      "state_id": "FAIB-4024750",
+      "case_id": "06c2da5a-1927-44e1-af8e-94c7bfc252a3"
+    },
+    {
+      "state_id": "FAIB-4024276",
+      "case_id": "f7b84347-69b6-47b4-9b9a-0d48d6f31318"
+    },
+    {
+      "state_id": "FAIB-4024286",
+      "case_id": "90d547ec-58e6-49d7-95f5-a37f25108ed5"
+    },
+    {
+      "state_id": "FAIB-4024291",
+      "case_id": "7dbf408c-f64a-468d-8003-0e9a96187186"
+    },
+    {
+      "state_id": "FAIB-4024290",
+      "case_id": "15f28d3f-87d8-4f6f-a6d9-620ee22be748"
+    },
+    {
+      "state_id": "FAIB-4025422",
+      "case_id": "7330e2c0-962c-46dd-b3ae-02f9312f8e32"
+    },
+    {
+      "state_id": "FAIB-4024821",
+      "case_id": "2c593a2d-7bd4-43e9-8b0d-30063ca33fac"
+    },
+    {
+      "state_id": "FAIB-4025172",
+      "case_id": "a9dfa715-04d1-4a6f-8b97-4b10b11a1c03"
+    },
+    {
+      "state_id": "FAIB-4024961",
+      "case_id": "1e017143-0256-4f19-af00-0cc8f544ff1f"
+    },
+    {
+      "state_id": "FAIB-4025098",
+      "case_id": "253e0568-46a5-40ac-ac65-701a8235537b"
+    },
+    {
+      "state_id": "FAIB-4024629",
+      "case_id": "6b8892d0-9dbc-40f9-87a8-8f3ad93bbe7a"
+    },
+    {
+      "state_id": "FAIB-4024180",
+      "case_id": "7d3f508d-e1b9-4648-b3b5-bacd138456a8"
+    },
+    {
+      "state_id": "FAIB-4024626",
+      "case_id": "18a100ff-e899-4542-8975-6dc497e67e78"
+    },
+    {
+      "state_id": "FAIB-4024693",
+      "case_id": "338bfd70-4468-4374-a308-6bbff71e3a01"
+    },
+    {
+      "state_id": "FAIB-4025421",
+      "case_id": "45cd817e-67c0-407a-b244-1ea1584925fa"
+    },
+    {
+      "state_id": "FAIB-4024969",
+      "case_id": "2a83da30-7f8f-4134-808f-5e5193564d7a"
+    },
+    {
+      "state_id": "FAIB-4026012",
+      "case_id": "4ed1da46-8cef-4578-b706-4af6e6f12b0c"
+    },
+    {
+      "state_id": "FAIB-4024434",
+      "case_id": "4b225e0f-42fc-4a82-b820-4ad71edd22ee"
+    },
+    {
+      "state_id": "FAIB-4024966",
+      "case_id": "7f7e1bd0-38ae-4bcc-b66e-9c7e94e12207"
+    },
+    {
+      "state_id": "FAIB-4025181",
+      "case_id": "7f26477c-9761-4fec-bf64-13668d296ae9"
+    },
+    {
+      "state_id": "FAIB-4032997",
+      "case_id": "5fd4d3e3-723d-44fc-b066-72f9b091c2c3"
+    },
+    {
+      "state_id": "FAIB-4032996",
+      "case_id": "631f19a1-90a0-4145-b84f-d891b1fe0746"
+    },
+    {
+      "state_id": "FAIB-4024185",
+      "case_id": "fedd70bb-dfbc-4402-9111-5dc582973411"
+    },
+    {
+      "state_id": "FAIB-4024186",
+      "case_id": "1433e9e0-fc38-4dc7-a5d9-21536bdc7a95"
+    },
+    {
+      "state_id": "FAIB-4024972",
+      "case_id": "50c69510-851f-4fd6-b910-e06e318f6e8e"
+    },
+    {
+      "state_id": "FAIB-4024425",
+      "case_id": "3154a70d-58cd-4e3c-a6b1-3014019fc9f8"
+    },
+    {
+      "state_id": "FAIB-4024426",
+      "case_id": "2fd898d0-a901-4b00-a2f7-36ae50a47a73"
+    },
+    {
+      "state_id": "FAIB-4024545",
+      "case_id": "a5d457b5-c041-4b62-867a-52fa3d046eaf"
+    },
+    {
+      "state_id": "FAIB-4024540",
+      "case_id": "635333f8-e53d-405d-b77a-2c8d25ebf9fb"
+    },
+    {
+      "state_id": "FAIB-4024181",
+      "case_id": "693d68bf-6e8d-4c93-8cd8-49cf49a10744"
+    },
+    {
+      "state_id": "FAIB-4025006",
+      "case_id": "7485e1f3-2c05-40b5-be27-1c622427d2cb"
+    },
+    {
+      "state_id": "FAIB-4025005",
+      "case_id": "46aa8169-3b27-48cf-bed0-578b0ae06003"
+    },
+    {
+      "state_id": "FAIB-4025304",
+      "case_id": "5cf4d8fd-df70-4cf0-bcd8-a6b314e9d6a1"
+    },
+    {
+      "state_id": "FAIB-4025180",
+      "case_id": "5dc1872c-e1ec-4e66-b251-1e4f06cf699d"
+    },
+    {
+      "state_id": "FAIB-4025097",
+      "case_id": "1e4f0e54-2fee-4b17-812d-fbf78a6716ce"
+    },
+    {
+      "state_id": "FAIB-4024833",
+      "case_id": "36f6e5d1-481e-4229-aa23-8f97afae178a"
+    },
+    {
+      "state_id": "FAIB-4024546",
+      "case_id": "4f22709e-5219-4124-b1cd-4dbfee4aa747"
+    },
+    {
+      "state_id": "FAIB-4026661",
+      "case_id": "e53d4d36-6428-46f0-93ed-8c63761dcdab"
+    },
+    {
+      "state_id": "FAIB-4024731",
+      "case_id": "66b7f3b4-b356-45b8-bec9-20e09eba3da3"
+    },
+    {
+      "state_id": "FAIB-4024978",
+      "case_id": "5eacd359-c569-4979-b49c-a61d4341e971"
+    },
+    {
+      "state_id": "FAIB-4024754",
+      "case_id": "fd5732a6-b0c9-48ed-96f1-652d19af5878"
+    },
+    {
+      "state_id": "FAIB-4025175",
+      "case_id": "9a94df5b-23db-471d-9e7b-0abd9025c5f0"
+    },
+    {
+      "state_id": "FAIB-4026809",
+      "case_id": "6a339d2e-919f-407c-bf98-6de4beec60c0"
+    },
+    {
+      "state_id": "FAIB-4025092",
+      "case_id": "b1fb06ef-04a8-40e9-932a-268ffc0f61f4"
+    },
+    {
+      "state_id": "FAIB-4026888",
+      "case_id": "7439ed07-6048-4efb-b2b3-c3d61362b654"
+    },
+    {
+      "state_id": "FAIB-4024838",
+      "case_id": "eb790068-0e49-4236-94a5-06be6e2521e9"
+    },
+    {
+      "state_id": "FAIB-4024839",
+      "case_id": "f8885633-712e-49a6-9678-66f16cc59372"
+    },
+    {
+      "state_id": "FAIB-4024828",
+      "case_id": "20203dbf-67a2-4ba2-ab87-25b6b4c2b7d8"
+    },
+    {
+      "state_id": "FAIB-4025305",
+      "case_id": "7dd1173c-38ac-4459-8024-0d4af0489150"
+    },
+    {
+      "state_id": "FAIB-4025177",
+      "case_id": "50c71860-9dae-4512-b5fc-48995232fbda"
+    },
+    {
+      "state_id": "FAIB-4025178",
+      "case_id": "17427eab-797f-45eb-a097-76244b2571bb"
+    },
+    {
+      "state_id": "FAIB-4024581",
+      "case_id": "2e18f1bb-47bf-4fae-8a29-39cb53d5426f"
+    },
+    {
+      "state_id": "FAIB-4024582",
+      "case_id": "25edb41e-4410-488f-85c4-c0cfc707987b"
+    },
+    {
+      "state_id": "FAIB-4032992",
+      "case_id": "5db53063-205e-4db3-b6ad-a8b5ecd90dc8"
+    },
+    {
+      "state_id": "FAIB-4032991",
+      "case_id": "85a8ac32-7dd6-4209-952c-4b2812872963"
+    },
+    {
+      "state_id": "FAIB-4024449",
+      "case_id": "21785a0d-40f0-4610-a477-6290f58d4ed0"
+    },
+    {
+      "state_id": "FAIB-4024450",
+      "case_id": "182a91e9-69e2-4837-8a48-6e97c545644a"
+    },
+    {
+      "state_id": "FAIB-4025297",
+      "case_id": "78492126-21cc-4c9f-8c47-7b89c370dca6"
+    },
+    {
+      "state_id": "FAIB-4025303",
+      "case_id": "e0483553-1b04-43cd-9632-69a45baf6237"
+    },
+    {
+      "state_id": "FAIB-4026803",
+      "case_id": "1199f232-4907-4e6c-a4e5-3a5cf7f20821"
+    },
+    {
+      "state_id": "FAIB-4024535",
+      "case_id": "2fd77a91-1c81-4831-aef2-6c0dc49ba235"
+    },
+    {
+      "state_id": "FAIB-4026894",
+      "case_id": "6df5985e-8f63-4997-86be-6b8f8376b9b9"
+    },
+    {
+      "state_id": "FAIB-4024829",
+      "case_id": "0577baab-6d6c-4734-af23-a31b3c89d961"
+    },
+    {
+      "state_id": "FAIB-4024543",
+      "case_id": "1f137093-38a4-4ce7-8375-fa543cea4b93"
+    },
+    {
+      "state_id": "FAIB-4024457",
+      "case_id": "13f2c076-a198-45ed-8f16-6ccf67e41331"
+    },
+    {
+      "state_id": "FAIB-4027072",
+      "case_id": "314eec85-7b81-4d1f-85c2-14e9f621c751"
+    },
+    {
+      "state_id": "FAIB-4024194",
+      "case_id": "0ee29beb-734b-4cce-a35d-29b3c3a9fb5c"
+    },
+    {
+      "state_id": "FAIB-4026152",
+      "case_id": "f3650907-2a00-465d-8e94-61d2c11253f0"
+    },
+    {
+      "state_id": "FAIB-4027481",
+      "case_id": "decfab71-f78c-4f52-906d-a6f7fc7f5397"
+    },
+    {
+      "state_id": "FAIB-4027489",
+      "case_id": "e1edd81c-6ce3-4db9-90d5-6e9521a5552f"
+    },
+    {
+      "state_id": "FAIB-4033798",
+      "case_id": "21081b97-638e-4f85-877a-4edc3a2f3e14"
+    },
+    {
+      "state_id": "FAIB-4026250",
+      "case_id": "6aa3afe8-2cc4-4a02-b762-d89daf212612"
+    },
+    {
+      "state_id": "FAIB-4026251",
+      "case_id": "53da66a0-3cff-4191-8fff-3034fe99a9a3"
+    },
+    {
+      "state_id": "FAIB-4026630",
+      "case_id": "ab2ea1cb-876a-4528-9f45-92414e83f6ed"
+    },
+    {
+      "state_id": "FAIB-4026096",
+      "case_id": "964330c6-90c6-44cb-932f-11cd6aed1272"
+    },
+    {
+      "state_id": "FAIB-4026097",
+      "case_id": "1418bfd6-00d6-47d2-ad84-befe28ac2971"
+    },
+    {
+      "state_id": "FAIB-4026108",
+      "case_id": "3d660a8e-5f9e-4d16-a702-57afabef1731"
+    },
+    {
+      "state_id": "FAIB-4026106",
+      "case_id": "d3c3804b-3067-4107-9cee-f7ef96832e53"
+    },
+    {
+      "state_id": "FAIB-4026098",
+      "case_id": "13be5419-5e87-47ff-8b56-92a47c91b15d"
+    },
+    {
+      "state_id": "FAIB-4026088",
+      "case_id": "42e65297-1363-4512-b219-4a1f699f8e4c"
+    },
+    {
+      "state_id": "FAIB-4026100",
+      "case_id": "4113267b-0bee-4de7-b0be-d87f7d368fde"
+    },
+    {
+      "state_id": "FAIB-4026101",
+      "case_id": "315a4189-2a73-4995-a1d2-6e7aa6fd7ba9"
+    },
+    {
+      "state_id": "FAIB-4025009",
+      "case_id": "c4e2fb81-1fd3-4d41-952f-c68f3afb4af2"
+    },
+    {
+      "state_id": "FAIB-4024280",
+      "case_id": "a8baa0b7-7ee2-495c-8364-96d933004898"
+    },
+    {
+      "state_id": "FAIB-4025008",
+      "case_id": "5ab04bc4-761d-4288-b172-79c24195931d"
+    },
+    {
+      "state_id": "FAIB-4024279",
+      "case_id": "3cd37d65-88f8-4c72-a22f-857e270f52f3"
+    },
+    {
+      "state_id": "FAIB-4024281",
+      "case_id": "08dbae5e-2f71-4bad-8c02-6cf089d04ca3"
+    },
+    {
+      "state_id": "FAIB-4024964",
+      "case_id": "4e0c9531-6246-47f4-8934-7a78bc0d606b"
+    },
+    {
+      "state_id": "FAIB-4026916",
+      "case_id": "f3b2dac6-57a0-4945-8bd8-e128064ade0d"
+    },
+    {
+      "state_id": "FAIB-4026915",
+      "case_id": "98970989-232f-4225-9474-439266247543"
+    },
+    {
+      "state_id": "FAIB-4026313",
+      "case_id": "965889d4-5562-44c1-936e-70d4115f4cba"
+    },
+    {
+      "state_id": "FAIB-4025994",
+      "case_id": "38adb96b-9fb4-4627-8301-aa240c9176ed"
+    },
+    {
+      "state_id": "FAIB-4026664",
+      "case_id": "976e1b1c-aaad-4872-93bf-f2b940c47de5"
+    },
+    {
+      "state_id": "FAIB-4026662",
+      "case_id": "c58654ea-16f3-4141-9391-75db21f6671a"
+    },
+    {
+      "state_id": "FAIB-4026086",
+      "case_id": "0589faf8-dcb0-4e04-86ed-48aeb71942a3"
+    },
+    {
+      "state_id": "FAIB-4024745",
+      "case_id": "17acd34e-1a33-478c-a369-84fbf7828676"
+    },
+    {
+      "state_id": "FAIB-4024744",
+      "case_id": "1b543eb2-6a30-4f83-ac8d-e8888e2878a0"
+    },
+    {
+      "state_id": "FAIB-4026660",
+      "case_id": "4d496f97-12af-49c0-b3c3-c0189dca3f42"
+    },
+    {
+      "state_id": "FAIB-4025767",
+      "case_id": "ea927125-04b6-4c1a-8c1a-438db68fe2a6"
+    },
+    {
+      "state_id": "FAIB-4025251",
+      "case_id": "2ae1e7e7-eda5-4aca-a237-5b5cda00f662"
+    },
+    {
+      "state_id": "FAIB-4025766",
+      "case_id": "34e73b9a-b8d9-4cca-8ef7-22d926844f22"
+    },
+    {
+      "state_id": "FAIB-4025768",
+      "case_id": "2ea01035-0369-4e8e-af43-0a7686ddf6e2"
+    },
+    {
+      "state_id": "FAIB-4025765",
+      "case_id": "244ae11f-3733-400d-aeed-183a379d5392"
+    }
+  ]
+}

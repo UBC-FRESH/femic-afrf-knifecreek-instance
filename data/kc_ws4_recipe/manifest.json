@@ -1,0 +1,23 @@
+{
+  "recipe": "kc-ws4-forestmodelxml-v1",
+  "source_matrix": "data/patchworks_knifecreek/tracks/H",
+  "tracks": 92,
+  "states": 92,
+  "fragments": 160,
+  "state_fields": [
+    "GWM",
+    "BA",
+    "QMD",
+    "LT",
+    "RES",
+    "HMZ"
+  ],
+  "horizon_years": 100,
+  "caveats": [
+    "Generated from the KC H-matrix source tables, not from a fresh FVS-BC run.",
+    "The recipe uses AU=1 as a constant compatibility field; the six KC state dimensions carry the tracks.",
+    "F_AGE is VRI projected age, not a measured stand age.",
+    "No clearcut treatment is present.",
+    "The recipe is a structural ws4 input, not a calibrated or legal-compliance model."
+  ]
+}

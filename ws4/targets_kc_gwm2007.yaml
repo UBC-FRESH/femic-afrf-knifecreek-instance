@@ -1,0 +1,20 @@
+# Knife Creek GWM 2007 structural target draft.
+# LEGAL COMPLIANCE: false. The current H feature layer lacks large-tree BA,
+# reserve, maximum DBH and seral accounts, so this is not the full GWM test.
+# The BA floor is the LOW regime floor; it is not a block-wide legal standard.
+targets:
+  - account: feature.habitat.basal_area
+    period: 1
+    minimum: 16
+    period_width: 10
+    min_weight: 1.0
+  - account: feature.habitat.basal_area
+    period: 10
+    minimum: 16
+    period_width: 10
+    min_weight: 1.0
+  - account: product.yield.managed.total
+    period: 1
+    minimum: 0
+    period_width: 10
+    min_weight: 1.0
