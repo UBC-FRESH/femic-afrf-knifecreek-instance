@@ -1,0 +1,18 @@
+{
+  "recipe": "kc-au-ba-qmd-graph-v1",
+  "aus": 6,
+  "hmz_values": [
+    "L",
+    "M",
+    "U"
+  ],
+  "treatments": [
+    "GWM_LOW",
+    "GWM_MODERATE"
+  ],
+  "caveats": [
+    "States are BA/QMD bins from FVS residual states.",
+    "Transitions use the majority next state per source state.",
+    "No calibration or legal-compliance claim."
+  ]
+}
