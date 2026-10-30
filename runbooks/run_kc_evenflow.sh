@@ -4,15 +4,16 @@
 # Usage:
 #   bash runbooks/run_kc_evenflow.sh [iterations]
 #
-# The KC product curves cover 30 years, so the current horizon is three
-# 10-year periods. Extend the product curves before using a longer horizon.
+# WS4 clamps yield curves to their endpoint values after the last point, so the
+# 200-year run is defined. The source curves still need a full FVS horizon for a
+# real 200-year rebuild.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 ITERATIONS="${1:-100000}"
 ISLANDS="${ISLANDS:-0}"
 REFRESH="${REFRESH:-2}"
-YEARS="${YEARS:-30}"
+YEARS="${YEARS:-200}"
 PERIOD_WIDTH="${PERIOD_WIDTH:-10}"
 
 args=(

@@ -5,35 +5,32 @@ legal-compliance test.
 
 ## Structure
 
-This mirrors the TSA 27 even-flow pattern:
+- 20 x 10-year periods (200 years).
+- Flow target on `product.yield.managed.total`.
+- Even-flow band of +/-5% against period 1.
+- One harvest-volume floor target per period.
+- No growing-stock or other level targets yet.
 
-- a flow target on `product.yield.managed.total`;
-- an even-flow band of +/-5% against period 1;
-- a matching level target on `feature.yield.managed.total`;
-- a paired area flow/level check on `product.area.managed.total` and
-  `feature.area.managed.total`;
-- one harvest floor target per period.
+The flow target is the shape. The floor targets are the level.
 
-The flow target is the shape. The floor targets are the level. Neither replaces
-the other.
+## Horizon and curve contract
 
-## Horizon limit
+WS4 clamps yield curves to their endpoint values before the first point and
+after the last point. The 200-year run is therefore defined by the WS4 curve
+contract, not by a separate post-extend step. The current source product curves
+end at 30 years; a real 200-year rebuild should run FVS for the full horizon
+rather than relying on the flat clamp.
 
-The KC product curves cover 30 years, so the runnable horizon is three
-10-year periods. TSA 27 uses 200 years; that pattern cannot be copied to KC
-until the product curves are extended.
-
-## Tested level
+## Tested floor
 
 Using the GWM moderate selection schedule as the starting schedule:
 
-- 150,000 m3/period: met;
-- 185,000 m3/period: met;
-- 190,000 m3/period: met in all three periods;
-- 195,000 m3/period: below in all three periods.
+- 25,000 m3/period: met in all periods;
+- 27,000 m3/period: met in all periods;
+- the even-flow +/-5% band did not converge in a 50,000-iteration probe.
 
-The current target file uses 190,000 m3/period as a tested structural floor.
-This is not a proof of the global maximum and not a calibrated AAC.
+The target file uses 27,000 m3/period as a provisional structural floor. It is
+not a proven maximum and not a calibrated AAC.
 
 ## Files
 
@@ -42,7 +39,6 @@ This is not a proof of the global maximum and not a calibrated AAC.
 
 ## Caveats
 
-- Product curves are 30-year point estimates.
-- Feature curves are 100-year space-for-time curves.
+- The current source product curves end at 30 years; the 200-year run uses the documented flat clamp.
+- The even-flow band needs a longer search or a different reference-period setup.
 - The scenario uses the structural KC model; there is no KC calibration.
-- The level accounts are reported; they are not a legal habitat test.
