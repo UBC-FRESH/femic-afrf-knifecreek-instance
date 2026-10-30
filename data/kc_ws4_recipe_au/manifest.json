@@ -1,0 +1,12 @@
+{
+  "recipe": "kc-au-two-state-v1",
+  "aus": 6,
+  "tracks": 12,
+  "selection_entry_year": 30,
+  "treatment": "GWM_MODERATE",
+  "caveats": [
+    "Two states per AU: natural and managed.",
+    "Managed is re-enterable but not a BA/QMD state graph.",
+    "No calibration or legal-compliance claim."
+  ]
+}
