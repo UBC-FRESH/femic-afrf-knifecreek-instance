@@ -29,6 +29,7 @@
       180
     ]
   ],
+  "calibration": "ws4/kc_psp_calibration/calibration_parameters.json",
   "aus": 6,
   "curve_rows": 138,
   "caveats": [
@@ -36,6 +37,5 @@
     "Residual x=0 uses ATBA, ATQMD, ATCCF and pre-cut minus removed TPH/volume.",
     "V1 PSP calibration applied as a sensitivity.",
     "Not a legal-compliance claim."
-  ],
-  "calibration": "ws4/kc_psp_calibration/calibration_parameters.json"
+  ]
 }

@@ -53,6 +53,19 @@ Q_BY_AU = {
     ("KC_IDFdk3_FDI_H", "GWM_MODERATE"): 1.66,
     ("KC_IDFxm_FDI_L", "GWM_MODERATE"): 1.38,
 }
+# Calibrated growth shifts the measured q. These targets are the sensitivity
+# retune; they are not independent validation of the legal q.
+Q_BY_AU_CALIBRATED = {
+    ("KC_IDFdk3_FDI_H", "GWM_LOW"): 1.62,
+    ("KC_IDFdk3_FDI_H", "GWM_MODERATE"): 1.74,
+    ("KC_IDFdk3_FDI_M", "GWM_LOW"): 1.43,
+    ("KC_IDFdk3_FDI_M", "GWM_MODERATE"): 1.30,
+    ("KC_IDFxm_FDI_L", "GWM_LOW"): 1.56,
+    ("KC_IDFxm_FDI_L", "GWM_MODERATE"): 1.75,
+    ("KC_IDFxm_FDI_M", "GWM_LOW"): 1.68,
+    ("KC_IDFxm_FDI_M", "GWM_MODERATE"): 1.56,
+}
+RESERVE_CALIBRATED = {"GWM_LOW": 1.15, "GWM_MODERATE": 2.2}
 LARGE_THRESHOLD = 37.5
 
 
@@ -193,7 +206,9 @@ def _keywords(
 ) -> list[Keyword]:
     """Return the 200-year multi-entry key set."""
     spec = REGIMES[regime]
-    q_target = Q_BY_AU.get((au_id, regime), spec["q"]) if au_id else spec["q"]
+    q_map = Q_BY_AU_CALIBRATED if calibration else Q_BY_AU
+    q_target = q_map.get((au_id, regime), spec["q"]) if au_id else spec["q"]
+    reserve_target = RESERVE_CALIBRATED[regime] if calibration else spec["reserve"]
     thinning = []
     for cycle in CYCLES:
         thinning.append(
@@ -215,7 +230,7 @@ def _keywords(
                 "THINABA",
                 (
                     str(cycle),
-                    str(spec["reserve"]),
+                    str(reserve_target),
                     "1.0",
                     str(spec["D"]),
                     "999.0",
