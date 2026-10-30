@@ -70,7 +70,9 @@ This is a structural pass only. It does not certify legal compliance.
   triggered; if the first entry is the pre-2026 harvest, five of six AUs fail.
 - Current approved UWR order and legal HMZ/stand-structure map.
 - Skid-trail and residual-damage checks.
-- KC-calibrated growth and mortality.
+- KC-calibrated growth and mortality. The 2024 Marshall temporal holdout
+  supports the v1 total-TPH calibration, but it is not independent-site or
+  whole-block validation; the AU stage curves still use uncalibrated FVS.
 - Independent validation of the AU-specific q target calibration.
 
 ## Consequence

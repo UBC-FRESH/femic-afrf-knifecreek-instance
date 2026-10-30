@@ -196,6 +196,17 @@ vs 60 test produced no change. No stand age is assigned: the plots are
 uneven-aged and VRI age is not a plot age. FVS-BC does not use site index. See
 `ws4/kc_psp_validation/README.md`.
 
+## 2024 remeasurement
+
+The 2024/2025 Marshall remeasurement adds one interval per plot (11–12 years)
+to the 2013 state. It has 5,637 tree records: 3,515 residual, 1,872 dead and
+250 ingrowth. Plots 1–2 end in 2024; the other 22 end in 2025. Derived public
+tables are `kc_afrf_psp_plot_summary_2024.csv`,
+`kc_afrf_psp_transitions_2024.csv` and
+`kc_afrf_psp_transitions_2024_species.csv`. Raw tree records remain private.
+The 2024 interval is a temporal holdout for the 2013 calibration; see
+`notes/reports/kc-2024-remeasurement-validation.md`.
+
 ## Calibration v1
 
 `ws4/kc_psp_calibration/` fits species-group `BAIMULT` and `MORTMULT` to

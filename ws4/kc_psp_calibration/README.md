@@ -1,6 +1,7 @@
 # AFRF Knife Creek PSP FVS-BC calibration v1
 
-Status: **converged in sample; not validated out of sample**. The earlier
+Status: **converged in sample; 2024 temporal holdout supports total TPH but
+not independent-site validation**. The earlier
 1.0 m²/ha, 100 TPH and 0.5 cm limits were local placeholders and are not used
 as a gate. See `ws4/kc_psp_cv/` for the leave-one-block-out result; it does not
 transfer consistently, so these parameters are diagnostic only.
@@ -68,8 +69,13 @@ Trajectory diagnostics:
 
 ## Interpretation
 
-- The calibration is **not validated** out of sample. Do not use these
-  parameters to generate production ws4 transition curves.
+- The 2024 Marshall remeasurement is a temporal holdout on the same plots.
+  It reduces total-TPH bias from +201 to +24, but BA bias rises from +0.83 to
+  +1.33 m²/ha and QMD bias rises from −0.08 to +0.78 cm. See
+  `notes/reports/kc-2024-remeasurement-validation.md`.
+- The calibration is **not validated on an independent site**. Do not use
+  these parameters to generate production ws4 transition curves without an
+  independent test.
 - The uncalibrated FVS-BC run is the defensible structural baseline; observed
   PSP transitions are preferable where available.
 - Do not use `MORTMULT PL = 8` as a biological estimate; it is a bounded proxy.

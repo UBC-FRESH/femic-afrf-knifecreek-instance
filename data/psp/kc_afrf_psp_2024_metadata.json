@@ -1,0 +1,33 @@
+{
+  "source": "AFRF Knife Creek 2024/2025 Marshall plot remeasurement",
+  "workbook_sha256": "3c2ea0da327e1a41de883e7b335da33d506d9a1182a01a516d97285b51a5ff62",
+  "plots": 24,
+  "intervals": 2,
+  "rows": 24,
+  "measurement_years": {
+    "2025": 22,
+    "2024": 2
+  },
+  "area_ha": 0.05,
+  "large_dbh_cm": 37.5,
+  "assumptions": [
+    "The 2013 measurement is the pre-entry state; the 2024/2025 measurement is the end state.",
+    "Interior trees only (buffer B excluded).",
+    "DBH presence is the working live-tree indicator.",
+    "A 2013 tree absent from the 2024 live list is mortality; a new live tree is ingrowth.",
+    "Plot 1 and plot 2 end in 2024; the remaining plots end in 2025.",
+    "Each stem is expanded by 20 (0.05 ha plot)."
+  ],
+  "caveats": [
+    "Raw tree-level data are private and are not committed.",
+    "Some residual stems have no current DBH and are treated as non-live for metrics.",
+    "The 24-plot thinning experiment is not a whole-block sample.",
+    "No age or site index is assigned; the stands are uneven-aged."
+  ],
+  "files": [
+    "trees_long_2024.csv",
+    "kc_afrf_psp_plot_summary_2024.csv",
+    "kc_afrf_psp_transitions_2024.csv",
+    "kc_afrf_psp_transitions_2024_species.csv"
+  ]
+}
