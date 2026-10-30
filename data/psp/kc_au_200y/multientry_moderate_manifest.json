@@ -1,0 +1,39 @@
+{
+  "au_table": "data/kc_au/kc_au_table.csv",
+  "matches": "data/psp/kc_au_200y/kc_au_plot_matches.csv",
+  "regime": "GWM_MODERATE",
+  "horizon_years": 200,
+  "entries": [
+    [
+      4,
+      30
+    ],
+    [
+      7,
+      60
+    ],
+    [
+      10,
+      90
+    ],
+    [
+      13,
+      120
+    ],
+    [
+      16,
+      150
+    ],
+    [
+      19,
+      180
+    ]
+  ],
+  "aus": 6,
+  "curve_rows": 138,
+  "caveats": [
+    "Six entries, then residual growth to 200 years.",
+    "Residual x=0 uses ATBA, ATQMD, ATCCF and pre-cut minus removed TPH/volume.",
+    "No calibration or legal-compliance claim."
+  ]
+}

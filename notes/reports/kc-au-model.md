@@ -1,45 +1,47 @@
 # KC AU-aware ws4 model
 
-Status: AU model with corrected treatment logic and residual growth. Structural,
-not calibrated and not a legal-compliance product.
+Status: AU/HMZ multi-entry stage graph compiled. Structural, not calibrated and
+not a legal-compliance product.
 
 ## Model
 
 - Six AUs from `data/kc_au/kc_au_table.csv`.
-- States: AU x HMZ x natural/managed_low/managed_moderate.
+- States: AU x HMZ x SILV.
+- SILV: natural plus six managed entry stages (`M1`–`M6`).
+- Two regimes: `GWM_LOW`, `GWM_MODERATE`.
 - HMZ eligibility:
-  - M/A: GWM_LOW or GWM_MODERATE;
-  - L: GWM_LOW only;
+  - M/A: both regimes;
+  - L: low only;
   - U: no treatment.
-- One selection entry at age 30; managed states are re-enterable.
-- Natural curves are AU no-cut curves.
-- Managed curves start at the **post-treatment residual** stand
-  (`ATBA`, `ATQMD`, `ATCCF`, residual TPH and residual volume), not the pre-cut
-  stand.
-- Product curves are the cut yields from the AU selection runs.
+- Entry years: 30, 60, 90, 120, 150, 180.
+- Each managed stage transitions to the next stage; the final stage is terminal.
+- Managed x=0 is the post-entry residual from FVS `ATBA`, `ATQMD`, `ATCCF`,
+  pre-cut minus removed TPH and pre-cut minus removed volume.
+- Product curves are the cut yields at the next entry.
 
 Files:
 
-- `data/kc_ws4_recipe_au/forestmodel.xml`
-- `data/kc_ws4_recipe_au/fragments.csv`
-- `ws4/dataset_kc_au_v1`
-- `runbooks/build_kc_au_managed_200y.py`
-- `runbooks/build_kc_au_recipe.py`
+- `data/kc_ws4_recipe_au_stages/forestmodel.xml`
+- `data/kc_ws4_recipe_au_stages/fragments.csv`
+- `ws4/dataset_kc_au_stages_v1`
+- `runbooks/build_kc_au_multientry_200y.py`
+- `runbooks/build_kc_au_stage_recipe.py`
 
 ## Counts
 
 - 160 fragments/blocks
-- 30 tracks
-- 34 treatments: 22 GWM_LOW, 12 GWM_MODERATE
-- 180 feature rows
-- 46 product rows
+- 115 tracks
+- 102 treatments
+- 690 feature rows
+- 102 product rows
 - 6 AUs
 - 200-year feature horizon
 
 `ws4 validate` passes.
 
-## Not done yet
+## Limits
 
-- Even-flow convergence tuning is intentionally not part of this step.
-- The model still has two managed states per AU/HMZ, not a full BA/QMD
-  multi-entry residual-state graph.
+- Stage states are entry-sequence states, not a continuous BA/QMD state space.
+- Six entries only; the final stage is terminal.
+- No even-flow convergence tuning in this step.
+- No calibration or legal-compliance claim.
