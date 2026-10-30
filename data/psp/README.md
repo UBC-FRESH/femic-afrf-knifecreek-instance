@@ -40,8 +40,8 @@ These are regional IDF analogs for the Knife Creek model, not KC data.
 | File | Purpose |
 | --- | --- |
 | `idf_cariboo_psp_plots.csv` | Selected PSP plots and their expanded TPA, BA, QMD, age, BEC and TSA. |
-| `idf_cariboo_space_for_time_plots.csv` | 87 stratified IDF site states spanning 48–247 projected years and 5–52 m²/ha BA. |
-| `idf_cariboo_space_for_time_curves.csv` | 50-year no-cut FVS-BC curves for those site states. |
+| `idf_cariboo_space_for_time_plots.csv` | 132 stratified IDF site states spanning 44–248 projected years and 5.5–52 m²/ha BA, by BEC and leading species. |
+| `idf_cariboo_space_for_time_curves.csv` | 100-year no-cut FVS-BC curves for those site states. |
 | `idf_cariboo_ba_for_time.csv` | Experimental BA-asymptote and BA-for-time coordinates. |
 | `idf_cariboo_space_for_time_manifest.json` | Selection, design and caveats. |
 | `idf_cariboo_psp_plot_weibull_fits.csv` | Stable per-plot shifted-Weibull DBH fits. |

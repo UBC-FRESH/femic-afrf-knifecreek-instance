@@ -15,7 +15,7 @@ Usage::
       --raw-dir /path/to/faib_psp_csvs \
       --out-dir data/psp \
       --runtime-dir runtime/psp_space_for_time \
-      --max-states 120
+      --max-states 338
 """
 
 from __future__ import annotations
@@ -125,6 +125,25 @@ def _summary(
         & states["tph"].between(100.0, 5000.0)
         & states["PROJ_AGE_1"].between(20.0, 250.0)
     ].copy()
+    species_ba = trees.groupby(["CLSTR_ID", "VISIT_NUMBER", "SPECIES"])["ba"].sum().reset_index()
+    lead = (
+        species_ba.sort_values(["CLSTR_ID", "VISIT_NUMBER", "ba"], ascending=[True, True, False])
+        .drop_duplicates(["CLSTR_ID", "VISIT_NUMBER"])
+        .rename(columns={"SPECIES": "leading_species"})[
+            ["CLSTR_ID", "VISIT_NUMBER", "leading_species"]
+        ]
+    )
+    states = states.merge(lead, on=["CLSTR_ID", "VISIT_NUMBER"], how="left")
+    total_ba = states["ba"].replace(0, np.nan)
+    fd_ba = (
+        species_ba[species_ba["SPECIES"].astype(str).str.upper() == "FD"]
+        .groupby(["CLSTR_ID", "VISIT_NUMBER"])["ba"]
+        .sum()
+    )
+    states = states.merge(
+        fd_ba.rename("fd_ba").reset_index(), on=["CLSTR_ID", "VISIT_NUMBER"], how="left"
+    )
+    states["fd_share"] = (states["fd_ba"].fillna(0.0) / total_ba).fillna(0.0)
     states["age_bin"] = pd.cut(
         states["PROJ_AGE_1"], [0, 40, 60, 80, 100, 120, 150, 200, 250]
     ).astype(str)
@@ -138,8 +157,10 @@ def _sample(states: pd.DataFrame, max_states: int, seed: int) -> pd.DataFrame:
     """Stratify by age and BA and cap the number of FVS runs."""
     rng = np.random.default_rng(seed)
     pieces = []
-    for _, group in states.groupby(["age_bin", "ba_bin"], observed=True):
-        take = min(3, len(group))
+    for _, group in states.groupby(
+        ["BEC_SBZ", "leading_species", "age_bin", "ba_bin"], observed=True
+    ):
+        take = min(2, len(group))
         pieces.append(group.sample(n=take, random_state=rng))
     sample = pd.concat(pieces, ignore_index=True)
     if len(sample) > max_states:
@@ -211,9 +232,9 @@ def _keywords(age: float) -> list[Keyword]:
         Keyword("INVYEAR", ("0",)),
         Keyword("DESIGN", ("0", "1", "999", "1", "0", "1", "1")),
         Keyword("TIMEINT", ("", "10")),
-        Keyword("NUMCYCLE", ("5",)),
+        Keyword("NUMCYCLE", ("10",)),
         Keyword("RANNSEED", ("1",)),
-        Keyword("TREELIST", ("5",)),
+        Keyword("TREELIST", ("10",)),
         Keyword("PROCESS"),
         Keyword("STOP"),
     ]
@@ -225,7 +246,7 @@ def main() -> None:
     parser.add_argument("--raw-dir", type=Path, required=True)
     parser.add_argument("--out-dir", type=Path, required=True)
     parser.add_argument("--runtime-dir", type=Path, required=True)
-    parser.add_argument("--max-states", type=int, default=120)
+    parser.add_argument("--max-states", type=int, default=338)
     parser.add_argument("--seed", type=int, default=20261030)
     args = parser.parse_args()
     args.out_dir.mkdir(parents=True, exist_ok=True)
@@ -299,7 +320,7 @@ def main() -> None:
                 "state_id": state_id,
                 "site_id": group["site_id"].iloc[0],
                 "ba_start_m2_ha": ba0,
-                "ba_50_m2_ha": float(y[-1]),
+                "ba_100_m2_ha": float(y[-1]),
                 "asymptote_m2_ha": float(best[1]),
                 "rate_per_year": float(best[2]),
                 "relative_ba": float(ba0 / best[1]) if best[1] > 0 else np.nan,
@@ -312,8 +333,9 @@ def main() -> None:
         "raw_visit_states": 590,
         "sites": len(states),
         "sampled_sites": len(sample),
+        "bec_strata": int(states["BEC_SBZ"].nunique()),
         "fvs_runs": len(runs),
-        "horizon_years": 50,
+        "horizon_years": 100,
         "step_years": 10,
         "ba_for_time_states": len(ba_frame),
         "tsas": ["Williams Lake TSA", "100 Mile House TSA"],

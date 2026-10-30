@@ -3,14 +3,14 @@
 Status: **scaffold with space-for-time feature curves; product curves remain 30 years.**
 
 Generated from `ws4/dataset_kc_spatial_v3`, then feature curves were replaced by
-nearest-neighbour IDF Cariboo space-for-time FVS-BC curves (87 site states).
+nearest-neighbour IDF Cariboo space-for-time FVS-BC curves (132 site states).
 
 ## Tables
 
 - 160 blocks
 - 92 tracks
 - 49 treatments
-- 2,809 curve points
+- 5,109 curve points
 - 460 feature rows: 5 labels × 92 tracks
 - 49 product rows
 - 6 account rows
@@ -29,7 +29,7 @@ Feature labels:
 
 ## Horizon
 
-- Feature curves: 0–50 years at 10-year steps.
+- Feature curves: 0–100 years at 10-year steps.
 - Product curves: existing 0–30 year GWM treatment runs.
 
 The horizons differ. Do not present this as a 300-year matrix.

@@ -35,11 +35,11 @@ uneven-aged; do not treat `F_AGE` as a plot age.
 
 - `tracks/H/` matrix: 160 blocks, 92 tracks, 49 treatments, 2,809 curve points
   and 460 feature rows; `ws4 ingest` and `ws4 validate` pass. Feature curves
-  are 50-year regional space-for-time runs; product curves remain 30-year.
+  are 100-year regional space-for-time runs; product curves remain 30-year.
 
 ## Not built yet
 
-- 300-year curves (features are 0–50 years; products 0–30 years)
+- 300-year curves (features are 0–100 years; products 0–30 years)
 - product and feature accounts
 - topology
 - roads

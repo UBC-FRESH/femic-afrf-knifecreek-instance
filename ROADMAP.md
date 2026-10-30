@@ -287,7 +287,7 @@ because no valid example, schema or compiler is available; see
 `notes/reference/patchworks-forestmodelxml-format-spike.md`. Do not claim recipe
 parity until that changes.
 
-P3.3 status: met with limits. The H feature layer uses 50-year IDF Cariboo
+P3.3 status: met with limits. The H feature layer uses 100-year IDF Cariboo
 space-for-time curves for five labels; product curves remain 30 years. The H
 matrix ingests and validates. Full product/feature accounts, roads, topology,
 pin and ForestModelXML remain open. The feature and product horizons differ and

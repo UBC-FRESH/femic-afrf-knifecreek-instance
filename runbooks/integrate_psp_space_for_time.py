@@ -146,7 +146,7 @@ def main() -> None:
     manifest.update(
         {
             "status": "matrix-scaffold-space-for-time-features",
-            "feature_horizon_years": 50,
+            "feature_horizon_years": int(curves["year"].max()),
             "product_horizon_years": 30,
             "curves": int(all_curves["CURVE"].nunique()),
             "curve_points": len(all_curves),
@@ -159,7 +159,7 @@ def main() -> None:
             "caveats": [
                 "Feature curves are regional FAIB IDF space-for-time FVS-BC runs.",
                 "Product curves remain the existing 30-year GWM treatment runs.",
-                "Feature and product horizons differ (50 vs 30 years).",
+                "Feature and product horizons differ (100 vs 30 years).",
                 "Space-for-time is not a growth chronology and not a KC CFI.",
                 "No large-tree-BA feature is claimed from this panel.",
             ],

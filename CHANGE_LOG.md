@@ -407,3 +407,9 @@ status and the GitHub issue comments.
   BA-asymptote table; 50 years is too short to treat it as carrying capacity.
   H feature curves were regenerated from the corrected panel and still ingest
   and validate.
+- P3.3d stratified space-for-time panel: expanded the public FAIB panel to 132
+  first-measurement site states stratified by BEC, leading species, age and BA.
+  Ages 44–248, BA 5.5–52.1; 100-year no-cut FVS-BC curves. H feature curves
+  were regenerated at 100 years; products remain 30 years. The BA asymptote
+  table remains experimental because even 100 years does not reliably reach
+  an asymptote. `ws4 ingest` and `ws4 validate` pass.

@@ -4,7 +4,7 @@
   "tracks": 92,
   "treatments": 49,
   "curves": 509,
-  "curve_points": 2809,
+  "curve_points": 5109,
   "features": 460,
   "products": 49,
   "horizon_years": 30,
@@ -13,11 +13,11 @@
   "caveats": [
     "Feature curves are regional FAIB IDF space-for-time FVS-BC runs.",
     "Product curves remain the existing 30-year GWM treatment runs.",
-    "Feature and product horizons differ (50 vs 30 years).",
+    "Feature and product horizons differ (100 vs 30 years).",
     "Space-for-time is not a growth chronology and not a KC CFI.",
     "No large-tree-BA feature is claimed from this panel."
   ],
-  "feature_horizon_years": 50,
+  "feature_horizon_years": 100,
   "product_horizon_years": 30,
   "feature_curves": 460,
   "feature_rows": 460,
