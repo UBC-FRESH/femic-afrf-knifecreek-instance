@@ -494,3 +494,17 @@ status and the GitHub issue comments.
   `notes/reports/p4-closeout.md`. The comparison reports residual BA/QMD/TPH and
   canopy CCF, states that large-tree/reserve/seral/species indicators are
   unavailable, and keeps calibration and legal compliance out of the claims.
+
+## 2026-10-30
+
+- P5 activated under parent issue #76, branch `feature/p5-release`.
+- P5.1 release notes: added `notes/reports/p5-release-notes.md` with the
+  structural release description, model counts, verified surfaces, scenario
+  snapshot, run commands and the known-gaps list. Tagging remains gated on
+  maintainer approval.
+
+- P5.3 clean-checkout verification: cloned `feature/p5-release` at `41b2ada`,
+  ran the dashboard (green), built the ws4 dataset and validated it. The clean
+  build has 160 fragments/blocks, 19 tracks, 19 treatments, 6,661 curve points,
+  114 features, 38 products and 8 accounts. `fresh_fvsbc` is not installed, so
+  the FVS-BC pilot is recorded as a release prerequisite, not a completed run.

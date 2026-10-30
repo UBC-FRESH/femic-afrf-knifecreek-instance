@@ -1,0 +1,17 @@
+clean-checkout HEAD: 41b2ada1101faa40a423250bde981e0bf814d956
+dashboard:
+GATE                STATUS   SECONDS
+lint                GREEN       0.09
+format              GREEN       0.08
+types               GREEN       0.22
+tests               GREEN       6.79
+validator           GREEN       0.64
+docs                GREEN       0.63
+
+OVERALL: GREEN. Every gate passed.
+ws4 build:
+Built dataset → /tmp/opencode/kc-clean-out
+ws4 validate:
+Dataset is valid → /tmp/opencode/kc-clean-out
+fresh_fvsbc:
+ModuleNotFoundError No module named 'fresh_fvsbc'
