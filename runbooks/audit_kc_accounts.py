@@ -49,6 +49,11 @@ def main() -> None:
     feature_curves = set(tables["features"]["curve_id"].astype(int))
     product_curves = set(tables["products"]["curve_id"].astype(int))
     target_accounts = {path.name: _target_accounts(path) for path in args.targets}
+    pairs = {
+        account: "feature." + account[len("product.") :]
+        for account in accounts
+        if account.startswith("product.")
+    }
 
     issues: list[str] = []
     for label in sorted(features - accounts):
@@ -57,6 +62,9 @@ def main() -> None:
         issues.append(f"product label has no account: {label}")
     for label in sorted(feature_curves - curve_ids):
         issues.append(f"feature curve is missing: {label}")
+    for flow, level in sorted(pairs.items()):
+        if level not in accounts:
+            issues.append(f"product flow has no matching level account: {flow} -> {level}")
     for label in sorted(product_curves - curve_ids):
         issues.append(f"product curve is missing: {label}")
     for target_file, names in target_accounts.items():
@@ -68,6 +76,7 @@ def main() -> None:
         "accounts": len(accounts),
         "features": len(features),
         "products": len(products),
+        "product_level_pairs": pairs,
         "curves": len(curve_ids),
         "targets": target_accounts,
         "issues": issues,
