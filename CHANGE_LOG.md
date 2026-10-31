@@ -606,7 +606,8 @@ status and the GitHub issue comments.
   (`runbooks/audit_afrf_lidar_coverage.py`,
   `data/lidar/afrf_lidar_coverage_audit.json`). Knife Creek has 56 readable
   files intersecting; Gavin Lake has 11 2013 LAS files over about 448 ha.
-  The 2009 FUSION LIDARBIN is valid data; it was processed with FUSION/LDV for Gavin Lake and is not a standard LAS file.
+  The 2009 FUSION LIDARBIN is valid data; it was processed with FUSION/LDV for
+  Gavin Lake and is not a standard LAS file.
 
 - Added the Knife Creek block piece-size table
   (`data/lidar/kc_2024/block_piece_size.csv`) and a validated FHOPS tree
@@ -620,5 +621,14 @@ status and the GitHub issue comments.
   (`notes/reference/tree-level-inventory-fhops-deep-dive.md`) and the generic
   FHOPS tree-inventory exporter (`runbooks/export_fhops_tree_inventory.py`).
   The note records the available FHOPS tree contract, stem/bucking, tree
-  simulation, tree replay, classic productivity/costing, and the absence of a
-  multi-machine 4D tree-lab package in the current checkout.
+  simulation, tree replay, classic productivity/costing, and the Tree Lab
+  sandbox gap in this checkout.
+
+- Corrected the Tree Lab record from the maintainer handoff. Tree Lab is an
+  unmerged sandbox on `public-demo` (`sandbox/tree_lab`, commit `7c66ce9f`),
+  with Studio on `phase21-scenario-studio` (`4a96f9a6`). It adds
+  `fhops tree system` and `fhops tree scene` plus a 4D machine/truck/deck
+  viewer. The live demo has four synthetic cases; its `afrf-gavin` case is 900
+  synthetic trees on a 6.91 ha placeholder, not the 2009 Gavin inventory. The
+  `phase18` checkout cannot run it as-is. See
+  `notes/reference/tree-level-inventory-fhops-deep-dive.md`.

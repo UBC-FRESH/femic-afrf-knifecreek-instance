@@ -11,10 +11,11 @@ Status: evidence and integration design
 - The Gavin 2025 VRI starting layer is built, but the compiled legacy matrix
   still uses `AGE_2019`. The area-weighted 2025 VRI age is 125.3 years vs 99.4
   years for the legacy ages advanced to 2025. A real rebuild is required.
-- FHOPS has a validated tree-inventory contract, reference stem/bucking, classic
-  regression productivity and costing, single-machine tree simulation, and
-  schedule-coupled tree replay. It does **not** contain a multi-machine 4D
-  digital-twin package called "tree lab" in this checkout.
+- The released FHOPS checkout has a validated tree-inventory contract, reference
+  stem/bucking, classic regression productivity and costing, single-machine tree
+  simulation, and schedule-coupled tree replay. The multi-machine 4D layer is
+  the unmerged **Tree Lab** sandbox, which adds `fhops tree system` and
+  `fhops tree scene`; it is not in this `phase18` checkout.
 - The LiDAR canopy tree density is too low for the Lahrsen feller-buncher
   observed range (mean 78 TPH vs 205-3,044 TPH). LiDAR canopy trees are not
   total stems. Use VRI/PSP total density for classic productivity and LiDAR for
@@ -22,8 +23,8 @@ Status: evidence and integration design
 
 ## LiDAR coverage audit
 
-`runbooks/audit_afrf_lidar_coverage.py` checked every standard LAS/LAZ and
-GeoTIFF product in the OneDrive payload.
+`runbooks/audit_afrf_lidar_coverage.py` checked every LAS/LAZ, FUSION LIDARBIN,
+and GeoTIFF product in the OneDrive payload.
 
 | Block | Readable files intersecting | Overlap (double-counted) | Coverage |
 | --- | ---: | ---: | --- |
@@ -113,8 +114,9 @@ FHOPS has:
   slope, obstacles, and nearest/strip/TSP patterns;
 - schedule replay (`fhops tree replay`) and glTF/GLB tree-scene export.
 
-These are deterministic reference execution layers, not a calibrated
-multi-machine 4D process simulation.
+These are deterministic reference execution layers. The Tree Lab branch adds
+multi-machine event simulation (`fhops tree system`) and a scene/runner layer on
+top of them; it is not part of this checkout's release contract.
 
 ### LiDAR operability
 
@@ -123,13 +125,32 @@ support, classifies ground/cable/helicopter terrain, checks the current system,
 and reports advisory move-in, landing, and road multipliers. It does not
 silently rewrite systems or apply financial multipliers.
 
-### The missing "tree lab" 4D layer
+### Tree Lab 4D sandbox
 
-No `tree lab`, `treelab`, or digital-twin package was found in the workspace or
-the UBC-FRESH GitHub organisation. The closest available tools are FHOPS
-`tree simulate`, `tree replay`, and tree-scene export. If the new tree-lab
-package exists on an unshared branch or private repository, it needs to be
-provided before it can be integrated.
+Tree Lab is real, but it is an **unmerged sandbox application**, not a released
+FHOPS package. The authoritative handoff identifies:
+
+- `sandbox/tree_lab/` on the `public-demo` branch (`7c66ce9f`): FastAPI runner,
+  4D timeline, machine/truck/deck animation, and 3D viewer;
+- `sandbox/studio/` on `phase21-scenario-studio` (`4a96f9a6`): interactive
+  scenario editing, derived cases, and run replay;
+- runner commands: `fhops tree system` for multi-machine event simulation, then
+  `fhops tree scene` for deterministic glTF/GLB assets.
+
+The live public demo is `https://fhops.01101.dev/sandbox-v20261031i/`. It
+currently exposes four synthetic cases. Its `afrf-gavin` case is 900 synthetic
+trees on a 6.91 ha placeholder rectangle at 196 m3/ha; it is **not** the 1.1
+million-tree 2009 Gavin inventory.
+
+Our `phase18` FHOPS checkout does not contain `fhops tree system`, so Tree Lab
+cannot run against it as-is. Integration needs one of:
+
+- a shared worktree/bundle of `public-demo` and `phase21-scenario-studio`; or
+- those branches pushed to a shared remote; then a real case package built from
+  the Gavin 2009 inventory and validated with the Tree Lab runner.
+
+The current public demo is demonstration-only. It is not an operational,
+financial, or regulatory tool.
 
 ## Integration design
 
@@ -137,8 +158,9 @@ provided before it can be integrated.
 
 - Knife Creek: 2024 LiDAR trees + eight measured tree maps; species unknown;
   DBH height-allometry; crown radius available.
-- Gavin Lake: partial 2013 LiDAR trees + 2025 VRI; species from VRI; total
-  density from VRI/PSP.
+- Gavin Lake: full 2009 FUSION LIDARBIN tree inventory + 2025 VRI; species from
+  VRI; total density from VRI/PSP. The partial 2013 inventory is an independent
+  check.
 - Both: FHOPS tree-inventory contract with review status `not_reviewed` until a
   field reviewer signs off.
 
@@ -164,8 +186,9 @@ Pin the block tree inventory in a FHOPS scenario, then run:
 - `fhops tree replay` for a schedule-coupled tree consumption test;
 - tree-scene export for a 3D review.
 
-This is the maximum tree-level detail available today. The 4D multi-machine
-layer is not present.
+That is the maximum detail in the `phase18` checkout. The Tree Lab branch adds
+`fhops tree system` for multi-machine events plus the 4D viewer and Studio
+runner.
 
 ### 4. Fresh-FVSBC creative silviculture for Gavin Lake
 
@@ -186,15 +209,15 @@ This is a new state library, not an age-column edit.
 
 - KC classic productivity table from `block_piece_size.csv` and VRI density.
 - KC FHOPS tree-inventory pilot (block 78 validated).
-- Gavin partial FHOPS tree-inventory pilot (fragment 323 validated).
+- Gavin 2009 FHOPS tree-inventory pilot (fragment 323, 413 trees, validated).
 - Gavin 2025 VRI starting layer.
 - FHOPS tree stems/simulate/replay pilots once a scenario pin is added.
+- A real Tree Lab case package once its worktrees or shared remote are available.
 
 ## What needs new work or data
 
-- Full Gavin LiDAR coverage (2019/2024 or readable 2009) for a complete tree
-  inventory.
 - A reviewed total-stem density source for both blocks.
-- The tree-lab 4D package, if it is to be used.
+- Access to the Tree Lab worktrees or a shared remote; then a real Gavin case
+  built from the 2009 inventory.
 - GL tree lists and FVS-BC treatment definitions for creative silviculture.
 - A full GL state-library rebuild using 2025 VRI and 2025/2026 start time.
