@@ -60,18 +60,43 @@ def _cluster_peaks(points: list[tuple[float, float]], radius_m: float) -> list[l
     return list(groups.values())
 
 
-def _plot_metrics(plot_id: int, values: np.ndarray, transform: Affine) -> dict[str, object]:
-    """Compute clump and opening proxies from one masked CHM array."""
-    valid = np.isfinite(values) & (values >= 0) & (values < 200)
-    canopy = valid & (values >= 5.0)
-    peaks = (values == ndimage.maximum_filter(values, size=5)) & canopy
+def _detect_peaks(
+    values: np.ndarray,
+    transform: Affine,
+    window: int,
+    minimum_height: float,
+    nms_radius_m: float,
+) -> list[tuple[float, float]]:
+    """Return local-maxima canopy points after non-maximum suppression."""
+    valid = np.isfinite(values) & (values >= minimum_height) & (values < 200)
+    peaks = (values == ndimage.maximum_filter(values, size=window)) & valid
     labels, count = ndimage.label(peaks, structure=np.ones((3, 3)))
     centers = ndimage.center_of_mass(peaks, labels, range(1, count + 1))
-    points = []
+    candidates = []
     for row, col in centers:
         x, y = transform * (col + 0.5, row + 0.5)
-        points.append((x, y))
-    clumps = _cluster_peaks(points, radius_m=3.0)
+        candidates.append((x, y, float(values[int(row), int(col)])))
+    candidates.sort(key=lambda item: item[2], reverse=True)
+    kept = []
+    for x, y, height in candidates:
+        if all((x - kx) ** 2 + (y - ky) ** 2 > nms_radius_m**2 for kx, ky, _ in kept):
+            kept.append((x, y, height))
+    return [(x, y) for x, y, _ in kept]
+
+
+def _plot_metrics(
+    plot_id: int,
+    values: np.ndarray,
+    transform: Affine,
+    window: int,
+    minimum_height: float,
+    nms_radius_m: float,
+    clump_radius_m: float,
+) -> dict[str, object]:
+    """Compute clump and opening proxies from one masked CHM array."""
+    valid = np.isfinite(values) & (values >= 0) & (values < 200)
+    points = _detect_peaks(values, transform, window, minimum_height, nms_radius_m)
+    clumps = _cluster_peaks(points, radius_m=clump_radius_m)
     sizes = [len(group) for group in clumps]
     legal = [size for size in sizes if 4 <= size <= 10]
 
@@ -100,6 +125,10 @@ def main() -> None:
     parser.add_argument("--plots", type=Path, required=True)
     parser.add_argument("--chm", type=Path, required=True)
     parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("--window", type=int, default=5)
+    parser.add_argument("--min-height", type=float, default=5.0)
+    parser.add_argument("--nms-radius", type=float, default=1.5)
+    parser.add_argument("--clump-radius", type=float, default=3.0)
     args = parser.parse_args()
     plots = gpd.read_file(args.plots)
     rows = []
@@ -108,7 +137,17 @@ def main() -> None:
         for row in plots.itertuples(index=False):
             values, _ = mask(source, [row.geometry], crop=True, filled=False)
             array = values[0].astype(float).filled(np.nan)
-            rows.append(_plot_metrics(int(row.PLOT_ID), array, source.transform))
+            rows.append(
+                _plot_metrics(
+                    int(row.PLOT_ID),
+                    array,
+                    source.transform,
+                    args.window,
+                    args.min_height,
+                    args.nms_radius,
+                    args.clump_radius,
+                )
+            )
     result = pd.DataFrame(rows).sort_values("plot_id")
     args.out.parent.mkdir(parents=True, exist_ok=True)
     result.to_csv(args.out, index=False)

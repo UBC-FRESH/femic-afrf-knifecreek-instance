@@ -131,6 +131,12 @@ the eight mapped plots contain 6, 5, 1, 2, 5, 5, 3 and 4 legal 4–10-tree group
 plus larger merged groups. Legal clumps do exist in the measured stands; the
 LiDAR proxy needs calibration, not rejection.
 
+The 2019 CHM local-maxima calibration against DBH >=15 cm trees reaches a mean
+F1 of 0.67 (window 3, minimum height 3 m, NMS 1.5 m; 69 detected tops vs 56.5
+observed). It still does not reproduce the tree-map clump counts. The eight tree
+maps remain the empirical clump baseline; the 2013 LAS is the next calibration
+input.
+
 ## Immediate next steps
 
 1. Calibrate 2019 LiDAR tree detection against the eight Marshal tree maps and
