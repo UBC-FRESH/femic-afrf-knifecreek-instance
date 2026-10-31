@@ -308,6 +308,46 @@ Please provide, or point to, the following AFRF records:
 9. The current approved management plan or order that governs each block.
 10. Publication permission for each layer: public, derived, or private-only.
 
+## Public supplementary data
+
+Two public BC sources fill part of the gap. They are candidate references, not
+AFRF records.
+
+### Major timber processing facilities
+
+`runbooks/build_afrf_mill_candidates.py` reads the BC Major Timber Processing
+Facilities feature layer (OGL-BC) and selects mills within 100 km of the Knife
+Creek or Gavin Lake block centroids. The result is
+`data/mills/afrf_mill_candidates.csv`: 20 candidate rows over 16 mills, with
+location, product class, status, and estimated annual capacity.
+
+The nearest operational mills include Williams Lake lumber, plywood, veneer,
+pellet, and log-home facilities, plus 100 Mile House lumber and log-home
+facilities and Quesnel lumber, plywood, veneer, chip, and pulp facilities. The
+exact distance table is in the CSV.
+
+The layer gives capacity, not demand. It also does not give accepted log sorts.
+The `candidate_sort` column is inferred from the mill product class and is
+marked `sort_confirmed = False`. It is a screening label, not an eligibility
+rule.
+
+### Interior log market and grades
+
+`runbooks/build_bc_interior_price_reference.py` transcribes:
+
+- the BC Interior Log Market Report for June-August 2026; and
+- the BC Timber Scaling Manual Chapter 9 interior grade codes.
+
+`data/log_prices/bc_interior_log_market_2026-08.csv` gives species-group and
+sort volumes and average prices in CAD/m3. It is a regional market average, not
+an AFRF sales record and not a grade-by-grade price matrix.
+
+`data/log_prices/bc_interior_grade_codes.csv` records the five interior grades:
+Z (firmwood reject), 6 (undersized), 1 (premium sawlog), 2 (sawlog), and 4
+(lumber reject). These are not the coastal D/F/H/I/J/U/X/Y grades used by the
+current FEMIC `log-grades` recipe. A crosswalk is a required decision, not an
+assumption.
+
 ## What can proceed without the missing data
 
 - The 2007 plan extraction and source register are complete.

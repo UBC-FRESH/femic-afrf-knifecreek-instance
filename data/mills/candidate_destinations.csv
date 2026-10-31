@@ -1,0 +1,21 @@
+destination,mill_id,company,locality,product_code,candidate_sort,capacity_value,capacity_unit,status
+destination.MILL_112_PLY,112,West Fraser Mills Ltd.,Quesnel,PLY,peeler,210.24,million_sq_ft_3_8_in,Op
+destination.MILL_112_VNR,112,West Fraser Mills Ltd.,Quesnel,VNR,peeler,142.08,million_sq_ft_3_8_in,Op
+destination.MILL_497_PLP,497,West Fraser and Mercer (Cariboo Pulp & Paper),Quesnel,PLP,pulpwood,287.73,thousand_tonnes,Op
+destination.MILL_113_CHP,113,West Fraser Mills Ltd.,Quesnel,CHP,pulpwood,,unknown,Op
+destination.MILL_113_LBR,113,West Fraser Mills Ltd.,Quesnel,LBR,sawlog,462.72,million_board_feet_lumber,Op
+destination.MILL_553_PLP,553,West Fraser Mills Ltd. (Quesnel River Pulp Company),Quesnel,PLP,pulpwood,360.87,thousand_tonnes,Op
+destination.MILL_113_PNL,113,West Fraser Mills Ltd.,Quesnel,PNL,peeler,222.52,million_sq_ft_3_8_in,Op
+destination.MILL_474_LGH,474,Pioneer Log Homes of BC,Williams Lake,LGH,house_log,,unknown,Op
+destination.MILL_948_PLT,948,Drax,Williams Lake,PLT,pulpwood,165.41,thousand_tonnes,Op
+destination.MILL_103_LBR,103,Tolko Industries Ltd.,Williams Lake,LBR,sawlog,363.84000000000003,million_board_feet_lumber,Op
+destination.MILL_105_PLY,105,West Fraser Mills Ltd.,Williams Lake,PLY,peeler,179.28,million_sq_ft_3_8_in,Op
+destination.MILL_105_VNR,105,West Fraser Mills Ltd.,Williams Lake,VNR,peeler,144.48,million_sq_ft_3_8_in,Op
+destination.MILL_107_LBR,107,Tolko Industries Ltd.,Williams Lake,LBR,sawlog,165.6,million_board_feet_lumber,Op
+destination.MILL_114_LBR,114,West Fraser Mills Ltd.,Williams Lake,LBR,sawlog,172.8,million_board_feet_lumber,Op
+destination.MILL_750_LBR,750,Sigurdson Forest Products Ltd.,Williams Lake,LBR,sawlog,72.0,million_board_feet_lumber,DNR
+destination.MILL_694_LGH,694,Canada's Log People Inc.,100 Mile House,LGH,house_log,,unknown,Op
+destination.MILL_693_LGH,693,Sitka Log Homes Inc.,100 Mile House,LGH,house_log,,unknown,DNR
+destination.MILL_95_LBR,95,West Fraser Mills Ltd.,100 Mile House,LBR,sawlog,172.32,million_board_feet_lumber,Op
+destination.MILL_697_LGH,697,Calija Log & Timber Homes Ltd.,100 Mile House,LGH,house_log,,unknown,DNR
+destination.MILL_733_LGH,733,DBD Log Homes,100 Mile House,LGH,house_log,,unknown,Op

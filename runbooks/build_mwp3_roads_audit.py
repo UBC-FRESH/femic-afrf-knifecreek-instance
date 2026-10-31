@@ -47,7 +47,8 @@ TABLE37 = [
 ]
 
 TABLE38 = [
-    # surface_width, design_speed, sight, radius, fav_sustained, fav_short, adv_sustained, adv_short, switchbacks
+    # surface_width, design_speed, sight, radius, favourable sustained,
+    # favourable short pitch, adverse sustained, adverse short pitch, switchbacks
     ("4", 20, 40, 15, 16, 18, 9, 12, 8),
     ("5-6", 30, 65, 35, 12, 14, 8, 10, 8),
     ("", 40, 95, 65, 12, 14, 8, 10, 8),
@@ -179,7 +180,9 @@ def _write_table38(out_dir: Path) -> None:
                 "table": "38",
                 "page": 110,
                 "pdf_page": 118,
-                "source": "AFRF Management and Working Plan #3, adapted from BC Ministry of Forests 2002",
+                "source": (
+                    "AFRF Management and Working Plan #3, adapted from BC Ministry of Forests 2002"
+                ),
             }
         )
     pd.DataFrame(rows).to_csv(out_dir / "mwp3_table38_specs.csv", index=False)
@@ -249,7 +252,9 @@ def _write_gap_register(out_dir: Path) -> None:
             "category": "road geometry",
             "item": "AFRF road centerlines",
             "status": "missing",
-            "evidence": "AFRF.zip AFRF/roads/ is empty; 02_build_roads.bsh references Roads_PW_v2.shp",
+            "evidence": (
+                "AFRF.zip AFRF/roads/ is empty; 02_build_roads.bsh references Roads_PW_v2.shp"
+            ),
             "consequence": "No route network can be built from the legacy archive",
             "request": "Roads_PW_v2.shp or current equivalent",
         },
@@ -258,8 +263,13 @@ def _write_gap_register(out_dir: Path) -> None:
             "category": "road geometry",
             "item": "Existing and planned road classification",
             "status": "partial",
-            "evidence": "MWP #3 Table 37 and Appendix 11 give lengths and classes, but the maps are schematic",
-            "consequence": "Length can be reconciled, but segment-level class and status cannot be assigned",
+            "evidence": (
+                "MWP #3 Table 37 and Appendix 11 give lengths and classes, but the maps "
+                "are schematic"
+            ),
+            "consequence": (
+                "Length can be reconciled, but segment-level class and status cannot be assigned"
+            ),
             "request": "AFRF road inventory with class, surface, status, and right-of-way width",
         },
         {
@@ -267,7 +277,10 @@ def _write_gap_register(out_dir: Path) -> None:
             "category": "road cost",
             "item": "Build, maintenance, haul, landing, and deactivation rates",
             "status": "missing",
-            "evidence": "MWP #3 gives only the $75,000/year per 1% productive-land proxy and Table 38 specifications",
+            "evidence": (
+                "MWP #3 gives only the $75,000/year per 1% productive-land proxy and "
+                "Table 38 specifications"
+            ),
             "consequence": "Route cost accounts cannot use AFRF rates",
             "request": "AFRF road cost workbook or recent contract records",
         },
@@ -278,23 +291,33 @@ def _write_gap_register(out_dir: Path) -> None:
             "status": "missing",
             "evidence": "AFRF_H.pin has useRoutes = false; AFRF/roads/ is empty",
             "consequence": "No block-to-network linkage or destination table",
-            "request": "vertices, segments, destinations, and linkages, or the inputs to rebuild them",
+            "request": (
+                "vertices, segments, destinations, and linkages, or the inputs to rebuild them"
+            ),
         },
         {
             "gap_id": "G05",
             "category": "mills",
             "item": "Mill register",
-            "status": "missing",
-            "evidence": "MWP #3 names interior sawmills and a log broker, but no mill list or capacities",
-            "consequence": "Destinations and eligibility cannot be assigned",
-            "request": "Mill name, location, operator, capacity, status, accepted species and sorts",
+            "status": "partial",
+            "evidence": (
+                "The public BC Major Timber Processing Facilities layer gives location, "
+                "product class, status, and estimated capacity; it does not give "
+                "accepted sorts"
+            ),
+            "consequence": (
+                "A candidate register exists, but eligibility and demand are not confirmed"
+            ),
+            "request": "Confirm current mill status, capacity, and accepted species and sorts",
         },
         {
             "gap_id": "G06",
             "category": "mills",
             "item": "Accepted log sorts and mill demand",
             "status": "missing",
-            "evidence": "No sort specifications or delivery constraints in the archive or OneDrive payload",
+            "evidence": (
+                "No sort specifications or delivery constraints in the archive or OneDrive payload"
+            ),
             "consequence": "Product eligibility and delivery constraints cannot be modelled",
             "request": "Mill sort specifications, minimum volumes, and current demand",
         },
@@ -302,10 +325,17 @@ def _write_gap_register(out_dir: Path) -> None:
             "gap_id": "G07",
             "category": "log prices",
             "item": "Interior species-by-grade price list",
-            "status": "missing",
-            "evidence": "FEMIC ships coastal 2025 matrices; MWP #3 gives only a 1988-2005 value/cost trend",
-            "consequence": "Value products would use a coastal or historical price basis",
-            "request": "Dated interior log price list or AFRF sales/scaling records",
+            "status": "partial",
+            "evidence": (
+                "The public BC Interior Log Market Report gives species-group and sort "
+                "averages for June-August 2026; it is not an AFRF sales record or a "
+                "grade-by-grade matrix"
+            ),
+            "consequence": (
+                "A regional price reference exists, but AFRF grade and sort calibration "
+                "is still missing"
+            ),
+            "request": "AFRF sales/scaling records and a documented species and grade crosswalk",
         },
         {
             "gap_id": "G08",
@@ -321,7 +351,9 @@ def _write_gap_register(out_dir: Path) -> None:
             "category": "harvest systems",
             "item": "Block-level system and prescription records",
             "status": "partial",
-            "evidence": "MWP #3 gives system classes and slope thresholds; actual block records are absent",
+            "evidence": (
+                "MWP #3 gives system classes and slope thresholds; actual block records are absent"
+            ),
             "consequence": "System classes can be inferred only from slope and access",
             "request": "Harvest-system records, prescriptions, and operational constraints",
         },
@@ -339,7 +371,9 @@ def _write_gap_register(out_dir: Path) -> None:
             "category": "road geometry",
             "item": "Knife Creek public road completeness",
             "status": "partial",
-            "evidence": "Public layer has 44 sections over 59.6 km; MWP #3 records 86.2 km existing",
+            "evidence": (
+                "Public layer has 44 sections over 59.6 km; MWP #3 records 86.2 km existing"
+            ),
             "consequence": "The public layer cannot be treated as the full AFRF network",
             "request": "AFRF road inventory or field-verified centerlines",
         },
@@ -357,7 +391,9 @@ def _write_gap_register(out_dir: Path) -> None:
             "category": "reuse",
             "item": "TSA23 mill and cost values",
             "status": "not transferable",
-            "evidence": "TSA23 route fixture has three mills and C5-class costs; no AFRF provenance",
+            "evidence": (
+                "TSA23 route fixture has three mills and C5-class costs; no AFRF provenance"
+            ),
             "consequence": "TSA23 numbers cannot be used as AFRF values",
             "request": "AFRF-specific mills, costs, and eligibility",
         },
@@ -366,7 +402,10 @@ def _write_gap_register(out_dir: Path) -> None:
             "category": "log grades",
             "item": "TSA23 compiled log-grade products",
             "status": "not demonstrated",
-            "evidence": "compiled_ft_econ, compiled_ft_econ_bc, and compiled_sf_risk contain no Logs_Grade labels",
+            "evidence": (
+                "compiled_ft_econ, compiled_ft_econ_bc, and compiled_sf_risk contain no "
+                "Logs_Grade labels"
+            ),
             "consequence": "The TSA23 configuration is a template, not a proven compiled result",
             "request": "A compiled AFRF log-grade proof with an interior matrix",
         },
@@ -383,9 +422,7 @@ def main() -> None:
 
     actual_sha256 = _sha256(args.pdf)
     if actual_sha256 != EXPECTED_SHA256:
-        raise SystemExit(
-            f"unexpected MWP #3 SHA-256: {actual_sha256}; expected {EXPECTED_SHA256}"
-        )
+        raise SystemExit(f"unexpected MWP #3 SHA-256: {actual_sha256}; expected {EXPECTED_SHA256}")
 
     doc = pymupdf.open(args.pdf)
     if len(doc) != EXPECTED_PAGES:
@@ -440,17 +477,20 @@ def main() -> None:
         },
         "caveats": [
             "Appendix 11 maps are schematic: scale bar and north arrow, no coordinate grid.",
-            "The plan does not contain mill capacities, accepted sorts, or a road unit-cost schedule.",
+            (
+                "The plan does not contain mill capacities, accepted sorts, or a road "
+                "unit-cost schedule."
+            ),
             "The plan is not a legal access determination.",
         ],
-        "derived_tables": sorted(
-            path.name for path in out_dir.glob("mwp3_*.csv")
-        ),
+        "derived_tables": sorted(path.name for path in out_dir.glob("mwp3_*.csv")),
         "context_images": sorted(path.name for path in context_dir.glob("*.*")),
     }
     (out_dir / "source_manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
     print(f"source_manifest={out_dir / 'source_manifest.json'}")
-    print(f"context_images={len(manifest['context_images'])} tables={len(manifest['derived_tables'])}")
+    print(
+        f"context_images={len(manifest['context_images'])} tables={len(manifest['derived_tables'])}"
+    )
 
 
 if __name__ == "__main__":

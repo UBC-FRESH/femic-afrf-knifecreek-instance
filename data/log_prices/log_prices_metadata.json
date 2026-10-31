@@ -1,0 +1,24 @@
+{
+  "price_source": "BC Interior Log Market Report",
+  "price_url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/forestry/timber-pricing/interior-timber-pricing/interior-log-market-reports/3mi_aug_26.pdf",
+  "price_sha256": "e10b2d4bf3bbce6f247a34045bdc27fa0de0d6a9ff3d7bbe90d65c3e2a50f495",
+  "price_period": "2026-06-01/2026-08-31",
+  "price_compiled": "2026-09-24",
+  "price_units": "CAD/m3",
+  "grade_source": "BC Timber Scaling Manual, Chapter 9, Interior Grading",
+  "grade_url": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/forestry/timber-pricing/harvest-billing/timber-scaling/scale_ch9.pdf",
+  "grade_sha256": "0c9149c09c66092bf4f51feab09f1e72c8876c2c552fece9873a1cd5ef39441a",
+  "grade_codes": [
+    "Z",
+    "6",
+    "1",
+    "2",
+    "4"
+  ],
+  "caveats": [
+    "The log-market report is a species-group and sort average, not a mill-specific accepted-sort list.",
+    "Interior grades are Z/6/1/2/4, not the coastal D/F/H/I/J/U/X/Y grade family.",
+    "The report is a regional market reference, not an AFRF sales record.",
+    "Do not apply the average price to an AFRF grade volume without a documented species and grade crosswalk."
+  ]
+}

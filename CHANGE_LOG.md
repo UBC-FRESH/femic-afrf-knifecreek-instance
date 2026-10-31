@@ -546,3 +546,13 @@ status and the GitHub issue comments.
   `useRoutes = false`, and the OneDrive payload has no road, mill, or price
   data. The phase remains blocked on AFRF road, mill, cost, sort, and price
   records; no model result or legal access claim is made.
+
+- Added the public supplementary references that can be used while the AFRF
+  records are pending. `runbooks/build_afrf_mill_candidates.py` builds a
+  20-row, 16-mill candidate register within 100 km of the two blocks from the
+  BC Major Timber Processing Facilities layer. `runbooks/
+  build_bc_interior_price_reference.py` transcribes the BC Interior Log Market
+  Report for June-August 2026 and the five interior grade codes. Both are
+  candidate references with explicit caveats: capacity is not demand, the
+  mill sort labels are unconfirmed, and the market prices are regional
+  averages, not AFRF sales or a grade-by-grade matrix.

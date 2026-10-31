@@ -1,0 +1,30 @@
+status: candidate reference only
+not_a_femic_log_grade_matrix: true
+provenance:
+  source: BC Interior Log Market Report
+  period: 2026-06-01/2026-08-31
+  compiled: '2026-09-24'
+  units: CAD/m3
+  url: https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/forestry/timber-pricing/interior-timber-pricing/interior-log-market-reports/3mi_aug_26.pdf
+  sha256: e10b2d4bf3bbce6f247a34045bdc27fa0de0d6a9ff3d7bbe90d65c3e2a50f495
+caveats:
+- Species-group and sort averages, not a mill-specific accepted-sort list.
+- Not a grade-by-grade matrix and not an AFRF sales record.
+- The FEMIC log-grades bank uses coastal D/F/H/I/J/U/X/Y labels; this file does not
+  map to them.
+species_groups:
+  SPF:
+    Sawlog: 114.34
+    Peelers: 140.9
+    Pulpwood: 52.91
+  Df-Larch:
+    Sawlog: 124.41
+    Peelers: 141.84
+    Pulpwood: 60.76
+  Hem-Bal:
+    Sawlog: 107.82
+    Pulpwood: 51.77
+  Cedar:
+    Sawlog: 197.32
+  Other:
+    Other: 72.72
