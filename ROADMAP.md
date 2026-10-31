@@ -19,6 +19,7 @@ after its parent issue exists and the maintainer approves it.
 | P4 Verification and scenarios | #70 | `feature/p4-verification` | complete |
 | P5 Release v0.1 | #76 | `feature/p5-release` | complete |
 | P6 Maintain and merge readiness | TBD | `feature/p6-maintain` | planned |
+| P7 Roads, log sorts, and mills | #124 | `feature/p7-roads-logs-mills` | active |
 
 ## Lifecycle Map
 
@@ -400,6 +401,39 @@ Acceptance criteria:
 - The merge contract is specific enough to implement without re-reading this
   roadmap.
 - The sibling Gavin Lake instance can consume the contract.
+
+## Phase 7: Roads, log sorts, and mills
+
+Parent issue: #124
+Branch: `feature/p7-roads-logs-mills`
+Status: active
+
+Goal: add a delivered-wood layer to the Knife Creek model: modelled access,
+route cost, mills, log sorts, and harvest-system constraints. The plan is
+`planning/p7-roads-logs-mills.md`. This phase does not set AAC, tune even-flow,
+or claim legal access or legal compliance.
+
+- [x] P7.1 Audit and extract the 2007 plan, legacy archive, and OneDrive payload (#125)
+- [ ] P7.2 Build the road network and block access topology
+- [ ] P7.3 Build the mill register, destinations, and eligibility
+- [ ] P7.4 Build the interior log-sort and price basis
+- [ ] P7.5 Build harvest-system classes and operational constraints
+- [ ] P7.6 Integrate the delivered-wood layer into the KC model of record
+- [ ] P7.7 Validate, record uncertainty, and publish the methods
+
+Acceptance criteria:
+
+- Every road, mill, price, and harvest-system input has a source or an explicit
+  gap.
+- The KC split-block dataset has a road network and route configuration.
+- The route accounts produce haul, build, maintenance, and used-road evidence
+  with no silently unrouted products.
+- The log-grade family reconciles to harvested volume and the price basis is
+  interior and dated.
+- The Table 37 road-length and area reconciliation is recorded, including the
+  public-layer residual.
+- No result is presented as a statutory AAC, a legal access determination, or a
+  legal-compliance finding.
 
 ## Detailed Next Steps Notes
 

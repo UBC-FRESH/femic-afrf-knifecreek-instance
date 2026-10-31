@@ -1,0 +1,6 @@
+system_id,system_name,use_case,access_class,note,section,page,pdf_page,source
+shortwood,shortwood harvester/forwarder,thinning; ground-based,ground-based,particularly well suited for thinning,8.1.1,107,115,AFRF Management and Working Plan #3
+feller-buncher/grapple skidder/processor,"feller-buncher, grapple skidder, processor",clearcut; shortwood or long-log,ground-based,best suited to clearcutting,8.1.1,107,115,AFRF Management and Working Plan #3
+hand-falling/cable skidder/hand bucking,"hand falling, cable skidder, hand bucking","large piece size, high value, salvage",ground-based or cable,"best suited to large piece size, high value, or salvage",8.1.1,107,115,AFRF Management and Working Plan #3
+cable,cable harvest system,substantial area above 30% slope at Gavin Lake,cable,anticipated on Gavin Lake blocks with substantial area above 30% slope,8.1.1,107,115,AFRF Management and Working Plan #3
+inaccessible,inaccessible,areas above 60% slope,inaccessible,generally considered inaccessible above 60% slope,8.1.1,107,115,AFRF Management and Working Plan #3

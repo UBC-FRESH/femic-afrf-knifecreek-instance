@@ -529,3 +529,20 @@ status and the GitHub issue comments.
   zero rows for every dataset account, including product area and yield, instead
   of omitting product accounts entirely. Selection runs keep their produced
   values and get zeros in periods with no product flow.
+
+## 2026-10-31
+
+- Activated P7, roads, log sorts, and mills, under parent issue #124 on
+  `feature/p7-roads-logs-mills`. The phase plan is
+  `planning/p7-roads-logs-mills.md`.
+
+- Completed P7.1, the source audit (#125), in
+  `notes/reference/afrf-roads-logs-mills-sources.md`. Added
+  `runbooks/build_mwp3_roads_audit.py` and the derived tables under
+  `data/roads/`: Table 37 road length/area, Table 38 road specifications,
+  Table 39 landings, harvest systems, access assumptions, the gap register,
+  the source manifest, and rendered Appendix 11 access maps. The audit found
+  that `AFRF.zip` has an empty `AFRF/roads/` directory, `AFRF_H.pin` sets
+  `useRoutes = false`, and the OneDrive payload has no road, mill, or price
+  data. The phase remains blocked on AFRF road, mill, cost, sort, and price
+  records; no model result or legal access claim is made.

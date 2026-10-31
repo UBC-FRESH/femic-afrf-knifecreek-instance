@@ -1,0 +1,4 @@
+row,surface_width_m,design_speed_kmh,min_sight_distance_m,min_curve_radius_m,favorable_sustained_pct,favorable_short_pitch_pct,adverse_sustained_pct,adverse_short_pitch_pct,switchbacks_pct,table,page,pdf_page,source
+1,4,20,40,15,16,18,9,12,8,38,110,118,"AFRF Management and Working Plan #3, adapted from BC Ministry of Forests 2002"
+2,5-6,30,65,35,12,14,8,10,8,38,110,118,"AFRF Management and Working Plan #3, adapted from BC Ministry of Forests 2002"
+3,,40,95,65,12,14,8,10,8,38,110,118,"AFRF Management and Working Plan #3, adapted from BC Ministry of Forests 2002"

@@ -1,0 +1,33 @@
+{
+  "source": "AFRF Management and Working Plan #3",
+  "path": "reference/AFRF-management-working-plan-3-2007.pdf",
+  "sha256": "9bfd8b8f0449f45fb97fcf529236640ace09b73ba74f77001f677eee7307ff6a",
+  "pages": 168,
+  "effective_period": "2007-01-01 to 2012-12-31",
+  "publisher": "UBC Alex Fraser Research Forest",
+  "licence": "public UBC AFRF planning document; UBC copyright, not OGL",
+  "used_sections": {
+    "8.1": "timber harvest systems, block harvesting, salvage, marking",
+    "8.2": "access, roads, landings, skid trails",
+    "Table 37": "road length and area, page 110",
+    "Table 38": "road construction specifications, page 110",
+    "Table 39": "landings, page 112",
+    "Appendix 11": "Gavin Lake and Knife Creek access plans, pages 153-154"
+  },
+  "caveats": [
+    "Appendix 11 maps are schematic: scale bar and north arrow, no coordinate grid.",
+    "The plan does not contain mill capacities, accepted sorts, or a road unit-cost schedule.",
+    "The plan is not a legal access determination."
+  ],
+  "derived_tables": [
+    "mwp3_access_assumptions.csv",
+    "mwp3_harvest_systems.csv",
+    "mwp3_table37_roads.csv",
+    "mwp3_table38_specs.csv",
+    "mwp3_table39_landings.csv"
+  ],
+  "context_images": [
+    "mwp3_gavin_access.jpg",
+    "mwp3_knife_creek_access.jpg"
+  ]
+}
