@@ -6,8 +6,8 @@ Status: evidence and integration design
 ## Bottom line
 
 - Knife Creek has a processed 2024 canopy tree inventory and calibrated 2013/2019
-  LiDAR; Gavin Lake has only **partial 2013 LAS** coverage over about 339 ha of
-  5,664 ha. The 2009 FUSION LIDARBIN is not readable by the current pipeline.
+  LiDAR. Gavin Lake has full 2009 FUSION LIDARBIN coverage plus partial 2013
+  LAS; the 2009 data is valid and has now been processed with FUSION.
 - The Gavin 2025 VRI starting layer is built, but the compiled legacy matrix
   still uses `AGE_2019`. The area-weighted 2025 VRI age is 125.3 years vs 99.4
   years for the legacy ages advanced to 2025. A real rebuild is required.
@@ -28,11 +28,11 @@ GeoTIFF product in the OneDrive payload.
 | Block | Readable files intersecting | Overlap (double-counted) | Coverage |
 | --- | ---: | ---: | --- |
 | Knife Creek | 56 | 19,023 ha | 2013 LAS, 2019 rasters, 2024 tiles |
-| Gavin Lake | 11 | 448 ha | 2013 LAS only; about 339 ha after clipping |
+| Gavin Lake | 11 + 100 FUSION tiles | 448 ha 2013; full 2009 | 2009 LIDARBIN and partial 2013 LAS |
 
 The 2013 LAS files carry no CRS and are assumed EPSG:26910. The 2009 files are
-FUSION LIDARBIN; the current LAS/raster pipeline cannot read them. There are no
-2019 or 2024 Gavin tiles in the payload.
+valid FUSION LIDARBIN, not corrupted LAS; they were processed with FUSION/LDV
+4.61. There are no 2019 or 2024 Gavin tiles in the payload.
 
 ## Tree-level inventories
 
@@ -51,16 +51,15 @@ A FHOPS pilot inventory for block 78 is
 
 ### Gavin Lake
 
-- `data/lidar/gavin_2013/trees.gpkg`: 166,188 canopy trees in 11 2013 tiles.
-- 339 ha covered; partial block coverage only.
-- 111 fragments have tree summaries:
-  `data/lidar/gavin_2013/block_piece_size.csv`.
-- Mean covered-fragment values: 464 TPH, 0.98 m3/stem, 400 m3/ha.
+- `data/lidar/gavin_2009/trees.gpkg`: 1,116,962 canopy trees from the full
+  2009 FUSION LIDARBIN coverage.
+- 5,663.7 ha, 197 TPH, mean height 15.0 m, mean DBH estimate 19.8 cm.
+- 2,793 of 2,907 fragments have at least one detected tree.
+- `data/lidar/gavin_2009/block_piece_size.csv`: fragment piece-size summary.
 - A FHOPS pilot inventory for fragment 323 is
-  `data/lidar/gavin_2013/fhops/gl_0323/`. `fhops tree inventory validate`
-  accepts it (1,814 trees, one species, valid contract).
-- The 464 TPH and 400 m3/ha values are high for a canopy-only detection; treat
-  the partial inventory as screening evidence, not a CFI.
+  `data/lidar/gavin_2009/fhops/gl_0323/`. `fhops tree inventory validate`
+  accepts it (413 trees, one species, valid contract).
+- `data/lidar/gavin_2013/` remains as an independent partial 2013 check.
 
 ## Gavin 2025 VRI starting layer
 

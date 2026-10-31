@@ -76,7 +76,9 @@ def main() -> None:
             "x_m": clipped.geometry.x.round(3),
             "y_m": clipped.geometry.y.round(3),
             "elevation_m": "",
-            "species_code": clipped.get("species", "UNK").fillna("UNK"),
+            "species_code": (
+                clipped["species"].fillna("UNK") if "species" in clipped.columns else "UNK"
+            ),
             "dbh_cm": clipped["dbh_cm_est"].round(2),
             "height_m": clipped["height_m"].round(2),
             "crown_radius_m": (
@@ -85,7 +87,7 @@ def main() -> None:
             "status": "live",
             "confidence": args.confidence,
             "source_id": "lidar-canopy-inventory",
-            "source_tile_id": clipped.get("tile", ""),
+            "source_tile_id": (clipped["tile"].fillna("") if "tile" in clipped.columns else ""),
             "merchantable_height_m": "",
             "defect": "",
             "grade_hint": "",

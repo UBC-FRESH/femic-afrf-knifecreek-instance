@@ -606,7 +606,7 @@ status and the GitHub issue comments.
   (`runbooks/audit_afrf_lidar_coverage.py`,
   `data/lidar/afrf_lidar_coverage_audit.json`). Knife Creek has 56 readable
   files intersecting; Gavin Lake has 11 2013 LAS files over about 448 ha.
-  The 2009 FUSION LIDARBIN is not readable by the current pipeline.
+  The 2009 FUSION LIDARBIN is valid data; it was processed with FUSION/LDV for Gavin Lake and is not a standard LAS file.
 
 - Added the Knife Creek block piece-size table
   (`data/lidar/kc_2024/block_piece_size.csv`) and a validated FHOPS tree

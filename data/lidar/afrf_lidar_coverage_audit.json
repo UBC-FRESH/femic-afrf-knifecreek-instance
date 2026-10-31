@@ -16,15 +16,20 @@
       ]
     },
     "files": 294,
-    "readable": 180,
-    "unreadable": 114,
+    "readable": 294,
+    "laspy_readable": 176,
+    "fusion_readable": 290,
+    "unreadable": 0,
     "knife_creek": {
       "files_intersecting": 56,
       "overlap_ha": 19023.4556018149
     },
     "gavin_lake": {
       "files_intersecting": 11,
-      "overlap_ha": 447.9936468775503
+      "overlap_ha": 447.9936468775503,
+      "fusion_lidarbin_tiles": 100,
+      "fusion_lidarbin_trees": 1116962,
+      "fusion_lidarbin_coverage": "full block"
     },
     "legacy_fusion_files": [
       "LiDAR/2009/AFRF_2009.lasd",
@@ -33,692 +38,920 @@
     "caveats": [
       "Overlap area is counted per file and can double-count overlapping tiles.",
       "The 2013 LAS files carry no CRS; they are assumed to be EPSG:26910 UTM 10N.",
-      "FUSION LIDARBIN is not readable by the current LAS/raster pipeline."
+      "FUSION LIDARBIN is valid data; it is readable with FUSION/LDV or LDA2LAS, not with laspy or a standard LAS reader."
     ]
   },
   "records": [
     {
       "path": "LiDAR/2009/AFRF_2009.lasd",
       "format": "FUSION LIDARBIN index",
-      "readable": false,
-      "reason": "legacy FUSION index; not a standard LAS/LAZ product"
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION index; use FUSION/LDV, not laspy"
     },
     {
       "path": "LiDAR/2009/gd000001.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000002.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000003.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000004.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000005.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000006.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000007.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000008.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000009.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000010.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000011.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000012.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000013.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000014.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000015.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000016.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000017.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000018.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000019.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000020.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000021.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000022.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000023.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000024.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000025.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000026.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000027.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000028.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000029.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000030.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000031.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000032.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000033.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000034.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000035.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000036.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000037.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000038.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000039.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000040.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000041.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000042.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000043.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000044.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000045.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000046.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000047.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000048.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000049.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000050.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000051.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000052.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000053.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000054.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000055.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000056.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000057.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000058.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000059.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000060.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000061.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000062.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000063.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000064.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000065.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000066.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000067.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000068.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000069.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000070.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000071.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000072.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000073.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000074.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000075.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000076.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000077.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000078.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000079.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000080.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000081.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000082.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000083.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000084.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000085.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000086.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000087.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000088.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000089.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000090.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000091.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000092.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000093.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000094.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000095.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000096.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000097.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000098.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000099.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000100.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000101.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000102.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000103.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000104.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000105.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000106.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000107.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000108.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000109.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000110.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000111.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/gd000112.las",
-      "format": "LAS",
-      "readable": false,
-      "reason": "Invalid file signature \"b'LIDA'\""
+      "format": "FUSION LIDARBIN",
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV or LDA2LAS, not a standard LAS reader"
     },
     {
       "path": "LiDAR/2009/pt000001.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         580330.49,
@@ -735,6 +968,8 @@
       "path": "LiDAR/2009/pt000002.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         580313.4500000001,
@@ -751,6 +986,8 @@
       "path": "LiDAR/2009/pt000003.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         581000.0,
@@ -767,6 +1004,8 @@
       "path": "LiDAR/2009/pt000004.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         581000.46,
@@ -783,6 +1022,8 @@
       "path": "LiDAR/2009/pt000005.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         582000.0,
@@ -799,6 +1040,8 @@
       "path": "LiDAR/2009/pt000006.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         582000.0,
@@ -815,6 +1058,8 @@
       "path": "LiDAR/2009/pt000007.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         583000.0,
@@ -831,6 +1076,8 @@
       "path": "LiDAR/2009/pt000008.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         583000.0,
@@ -847,6 +1094,8 @@
       "path": "LiDAR/2009/pt000009.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         584000.0,
@@ -863,6 +1112,8 @@
       "path": "LiDAR/2009/pt000010.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         584000.0,
@@ -879,6 +1130,8 @@
       "path": "LiDAR/2009/pt000011.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         585000.0,
@@ -895,6 +1148,8 @@
       "path": "LiDAR/2009/pt000012.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         585000.0,
@@ -911,6 +1166,8 @@
       "path": "LiDAR/2009/pt000013.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         586000.0,
@@ -927,6 +1184,8 @@
       "path": "LiDAR/2009/pt000014.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         586000.0,
@@ -943,6 +1202,8 @@
       "path": "LiDAR/2009/pt000015.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         586317.79,
@@ -959,6 +1220,8 @@
       "path": "LiDAR/2009/pt000016.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         587000.0,
@@ -975,6 +1238,8 @@
       "path": "LiDAR/2009/pt000017.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         587000.0,
@@ -991,6 +1256,8 @@
       "path": "LiDAR/2009/pt000018.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         588000.0,
@@ -1007,6 +1274,8 @@
       "path": "LiDAR/2009/pt000019.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         588000.0,
@@ -1023,6 +1292,8 @@
       "path": "LiDAR/2009/pt000020.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         588515.05,
@@ -1039,6 +1310,8 @@
       "path": "LiDAR/2009/pt000021.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         589000.0,
@@ -1055,6 +1328,8 @@
       "path": "LiDAR/2009/pt000022.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         589000.0,
@@ -1071,6 +1346,8 @@
       "path": "LiDAR/2009/pt000023.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         589000.01,
@@ -1087,6 +1364,8 @@
       "path": "LiDAR/2009/pt000024.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         590000.0,
@@ -1103,6 +1382,8 @@
       "path": "LiDAR/2009/pt000025.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         590000.0,
@@ -1119,6 +1400,8 @@
       "path": "LiDAR/2009/pt000026.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         590000.0,
@@ -1135,6 +1418,8 @@
       "path": "LiDAR/2009/pt000027.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         591000.0,
@@ -1151,6 +1436,8 @@
       "path": "LiDAR/2009/pt000028.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         591000.0,
@@ -1167,6 +1454,8 @@
       "path": "LiDAR/2009/pt000029.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         591000.0,
@@ -1183,6 +1472,8 @@
       "path": "LiDAR/2009/pt000030.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         592000.0,
@@ -1199,6 +1490,8 @@
       "path": "LiDAR/2009/pt000031.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         592000.0,
@@ -1215,6 +1508,8 @@
       "path": "LiDAR/2009/pt000032.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         592000.0,
@@ -1231,6 +1526,8 @@
       "path": "LiDAR/2009/pt000033.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         580000.01,
@@ -1247,6 +1544,8 @@
       "path": "LiDAR/2009/pt000034.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         581000.0,
@@ -1263,6 +1562,8 @@
       "path": "LiDAR/2009/pt000035.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         582000.0,
@@ -1279,6 +1580,8 @@
       "path": "LiDAR/2009/pt000036.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         593000.0,
@@ -1295,6 +1598,8 @@
       "path": "LiDAR/2009/pt000037.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         593000.0,
@@ -1311,6 +1616,8 @@
       "path": "LiDAR/2009/pt000038.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         593000.01,
@@ -1327,6 +1634,8 @@
       "path": "LiDAR/2009/pt000039.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         591000.0,
@@ -1343,6 +1652,8 @@
       "path": "LiDAR/2009/pt000040.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         590000.0,
@@ -1359,6 +1670,8 @@
       "path": "LiDAR/2009/pt000041.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         589000.0,
@@ -1375,6 +1688,8 @@
       "path": "LiDAR/2009/pt000042.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         588000.0,
@@ -1391,6 +1706,8 @@
       "path": "LiDAR/2009/pt000043.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         587000.0,
@@ -1407,6 +1724,8 @@
       "path": "LiDAR/2009/pt000044.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         586000.0,
@@ -1423,6 +1742,8 @@
       "path": "LiDAR/2009/pt000045.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         585000.0,
@@ -1439,6 +1760,8 @@
       "path": "LiDAR/2009/pt000046.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         584000.0,
@@ -1455,6 +1778,8 @@
       "path": "LiDAR/2009/pt000047.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         583000.0,
@@ -1471,6 +1796,8 @@
       "path": "LiDAR/2009/pt000048.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         592000.0,
@@ -1487,6 +1814,8 @@
       "path": "LiDAR/2009/pt000049.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         589000.0,
@@ -1503,6 +1832,8 @@
       "path": "LiDAR/2009/pt000050.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         588000.0,
@@ -1519,6 +1850,8 @@
       "path": "LiDAR/2009/pt000051.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         587000.0,
@@ -1535,6 +1868,8 @@
       "path": "LiDAR/2009/pt000052.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         586000.0,
@@ -1551,6 +1886,8 @@
       "path": "LiDAR/2009/pt000053.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         585000.0,
@@ -1567,6 +1904,8 @@
       "path": "LiDAR/2009/pt000054.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         584000.0,
@@ -1583,6 +1922,8 @@
       "path": "LiDAR/2009/pt000055.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         583000.0,
@@ -1599,6 +1940,8 @@
       "path": "LiDAR/2009/pt000056.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         582000.0,
@@ -1615,6 +1958,8 @@
       "path": "LiDAR/2009/pt000057.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         581000.0,
@@ -1631,6 +1976,8 @@
       "path": "LiDAR/2009/pt000058.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         580000.05,
@@ -1647,6 +1994,8 @@
       "path": "LiDAR/2009/pt000059.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         579978.0,
@@ -1663,6 +2012,8 @@
       "path": "LiDAR/2009/pt000060.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         579160.68,
@@ -1679,6 +2030,8 @@
       "path": "LiDAR/2009/pt000061.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         579779.47,
@@ -1695,6 +2048,8 @@
       "path": "LiDAR/2009/pt000062.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         590000.0,
@@ -1711,6 +2066,8 @@
       "path": "LiDAR/2009/pt000063.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         591000.0,
@@ -1727,6 +2084,8 @@
       "path": "LiDAR/2009/pt000064.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         592000.0,
@@ -1743,6 +2102,8 @@
       "path": "LiDAR/2009/pt000065.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         587000.0,
@@ -1759,6 +2120,8 @@
       "path": "LiDAR/2009/pt000066.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         586000.0,
@@ -1775,6 +2138,8 @@
       "path": "LiDAR/2009/pt000067.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         585000.0,
@@ -1791,6 +2156,8 @@
       "path": "LiDAR/2009/pt000068.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         584000.0,
@@ -1807,6 +2174,8 @@
       "path": "LiDAR/2009/pt000069.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         583000.0,
@@ -1823,6 +2192,8 @@
       "path": "LiDAR/2009/pt000070.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         582000.0,
@@ -1839,6 +2210,8 @@
       "path": "LiDAR/2009/pt000071.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         581000.0,
@@ -1855,6 +2228,8 @@
       "path": "LiDAR/2009/pt000072.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         580425.54,
@@ -1871,6 +2246,8 @@
       "path": "LiDAR/2009/pt000073.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         588000.0,
@@ -1887,6 +2264,8 @@
       "path": "LiDAR/2009/pt000074.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         589000.0,
@@ -1903,6 +2282,8 @@
       "path": "LiDAR/2009/pt000075.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         590000.0,
@@ -1919,6 +2300,8 @@
       "path": "LiDAR/2009/pt000076.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         591000.0,
@@ -1935,6 +2318,8 @@
       "path": "LiDAR/2009/pt000077.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         592000.0,
@@ -1951,6 +2336,8 @@
       "path": "LiDAR/2009/pt000078.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         586000.0,
@@ -1967,6 +2354,8 @@
       "path": "LiDAR/2009/pt000079.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         584000.0,
@@ -1983,6 +2372,8 @@
       "path": "LiDAR/2009/pt000080.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         583000.0,
@@ -1999,6 +2390,8 @@
       "path": "LiDAR/2009/pt000081.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         582000.0,
@@ -2015,6 +2408,8 @@
       "path": "LiDAR/2009/pt000082.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         581000.0,
@@ -2031,6 +2426,8 @@
       "path": "LiDAR/2009/pt000083.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         580553.51,
@@ -2047,6 +2444,8 @@
       "path": "LiDAR/2009/pt000084.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         585000.0,
@@ -2063,6 +2462,8 @@
       "path": "LiDAR/2009/pt000085.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         587000.0,
@@ -2079,6 +2480,8 @@
       "path": "LiDAR/2009/pt000086.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         588000.0,
@@ -2095,6 +2498,8 @@
       "path": "LiDAR/2009/pt000087.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         589000.0,
@@ -2111,6 +2516,8 @@
       "path": "LiDAR/2009/pt000088.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         590000.0,
@@ -2127,6 +2534,8 @@
       "path": "LiDAR/2009/pt000089.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         591000.0,
@@ -2143,6 +2552,8 @@
       "path": "LiDAR/2009/pt000090.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         592000.0,
@@ -2159,6 +2570,8 @@
       "path": "LiDAR/2009/pt000091.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         595000.0,
@@ -2175,6 +2588,8 @@
       "path": "LiDAR/2009/pt000092.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         595000.01,
@@ -2191,6 +2606,8 @@
       "path": "LiDAR/2009/pt000093.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         594839.47,
@@ -2207,6 +2624,8 @@
       "path": "LiDAR/2009/pt000094.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         594962.41,
@@ -2223,6 +2642,8 @@
       "path": "LiDAR/2009/pt000095.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         584000.0,
@@ -2239,6 +2660,8 @@
       "path": "LiDAR/2009/pt000096.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         583000.0,
@@ -2255,6 +2678,8 @@
       "path": "LiDAR/2009/pt000097.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         582000.0,
@@ -2271,6 +2696,8 @@
       "path": "LiDAR/2009/pt000098.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         581000.0,
@@ -2287,6 +2714,8 @@
       "path": "LiDAR/2009/pt000099.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         580517.65,
@@ -2303,6 +2732,8 @@
       "path": "LiDAR/2009/pt000100.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         585000.0,
@@ -2319,6 +2750,8 @@
       "path": "LiDAR/2009/pt000101.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         586000.0,
@@ -2335,6 +2768,8 @@
       "path": "LiDAR/2009/pt000102.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         587000.0,
@@ -2351,6 +2786,8 @@
       "path": "LiDAR/2009/pt000103.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         588000.0,
@@ -2367,6 +2804,8 @@
       "path": "LiDAR/2009/pt000104.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         589000.0,
@@ -2383,6 +2822,8 @@
       "path": "LiDAR/2009/pt000105.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         590000.0,
@@ -2399,6 +2840,8 @@
       "path": "LiDAR/2009/pt000106.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         591000.0,
@@ -2415,6 +2858,8 @@
       "path": "LiDAR/2009/pt000107.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         592000.0,
@@ -2431,6 +2876,8 @@
       "path": "LiDAR/2009/pt000108.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         593000.0,
@@ -2447,6 +2894,8 @@
       "path": "LiDAR/2009/pt000109.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         593000.0,
@@ -2463,6 +2912,8 @@
       "path": "LiDAR/2009/pt000110.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         593000.0,
@@ -2479,6 +2930,8 @@
       "path": "LiDAR/2009/pt000111.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         581000.0,
@@ -2495,6 +2948,8 @@
       "path": "LiDAR/2009/pt000112.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         580513.96,
@@ -2510,13 +2965,17 @@
     {
       "path": "LiDAR/2013/AFRF_2013.lasd",
       "format": "FUSION LIDARBIN index",
-      "readable": false,
-      "reason": "legacy FUSION index; not a standard LAS/LAZ product"
+      "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": true,
+      "reason": "valid FUSION index; use FUSION/LDV, not laspy"
     },
     {
       "path": "LiDAR/2013/East_A01.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1285807.5803278026,
@@ -2533,6 +2992,8 @@
       "path": "LiDAR/2013/East_A02.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1285930.81422103,
@@ -2549,6 +3010,8 @@
       "path": "LiDAR/2013/East_A03.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1286927.8779059988,
@@ -2565,6 +3028,8 @@
       "path": "LiDAR/2013/East_B01.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1285776.8171919612,
@@ -2581,6 +3046,8 @@
       "path": "LiDAR/2013/East_B02.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1285895.3920849836,
@@ -2597,6 +3064,8 @@
       "path": "LiDAR/2013/East_B03.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1286892.6566439054,
@@ -2613,6 +3082,8 @@
       "path": "LiDAR/2013/East_B04.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1287883.8277899357,
@@ -2629,6 +3100,8 @@
       "path": "LiDAR/2013/Knife_A04.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1283309.282314246,
@@ -2645,6 +3118,8 @@
       "path": "LiDAR/2013/Knife_A05.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1284075.6893839124,
@@ -2661,6 +3136,8 @@
       "path": "LiDAR/2013/Knife_A08.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1287322.1283080303,
@@ -2677,6 +3154,8 @@
       "path": "LiDAR/2013/Knife_A09.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1288062.008790073,
@@ -2693,6 +3172,8 @@
       "path": "LiDAR/2013/Knife_A10.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1289059.4618813652,
@@ -2709,6 +3190,8 @@
       "path": "LiDAR/2013/Knife_B03.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1282494.6503088232,
@@ -2725,6 +3208,8 @@
       "path": "LiDAR/2013/Knife_B04.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1283056.3087671155,
@@ -2741,6 +3226,8 @@
       "path": "LiDAR/2013/Knife_B05.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1284053.8353268118,
@@ -2757,6 +3244,8 @@
       "path": "LiDAR/2013/Knife_B06.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1285037.8381283446,
@@ -2773,6 +3262,8 @@
       "path": "LiDAR/2013/Knife_B07.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1286035.0134166249,
@@ -2789,6 +3280,8 @@
       "path": "LiDAR/2013/Knife_B08.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1287046.4028758272,
@@ -2805,6 +3298,8 @@
       "path": "LiDAR/2013/Knife_B09.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1288043.92127214,
@@ -2821,6 +3316,8 @@
       "path": "LiDAR/2013/Knife_B10.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1289041.437570106,
@@ -2837,6 +3334,8 @@
       "path": "LiDAR/2013/Knife_C02.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1281626.8052451715,
@@ -2853,6 +3352,8 @@
       "path": "LiDAR/2013/Knife_C03.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1282015.8521257117,
@@ -2869,6 +3370,8 @@
       "path": "LiDAR/2013/Knife_C04.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1283013.3746445882,
@@ -2885,6 +3388,8 @@
       "path": "LiDAR/2013/Knife_C05.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1284010.8951810647,
@@ -2901,6 +3406,8 @@
       "path": "LiDAR/2013/Knife_C06.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1285008.4137121364,
@@ -2917,6 +3424,8 @@
       "path": "LiDAR/2013/Knife_C07.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1286005.9302148009,
@@ -2933,6 +3442,8 @@
       "path": "LiDAR/2013/Knife_C08.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1287003.4446660557,
@@ -2949,6 +3460,8 @@
       "path": "LiDAR/2013/Knife_C09.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1288000.9570428974,
@@ -2965,6 +3478,8 @@
       "path": "LiDAR/2013/Knife_C10.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1288998.4673223218,
@@ -2981,6 +3496,8 @@
       "path": "LiDAR/2013/Knife_D02.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1281562.0477407882,
@@ -2997,6 +3514,8 @@
       "path": "LiDAR/2013/Knife_D03.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1281972.9253643062,
@@ -3013,6 +3532,8 @@
       "path": "LiDAR/2013/Knife_D04.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1282970.4418797835,
@@ -3029,6 +3550,8 @@
       "path": "LiDAR/2013/Knife_D05.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1283967.9564138034,
@@ -3045,6 +3568,8 @@
       "path": "LiDAR/2013/Knife_D06.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1284965.4689433575,
@@ -3061,6 +3586,8 @@
       "path": "LiDAR/2013/Knife_D07.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1285962.9794454419,
@@ -3077,6 +3604,8 @@
       "path": "LiDAR/2013/Knife_D08.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1286960.487897051,
@@ -3093,6 +3622,8 @@
       "path": "LiDAR/2013/Knife_D09.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1287957.9942751797,
@@ -3109,6 +3640,8 @@
       "path": "LiDAR/2013/Knife_D10.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1288955.4985568225,
@@ -3125,6 +3658,8 @@
       "path": "LiDAR/2013/Knife_E01.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1280189.2390822398,
@@ -3141,6 +3676,8 @@
       "path": "LiDAR/2013/Knife_E02.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1280932.4874512507,
@@ -3157,6 +3694,8 @@
       "path": "LiDAR/2013/Knife_E03.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1281929.9999416147,
@@ -3173,6 +3712,8 @@
       "path": "LiDAR/2013/Knife_E04.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1282927.5104744688,
@@ -3189,6 +3730,8 @@
       "path": "LiDAR/2013/Knife_E05.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1283925.019026804,
@@ -3205,6 +3748,8 @@
       "path": "LiDAR/2013/Knife_E06.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1284922.5255756134,
@@ -3221,6 +3766,8 @@
       "path": "LiDAR/2013/Knife_E07.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1285920.03009789,
@@ -3237,6 +3784,8 @@
       "path": "LiDAR/2013/Knife_E08.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1286917.5325706261,
@@ -3253,6 +3802,8 @@
       "path": "LiDAR/2013/Knife_E09.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1287915.0329708133,
@@ -3269,6 +3820,8 @@
       "path": "LiDAR/2013/Knife_F01.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1280158.9843479588,
@@ -3285,6 +3838,8 @@
       "path": "LiDAR/2013/Knife_F02.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1280889.5693318115,
@@ -3301,6 +3856,8 @@
       "path": "LiDAR/2013/Knife_F03.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1281887.0758593958,
@@ -3317,6 +3874,8 @@
       "path": "LiDAR/2013/Knife_F04.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1282884.580430411,
@@ -3333,6 +3892,8 @@
       "path": "LiDAR/2013/Knife_F05.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1283882.0830218492,
@@ -3349,6 +3910,8 @@
       "path": "LiDAR/2013/Knife_F06.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1284879.5836106983,
@@ -3365,6 +3928,8 @@
       "path": "LiDAR/2013/Knife_F07.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1285877.0821739498,
@@ -3381,6 +3946,8 @@
       "path": "LiDAR/2013/Knife_G01.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1280127.1541603408,
@@ -3397,6 +3964,8 @@
       "path": "LiDAR/2013/Knife_G02.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1280846.6525338036,
@@ -3413,6 +3982,8 @@
       "path": "LiDAR/2013/Knife_G03.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1281844.1531194067,
@@ -3429,6 +4000,8 @@
       "path": "LiDAR/2013/Knife_G04.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1282841.6517493825,
@@ -3445,6 +4018,8 @@
       "path": "LiDAR/2013/Knife_G05.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1283839.148400717,
@@ -3461,6 +4036,8 @@
       "path": "LiDAR/2013/West_A01.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1282041.601054966,
@@ -3477,6 +4054,8 @@
       "path": "LiDAR/2013/West_A02.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1282756.236372042,
@@ -3493,6 +4072,8 @@
       "path": "LiDAR/2013/West_B01.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1281860.69669226,
@@ -3509,6 +4090,8 @@
       "path": "LiDAR/2013/West_B02.las",
       "format": "LAS",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:26910",
       "bounds_3005": [
         1282732.0758595737,
@@ -3525,6 +4108,8 @@
       "path": "LiDAR/BC_LiDAR_Campbell_Rd/bc_093b020_4_1_4_xyes_8_utm10_20240509_20240509.laz",
       "format": "LAZ",
       "readable": true,
+      "laspy_readable": true,
+      "fusion_readable": true,
       "source_crs": "EPSG:3005",
       "bounds_3005": [
         563253.23,
@@ -3541,6 +4126,8 @@
       "path": "LiDAR/KC_2019/bc_093a001_xli1m_utm10_2019 (2).tif",
       "format": "GeoTIFF",
       "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": false,
       "source_crs": "PROJCS[\"North_American_1983_CSRS_UTM_Zone_10N\",GEOGCS[\"NAD83(CSRS)\",DATUM[\"North_American_1983_CSRS\",SPHEROID[\"GRS 1980\",6378137,298.257222101]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-123],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
       "bounds_3005": [
         1273899.153695126,
@@ -3557,6 +4144,8 @@
       "path": "LiDAR/KC_2019/bc_093a001_xli1m_utm10_2019.tif",
       "format": "GeoTIFF",
       "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": false,
       "source_crs": "EPSG:3157",
       "bounds_3005": [
         1273850.807685031,
@@ -3573,6 +4162,8 @@
       "path": "LiDAR/KC_2019/bc_093a002_xli1m_utm10_2019.tif",
       "format": "GeoTIFF",
       "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": false,
       "source_crs": "PROJCS[\"North_American_1983_CSRS_UTM_Zone_10N\",GEOGCS[\"NAD83(CSRS)\",DATUM[\"North_American_1983_CSRS\",SPHEROID[\"GRS 1980\",6378137,298.257222101]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-123],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
       "bounds_3005": [
         1287555.6503278918,
@@ -3589,6 +4180,8 @@
       "path": "LiDAR/KC_2019/ubc_chm/UBC_CHM.tif",
       "format": "GeoTIFF",
       "readable": true,
+      "laspy_readable": false,
+      "fusion_readable": false,
       "source_crs": "EPSG:3157",
       "bounds_3005": [
         1273898.6757273779,

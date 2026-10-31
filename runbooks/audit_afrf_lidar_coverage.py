@@ -62,10 +62,26 @@ def _record(
         return {
             "path": str(path.relative_to(LIDAR_ROOT.parent)),
             "format": "FUSION LIDARBIN index",
-            "readable": False,
-            "reason": "legacy FUSION index; not a standard LAS/LAZ product",
+            "readable": True,
+            "laspy_readable": False,
+            "fusion_readable": True,
+            "reason": "valid FUSION index; use FUSION/LDV, not laspy",
         }
     if suffix in {".las", ".laz"}:
+        with path.open("rb") as handle:
+            signature = handle.read(8)
+        if signature == b"LIDARBIN":
+            return {
+                "path": str(path.relative_to(LIDAR_ROOT.parent)),
+                "format": "FUSION LIDARBIN",
+                "readable": True,
+                "laspy_readable": False,
+                "fusion_readable": True,
+                "reason": (
+                    "valid FUSION/LDA binary with a .las suffix; use FUSION/LDV "
+                    "or LDA2LAS, not a standard LAS reader"
+                ),
+            }
         try:
             with laspy.open(path) as handle:
                 header = handle.header
@@ -78,6 +94,8 @@ def _record(
                     "path": str(path.relative_to(LIDAR_ROOT.parent)),
                     "format": suffix.lstrip(".").upper(),
                     "readable": True,
+                    "laspy_readable": True,
+                    "fusion_readable": True,
                     "source_crs": source_crs,
                     "bounds_3005": bounds,
                     "intersects": {
@@ -107,6 +125,8 @@ def _record(
                     "path": str(path.relative_to(LIDAR_ROOT.parent)),
                     "format": "GeoTIFF",
                     "readable": True,
+                    "laspy_readable": False,
+                    "fusion_readable": False,
                     "source_crs": str(source.crs),
                     "bounds_3005": bounds,
                     "intersects": {
@@ -160,23 +180,26 @@ def main() -> None:
                 records.append(record)
 
     readable = [record for record in records if record.get("readable")]
+    bounded = [record for record in readable if "intersects" in record]
     summary = {
         "source_root": str(LIDAR_ROOT),
         "block_bounds_3005": block_bounds,
         "files": len(records),
         "readable": len(readable),
+        "laspy_readable": sum(1 for record in records if record.get("laspy_readable")),
+        "fusion_readable": sum(1 for record in records if record.get("fusion_readable")),
         "unreadable": len(records) - len(readable),
         "knife_creek": {
             "files_intersecting": sum(
-                1 for record in readable if record["intersects"]["knife_creek"] > 0.0
+                1 for record in bounded if record["intersects"]["knife_creek"] > 0.0
             ),
-            "overlap_ha": sum(record["intersects"]["knife_creek"] for record in readable),
+            "overlap_ha": sum(record["intersects"]["knife_creek"] for record in bounded),
         },
         "gavin_lake": {
             "files_intersecting": sum(
-                1 for record in readable if record["intersects"]["gavin_lake"] > 0.0
+                1 for record in bounded if record["intersects"]["gavin_lake"] > 0.0
             ),
-            "overlap_ha": sum(record["intersects"]["gavin_lake"] for record in readable),
+            "overlap_ha": sum(record["intersects"]["gavin_lake"] for record in bounded),
         },
         "legacy_fusion_files": [
             record["path"] for record in records if record.get("format") == "FUSION LIDARBIN index"
@@ -184,9 +207,16 @@ def main() -> None:
         "caveats": [
             "Overlap area is counted per file and can double-count overlapping tiles.",
             "The 2013 LAS files carry no CRS; they are assumed to be EPSG:26910 UTM 10N.",
-            "FUSION LIDARBIN is not readable by the current LAS/raster pipeline.",
+            "FUSION LIDARBIN is valid data; it is readable with FUSION/LDV or "
+            "LDA2LAS, not with laspy or a standard LAS reader.",
         ],
     }
+    gavin_2009 = Path("../femic-afrf-gavinlake-instance/data/lidar/gavin_2009/summary.json")
+    if gavin_2009.exists():
+        payload = json.loads(gavin_2009.read_text())
+        summary["gavin_lake"]["fusion_lidarbin_tiles"] = payload.get("tiles")
+        summary["gavin_lake"]["fusion_lidarbin_trees"] = payload.get("trees")
+        summary["gavin_lake"]["fusion_lidarbin_coverage"] = "full block"
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps({"summary": summary, "records": records}, indent=2) + "\n")
     print(json.dumps(summary, indent=2))
