@@ -1,0 +1,395 @@
+===== sections_8_1_8_2 =====
+--- PDF page 115 ---
+Alex Fraser Research Forest 
+April 1, 2006
+107
+8. Forest Operations
+8.1. Timber Harvesting
+8.1.1. Timber Harvest Systems
+Ground-based harvest systems dominate our operations, since less than 5 % of our net area 
+exceeds 30% slope.  Figure 15 following shows the portions of the Gavin Lake Block where 
+harvest system is restricted by slope.  The minor area of steep slopes at Knife Creek have all 
+been allocated to environmentally sensitive areas (ESAs) and reserved from harvest.  For 
+blocks at Gavin Lake with substantial area exceeding 30% slope, we anticipate using cable 
+harvest systems, and areas exceeding 60% slope are generally considered inaccessible.
+Ground-based harvest systems presently in use on the Research Forest include;
+shortwood harvester/forwarder combination for shortwood harvesting, particularly well 
+suited for thinning;
+feller-buncher/grapple skidder/processor combination for shortwood or long-log 
+harvesting, best suited to clearcutting; and
+hand falling/cable skidder/hand bucking combination for shortwood or long log 
+harvesting, best suited to stands with large piece size, high value, or salvage harvesting.
+•
+•
+•
+Figure 15:  Areas of the Alex Fraser Research Forest Gavin Lake Block where slope exceeds 
+30%.
+Figure 15:  Areas of the Alex Fraser Research Forest Gavin Lake Block where slope exceeds 
+30%.
+Slope %
+
+--- PDF page 116 ---
+Management and Working Plan #3
+108
+8.1.2. Block Harvesting
+A paper plan for cutblocks has been created for the 
+Research Forest, and is shown at Appendix 9.  In order 
+to ensure that all productive land is accounted for, the 
+following principles for block layout apply:
+Block boundaries are 
+located at geographic 
+features, such as ridges, 
+streams, or road centre-
+lines;
+Deletions from the harvest 
+area for stand-level reserves 
+are made within cutblock 
+boundaries
+Target access limits are 
+assessed at the cutblock 
+level;
+8.1.3. Salvage Harvesting
+Salvage harvesting contributed 18% of our average annual harvest volume from 2001-2005 
+(ranging from 8-30% over the same period), and is directed to remove timber damaged by 
+wind, snow, or insects.  This program is particularly important in the mature stands that are 
+partially harvested, since breakage or windthrow leads to significant bark beetle infestations 
+in the residual Douglas-fir and spruce stands.  We expect that our salvage operations will 
+continue at the same pace throughout the period of this plan.
+8.1.4. Timber and Boundary Marking
+Timber and boundaries are marked according to the following protocol:
+Block boundaries are painted in blue paint on the first tree outside the cutblock.
+Where partial cutting will be directed by timber marking, orange paint denotes a tree to be 
+cut, and blue paint denotes a tree to be left, and timber may be marked to cut or marked to 
+leave;
+Flagging tape is used for marking as follows: 
+- orange denotes a falling boundary 
+- pink denotes access 
+- yellow and blue denote survey or cruise lines and plots 
+- yellow/black candy stripe denotes research installations
+•
+•
+•
+•
+•
+•
+Phases of harvest systems in 
+use on the Alex Fraser Research 
+Forest depicted clockwise from 
+above: forwarder; single-grip 
+harvester, feller-buncher, hand-
+faller, line skidder, and small 
+line skidder (centre).
+Phases of harvest systems in 
+use on the Alex Fraser Research 
+Forest depicted clockwise from 
+above: forwarder; single-grip 
+harvester, feller-buncher, hand-
+faller, line skidder, and small 
+line skidder (centre).
+
+--- PDF page 117 ---
+Alex Fraser Research Forest 
+April 1, 2006
+109
+8.2. Access
+8.2.1. Roads
+Good access to the Research Forest is critical to achieve our objectives; without it we cannot 
+fulfil our research and education mandates, or our forest management objectives.  On the other 
+hand, land set aside for access is removed from timber production, so we seek to balance our 
+expectations. 
+We calculate that each percentage point of our productive land area given up to roads implies 
+an annual cost of approximately $75,000 when lost timber 
+productivity, cost of capital employed, and maintenance 
+costs are considered.  This is not considering the 
+environmental risks or impacts of roads, which we seek to 
+minimize.
+On the other hand, public and worker safety demand 
+an adequate road system, and increasing road density 
+improves the efficiency of logging, hauling, fire control, 
+silviculture, research and teaching.  
+Techniques are available to optimize road density, and we 
+will undertake such an analysis through the period of this plan.
+Action 18:  Undertake an optimization analysis for road density.
+Master Road Plan
+A paper plan for complete access development has been created for the Research Forest, and 
+is included at Appendix 11.  This plan lays out all of the roads which will be required on each 
+block of the Forest, based upon the following assumptions: 
+Maximum sustained favourable grade = 12%
+Maximum sustained adverse grade = 8% 
+Maximum skid distance = 400 m
+No circular routes
+The paper plan is only a small-scale examination of our road needs and opportunities, and 
+must be updated frequently as new road projects are contemplated.  Table 37 provides a 
+statement of the current area and our plans for the future access.  According to this plan, 
+we need to build an additional 24 km of road at Gavin Lake, and we are over-built at Knife 
+Creek by about 9 km.  We will continue to add road at Gavin Lake, but at Knife Creek we do 
+not expect to remove existing roads.  Instead, we have permanently deactivated some road 
+segments, and we hope that they will be reclaimed naturally over time.
+•
+•
+•
+•
+West Road, Knife Creek Block, AlexFraser Research 
+Forest.
+West Road, Knife Creek Block, AlexFraser Research 
+Forest.
+
+--- PDF page 118 ---
+Management and Working Plan #3
+110
+Table 37:  Roads as a proportion of Management Unit and total area of the Alex Fraser 
+Research Forest, as of 2006.
+Access Density
+Gavin Lake
+Knife Creek
+Total
+Net Area (ha)
+4,922
+3,117
+8,040
+Existing Roads
+Length (km)
+112.2
+86.2
+198.4
+R/W Area (ha)
+168.3
+129.3
+297.6
+km/km2
+2.28
+2.76
+2.47
+% by area
+3.4 %
+4.1 %
+3.7 %
+Total Chance 
+Planned Roads
+Length (km)
+136.1
+77.2
+213.3
+R/W Area (ha)
+204.1
+115.9
+320.0
+km/km2
+2.77
+2.48
+2.65
+% by area
+4.1 %
+3.7 %
+4.0 %
+Planned Change in 
+Road Density
+Length (km)
++23.9
+-9.0
++14.9
+R/W Area (ha)
++35.8
+-13.4
++22.4
+km/km2
++0.49
+-0.28
++0.18
+% by area
++0.7 %
+-0.4 %
++0.3%
+Road Construction and Maintenance
+Road construction is a capital investment, and requires annual maintenance to ensure that 
+the roads are serviceable.  An annual road construction program of 0.5 - 3 km of new road is 
+anticipated throughout the period of this plan, and we intend to build all planned new roads 
+in a 15-year period.  New roads will be designed and built according to the specifications in 
+Table 38.
+Table 38:  Road construction specifications for the Alex Fraser Research Forest (adapted 
+from BC Ministry of Forests 2002)
+Surface 
+Width 
+(m)
+Design 
+Speed 
+(km/hr)
+Min. 
+Sight 
+Distance 
+(m)
+Min. 
+Radius 
+of Curve 
+(m)
+Maximum Road Grades (%)
+Favorable
+Adverse
+Switch-
+backs
+Sustained
+Short Pitch
+Sustained
+Short Pitch
+4
+20
+40
+15
+16
+18
+9
+12
+8
+5-6
+30
+65
+35
+12
+14
+8
+10
+8
+40
+95
+65
+12
+14
+8
+10
+8
+Our roads are generally built to a permanent standard, because they are necessary for the 
+education, research and protection functions of the Research Forest, as well as ongoing 
+harvesting operations.  Partial cutting silvicultural systems require extensive permanent road 
+systems to accommodate repeated harvest entries, and  70% of the Research Forest will be 
+harvested by partial cutting.  All roads will be inspected annually to ensure that drainage and 
+surface conditions are maintained. 
+Stream crossings will be constructed in accordance with Provincial standards and best 
+practices (Province of BC 2004) and will comply with timing windows established by Bings 
+et al. (2004).
+
+--- PDF page 119 ---
+Alex Fraser Research Forest 
+April 1, 2006
+111
+Due to the cost of ballasting and surfacing, most of our roads are built from native materials 
+with spot surfacing as required.  This leads to roads that are seasonally unserviceable due to 
+wet conditions.  We will continue a planned program of upgrading our main roads as revenues 
+allow, to ensure that our permanent roads are durable, serviceable, and present limited 
+environmental risk.
+Temporary roads and landings, accessing land within final harvest areas in the Timber 
+Production Area and the Gavin Lake Demonstration Area, will be built to a minimum standard 
+and then rehabilitated, generally within two years of harvest completion.
+Particular attention is required to avoid negative impacts on water quality, especially since 
+most of the soils within the Research Forest are 
+fine textured and subject to erosion.  
+Construction and maintenance will include: 
+maintaining natural surface-drainage 
+patterns
+digging out sumps, where water can sit to 
+allow sediments to drop out of suspension
+ensuring adequate cross drains which drain 
+to the forest floor
+armouring cross-drain inlets and outlets
+Road Deactivation
+Roads are generally not deactivated, except in the case of temporary roads that will not be 
+rehabilitated within two years of construction.
+8.2.2. Landings
+One significant issue that we presently face is the area of landings used during logging.  As 
+with roads, landing space constitutes a permanent removal from the productive land base, 
+and their restoration is expensive and uncertain.  Table 39 following provides a statement of 
+present landing area.  
+Landing requirements vary by each harvest system.  Cable and shortwood harvesting systems, 
+use the road right-of-way to process, inventory, and load logs and do not require landing 
+space.  Feller-buncher systems can work on roadside or landings in a clearcut situation, but 
+only on landings if a residual stand is being retained.  Hand-falling systems typically require 
+landings as they are generally lower in productivity and thus less capitalized, and tend to use 
+wheeled loaders.  The principle impediment to shifting to roadside logging is the loading 
+phase.  Roadside logging requires a high-cost butt-and-top loader capable of high productivity.
+•
+•
+•
+•
+Road rehabilitation Block 136, Gavin Lake Block.
+Road rehabilitation Block 136, Gavin Lake Block.
+
+--- PDF page 120 ---
+Management and Working Plan #3
+112
+Table 39:  Landings as a proportion of Management Unit and total area of the Alex Fraser 
+Research Forest, as of 2006.
+Landing Density
+Gavin Lake
+Knife Creek
+Total
+Net Area (ha)
+4,922
+3,117
+8,040
+Existing Landings
+ha
+24.1
+34.2
+58.3
+% by Area
+0.5 %
+1.1%
+0.7 %
+We have the objective to reduce the area of new landings to zero over time.  As a first step to 
+that end, we will use the following strategies to reduce our landing requirements in the short- 
+to mid-term.
+Favour shortwood harvester/processor harvest systems in partial cutting
+Place landings strategically to serve more than one cutblock.
+Place landings at road junctions as much as possible
+Each landing should serve 30 ha.
+Maximum landing area should be 0.25 ha
+Allow skidding through adjacent cutblocks to improve the utilization of landing space.
+Landings on temporary roads should be rehabilitated in phase with the road.
+8.2.3. Skid Trails
+Skid trails are a feature of partial cutting.  We do not consider trails to be a withdrawal from 
+the productive landbase if the soils beneath the trail remain fully productive, and if:
+they are narrower than our target inter-tree distance at final harvest; or 
+they don’t occupy too much of the site. 
+In order to protect the residual stand and the productive capacity of the land we manage, it is 
+important to establish skid trails in an efficient manner, according to the following guidelines 
+and the concepts presented in Figure 16:
+Aim for a target density1 of 10% of the productive area of a stand to be occupied by trails; 
+Re-use existing trails;
+Lay out and mark trails in advance of logging to minimize trail density and reduce 
+skidding damage (Nyland 1996);
+Minimize trail width;
+Maximize inter-trail distance;
+Trail junctions at angles of 35˚ or less;
+Utilize ghost trails to reduce the density of skid trails;
+1 Measured by the outside edges of the travelled area of the trail, and counting only those trails that have been 
+used to skid or forward logs (i.e. ghost trails used for felling only do not contribute to trail area).  Trails with a 
+running surface 4 m wide and spaced 40 m apart occupy 10% of the productive area.
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+•
+•
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+
+===== appendix_11 =====
+--- PDF page 165 ---
+153
+Management and Working Plan #3
+Alex Fraser Research Forest 
+January 1, 2007
+Appendix 11:  Road Master Plan
+
+--- PDF page 166 ---
+154
+Management and Working Plan #3
+Alex Fraser Research Forest 
+January 1, 2007

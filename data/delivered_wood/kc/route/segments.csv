@@ -1,0 +1,303 @@
+segment_id,from_vertex,to_vertex,length_m,haul_cost,build_cost,maintain_cost,road_class,source
+1,1,2,689.1559288943607,0.11026494862309773,0.0,1378.3118577887215,public_tenure,BC Forest Tenure Road Section Lines
+2,2,3,664.8938731113075,0.10638301969780921,0.0,1329.787746222615,public_tenure,BC Forest Tenure Road Section Lines
+3,2,4,309.17158205528796,0.049467453128846074,0.0,618.3431641105759,public_tenure,BC Forest Tenure Road Section Lines
+4,3,5,1367.0091771954603,0.21872146835127368,0.0,2734.0183543909206,public_tenure,BC Forest Tenure Road Section Lines
+5,3,6,362.3287398470039,0.05797259837552062,0.0,724.6574796940077,public_tenure,BC Forest Tenure Road Section Lines
+6,7,8,377.84741455767573,0.06045558632922812,0.0,755.6948291153515,public_tenure,BC Forest Tenure Road Section Lines
+7,6,9,528.938864446886,0.08463021831150176,0.0,1057.877728893772,public_tenure,BC Forest Tenure Road Section Lines
+8,6,7,821.151082542712,0.13138417320683393,0.0,1642.302165085424,public_tenure,BC Forest Tenure Road Section Lines
+9,10,11,247.64340585384008,0.03962294493661442,0.0,495.28681170768016,public_tenure,BC Forest Tenure Road Section Lines
+10,7,12,621.4459073392497,0.09943134517427997,0.0,1242.8918146784995,public_tenure,BC Forest Tenure Road Section Lines
+11,10,13,255.8077273051332,0.040929236368821315,0.0,511.6154546102664,public_tenure,BC Forest Tenure Road Section Lines
+12,12,10,591.8963118859494,0.09470340990175193,0.0,1183.792623771899,public_tenure,BC Forest Tenure Road Section Lines
+13,12,14,926.5313483072556,0.1482450157291609,0.0,1853.0626966145112,public_tenure,BC Forest Tenure Road Section Lines
+14,15,16,454.76799608691726,0.07276287937390677,0.0,909.5359921738345,public_tenure,BC Forest Tenure Road Section Lines
+15,17,18,991.0677803865664,0.15857084486185063,0.0,1982.1355607731327,public_tenure,BC Forest Tenure Road Section Lines
+16,5,19,868.1376319256397,0.13890202110810235,0.0,1736.2752638512793,public_tenure,BC Forest Tenure Road Section Lines
+17,5,20,1045.1792733707762,0.1672286837393242,0.0,2090.3585467415523,public_tenure,BC Forest Tenure Road Section Lines
+18,21,22,407.68826163523164,0.06523012186163707,0.0,815.3765232704633,public_tenure,BC Forest Tenure Road Section Lines
+19,20,21,458.99815998491704,0.07343970559758674,0.0,917.9963199698341,public_tenure,BC Forest Tenure Road Section Lines
+20,20,23,785.9740414958086,0.12575584663932937,0.0,1571.9480829916172,public_tenure,BC Forest Tenure Road Section Lines
+21,21,24,492.43556448669506,0.07878969031787121,0.0,984.8711289733901,public_tenure,BC Forest Tenure Road Section Lines
+22,14,25,811.8746060887761,0.12989993697420418,0.0,1623.7492121775522,public_tenure,BC Forest Tenure Road Section Lines
+23,14,26,423.1609032376776,0.06770574451802842,0.0,846.3218064753552,public_tenure,BC Forest Tenure Road Section Lines
+24,27,28,1785.040369335152,0.28560645909362437,0.0,3570.080738670304,public_tenure,BC Forest Tenure Road Section Lines
+25,23,24,502.0531489917916,0.08032850383868666,0.0,1004.1062979835832,public_tenure,BC Forest Tenure Road Section Lines
+26,24,29,1031.7269195980286,0.1650763071356846,0.0,2063.4538391960573,public_tenure,BC Forest Tenure Road Section Lines
+27,19,30,1560.2199135812132,0.24963518617299413,0.0,3120.4398271624264,public_tenure,BC Forest Tenure Road Section Lines
+28,23,31,517.7128103761621,0.08283404966018594,0.0,1035.4256207523242,public_tenure,BC Forest Tenure Road Section Lines
+29,19,32,823.8157260398353,0.13181051616637365,0.0,1647.6314520796707,public_tenure,BC Forest Tenure Road Section Lines
+30,33,34,415.2172857689181,0.0664347657230269,0.0,830.4345715378362,public_tenure,BC Forest Tenure Road Section Lines
+31,25,35,720.9394679805613,0.11535031487688982,0.0,1441.8789359611226,public_tenure,BC Forest Tenure Road Section Lines
+32,25,36,888.1306413101995,0.14210090260963193,0.0,1776.261282620399,public_tenure,BC Forest Tenure Road Section Lines
+33,37,38,350.70804651827723,0.05611328744292436,0.0,701.4160930365545,public_tenure,BC Forest Tenure Road Section Lines
+34,29,39,867.6693925179918,0.1388271028028787,0.0,1735.3387850359836,public_tenure,BC Forest Tenure Road Section Lines
+35,29,40,1407.9189703239856,0.22526703525183772,0.0,2815.837940647971,public_tenure,BC Forest Tenure Road Section Lines
+36,41,42,250.57213898876532,0.04009154223820245,0.0,501.14427797753063,public_tenure,BC Forest Tenure Road Section Lines
+37,32,43,116.48812255872465,0.018638099609395945,0.0,232.9762451174493,public_tenure,BC Forest Tenure Road Section Lines
+38,32,44,1846.6111347125357,0.2954577815540057,0.0,3693.2222694250713,public_tenure,BC Forest Tenure Road Section Lines
+39,43,45,342.9359116302634,0.054869745860842145,0.0,685.8718232605268,public_tenure,BC Forest Tenure Road Section Lines
+40,43,46,2258.681303975229,0.3613890086360367,0.0,4517.362607950458,public_tenure,BC Forest Tenure Road Section Lines
+41,45,47,513.841645436878,0.08221466326990048,0.0,1027.683290873756,public_tenure,BC Forest Tenure Road Section Lines
+42,45,48,1234.7842535611674,0.1975654805697868,0.0,2469.5685071223347,public_tenure,BC Forest Tenure Road Section Lines
+43,48,49,1478.8580603140178,0.23661728965024287,0.0,2957.7161206280357,public_tenure,BC Forest Tenure Road Section Lines
+44,48,50,1096.273274225664,0.17540372387610625,0.0,2192.546548451328,public_tenure,BC Forest Tenure Road Section Lines
+45,51,52,379.5657970160605,0.06073052752256969,0.0,759.131594032121,public_tenure,BC Forest Tenure Road Section Lines
+46,53,40,1247.7224184158608,0.19963558694653774,0.0,2495.4448368317217,public_tenure,BC Forest Tenure Road Section Lines
+47,40,54,589.4836703333235,0.09431738725333177,0.0,1178.967340666647,public_tenure,BC Forest Tenure Road Section Lines
+48,47,55,2.9204796683277796,0.0004672767469324448,0.0,5.840959336655559,public_tenure,BC Forest Tenure Road Section Lines
+49,47,56,1151.11992180661,0.1841791874890576,0.0,2302.23984361322,public_tenure,BC Forest Tenure Road Section Lines
+50,51,47,584.2846723359291,0.09348554757374868,0.0,1168.5693446718583,public_tenure,BC Forest Tenure Road Section Lines
+51,57,51,629.5008779201022,0.10072014046721636,0.0,1259.0017558402044,public_tenure,BC Forest Tenure Road Section Lines
+52,53,58,1245.7716685810558,0.19932346697296893,0.0,2491.5433371621116,public_tenure,BC Forest Tenure Road Section Lines
+53,59,53,526.5187045422124,0.08424299272675399,0.0,1053.0374090844248,public_tenure,BC Forest Tenure Road Section Lines
+54,56,60,1.1249399546799024,0.00017999039274878438,0.0,2.2498799093598048,public_tenure,BC Forest Tenure Road Section Lines
+55,61,56,737.7537156032691,0.11804059449652307,0.0,1475.5074312065383,public_tenure,BC Forest Tenure Road Section Lines
+56,56,62,651.5777034253576,0.10425243254805723,0.0,1303.1554068507153,public_tenure,BC Forest Tenure Road Section Lines
+57,63,59,1608.818590275077,0.25741097444401234,0.0,3217.637180550154,public_tenure,BC Forest Tenure Road Section Lines
+58,64,59,782.7984460570187,0.125247751369123,0.0,1565.5968921140375,public_tenure,BC Forest Tenure Road Section Lines
+59,62,65,706.1563671953154,0.11298501875125047,0.0,1412.3127343906308,public_tenure,BC Forest Tenure Road Section Lines
+60,62,66,1252.930113068438,0.2004688180909501,0.0,2505.860226136876,public_tenure,BC Forest Tenure Road Section Lines
+61,67,68,704.9826579994835,0.11279722527991737,0.0,1409.965315998967,public_tenure,BC Forest Tenure Road Section Lines
+62,69,63,21.02106433515416,0.003363370293624666,0.0,42.04212867030832,public_tenure,BC Forest Tenure Road Section Lines
+63,70,63,675.9404068394414,0.10815046509431063,0.0,1351.8808136788828,public_tenure,BC Forest Tenure Road Section Lines
+64,63,71,2051.492743815131,0.32823883901042095,0.0,4102.985487630262,public_tenure,BC Forest Tenure Road Section Lines
+65,72,73,386.57033782365124,0.0618512540517842,0.0,773.1406756473025,public_tenure,BC Forest Tenure Road Section Lines
+66,74,75,337.75034203919625,0.05404005472627141,0.0,675.5006840783925,public_tenure,BC Forest Tenure Road Section Lines
+67,76,77,268.54513186008444,0.042967221097613514,0.0,537.0902637201689,public_tenure,BC Forest Tenure Road Section Lines
+68,75,76,1121.9517875059364,0.17951228600094984,0.0,2243.903575011873,public_tenure,BC Forest Tenure Road Section Lines
+69,75,78,1629.9358140956053,0.2607897302552969,0.0,3259.8716281912107,public_tenure,BC Forest Tenure Road Section Lines
+70,76,79,179.16448189696712,0.028666317103514742,0.0,358.32896379393424,public_tenure,BC Forest Tenure Road Section Lines
+71,80,81,430.54028063445014,0.06888644490151202,0.0,861.0805612689003,public_tenure,BC Forest Tenure Road Section Lines
+72,82,83,423.69248145342107,0.06779079703254738,0.0,847.3849629068421,public_tenure,BC Forest Tenure Road Section Lines
+73,84,85,555.5684341719889,0.08889094946751823,0.0,1111.1368683439778,public_tenure,BC Forest Tenure Road Section Lines
+74,83,86,593.4755127457514,0.09495608203932024,0.0,1186.9510254915028,public_tenure,BC Forest Tenure Road Section Lines
+75,83,87,912.2848317100804,0.14596557307361288,0.0,1824.5696634201609,public_tenure,BC Forest Tenure Road Section Lines
+76,1,15,1901.8583753792595,0.30429734006068154,0.0,0.0,synthetic_component_connector,screening assumption
+77,15,17,1697.5774857130768,0.2716123977140923,0.0,0.0,synthetic_component_connector,screening assumption
+78,15,37,2015.243888466169,0.3224390221545871,0.0,0.0,synthetic_component_connector,screening assumption
+79,17,27,770.0157465920988,0.12320251945473581,0.0,0.0,synthetic_component_connector,screening assumption
+80,27,41,1230.6177310602995,0.19689883696964794,0.0,0.0,synthetic_component_connector,screening assumption
+81,33,37,163.02717564871307,0.02608434810379409,0.0,0.0,synthetic_component_connector,screening assumption
+82,33,72,4002.249649884563,0.6403599439815302,0.0,0.0,synthetic_component_connector,screening assumption
+83,67,74,483.98191081917514,0.07743710573106803,0.0,0.0,synthetic_component_connector,screening assumption
+84,72,82,1155.93197031648,0.18494911525063681,0.0,0.0,synthetic_component_connector,screening assumption
+85,74,80,730.5822404081587,0.1168931584653054,0.0,0.0,synthetic_component_connector,screening assumption
+86,80,84,484.9898658735447,0.07759837853976716,0.0,0.0,synthetic_component_connector,screening assumption
+87,82,84,1362.7200923153205,0.2180352147704513,0.0,0.0,synthetic_component_connector,screening assumption
+88,1000001,85,251.07837492100433,0.04017253998736069,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+89,1000002,87,351.01935532515654,0.05616309685202505,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+90,1000003,85,327.9786103444546,0.05247657765511274,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+91,1000004,85,232.0534668637964,0.037128554698207424,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+92,1000005,86,449.3976948012223,0.07190363116819558,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+93,1000006,86,295.54021576758106,0.047286434522812976,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+94,1000007,77,414.72353641116985,0.06635576582578719,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+95,1000009,73,500.2175371311438,0.08003480594098301,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+96,1000010,73,170.85917820484497,0.027337468512775197,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+97,1000011,73,401.29107234586905,0.06420657157533906,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+98,1000012,77,102.26665233985356,0.01636266437437657,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+99,1000013,77,177.36582855227374,0.028378532568363802,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+100,1000014,76,330.01603192801304,0.05280256510848209,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+101,1000015,76,67.81100341907883,0.010849760547052613,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+102,1000016,71,62.234475592995885,0.009957516094879342,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+103,1000018,87,265.2397950554764,0.042438367208876226,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+104,1000019,83,31.91950371942768,0.005107120595108429,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+105,1000020,82,59.04061668712851,0.009446498669940562,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+106,1000021,86,140.55830344361308,0.022489328550978096,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+107,1000022,80,194.548575538213,0.03112777208611408,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+108,1000023,84,222.47877780834744,0.035596604449335593,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+109,1000024,78,275.446777065621,0.044071484330499365,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+110,1000025,81,181.11608531267964,0.028978573650028747,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+111,1000026,81,321.4267945364031,0.05142828712582451,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+112,1000027,83,301.5412197137445,0.04824659515419913,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+113,1000028,85,252.756221370436,0.040440995419269765,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+114,1000029,87,19.572431515542856,0.003131589042486857,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+115,1000030,86,953.9468462433712,0.1526314953989394,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+116,1000031,86,776.6837102602971,0.12426939364164755,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+117,1000032,86,722.9437529213185,0.11567100046741097,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+118,1000033,86,593.2379008881207,0.09491806414209933,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+119,1000034,86,445.47213163850813,0.0712755410621613,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+120,1000035,86,599.5336087441148,0.09592537739905838,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+121,1000036,66,176.18064810073597,0.028188903696117755,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+122,1000037,75,196.05186563034516,0.03136829850085523,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+123,1000038,75,278.7005952835267,0.044592095245364276,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+124,1000039,59,1026.4931895810564,0.16423891033296903,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+125,1000040,72,853.9317871178855,0.1366290859388617,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+126,1000041,67,426.1424557938006,0.0681827929270081,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+127,1000043,62,538.1038969036874,0.08609662350458999,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+128,1000044,67,400.2001753395207,0.06403202805432331,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+129,1000045,68,407.35074314214353,0.06517611890274297,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+130,1000046,72,929.5663551186095,0.14873061681897753,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+131,1000047,72,1289.1560340117917,0.2062649654418867,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+132,1000048,72,1492.82568123724,0.23885210899795842,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+133,1000049,67,697.4931587523835,0.11159890540038137,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+134,1000050,66,343.5220542278726,0.05496352867645962,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+135,1000051,68,235.24991568616107,0.037639986509785776,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+136,1000052,67,208.49621920957057,0.03335939507353129,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+137,1000054,72,777.2386505750145,0.12435818409200233,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+138,1000055,72,1207.5787736577327,0.19321260378523725,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+139,1000056,72,937.5421593341406,0.15000674549346252,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+140,1000057,72,1469.7150148885596,0.23515440238216956,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+141,1000058,70,264.9968345047941,0.04239949352076706,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+142,1000059,72,561.9700064048697,0.08991520102477915,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+143,1000060,39,773.0740148913636,0.12369184238261818,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+144,1000061,39,305.2938944123186,0.04884702310597098,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+145,1000062,39,469.50028022775746,0.0751200448364412,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+146,1000063,54,436.9918897624671,0.06991870236199474,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+147,1000064,29,271.86533623632494,0.043498453797811996,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+148,1000065,54,702.8547138896497,0.11245675422234395,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+149,1000066,39,411.5770541428376,0.06585232866285402,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+150,1000067,29,475.1715995480881,0.07602745592769411,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+151,1000068,54,411.18878871972123,0.0657902061951554,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+152,1000069,54,311.23016870444826,0.04979682699271173,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+153,1000070,54,86.55094739848677,0.013848151583757884,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+154,1000071,40,621.0290469826691,0.09936464751722707,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+155,1000072,53,532.7113656197652,0.08523381849916244,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+156,1000073,53,459.32218748815615,0.07349154999810499,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+157,1000074,65,406.32114146080426,0.06501138263372869,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+158,1000075,49,383.7039339968026,0.06139262943948842,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+159,1000076,50,431.21488628395457,0.06899438180543274,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+160,1000077,30,452.0211169267593,0.0723233787082815,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+161,1000078,28,203.39608574340755,0.03254337371894521,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+162,1000079,25,263.3647368676661,0.042138357898826584,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+163,1000080,36,220.50120405982696,0.035280192649572314,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+164,1000081,50,174.71075309051855,0.02795372049448297,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+165,1000082,25,449.23714591696,0.0718779433467136,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+166,1000083,25,169.34569636167296,0.027095311417867675,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+167,1000084,41,155.2188433072839,0.024835014929165424,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+168,1000085,35,169.55459311364964,0.027128734898183945,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+169,1000086,42,29.886289215399792,0.004781806274463967,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+170,1000087,40,284.30822273492697,0.04548931563758832,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+171,1000088,53,302.4160033688033,0.04838656053900853,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+172,1000089,53,606.4991047558713,0.0970398567609394,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+173,1000090,31,167.34281476643483,0.026774850362629575,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+174,1000092,31,414.4713513699916,0.06631541621919866,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+175,1000093,31,343.9595299067933,0.05503352478508693,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+176,1000095,57,375.9296111232455,0.06014873777971928,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+177,1000096,57,519.4996180475055,0.08311993888760089,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+178,1000097,52,138.3969677956449,0.02214351484730319,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+179,1000099,52,339.0669746513813,0.05425071594422101,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+180,1000100,51,462.3406675822954,0.07397450681316727,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+181,1000102,56,186.09830287206523,0.02977572845953044,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+182,1000103,60,146.02574642633434,0.023364119428213495,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+183,1000105,32,167.42687310085196,0.026788299696136317,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+184,1000106,43,136.69311915133852,0.021870899064214164,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+185,1000107,43,302.4676473046453,0.04839482356874325,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+186,1000109,55,466.830219349529,0.07469283509592464,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+187,1000110,32,503.8736922536813,0.08061979076058902,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+188,1000111,65,213.90817129668838,0.034225307407470144,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+189,1000112,62,406.9562972171671,0.06511300755474674,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+190,1000113,65,280.18569918161154,0.04482971186905785,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+191,1000114,48,435.18680901104676,0.06962988944176748,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+192,1000115,44,748.3725912288915,0.11973961459662265,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+193,1000117,35,198.25854236093903,0.03172136677775025,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+194,1000118,11,930.2377620706139,0.14883804193129824,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+195,1000119,11,563.5833861086884,0.09017334177739014,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+196,1000120,26,150.15987019412066,0.024025579231059305,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+197,1000121,26,314.4421344494051,0.05031074151190482,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+198,1000122,25,426.881207004715,0.06830099312075441,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+199,1000124,6,383.1215672195246,0.06129945075512394,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+200,1000125,18,313.57042578622736,0.050171268125796385,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+201,1000126,12,423.77542499176263,0.06780406799868202,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+202,1000127,1,440.956547840191,0.07055304765443056,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+203,1000129,18,109.75276908714008,0.017560443053942415,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+204,1000130,8,164.03467852486008,0.026245548563977615,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+205,1000132,10,316.0416110278545,0.05056665776445673,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+206,1000133,12,80.89502964982556,0.01294320474397209,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+207,1000134,14,363.73040333461,0.058196864533537604,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+208,1000135,14,267.5549117534678,0.04280878588055485,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+209,1000137,8,1181.5562763313314,0.18904900421301304,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+210,1000138,11,342.14716025806024,0.054743545641289644,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+211,1000139,2,219.0099115626209,0.03504158585001935,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+212,1000140,2,256.60552243024495,0.041056883588839195,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+213,1000141,22,676.7961717469736,0.10828738747951579,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+214,1000142,4,268.8983852554716,0.04302374164087546,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+215,1000143,22,828.1403233997004,0.13250245174395206,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+216,1000144,4,368.3978296277208,0.05894365274043533,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+217,1000145,9,170.37135331294394,0.027259416530071034,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+218,1000146,15,376.1633611624024,0.06018613778598439,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+219,1000148,6,386.22966932738456,0.06179674709238153,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+220,1000149,15,321.42058295032194,0.05142729327205151,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+221,1000150,9,246.56479270125558,0.0394503668322009,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+222,1000151,9,427.99785982613326,0.06847965757218133,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+223,1000152,22,352.20411708976184,0.0563526587343619,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+224,1000153,5,583.9229535919764,0.09342767257471622,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+225,1000154,20,366.2756212866483,0.05860409940586373,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+226,1000155,5,196.01257262608544,0.03136201162017367,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+227,1000159,29,440.0353635921162,0.0704056581747386,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+228,1000160,23,266.9802659919822,0.042716842558717154,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+229,1000161,75,366.4830806831605,0.05863729290930569,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+230,1000162,80,82.81852893503799,0.01325096462960608,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+231,1000163,79,218.811238178326,0.035009798108532164,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+232,1000164,84,229.1874922247654,0.03666999875596247,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+233,1000165,72,682.7163733376138,0.10923461973401823,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+234,1000166,72,538.1446287431068,0.0861031405988971,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+235,1000167,69,496.17680301669105,0.07938828848267057,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+236,1000168,70,557.5098655676283,0.08920157849082053,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+237,1000169,72,307.58253217878485,0.04921320514860558,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+238,1000170,69,104.20829276476628,0.016673326842362605,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+239,1000171,46,346.8519301111989,0.05549630881779183,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+240,1000172,58,561.060372557924,0.08976965960926785,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+241,1000173,58,275.7343840108643,0.04411750144173829,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+242,1000174,57,266.17928027548527,0.04258868484407765,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+243,1000175,51,107.70746026267464,0.017233193642027946,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+244,1000176,53,145.04800309388375,0.0232076804950214,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+245,1000177,59,196.94196626513164,0.03151071460242107,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+246,1000178,59,624.8796813714005,0.09998074901942408,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+247,1000179,59,470.0750849475163,0.07521201359160261,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+248,1000180,64,308.1726099537734,0.04930761759260375,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+249,1000181,61,355.55221431535927,0.05688835429045749,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+250,1000182,64,487.78391446185515,0.07804542631389683,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+251,1000183,61,221.94234833821793,0.035510775734114874,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+252,1000184,55,76.27655468105434,0.012204248748968695,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+253,1000185,48,366.2818888460642,0.058605102215370276,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+254,1000186,47,569.0044006112116,0.09104070409779387,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+255,1000187,50,633.6757654257328,0.10138812246811726,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+256,1000188,33,450.47191169370427,0.07207550587099269,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+257,1000189,46,148.3769073987526,0.023740305183800416,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+258,1000190,37,41.24382326622128,0.006599011722595405,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+259,1000191,37,412.9741104515284,0.06607585767224455,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+260,1000192,37,393.08938465818994,0.0628943015453104,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+261,1000193,32,365.9074680516632,0.05854519488826612,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+262,1000194,56,313.43260234669367,0.05014921637547099,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+263,1000195,62,449.8510817372779,0.07197617307796447,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+264,1000196,19,382.17331579157,0.061147730526651206,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+265,1000197,19,425.37258000688826,0.06805961280110212,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+266,1000198,30,151.45802998553594,0.02423328479768575,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+267,1000199,30,513.0704627325501,0.08209127403720803,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+268,1000200,48,532.6180167416018,0.0852188826786563,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+269,1000201,45,398.12316025698425,0.06369970564111749,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+270,1000202,44,448.1766283148168,0.0717082605303707,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+271,1000203,48,72.37689926035969,0.011580303881657553,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+272,1000204,60,464.1447583299827,0.07426316133279724,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+273,1000205,65,368.35869689978125,0.05893739150396501,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+274,1000206,50,467.5563687249727,0.07480901899599564,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+275,1000207,49,225.45907988820113,0.036073452782112186,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+276,1000208,4,144.3453735878446,0.023095259774055136,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+277,1000209,8,267.423050440578,0.04278768807049248,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+278,1000210,8,417.52737083041194,0.06680437933286591,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+279,1000211,11,746.9812477861059,0.11951699964577694,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+280,1000212,17,278.6549070187552,0.044584785123000834,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+281,1000213,27,96.17461331157098,0.015387938129851357,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+282,1000214,11,504.33012143487366,0.08069281942957979,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+283,1000215,10,115.03055107116145,0.018404888171385834,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+284,1000216,26,331.1970322130969,0.05299152515409551,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+285,1000217,22,336.751873233036,0.053880299717285765,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+286,1000218,22,643.2511046245521,0.10292017673992834,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+287,1000219,21,202.06514131339705,0.03233042261014353,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+288,1000220,16,332.47660135646714,0.05319625621703475,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+289,1000221,20,380.59574029172035,0.06089531844667526,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+290,1000222,15,196.08125072989162,0.031373000116782665,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+291,1000223,24,350.3745230036066,0.056059923680577065,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+292,1000224,24,33.163875224628036,0.005306220035940486,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+293,1000225,29,374.37327281458397,0.05989972365033344,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+294,1000226,20,294.3374188223269,0.04709398701157231,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+295,1000227,23,251.65944791004299,0.04026551166560688,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+296,1000228,34,399.72278727898197,0.06395564596463713,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+297,1000229,38,515.9500110179184,0.08255200176286695,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+298,1000230,38,386.73611949165416,0.06187777911866467,0.0,0.0,block_access_screening,nearest public-road vertex; screening assumption
+299,51,2000000,27546.74722286023,4.407479555657638,0.0,0.0,synthetic_mill_connector,straight-line distance x 1.25; screening assumption
+300,51,2000001,33342.31277174315,5.334770043478904,0.0,0.0,synthetic_mill_connector,straight-line distance x 1.25; screening assumption
+301,51,2000002,33610.404671047225,5.3776647473675565,0.0,0.0,synthetic_mill_connector,straight-line distance x 1.25; screening assumption
+302,51,2000003,69841.72385655277,11.174675817048444,0.0,0.0,synthetic_mill_connector,straight-line distance x 1.25; screening assumption

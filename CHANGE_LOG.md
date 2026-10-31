@@ -529,3 +529,106 @@ status and the GitHub issue comments.
   zero rows for every dataset account, including product area and yield, instead
   of omitting product accounts entirely. Selection runs keep their produced
   values and get zeros in periods with no product flow.
+
+## 2026-10-31
+
+- Activated P7, roads, log sorts, and mills, under parent issue #124 on
+  `feature/p7-roads-logs-mills`. The phase plan is
+  `planning/p7-roads-logs-mills.md`.
+
+- Completed P7.1, the source audit (#125), in
+  `notes/reference/afrf-roads-logs-mills-sources.md`. Added
+  `runbooks/build_mwp3_roads_audit.py` and the derived tables under
+  `data/roads/`: Table 37 road length/area, Table 38 road specifications,
+  Table 39 landings, harvest systems, access assumptions, the gap register,
+  the source manifest, and rendered Appendix 11 access maps. The audit found
+  that `AFRF.zip` has an empty `AFRF/roads/` directory, `AFRF_H.pin` sets
+  `useRoutes = false`, and the OneDrive payload has no road, mill, or price
+  data. The phase remains blocked on AFRF road, mill, cost, sort, and price
+  records; no model result or legal access claim is made.
+
+- Added the public supplementary references that can be used while the AFRF
+  records are pending. `runbooks/build_afrf_mill_candidates.py` builds a
+  20-row, 16-mill candidate register within 100 km of the two blocks from the
+  BC Major Timber Processing Facilities layer. `runbooks/
+  build_bc_interior_price_reference.py` transcribes the BC Interior Log Market
+  Report for June-August 2026 and the five interior grade codes. Both are
+  candidate references with explicit caveats: capacity is not demand, the
+  mill sort labels are unconfirmed, and the market prices are regional
+  averages, not AFRF sales or a grade-by-grade matrix.
+
+- Added the first P7.5 screening layer. `runbooks/
+  classify_kc_harvest_systems.py` measures slope from the 2024 LidarBC 1 m DEM
+  for the 211 split blocks. The screening finds 198 ground-based candidates and
+  13 cable candidates; no block has at least 50% of its area above 60% slope.
+  The output is a screening layer, not a field operability determination.
+
+- Added the P7.2 public-access context check. `runbooks/
+  measure_kc_public_access.py` measures straight-line distance from each split
+  block to the public road layer: 59 blocks within 100 m, 169 within 400 m, and
+  42 beyond 400 m. This is not a route linkage; the public layer is incomplete
+  against MWP #3 Table 37.
+
+- Added the forester-facing data request at
+  `notes/reference/afrf-data-request-roads-logs-mills.md`. It asks for the
+  missing road and mill layers, route tables, road and haul costs, mill
+  capacities and accepted sorts, sales and scaling records, harvest-system
+  records, current approvals, and publication permissions. It has not been
+  sent; it is ready for review.
+
+- Added the Appendix 11 map recovery. `runbooks/recover_mwp3_access_maps.py`
+  uses `figrecover 0.1.0a1` to render/crop the two access maps and test
+  georeferencing. Knife Creek registers to the SUP boundary at 4.48 px mean
+  distance; Gavin Lake is unresolved against the managed-fragment union.
+  Added `data/roads/plan_map/` with the overlay, georeference records, the
+  Appendix 11 road table, and the Table 37 reconciliation. The map table and
+  Table 37 disagree by 16.9-77.2 km on Knife Creek and 14.7-20.3 km on Gavin
+  Lake; the plan is internally inconsistent.
+
+- Added `data/mills/mwp3_historical_mill_references.csv`. The plan's mill
+  references are historical (G.W.J. Moore, Knife Creek bush mills, All-Fir,
+  Merrill-Gardner/Merrill-Wagner, generic Williams Lake mills); it contains no
+  current mill register, capacity, accepted sort, or grade price.
+
+- Built the first screening delivered-wood layer. `runbooks/
+  build_kc_screening_route.py` turns the public road layer into a connected
+  route graph: 75 road segments, 13 components joined by 12 synthetic
+  connectors, and 4 candidate sawlog mills. `ws4 simulate` routes the 200-year
+  schedule: 540,192 m3 from 126 blocks, 3.14 M CAD haul, 1.61 M CAD maintenance.
+  `runbooks/build_kc_delivered_wood.py` splits volume by VRI species composition
+  and the BC interior June-August 2026 sort mix: about 65.3 M CAD gross value,
+  with Df-Larch sawlog at 385,271 m3. The rates, mill haul, and sort mix are
+  screening assumptions, recorded in `data/delivered_wood/kc/README.md`.
+
+## 2026-10-31
+
+- Added the AFRF LiDAR coverage audit
+  (`runbooks/audit_afrf_lidar_coverage.py`,
+  `data/lidar/afrf_lidar_coverage_audit.json`). Knife Creek has 56 readable
+  files intersecting; Gavin Lake has 11 2013 LAS files over about 448 ha.
+  The 2009 FUSION LIDARBIN is valid data; it was processed with FUSION/LDV for
+  Gavin Lake and is not a standard LAS file.
+
+- Added the Knife Creek block piece-size table
+  (`data/lidar/kc_2024/block_piece_size.csv`) and a validated FHOPS tree
+  inventory pilot for block 78
+  (`data/lidar/kc_2024/fhops/kc_0078/`). The full 2024 canopy inventory has
+  278,318 trees; the block table averages 78 TPH, 0.62 m3/stem, and 48 m3/ha.
+  The canopy-only TPH is below the Lahrsen felled-stem range, so VRI/PSP total
+  density is required for classic productivity.
+
+- Added the tree-level/FHOPS/FVS deep dive
+  (`notes/reference/tree-level-inventory-fhops-deep-dive.md`) and the generic
+  FHOPS tree-inventory exporter (`runbooks/export_fhops_tree_inventory.py`).
+  The note records the available FHOPS tree contract, stem/bucking, tree
+  simulation, tree replay, classic productivity/costing, and the Tree Lab
+  sandbox gap in this checkout.
+
+- Corrected the Tree Lab record from the maintainer handoff. Tree Lab is an
+  unmerged sandbox on `public-demo` (`sandbox/tree_lab`, commit `7c66ce9f`),
+  with Studio on `phase21-scenario-studio` (`4a96f9a6`). It adds
+  `fhops tree system` and `fhops tree scene` plus a 4D machine/truck/deck
+  viewer. The live demo has four synthetic cases; its `afrf-gavin` case is 900
+  synthetic trees on a 6.91 ha placeholder, not the 2009 Gavin inventory. The
+  `phase18` checkout cannot run it as-is. See
+  `notes/reference/tree-level-inventory-fhops-deep-dive.md`.

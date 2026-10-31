@@ -1,0 +1,41 @@
+block,working_circle,road_type,length_km,area_ha,area_pct,source_page,source,note
+Knife Creek,KC MDWR,Primary,22.5,45.0,1.3,154,Appendix 11 access plan table,
+Knife Creek,KC MDWR,Secondary,21.8,32.7,0.9,154,Appendix 11 access plan table,
+Knife Creek,KC MDWR,Unimproved,25.0,25.0,0.7,154,Appendix 11 access plan table,
+Knife Creek,KC MDWR,Landings,,34.0,1.0,154,Appendix 11 access plan table,Length not tabulated for landings.
+Knife Creek,KC MDWR,Total,69.3,136.7,3.9,154,Appendix 11 access plan table,
+Knife Creek,KC MDWR,Proposed roads,0.0,0.0,0.0,154,Appendix 11 access plan table,
+Knife Creek,KC MDWR,Grand total,69.3,136.7,3.9,154,Appendix 11 access plan table,
+Knife Creek,KC MDWR,Total working circle,,3485.6,,154,Appendix 11 access plan table,"Gross working-circle area, not road area."
+Gavin Lake,GL DEMO,Primary,8.6,10.9,1.5,153,Appendix 11 access plan table,
+Gavin Lake,GL DEMO,Secondary,3.9,5.9,0.8,153,Appendix 11 access plan table,
+Gavin Lake,GL DEMO,Unimproved,0.0,0.0,0.0,153,Appendix 11 access plan table,
+Gavin Lake,GL DEMO,Landings,,4.6,0.7,153,Appendix 11 access plan table,Length not tabulated for landings.
+Gavin Lake,GL DEMO,Total,12.5,21.4,3.0,153,Appendix 11 access plan table,
+Gavin Lake,GL DEMO,Proposed roads,3.6,5.4,0.8,153,Appendix 11 access plan table,
+Gavin Lake,GL DEMO,Grand total,16.1,26.8,3.8,153,Appendix 11 access plan table,
+Gavin Lake,GL DEMO,Total working circle,,706.1,,153,Appendix 11 access plan table,"Gross working-circle area, not road area."
+Gavin Lake,Timber Production,Primary,20.7,38.6,1.5,153,Appendix 11 access plan table,
+Gavin Lake,Timber Production,Secondary,8.2,12.3,0.5,153,Appendix 11 access plan table,
+Gavin Lake,Timber Production,Unimproved,9.8,9.8,0.4,153,Appendix 11 access plan table,
+Gavin Lake,Timber Production,Landings,,11.0,0.4,153,Appendix 11 access plan table,Length not tabulated for landings.
+Gavin Lake,Timber Production,Total,38.7,71.7,2.8,153,Appendix 11 access plan table,
+Gavin Lake,Timber Production,Proposed roads,10.7,16.1,0.6,153,Appendix 11 access plan table,
+Gavin Lake,Timber Production,Grand total,49.4,87.8,3.4,153,Appendix 11 access plan table,
+Gavin Lake,Timber Production,Total working circle,,2598.7,,153,Appendix 11 access plan table,"Gross working-circle area, not road area."
+Gavin Lake,BV MDWR,Primary,15.8,31.6,1.0,153,Appendix 11 access plan table,
+Gavin Lake,BV MDWR,Secondary,9.5,14.2,0.5,153,Appendix 11 access plan table,
+Gavin Lake,BV MDWR,Unimproved,15.4,15.4,0.5,153,Appendix 11 access plan table,
+Gavin Lake,BV MDWR,Landings,,10.0,0.3,153,Appendix 11 access plan table,Length not tabulated for landings.
+Gavin Lake,BV MDWR,Total,40.7,71.2,2.3,153,Appendix 11 access plan table,
+Gavin Lake,BV MDWR,Proposed roads,15.2,22.8,0.7,153,Appendix 11 access plan table,
+Gavin Lake,BV MDWR,Grand total,55.9,94.0,3.1,153,Appendix 11 access plan table,
+Gavin Lake,BV MDWR,Total working circle,,3050.0,,153,Appendix 11 access plan table,"Gross working-circle area, not road area."
+Gavin Lake,TOTAL,Primary,45.1,81.1,1.3,153,Appendix 11 access plan table,
+Gavin Lake,TOTAL,Secondary,21.6,32.4,0.5,153,Appendix 11 access plan table,
+Gavin Lake,TOTAL,Unimproved,25.2,25.2,0.4,153,Appendix 11 access plan table,
+Gavin Lake,TOTAL,Landings,,25.6,0.4,153,Appendix 11 access plan table,Length not tabulated for landings.
+Gavin Lake,TOTAL,Total,91.9,164.3,2.6,153,Appendix 11 access plan table,
+Gavin Lake,TOTAL,Proposed roads,29.5,44.3,0.7,153,Appendix 11 access plan table,
+Gavin Lake,TOTAL,Grand total,121.4,208.6,3.3,153,Appendix 11 access plan table,
+Gavin Lake,TOTAL,Total working circle,,6354.8,,153,Appendix 11 access plan table,"Gross working-circle area, not road area."

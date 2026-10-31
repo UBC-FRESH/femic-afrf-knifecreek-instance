@@ -6,6 +6,8 @@ Active planning surfaces for the Knife Creek instance:
   risks, and decisions.
 - `fvsbc-state-transition-design.md` — the technical design for turning
   FVS-BC selection-cut runs into a ws4 state-transition dataset.
+- `p7-roads-logs-mills.md` — the planned delivered-wood phase: road network,
+  mills, log sorts, harvest systems, and the AFRF data request.
 
 Implementation surfaces that follow these plans:
 

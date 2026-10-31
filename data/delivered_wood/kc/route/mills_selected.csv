@@ -1,0 +1,5 @@
+destination,company,locality,product_code,capacity_value,capacity_unit,status,knife_creek_km,synthetic_route_km
+destination.MILL_103_LBR,Tolko Industries Ltd.,Williams Lake,LBR,363.84,million_board_feet_lumber,Op,22.04,27.54674722286023
+destination.MILL_107_LBR,Tolko Industries Ltd.,Williams Lake,LBR,165.6,million_board_feet_lumber,Op,26.68,33.342312771743146
+destination.MILL_114_LBR,West Fraser Mills Ltd.,Williams Lake,LBR,172.8,million_board_feet_lumber,Op,26.89,33.61040467104723
+destination.MILL_95_LBR,West Fraser Mills Ltd.,100 Mile House,LBR,172.32,million_board_feet_lumber,Op,55.87,69.84172385655276

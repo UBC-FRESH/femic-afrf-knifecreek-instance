@@ -1,0 +1,15 @@
+{
+  "source": "BC Forest Tenure Road Section Lines (public layer)",
+  "blocks": 211,
+  "roads": 44,
+  "method": "block representative point to nearest road section; straight-line distance, not skid or route distance",
+  "within_100m": 59,
+  "within_400m": 169,
+  "beyond_400m": 42,
+  "max_distance_m": 1181.5498092784483,
+  "caveats": [
+    "Public tenure-road layer is incomplete against MWP #3 Table 37 (44 sections, 59.6 km vs 86.2 km existing).",
+    "Nearest-road distance is not an access route, skid distance, or legal access determination.",
+    "Do not use this table as a route linkage."
+  ]
+}

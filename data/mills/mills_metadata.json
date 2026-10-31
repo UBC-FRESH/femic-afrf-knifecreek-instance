@@ -1,0 +1,28 @@
+{
+  "source": "BC Major Timber Processing Facilities",
+  "source_url": "https://www.arcgis.com/home/item.html?id=70ec7d6020f24ac1a068d5f808b3cca6",
+  "layer_url": "https://maps.gov.bc.ca/arcgis/rest/services/whse/bcgw_pub_whse_imagery_and_base_maps/MapServer/54",
+  "source_date": "2026-06-17",
+  "query_date": "2026-10-31",
+  "licence": "Open Government Licence - British Columbia",
+  "radius_km": 100.0,
+  "source_features": 252,
+  "candidate_rows": 20,
+  "candidate_mills": 16,
+  "blocks": {
+    "knife_creek_centroid_epsg3005": [
+      1284856.0110549524,
+      789984.217613279
+    ],
+    "gavin_lake_centroid_epsg3005": [
+      1288865.91769339,
+      836789.1076323625
+    ]
+  },
+  "caveats": [
+    "Capacity is the published estimated annual capacity, not current demand.",
+    "Accepted log sorts are inferred from the mill product class; they are not confirmed.",
+    "The table is a candidate register, not a destination or eligibility model.",
+    "The source layer is a 2023 survey published in 2026; verify current status."
+  ]
+}

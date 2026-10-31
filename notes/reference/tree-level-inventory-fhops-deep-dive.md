@@ -1,0 +1,223 @@
+# Tree-level inventory, FHOPS, and creative silviculture: deep dive
+
+Date: 2026-10-31
+Status: evidence and integration design
+
+## Bottom line
+
+- Knife Creek has a processed 2024 canopy tree inventory and calibrated 2013/2019
+  LiDAR. Gavin Lake has full 2009 FUSION LIDARBIN coverage plus partial 2013
+  LAS; the 2009 data is valid and has now been processed with FUSION.
+- The Gavin 2025 VRI starting layer is built, but the compiled legacy matrix
+  still uses `AGE_2019`. The area-weighted 2025 VRI age is 125.3 years vs 99.4
+  years for the legacy ages advanced to 2025. A real rebuild is required.
+- The released FHOPS checkout has a validated tree-inventory contract, reference
+  stem/bucking, classic regression productivity and costing, single-machine tree
+  simulation, and schedule-coupled tree replay. The multi-machine 4D layer is
+  the unmerged **Tree Lab** sandbox, which adds `fhops tree system` and
+  `fhops tree scene`; it is not in this `phase18` checkout.
+- The LiDAR canopy tree density is too low for the Lahrsen feller-buncher
+  observed range (mean 78 TPH vs 205-3,044 TPH). LiDAR canopy trees are not
+  total stems. Use VRI/PSP total density for classic productivity and LiDAR for
+  piece-size/crown/clump structure.
+
+## LiDAR coverage audit
+
+`runbooks/audit_afrf_lidar_coverage.py` checked every LAS/LAZ, FUSION LIDARBIN,
+and GeoTIFF product in the OneDrive payload.
+
+| Block | Readable files intersecting | Overlap (double-counted) | Coverage |
+| --- | ---: | ---: | --- |
+| Knife Creek | 56 | 19,023 ha | 2013 LAS, 2019 rasters, 2024 tiles |
+| Gavin Lake | 11 + 100 FUSION tiles | 448 ha 2013; full 2009 | 2009 LIDARBIN and partial 2013 LAS |
+
+The 2013 LAS files carry no CRS and are assumed EPSG:26910. The 2009 files are
+valid FUSION LIDARBIN, not corrupted LAS; they were processed with FUSION/LDV
+4.61. There are no 2019 or 2024 Gavin tiles in the payload.
+
+## Tree-level inventories
+
+### Knife Creek
+
+- `data/lidar/kc_2024/trees.parquet`: 278,318 canopy trees.
+- 2013 LAS calibrated against the eight measured tree maps: mean F1 0.656.
+- 2019 CHM calibration: mean F1 0.667.
+- 211-block piece-size table:
+  `data/lidar/kc_2024/block_piece_size.csv`.
+- Mean block values: 78 TPH, 0.62 m3/stem, 48 m3/ha, QMD 27 cm.
+
+A FHOPS pilot inventory for block 78 is
+`data/lidar/kc_2024/fhops/kc_0078/`. `fhops tree inventory validate` accepts it
+(245 trees, one species, valid contract).
+
+### Gavin Lake
+
+- `data/lidar/gavin_2009/trees.gpkg`: 1,116,962 canopy trees from the full
+  2009 FUSION LIDARBIN coverage.
+- 5,663.7 ha, 197 TPH, mean height 15.0 m, mean DBH estimate 19.8 cm.
+- 2,793 of 2,907 fragments have at least one detected tree.
+- `data/lidar/gavin_2009/block_piece_size.csv`: fragment piece-size summary.
+- A FHOPS pilot inventory for fragment 323 is
+  `data/lidar/gavin_2009/fhops/gl_0323/`. `fhops tree inventory validate`
+  accepts it (413 trees, one species, valid contract).
+- `data/lidar/gavin_2013/` remains as an independent partial 2013 check.
+
+## Gavin 2025 VRI starting layer
+
+`runbooks/build_gavin_vri_start.py` writes:
+
+- `data/inventory/gavin_vri_2025_start.csv`
+- `data/inventory/gavin_vri_2025_start.gpkg`
+- `data/inventory/gavin_vri_2025_start_summary.json`
+
+Area-weighted summary:
+
+| Item | Value |
+| --- | ---: |
+| Fragments | 2,907 |
+| Area | 5,663.7 ha |
+| 2025 VRI age | 125.3 years |
+| Legacy age advanced to 2025 | 99.4 years |
+| Difference | +25.9 years |
+| Fragments differing by more than 20 years | 1,606 |
+
+Area-weighted species shares: FD 42.2%, SX 23.0%, FDI 8.7%, CW 7.5%, AT 5.9%,
+BL 4.5%, PL 3.5%, EP 1.9%, PLI 1.5%, AC 1.1%, ACT 0.3%.
+
+This is the rebuild input. It is not yet applied to `ws4/runtime/legacy_matrix`,
+because the legacy matrix's tracks and curves are keyed to the old `AGE_2019`
+states.
+
+## FHOPS capability audit
+
+### Classic regression productivity and costing
+
+FHOPS exposes:
+
+- `fhops dataset estimate-productivity` for Lahrsen feller-buncher, forwarder,
+  CTL harvester, grapple skidder, grapple yarder, roadside processor, loader,
+  shovel logger, and helicopter longline.
+- `fhops dataset estimate-cost` for machine rates, utilisation, and $/m3.
+- Published machine-rate, repair, and productivity reference tables.
+
+This is the correct path for block-level classic productivity. It needs mean
+stem size, volume/ha, stem density, and slope. For Knife Creek, LiDAR supplies
+piece size and height; VRI/PSP must supply total stem density.
+
+### Tree-scale simulation
+
+FHOPS has:
+
+- `fhops.tree.inventory.v1` contract, validation, pinning, and block mapping;
+- reference stem volume and log bucking (`fhops tree stems`);
+- single-machine spatial simulation (`fhops tree simulate`) with reach, travel,
+  slope, obstacles, and nearest/strip/TSP patterns;
+- schedule replay (`fhops tree replay`) and glTF/GLB tree-scene export.
+
+These are deterministic reference execution layers. The Tree Lab branch adds
+multi-machine event simulation (`fhops tree system`) and a scene/runner layer on
+top of them; it is not part of this checkout's release contract.
+
+### LiDAR operability
+
+`fhops/scenario/lidar_operability.py` consumes FEMIC/WS4 terrain and canopy
+support, classifies ground/cable/helicopter terrain, checks the current system,
+and reports advisory move-in, landing, and road multipliers. It does not
+silently rewrite systems or apply financial multipliers.
+
+### Tree Lab 4D sandbox
+
+Tree Lab is real, but it is an **unmerged sandbox application**, not a released
+FHOPS package. The authoritative handoff identifies:
+
+- `sandbox/tree_lab/` on the `public-demo` branch (`7c66ce9f`): FastAPI runner,
+  4D timeline, machine/truck/deck animation, and 3D viewer;
+- `sandbox/studio/` on `phase21-scenario-studio` (`4a96f9a6`): interactive
+  scenario editing, derived cases, and run replay;
+- runner commands: `fhops tree system` for multi-machine event simulation, then
+  `fhops tree scene` for deterministic glTF/GLB assets.
+
+The live public demo is `https://fhops.01101.dev/sandbox-v20261031i/`. It
+currently exposes four synthetic cases. Its `afrf-gavin` case is 900 synthetic
+trees on a 6.91 ha placeholder rectangle at 196 m3/ha; it is **not** the 1.1
+million-tree 2009 Gavin inventory.
+
+Our `phase18` FHOPS checkout does not contain `fhops tree system`, so Tree Lab
+cannot run against it as-is. Integration needs one of:
+
+- a shared worktree/bundle of `public-demo` and `phase21-scenario-studio`; or
+- those branches pushed to a shared remote; then a real case package built from
+  the Gavin 2009 inventory and validated with the Tree Lab runner.
+
+The current public demo is demonstration-only. It is not an operational,
+financial, or regulatory tool.
+
+## Integration design
+
+### 1. Producer layer
+
+- Knife Creek: 2024 LiDAR trees + eight measured tree maps; species unknown;
+  DBH height-allometry; crown radius available.
+- Gavin Lake: full 2009 FUSION LIDARBIN tree inventory + 2025 VRI; species from
+  VRI; total density from VRI/PSP. The partial 2013 inventory is an independent
+  check.
+- Both: FHOPS tree-inventory contract with review status `not_reviewed` until a
+  field reviewer signs off.
+
+### 2. Block-level classic productivity
+
+For each block and candidate system:
+
+- mean stem size from the tree list or LiDAR piece-size table;
+- volume/ha from the growth model or LiDAR/PSP;
+- stem density from VRI/PSP total stems, not canopy-only LiDAR;
+- slope from the DEM;
+- system from the harvest-system screen.
+
+Then call FHOPS productivity/costing. Output a block/system $/m3 table and a
+sensitivity range.
+
+### 3. Bottom-up tree process
+
+Pin the block tree inventory in a FHOPS scenario, then run:
+
+- `fhops tree stems` for reference volume and bucking;
+- `fhops tree simulate` for single-machine path/travel/processing time;
+- `fhops tree replay` for a schedule-coupled tree consumption test;
+- tree-scene export for a 3D review.
+
+That is the maximum detail in the `phase18` checkout. The Tree Lab branch adds
+`fhops tree system` for multi-machine events plus the 4D viewer and Studio
+runner.
+
+### 4. Fresh-FVSBC creative silviculture for Gavin Lake
+
+The legacy Cosmin Man GL matrix is an 80-year clearcut model. To capture
+commercial thinning, fuel mitigation, irregular selection, shelterwood, and
+variable retention:
+
+- build species-resolved tree lists for the GL AUs from the 2025 VRI plus a
+  regional SBSdw1/ICHmk3 PSP analog;
+- define treatment keys and cut lists for each prescription;
+- run FVS-BC with post-treatment growth;
+- compile the resulting curves and transitions into a new ws4 state graph;
+- keep the legacy matrix as a benchmark, not the production basis.
+
+This is a new state library, not an age-column edit.
+
+## What can be done now
+
+- KC classic productivity table from `block_piece_size.csv` and VRI density.
+- KC FHOPS tree-inventory pilot (block 78 validated).
+- Gavin 2009 FHOPS tree-inventory pilot (fragment 323, 413 trees, validated).
+- Gavin 2025 VRI starting layer.
+- FHOPS tree stems/simulate/replay pilots once a scenario pin is added.
+- A real Tree Lab case package once its worktrees or shared remote are available.
+
+## What needs new work or data
+
+- A reviewed total-stem density source for both blocks.
+- Access to the Tree Lab worktrees or a shared remote; then a real Gavin case
+  built from the 2009 inventory.
+- GL tree lists and FVS-BC treatment definitions for creative silviculture.
+- A full GL state-library rebuild using 2025 VRI and 2025/2026 start time.
