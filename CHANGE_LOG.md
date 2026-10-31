@@ -556,3 +556,9 @@ status and the GitHub issue comments.
   candidate references with explicit caveats: capacity is not demand, the
   mill sort labels are unconfirmed, and the market prices are regional
   averages, not AFRF sales or a grade-by-grade matrix.
+
+- Added the first P7.5 screening layer. `runbooks/
+  classify_kc_harvest_systems.py` measures slope from the 2024 LidarBC 1 m DEM
+  for the 211 split blocks. The screening finds 198 ground-based candidates and
+  13 cable candidates; no block has at least 50% of its area above 60% slope.
+  The output is a screening layer, not a field operability determination.

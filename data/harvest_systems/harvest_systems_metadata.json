@@ -1,0 +1,17 @@
+{
+  "source": "LidarBC 2024 1 m DEM",
+  "dem_tiles": 72,
+  "tiles_used": 72,
+  "blocks": 211,
+  "slope_method": "3x3 mean smoothing; np.gradient; percent slope",
+  "thresholds": {
+    "cable_candidate_pct_area_gt30": 50.0,
+    "inaccessible_pct_area_gt60": 50.0
+  },
+  "crs": "EPSG:6653",
+  "caveats": [
+    "Screening classification, not a field operability or cable feasibility determination.",
+    "The 2007 plan uses 'substantial area' rather than a fixed percentage; the 50% rule is a reproducible screening choice.",
+    "DEM voids are filled to the nearest valid pixel before smoothing."
+  ]
+}

@@ -348,6 +348,23 @@ Z (firmwood reject), 6 (undersized), 1 (premium sawlog), 2 (sawlog), and 4
 current FEMIC `log-grades` recipe. A crosswalk is a required decision, not an
 assumption.
 
+### Harvest-system screening
+
+`runbooks/classify_kc_harvest_systems.py` measures slope from the 2024 LidarBC
+1 m DEM for the 211 Knife Creek split blocks. The screening result is:
+
+- 198 blocks are ground-based candidates;
+- 13 blocks are cable candidates; and
+- no block has at least 50% of its area above 60% slope.
+
+The mean block has about 9.7% of its area above 30% slope and 1.3% above 60%.
+The maximum block fraction above 30% is about 96%; the maximum above 60% is
+about 41%.
+
+The 50% threshold is a reproducible screening choice, not the plan's wording.
+The output is not a field operability or cable-feasibility determination. See
+`data/harvest_systems/README.md`.
+
 ## What can proceed without the missing data
 
 - The 2007 plan extraction and source register are complete.
