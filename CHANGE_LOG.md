@@ -575,3 +575,17 @@ status and the GitHub issue comments.
   capacities and accepted sorts, sales and scaling records, harvest-system
   records, current approvals, and publication permissions. It has not been
   sent; it is ready for review.
+
+- Added the Appendix 11 map recovery. `runbooks/recover_mwp3_access_maps.py`
+  uses `figrecover 0.1.0a1` to render/crop the two access maps and test
+  georeferencing. Knife Creek registers to the SUP boundary at 4.48 px mean
+  distance; Gavin Lake is unresolved against the managed-fragment union.
+  Added `data/roads/plan_map/` with the overlay, georeference records, the
+  Appendix 11 road table, and the Table 37 reconciliation. The map table and
+  Table 37 disagree by 16.9-77.2 km on Knife Creek and 14.7-20.3 km on Gavin
+  Lake; the plan is internally inconsistent.
+
+- Added `data/mills/mwp3_historical_mill_references.csv`. The plan's mill
+  references are historical (G.W.J. Moore, Knife Creek bush mills, All-Fir,
+  Merrill-Gardner/Merrill-Wagner, generic Williams Lake mills); it contains no
+  current mill register, capacity, accepted sort, or grade price.

@@ -51,3 +51,11 @@ split block to the public road layer.
 Current result: 59 blocks within 100 m, 169 within 400 m, and 42 beyond 400 m.
 This is an access-context check, not a route linkage or legal access
 determination. The public layer is incomplete against Table 37.
+
+## Appendix 11 access maps
+
+`plan_map/` records the figrecover recovery of the two scanned access maps.
+Knife Creek registers to the SUP boundary at about 4.5 px mean boundary
+distance; Gavin Lake is unresolved against the managed-fragment union. The map
+road tables disagree with Table 37 and are transcribed, not reconciled. See
+`plan_map/README.md`.

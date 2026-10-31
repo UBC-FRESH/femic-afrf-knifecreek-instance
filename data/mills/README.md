@@ -20,3 +20,11 @@ a product-eligibility table from it without mill confirmation.
 
 The source is a 2023 Mill List Survey published in 2026. Verify current status
 and capacity before using it in a decision.
+
+## Historical mill references
+
+`mwp3_historical_mill_references.csv` transcribes the mill references in the
+2007 management plan. They are historical: G.W.J. Moore Sawmill at 150 Mile
+House, the Knife Creek bush mills, the All-Fir sawmill at Gavin Lake, the
+Merrill-Gardner/Merrill-Wagner sawmill, and generic Williams Lake mills. The
+plan gives no current mill names, capacities, accepted sorts, or grade prices.

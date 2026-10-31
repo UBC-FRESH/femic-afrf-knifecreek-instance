@@ -1,0 +1,16 @@
+{
+  "status": "unresolved",
+  "scale_px_per_m": 0.0966615549985292,
+  "theta_rad": -0.0012492809460876563,
+  "tx_px": 723.8652849659966,
+  "ty_px": 498.1605189873969,
+  "gis_centroid_epsg3005": [
+    1288596.6658000005,
+    836334.7220000001
+  ],
+  "mean_boundary_distance_px": 49.17141142971453,
+  "meters_per_pixel": 10.345374642640666,
+  "initial_scale_px_per_m": 0.09647534203679806,
+  "source_image": "tmp/figrecover/mwp3-access-maps/native/gavin.jpeg",
+  "gis_path": "../femic-afrf-gavinlake-instance/data/legacy_gavinlake/spatial/fragments.shp"
+}

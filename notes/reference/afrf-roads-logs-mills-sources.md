@@ -145,6 +145,41 @@ Both maps have a scale bar and north arrow. Neither has a coordinate grid or
 coordinate labels. They are planning figures, not georeferenced GIS layers.
 A warped raster is not a legal or field-verified access layer.
 
+### Appendix 11 map recovery
+
+`runbooks/recover_mwp3_access_maps.py` uses `figrecover 0.1.0a1` to render and
+crop the two access maps and test their registration to known GIS boundaries.
+
+- Knife Creek registers to the legal SUP boundary at a mean boundary distance
+  of 4.48 px, about 10.68 m/px, with negligible rotation.
+- Gavin Lake does not register to the managed-fragment union; the mean boundary
+  distance is 49.17 px, and the fit is marked unresolved.
+
+The Knife Creek overlay is `data/roads/plan_map/knife_creek_access_overlay.png`.
+Green is the SUP boundary and blue is the public road layer. The public roads
+align with the mapped road network well enough to confirm the georeference, but
+not well enough to extract a complete network.
+
+The Appendix 11 road tables and Table 37 disagree:
+
+| Block | Measure | Appendix 11 | Table 37 | Difference |
+| --- | --- | ---: | ---: | ---: |
+| Knife Creek | Existing road length | 69.3 km | 86.2 km | -16.9 km |
+| Knife Creek | Planned road length | 0.0 km | 77.2 km | -77.2 km |
+| Gavin Lake | Existing road length | 91.9 km | 112.2 km | -20.3 km |
+| Gavin Lake | Planned road length | 121.4 km | 136.1 km | -14.7 km |
+| Knife Creek | Net area | 3,485.6 ha | 3,117 ha | +368.6 ha |
+| Gavin Lake | Net area | 6,354.8 ha | 4,922 ha | +1,432.8 ha |
+
+The maps use working-circle areas; Table 37 uses different net areas. These are
+not rounding differences.
+
+A test skeleton of the dark map lines produced about 70 km on Knife Creek,
+close to the 69.3 km map total. Only about 5% of that skeleton fell within 10 m
+of the public road layer, so the length match was coincidental: most of the
+skeleton was contour or stream linework. The maps are useful for context and
+class inventory, not for a road GIS layer.
+
 ### Log value and cost
 
 Figure 7, printed page 21, shows average market value of log sales and adjusted
@@ -156,6 +191,20 @@ efficiency.
 
 This is a historical trend, not a current price list and not a grade-specific
 price matrix.
+
+### Historical mills
+
+The plan names historical mills but no current mill register:
+
+- G.W.J. Moore Sawmill, 150 Mile House, date unknown;
+- Knife Creek bush mills, 1940s to early 1960s;
+- All-Fir Lumber sawmill, eastern end of Gavin Lake, mid-1950s to early 1960s;
+- Merrill-Gardner/Merrill-Wagner sawmill, Gavin Lake, mid-1960s; and
+- generic "large mills in Williams Lake" after the mid-1960s.
+
+The transcribed references are in
+`data/mills/mwp3_historical_mill_references.csv`. The plan gives no capacity,
+accepted sort, coordinates, or price for any of them.
 
 ## What the plan does not provide
 
