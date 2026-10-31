@@ -440,6 +440,9 @@ Order of work:
 3. [x] Port the Kozak taper/merchantable-volume calculations and compute
    tree-level volumes.
 4. [~] Calibrate LiDAR tree detection and build spatial clump/opening accounts.
+   The 2019 CHM calibration reaches mean F1 0.67 against DBH >=15 cm tree
+   maps, but still misses the empirical clump counts. The eight tree maps are
+   the clump baseline; the 2013 LAS is the next calibration input.
 5. [~] Run the 20-period AAC/estate optimization. The split-block 50k search
    gives a provisional 3,209–3,797 m³/year range (mean 3,453), removes the
    single-block period-7 spike, and meets the 27,000 m³/period floors. The ±5%
