@@ -74,6 +74,7 @@ def main() -> None:
     parser.add_argument("--no-cut", type=Path, required=True)
     parser.add_argument("--multi-low", type=Path, required=True)
     parser.add_argument("--multi-moderate", type=Path, required=True)
+    parser.add_argument("--volume-basis", type=Path)
     parser.add_argument("--out-dir", type=Path, required=True)
     args = parser.parse_args()
 
@@ -93,6 +94,12 @@ def main() -> None:
     fragments["FRAGMENT_ID"] = fragments["BLOCK"]
     args.out_dir.mkdir(parents=True, exist_ok=True)
     fragments.to_csv(args.out_dir / "fragments.csv", index=False)
+    volume_factor: dict[str, float] = {}
+    if args.volume_basis:
+        basis = pd.read_csv(args.volume_basis)
+        volume_factor = dict(
+            zip(basis["au_id"].astype(str), basis["merch_to_fvs"].astype(float), strict=True)
+        )
 
     no_cut = pd.read_csv(args.no_cut)
     multi = {
@@ -157,6 +164,7 @@ def main() -> None:
                 cut_curve = next_id(f"cut_{state.lower()}")
                 entry = stage_data[stage_data["year"] == 0]
                 cut = float(entry["cut_m3_ha"].iloc[0]) if not entry.empty else 0.0
+                cut *= volume_factor.get(au_id, 1.0)
                 _add_curve(root, cut_curve, [(0, cut)])
                 products[state] = cut_curve
 
@@ -283,6 +291,8 @@ def main() -> None:
         "aus": len(au),
         "hmz_values": hmz_values,
         "stages": list(STAGES),
+        "volume_basis": str(args.volume_basis) if args.volume_basis else None,
+        "volume_factors": volume_factor,
         "entry_years": [30, 60, 90, 120, 150, 180],
         "treatments": list(REGIMES),
         "caveats": [
