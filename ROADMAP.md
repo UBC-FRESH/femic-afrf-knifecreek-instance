@@ -449,4 +449,5 @@ Order of work:
    gives a provisional 3,209–3,797 m³/year range (mean 3,453), removes the
    single-block period-7 spike, and meets the 27,000 m³/period floors. The ±5%
    even-flow band is still not converged. The calibrated sensitivity is about
-   2,616 m³/year and misses the floors.
+   2,616 m³/year and misses the floors. The frozen model-of-record package is
+   `notes/reports/kc-model-of-record.md`.

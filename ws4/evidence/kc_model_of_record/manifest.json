@@ -1,0 +1,48 @@
+{
+  "model_of_record": "ws4/dataset_kc_au_stages_split_volume_v1",
+  "dataset_manifest_sha256": "d936805bdbde7c3ddc2ac15578934f955ac3750f110ca1f178d496ca43a717b1",
+  "blocks": 211,
+  "max_block_ha": 39.944285,
+  "area_ha": 3481.7735905095346,
+  "growth_basis": {
+    "uncalibrated": "structural baseline",
+    "v1_marshall": "local sensitivity",
+    "v2c_faib": "regional sensitivity"
+  },
+  "volume_basis": {
+    "source": "KozakTaper_Version6",
+    "merch_to_fvs_range": [
+      0.759543852700166,
+      0.8273845961679177
+    ]
+  },
+  "structure_basis": {
+    "tree_maps": "8 Marshal plots",
+    "tree_map_groups": [
+      "KC_IDFdk3_FDI_L.L"
+    ],
+    "lidar_plots": 24,
+    "lidar_tree_f1": [
+      0.6558,
+      0.6675
+    ]
+  },
+  "validation": {
+    "faib_sites": 92,
+    "marshall_2024_plots": 24,
+    "structural_targets_uncalibrated": "55/55",
+    "structural_targets_v1": "51/55"
+  },
+  "legal": {
+    "basis": "GWM 2007 U-5-002 dwl_50",
+    "hmz": "1 M, 2 L, 3 M, 4 M, 5 A",
+    "current_order_verified": false,
+    "compliance_claim": false
+  },
+  "caveats": [
+    "not legally compliant",
+    "spatial clump/opening incomplete",
+    "growth ensemble not independently validated",
+    "AAC scenarios downstream"
+  ]
+}
