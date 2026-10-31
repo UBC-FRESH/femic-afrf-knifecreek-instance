@@ -33,7 +33,7 @@ The run is `ws4/runtime/kc_delivered_wood_screening`, reproduced with:
 python runbooks/build_kc_screening_route.py --out-dir data/delivered_wood/kc/route
 ws4 simulate \
   --dataset ws4/dataset_kc_au_stages_split_volume_v1 \
-  --schedule ws4/runtime/kc_aac_50k/schedule.csv \
+  --schedule ws4/runtime/kc_aac_split_50k/schedule.csv \
   --years 200 \
   --route-config data/delivered_wood/kc/route/route.yaml \
   --out ws4/runtime/kc_delivered_wood_screening
@@ -41,10 +41,10 @@ ws4 simulate \
 
 Result:
 
-- 97 blocks routed; 13 scheduled blocks produce no routed yield.
-- 306,438 m3 routed.
-- 1.79 M CAD haul.
-- 1.25 M CAD maintenance.
+- 126 blocks routed; 223 scheduled entries produce routed yield.
+- 540,192 m3 routed.
+- 3.14 M CAD haul.
+- 1.61 M CAD maintenance.
 - 0 build cost, because all public roads are treated as existing.
 - All volume goes to `destination.MILL_103_LBR`; without mill demand or
   capacity constraints, the least-cost mill wins.
@@ -58,8 +58,8 @@ Result:
 - the June-August 2026 BC Interior Log Market Report sort mix; and
 - the published species-group and sort average prices.
 
-The result is 306,438 m3 and about 36.4 M CAD gross value. The largest sort is
-Df-Larch sawlog at 204,378 m3 and 25.4 M CAD. Deciduous and residual species
+The result is 540,192 m3 and about 65.3 M CAD gross value. The largest sort is
+Df-Larch sawlog at 385,271 m3 and 47.9 M CAD. Deciduous and residual species
 use the `Other/Other` price as a proxy.
 
 The sort mix is a regional market-purchase mix, not an AFRF grade distribution.
@@ -75,6 +75,7 @@ The prices are regional averages, not AFRF sales. This is a screening layer.
 - `route_cost_report.csv` - WS4 route cost report.
 - `used_roads.csv` - WS4 used-road geometry.
 - `product_values.csv` - WS4 product values.
+- `route_map.png` - screening route and mill map.
 
 ## Limits
 

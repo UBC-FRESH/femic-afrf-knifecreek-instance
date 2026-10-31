@@ -1,13 +1,13 @@
 {
   "route_run": "ws4/runtime/kc_delivered_wood_screening",
-  "routed_volume_m3": 306437.5604061901,
-  "value_cad": 36404980.254188,
+  "routed_volume_m3": 540192.396735049,
+  "value_cad": 65296783.87890248,
   "unpriced_volume_m3": 0.0,
-  "haul_cost_cad": 1792919.7479746914,
-  "maintenance_cost_cad": 1246705.6340794829,
+  "haul_cost_cad": 3139203.548756621,
+  "maintenance_cost_cad": 1613158.5480019765,
   "build_cost_cad": 0.0,
   "route_years": 199,
-  "blocks_routed": 97,
+  "blocks_routed": 126,
   "mills": [
     "destination.MILL_103_LBR"
   ],

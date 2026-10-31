@@ -594,8 +594,8 @@ status and the GitHub issue comments.
   build_kc_screening_route.py` turns the public road layer into a connected
   route graph: 75 road segments, 13 components joined by 12 synthetic
   connectors, and 4 candidate sawlog mills. `ws4 simulate` routes the 200-year
-  schedule: 306,438 m3 from 97 blocks, 1.79 M CAD haul, 1.25 M CAD maintenance.
+  schedule: 540,192 m3 from 126 blocks, 3.14 M CAD haul, 1.61 M CAD maintenance.
   `runbooks/build_kc_delivered_wood.py` splits volume by VRI species composition
-  and the BC interior June-August 2026 sort mix: about 36.4 M CAD gross value,
-  with Df-Larch sawlog at 204,378 m3. The rates, mill haul, and sort mix are
+  and the BC interior June-August 2026 sort mix: about 65.3 M CAD gross value,
+  with Df-Larch sawlog at 385,271 m3. The rates, mill haul, and sort mix are
   screening assumptions, recorded in `data/delivered_wood/kc/README.md`.

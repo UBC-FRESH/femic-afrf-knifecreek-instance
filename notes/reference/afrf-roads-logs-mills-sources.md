@@ -429,7 +429,7 @@ demand or capacity constraint is available.
 
 `runbooks/build_kc_delivered_wood.py` splits the routed volume using VRI species
 composition and the BC interior June-August 2026 sort mix and prices. Gross
-value is about 36.4 M CAD; Df-Larch sawlog is 204,378 m3 and 25.4 M CAD. The
+value is about 65.3 M CAD; Df-Larch sawlog is 385,271 m3 and 47.9 M CAD. The
 sort mix is a regional market-purchase mix, not an AFRF grade distribution.
 
 The full layer is under `data/delivered_wood/kc/`. The rates are TSA23 proxy
