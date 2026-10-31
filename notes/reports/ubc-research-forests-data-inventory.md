@@ -133,9 +133,11 @@ LiDAR proxy needs calibration, not rejection.
 
 The 2019 CHM local-maxima calibration against DBH >=15 cm trees reaches a mean
 F1 of 0.67 (window 3, minimum height 3 m, NMS 1.5 m; 69 detected tops vs 56.5
-observed). It still does not reproduce the tree-map clump counts. The eight tree
-maps remain the empirical clump baseline; the 2013 LAS is the next calibration
-input.
+observed). The 2013 LAS calibration reaches F1 0.656 (63.75 detected tops vs
+56.5 observed). Neither LiDAR layer reproduces the tree-map clump counts well
+enough to be a legal clump detector. The eight tree maps remain the empirical
+clump baseline; LiDAR is the canopy/cover/gap layer, not the legal clump
+arbiter.
 
 ## Immediate next steps
 
