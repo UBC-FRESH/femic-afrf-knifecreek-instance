@@ -568,3 +568,10 @@ status and the GitHub issue comments.
   block to the public road layer: 59 blocks within 100 m, 169 within 400 m, and
   42 beyond 400 m. This is not a route linkage; the public layer is incomplete
   against MWP #3 Table 37.
+
+- Added the forester-facing data request at
+  `notes/reference/afrf-data-request-roads-logs-mills.md`. It asks for the
+  missing road and mill layers, route tables, road and haul costs, mill
+  capacities and accepted sorts, sales and scaling records, harvest-system
+  records, current approvals, and publication permissions. It has not been
+  sent; it is ready for review.
