@@ -1,0 +1,74 @@
+{
+  "purpose": "screening delivered-wood route network for Knife Creek",
+  "blocks": 211,
+  "public_road_segments": 75,
+  "component_count_before_connectors": 13,
+  "synthetic_component_connectors": 12,
+  "mills": [
+    {
+      "destination": "destination.MILL_103_LBR",
+      "company": "Tolko Industries Ltd.",
+      "locality": "Williams Lake",
+      "product_code": "LBR",
+      "capacity_value": 363.84,
+      "capacity_unit": "million_board_feet_lumber",
+      "status": "Op",
+      "knife_creek_km": 22.04,
+      "synthetic_route_km": 27.54674722286023
+    },
+    {
+      "destination": "destination.MILL_107_LBR",
+      "company": "Tolko Industries Ltd.",
+      "locality": "Williams Lake",
+      "product_code": "LBR",
+      "capacity_value": 165.6,
+      "capacity_unit": "million_board_feet_lumber",
+      "status": "Op",
+      "knife_creek_km": 26.68,
+      "synthetic_route_km": 33.342312771743146
+    },
+    {
+      "destination": "destination.MILL_114_LBR",
+      "company": "West Fraser Mills Ltd.",
+      "locality": "Williams Lake",
+      "product_code": "LBR",
+      "capacity_value": 172.8,
+      "capacity_unit": "million_board_feet_lumber",
+      "status": "Op",
+      "knife_creek_km": 26.89,
+      "synthetic_route_km": 33.61040467104723
+    },
+    {
+      "destination": "destination.MILL_95_LBR",
+      "company": "West Fraser Mills Ltd.",
+      "locality": "100 Mile House",
+      "product_code": "LBR",
+      "capacity_value": 172.32,
+      "capacity_unit": "million_board_feet_lumber",
+      "status": "Op",
+      "knife_creek_km": 55.87,
+      "synthetic_route_km": 69.84172385655276
+    }
+  ],
+  "rates": {
+    "haul_cad_per_m3_m": 0.00016,
+    "build_cad_per_m": 0.0,
+    "maintain_cad_per_m_year": 2.0,
+    "mill_road_factor": 1.25,
+    "basis": "TSA23 C5 route fixture medians; screening proxy, not AFRF contract rates"
+  },
+  "access_distance_m": {
+    "min": 19.572431515542856,
+    "median": 350.3745230036066,
+    "p90": 676.7961717469736,
+    "max": 1492.82568123724
+  },
+  "caveats": [
+    "Public tenure-road layer is incomplete against MWP #3 Table 37.",
+    "Disconnected public-road components are joined by straight synthetic connectors.",
+    "Block access is a straight line to the nearest public-road vertex.",
+    "Mill haul is a straight-line distance times 1.25, not a routed highway path.",
+    "Rates are TSA23 proxies, not AFRF contract rates.",
+    "This is a screening layer, not a legal access or operational model."
+  ]
+}

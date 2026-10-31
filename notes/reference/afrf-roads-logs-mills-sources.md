@@ -414,6 +414,28 @@ The 50% threshold is a reproducible screening choice, not the plan's wording.
 The output is not a field operability or cable-feasibility determination. See
 `data/harvest_systems/README.md`.
 
+### Screening delivered-wood layer
+
+The current data support a screening delivered-wood layer, not an operational
+one. `runbooks/build_kc_screening_route.py` builds a connected route graph from
+the public road layer: 75 road segments, 13 disconnected components joined by
+12 synthetic connectors, and 4 candidate sawlog mills. Blocks link to the
+nearest public-road vertex; median access distance is 350 m.
+
+`ws4 simulate` routes the 200-year Knife Creek schedule over that graph. The
+result is 306,438 m3 routed from 97 blocks, with 1.79 M CAD haul and 1.25 M CAD
+maintenance. All volume goes to `destination.MILL_103_LBR` because no mill
+demand or capacity constraint is available.
+
+`runbooks/build_kc_delivered_wood.py` splits the routed volume using VRI species
+composition and the BC interior June-August 2026 sort mix and prices. Gross
+value is about 36.4 M CAD; Df-Larch sawlog is 204,378 m3 and 25.4 M CAD. The
+sort mix is a regional market-purchase mix, not an AFRF grade distribution.
+
+The full layer is under `data/delivered_wood/kc/`. The rates are TSA23 proxy
+rates, the mill haul is a straight-line abstraction, and the public road layer
+is incomplete. The layer is a screening result.
+
 ## What can proceed without the missing data
 
 - The 2007 plan extraction and source register are complete.
