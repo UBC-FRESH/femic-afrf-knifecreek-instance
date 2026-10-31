@@ -38,3 +38,16 @@ accepted-sort inputs.
 Acquire the AFRF road, mill, cost, and price records listed in
 `notes/reference/afrf-roads-logs-mills-sources.md`. Do not substitute TSA23
 mill identities or C5-class cost rates for AFRF values.
+
+## Public-access proximity
+
+`runbooks/measure_kc_public_access.py` measures straight-line distance from each
+split block to the public road layer.
+
+- `kc_public_access_nearest.csv` - one row per block with the nearest public
+  road section and distance; and
+- `kc_public_access_metadata.json` - counts and caveats.
+
+Current result: 59 blocks within 100 m, 169 within 400 m, and 42 beyond 400 m.
+This is an access-context check, not a route linkage or legal access
+determination. The public layer is incomplete against Table 37.

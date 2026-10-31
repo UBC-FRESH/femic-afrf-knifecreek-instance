@@ -562,3 +562,9 @@ status and the GitHub issue comments.
   for the 211 split blocks. The screening finds 198 ground-based candidates and
   13 cable candidates; no block has at least 50% of its area above 60% slope.
   The output is a screening layer, not a field operability determination.
+
+- Added the P7.2 public-access context check. `runbooks/
+  measure_kc_public_access.py` measures straight-line distance from each split
+  block to the public road layer: 59 blocks within 100 m, 169 within 400 m, and
+  42 beyond 400 m. This is not a route linkage; the public layer is incomplete
+  against MWP #3 Table 37.
