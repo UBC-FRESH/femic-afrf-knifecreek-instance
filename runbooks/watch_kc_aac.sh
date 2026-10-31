@@ -9,6 +9,7 @@
 #   PLAIN=1 bash runbooks/watch_kc_aac.sh 50000
 #   MODEL=calibrated bash runbooks/watch_kc_aac.sh 50000
 #   MODEL=split bash runbooks/watch_kc_aac.sh 50000
+#   MODEL=split_volume bash runbooks/watch_kc_aac.sh 50000
 #   ISLANDS=8 bash runbooks/watch_kc_aac.sh 100000
 #
 # Environment:
@@ -53,8 +54,13 @@ case "$MODEL" in
     DEFAULT_INITIAL="$ROOT/data/kc_ws4_recipe_au_stages_split/selection_gwm_legal.csv"
     DEFAULT_TOPOLOGY="$ROOT/ws4/topology_split.csv"
     ;;
+  split_volume)
+    DEFAULT_DATASET="$ROOT/ws4/dataset_kc_au_stages_split_volume_v1"
+    DEFAULT_INITIAL="$ROOT/data/kc_ws4_recipe_au_stages_split/selection_gwm_legal.csv"
+    DEFAULT_TOPOLOGY="$ROOT/ws4/topology_split.csv"
+    ;;
   *)
-    echo "MODEL must be 'uncalibrated', 'calibrated' or 'split' (got '$MODEL')" >&2
+    echo "MODEL must be 'uncalibrated', 'calibrated', 'split' or 'split_volume' (got '$MODEL')" >&2
     exit 2
     ;;
 esac

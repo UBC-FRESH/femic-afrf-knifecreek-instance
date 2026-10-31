@@ -1,0 +1,44 @@
+{
+  "recipe": "kc-au-hmz-multientry-v1",
+  "aus": 6,
+  "hmz_values": [
+    "L",
+    "M",
+    "U"
+  ],
+  "stages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "volume_basis": "external/ubc-research-forests-data/processed/kc_spatial/kc_volume_basis_au.csv",
+  "volume_factors": {
+    "KC_IDFdk3_FDI_H": 0.7746578565260732,
+    "KC_IDFdk3_FDI_L": 0.7884882880468661,
+    "KC_IDFdk3_FDI_M": 0.759543852700166,
+    "KC_IDFxm_FDI_H": 0.8273845961679177,
+    "KC_IDFxm_FDI_L": 0.8027409981181357,
+    "KC_IDFxm_FDI_M": 0.7994980375820225
+  },
+  "entry_years": [
+    30,
+    60,
+    90,
+    120,
+    150,
+    180
+  ],
+  "treatments": [
+    "GWM_LOW",
+    "GWM_MODERATE"
+  ],
+  "caveats": [
+    "Stage states are entry-sequence states, not a BA/QMD continuum.",
+    "Residual x=0 uses the FVS post-treatment accounting.",
+    "HMZ M/A both regimes, L low only, U none.",
+    "No calibration or legal-compliance claim."
+  ]
+}

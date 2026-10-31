@@ -139,6 +139,30 @@ enough to be a legal clump detector. The eight tree maps remain the empirical
 clump baseline; LiDAR is the canopy/cover/gap layer, not the legal clump
 arbiter.
 
+## AU/HMZ structure and volume basis
+
+The plot-to-AU map shows that all eight tree-map plots fall in
+`KC_IDFdk3_FDI_L / L`. The 24 LiDAR plots cover only four groups:
+
+- `KC_IDFdk3_FDI_H / M`
+- `KC_IDFdk3_FDI_L / L` (tree-map group)
+- `KC_IDFdk3_FDI_L / M`
+- `KC_IDFdk3_FDI_M / M`
+
+The structure table is therefore explicitly hybrid: tree-map clumps for the
+L/L group, LiDAR cover/gap for all four groups, and LiDAR-only flags elsewhere.
+
+Kozak volume on the initial FVS AU tree lists gives merchantable/total-stem
+ratios of **0.76–0.83** and whole-stem/total-stem ratios of **1.01–1.05** by AU.
+Those factors are now applied to the split-block product curves:
+
+- recipe: `data/kc_ws4_recipe_au_stages_split_volume/`
+- dataset: `ws4/dataset_kc_au_stages_split_volume_v1/`
+- factors: 0.7595–0.8274 by AU
+
+The volume-adjusted dataset builds and validates. It is the production model
+candidate; the unadjusted split model remains the comparison.
+
 ## Immediate next steps
 
 1. Calibrate 2019 LiDAR tree detection against the eight Marshal tree maps and

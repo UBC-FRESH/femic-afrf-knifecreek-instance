@@ -437,8 +437,9 @@ Order of work:
    one spatial tree table; resolve the plot2/plot5/plot6 duplication.
 2. [x] Derive 2019 LiDAR canopy height and cover metrics around the 24 plot
    polygons.
-3. [x] Port the Kozak taper/merchantable-volume calculations and compute
-   tree-level volumes.
+3. [x] Port the Kozak taper/merchantable-volume calculations, compute
+   tree-level volumes, and apply the AU volume basis to the split product
+   curves (`ws4/dataset_kc_au_stages_split_volume_v1`).
 4. [~] Calibrate LiDAR tree detection and build spatial clump/opening accounts.
    The 2019 CHM calibration reaches mean F1 0.67 against DBH >=15 cm tree
    maps; the 2013 LAS reaches 0.656. Neither reproduces the empirical clump
