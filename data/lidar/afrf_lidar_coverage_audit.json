@@ -1,0 +1,3605 @@
+{
+  "summary": {
+    "source_root": "external/ubc-research-forests-data/raw/ubc-research-forests-modelling-dropbox/LiDAR",
+    "block_bounds_3005": {
+      "knife_creek": [
+        1280154.523,
+        787052.0543690383,
+        1289760.124,
+        792880.603
+      ],
+      "gavin_lake": [
+        1281994.8266000003,
+        832439.8890000004,
+        1295198.5050000008,
+        840229.5549999997
+      ]
+    },
+    "files": 294,
+    "readable": 180,
+    "unreadable": 114,
+    "knife_creek": {
+      "files_intersecting": 56,
+      "overlap_ha": 19023.4556018149
+    },
+    "gavin_lake": {
+      "files_intersecting": 11,
+      "overlap_ha": 447.9936468775503
+    },
+    "legacy_fusion_files": [
+      "LiDAR/2009/AFRF_2009.lasd",
+      "LiDAR/2013/AFRF_2013.lasd"
+    ],
+    "caveats": [
+      "Overlap area is counted per file and can double-count overlapping tiles.",
+      "The 2013 LAS files carry no CRS; they are assumed to be EPSG:26910 UTM 10N.",
+      "FUSION LIDARBIN is not readable by the current LAS/raster pipeline."
+    ]
+  },
+  "records": [
+    {
+      "path": "LiDAR/2009/AFRF_2009.lasd",
+      "format": "FUSION LIDARBIN index",
+      "readable": false,
+      "reason": "legacy FUSION index; not a standard LAS/LAZ product"
+    },
+    {
+      "path": "LiDAR/2009/gd000001.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000002.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000003.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000004.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000005.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000006.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000007.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000008.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000009.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000010.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000011.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000012.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000013.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000014.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000015.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000016.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000017.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000018.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000019.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000020.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000021.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000022.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000023.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000024.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000025.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000026.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000027.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000028.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000029.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000030.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000031.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000032.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000033.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000034.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000035.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000036.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000037.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000038.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000039.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000040.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000041.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000042.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000043.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000044.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000045.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000046.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000047.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000048.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000049.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000050.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000051.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000052.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000053.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000054.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000055.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000056.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000057.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000058.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000059.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000060.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000061.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000062.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000063.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000064.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000065.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000066.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000067.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000068.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000069.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000070.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000071.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000072.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000073.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000074.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000075.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000076.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000077.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000078.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000079.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000080.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000081.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000082.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000083.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000084.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000085.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000086.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000087.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000088.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000089.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000090.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000091.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000092.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000093.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000094.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000095.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000096.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000097.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000098.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000099.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000100.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000101.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000102.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000103.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000104.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000105.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000106.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000107.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000108.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000109.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000110.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000111.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/gd000112.las",
+      "format": "LAS",
+      "readable": false,
+      "reason": "Invalid file signature \"b'LIDA'\""
+    },
+    {
+      "path": "LiDAR/2009/pt000001.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        580330.49,
+        5810306.62,
+        580999.78,
+        5810999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000002.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        580313.4500000001,
+        5811000.01,
+        580999.99,
+        5811999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000003.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        581000.0,
+        5811000.0,
+        581999.99,
+        5811999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000004.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        581000.46,
+        5810491.95,
+        581999.99,
+        5810999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000005.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        582000.0,
+        5811000.0,
+        582999.99,
+        5811999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000006.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        582000.0,
+        5810149.47,
+        582999.99,
+        5810999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000007.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        583000.0,
+        5811000.0,
+        583999.99,
+        5811999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000008.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        583000.0,
+        5810158.97,
+        583999.99,
+        5810999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000009.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        584000.0,
+        5811000.0,
+        584999.99,
+        5811999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000010.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        584000.0,
+        5810087.86,
+        584999.99,
+        5810999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000011.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        585000.0,
+        5811000.0,
+        585999.99,
+        5811999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000012.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        585000.0,
+        5810028.83,
+        585999.99,
+        5810999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000013.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        586000.0,
+        5811000.0,
+        586999.99,
+        5811999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000014.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        586000.0,
+        5810000.0,
+        586999.99,
+        5810999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000015.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        586317.79,
+        5809990.350000001,
+        586484.87,
+        5809999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000016.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        587000.0,
+        5811000.0,
+        587999.99,
+        5811999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000017.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        587000.0,
+        5810013.68,
+        587999.99,
+        5810999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000018.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        588000.0,
+        5811000.0,
+        588999.99,
+        5811999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000019.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        588000.0,
+        5810000.0,
+        588999.99,
+        5810999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000020.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        588515.05,
+        5809951.36,
+        588999.99,
+        5809999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000021.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        589000.0,
+        5811000.0,
+        589999.99,
+        5811999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000022.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        589000.0,
+        5810000.0,
+        589999.99,
+        5810999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000023.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        589000.01,
+        5809887.09,
+        589999.99,
+        5809999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000024.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        590000.0,
+        5811000.0,
+        590999.99,
+        5811999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000025.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        590000.0,
+        5810000.0,
+        590999.99,
+        5810999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000026.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        590000.0,
+        5809830.48,
+        590999.99,
+        5809999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000027.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        591000.0,
+        5811000.0,
+        591999.99,
+        5811999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000028.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        591000.0,
+        5810000.0,
+        591999.99,
+        5810999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000029.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        591000.0,
+        5809751.07,
+        591999.99,
+        5809999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000030.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        592000.0,
+        5810000.0,
+        592999.99,
+        5810999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000031.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        592000.0,
+        5811000.0,
+        592999.99,
+        5811999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000032.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        592000.0,
+        5809748.94,
+        592999.99,
+        5809999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000033.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        580000.01,
+        5812000.0,
+        580999.99,
+        5812999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000034.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        581000.0,
+        5812000.0,
+        581999.99,
+        5812999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000035.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        582000.0,
+        5812000.0,
+        582999.99,
+        5812999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000036.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        593000.0,
+        5811000.0,
+        593614.4,
+        5811621.37
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000037.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        593000.0,
+        5810000.0,
+        593871.0700000001,
+        5810999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000038.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        593000.01,
+        5809806.92,
+        593194.49,
+        5809999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000039.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        591000.0,
+        5812000.0,
+        591999.99,
+        5812999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000040.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        590000.0,
+        5812000.0,
+        590999.99,
+        5812999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000041.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        589000.0,
+        5812000.0,
+        589999.99,
+        5812999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000042.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        588000.0,
+        5812000.0,
+        588999.99,
+        5812999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000043.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        587000.0,
+        5812000.0,
+        587999.99,
+        5812999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000044.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        586000.0,
+        5812000.0,
+        586999.99,
+        5812999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000045.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        585000.0,
+        5812000.0,
+        585999.99,
+        5812999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000046.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        584000.0,
+        5812000.0,
+        584999.99,
+        5812999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000047.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        583000.0,
+        5812000.0,
+        583999.99,
+        5812999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000048.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        592000.0,
+        5812000.0,
+        592424.41,
+        5812999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000049.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        589000.0,
+        5813000.0,
+        589999.99,
+        5813999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000050.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        588000.0,
+        5813000.0,
+        588999.99,
+        5813999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000051.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        587000.0,
+        5813000.0,
+        587999.99,
+        5813999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000052.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        586000.0,
+        5813000.0,
+        586999.99,
+        5813999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000053.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        585000.0,
+        5813000.0,
+        585999.99,
+        5813999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000054.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        584000.0,
+        5813000.0,
+        584999.99,
+        5813999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000055.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        583000.0,
+        5813000.0,
+        583999.99,
+        5813999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000056.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        582000.0,
+        5813000.0,
+        582999.99,
+        5813999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000057.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        581000.0,
+        5813000.0,
+        581999.99,
+        5813999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000058.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        580000.05,
+        5813000.0,
+        580999.99,
+        5813999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000059.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        579978.0,
+        5813000.01,
+        579999.99,
+        5813094.68
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000060.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        579160.68,
+        5812000.12,
+        579999.99,
+        5812999.850000001
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000061.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        579779.47,
+        5811952.17,
+        579849.7000000001,
+        5811999.78
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000062.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        590000.0,
+        5813000.0,
+        590999.99,
+        5813999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000063.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        591000.0,
+        5813000.0,
+        591999.99,
+        5813999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000064.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        592000.0,
+        5813000.0,
+        592516.47,
+        5813999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000065.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        587000.0,
+        5814000.0,
+        587999.99,
+        5814999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000066.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        586000.0,
+        5814000.0,
+        586999.99,
+        5814999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000067.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        585000.0,
+        5814000.0,
+        585999.99,
+        5814999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000068.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        584000.0,
+        5814000.0,
+        584999.99,
+        5814999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000069.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        583000.0,
+        5814000.0,
+        583999.99,
+        5814999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000070.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        582000.0,
+        5814000.0,
+        582999.99,
+        5814999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000071.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        581000.0,
+        5814000.0,
+        581999.99,
+        5814999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000072.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        580425.54,
+        5814000.0,
+        580999.99,
+        5814999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000073.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        588000.0,
+        5814000.0,
+        588999.99,
+        5814999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000074.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        589000.0,
+        5814000.0,
+        589999.99,
+        5814999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000075.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        590000.0,
+        5814000.0,
+        590999.99,
+        5814999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000076.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        591000.0,
+        5814000.0,
+        591999.99,
+        5814999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000077.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        592000.0,
+        5814000.0,
+        592999.99,
+        5814999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000078.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        586000.0,
+        5815000.0,
+        586999.99,
+        5815999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000079.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        584000.0,
+        5815000.0,
+        584999.99,
+        5815999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000080.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        583000.0,
+        5815000.0,
+        583999.99,
+        5815999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000081.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        582000.0,
+        5815000.0,
+        582999.99,
+        5815999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000082.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        581000.0,
+        5815000.0,
+        581999.99,
+        5815999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000083.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        580553.51,
+        5815000.0,
+        580999.99,
+        5815999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000084.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        585000.0,
+        5815000.0,
+        585999.99,
+        5815999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000085.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        587000.0,
+        5815000.0,
+        587999.99,
+        5815999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000086.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        588000.0,
+        5815000.0,
+        588999.99,
+        5815999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000087.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        589000.0,
+        5815000.0,
+        589999.99,
+        5815999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000088.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        590000.0,
+        5815000.0,
+        590999.99,
+        5815999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000089.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        591000.0,
+        5815000.0,
+        591999.99,
+        5815999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000090.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        592000.0,
+        5815000.0,
+        592999.99,
+        5815999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000091.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        595000.0,
+        5814203.45,
+        595376.13,
+        5814999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000092.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        595000.01,
+        5815000.0,
+        595494.41,
+        5815485.13
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000093.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        594839.47,
+        5814204.45,
+        594999.99,
+        5814999.97
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000094.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        594962.41,
+        5815000.0,
+        594999.97,
+        5815218.5
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000095.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        584000.0,
+        5816000.0,
+        584999.99,
+        5816915.75
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000096.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        583000.0,
+        5816000.0,
+        583999.99,
+        5816963.41
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000097.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        582000.0,
+        5816000.0,
+        582999.99,
+        5816996.42
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000098.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        581000.0,
+        5816000.0,
+        581999.99,
+        5816999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000099.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        580517.65,
+        5816000.0,
+        580999.99,
+        5816999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000100.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        585000.0,
+        5816000.0,
+        585999.99,
+        5816875.22
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000101.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        586000.0,
+        5816000.0,
+        586999.99,
+        5816778.850000001
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000102.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        587000.0,
+        5816000.0,
+        587999.99,
+        5816718.59
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000103.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        588000.0,
+        5816000.0,
+        588999.99,
+        5816715.65
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000104.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        589000.0,
+        5816000.0,
+        589999.99,
+        5816642.850000001
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000105.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        590000.0,
+        5816000.0,
+        590999.99,
+        5816526.72
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000106.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        591000.0,
+        5816000.0,
+        591999.99,
+        5816576.45
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000107.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        592000.0,
+        5816000.0,
+        592999.99,
+        5816586.53
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000108.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        593000.0,
+        5816000.0,
+        593599.11,
+        5816467.47
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000109.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        593000.0,
+        5815000.0,
+        593822.11,
+        5815999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000110.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        593000.0,
+        5814567.96,
+        593423.04,
+        5814999.99
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000111.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        581000.0,
+        5817000.0,
+        581430.62,
+        5817077.73
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2009/pt000112.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        580513.96,
+        5817000.0,
+        580999.98,
+        5817099.72
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/AFRF_2013.lasd",
+      "format": "FUSION LIDARBIN index",
+      "readable": false,
+      "reason": "legacy FUSION index; not a standard LAS/LAZ product"
+    },
+    {
+      "path": "LiDAR/2013/East_A01.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1285807.5803278026,
+        832653.6595509929,
+        1285895.382541286,
+        833204.1264916341
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 4.833221583777969
+      }
+    },
+    {
+      "path": "LiDAR/2013/East_A02.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1285930.81422103,
+        832377.1025702414,
+        1286892.6471002786,
+        833246.6965293826
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 77.6014008985059
+      }
+    },
+    {
+      "path": "LiDAR/2013/East_A03.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1286927.8779059988,
+        832424.461930791,
+        1287530.8554398376,
+        833273.9413979469
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 50.2914858006031
+      }
+    },
+    {
+      "path": "LiDAR/2013/East_B01.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1285776.8171919612,
+        833199.0755767819,
+        1285877.109940845,
+        833630.7652941819
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 4.329534842293112
+      }
+    },
+    {
+      "path": "LiDAR/2013/East_B02.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1285895.3920849836,
+        833204.136932773,
+        1286874.3796328239,
+        833673.1640544449
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 45.91717117160583
+      }
+    },
+    {
+      "path": "LiDAR/2013/East_B03.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1286892.6566439054,
+        833246.7069705315,
+        1287871.7124674902,
+        833714.0437887679
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 45.75488334699241
+      }
+    },
+    {
+      "path": "LiDAR/2013/East_B04.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1287883.8277899357,
+        833431.4691163375,
+        1288172.9450712586,
+        833725.2583347021
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 8.493954009554276
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_A04.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1283309.282314246,
+        787021.1330468282,
+        1284053.8257809645,
+        787577.5795713945
+      ],
+      "intersects": {
+        "knife_creek": 39.12763560101468,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_A05.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1284075.6893839124,
+        787068.0024406614,
+        1284961.4535044983,
+        787616.3968845004
+      ],
+      "intersects": {
+        "knife_creek": 48.574812228126795,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_A08.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1287322.1283080303,
+        787291.1189340259,
+        1288043.9117266175,
+        787748.2555379014
+      ],
+      "intersects": {
+        "knife_creek": 32.99536207066272,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_A09.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1288062.008790073,
+        787326.7459266258,
+        1289041.428024662,
+        787790.9358183476
+      ],
+      "intersects": {
+        "knife_creek": 45.46365084541246,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_A10.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1289059.4618813652,
+        787370.9591910233,
+        1289770.611097703,
+        787822.1379596274
+      ],
+      "intersects": {
+        "knife_creek": 31.61238718932927,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_B03.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1282494.6503088232,
+        787809.2679299751,
+        1283013.3650987074,
+        788536.2209295857
+      ],
+      "intersects": {
+        "knife_creek": 37.708127244872074,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_B04.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1283056.3087671155,
+        787534.9323106736,
+        1284010.8856352642,
+        788578.8763220948
+      ],
+      "intersects": {
+        "knife_creek": 99.65248049450724,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_B05.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1284053.8353268118,
+        787577.5900109325,
+        1285008.4041664153,
+        788621.5362055175
+      ],
+      "intersects": {
+        "knife_creek": 99.6518507573515,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_B06.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1285037.8381283446,
+        787935.5091059203,
+        1286005.9206691603,
+        788664.2005793268
+      ],
+      "intersects": {
+        "knife_creek": 70.54334930461043,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_B07.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1286035.0134166249,
+        787986.225475724,
+        1287003.4351204962,
+        788706.8694430045
+      ],
+      "intersects": {
+        "knife_creek": 69.78872586783969,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_B08.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1287046.4028758272,
+        787705.5902120762,
+        1288000.947497418,
+        788749.5427960429
+      ],
+      "intersects": {
+        "knife_creek": 99.64993242211496,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_B09.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1288043.92127214,
+        787748.2659775236,
+        1288998.4577769237,
+        788792.2206379334
+      ],
+      "intersects": {
+        "knife_creek": 99.64928327001074,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_B10.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1289041.437570106,
+        787790.9462579875,
+        1289719.2174862144,
+        788823.0607326177
+      ],
+      "intersects": {
+        "knife_creek": 69.95464620290848,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_C02.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1281626.8052451715,
+        788550.2066626331,
+        1281972.9158183923,
+        789494.8775606035
+      ],
+      "intersects": {
+        "knife_creek": 32.69605860015246,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_C03.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1282015.8521257117,
+        788493.580468045,
+        1282970.43233395,
+        789537.5261812084
+      ],
+      "intersects": {
+        "knife_creek": 99.65299162609762,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_C04.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1283013.3746445882,
+        788536.2313691386,
+        1283967.9468680492,
+        789580.1792670903
+      ],
+      "intersects": {
+        "knife_creek": 99.65236661251923,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_C05.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1284010.8951810647,
+        788578.8867616674,
+        1284965.4593976834,
+        789622.8368177193
+      ],
+      "intersects": {
+        "knife_creek": 99.65173674441253,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_C06.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1285008.4137121364,
+        788621.5466451121,
+        1285962.969899847,
+        789665.4988325731
+      ],
+      "intersects": {
+        "knife_creek": 99.65110202147663,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_C07.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1286005.9302148009,
+        788664.2110189447,
+        1286960.4783515367,
+        789708.1653111323
+      ],
+      "intersects": {
+        "knife_creek": 99.65046244449996,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_C08.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1287003.4446660557,
+        788706.879882643,
+        1287957.9847297461,
+        789750.8362528882
+      ],
+      "intersects": {
+        "knife_creek": 99.64981801438456,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_C09.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1288000.9570428974,
+        788749.5532357019,
+        1288955.489011471,
+        789793.5116573335
+      ],
+      "intersects": {
+        "knife_creek": 99.64916873089722,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_C10.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1288998.4673223218,
+        788792.231077613,
+        1289655.9352527654,
+        789823.4809931591
+      ],
+      "intersects": {
+        "knife_creek": 67.80137477442526,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_D02.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1281562.0477407882,
+        789477.3223318805,
+        1281929.9903957478,
+        790496.1912640453
+      ],
+      "intersects": {
+        "knife_creek": 37.48853399566149,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_D03.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1281972.9253643062,
+        789494.8880001713,
+        1282927.5009286813,
+        790538.8376052796
+      ],
+      "intersects": {
+        "knife_creek": 99.65287834755202,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_D04.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1282970.4418797835,
+        789537.5366207989,
+        1283925.0094810952,
+        790581.4883856289
+      ],
+      "intersects": {
+        "knife_creek": 99.6522532038946,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_D05.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1283967.9564138034,
+        789580.1897067033,
+        1284922.5160299852,
+        790624.1436045647
+      ],
+      "intersects": {
+        "knife_creek": 99.65162320540512,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_D06.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1284965.4689433575,
+        789622.8472573536,
+        1285920.0205523418,
+        790666.8032615675
+      ],
+      "intersects": {
+        "knife_creek": 99.65098835312514,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_D07.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1285962.9794454419,
+        789665.5092722264,
+        1286917.5230251574,
+        790709.4673561144
+      ],
+      "intersects": {
+        "knife_creek": 99.65034864674722,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_D08.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1286960.487897051,
+        789708.1757508091,
+        1287915.0234254263,
+        790752.1358876966
+      ],
+      "intersects": {
+        "knife_creek": 99.64970408666629,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_D09.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1287957.9942751797,
+        789750.8466925862,
+        1288912.5217301385,
+        790794.808855807
+      ],
+      "intersects": {
+        "knife_creek": 99.64905467323393,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_D10.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1288955.4985568225,
+        789793.522097052,
+        1289598.3204539884,
+        790688.6261755597
+      ],
+      "intersects": {
+        "knife_creek": 57.53925019072412,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_E01.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1280189.2390822398,
+        790474.967437291,
+        1280889.5597859104,
+        791454.8714686098
+      ],
+      "intersects": {
+        "knife_creek": 68.62470807428048,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_E02.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1280932.4874512507,
+        790453.5598020487,
+        1281887.0663135736,
+        791497.5111180752
+      ],
+      "intersects": {
+        "knife_creek": 99.65338595731382,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_E03.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1281929.9999416147,
+        790496.2017036527,
+        1282884.570884669,
+        791540.1551810359
+      ],
+      "intersects": {
+        "knife_creek": 99.65276554104024,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_E04.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1282927.5104744688,
+        790538.8480449083,
+        1283882.0734761863,
+        791582.8036569515
+      ],
+      "intersects": {
+        "knife_creek": 99.652140269179,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_E05.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1283925.019026804,
+        790581.4988252829,
+        1284879.5740651153,
+        791625.4565452981
+      ],
+      "intersects": {
+        "knife_creek": 99.651510142447,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_E06.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1284922.5255756134,
+        790624.1540442372,
+        1285877.0726284462,
+        791668.1138455481
+      ],
+      "intersects": {
+        "knife_creek": 99.65087516172262,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_E07.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1285920.03009789,
+        790666.8137012605,
+        1286874.5691431714,
+        791710.7755571868
+      ],
+      "intersects": {
+        "knife_creek": 99.65023532661849,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_E08.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1286917.5325706261,
+        790709.4777958273,
+        1287887.58781417,
+        791391.5990964703
+      ],
+      "intersects": {
+        "knife_creek": 66.1695344421631,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_E09.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1287915.0329708133,
+        790752.1463274321,
+        1287956.2624117215,
+        791395.7706220214
+      ],
+      "intersects": {
+        "knife_creek": 2.6536269820837846,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_F01.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1280158.9843479588,
+        791423.6550028617,
+        1280846.6429879507,
+        792456.1997034786
+      ],
+      "intersects": {
+        "knife_creek": 71.0038284557018,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_F02.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1280889.5693318115,
+        791454.8819082377,
+        1281844.1435736318,
+        792498.8371019214
+      ],
+      "intersects": {
+        "knife_creek": 99.65327375049738,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_F03.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1281887.0758593958,
+        791497.521557725,
+        1282841.642203685,
+        792541.4788876995
+      ],
+      "intersects": {
+        "knife_creek": 99.6526532067587,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_F04.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1282884.580430411,
+        791540.1656207027,
+        1283839.138855101,
+        792584.1250602807
+      ],
+      "intersects": {
+        "knife_creek": 99.6520278083873,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_F05.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1283882.0830218492,
+        791582.814096641,
+        1284836.633504866,
+        792626.775619137
+      ],
+      "intersects": {
+        "knife_creek": 99.65139755494302,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_F06.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1284879.5836106983,
+        791625.4669850067,
+        1285859.898152568,
+        792068.539666273
+      ],
+      "intersects": {
+        "knife_creek": 43.43505925505401,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_F07.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1285877.0821739498,
+        791668.1242852808,
+        1286333.355995443,
+        792088.8581389212
+      ],
+      "intersects": {
+        "knife_creek": 19.196984323203562,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_G01.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1280127.1541603408,
+        792425.4585115369,
+        1280828.5818490349,
+        792877.6105184859
+      ],
+      "intersects": {
+        "knife_creek": 30.477706139279732,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_G02.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1280846.6525338036,
+        792456.210143144,
+        1281825.7764852643,
+        792927.3263845532
+      ],
+      "intersects": {
+        "knife_creek": 41.553321097653544,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_G03.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1281844.1531194067,
+        792498.8475416059,
+        1282834.8037907819,
+        792700.99031891
+      ],
+      "intersects": {
+        "knife_creek": 20.025287804990676,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_G04.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1282841.6517493825,
+        792541.4893274067,
+        1283831.5618969635,
+        792760.838896557
+      ],
+      "intersects": {
+        "knife_creek": 21.71363643693531,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/Knife_G05.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1283839.148400717,
+        792584.1355000105,
+        1284371.3342837903,
+        792789.3145614096
+      ],
+      "intersects": {
+        "knife_creek": 10.91933999788933,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/2013/West_A01.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1282041.601054966,
+        836487.4002707225,
+        1282732.0663158041,
+        837082.6879411059
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 41.102545660505726
+      }
+    },
+    {
+      "path": "LiDAR/2013/West_A02.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1282756.236372042,
+        836518.3026314278,
+        1283629.2129050838,
+        837120.9673801886
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 52.611218295977395
+      }
+    },
+    {
+      "path": "LiDAR/2013/West_B01.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1281860.69669226,
+        837045.5209532444,
+        1282697.7259364156,
+        837884.9097547088
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 59.00058315437584
+      }
+    },
+    {
+      "path": "LiDAR/2013/West_B02.las",
+      "format": "LAS",
+      "readable": true,
+      "source_crs": "EPSG:26910",
+      "bounds_3005": [
+        1282732.0758595737,
+        837082.6983823328,
+        1283604.7369229787,
+        837747.9927394206
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 58.05764811335873
+      }
+    },
+    {
+      "path": "LiDAR/BC_LiDAR_Campbell_Rd/bc_093b020_4_1_4_xyes_8_utm10_20240509_20240509.laz",
+      "format": "LAZ",
+      "readable": true,
+      "source_crs": "EPSG:3005",
+      "bounds_3005": [
+        563253.23,
+        5779515.600000001,
+        564980.91,
+        5780928.0200000005
+      ],
+      "intersects": {
+        "knife_creek": 0.0,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/KC_2019/bc_093a001_xli1m_utm10_2019 (2).tif",
+      "format": "GeoTIFF",
+      "readable": true,
+      "source_crs": "PROJCS[\"North_American_1983_CSRS_UTM_Zone_10N\",GEOGCS[\"NAD83(CSRS)\",DATUM[\"North_American_1983_CSRS\",SPHEROID[\"GRS 1980\",6378137,298.257222101]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-123],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "bounds_3005": [
+        1273899.153695126,
+        784244.4839279717,
+        1287262.412778257,
+        796181.4078489805
+      ],
+      "intersects": {
+        "knife_creek": 4142.8681236085695,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/KC_2019/bc_093a001_xli1m_utm10_2019.tif",
+      "format": "GeoTIFF",
+      "readable": true,
+      "source_crs": "EPSG:3157",
+      "bounds_3005": [
+        1273850.807685031,
+        784192.4063591748,
+        1287308.4871007549,
+        796234.684678632
+      ],
+      "intersects": {
+        "knife_creek": 4169.722766540353,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/KC_2019/bc_093a002_xli1m_utm10_2019.tif",
+      "format": "GeoTIFF",
+      "readable": true,
+      "source_crs": "PROJCS[\"North_American_1983_CSRS_UTM_Zone_10N\",GEOGCS[\"NAD83(CSRS)\",DATUM[\"North_American_1983_CSRS\",SPHEROID[\"GRS 1980\",6378137,298.257222101]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-123],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "bounds_3005": [
+        1287555.6503278918,
+        785037.0210136428,
+        1300945.8605779847,
+        797013.7539454105
+      ],
+      "intersects": {
+        "knife_creek": 1284.8882003557667,
+        "gavin_lake": 0.0
+      }
+    },
+    {
+      "path": "LiDAR/KC_2019/ubc_chm/UBC_CHM.tif",
+      "format": "GeoTIFF",
+      "readable": true,
+      "source_crs": "EPSG:3157",
+      "bounds_3005": [
+        1273898.6757273779,
+        784245.4405486942,
+        1297244.453638138,
+        796633.5527432107
+      ],
+      "intersects": {
+        "knife_creek": 5598.671255811431,
+        "gavin_lake": 0.0
+      }
+    }
+  ]
+}

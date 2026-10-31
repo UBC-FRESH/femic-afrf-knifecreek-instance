@@ -599,3 +599,26 @@ status and the GitHub issue comments.
   and the BC interior June-August 2026 sort mix: about 65.3 M CAD gross value,
   with Df-Larch sawlog at 385,271 m3. The rates, mill haul, and sort mix are
   screening assumptions, recorded in `data/delivered_wood/kc/README.md`.
+
+## 2026-10-31
+
+- Added the AFRF LiDAR coverage audit
+  (`runbooks/audit_afrf_lidar_coverage.py`,
+  `data/lidar/afrf_lidar_coverage_audit.json`). Knife Creek has 56 readable
+  files intersecting; Gavin Lake has 11 2013 LAS files over about 448 ha.
+  The 2009 FUSION LIDARBIN is not readable by the current pipeline.
+
+- Added the Knife Creek block piece-size table
+  (`data/lidar/kc_2024/block_piece_size.csv`) and a validated FHOPS tree
+  inventory pilot for block 78
+  (`data/lidar/kc_2024/fhops/kc_0078/`). The full 2024 canopy inventory has
+  278,318 trees; the block table averages 78 TPH, 0.62 m3/stem, and 48 m3/ha.
+  The canopy-only TPH is below the Lahrsen felled-stem range, so VRI/PSP total
+  density is required for classic productivity.
+
+- Added the tree-level/FHOPS/FVS deep dive
+  (`notes/reference/tree-level-inventory-fhops-deep-dive.md`) and the generic
+  FHOPS tree-inventory exporter (`runbooks/export_fhops_tree_inventory.py`).
+  The note records the available FHOPS tree contract, stem/bucking, tree
+  simulation, tree replay, classic productivity/costing, and the absence of a
+  multi-machine 4D tree-lab package in the current checkout.
