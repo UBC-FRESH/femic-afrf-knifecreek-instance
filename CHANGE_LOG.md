@@ -559,3 +559,7 @@ status and the GitHub issue comments.
   `ESTAB`/`PLANT` cohort at each entry. Prototype at 200 TPH/entry restores
   TPH/QMD (497-746 TPH, 15-21 cm) but leaves BA low (9-23 m2/ha). Rate and BA
   target need fitting.
+- P2.8g: added `--recruitment-mix` to the multi-entry runbook. A 2024-ingrowth
+  mix (FD 64%, EP 18%, SE 7%, PL 6%, AT 5%) at 400 TPH/entry gives final
+  BA 19-26 m2/ha, QMD 15-20, TPH 865-1,044; only 7/138 rows flagged, all
+  early. BA/volume and target still need joint fitting.

@@ -212,6 +212,7 @@ def _keywords(
     calibration: Path | None = None,
     bamax_m2ha: float | None = None,
     recruitment_tpa: float = 0.0,
+    recruitment_mix: dict[str, float] | None = None,
 ) -> list[Keyword]:
     """Return the 200-year multi-entry key set."""
     spec = REGIMES[regime]
@@ -287,9 +288,18 @@ def _keywords(
                     nested=tuple(
                         Keyword(
                             "PLANT",
-                            (str(year), "FD", f"{recruitment_tpa:.1f}", "95", "2", "1.0", "0"),
+                            (
+                                str(year),
+                                species,
+                                f"{recruitment_tpa * share:.1f}",
+                                "95",
+                                "2",
+                                "1.0",
+                                "0",
+                            ),
                         )
                         for year in ENTRY_YEARS
+                        for species, share in (recruitment_mix or {"FD": 1.0}).items()
                     ),
                 ),
             ]
@@ -329,9 +339,15 @@ def main() -> None:
         "--recruitment-tpa",
         type=float,
         default=0.0,
-        help="Optional planted FD cohort at each entry, in trees per acre.",
+        help="Optional planted cohort at each entry, in trees per hectare.",
+    )
+    parser.add_argument(
+        "--recruitment-mix",
+        type=Path,
+        help="JSON object mapping FVS species to fraction of recruitment_tpa.",
     )
     args = parser.parse_args()
+    recruitment_mix = json.loads(args.recruitment_mix.read_text()) if args.recruitment_mix else None
 
     au = pd.read_csv(args.au_table).set_index("au_id")
     matches = pd.read_csv(args.matches)
@@ -394,6 +410,7 @@ def main() -> None:
                     calibration=args.calibration,
                     bamax_m2ha=args.bamax_m2ha,
                     recruitment_tpa=args.recruitment_tpa,
+                    recruitment_mix=recruitment_mix,
                 ),
                 directory=run_root / f"{au_id}__{match.CLSTR_ID}",
             )
@@ -529,6 +546,7 @@ def main() -> None:
         "site_series": args.site_series,
         "bamax_m2ha": args.bamax_m2ha,
         "recruitment_tpa": args.recruitment_tpa,
+        "recruitment_mix": recruitment_mix,
         "entries": list(zip(CYCLES, ENTRY_YEARS, strict=True)),
         "calibration": str(args.calibration) if args.calibration else None,
         "aus": int(curves["au_id"].nunique()),
