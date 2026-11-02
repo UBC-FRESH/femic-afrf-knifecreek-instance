@@ -22,6 +22,7 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
+import sys
 from itertools import pairwise
 from pathlib import Path
 
@@ -32,6 +33,9 @@ from fresh_fvsbc.nemora import crown_class
 from fresh_fvsbc.outputs import read_table
 from fresh_fvsbc.run import run_case
 from fresh_fvsbc.treelist import resolve_species
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+from fvs_bec import bec_from_label, region_for_tsa
 
 HORIZON_YEARS = 200
 STEP_YEARS = 10
@@ -201,6 +205,9 @@ def _calibration_keywords(path: Path) -> list[Keyword]:
 def _keywords(
     site_index: float,
     regime: str,
+    *,
+    region: str,
+    bec: str,
     au_id: str | None = None,
     calibration: Path | None = None,
 ) -> list[Keyword]:
@@ -257,7 +264,7 @@ def _keywords(
     return [
         Keyword("DATABASE", (), ("DSNOut", "FVSOut.db", "Summary", "TREELIDB", "ATRTLIDB")),
         Keyword("STDIDENT", (f"KC-AU-{regime}-MULTI-200Y",)),
-        Keyword("STDINFO", ("712", "CHS131", "0", str(HORIZON_YEARS), "35", "16")),
+        Keyword("STDINFO", (region, bec, "0", str(HORIZON_YEARS), "35", "16")),
         Keyword("MANAGED", ("0", "1")),
         Keyword("SITECODE", ("FD", f"{site_index:.1f}")),
         Keyword("INVYEAR", ("0",)),
@@ -282,6 +289,14 @@ def main() -> None:
     parser.add_argument("--panel", type=Path, required=True)
     parser.add_argument("--raw-dir", type=Path, required=True)
     parser.add_argument("--out-dir", type=Path, required=True)
+    parser.add_argument(
+        "--site-series",
+        default="01",
+        help=(
+            "FVS-BC site-series code. The default 01 is a diagnostic default, "
+            "not a claim that every plot is site series 01."
+        ),
+    )
     parser.add_argument("--regime", choices=sorted(REGIMES), default="GWM_MODERATE")
     parser.add_argument("--calibration", type=Path)
     args = parser.parse_args()
@@ -334,13 +349,17 @@ def main() -> None:
             records = _records(state, trees)
             if not records:
                 continue
+            region = region_for_tsa(str(state["TSA_DESC"]))
+            fvs_bec = bec_from_label(str(state["bec"]), region=region, series=args.site_series)
             result = run_case(
                 records,
                 _keywords(
                     float(au_row.site_index_median),
                     args.regime,
-                    au_id,
-                    args.calibration,
+                    region=fvs_bec.region,
+                    bec=fvs_bec.bec,
+                    au_id=au_id,
+                    calibration=args.calibration,
                 ),
                 directory=run_root / f"{au_id}__{match.CLSTR_ID}",
             )
@@ -473,6 +492,7 @@ def main() -> None:
         "matches": str(args.matches),
         "regime": args.regime,
         "horizon_years": HORIZON_YEARS,
+        "site_series": args.site_series,
         "entries": list(zip(CYCLES, ENTRY_YEARS, strict=True)),
         "calibration": str(args.calibration) if args.calibration else None,
         "aus": int(curves["au_id"].nunique()),
@@ -483,6 +503,8 @@ def main() -> None:
             "V1 PSP calibration applied as a sensitivity."
             if args.calibration
             else "No KC calibration applied.",
+            "FVS-BC STDINFO uses region + BEC + site series; the site-series "
+            "default is diagnostic, not a plot-level claim.",
             "Not a legal-compliance claim.",
         ],
     }

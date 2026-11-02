@@ -28,10 +28,11 @@ That is why the KC 200-year curve could reach 77 m²/ha.
 `scripts/fvs_bec.py` validates region, BEC label, and site series, and returns
 the two `STDINFO` fields. It rejects the legacy `CHS131` string.
 
-`runbooks/build_kc_au_yield_200y.py` now:
+`runbooks/build_kc_au_yield_200y.py`, `build_kc_au_managed_200y.py`, and
+`build_kc_au_multientry_200y.py` now:
 
-- uses the plot's BEC label and TSA region;
-- takes an explicit `--site-series` (diagnostic default `01`);
+- use the plot's BEC label and TSA region;
+- take an explicit `--site-series` (diagnostic default `01`);
 - writes `STDINFO` as `CAR IDFdk3/01` (or the actual plot BEC);
 - records `fvs_bec` in the plot-match table and `site_series` in the manifest.
 
