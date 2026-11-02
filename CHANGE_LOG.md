@@ -544,3 +544,8 @@ status and the GitHub issue comments.
   explicit BEC path. With `CAR / IDFdk3/01`, the 24 plots give 200-year max BA
   mean 50.0 m2/ha (range 45-67) and volume 447-589 m3/ha; 2013 backtest BA
   bias -1.29 m2/ha, TPH bias +249.5. The old output files are superseded.
+- P2.8c: added `--mort-multipliers` and `--ba-multipliers` to the KC PSP
+  backtest, and corrected the FAIB 92-site validation runbook to use per-site
+  BEC. Provisional candidate (`BAIMULT 1.3`; `MORTMULT` FD 1.2, SE 5, PL 10,
+  HW 8) gives 92-site BA -0.79 and TPH +37, versus +1.12/+280 uncalibrated and
+  -8.47/-310 for v2c with corrected BEC. TSA and 200-year checks remain.

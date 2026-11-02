@@ -159,6 +159,16 @@ def main() -> None:
     parser.add_argument("--runtime-dir", type=Path, required=True)
     parser.add_argument("--tree-age", type=float, default=0.0)
     parser.add_argument("--mortality-multiplier", type=float)
+    parser.add_argument(
+        "--mort-multipliers",
+        type=Path,
+        help='JSON object mapping species code to MORTMULT, e.g. {"FD": 1.2}.',
+    )
+    parser.add_argument(
+        "--ba-multipliers",
+        type=Path,
+        help='JSON object mapping species code to BAIMULT, e.g. {"FD": 1.1}.',
+    )
     parser.add_argument("--site-index", type=float)
     parser.add_argument("--stand-age", type=float, default=0.0)
     parser.add_argument("--region", default="CAR", help="FVS-BC region code: CAR, KAM, NEL.")
@@ -170,6 +180,10 @@ def main() -> None:
     )
     args = parser.parse_args()
     region, bec = stdinfo_parameters(args.bec, region=args.region, series=args.site_series)
+    mort_multipliers = (
+        json.loads(args.mort_multipliers.read_text()) if args.mort_multipliers else None
+    )
+    ba_multipliers = json.loads(args.ba_multipliers.read_text()) if args.ba_multipliers else None
     args.out_dir.mkdir(parents=True, exist_ok=True)
     args.runtime_dir.mkdir(parents=True, exist_ok=True)
     trees = pd.read_csv(args.trees)
@@ -193,6 +207,8 @@ def main() -> None:
                 int(plot),
                 args.mortality_multiplier,
                 args.site_index,
+                ba_multipliers=ba_multipliers,
+                mort_multipliers=mort_multipliers,
                 stand_age=args.stand_age,
                 region=region,
                 bec=bec,
@@ -259,6 +275,8 @@ def main() -> None:
         "bec": bec,
         "site_series": args.site_series,
         "mortality_multiplier": args.mortality_multiplier,
+        "mort_multipliers": mort_multipliers,
+        "ba_multipliers": ba_multipliers,
         "site_index": (
             None if args.site_index is None else {"species": "FD", "value": args.site_index}
         ),
