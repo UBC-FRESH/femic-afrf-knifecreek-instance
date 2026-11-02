@@ -567,3 +567,7 @@ status and the GitHub issue comments.
   mixed 400 TPH/entry recruitment, B=28/q=1.3 gives final six-AU GWM_LOW
   BA 29.6-33.3 m2/ha, QMD 20.1-21.2, TPH 928-1,000, volume 311-394; only
   14/138 flags, all early. First structurally plausible full-horizon prototype.
+- P2.8i: added `scripts/state_graph.py` and 7 tests. It validates unique nodes,
+  edge endpoints, terminal states, and envelope compliance. The pruned
+  recruitment graph fails: 15 self-edges and 4 AUs without a terminal state.
+  Not compile-ready.
