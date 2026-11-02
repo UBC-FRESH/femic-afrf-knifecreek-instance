@@ -79,6 +79,11 @@ A six-AU corrected-BEC diagnostic (one plot per AU, no calibration) gave:
 The IDFxm H AU exceeds its 30 m²/ha default by 27 m²/ha. The default did not
 bind; explicit `BAMAX` and an IDFxm capacity decision are still required.
 
+The full six-AU, 28-plot no-cut diagnostic (five plots per AU, series `01`, no
+calibration) gives 200-year volumes of **353–589 m³/ha**, versus **750–1,232
+m³/ha** on the old ICH-default curves. That is the scale of the error; the old
+AAC and schedule diagnostics cannot stand.
+
 ## Units
 
 `BAMAX` is **m²/ha** in the BC variant, despite the generic FVS keyword guide
