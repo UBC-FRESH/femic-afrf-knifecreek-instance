@@ -529,3 +529,14 @@ status and the GitHub issue comments.
   zero rows for every dataset account, including product area and yield, instead
   of omitting product accounts entirely. Selection runs keep their produced
   values and get zeros in periods with no product flow.
+
+## 2026-11-02
+
+- P2.8: corrected the FVS-BC BEC code (#127). The runbooks wrote
+  `STDINFO ("712", "CHS131")`, which FVS-BC falls back to `ICHmw2/01` (max BA
+  89 m2/ha), not IDFdk3/IDFxm. Added `scripts/fvs_bec.py`, 14 tests, and a
+  `build_kc_au_yield_200y.py` patch that uses the plot BEC, TSA region, and an
+  explicit site series. One real KC case now tops out at 52.0 m2/ha instead of
+  77 m2/ha. The 1993-2013 backtest improves TPH bias from +421.8 to +249.5 but
+  does not remove it. Full KC/GL reruns and the IDFxm capacity decision remain.
+  Dashboard result: `python scripts/dashboard.py` reports `OVERALL: GREEN`.

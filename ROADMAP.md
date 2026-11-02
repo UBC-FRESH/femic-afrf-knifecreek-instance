@@ -251,6 +251,9 @@ that ws4 will consume. The next library is `state_library_v1` with
 - [x] P2.6 Record independent FAIB validation and the v1/v2c calibration
   decision
 - [~] P2.7 Build the production AAC/estate model
+- [~] P2.8 Correct the FVS-BC BEC code and maximum-BA default (#127).
+  `scripts/fvs_bec.py` and one `build_kc_au_yield_200y.py` case are done; full
+  KC/GL reruns and the IDFxm capacity decision remain.
 
 Acceptance criteria:
 
