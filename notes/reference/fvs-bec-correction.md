@@ -81,8 +81,10 @@ bind; explicit `BAMAX` and an IDFxm capacity decision are still required.
 
 The full six-AU, 28-plot no-cut diagnostic (five plots per AU, series `01`, no
 calibration) gives 200-year volumes of **353–589 m³/ha**, versus **750–1,232
-m³/ha** on the old ICH-default curves. That is the scale of the error; the old
-AAC and schedule diagnostics cannot stand.
+m³/ha** on the old ICH-default curves. Managed year-170 volumes are
+**339–517 m³/ha** versus **614–917 m³/ha**; first multi-entry volume is
+**163–196 m³/ha** versus **219–287 m³/ha**. That is the scale of the error; the
+old AAC and schedule diagnostics cannot stand.
 
 ## Units
 

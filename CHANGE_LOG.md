@@ -538,5 +538,5 @@ status and the GitHub issue comments.
   runbooks (`yield`, `managed`, `multientry`) that use the plot BEC, TSA region,
   and an explicit site series. One real KC case now tops out at 52.0 m2/ha instead of
   77 m2/ha. The 1993-2013 backtest improves TPH bias from +421.8 to +249.5 but
-  does not remove it. Full KC/GL reruns and the IDFxm capacity decision remain. A six-AU, 28-plot no-cut diagnostic gives 200-year volumes of 353-589 m3/ha versus 750-1,232 m3/ha on the old curves; the IDFxm H AU still reaches 57 m2/ha against a 30 m2/ha default, so explicit BAMAX is required.
+  does not remove it. Full KC/GL reruns and the IDFxm capacity decision remain. A six-AU, 28-plot no-cut diagnostic gives 200-year volumes of 353-589 m3/ha versus 750-1,232 m3/ha on the old curves; managed year-170 volume is 339-517 vs 614-917 m3/ha, and first multi-entry volume is 163-196 vs 219-287 m3/ha. The IDFxm H AU still reaches 57 m2/ha against a 30 m2/ha default, so explicit BAMAX is required.
   Dashboard result: `python scripts/dashboard.py` reports `OVERALL: GREEN`.
