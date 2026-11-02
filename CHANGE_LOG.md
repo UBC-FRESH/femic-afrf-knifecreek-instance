@@ -540,3 +540,7 @@ status and the GitHub issue comments.
   77 m2/ha. The 1993-2013 backtest improves TPH bias from +421.8 to +249.5 but
   does not remove it. Full KC/GL reruns and the IDFxm capacity decision remain. A six-AU, 28-plot no-cut diagnostic gives 200-year volumes of 353-589 m3/ha versus 750-1,232 m3/ha on the old curves; managed year-170 volume is 339-517 vs 614-917 m3/ha, and first multi-entry volume is 163-196 vs 219-287 m3/ha. The IDFxm H AU still reaches 57 m2/ha against a 30 m2/ha default, so explicit BAMAX is required; a BAMAX 53 sensitivity gives IDFxm H/L/M 49.2/45.2/51.7 m2/ha.
   Dashboard result: `python scripts/dashboard.py` reports `OVERALL: GREEN`.
+- P2.8b: patched the KC 24-plot 200-year and backtest runbooks to use the
+  explicit BEC path. With `CAR / IDFdk3/01`, the 24 plots give 200-year max BA
+  mean 50.0 m2/ha (range 45-67) and volume 447-589 m3/ha; 2013 backtest BA
+  bias -1.29 m2/ha, TPH bias +249.5. The old output files are superseded.

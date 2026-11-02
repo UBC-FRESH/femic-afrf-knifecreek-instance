@@ -23,6 +23,7 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -32,6 +33,9 @@ from fresh_fvsbc.nemora import crown_class
 from fresh_fvsbc.outputs import read_table
 from fresh_fvsbc.run import run_case
 from fresh_fvsbc.treelist import resolve_species
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+from fvs_bec import stdinfo_parameters
 
 YEARS = (1993, 1997, 2004, 2008, 2013)
 INTERVALS = (4, 7, 4, 5)
@@ -92,6 +96,9 @@ def _keywords(
     mort_multipliers: dict[str, float] | None = None,
     fixmort: dict[str, float] | None = None,
     stand_age: float = 0.0,
+    *,
+    region: str = "CAR",
+    bec: str = "IDFdk3/01",
 ) -> list[Keyword]:
     """Build a no-cut 20-year FVS key set."""
     return [
@@ -103,7 +110,7 @@ def _keywords(
         Keyword("STDIDENT", (f"KC PSP PLOT {plot}",)),
         Keyword(
             "STDINFO",
-            ("712", "CHS131", str(round(stand_age)), "200", "35", "16"),
+            (region, bec, str(round(stand_age)), "200", "35", "16"),
         ),
         Keyword("MANAGED", ("0", "1")),
         *([Keyword("SITECODE", ("FD", str(site_index)))] if site_index is not None else []),
@@ -154,7 +161,15 @@ def main() -> None:
     parser.add_argument("--mortality-multiplier", type=float)
     parser.add_argument("--site-index", type=float)
     parser.add_argument("--stand-age", type=float, default=0.0)
+    parser.add_argument("--region", default="CAR", help="FVS-BC region code: CAR, KAM, NEL.")
+    parser.add_argument("--bec", default="IDFdk3", help="BEC label such as IDFdk3 or IDFxm.")
+    parser.add_argument(
+        "--site-series",
+        default="01",
+        help="FVS-BC site series; 01 is a diagnostic default, not a plot claim.",
+    )
     args = parser.parse_args()
+    region, bec = stdinfo_parameters(args.bec, region=args.region, series=args.site_series)
     args.out_dir.mkdir(parents=True, exist_ok=True)
     args.runtime_dir.mkdir(parents=True, exist_ok=True)
     trees = pd.read_csv(args.trees)
@@ -179,6 +194,8 @@ def main() -> None:
                 args.mortality_multiplier,
                 args.site_index,
                 stand_age=args.stand_age,
+                region=region,
+                bec=bec,
             ),
             directory=case_dir,
         )
@@ -238,6 +255,9 @@ def main() -> None:
         "area_ha": AREA_HA,
         "tree_age": args.tree_age,
         "stand_age": args.stand_age,
+        "region": region,
+        "bec": bec,
+        "site_series": args.site_series,
         "mortality_multiplier": args.mortality_multiplier,
         "site_index": (
             None if args.site_index is None else {"species": "FD", "value": args.site_index}
@@ -251,6 +271,7 @@ def main() -> None:
             "Height is filled from DBH when 1993 height is missing.",
             "FVS-BC is distance-independent and no cut is applied.",
             "The 24-plot thinning experiment is not a whole-block sample.",
+            "The BEC/site series is an explicit diagnostic default, not a plot classification.",
         ],
     }
     (args.out_dir / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")

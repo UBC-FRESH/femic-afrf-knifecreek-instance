@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 
 import pandas as pd
@@ -28,6 +29,9 @@ from fresh_fvsbc.nemora import crown_class
 from fresh_fvsbc.outputs import read_table
 from fresh_fvsbc.run import run_case
 from fresh_fvsbc.treelist import resolve_species
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+from fvs_bec import stdinfo_parameters
 
 TREE_AGE = 60.0
 SITE_INDEX = 60
@@ -78,7 +82,7 @@ def _records(plot: pd.DataFrame, plot_id: int, tree_count: float) -> list[dict[s
     return records
 
 
-def _keywords(plot_id: int) -> list[Keyword]:
+def _keywords(plot_id: int, *, region: str, bec: str) -> list[Keyword]:
     """Return a 200-year no-cut FVS-BC key set."""
     return [
         Keyword(
@@ -87,7 +91,7 @@ def _keywords(plot_id: int) -> list[Keyword]:
             ("DSNOut", "FVSOut.db", "Summary"),
         ),
         Keyword("STDIDENT", (f"KC-PSP-PLOT-{plot_id}-200Y",)),
-        Keyword("STDINFO", ("712", "CHS131", "0", str(HORIZON_YEARS), "35", "16")),
+        Keyword("STDINFO", (region, bec, "0", str(HORIZON_YEARS), "35", "16")),
         Keyword("MANAGED", ("0", "1")),
         Keyword("SITECODE", ("FD", str(SITE_INDEX))),
         Keyword("INVYEAR", ("0",)),
@@ -106,8 +110,20 @@ def main() -> None:
     parser.add_argument("--trees", type=Path, required=True)
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--runtime", type=Path, required=True)
+    parser.add_argument("--region", default="CAR", help="FVS-BC region code: CAR, KAM, NEL.")
+    parser.add_argument(
+        "--bec",
+        default="IDFdk3",
+        help="BEC label such as IDFdk3 or IDFxm; the site series is explicit.",
+    )
+    parser.add_argument(
+        "--site-series",
+        default="01",
+        help="FVS-BC site series; 01 is a diagnostic default, not a plot claim.",
+    )
     parser.add_argument("--overwrite", action="store_true")
     args = parser.parse_args()
+    region, bec = stdinfo_parameters(args.bec, region=args.region, series=args.site_series)
 
     trees = pd.read_parquet(args.trees)
     args.runtime.mkdir(parents=True, exist_ok=True)
@@ -136,7 +152,9 @@ def main() -> None:
             import shutil
 
             shutil.rmtree(run_dir)
-        result = run_case(records, _keywords(int(plot_id)), directory=run_dir)
+        result = run_case(
+            records, _keywords(int(plot_id), region=region, bec=bec), directory=run_dir
+        )
         summary = read_table(result.database, "FVS_Summary_Metric").sort_values("Year")
         summary = summary[summary["CaseID"] == result.provenance.case_id]
         for point in summary.itertuples(index=False):
@@ -177,12 +195,16 @@ def main() -> None:
         "step_years": STEP_YEARS,
         "tree_age": TREE_AGE,
         "site_index": SITE_INDEX,
+        "region": region,
+        "bec": bec,
+        "site_series": args.site_series,
         "fvs": "fresh-fvsbc 0.20.0 / FVS-BC",
         "columns": list(frame.columns),
         "runs": runs,
         "caveats": [
             "No-cut FVS-BC projections, not observed growth.",
             "Tree age 60 and site index 60 are structural placeholders.",
+            "The BEC/site series is an explicit diagnostic default, not a plot classification.",
             "No KC calibration is claimed.",
             "Raw tree tallies remain private; this is a derived plot curve table.",
         ],

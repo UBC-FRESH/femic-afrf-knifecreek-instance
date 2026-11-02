@@ -22,6 +22,7 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
+import sys
 from pathlib import Path
 
 import pandas as pd
@@ -29,6 +30,9 @@ from fresh_fvsbc.keywords import Keyword
 from fresh_fvsbc.outputs import read_table
 from fresh_fvsbc.run import run_case
 from fvs_validate_afrf_kc_psp import _record
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+from fvs_bec import stdinfo_parameters
 
 INTERVAL_START = 2013
 TREE_AGE = 0.0
@@ -40,6 +44,9 @@ def _keywords(
     interval: int,
     ba_multipliers: dict[str, float] | None = None,
     mort_multipliers: dict[str, float] | None = None,
+    *,
+    region: str = "CAR",
+    bec: str = "IDFdk3/01",
 ) -> list[Keyword]:
     """Build a one-interval no-cut FVS key set."""
     return [
@@ -49,7 +56,7 @@ def _keywords(
             ("DSNOut", "FVSOut.db", "TreeLIDB", "CutLIDB", "ATRTLIDB", "Summary"),
         ),
         Keyword("STDIDENT", (f"KC PSP 2024 PLOT {plot}",)),
-        Keyword("STDINFO", ("712", "CHS131", str(round(STAND_AGE)), str(interval), "35", "16")),
+        Keyword("STDINFO", (region, bec, str(round(STAND_AGE)), str(interval), "35", "16")),
         Keyword("MANAGED", ("0", "1")),
         Keyword("INVYEAR", (str(INTERVAL_START),)),
         Keyword("DESIGN", ("0", "1", "999", "1", "0", "1", "1")),
@@ -92,6 +99,8 @@ def _run_set(
     ba: dict[str, float] | None,
     mort: dict[str, float] | None,
     runtime_dir: Path,
+    region: str,
+    bec: str,
 ) -> tuple[pd.DataFrame, list[dict[str, object]]]:
     """Run every plot for one parameter set."""
     rows = []
@@ -114,6 +123,8 @@ def _run_set(
                 interval,
                 _expand(ba) if ba else None,
                 _expand(mort) if mort else None,
+                region=region,
+                bec=bec,
             ),
             directory=case_dir,
         )
@@ -186,7 +197,15 @@ def main() -> None:
     parser.add_argument("--parameters", type=Path, required=True)
     parser.add_argument("--out-dir", type=Path, required=True)
     parser.add_argument("--runtime-dir", type=Path, required=True)
+    parser.add_argument("--region", default="CAR", help="FVS-BC region code: CAR, KAM, NEL.")
+    parser.add_argument("--bec", default="IDFdk3", help="BEC label such as IDFdk3 or IDFxm.")
+    parser.add_argument(
+        "--site-series",
+        default="01",
+        help="FVS-BC site series; 01 is a diagnostic default, not a plot claim.",
+    )
     args = parser.parse_args()
+    region, bec = stdinfo_parameters(args.bec, region=args.region, series=args.site_series)
 
     trees = pd.read_csv(args.trees)
     initial = trees[
@@ -207,6 +226,8 @@ def main() -> None:
         ba=None,
         mort=None,
         runtime_dir=args.runtime_dir,
+        region=region,
+        bec=bec,
     )
     cal_pred, cal_runs = _run_set(
         initial,
@@ -215,6 +236,8 @@ def main() -> None:
         ba=parameters["ba_multiplier"],
         mort=parameters["mortality_multiplier"],
         runtime_dir=args.runtime_dir,
+        region=region,
+        bec=bec,
     )
     uncal = _evaluate(uncal_pred, observed)
     cal = _evaluate(cal_pred, observed)
@@ -229,6 +252,9 @@ def main() -> None:
         "plots": int(observed["plot"].nunique()),
         "end_years": observed["end_year"].value_counts().to_dict(),
         "parameters": str(args.parameters),
+        "region": region,
+        "bec": bec,
+        "site_series": args.site_series,
         "calibrated_runs": cal_runs,
         "uncalibrated_runs": uncal_runs,
         "caveats": [
@@ -237,6 +263,7 @@ def main() -> None:
             "No cutting is simulated.",
             "No stand age or site index is assigned.",
             "The 24-plot thinning experiment is not a whole-block sample.",
+            "The BEC/site series is an explicit diagnostic default, not a plot classification.",
             "Not a legal-compliance or production-growth claim.",
         ],
     }
