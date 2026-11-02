@@ -538,5 +538,5 @@ status and the GitHub issue comments.
   runbooks (`yield`, `managed`, `multientry`) that use the plot BEC, TSA region,
   and an explicit site series. One real KC case now tops out at 52.0 m2/ha instead of
   77 m2/ha. The 1993-2013 backtest improves TPH bias from +421.8 to +249.5 but
-  does not remove it. Full KC/GL reruns and the IDFxm capacity decision remain.
+  does not remove it. Full KC/GL reruns and the IDFxm capacity decision remain. A six-AU diagnostic shows the IDFxm H AU still reaches 57 m2/ha against a 30 m2/ha default; explicit BAMAX is required.
   Dashboard result: `python scripts/dashboard.py` reports `OVERALL: GREEN`.

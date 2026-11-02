@@ -65,6 +65,20 @@ MAXIMUM BASAL AREA FOR IDFdk3/01 ... 53.0 SQ M/HA.
 The BEC fix reduces TPH overshoot but leaves a positive TPH bias. That residual
 is the mortality-calibration target.
 
+A six-AU corrected-BEC diagnostic (one plot per AU, no calibration) gave:
+
+| AU | Max BA (m²/ha) |
+|---|---:|
+| KC_IDFdk3_FDI_H | 52 |
+| KC_IDFdk3_FDI_L | 43 |
+| KC_IDFdk3_FDI_M | 50 |
+| KC_IDFxm_FDI_H | 57 |
+| KC_IDFxm_FDI_L | 28 |
+| KC_IDFxm_FDI_M | 45 |
+
+The IDFxm H AU exceeds its 30 m²/ha default by 27 m²/ha. The default did not
+bind; explicit `BAMAX` and an IDFxm capacity decision are still required.
+
 ## Units
 
 `BAMAX` is **m²/ha** in the BC variant, despite the generic FVS keyword guide
