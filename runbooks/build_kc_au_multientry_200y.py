@@ -22,6 +22,7 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
+import sys
 from itertools import pairwise
 from pathlib import Path
 
@@ -32,6 +33,9 @@ from fresh_fvsbc.nemora import crown_class
 from fresh_fvsbc.outputs import read_table
 from fresh_fvsbc.run import run_case
 from fresh_fvsbc.treelist import resolve_species
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+from fvs_bec import bec_from_label, region_for_tsa
 
 HORIZON_YEARS = 200
 STEP_YEARS = 10
@@ -201,14 +205,31 @@ def _calibration_keywords(path: Path) -> list[Keyword]:
 def _keywords(
     site_index: float,
     regime: str,
+    *,
+    region: str,
+    bec: str,
     au_id: str | None = None,
     calibration: Path | None = None,
+    bamax_m2ha: float | None = None,
+    recruitment_tpa: float = 0.0,
+    recruitment_mix: dict[str, float] | None = None,
+    b_target_m2ha: float | None = None,
+    q_target_override: float | None = None,
 ) -> list[Keyword]:
     """Return the 200-year multi-entry key set."""
     spec = REGIMES[regime]
     q_map = Q_BY_AU_CALIBRATED if calibration else Q_BY_AU
     q_target = q_map.get((au_id, regime), spec["q"]) if au_id else spec["q"]
-    reserve_target = RESERVE_CALIBRATED[regime] if calibration else spec["reserve"]
+    if q_target_override is not None:
+        q_target = q_target_override
+    b_target = b_target_m2ha if b_target_m2ha is not None else spec["B"]
+    reserve_target = (
+        b_target_m2ha - spec["large"]
+        if b_target_m2ha is not None
+        else RESERVE_CALIBRATED[regime]
+        if calibration
+        else spec["reserve"]
+    )
     thinning = []
     for cycle in CYCLES:
         thinning.append(
@@ -249,7 +270,7 @@ def _keywords(
                     "0",
                     str(q_target),
                     "5.0",
-                    str(round((spec["B"] - spec["large"]) * FT2_PER_M2, 2)),
+                    str(round((b_target - spec["large"]) * FT2_PER_M2, 2)),
                 ),
                 supplemental=("0",),
             )
@@ -257,7 +278,7 @@ def _keywords(
     return [
         Keyword("DATABASE", (), ("DSNOut", "FVSOut.db", "Summary", "TREELIDB", "ATRTLIDB")),
         Keyword("STDIDENT", (f"KC-AU-{regime}-MULTI-200Y",)),
-        Keyword("STDINFO", ("712", "CHS131", "0", str(HORIZON_YEARS), "35", "16")),
+        Keyword("STDINFO", (region, bec, "0", str(HORIZON_YEARS), "35", "16")),
         Keyword("MANAGED", ("0", "1")),
         Keyword("SITECODE", ("FD", f"{site_index:.1f}")),
         Keyword("INVYEAR", ("0",)),
@@ -265,10 +286,37 @@ def _keywords(
         Keyword("TIMEINT", ("", str(STEP_YEARS))),
         Keyword("NUMCYCLE", (str(HORIZON_YEARS // STEP_YEARS),)),
         Keyword("RANNSEED", ("1",)),
+        *([Keyword("BAMAX", (f"{bamax_m2ha:.1f}",))] if bamax_m2ha is not None else []),
         *[Keyword("TREELIST", (str(cycle),)) for cycle in range(1, 21)],
         *[Keyword("ATRTLIST", (str(cycle),)) for cycle in CYCLES],
         *thinning,
         *(_calibration_keywords(calibration) if calibration else []),
+        *(
+            [
+                Keyword(
+                    "ESTAB",
+                    ("0",),
+                    nested=tuple(
+                        Keyword(
+                            "PLANT",
+                            (
+                                str(year),
+                                species,
+                                f"{recruitment_tpa * share:.1f}",
+                                "95",
+                                "2",
+                                "1.0",
+                                "0",
+                            ),
+                        )
+                        for year in ENTRY_YEARS
+                        for species, share in (recruitment_mix or {"FD": 1.0}).items()
+                    ),
+                ),
+            ]
+            if recruitment_tpa > 0
+            else []
+        ),
         Keyword("PROCESS"),
         Keyword("STOP"),
     ]
@@ -282,9 +330,45 @@ def main() -> None:
     parser.add_argument("--panel", type=Path, required=True)
     parser.add_argument("--raw-dir", type=Path, required=True)
     parser.add_argument("--out-dir", type=Path, required=True)
+    parser.add_argument(
+        "--bamax-m2ha",
+        type=float,
+        default=None,
+        help="Optional explicit BC BAMAX in m2/ha (not ft2/ac).",
+    )
+    parser.add_argument(
+        "--site-series",
+        default="01",
+        help=(
+            "FVS-BC site-series code. The default 01 is a diagnostic default, "
+            "not a claim that every plot is site series 01."
+        ),
+    )
     parser.add_argument("--regime", choices=sorted(REGIMES), default="GWM_MODERATE")
     parser.add_argument("--calibration", type=Path)
+    parser.add_argument(
+        "--recruitment-tpa",
+        type=float,
+        default=0.0,
+        help="Optional planted cohort at each entry, in trees per hectare.",
+    )
+    parser.add_argument(
+        "--recruitment-mix",
+        type=Path,
+        help="JSON object mapping FVS species to fraction of recruitment_tpa.",
+    )
+    parser.add_argument(
+        "--b-target-m2ha",
+        type=float,
+        help="Override the residual BA target in m2/ha.",
+    )
+    parser.add_argument(
+        "--q-target",
+        type=float,
+        help="Override the FVS THINQFA q target.",
+    )
     args = parser.parse_args()
+    recruitment_mix = json.loads(args.recruitment_mix.read_text()) if args.recruitment_mix else None
 
     au = pd.read_csv(args.au_table).set_index("au_id")
     matches = pd.read_csv(args.matches)
@@ -334,13 +418,22 @@ def main() -> None:
             records = _records(state, trees)
             if not records:
                 continue
+            region = region_for_tsa(str(state["TSA_DESC"]))
+            fvs_bec = bec_from_label(str(state["bec"]), region=region, series=args.site_series)
             result = run_case(
                 records,
                 _keywords(
                     float(au_row.site_index_median),
                     args.regime,
-                    au_id,
-                    args.calibration,
+                    region=fvs_bec.region,
+                    bec=fvs_bec.bec,
+                    au_id=au_id,
+                    calibration=args.calibration,
+                    bamax_m2ha=args.bamax_m2ha,
+                    recruitment_tpa=args.recruitment_tpa,
+                    recruitment_mix=recruitment_mix,
+                    b_target_m2ha=args.b_target_m2ha,
+                    q_target_override=args.q_target,
                 ),
                 directory=run_root / f"{au_id}__{match.CLSTR_ID}",
             )
@@ -473,6 +566,12 @@ def main() -> None:
         "matches": str(args.matches),
         "regime": args.regime,
         "horizon_years": HORIZON_YEARS,
+        "site_series": args.site_series,
+        "bamax_m2ha": args.bamax_m2ha,
+        "recruitment_tpa": args.recruitment_tpa,
+        "recruitment_mix": recruitment_mix,
+        "b_target_m2ha": args.b_target_m2ha,
+        "q_target": args.q_target,
         "entries": list(zip(CYCLES, ENTRY_YEARS, strict=True)),
         "calibration": str(args.calibration) if args.calibration else None,
         "aus": int(curves["au_id"].nunique()),
@@ -483,6 +582,8 @@ def main() -> None:
             "V1 PSP calibration applied as a sensitivity."
             if args.calibration
             else "No KC calibration applied.",
+            "FVS-BC STDINFO uses region + BEC + site series; the site-series "
+            "default is diagnostic, not a plot-level claim.",
             "Not a legal-compliance claim.",
         ],
     }

@@ -529,3 +529,49 @@ status and the GitHub issue comments.
   zero rows for every dataset account, including product area and yield, instead
   of omitting product accounts entirely. Selection runs keep their produced
   values and get zeros in periods with no product flow.
+
+## 2026-11-02
+
+- P2.8: corrected the FVS-BC BEC code (#127). The runbooks wrote
+  `STDINFO ("712", "CHS131")`, which FVS-BC falls back to `ICHmw2/01` (max BA
+  89 m2/ha), not IDFdk3/IDFxm. Added `scripts/fvs_bec.py`, 14 tests, and patches to the three KC AU
+  runbooks (`yield`, `managed`, `multientry`) that use the plot BEC, TSA region,
+  and an explicit site series. One real KC case now tops out at 52.0 m2/ha instead of
+  77 m2/ha. The 1993-2013 backtest improves TPH bias from +421.8 to +249.5 but
+  does not remove it. Full KC/GL reruns and the IDFxm capacity decision remain. A six-AU, 28-plot no-cut diagnostic gives 200-year volumes of 353-589 m3/ha versus 750-1,232 m3/ha on the old curves; managed year-170 volume is 339-517 vs 614-917 m3/ha, and first multi-entry volume is 163-196 vs 219-287 m3/ha. The IDFxm H AU still reaches 57 m2/ha against a 30 m2/ha default, so explicit BAMAX is required; a BAMAX 53 sensitivity gives IDFxm H/L/M 49.2/45.2/51.7 m2/ha.
+  Dashboard result: `python scripts/dashboard.py` reports `OVERALL: GREEN`.
+- P2.8b: patched the KC 24-plot 200-year and backtest runbooks to use the
+  explicit BEC path. With `CAR / IDFdk3/01`, the 24 plots give 200-year max BA
+  mean 50.0 m2/ha (range 45-67) and volume 447-589 m3/ha; 2013 backtest BA
+  bias -1.29 m2/ha, TPH bias +249.5. The old output files are superseded.
+- P2.8c: added `--mort-multipliers` and `--ba-multipliers` to the KC PSP
+  backtest, and corrected the FAIB 92-site validation runbook to use per-site
+  BEC. Provisional candidate (`BAIMULT 1.3`; `MORTMULT` FD 1.2, SE 5, PL 10,
+  HW 8) gives 92-site BA -0.79 and TPH +37, versus +1.12/+280 uncalibrated and
+  -8.47/-310 for v2c with corrected BEC. TSA and 200-year checks remain.
+- P2.8d: added `--calibration` to the managed one-entry KC runbook. Candidate
+  GWM_LOW year 170 gives 39.8-43.3 m2/ha and 441-533 m3/ha; TPH remains low.
+- P2.8e: added `scripts/fvs_envelope.py` with empirical BA/QMD/TPH flags and
+  7 tests. The provisional candidate flags 83/126 no-cut and 93/108 managed
+  rows, all on QMD; 57/70 exceed the observed QMD maximum. The candidate is
+  not adopted for AAC.
+- P2.8f: added `--recruitment-tpa` to the multi-entry runbook via an
+  `ESTAB`/`PLANT` cohort at each entry. Prototype at 200 TPH/entry restores
+  TPH/QMD (497-746 TPH, 15-21 cm) but leaves BA low (9-23 m2/ha). Rate and BA
+  target need fitting.
+- P2.8g: added `--recruitment-mix` to the multi-entry runbook. A 2024-ingrowth
+  mix (FD 64%, EP 18%, SE 7%, PL 6%, AT 5%) at 400 TPH/entry gives final
+  BA 19-26 m2/ha, QMD 15-20, TPH 865-1,044; only 7/138 rows flagged, all
+  early. BA/volume and target still need joint fitting.
+- P2.8h: added `--b-target-m2ha` and `--q-target` overrides. Combined with
+  mixed 400 TPH/entry recruitment, B=28/q=1.3 gives final six-AU GWM_LOW
+  BA 29.6-33.3 m2/ha, QMD 20.1-21.2, TPH 928-1,000, volume 311-394; only
+  14/138 flags, all early. First structurally plausible full-horizon prototype.
+- P2.8i: added `scripts/state_graph.py` and 7 tests. It validates unique nodes,
+  edge endpoints, terminal states, and envelope compliance. The pruned
+  recruitment graph fails: 15 self-edges and 4 AUs without a terminal state.
+  Not compile-ready.
+- P2.8j: refined `scripts/state_graph.py`: stage-6 occurrence marks a terminal
+  state and self-edges are allowed. The pruned recruitment graph now passes
+  structural validation (43 nodes, 41 edges, 0 problems). This is structural
+  compile readiness, not growth/AAC validation.

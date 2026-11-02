@@ -20,6 +20,7 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -30,10 +31,14 @@ from fresh_fvsbc.outputs import read_table
 from fresh_fvsbc.run import run_case
 from fresh_fvsbc.treelist import resolve_species
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+from fvs_bec import bec_from_label, region_for_tsa
+
 SPECIES_MAP = {"SX": "SE", "W": "OH"}
 BA_FACTOR = 0.00007854
 MIN_YEARS = 10
 MIN_FD_SHARE = 0.5
+SITE_SERIES = "01"
 
 
 def _record(row: pd.Series, plot_id: int, tree_num: int) -> dict[str, object]:
@@ -83,12 +88,15 @@ def _keywords(
     interval: int,
     ba: dict[str, float] | None,
     mort: dict[str, float] | None,
+    *,
+    region: str,
+    bec: str,
 ) -> list[Keyword]:
     """Build a one-interval no-cut key set."""
     return [
         Keyword("DATABASE", (), ("DSNOut", "FVSOut.db", "Summary", "TREELIDB")),
         Keyword("STDIDENT", (f"FAIB {site}",)),
-        Keyword("STDINFO", ("712", "CHS131", "0", str(interval), "35", "16")),
+        Keyword("STDINFO", (region, bec, "0", str(interval), "35", "16")),
         Keyword("MANAGED", ("0", "1")),
         Keyword("INVYEAR", (str(start_year),)),
         Keyword("DESIGN", ("0", "1", "999", "1", "0", "1", "1")),
@@ -172,6 +180,10 @@ def _run_set(
                 interval,
                 _expand(ba) if ba else None,
                 _expand(mort) if mort else None,
+                region=region_for_tsa(str(row["TSA_DESC"])),
+                bec=bec_from_label(
+                    str(row["BEC"]), region=region_for_tsa(str(row["TSA_DESC"])), series=SITE_SERIES
+                ).bec,
             ),
             directory=case_dir,
         )
@@ -235,11 +247,23 @@ def main() -> None:
     parser.add_argument("--runtime-dir", type=Path, required=True)
     parser.add_argument("--parameters", type=Path, required=True)
     parser.add_argument("--max-sites", type=int, default=0)
+    parser.add_argument(
+        "--site-series",
+        default="01",
+        help="FVS-BC site series; 01 is a diagnostic default, not a plot claim.",
+    )
     args = parser.parse_args()
+    global SITE_SERIES
+    SITE_SERIES = args.site_series
 
     header = pd.read_csv(
         args.raw_dir / "faib_header.csv",
-        usecols=["SITE_IDENTIFIER", "BEC_ZONE", "BEC_SBZ", "BEC_VAR"],
+        usecols=["SITE_IDENTIFIER", "BEC_ZONE", "BEC_SBZ", "BEC_VAR", "TSA_DESC"],
+    )
+    header["BEC"] = (
+        header["BEC_ZONE"].fillna("")
+        + header["BEC_SBZ"].fillna("")
+        + header["BEC_VAR"].fillna("").astype(str).str.replace(r"\.0$", "", regex=True)
     )
     header = header[
         (header["BEC_ZONE"] == "IDF")
@@ -315,6 +339,11 @@ def main() -> None:
     )
     sites = first_last.rename(columns={"SITE_IDENTIFIER": "site"})
     sites = sites.merge(metrics, on="site", how="inner")
+    sites = sites.merge(
+        header[["SITE_IDENTIFIER", "BEC", "TSA_DESC"]].rename(columns={"SITE_IDENTIFIER": "site"}),
+        on="site",
+        how="left",
+    )
     sites = sites[sites["start_fd_share"] >= MIN_FD_SHARE].copy()
     if args.max_sites:
         sites = sites.sort_values(["start_fd_share", "n_visits"], ascending=False).head(

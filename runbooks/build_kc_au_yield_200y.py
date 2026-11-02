@@ -21,6 +21,7 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
+import sys
 from itertools import pairwise
 from pathlib import Path
 
@@ -31,6 +32,9 @@ from fresh_fvsbc.nemora import crown_class
 from fresh_fvsbc.outputs import read_table
 from fresh_fvsbc.run import run_case
 from fresh_fvsbc.treelist import resolve_species
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+from fvs_bec import bec_from_label, region_for_tsa
 
 TREE_AGE_DEFAULT = 60.0
 HORIZON_YEARS = 200
@@ -158,12 +162,18 @@ def _calibration_keywords(path: Path) -> list[Keyword]:
     ]
 
 
-def _keywords(calibration: Path | None = None) -> list[Keyword]:
+def _keywords(
+    calibration: Path | None,
+    *,
+    region: str,
+    bec: str,
+    bamax_m2ha: float | None = None,
+) -> list[Keyword]:
     """Return the no-cut 200-year FVS-BC key set."""
     return [
         Keyword("DATABASE", (), ("DSNOut", "FVSOut.db", "Summary", "TREELIDB")),
         Keyword("STDIDENT", ("KC-AU-200Y",)),
-        Keyword("STDINFO", ("712", "CHS131", "0", str(HORIZON_YEARS), "35", "16")),
+        Keyword("STDINFO", (region, bec, "0", str(HORIZON_YEARS), "35", "16")),
         Keyword("MANAGED", ("0", "1")),
         Keyword("SITECODE", ("FD", "60")),
         Keyword("INVYEAR", ("0",)),
@@ -171,6 +181,7 @@ def _keywords(calibration: Path | None = None) -> list[Keyword]:
         Keyword("TIMEINT", ("", str(STEP_YEARS))),
         Keyword("NUMCYCLE", (str(HORIZON_YEARS // STEP_YEARS),)),
         Keyword("RANNSEED", ("1",)),
+        *([Keyword("BAMAX", (f"{bamax_m2ha:.1f}",))] if bamax_m2ha is not None else []),
         *[Keyword("TREELIST", (str(cycle),)) for cycle in range(1, 21)],
         *(_calibration_keywords(calibration) if calibration else []),
         Keyword("PROCESS"),
@@ -187,6 +198,20 @@ def main() -> None:
     parser.add_argument("--out-dir", type=Path, required=True)
     parser.add_argument("--plots-per-au", type=int, default=5)
     parser.add_argument("--calibration", type=Path)
+    parser.add_argument(
+        "--bamax-m2ha",
+        type=float,
+        default=None,
+        help="Optional explicit BC BAMAX in m2/ha (not ft2/ac).",
+    )
+    parser.add_argument(
+        "--site-series",
+        default="01",
+        help=(
+            "FVS-BC site-series code. The default 01 is a diagnostic default, "
+            "not a claim that every plot is site series 01."
+        ),
+    )
     args = parser.parse_args()
 
     au = pd.read_csv(args.au_table)
@@ -266,8 +291,21 @@ def main() -> None:
             records = _records(state_series, trees)
             if not records:
                 continue
+            region = region_for_tsa(str(state_series["TSA_DESC"]))
+            fvs_bec = bec_from_label(
+                str(state_series["bec"]), region=region, series=args.site_series
+            )
             case_dir = run_root / f"{au_row.au_id}__{state_series['CLSTR_ID']}"
-            result = run_case(records, _keywords(args.calibration), directory=case_dir)
+            result = run_case(
+                records,
+                _keywords(
+                    args.calibration,
+                    region=fvs_bec.region,
+                    bec=fvs_bec.bec,
+                    bamax_m2ha=args.bamax_m2ha,
+                ),
+                directory=case_dir,
+            )
             summary = read_table(result.database, "FVS_Summary_Metric").sort_values("Year")
             summary = summary[summary["CaseID"] == result.provenance.case_id]
             tree_list = read_table(result.database, "FVS_TreeList_Metric")
@@ -319,6 +357,7 @@ def main() -> None:
                     "CLSTR_ID": state_series["CLSTR_ID"],
                     "VISIT_NUMBER": int(state_series["VISIT_NUMBER"]),
                     "bec": state_series["bec"],
+                    "fvs_bec": fvs_bec.bec,
                     "species": state_series["species"],
                     "si": float(state_series["si"]),
                     "ba": float(state_series["ba"]),
@@ -350,6 +389,8 @@ def main() -> None:
         "horizon_years": HORIZON_YEARS,
         "step_years": STEP_YEARS,
         "plots_per_au": args.plots_per_au,
+        "site_series": args.site_series,
+        "bamax_m2ha": args.bamax_m2ha,
         "calibration": str(args.calibration) if args.calibration else None,
         "aus": len(au),
         "matched_plots": len(matches),
@@ -359,6 +400,8 @@ def main() -> None:
             "No-cut FVS-BC curves, not observed 200-year growth.",
             "Site index and tree age are structural inputs from the FAIB panel.",
             "AU matching is BEC + leading species + SI band, then nearest SI.",
+            "FVS-BC STDINFO uses region + BEC + site series; the site-series "
+            "default is diagnostic, not a plot-level claim.",
             "V1 PSP calibration applied as a sensitivity."
             if args.calibration
             else "No KC calibration applied.",

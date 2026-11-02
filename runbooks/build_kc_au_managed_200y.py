@@ -22,6 +22,7 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -31,6 +32,9 @@ from fresh_fvsbc.nemora import crown_class
 from fresh_fvsbc.outputs import read_table
 from fresh_fvsbc.run import run_case
 from fresh_fvsbc.treelist import resolve_species
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+from fvs_bec import bec_from_label, region_for_tsa
 
 HORIZON_YEARS = 200
 STEP_YEARS = 10
@@ -104,7 +108,38 @@ def _records(state: pd.Series, trees: pd.DataFrame) -> list[dict[str, object]]:
     return records
 
 
-def _keywords(site_index: float, regime: str) -> list[Keyword]:
+def _calibration_keywords(path: Path) -> list[Keyword]:
+    """Return BAIMULT/MORTMULT keywords from a calibration file."""
+    parameters = json.loads(path.read_text())
+    groups = {"FD": ("FD",), "SE": ("SE",), "PL": ("PL",), "HW": ("EP", "AT", "OH")}
+    ba = {
+        species: parameters["ba_multiplier"][group]
+        for group, species_plan in groups.items()
+        for species in species_plan
+    }
+    mort = {
+        species: parameters["mortality_multiplier"][group]
+        for group, species_plan in groups.items()
+        for species in species_plan
+    }
+    return [
+        *[Keyword("BAIMULT", ("1", species, f"{value:.4f}")) for species, value in ba.items()],
+        *[
+            Keyword("MORTMULT", ("1", species, f"{value:.4f}", "0", "999"))
+            for species, value in mort.items()
+        ],
+    ]
+
+
+def _keywords(
+    site_index: float,
+    regime: str,
+    *,
+    region: str,
+    bec: str,
+    bamax_m2ha: float | None = None,
+    calibration: Path | None = None,
+) -> list[Keyword]:
     """Return the 200-year one-entry GWM key set for one regime."""
     spec = REGIMES[regime]
     return [
@@ -114,7 +149,7 @@ def _keywords(site_index: float, regime: str) -> list[Keyword]:
             ("DSNOut", "FVSOut.db", "Summary", "CUTLIDB", "ATRTLIDB"),
         ),
         Keyword("STDIDENT", (f"KC-AU-{regime}-200Y",)),
-        Keyword("STDINFO", ("712", "CHS131", "0", str(HORIZON_YEARS), "35", "16")),
+        Keyword("STDINFO", (region, bec, "0", str(HORIZON_YEARS), "35", "16")),
         Keyword("MANAGED", ("0", "1")),
         Keyword("SITECODE", ("FD", f"{site_index:.1f}")),
         Keyword("INVYEAR", ("0",)),
@@ -122,6 +157,8 @@ def _keywords(site_index: float, regime: str) -> list[Keyword]:
         Keyword("TIMEINT", ("", str(STEP_YEARS))),
         Keyword("NUMCYCLE", (str(HORIZON_YEARS // STEP_YEARS),)),
         Keyword("RANNSEED", ("1",)),
+        *([Keyword("BAMAX", (f"{bamax_m2ha:.1f}",))] if bamax_m2ha is not None else []),
+        *(_calibration_keywords(calibration) if calibration else []),
         Keyword("TREELIST", (str(ENTRY_CYCLE),)),
         Keyword("CUTLIST", (str(ENTRY_CYCLE),)),
         Keyword("ATRTLIST", (str(ENTRY_CYCLE),)),
@@ -151,6 +188,21 @@ def main() -> None:
     parser.add_argument("--panel", type=Path, required=True)
     parser.add_argument("--raw-dir", type=Path, required=True)
     parser.add_argument("--out-dir", type=Path, required=True)
+    parser.add_argument(
+        "--bamax-m2ha",
+        type=float,
+        default=None,
+        help="Optional explicit BC BAMAX in m2/ha (not ft2/ac).",
+    )
+    parser.add_argument("--calibration", type=Path)
+    parser.add_argument(
+        "--site-series",
+        default="01",
+        help=(
+            "FVS-BC site-series code. The default 01 is a diagnostic default, "
+            "not a claim that every plot is site series 01."
+        ),
+    )
     parser.add_argument("--regime", choices=sorted(REGIMES), default="GWM_MODERATE")
     args = parser.parse_args()
 
@@ -202,9 +254,18 @@ def main() -> None:
             if not records:
                 continue
             case_dir = run_root / f"{au_id}__{match.CLSTR_ID}"
+            region = region_for_tsa(str(state["TSA_DESC"]))
+            fvs_bec = bec_from_label(str(state["bec"]), region=region, series=args.site_series)
             result = run_case(
                 records,
-                _keywords(float(au_row.site_index_median), args.regime),
+                _keywords(
+                    float(au_row.site_index_median),
+                    args.regime,
+                    region=fvs_bec.region,
+                    bec=fvs_bec.bec,
+                    bamax_m2ha=args.bamax_m2ha,
+                    calibration=args.calibration,
+                ),
                 directory=case_dir,
             )
             summary = read_table(result.database, "FVS_Summary_Metric").sort_values("Year")
@@ -273,6 +334,9 @@ def main() -> None:
         "au_table": str(args.au_table),
         "matches": str(args.matches),
         "horizon_years": HORIZON_YEARS,
+        "site_series": args.site_series,
+        "bamax_m2ha": args.bamax_m2ha,
+        "calibration": str(args.calibration) if args.calibration else None,
         "entry_cycle": ENTRY_CYCLE,
         "entry_year": ENTRY_CYCLE * STEP_YEARS,
         "regime": args.regime,
@@ -284,6 +348,8 @@ def main() -> None:
         "caveats": [
             "One entry at year 30, not a full multi-entry state graph.",
             "No-cut before the entry and residual growth after it.",
+            "FVS-BC STDINFO uses region + BEC + site series; the site-series "
+            "default is diagnostic, not a plot-level claim.",
             "No calibration or legal-compliance claim.",
         ],
     }
