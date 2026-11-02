@@ -213,12 +213,23 @@ def _keywords(
     bamax_m2ha: float | None = None,
     recruitment_tpa: float = 0.0,
     recruitment_mix: dict[str, float] | None = None,
+    b_target_m2ha: float | None = None,
+    q_target_override: float | None = None,
 ) -> list[Keyword]:
     """Return the 200-year multi-entry key set."""
     spec = REGIMES[regime]
     q_map = Q_BY_AU_CALIBRATED if calibration else Q_BY_AU
     q_target = q_map.get((au_id, regime), spec["q"]) if au_id else spec["q"]
-    reserve_target = RESERVE_CALIBRATED[regime] if calibration else spec["reserve"]
+    if q_target_override is not None:
+        q_target = q_target_override
+    b_target = b_target_m2ha if b_target_m2ha is not None else spec["B"]
+    reserve_target = (
+        b_target_m2ha - spec["large"]
+        if b_target_m2ha is not None
+        else RESERVE_CALIBRATED[regime]
+        if calibration
+        else spec["reserve"]
+    )
     thinning = []
     for cycle in CYCLES:
         thinning.append(
@@ -259,7 +270,7 @@ def _keywords(
                     "0",
                     str(q_target),
                     "5.0",
-                    str(round((spec["B"] - spec["large"]) * FT2_PER_M2, 2)),
+                    str(round((b_target - spec["large"]) * FT2_PER_M2, 2)),
                 ),
                 supplemental=("0",),
             )
@@ -346,6 +357,16 @@ def main() -> None:
         type=Path,
         help="JSON object mapping FVS species to fraction of recruitment_tpa.",
     )
+    parser.add_argument(
+        "--b-target-m2ha",
+        type=float,
+        help="Override the residual BA target in m2/ha.",
+    )
+    parser.add_argument(
+        "--q-target",
+        type=float,
+        help="Override the FVS THINQFA q target.",
+    )
     args = parser.parse_args()
     recruitment_mix = json.loads(args.recruitment_mix.read_text()) if args.recruitment_mix else None
 
@@ -411,6 +432,8 @@ def main() -> None:
                     bamax_m2ha=args.bamax_m2ha,
                     recruitment_tpa=args.recruitment_tpa,
                     recruitment_mix=recruitment_mix,
+                    b_target_m2ha=args.b_target_m2ha,
+                    q_target_override=args.q_target,
                 ),
                 directory=run_root / f"{au_id}__{match.CLSTR_ID}",
             )
@@ -547,6 +570,8 @@ def main() -> None:
         "bamax_m2ha": args.bamax_m2ha,
         "recruitment_tpa": args.recruitment_tpa,
         "recruitment_mix": recruitment_mix,
+        "b_target_m2ha": args.b_target_m2ha,
+        "q_target": args.q_target,
         "entries": list(zip(CYCLES, ENTRY_YEARS, strict=True)),
         "calibration": str(args.calibration) if args.calibration else None,
         "aus": int(curves["au_id"].nunique()),

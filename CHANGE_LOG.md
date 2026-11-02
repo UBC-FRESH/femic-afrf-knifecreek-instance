@@ -563,3 +563,7 @@ status and the GitHub issue comments.
   mix (FD 64%, EP 18%, SE 7%, PL 6%, AT 5%) at 400 TPH/entry gives final
   BA 19-26 m2/ha, QMD 15-20, TPH 865-1,044; only 7/138 rows flagged, all
   early. BA/volume and target still need joint fitting.
+- P2.8h: added `--b-target-m2ha` and `--q-target` overrides. Combined with
+  mixed 400 TPH/entry recruitment, B=28/q=1.3 gives final six-AU GWM_LOW
+  BA 29.6-33.3 m2/ha, QMD 20.1-21.2, TPH 928-1,000, volume 311-394; only
+  14/138 flags, all early. First structurally plausible full-horizon prototype.
