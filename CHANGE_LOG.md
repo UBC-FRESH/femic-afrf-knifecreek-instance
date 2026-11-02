@@ -549,3 +549,5 @@ status and the GitHub issue comments.
   BEC. Provisional candidate (`BAIMULT 1.3`; `MORTMULT` FD 1.2, SE 5, PL 10,
   HW 8) gives 92-site BA -0.79 and TPH +37, versus +1.12/+280 uncalibrated and
   -8.47/-310 for v2c with corrected BEC. TSA and 200-year checks remain.
+- P2.8d: added `--calibration` to the managed one-entry KC runbook. Candidate
+  GWM_LOW year 170 gives 39.8-43.3 m2/ha and 441-533 m3/ha; TPH remains low.

@@ -108,6 +108,29 @@ def _records(state: pd.Series, trees: pd.DataFrame) -> list[dict[str, object]]:
     return records
 
 
+def _calibration_keywords(path: Path) -> list[Keyword]:
+    """Return BAIMULT/MORTMULT keywords from a calibration file."""
+    parameters = json.loads(path.read_text())
+    groups = {"FD": ("FD",), "SE": ("SE",), "PL": ("PL",), "HW": ("EP", "AT", "OH")}
+    ba = {
+        species: parameters["ba_multiplier"][group]
+        for group, species_plan in groups.items()
+        for species in species_plan
+    }
+    mort = {
+        species: parameters["mortality_multiplier"][group]
+        for group, species_plan in groups.items()
+        for species in species_plan
+    }
+    return [
+        *[Keyword("BAIMULT", ("1", species, f"{value:.4f}")) for species, value in ba.items()],
+        *[
+            Keyword("MORTMULT", ("1", species, f"{value:.4f}", "0", "999"))
+            for species, value in mort.items()
+        ],
+    ]
+
+
 def _keywords(
     site_index: float,
     regime: str,
@@ -115,6 +138,7 @@ def _keywords(
     region: str,
     bec: str,
     bamax_m2ha: float | None = None,
+    calibration: Path | None = None,
 ) -> list[Keyword]:
     """Return the 200-year one-entry GWM key set for one regime."""
     spec = REGIMES[regime]
@@ -134,6 +158,7 @@ def _keywords(
         Keyword("NUMCYCLE", (str(HORIZON_YEARS // STEP_YEARS),)),
         Keyword("RANNSEED", ("1",)),
         *([Keyword("BAMAX", (f"{bamax_m2ha:.1f}",))] if bamax_m2ha is not None else []),
+        *(_calibration_keywords(calibration) if calibration else []),
         Keyword("TREELIST", (str(ENTRY_CYCLE),)),
         Keyword("CUTLIST", (str(ENTRY_CYCLE),)),
         Keyword("ATRTLIST", (str(ENTRY_CYCLE),)),
@@ -169,6 +194,7 @@ def main() -> None:
         default=None,
         help="Optional explicit BC BAMAX in m2/ha (not ft2/ac).",
     )
+    parser.add_argument("--calibration", type=Path)
     parser.add_argument(
         "--site-series",
         default="01",
@@ -238,6 +264,7 @@ def main() -> None:
                     region=fvs_bec.region,
                     bec=fvs_bec.bec,
                     bamax_m2ha=args.bamax_m2ha,
+                    calibration=args.calibration,
                 ),
                 directory=case_dir,
             )
@@ -309,6 +336,7 @@ def main() -> None:
         "horizon_years": HORIZON_YEARS,
         "site_series": args.site_series,
         "bamax_m2ha": args.bamax_m2ha,
+        "calibration": str(args.calibration) if args.calibration else None,
         "entry_cycle": ENTRY_CYCLE,
         "entry_year": ENTRY_CYCLE * STEP_YEARS,
         "regime": args.regime,
