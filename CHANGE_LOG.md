@@ -551,3 +551,7 @@ status and the GitHub issue comments.
   -8.47/-310 for v2c with corrected BEC. TSA and 200-year checks remain.
 - P2.8d: added `--calibration` to the managed one-entry KC runbook. Candidate
   GWM_LOW year 170 gives 39.8-43.3 m2/ha and 441-533 m3/ha; TPH remains low.
+- P2.8e: added `scripts/fvs_envelope.py` with empirical BA/QMD/TPH flags and
+  7 tests. The provisional candidate flags 83/126 no-cut and 93/108 managed
+  rows, all on QMD; 57/70 exceed the observed QMD maximum. The candidate is
+  not adopted for AAC.
