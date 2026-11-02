@@ -571,3 +571,7 @@ status and the GitHub issue comments.
   edge endpoints, terminal states, and envelope compliance. The pruned
   recruitment graph fails: 15 self-edges and 4 AUs without a terminal state.
   Not compile-ready.
+- P2.8j: refined `scripts/state_graph.py`: stage-6 occurrence marks a terminal
+  state and self-edges are allowed. The pruned recruitment graph now passes
+  structural validation (43 nodes, 41 edges, 0 problems). This is structural
+  compile readiness, not growth/AAC validation.

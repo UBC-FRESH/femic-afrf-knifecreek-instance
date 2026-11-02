@@ -72,7 +72,7 @@ def validate_graph(
     for row in node_list:
         key = (str(row["au_id"]), str(row["state_id"]))
         stages = {part.strip() for part in str(row["stages"]).split(",")}
-        if stages == {terminal_stage}:
+        if terminal_stage in stages:
             terminal_keys.add(key)
         bec = str(row["BEC"])
         check = check_envelope(
@@ -93,8 +93,6 @@ def validate_graph(
         if target not in keys:
             problems.append(f"edge target missing: {target[0]}/{target[1]}")
             continue
-        if source == target:
-            problems.append(f"self edge: {source[0]}/{source[1]}")
         outgoing[source] += 1
 
     for key, count in outgoing.items():

@@ -56,6 +56,16 @@ def test_missing_terminal_state_is_rejected() -> None:
     assert any("no terminal" in problem for problem in result.problems)
 
 
+def test_stage_six_in_a_mixed_stage_node_is_terminal() -> None:
+    result = validate_graph([_node("A", "1,2,6"), _node("B", "3,6")], [_edge("A", "B")])
+    assert result.passed
+
+
+def test_self_edge_is_allowed() -> None:
+    result = validate_graph([_node("A", "1,6")], [_edge("A", "A")])
+    assert result.passed
+
+
 def test_envelope_violation_is_rejected() -> None:
     node = _node("A", "1")
     node["qmd_mean"] = 50.0
