@@ -211,6 +211,7 @@ def _keywords(
     au_id: str | None = None,
     calibration: Path | None = None,
     bamax_m2ha: float | None = None,
+    recruitment_tpa: float = 0.0,
 ) -> list[Keyword]:
     """Return the 200-year multi-entry key set."""
     spec = REGIMES[regime]
@@ -278,6 +279,23 @@ def _keywords(
         *[Keyword("ATRTLIST", (str(cycle),)) for cycle in CYCLES],
         *thinning,
         *(_calibration_keywords(calibration) if calibration else []),
+        *(
+            [
+                Keyword(
+                    "ESTAB",
+                    ("0",),
+                    nested=tuple(
+                        Keyword(
+                            "PLANT",
+                            (str(year), "FD", f"{recruitment_tpa:.1f}", "95", "2", "1.0", "0"),
+                        )
+                        for year in ENTRY_YEARS
+                    ),
+                ),
+            ]
+            if recruitment_tpa > 0
+            else []
+        ),
         Keyword("PROCESS"),
         Keyword("STOP"),
     ]
@@ -307,6 +325,12 @@ def main() -> None:
     )
     parser.add_argument("--regime", choices=sorted(REGIMES), default="GWM_MODERATE")
     parser.add_argument("--calibration", type=Path)
+    parser.add_argument(
+        "--recruitment-tpa",
+        type=float,
+        default=0.0,
+        help="Optional planted FD cohort at each entry, in trees per acre.",
+    )
     args = parser.parse_args()
 
     au = pd.read_csv(args.au_table).set_index("au_id")
@@ -369,6 +393,7 @@ def main() -> None:
                     au_id=au_id,
                     calibration=args.calibration,
                     bamax_m2ha=args.bamax_m2ha,
+                    recruitment_tpa=args.recruitment_tpa,
                 ),
                 directory=run_root / f"{au_id}__{match.CLSTR_ID}",
             )
@@ -503,6 +528,7 @@ def main() -> None:
         "horizon_years": HORIZON_YEARS,
         "site_series": args.site_series,
         "bamax_m2ha": args.bamax_m2ha,
+        "recruitment_tpa": args.recruitment_tpa,
         "entries": list(zip(CYCLES, ENTRY_YEARS, strict=True)),
         "calibration": str(args.calibration) if args.calibration else None,
         "aus": int(curves["au_id"].nunique()),

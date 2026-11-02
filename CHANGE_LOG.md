@@ -555,3 +555,7 @@ status and the GitHub issue comments.
   7 tests. The provisional candidate flags 83/126 no-cut and 93/108 managed
   rows, all on QMD; 57/70 exceed the observed QMD maximum. The candidate is
   not adopted for AAC.
+- P2.8f: added `--recruitment-tpa` to the multi-entry runbook via an
+  `ESTAB`/`PLANT` cohort at each entry. Prototype at 200 TPH/entry restores
+  TPH/QMD (497-746 TPH, 15-21 cm) but leaves BA low (9-23 m2/ha). Rate and BA
+  target need fitting.
