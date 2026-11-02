@@ -210,6 +210,7 @@ def _keywords(
     bec: str,
     au_id: str | None = None,
     calibration: Path | None = None,
+    bamax_m2ha: float | None = None,
 ) -> list[Keyword]:
     """Return the 200-year multi-entry key set."""
     spec = REGIMES[regime]
@@ -272,6 +273,7 @@ def _keywords(
         Keyword("TIMEINT", ("", str(STEP_YEARS))),
         Keyword("NUMCYCLE", (str(HORIZON_YEARS // STEP_YEARS),)),
         Keyword("RANNSEED", ("1",)),
+        *([Keyword("BAMAX", (f"{bamax_m2ha:.1f}",))] if bamax_m2ha is not None else []),
         *[Keyword("TREELIST", (str(cycle),)) for cycle in range(1, 21)],
         *[Keyword("ATRTLIST", (str(cycle),)) for cycle in CYCLES],
         *thinning,
@@ -289,6 +291,12 @@ def main() -> None:
     parser.add_argument("--panel", type=Path, required=True)
     parser.add_argument("--raw-dir", type=Path, required=True)
     parser.add_argument("--out-dir", type=Path, required=True)
+    parser.add_argument(
+        "--bamax-m2ha",
+        type=float,
+        default=None,
+        help="Optional explicit BC BAMAX in m2/ha (not ft2/ac).",
+    )
     parser.add_argument(
         "--site-series",
         default="01",
@@ -360,6 +368,7 @@ def main() -> None:
                     bec=fvs_bec.bec,
                     au_id=au_id,
                     calibration=args.calibration,
+                    bamax_m2ha=args.bamax_m2ha,
                 ),
                 directory=run_root / f"{au_id}__{match.CLSTR_ID}",
             )
@@ -493,6 +502,7 @@ def main() -> None:
         "regime": args.regime,
         "horizon_years": HORIZON_YEARS,
         "site_series": args.site_series,
+        "bamax_m2ha": args.bamax_m2ha,
         "entries": list(zip(CYCLES, ENTRY_YEARS, strict=True)),
         "calibration": str(args.calibration) if args.calibration else None,
         "aus": int(curves["au_id"].nunique()),

@@ -114,6 +114,7 @@ def _keywords(
     *,
     region: str,
     bec: str,
+    bamax_m2ha: float | None = None,
 ) -> list[Keyword]:
     """Return the 200-year one-entry GWM key set for one regime."""
     spec = REGIMES[regime]
@@ -132,6 +133,7 @@ def _keywords(
         Keyword("TIMEINT", ("", str(STEP_YEARS))),
         Keyword("NUMCYCLE", (str(HORIZON_YEARS // STEP_YEARS),)),
         Keyword("RANNSEED", ("1",)),
+        *([Keyword("BAMAX", (f"{bamax_m2ha:.1f}",))] if bamax_m2ha is not None else []),
         Keyword("TREELIST", (str(ENTRY_CYCLE),)),
         Keyword("CUTLIST", (str(ENTRY_CYCLE),)),
         Keyword("ATRTLIST", (str(ENTRY_CYCLE),)),
@@ -161,6 +163,12 @@ def main() -> None:
     parser.add_argument("--panel", type=Path, required=True)
     parser.add_argument("--raw-dir", type=Path, required=True)
     parser.add_argument("--out-dir", type=Path, required=True)
+    parser.add_argument(
+        "--bamax-m2ha",
+        type=float,
+        default=None,
+        help="Optional explicit BC BAMAX in m2/ha (not ft2/ac).",
+    )
     parser.add_argument(
         "--site-series",
         default="01",
@@ -229,6 +237,7 @@ def main() -> None:
                     args.regime,
                     region=fvs_bec.region,
                     bec=fvs_bec.bec,
+                    bamax_m2ha=args.bamax_m2ha,
                 ),
                 directory=case_dir,
             )
@@ -299,6 +308,7 @@ def main() -> None:
         "matches": str(args.matches),
         "horizon_years": HORIZON_YEARS,
         "site_series": args.site_series,
+        "bamax_m2ha": args.bamax_m2ha,
         "entry_cycle": ENTRY_CYCLE,
         "entry_year": ENTRY_CYCLE * STEP_YEARS,
         "regime": args.regime,

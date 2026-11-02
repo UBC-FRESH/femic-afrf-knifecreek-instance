@@ -86,6 +86,11 @@ m³/ha** on the old ICH-default curves. Managed year-170 volumes are
 **163–196 m³/ha** versus **219–287 m³/ha**. That is the scale of the error; the
 old AAC and schedule diagnostics cannot stand.
 
+An explicit `BAMAX 53` m²/ha sensitivity brings IDFxm H/L/M to
+49.2/45.2/51.7 m²/ha and 621.6/532.2/635.3 m³/ha at 200 years. It leaves the
+IDFdk3 AUs essentially unchanged. This is the current plausibility cap, not a
+calibrated parameter.
+
 ## Units
 
 `BAMAX` is **m²/ha** in the BC variant, despite the generic FVS keyword guide

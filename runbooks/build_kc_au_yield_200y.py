@@ -167,6 +167,7 @@ def _keywords(
     *,
     region: str,
     bec: str,
+    bamax_m2ha: float | None = None,
 ) -> list[Keyword]:
     """Return the no-cut 200-year FVS-BC key set."""
     return [
@@ -180,6 +181,7 @@ def _keywords(
         Keyword("TIMEINT", ("", str(STEP_YEARS))),
         Keyword("NUMCYCLE", (str(HORIZON_YEARS // STEP_YEARS),)),
         Keyword("RANNSEED", ("1",)),
+        *([Keyword("BAMAX", (f"{bamax_m2ha:.1f}",))] if bamax_m2ha is not None else []),
         *[Keyword("TREELIST", (str(cycle),)) for cycle in range(1, 21)],
         *(_calibration_keywords(calibration) if calibration else []),
         Keyword("PROCESS"),
@@ -196,6 +198,12 @@ def main() -> None:
     parser.add_argument("--out-dir", type=Path, required=True)
     parser.add_argument("--plots-per-au", type=int, default=5)
     parser.add_argument("--calibration", type=Path)
+    parser.add_argument(
+        "--bamax-m2ha",
+        type=float,
+        default=None,
+        help="Optional explicit BC BAMAX in m2/ha (not ft2/ac).",
+    )
     parser.add_argument(
         "--site-series",
         default="01",
@@ -290,7 +298,12 @@ def main() -> None:
             case_dir = run_root / f"{au_row.au_id}__{state_series['CLSTR_ID']}"
             result = run_case(
                 records,
-                _keywords(args.calibration, region=fvs_bec.region, bec=fvs_bec.bec),
+                _keywords(
+                    args.calibration,
+                    region=fvs_bec.region,
+                    bec=fvs_bec.bec,
+                    bamax_m2ha=args.bamax_m2ha,
+                ),
                 directory=case_dir,
             )
             summary = read_table(result.database, "FVS_Summary_Metric").sort_values("Year")
@@ -377,6 +390,7 @@ def main() -> None:
         "step_years": STEP_YEARS,
         "plots_per_au": args.plots_per_au,
         "site_series": args.site_series,
+        "bamax_m2ha": args.bamax_m2ha,
         "calibration": str(args.calibration) if args.calibration else None,
         "aus": len(au),
         "matched_plots": len(matches),
