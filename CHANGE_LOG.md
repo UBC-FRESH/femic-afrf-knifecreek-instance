@@ -384,3 +384,13 @@ status and the GitHub issue comments.
   entries when High is available. It is an upper-bound sensitivity, not an
   HMZ-compliant or approved plan; the constrained `dataset_kc_spatial_v4`
   policy still enters a reserve cycle after about 120 years.
+- P2.3 sustained HMZ-constrained GWM policy: added
+  `runbooks/build_state_library_v3.py`, `ws4/state_library_v3/` and
+  `ws4/dataset_kc_spatial_v5/`. v3 follows eight 30-year entries and counts
+  post-FVS clump harvest volume in `fvs_cut_m3_ha`; v2 omitted it. The 8-entry
+  graph has 216 per-chain states, 192 transitions, 35 canonical states, 48
+  canonical transitions and two cycles. The compiled dataset has 140 tracks /
+  96 treatments and `ws4 validate` passes. The public `knife-gwm-policy`
+  schedule has 157 blocks / 1,570 entries, 2,433,385 m3 total production,
+  positive production in all 30 periods, ~CAD 882k/yr public-envelope net and
+  NPV 4% ~CAD 39.3M. This is a structural policy screen, not an approved plan.
