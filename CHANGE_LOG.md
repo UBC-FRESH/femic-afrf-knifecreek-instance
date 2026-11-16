@@ -377,3 +377,10 @@ status and the GitHub issue comments.
   This is a policy screen, not a sustained-yield plan. The FVS-BC STDINFO BEC
   was corrected to `CAR IDFdk3/01`; crown ratios are capped at 0.89 for the
   FVS crown-class field.
+- P2.3 high-regime upper bound: added `ws4/dataset_kc_spatial_v4_high/`, a
+  deliberate HMZ-unconstrained copy that offers High, Moderate and Low on every
+  block. The best-cut policy schedules 157 blocks / 1,570 entries and produces
+  1,329,309 m3 through P29. This proves the v2 graph can carry sustained
+  entries when High is available. It is an upper-bound sensitivity, not an
+  HMZ-compliant or approved plan; the constrained `dataset_kc_spatial_v4`
+  policy still enters a reserve cycle after about 120 years.
