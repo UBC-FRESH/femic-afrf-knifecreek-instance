@@ -233,13 +233,17 @@ that ws4 will consume. The next library is `state_library_v1` with
   rule is post-FVS clump reserve (largest 2–5 above D per 4–10-tree clump),
   13/15 pass with a DBH-ranked six-tree proxy. A spatial clump rule is still
   required for KC.
-- [~] P2.3 Build the multi-cycle state graph and canonicalize states. v1 has
-  48 transitions and 72 per-chain states; graph closure and shared
-  canonicalization are still open.
+- [~] P2.3 Build the multi-cycle state graph and canonicalize states. v2 now
+  follows four 30-year entries: 120 per-chain states, 96 transitions, 32
+  canonical states and four canonical cycles. The canonical policy screen
+  enters a reserve cycle after about 120 years; sustained-yield closure is
+  still open. v1 remains the 48-transition two-entry comparison.
 - [~] P2.4 Generate ws4 tracks, treatments, curves, features, and products.
-  A synthetic 4-block dataset and a 160-block VRI/HMZ spatial structural dataset
-  validate. The KC operating dataset is still blocked on CFI and spatial
-  clumps; the HMZ layer is acquired and enforced structurally.
+  A synthetic 4-block dataset and the 160-block VRI/HMZ spatial datasets
+  validate. `dataset_kc_spatial_v4` adds the four-entry canonical graph
+  (128 tracks, 79 treatments) and supports a multi-entry policy screen. The KC
+  operating dataset is still blocked on CFI and spatial clumps; the HMZ layer
+  is acquired and enforced structurally.
 - [ ] P2.5 Record the library manifest and validation evidence
 
 Acceptance criteria:
@@ -349,3 +353,8 @@ Acceptance criteria:
    the state library as `state_library_v1` with `basis=GWM_2007`. Do not compile
    the legacy Table 29 v0 library as legal compliance. The synthetic THINQFA
    pilot and the BC unit check are complete; the KC stem list is still missing.
+7. `state_library_v2` extends the four-entry chain and closes four canonical
+   cycles. The next model question is whether a stand-specific or revised
+   canonical graph can avoid the reserve cycle that ends the current policy
+   screen after about 120 years. Do not present the v2 policy screen as a
+   sustained-yield plan.

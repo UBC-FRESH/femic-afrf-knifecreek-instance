@@ -1,0 +1,637 @@
+{
+  "library": "knife-creek-state-transition-v2",
+  "basis": "GWM_2007",
+  "status": "provisional-clump-reserve",
+  "generated_at": "2026-11-16T05:58:33.283683+00:00",
+  "source_stemlist": "data/psp/idf_cariboo_psp_stemlist_sample.csv",
+  "source_stemlist_sha256": "cc651071a8ce67f3b5c8e7c5b7d9b38dd8194f49c67c6e43cf3e8539d62591ce",
+  "stands": [
+    "PSP-IDF-024",
+    "PSP-IDF-005",
+    "PSP-IDF-015",
+    "PSP-IDF-012",
+    "PSP-IDF-004",
+    "PSP-IDF-013",
+    "PSP-IDF-006",
+    "PSP-IDF-008"
+  ],
+  "regimes": {
+    "GWM_HIGH": {
+      "B": 29.0,
+      "large_ba": 16.0,
+      "D": 70.0,
+      "q": 1.25,
+      "q_min": 1.2,
+      "q_max": 1.35
+    },
+    "GWM_MODERATE": {
+      "B": 22.0,
+      "large_ba": 11.0,
+      "D": 60.0,
+      "q": 1.25,
+      "q_min": 1.25,
+      "q_max": 1.35
+    },
+    "GWM_LOW": {
+      "B": 16.0,
+      "large_ba": 6.0,
+      "D": 50.0,
+      "q": 1.3,
+      "q_min": 1.25,
+      "q_max": 1.4
+    }
+  },
+  "entries": 4,
+  "counts": {
+    "states": 120,
+    "transitions": 96,
+    "curves": 384
+  },
+  "runs": [
+    {
+      "stand": "PSP-IDF-024",
+      "regime": "GWM_HIGH",
+      "entry": 1,
+      "case_id": "7b858c0c-3bc0-428d-b1be-14f684df0fec"
+    },
+    {
+      "stand": "PSP-IDF-024_R1",
+      "regime": "GWM_HIGH",
+      "entry": 2,
+      "case_id": "64b3152d-302a-42e0-b54a-0bbbb5b090de"
+    },
+    {
+      "stand": "PSP-IDF-024_R2",
+      "regime": "GWM_HIGH",
+      "entry": 3,
+      "case_id": "3c84451c-0349-4852-a5a6-00a349e314a3"
+    },
+    {
+      "stand": "PSP-IDF-024_R3",
+      "regime": "GWM_HIGH",
+      "entry": 4,
+      "case_id": "64401fc0-5efb-442c-b17e-6baa52e96b9f"
+    },
+    {
+      "stand": "PSP-IDF-024",
+      "regime": "GWM_MODERATE",
+      "entry": 1,
+      "case_id": "14423007-3dd6-4a79-ad22-b8339a988f5e"
+    },
+    {
+      "stand": "PSP-IDF-024_R1",
+      "regime": "GWM_MODERATE",
+      "entry": 2,
+      "case_id": "0bb9b90a-05df-4a71-a94c-0341104c0f3f"
+    },
+    {
+      "stand": "PSP-IDF-024_R2",
+      "regime": "GWM_MODERATE",
+      "entry": 3,
+      "case_id": "04d86ef9-01c1-48e2-afd7-a746db13ee52"
+    },
+    {
+      "stand": "PSP-IDF-024_R3",
+      "regime": "GWM_MODERATE",
+      "entry": 4,
+      "case_id": "38da807a-57ff-4bb6-a759-1c63c98ba8fe"
+    },
+    {
+      "stand": "PSP-IDF-024",
+      "regime": "GWM_LOW",
+      "entry": 1,
+      "case_id": "611e6b0e-35b8-4c99-b568-38ee2ff90e16"
+    },
+    {
+      "stand": "PSP-IDF-024_R1",
+      "regime": "GWM_LOW",
+      "entry": 2,
+      "case_id": "c3633781-5b21-4437-91f3-61e51681846f"
+    },
+    {
+      "stand": "PSP-IDF-024_R2",
+      "regime": "GWM_LOW",
+      "entry": 3,
+      "case_id": "91eb89bd-a7e1-4650-997e-50ebf98240b4"
+    },
+    {
+      "stand": "PSP-IDF-024_R3",
+      "regime": "GWM_LOW",
+      "entry": 4,
+      "case_id": "44fa54d4-796e-4b0d-80db-ad68922b0a04"
+    },
+    {
+      "stand": "PSP-IDF-005",
+      "regime": "GWM_HIGH",
+      "entry": 1,
+      "case_id": "24008383-11d0-4d88-ad38-eef789f63ad4"
+    },
+    {
+      "stand": "PSP-IDF-005_R1",
+      "regime": "GWM_HIGH",
+      "entry": 2,
+      "case_id": "f4d197d3-c6e8-44d2-86cb-0a405dcd4ed8"
+    },
+    {
+      "stand": "PSP-IDF-005_R2",
+      "regime": "GWM_HIGH",
+      "entry": 3,
+      "case_id": "136e4706-2591-4c0a-a6bf-29d6724e139d"
+    },
+    {
+      "stand": "PSP-IDF-005_R3",
+      "regime": "GWM_HIGH",
+      "entry": 4,
+      "case_id": "cf0c1c4e-4bb2-480b-9437-420906b2524b"
+    },
+    {
+      "stand": "PSP-IDF-005",
+      "regime": "GWM_MODERATE",
+      "entry": 1,
+      "case_id": "4780bbfb-d6ca-416b-87f7-7361bdd137f6"
+    },
+    {
+      "stand": "PSP-IDF-005_R1",
+      "regime": "GWM_MODERATE",
+      "entry": 2,
+      "case_id": "e436a162-206b-409b-93e0-1bc59ae21b28"
+    },
+    {
+      "stand": "PSP-IDF-005_R2",
+      "regime": "GWM_MODERATE",
+      "entry": 3,
+      "case_id": "17139954-2c96-4055-86d1-9c24b1e6f2e7"
+    },
+    {
+      "stand": "PSP-IDF-005_R3",
+      "regime": "GWM_MODERATE",
+      "entry": 4,
+      "case_id": "3a42d780-53a1-47a2-8a57-5e4744b046ff"
+    },
+    {
+      "stand": "PSP-IDF-005",
+      "regime": "GWM_LOW",
+      "entry": 1,
+      "case_id": "47a9b41b-3424-48f2-b828-4312e0b81b8f"
+    },
+    {
+      "stand": "PSP-IDF-005_R1",
+      "regime": "GWM_LOW",
+      "entry": 2,
+      "case_id": "3e9901b1-3f93-453d-a07b-6a23885c6f2e"
+    },
+    {
+      "stand": "PSP-IDF-005_R2",
+      "regime": "GWM_LOW",
+      "entry": 3,
+      "case_id": "7c09272b-2838-4451-b9a6-5bc94f886e16"
+    },
+    {
+      "stand": "PSP-IDF-005_R3",
+      "regime": "GWM_LOW",
+      "entry": 4,
+      "case_id": "1a3eec55-a19d-4205-abbe-4162190e6b36"
+    },
+    {
+      "stand": "PSP-IDF-015",
+      "regime": "GWM_HIGH",
+      "entry": 1,
+      "case_id": "06c1d0cf-326d-4192-aa2d-1f02a236ecb3"
+    },
+    {
+      "stand": "PSP-IDF-015_R1",
+      "regime": "GWM_HIGH",
+      "entry": 2,
+      "case_id": "7f8fdc12-2cfd-4dd5-85d7-0c14bb457c8f"
+    },
+    {
+      "stand": "PSP-IDF-015_R2",
+      "regime": "GWM_HIGH",
+      "entry": 3,
+      "case_id": "23a576fd-9b1e-4758-a176-52bb1422cdfa"
+    },
+    {
+      "stand": "PSP-IDF-015_R3",
+      "regime": "GWM_HIGH",
+      "entry": 4,
+      "case_id": "5b5830ae-5316-4d09-bce9-c691faf6c270"
+    },
+    {
+      "stand": "PSP-IDF-015",
+      "regime": "GWM_MODERATE",
+      "entry": 1,
+      "case_id": "86a36a93-c142-42fd-868f-73701b944688"
+    },
+    {
+      "stand": "PSP-IDF-015_R1",
+      "regime": "GWM_MODERATE",
+      "entry": 2,
+      "case_id": "d4e90b09-782f-437e-8b51-8a6357e21cae"
+    },
+    {
+      "stand": "PSP-IDF-015_R2",
+      "regime": "GWM_MODERATE",
+      "entry": 3,
+      "case_id": "82724927-516d-44eb-8d38-5be8c74b18ee"
+    },
+    {
+      "stand": "PSP-IDF-015_R3",
+      "regime": "GWM_MODERATE",
+      "entry": 4,
+      "case_id": "3502bf93-e5a7-4bf4-a98e-2f25c5334fec"
+    },
+    {
+      "stand": "PSP-IDF-015",
+      "regime": "GWM_LOW",
+      "entry": 1,
+      "case_id": "6a1124a9-024f-49f4-b004-0c79821024cd"
+    },
+    {
+      "stand": "PSP-IDF-015_R1",
+      "regime": "GWM_LOW",
+      "entry": 2,
+      "case_id": "2c2f3521-07d9-40ee-a7db-befe272855e4"
+    },
+    {
+      "stand": "PSP-IDF-015_R2",
+      "regime": "GWM_LOW",
+      "entry": 3,
+      "case_id": "24a1368f-4401-43b4-a0e4-41f1c7890130"
+    },
+    {
+      "stand": "PSP-IDF-015_R3",
+      "regime": "GWM_LOW",
+      "entry": 4,
+      "case_id": "b3de1cfc-afcc-4b05-92d8-6cd1706436a9"
+    },
+    {
+      "stand": "PSP-IDF-012",
+      "regime": "GWM_HIGH",
+      "entry": 1,
+      "case_id": "831a8c62-7123-4edb-9306-6f7ddf340521"
+    },
+    {
+      "stand": "PSP-IDF-012_R1",
+      "regime": "GWM_HIGH",
+      "entry": 2,
+      "case_id": "19c38204-2788-4cc9-a44f-da8e41fc7644"
+    },
+    {
+      "stand": "PSP-IDF-012_R2",
+      "regime": "GWM_HIGH",
+      "entry": 3,
+      "case_id": "5366c534-dd73-4c2a-b7f8-63339eb06f3f"
+    },
+    {
+      "stand": "PSP-IDF-012_R3",
+      "regime": "GWM_HIGH",
+      "entry": 4,
+      "case_id": "68749dbb-16df-4a88-b356-e773bf100e56"
+    },
+    {
+      "stand": "PSP-IDF-012",
+      "regime": "GWM_MODERATE",
+      "entry": 1,
+      "case_id": "82813a19-7a96-4c88-9b3c-4fdb5cac21d0"
+    },
+    {
+      "stand": "PSP-IDF-012_R1",
+      "regime": "GWM_MODERATE",
+      "entry": 2,
+      "case_id": "f6590350-0ecc-49f8-86fe-568a46e911f0"
+    },
+    {
+      "stand": "PSP-IDF-012_R2",
+      "regime": "GWM_MODERATE",
+      "entry": 3,
+      "case_id": "81addd47-21b7-4019-90b7-56e06ccaf29f"
+    },
+    {
+      "stand": "PSP-IDF-012_R3",
+      "regime": "GWM_MODERATE",
+      "entry": 4,
+      "case_id": "6c7789a3-1ddd-4c62-b9ac-291196d39aea"
+    },
+    {
+      "stand": "PSP-IDF-012",
+      "regime": "GWM_LOW",
+      "entry": 1,
+      "case_id": "f879ce94-f046-482f-9711-f2e5166e69b2"
+    },
+    {
+      "stand": "PSP-IDF-012_R1",
+      "regime": "GWM_LOW",
+      "entry": 2,
+      "case_id": "cb3bf674-1f0b-4a99-9bec-465972fc0a44"
+    },
+    {
+      "stand": "PSP-IDF-012_R2",
+      "regime": "GWM_LOW",
+      "entry": 3,
+      "case_id": "b564c52d-361b-488c-9729-2bbe6e25519f"
+    },
+    {
+      "stand": "PSP-IDF-012_R3",
+      "regime": "GWM_LOW",
+      "entry": 4,
+      "case_id": "f5fc19d2-2e2c-47de-9a46-359bc853754e"
+    },
+    {
+      "stand": "PSP-IDF-004",
+      "regime": "GWM_HIGH",
+      "entry": 1,
+      "case_id": "d4712794-5af6-4419-90ef-ca046e0a1b1d"
+    },
+    {
+      "stand": "PSP-IDF-004_R1",
+      "regime": "GWM_HIGH",
+      "entry": 2,
+      "case_id": "3ee35b86-e0f1-422b-89a9-438f44994068"
+    },
+    {
+      "stand": "PSP-IDF-004_R2",
+      "regime": "GWM_HIGH",
+      "entry": 3,
+      "case_id": "2006e38d-9a29-489a-a101-f1a910c71875"
+    },
+    {
+      "stand": "PSP-IDF-004_R3",
+      "regime": "GWM_HIGH",
+      "entry": 4,
+      "case_id": "e08500c4-4591-4972-923b-d4da081332f4"
+    },
+    {
+      "stand": "PSP-IDF-004",
+      "regime": "GWM_MODERATE",
+      "entry": 1,
+      "case_id": "6e3bc44f-4c04-4755-b36d-679d7dc57d90"
+    },
+    {
+      "stand": "PSP-IDF-004_R1",
+      "regime": "GWM_MODERATE",
+      "entry": 2,
+      "case_id": "bc5d96e5-4650-49df-85a3-7afff34c27bd"
+    },
+    {
+      "stand": "PSP-IDF-004_R2",
+      "regime": "GWM_MODERATE",
+      "entry": 3,
+      "case_id": "ebb15b2f-5a83-49e2-94e8-6003a63346a4"
+    },
+    {
+      "stand": "PSP-IDF-004_R3",
+      "regime": "GWM_MODERATE",
+      "entry": 4,
+      "case_id": "3a03a8f1-7f56-495b-8cf8-d6cb453ae64b"
+    },
+    {
+      "stand": "PSP-IDF-004",
+      "regime": "GWM_LOW",
+      "entry": 1,
+      "case_id": "c6bae7d4-4f8e-4225-83ec-58e3d85d3dcc"
+    },
+    {
+      "stand": "PSP-IDF-004_R1",
+      "regime": "GWM_LOW",
+      "entry": 2,
+      "case_id": "1b25141c-7d7b-4f71-a41b-19e6850f0d36"
+    },
+    {
+      "stand": "PSP-IDF-004_R2",
+      "regime": "GWM_LOW",
+      "entry": 3,
+      "case_id": "4eaed1fc-631f-4106-83ec-47072c8244f3"
+    },
+    {
+      "stand": "PSP-IDF-004_R3",
+      "regime": "GWM_LOW",
+      "entry": 4,
+      "case_id": "48a288cc-5d32-4ef7-bbe6-ff3e54192cb8"
+    },
+    {
+      "stand": "PSP-IDF-013",
+      "regime": "GWM_HIGH",
+      "entry": 1,
+      "case_id": "bd29921e-b72f-40d8-925c-1fd10b9aaa53"
+    },
+    {
+      "stand": "PSP-IDF-013_R1",
+      "regime": "GWM_HIGH",
+      "entry": 2,
+      "case_id": "c3e84ed7-51d1-49f5-9bdb-7af93117d3c5"
+    },
+    {
+      "stand": "PSP-IDF-013_R2",
+      "regime": "GWM_HIGH",
+      "entry": 3,
+      "case_id": "0143b2c6-c678-4c73-a492-2ed0bfd86206"
+    },
+    {
+      "stand": "PSP-IDF-013_R3",
+      "regime": "GWM_HIGH",
+      "entry": 4,
+      "case_id": "aa0cc0d6-5519-475c-96a2-c6212708018d"
+    },
+    {
+      "stand": "PSP-IDF-013",
+      "regime": "GWM_MODERATE",
+      "entry": 1,
+      "case_id": "681f79c5-8637-4b6a-8018-7009012a8b4c"
+    },
+    {
+      "stand": "PSP-IDF-013_R1",
+      "regime": "GWM_MODERATE",
+      "entry": 2,
+      "case_id": "44a96157-51b7-4be6-8fc4-669cd8566e06"
+    },
+    {
+      "stand": "PSP-IDF-013_R2",
+      "regime": "GWM_MODERATE",
+      "entry": 3,
+      "case_id": "2674d638-5153-4401-a43d-1df95ff18523"
+    },
+    {
+      "stand": "PSP-IDF-013_R3",
+      "regime": "GWM_MODERATE",
+      "entry": 4,
+      "case_id": "c7b37673-ed85-4874-9570-fde0a9349e59"
+    },
+    {
+      "stand": "PSP-IDF-013",
+      "regime": "GWM_LOW",
+      "entry": 1,
+      "case_id": "ed1d2bd7-eebb-48d4-9072-e49d48ad5b6a"
+    },
+    {
+      "stand": "PSP-IDF-013_R1",
+      "regime": "GWM_LOW",
+      "entry": 2,
+      "case_id": "7d05e31c-3fd1-4611-b025-a87ecbb61266"
+    },
+    {
+      "stand": "PSP-IDF-013_R2",
+      "regime": "GWM_LOW",
+      "entry": 3,
+      "case_id": "b6dae0a3-3959-47c4-865c-5fad74364dc1"
+    },
+    {
+      "stand": "PSP-IDF-013_R3",
+      "regime": "GWM_LOW",
+      "entry": 4,
+      "case_id": "c5e5be73-7a38-4b3a-97ce-679dbd9e0886"
+    },
+    {
+      "stand": "PSP-IDF-006",
+      "regime": "GWM_HIGH",
+      "entry": 1,
+      "case_id": "5937a13b-4fac-4589-b7da-f5a804bdf3b3"
+    },
+    {
+      "stand": "PSP-IDF-006_R1",
+      "regime": "GWM_HIGH",
+      "entry": 2,
+      "case_id": "b17d8588-5e6a-4b2c-9262-91213f7b4ff8"
+    },
+    {
+      "stand": "PSP-IDF-006_R2",
+      "regime": "GWM_HIGH",
+      "entry": 3,
+      "case_id": "841a49b4-fc3b-4e5d-93fa-0cae86ace870"
+    },
+    {
+      "stand": "PSP-IDF-006_R3",
+      "regime": "GWM_HIGH",
+      "entry": 4,
+      "case_id": "239e2815-2652-46da-862c-6465bc68b408"
+    },
+    {
+      "stand": "PSP-IDF-006",
+      "regime": "GWM_MODERATE",
+      "entry": 1,
+      "case_id": "8df226ed-7258-4a26-8e07-0f838673b008"
+    },
+    {
+      "stand": "PSP-IDF-006_R1",
+      "regime": "GWM_MODERATE",
+      "entry": 2,
+      "case_id": "a04f732c-5ce3-457f-9381-f8c208607683"
+    },
+    {
+      "stand": "PSP-IDF-006_R2",
+      "regime": "GWM_MODERATE",
+      "entry": 3,
+      "case_id": "b92bd39b-1518-4c25-93f5-d50dcfb4d9c7"
+    },
+    {
+      "stand": "PSP-IDF-006_R3",
+      "regime": "GWM_MODERATE",
+      "entry": 4,
+      "case_id": "5536fc25-93c0-4320-805b-695332a60fff"
+    },
+    {
+      "stand": "PSP-IDF-006",
+      "regime": "GWM_LOW",
+      "entry": 1,
+      "case_id": "69467df4-2edd-4684-80d5-738a0bf1316f"
+    },
+    {
+      "stand": "PSP-IDF-006_R1",
+      "regime": "GWM_LOW",
+      "entry": 2,
+      "case_id": "0dd88828-32f0-449a-a5e9-85e7a64e231b"
+    },
+    {
+      "stand": "PSP-IDF-006_R2",
+      "regime": "GWM_LOW",
+      "entry": 3,
+      "case_id": "7e7de8cc-329c-45d9-b5c6-dc8f1c602fa7"
+    },
+    {
+      "stand": "PSP-IDF-006_R3",
+      "regime": "GWM_LOW",
+      "entry": 4,
+      "case_id": "f4fb9caf-7ba0-4e4b-9d30-b2057d56d013"
+    },
+    {
+      "stand": "PSP-IDF-008",
+      "regime": "GWM_HIGH",
+      "entry": 1,
+      "case_id": "db158637-7f11-4f75-94b2-54557f6f68e4"
+    },
+    {
+      "stand": "PSP-IDF-008_R1",
+      "regime": "GWM_HIGH",
+      "entry": 2,
+      "case_id": "0adf6dc6-4c25-4189-8a71-0a2f9bca7761"
+    },
+    {
+      "stand": "PSP-IDF-008_R2",
+      "regime": "GWM_HIGH",
+      "entry": 3,
+      "case_id": "57b73676-305a-4d73-b0a1-13d1fdee4692"
+    },
+    {
+      "stand": "PSP-IDF-008_R3",
+      "regime": "GWM_HIGH",
+      "entry": 4,
+      "case_id": "6f1ffcd8-05d0-410f-bbb0-0354b04f6a68"
+    },
+    {
+      "stand": "PSP-IDF-008",
+      "regime": "GWM_MODERATE",
+      "entry": 1,
+      "case_id": "3f1362ee-42c6-40b6-af0b-6dc6af31b061"
+    },
+    {
+      "stand": "PSP-IDF-008_R1",
+      "regime": "GWM_MODERATE",
+      "entry": 2,
+      "case_id": "d919ee73-d829-4f1f-9367-1490b0e8a486"
+    },
+    {
+      "stand": "PSP-IDF-008_R2",
+      "regime": "GWM_MODERATE",
+      "entry": 3,
+      "case_id": "6fab3edc-0765-45c6-878e-a85761db75ea"
+    },
+    {
+      "stand": "PSP-IDF-008_R3",
+      "regime": "GWM_MODERATE",
+      "entry": 4,
+      "case_id": "7657e81b-4111-4843-b1b2-c53f72510634"
+    },
+    {
+      "stand": "PSP-IDF-008",
+      "regime": "GWM_LOW",
+      "entry": 1,
+      "case_id": "226708b0-1a2d-49a6-a1dc-5cc26f34e041"
+    },
+    {
+      "stand": "PSP-IDF-008_R1",
+      "regime": "GWM_LOW",
+      "entry": 2,
+      "case_id": "8d4468b9-c9cc-48d6-9669-78a7a94d3b52"
+    },
+    {
+      "stand": "PSP-IDF-008_R2",
+      "regime": "GWM_LOW",
+      "entry": 3,
+      "case_id": "5163f1af-d446-4e26-b170-c86841e424c0"
+    },
+    {
+      "stand": "PSP-IDF-008_R3",
+      "regime": "GWM_LOW",
+      "entry": 4,
+      "case_id": "0a22fb73-6453-40a5-879f-2a9c2f122796"
+    }
+  ],
+  "caveats": [
+    "PSP-derived regional IDF Cariboo analog, not Knife Creek data.",
+    "GWM 2007 basis; not a legal-compliance product.",
+    "Clump reserve uses a DBH-ranked six-tree proxy, not spatial clumps.",
+    "Residual populations are weighted resamples of the FVS after-treatment list.",
+    "4 entries per chain; graph closure is empirical, not imposed.",
+    "No KC calibration; FVS-BC is used structurally.",
+    "The UWR/HMZ spatial layer is not tested."
+  ]
+}

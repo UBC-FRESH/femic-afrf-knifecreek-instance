@@ -365,3 +365,15 @@ status and the GitHub issue comments.
   curves (BA/TPH/QMD/large BA) in five-year steps, with block/treatment
   ingrowth scenarios held separately. It is not a compiled ws4 dataset and
   has no volume, canopy or treatment response.
+- P2.3 four-entry GWM state library and policy screen: added
+  `runbooks/build_state_library_v2.py` and `ws4/state_library_v2/`. Four
+  30-year entries produce 120 per-chain states, 96 transitions and 384 curves;
+  `canonicalize_state_library.py` produces 32 canonical states, 40 canonical
+  transitions, four cycles and one terminal state. Added
+  `ws4/dataset_kc_spatial_v4/` (128 tracks, 79 treatments; `ws4 validate`
+  passes) and `runbooks/build_knife_gwm_policy.py`. The public
+  `knife-gwm-policy` run schedules 157 blocks, 1,306 entries and 574,458 m3;
+  production ends after P11 as the canonical policy enters a reserve cycle.
+  This is a policy screen, not a sustained-yield plan. The FVS-BC STDINFO BEC
+  was corrected to `CAR IDFdk3/01`; crown ratios are capped at 0.89 for the
+  FVS crown-class field.
