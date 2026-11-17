@@ -72,6 +72,10 @@ def _block_population(block: dict[str, Any], trees: pd.DataFrame) -> tuple[pd.Da
             if len(sample) >= 60:
                 inside = sample.reset_index(drop=True)
                 break
+    lidar_ba = float((0.00007854 * inside.dbh_cm_est**2).sum())
+    if lidar_ba > 0 and float(block.get("vri_ba", 0.0)) > 0:
+        scale = min(2.0, max(0.5, (float(block["vri_ba"]) / lidar_ba) ** 0.5))
+        inside["dbh_cm_est"] = inside["dbh_cm_est"] * scale
     large = inside[inside.height_m >= 20.0].copy().reset_index(drop=True)
     if large.empty:
         return pd.DataFrame(), str(block["regime"])
@@ -138,6 +142,7 @@ def _run_block(block: dict[str, Any], trees: pd.DataFrame) -> dict[str, Any]:
             regime=regime,
             runtime_dir=RUNTIME / f"B{block['block_id']}" / f"E{entry}",
             plot_id_offset=100,
+            species=str(block.get("species", "FD")),
         )
         summary = read_table(res.database, "FVS_Summary_Metric")
         srow = summary[summary.Year == 30].iloc[0]
@@ -177,7 +182,9 @@ def _run_block(block: dict[str, Any], trees: pd.DataFrame) -> dict[str, Any]:
         # choose the three largest original trees per 4-10 clump; reserve all singletons/small
         reserve = set()
         for _clump, g in a.groupby("clump"):
-            unique = g.drop_duplicates("orig").sort_values(["Ht", "DBH"], ascending=False)
+            unique = g.drop_duplicates("orig").sort_values(
+                ["height_m".replace("height_m", "Ht"), "DBH"], ascending=False
+            )
             # columns are Ht/DBH after FVS
             if len(unique) >= 4:
                 reserve.update(unique.head(3)["orig"].tolist())
@@ -238,11 +245,23 @@ def _load_blocks() -> tuple[list[dict[str, Any]], dict[int, pd.DataFrame]]:
         if str(r.hmz_group) == "U" or float(r.harvest_tph) <= 0:
             continue
         regime = "GWM_LOW" if str(r.hmz_group) == "L" else "GWM_MODERATE"
+        code = str(v.SPECIES_CD_1)[:2].upper()
+        species = {
+            "FD": "FD",
+            "PL": "PL",
+            "AT": "AT",
+            "CW": "CW",
+            "HW": "HW",
+            "BG": "BG",
+            "SE": "SE",
+        }.get(code, "FD")
         blocks.append(
             {
                 "block_id": i + 1,
                 "area_ha": float(blocks_df.iloc[i].area_ha),
                 "vri_tph": float(v.VRI_LIVE_STEMS_PER_HA),
+                "vri_ba": float(v.BASAL_AREA),
+                "species": species,
                 "regime": regime,
             }
         )

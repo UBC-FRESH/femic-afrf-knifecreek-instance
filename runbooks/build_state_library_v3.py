@@ -188,6 +188,8 @@ def _run_case(
     age: float,
     regime: str,
     runtime_dir: Path,
+    plot_id_offset: int = 0,
+    species: str = "FD",
 ) -> object:
     """Run one 30-year GWM entry."""
     keywords = [
@@ -215,9 +217,10 @@ def _run_case(
     return run_population(
         population,
         directory=runtime_dir / f"{stand}__{regime}",
-        species="FD",
+        species=species,
         tree_age=age,
         keywords=keywords,
+        plot_id_offset=plot_id_offset,
     )
 
 
