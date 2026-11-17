@@ -313,22 +313,46 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 279.81914519827114,
-        "fvs_cut": 108.0,
-        "clump_cut": 171.81914519827112,
+        "cut_m3_ha": 227.88872757759913,
+        "fvs_cut": 91.0,
+        "clump_cut": 136.88872757759913,
         "kept": 471,
         "harvest": 160
       },
       {
         "entry": 2,
-        "cut_m3_ha": 56.0,
-        "fvs_cut": 56.0,
+        "cut_m3_ha": 72.0,
+        "fvs_cut": 72.0,
         "clump_cut": 0.0,
         "kept": 471,
         "harvest": 0
       },
       {
         "entry": 3,
+        "cut_m3_ha": 68.0,
+        "fvs_cut": 68.0,
+        "clump_cut": 0.0,
+        "kept": 471,
+        "harvest": 0
+      },
+      {
+        "entry": 4,
+        "cut_m3_ha": 62.0,
+        "fvs_cut": 62.0,
+        "clump_cut": 0.0,
+        "kept": 471,
+        "harvest": 0
+      },
+      {
+        "entry": 5,
+        "cut_m3_ha": 55.0,
+        "fvs_cut": 55.0,
+        "clump_cut": 0.0,
+        "kept": 471,
+        "harvest": 0
+      },
+      {
+        "entry": 6,
         "cut_m3_ha": 36.0,
         "fvs_cut": 36.0,
         "clump_cut": 0.0,
@@ -336,31 +360,23 @@
         "harvest": 0
       },
       {
-        "entry": 4,
-        "cut_m3_ha": 21.0,
-        "fvs_cut": 21.0,
-        "clump_cut": 0.0,
-        "kept": 471,
-        "harvest": 0
-      },
-      {
-        "entry": 5,
-        "cut_m3_ha": 9.0,
-        "fvs_cut": 9.0,
-        "clump_cut": 0.0,
-        "kept": 471,
-        "harvest": 0
-      },
-      {
-        "entry": 6,
-        "cut_m3_ha": 5.0,
-        "fvs_cut": 5.0,
-        "clump_cut": 0.0,
-        "kept": 471,
-        "harvest": 0
-      },
-      {
         "entry": 7,
+        "cut_m3_ha": 18.0,
+        "fvs_cut": 18.0,
+        "clump_cut": 0.0,
+        "kept": 471,
+        "harvest": 0
+      },
+      {
+        "entry": 8,
+        "cut_m3_ha": 2.0,
+        "fvs_cut": 2.0,
+        "clump_cut": 0.0,
+        "kept": 471,
+        "harvest": 0
+      },
+      {
+        "entry": 9,
         "cut_m3_ha": 0.0,
         "fvs_cut": 0.0,
         "clump_cut": 0.0,
@@ -389,80 +405,80 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 938.5585312527669,
-        "fvs_cut": 823.0,
-        "clump_cut": 115.55853125276695,
+        "cut_m3_ha": 861.9526727729117,
+        "fvs_cut": 771.0,
+        "clump_cut": 90.95267277291163,
         "kept": 785,
         "harvest": 304
       },
       {
         "entry": 2,
-        "cut_m3_ha": 452.0,
-        "fvs_cut": 452.0,
+        "cut_m3_ha": 523.0,
+        "fvs_cut": 523.0,
         "clump_cut": 0.0,
         "kept": 785,
         "harvest": 0
       },
       {
         "entry": 3,
-        "cut_m3_ha": 473.0,
-        "fvs_cut": 473.0,
+        "cut_m3_ha": 544.0,
+        "fvs_cut": 544.0,
         "clump_cut": 0.0,
         "kept": 785,
         "harvest": 0
       },
       {
         "entry": 4,
-        "cut_m3_ha": 491.0,
-        "fvs_cut": 491.0,
+        "cut_m3_ha": 532.0,
+        "fvs_cut": 532.0,
         "clump_cut": 0.0,
         "kept": 785,
         "harvest": 0
       },
       {
         "entry": 5,
-        "cut_m3_ha": 510.0,
-        "fvs_cut": 510.0,
+        "cut_m3_ha": 551.0,
+        "fvs_cut": 551.0,
         "clump_cut": 0.0,
         "kept": 785,
         "harvest": 0
       },
       {
         "entry": 6,
-        "cut_m3_ha": 529.0,
-        "fvs_cut": 529.0,
+        "cut_m3_ha": 568.0,
+        "fvs_cut": 568.0,
         "clump_cut": 0.0,
         "kept": 785,
         "harvest": 0
       },
       {
         "entry": 7,
-        "cut_m3_ha": 548.0,
-        "fvs_cut": 548.0,
+        "cut_m3_ha": 585.0,
+        "fvs_cut": 585.0,
         "clump_cut": 0.0,
         "kept": 785,
         "harvest": 0
       },
       {
         "entry": 8,
-        "cut_m3_ha": 565.0,
-        "fvs_cut": 565.0,
+        "cut_m3_ha": 602.0,
+        "fvs_cut": 602.0,
         "clump_cut": 0.0,
         "kept": 785,
         "harvest": 0
       },
       {
         "entry": 9,
-        "cut_m3_ha": 583.0,
-        "fvs_cut": 583.0,
+        "cut_m3_ha": 618.0,
+        "fvs_cut": 618.0,
         "clump_cut": 0.0,
         "kept": 785,
         "harvest": 0
       },
       {
         "entry": 10,
-        "cut_m3_ha": 601.0,
-        "fvs_cut": 601.0,
+        "cut_m3_ha": 635.0,
+        "fvs_cut": 635.0,
         "clump_cut": 0.0,
         "kept": 785,
         "harvest": 0
@@ -621,83 +637,10 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 134.72940327150738,
-        "fvs_cut": 115.0,
-        "clump_cut": 19.729403271507387,
-        "kept": 633,
-        "harvest": 38
-      },
-      {
-        "entry": 2,
-        "cut_m3_ha": 80.0,
-        "fvs_cut": 80.0,
+        "cut_m3_ha": 0.0,
+        "fvs_cut": 0.0,
         "clump_cut": 0.0,
-        "kept": 633,
-        "harvest": 0
-      },
-      {
-        "entry": 3,
-        "cut_m3_ha": 84.0,
-        "fvs_cut": 84.0,
-        "clump_cut": 0.0,
-        "kept": 633,
-        "harvest": 0
-      },
-      {
-        "entry": 4,
-        "cut_m3_ha": 87.0,
-        "fvs_cut": 87.0,
-        "clump_cut": 0.0,
-        "kept": 633,
-        "harvest": 0
-      },
-      {
-        "entry": 5,
-        "cut_m3_ha": 91.0,
-        "fvs_cut": 91.0,
-        "clump_cut": 0.0,
-        "kept": 633,
-        "harvest": 0
-      },
-      {
-        "entry": 6,
-        "cut_m3_ha": 94.0,
-        "fvs_cut": 94.0,
-        "clump_cut": 0.0,
-        "kept": 633,
-        "harvest": 0
-      },
-      {
-        "entry": 7,
-        "cut_m3_ha": 98.0,
-        "fvs_cut": 98.0,
-        "clump_cut": 0.0,
-        "kept": 633,
-        "harvest": 0
-      },
-      {
-        "entry": 8,
-        "cut_m3_ha": 101.0,
-        "fvs_cut": 101.0,
-        "clump_cut": 0.0,
-        "kept": 633,
-        "harvest": 0
-      },
-      {
-        "entry": 9,
-        "cut_m3_ha": 104.0,
-        "fvs_cut": 104.0,
-        "clump_cut": 0.0,
-        "kept": 633,
-        "harvest": 0
-      },
-      {
-        "entry": 10,
-        "cut_m3_ha": 107.0,
-        "fvs_cut": 107.0,
-        "clump_cut": 0.0,
-        "kept": 633,
-        "harvest": 0
+        "kept": 671
       }
     ]
   },
@@ -708,80 +651,80 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 573.2721493457809,
-        "fvs_cut": 535.0,
-        "clump_cut": 38.272149345780974,
+        "cut_m3_ha": 466.4902155597655,
+        "fvs_cut": 427.0,
+        "clump_cut": 39.49021555976552,
         "kept": 513,
         "harvest": 130
       },
       {
         "entry": 2,
-        "cut_m3_ha": 309.0,
-        "fvs_cut": 309.0,
+        "cut_m3_ha": 339.0,
+        "fvs_cut": 339.0,
         "clump_cut": 0.0,
         "kept": 513,
         "harvest": 0
       },
       {
         "entry": 3,
-        "cut_m3_ha": 299.0,
-        "fvs_cut": 299.0,
+        "cut_m3_ha": 317.0,
+        "fvs_cut": 317.0,
         "clump_cut": 0.0,
         "kept": 513,
         "harvest": 0
       },
       {
         "entry": 4,
-        "cut_m3_ha": 291.0,
-        "fvs_cut": 291.0,
+        "cut_m3_ha": 305.0,
+        "fvs_cut": 305.0,
         "clump_cut": 0.0,
         "kept": 513,
         "harvest": 0
       },
       {
         "entry": 5,
-        "cut_m3_ha": 253.0,
-        "fvs_cut": 253.0,
+        "cut_m3_ha": 280.0,
+        "fvs_cut": 280.0,
         "clump_cut": 0.0,
         "kept": 513,
         "harvest": 0
       },
       {
         "entry": 6,
-        "cut_m3_ha": 232.0,
-        "fvs_cut": 232.0,
+        "cut_m3_ha": 264.0,
+        "fvs_cut": 264.0,
         "clump_cut": 0.0,
         "kept": 513,
         "harvest": 0
       },
       {
         "entry": 7,
-        "cut_m3_ha": 221.0,
-        "fvs_cut": 221.0,
+        "cut_m3_ha": 233.0,
+        "fvs_cut": 233.0,
         "clump_cut": 0.0,
         "kept": 513,
         "harvest": 0
       },
       {
         "entry": 8,
-        "cut_m3_ha": 217.0,
-        "fvs_cut": 217.0,
+        "cut_m3_ha": 197.0,
+        "fvs_cut": 197.0,
         "clump_cut": 0.0,
         "kept": 513,
         "harvest": 0
       },
       {
         "entry": 9,
-        "cut_m3_ha": 204.0,
-        "fvs_cut": 204.0,
+        "cut_m3_ha": 177.0,
+        "fvs_cut": 177.0,
         "clump_cut": 0.0,
         "kept": 513,
         "harvest": 0
       },
       {
         "entry": 10,
-        "cut_m3_ha": 200.0,
-        "fvs_cut": 200.0,
+        "cut_m3_ha": 172.0,
+        "fvs_cut": 172.0,
         "clump_cut": 0.0,
         "kept": 513,
         "harvest": 0
@@ -795,9 +738,9 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 785.1836562054559,
-        "fvs_cut": 233.0,
-        "clump_cut": 552.1836562054559,
+        "cut_m3_ha": 775.0538871938898,
+        "fvs_cut": 238.0,
+        "clump_cut": 537.0538871938898,
         "kept": 561,
         "harvest": 515
       },
@@ -817,9 +760,9 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 580.6376834226721,
-        "fvs_cut": 61.0,
-        "clump_cut": 519.6376834226721,
+        "cut_m3_ha": 590.7223943312094,
+        "fvs_cut": 62.0,
+        "clump_cut": 528.7223943312094,
         "kept": 444,
         "harvest": 338
       },
@@ -926,80 +869,80 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 392.6124043263595,
-        "fvs_cut": 335.0,
-        "clump_cut": 57.61240432635954,
+        "cut_m3_ha": 233.85770773226315,
+        "fvs_cut": 181.0,
+        "clump_cut": 52.857707732263144,
         "kept": 503,
         "harvest": 150
       },
       {
         "entry": 2,
-        "cut_m3_ha": 163.0,
-        "fvs_cut": 163.0,
+        "cut_m3_ha": 150.0,
+        "fvs_cut": 150.0,
         "clump_cut": 0.0,
         "kept": 503,
         "harvest": 0
       },
       {
         "entry": 3,
-        "cut_m3_ha": 170.0,
-        "fvs_cut": 170.0,
+        "cut_m3_ha": 144.0,
+        "fvs_cut": 144.0,
         "clump_cut": 0.0,
         "kept": 503,
         "harvest": 0
       },
       {
         "entry": 4,
-        "cut_m3_ha": 161.0,
-        "fvs_cut": 161.0,
+        "cut_m3_ha": 132.0,
+        "fvs_cut": 132.0,
         "clump_cut": 0.0,
         "kept": 503,
         "harvest": 0
       },
       {
         "entry": 5,
-        "cut_m3_ha": 156.0,
-        "fvs_cut": 156.0,
+        "cut_m3_ha": 129.0,
+        "fvs_cut": 129.0,
         "clump_cut": 0.0,
         "kept": 503,
         "harvest": 0
       },
       {
         "entry": 6,
-        "cut_m3_ha": 137.0,
-        "fvs_cut": 137.0,
+        "cut_m3_ha": 127.0,
+        "fvs_cut": 127.0,
         "clump_cut": 0.0,
         "kept": 503,
         "harvest": 0
       },
       {
         "entry": 7,
-        "cut_m3_ha": 112.0,
-        "fvs_cut": 112.0,
+        "cut_m3_ha": 131.0,
+        "fvs_cut": 131.0,
         "clump_cut": 0.0,
         "kept": 503,
         "harvest": 0
       },
       {
         "entry": 8,
-        "cut_m3_ha": 93.0,
-        "fvs_cut": 93.0,
+        "cut_m3_ha": 135.0,
+        "fvs_cut": 135.0,
         "clump_cut": 0.0,
         "kept": 503,
         "harvest": 0
       },
       {
         "entry": 9,
-        "cut_m3_ha": 77.0,
-        "fvs_cut": 77.0,
+        "cut_m3_ha": 135.0,
+        "fvs_cut": 135.0,
         "clump_cut": 0.0,
         "kept": 503,
         "harvest": 0
       },
       {
         "entry": 10,
-        "cut_m3_ha": 75.0,
-        "fvs_cut": 75.0,
+        "cut_m3_ha": 127.0,
+        "fvs_cut": 127.0,
         "clump_cut": 0.0,
         "kept": 503,
         "harvest": 0
@@ -1035,80 +978,80 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 109.12386733934625,
-        "fvs_cut": 101.0,
-        "clump_cut": 8.123867339346242,
+        "cut_m3_ha": 105.69291411993228,
+        "fvs_cut": 97.0,
+        "clump_cut": 8.692914119932277,
         "kept": 753,
         "harvest": 15
       },
       {
         "entry": 2,
-        "cut_m3_ha": 89.0,
-        "fvs_cut": 89.0,
+        "cut_m3_ha": 125.0,
+        "fvs_cut": 125.0,
         "clump_cut": 0.0,
         "kept": 753,
         "harvest": 0
       },
       {
         "entry": 3,
-        "cut_m3_ha": 93.0,
-        "fvs_cut": 93.0,
+        "cut_m3_ha": 131.0,
+        "fvs_cut": 131.0,
         "clump_cut": 0.0,
         "kept": 753,
         "harvest": 0
       },
       {
         "entry": 4,
-        "cut_m3_ha": 97.0,
-        "fvs_cut": 97.0,
+        "cut_m3_ha": 136.0,
+        "fvs_cut": 136.0,
         "clump_cut": 0.0,
         "kept": 753,
         "harvest": 0
       },
       {
         "entry": 5,
-        "cut_m3_ha": 100.0,
-        "fvs_cut": 100.0,
+        "cut_m3_ha": 141.0,
+        "fvs_cut": 141.0,
         "clump_cut": 0.0,
         "kept": 753,
         "harvest": 0
       },
       {
         "entry": 6,
-        "cut_m3_ha": 104.0,
-        "fvs_cut": 104.0,
+        "cut_m3_ha": 146.0,
+        "fvs_cut": 146.0,
         "clump_cut": 0.0,
         "kept": 753,
         "harvest": 0
       },
       {
         "entry": 7,
-        "cut_m3_ha": 107.0,
-        "fvs_cut": 107.0,
+        "cut_m3_ha": 151.0,
+        "fvs_cut": 151.0,
         "clump_cut": 0.0,
         "kept": 753,
         "harvest": 0
       },
       {
         "entry": 8,
-        "cut_m3_ha": 111.0,
-        "fvs_cut": 111.0,
+        "cut_m3_ha": 156.0,
+        "fvs_cut": 156.0,
         "clump_cut": 0.0,
         "kept": 753,
         "harvest": 0
       },
       {
         "entry": 9,
-        "cut_m3_ha": 114.0,
-        "fvs_cut": 114.0,
+        "cut_m3_ha": 161.0,
+        "fvs_cut": 161.0,
         "clump_cut": 0.0,
         "kept": 753,
         "harvest": 0
       },
       {
         "entry": 10,
-        "cut_m3_ha": 118.0,
-        "fvs_cut": 118.0,
+        "cut_m3_ha": 166.0,
+        "fvs_cut": 166.0,
         "clump_cut": 0.0,
         "kept": 753,
         "harvest": 0
@@ -1122,30 +1065,70 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 265.02538505235276,
-        "fvs_cut": 247.0,
-        "clump_cut": 18.025385052352785,
+        "cut_m3_ha": 231.14628933689667,
+        "fvs_cut": 212.0,
+        "clump_cut": 19.14628933689668,
         "kept": 363,
         "harvest": 60
       },
       {
         "entry": 2,
-        "cut_m3_ha": 146.0,
-        "fvs_cut": 146.0,
+        "cut_m3_ha": 160.0,
+        "fvs_cut": 160.0,
         "clump_cut": 0.0,
         "kept": 363,
         "harvest": 0
       },
       {
         "entry": 3,
-        "cut_m3_ha": 129.0,
-        "fvs_cut": 129.0,
+        "cut_m3_ha": 122.0,
+        "fvs_cut": 122.0,
         "clump_cut": 0.0,
         "kept": 363,
         "harvest": 0
       },
       {
         "entry": 4,
+        "cut_m3_ha": 135.0,
+        "fvs_cut": 135.0,
+        "clump_cut": 0.0,
+        "kept": 363,
+        "harvest": 0
+      },
+      {
+        "entry": 5,
+        "cut_m3_ha": 133.0,
+        "fvs_cut": 133.0,
+        "clump_cut": 0.0,
+        "kept": 363,
+        "harvest": 0
+      },
+      {
+        "entry": 6,
+        "cut_m3_ha": 101.0,
+        "fvs_cut": 101.0,
+        "clump_cut": 0.0,
+        "kept": 363,
+        "harvest": 0
+      },
+      {
+        "entry": 7,
+        "cut_m3_ha": 99.0,
+        "fvs_cut": 99.0,
+        "clump_cut": 0.0,
+        "kept": 363,
+        "harvest": 0
+      },
+      {
+        "entry": 8,
+        "cut_m3_ha": 94.0,
+        "fvs_cut": 94.0,
+        "clump_cut": 0.0,
+        "kept": 363,
+        "harvest": 0
+      },
+      {
+        "entry": 9,
         "cut_m3_ha": 69.0,
         "fvs_cut": 69.0,
         "clump_cut": 0.0,
@@ -1153,43 +1136,12 @@
         "harvest": 0
       },
       {
-        "entry": 5,
-        "cut_m3_ha": 66.0,
-        "fvs_cut": 66.0,
+        "entry": 10,
+        "cut_m3_ha": 16.0,
+        "fvs_cut": 16.0,
         "clump_cut": 0.0,
         "kept": 363,
         "harvest": 0
-      },
-      {
-        "entry": 6,
-        "cut_m3_ha": 54.0,
-        "fvs_cut": 54.0,
-        "clump_cut": 0.0,
-        "kept": 363,
-        "harvest": 0
-      },
-      {
-        "entry": 7,
-        "cut_m3_ha": 36.0,
-        "fvs_cut": 36.0,
-        "clump_cut": 0.0,
-        "kept": 363,
-        "harvest": 0
-      },
-      {
-        "entry": 8,
-        "cut_m3_ha": 0.0,
-        "fvs_cut": 0.0,
-        "clump_cut": 0.0,
-        "kept": 363,
-        "harvest": 0
-      },
-      {
-        "entry": 9,
-        "cut_m3_ha": 0.0,
-        "fvs_cut": 0.0,
-        "clump_cut": 0.0,
-        "kept": 363
       }
     ]
   },
@@ -1200,80 +1152,80 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 446.9796903915727,
-        "fvs_cut": 180.0,
-        "clump_cut": 266.9796903915727,
+        "cut_m3_ha": 344.48968688272197,
+        "fvs_cut": 117.0,
+        "clump_cut": 227.48968688272197,
         "kept": 542,
         "harvest": 221
       },
       {
         "entry": 2,
-        "cut_m3_ha": 24.0,
-        "fvs_cut": 24.0,
+        "cut_m3_ha": 9.0,
+        "fvs_cut": 9.0,
         "clump_cut": 0.0,
         "kept": 542,
         "harvest": 0
       },
       {
         "entry": 3,
-        "cut_m3_ha": 20.0,
-        "fvs_cut": 20.0,
+        "cut_m3_ha": 10.0,
+        "fvs_cut": 10.0,
         "clump_cut": 0.0,
         "kept": 542,
         "harvest": 0
       },
       {
         "entry": 4,
-        "cut_m3_ha": 21.0,
-        "fvs_cut": 21.0,
+        "cut_m3_ha": 10.0,
+        "fvs_cut": 10.0,
         "clump_cut": 0.0,
         "kept": 542,
         "harvest": 0
       },
       {
         "entry": 5,
-        "cut_m3_ha": 22.0,
-        "fvs_cut": 22.0,
+        "cut_m3_ha": 11.0,
+        "fvs_cut": 11.0,
         "clump_cut": 0.0,
         "kept": 542,
         "harvest": 0
       },
       {
         "entry": 6,
-        "cut_m3_ha": 23.0,
-        "fvs_cut": 23.0,
+        "cut_m3_ha": 11.0,
+        "fvs_cut": 11.0,
         "clump_cut": 0.0,
         "kept": 542,
         "harvest": 0
       },
       {
         "entry": 7,
-        "cut_m3_ha": 24.0,
-        "fvs_cut": 24.0,
+        "cut_m3_ha": 12.0,
+        "fvs_cut": 12.0,
         "clump_cut": 0.0,
         "kept": 542,
         "harvest": 0
       },
       {
         "entry": 8,
-        "cut_m3_ha": 24.0,
-        "fvs_cut": 24.0,
+        "cut_m3_ha": 12.0,
+        "fvs_cut": 12.0,
         "clump_cut": 0.0,
         "kept": 542,
         "harvest": 0
       },
       {
         "entry": 9,
-        "cut_m3_ha": 25.0,
-        "fvs_cut": 25.0,
+        "cut_m3_ha": 12.0,
+        "fvs_cut": 12.0,
         "clump_cut": 0.0,
         "kept": 542,
         "harvest": 0
       },
       {
         "entry": 10,
-        "cut_m3_ha": 26.0,
-        "fvs_cut": 26.0,
+        "cut_m3_ha": 13.0,
+        "fvs_cut": 13.0,
         "clump_cut": 0.0,
         "kept": 542,
         "harvest": 0
@@ -1374,80 +1326,80 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 1171.5875627322587,
-        "fvs_cut": 846.0,
-        "clump_cut": 325.5875627322587,
+        "cut_m3_ha": 1142.8357250008712,
+        "fvs_cut": 845.0,
+        "clump_cut": 297.8357250008713,
         "kept": 723,
         "harvest": 548
       },
       {
         "entry": 2,
-        "cut_m3_ha": 268.0,
-        "fvs_cut": 268.0,
+        "cut_m3_ha": 401.0,
+        "fvs_cut": 401.0,
         "clump_cut": 0.0,
         "kept": 723,
         "harvest": 0
       },
       {
         "entry": 3,
-        "cut_m3_ha": 280.0,
-        "fvs_cut": 280.0,
+        "cut_m3_ha": 382.0,
+        "fvs_cut": 382.0,
         "clump_cut": 0.0,
         "kept": 723,
         "harvest": 0
       },
       {
         "entry": 4,
-        "cut_m3_ha": 291.0,
-        "fvs_cut": 291.0,
+        "cut_m3_ha": 398.0,
+        "fvs_cut": 398.0,
         "clump_cut": 0.0,
         "kept": 723,
         "harvest": 0
       },
       {
         "entry": 5,
-        "cut_m3_ha": 303.0,
-        "fvs_cut": 303.0,
+        "cut_m3_ha": 415.0,
+        "fvs_cut": 415.0,
         "clump_cut": 0.0,
         "kept": 723,
         "harvest": 0
       },
       {
         "entry": 6,
-        "cut_m3_ha": 314.0,
-        "fvs_cut": 314.0,
+        "cut_m3_ha": 430.0,
+        "fvs_cut": 430.0,
         "clump_cut": 0.0,
         "kept": 723,
         "harvest": 0
       },
       {
         "entry": 7,
-        "cut_m3_ha": 310.0,
-        "fvs_cut": 310.0,
+        "cut_m3_ha": 403.0,
+        "fvs_cut": 403.0,
         "clump_cut": 0.0,
         "kept": 723,
         "harvest": 0
       },
       {
         "entry": 8,
-        "cut_m3_ha": 320.0,
-        "fvs_cut": 320.0,
+        "cut_m3_ha": 417.0,
+        "fvs_cut": 417.0,
         "clump_cut": 0.0,
         "kept": 723,
         "harvest": 0
       },
       {
         "entry": 9,
-        "cut_m3_ha": 330.0,
-        "fvs_cut": 330.0,
+        "cut_m3_ha": 430.0,
+        "fvs_cut": 430.0,
         "clump_cut": 0.0,
         "kept": 723,
         "harvest": 0
       },
       {
         "entry": 10,
-        "cut_m3_ha": 339.0,
-        "fvs_cut": 339.0,
+        "cut_m3_ha": 443.0,
+        "fvs_cut": 443.0,
         "clump_cut": 0.0,
         "kept": 723,
         "harvest": 0
@@ -1461,32 +1413,32 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 829.0113552478697,
-        "fvs_cut": 508.0,
-        "clump_cut": 321.0113552478697,
+        "cut_m3_ha": 873.4133283660979,
+        "fvs_cut": 531.0,
+        "clump_cut": 342.41332836609786,
         "kept": 723,
         "harvest": 429
       },
       {
         "entry": 2,
-        "cut_m3_ha": 117.0,
-        "fvs_cut": 117.0,
+        "cut_m3_ha": 120.0,
+        "fvs_cut": 120.0,
         "clump_cut": 0.0,
         "kept": 723,
         "harvest": 0
       },
       {
         "entry": 3,
-        "cut_m3_ha": 122.0,
-        "fvs_cut": 122.0,
+        "cut_m3_ha": 124.0,
+        "fvs_cut": 124.0,
         "clump_cut": 0.0,
         "kept": 723,
         "harvest": 0
       },
       {
         "entry": 4,
-        "cut_m3_ha": 127.0,
-        "fvs_cut": 127.0,
+        "cut_m3_ha": 128.0,
+        "fvs_cut": 128.0,
         "clump_cut": 0.0,
         "kept": 723,
         "harvest": 0
@@ -1501,22 +1453,30 @@
       },
       {
         "entry": 6,
-        "cut_m3_ha": 137.0,
-        "fvs_cut": 137.0,
+        "cut_m3_ha": 135.0,
+        "fvs_cut": 135.0,
         "clump_cut": 0.0,
         "kept": 723,
         "harvest": 0
       },
       {
         "entry": 7,
-        "cut_m3_ha": 141.0,
-        "fvs_cut": 141.0,
+        "cut_m3_ha": 139.0,
+        "fvs_cut": 139.0,
         "clump_cut": 0.0,
         "kept": 723,
         "harvest": 0
       },
       {
         "entry": 8,
+        "cut_m3_ha": 142.0,
+        "fvs_cut": 142.0,
+        "clump_cut": 0.0,
+        "kept": 723,
+        "harvest": 0
+      },
+      {
+        "entry": 9,
         "cut_m3_ha": 146.0,
         "fvs_cut": 146.0,
         "clump_cut": 0.0,
@@ -1524,17 +1484,9 @@
         "harvest": 0
       },
       {
-        "entry": 9,
-        "cut_m3_ha": 150.0,
-        "fvs_cut": 150.0,
-        "clump_cut": 0.0,
-        "kept": 723,
-        "harvest": 0
-      },
-      {
         "entry": 10,
-        "cut_m3_ha": 155.0,
-        "fvs_cut": 155.0,
+        "cut_m3_ha": 149.0,
+        "fvs_cut": 149.0,
         "clump_cut": 0.0,
         "kept": 723,
         "harvest": 0
@@ -1548,80 +1500,80 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 1315.4964256820606,
-        "fvs_cut": 602.0,
-        "clump_cut": 713.4964256820606,
+        "cut_m3_ha": 1375.6065303367577,
+        "fvs_cut": 634.0,
+        "clump_cut": 741.6065303367576,
         "kept": 949,
         "harvest": 399
       },
       {
         "entry": 2,
-        "cut_m3_ha": 392.0,
-        "fvs_cut": 392.0,
+        "cut_m3_ha": 406.0,
+        "fvs_cut": 406.0,
         "clump_cut": 0.0,
         "kept": 949,
         "harvest": 0
       },
       {
         "entry": 3,
-        "cut_m3_ha": 409.0,
-        "fvs_cut": 409.0,
+        "cut_m3_ha": 420.0,
+        "fvs_cut": 420.0,
         "clump_cut": 0.0,
         "kept": 949,
         "harvest": 0
       },
       {
         "entry": 4,
-        "cut_m3_ha": 427.0,
-        "fvs_cut": 427.0,
+        "cut_m3_ha": 434.0,
+        "fvs_cut": 434.0,
         "clump_cut": 0.0,
         "kept": 949,
         "harvest": 0
       },
       {
         "entry": 5,
-        "cut_m3_ha": 443.0,
-        "fvs_cut": 443.0,
+        "cut_m3_ha": 447.0,
+        "fvs_cut": 447.0,
         "clump_cut": 0.0,
         "kept": 949,
         "harvest": 0
       },
       {
         "entry": 6,
-        "cut_m3_ha": 459.0,
-        "fvs_cut": 459.0,
+        "cut_m3_ha": 460.0,
+        "fvs_cut": 460.0,
         "clump_cut": 0.0,
         "kept": 949,
         "harvest": 0
       },
       {
         "entry": 7,
-        "cut_m3_ha": 475.0,
-        "fvs_cut": 475.0,
+        "cut_m3_ha": 472.0,
+        "fvs_cut": 472.0,
         "clump_cut": 0.0,
         "kept": 949,
         "harvest": 0
       },
       {
         "entry": 8,
-        "cut_m3_ha": 491.0,
-        "fvs_cut": 491.0,
+        "cut_m3_ha": 485.0,
+        "fvs_cut": 485.0,
         "clump_cut": 0.0,
         "kept": 949,
         "harvest": 0
       },
       {
         "entry": 9,
-        "cut_m3_ha": 507.0,
-        "fvs_cut": 507.0,
+        "cut_m3_ha": 497.0,
+        "fvs_cut": 497.0,
         "clump_cut": 0.0,
         "kept": 949,
         "harvest": 0
       },
       {
         "entry": 10,
-        "cut_m3_ha": 521.0,
-        "fvs_cut": 521.0,
+        "cut_m3_ha": 509.0,
+        "fvs_cut": 509.0,
         "clump_cut": 0.0,
         "kept": 949,
         "harvest": 0
@@ -1635,40 +1587,40 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 922.9917108376424,
-        "fvs_cut": 559.0,
-        "clump_cut": 363.99171083764236,
+        "cut_m3_ha": 966.7010184404888,
+        "fvs_cut": 582.0,
+        "clump_cut": 384.70101844048884,
         "kept": 921,
         "harvest": 398
       },
       {
         "entry": 2,
-        "cut_m3_ha": 329.0,
-        "fvs_cut": 329.0,
+        "cut_m3_ha": 337.0,
+        "fvs_cut": 337.0,
         "clump_cut": 0.0,
         "kept": 921,
         "harvest": 0
       },
       {
         "entry": 3,
-        "cut_m3_ha": 344.0,
-        "fvs_cut": 344.0,
+        "cut_m3_ha": 350.0,
+        "fvs_cut": 350.0,
         "clump_cut": 0.0,
         "kept": 921,
         "harvest": 0
       },
       {
         "entry": 4,
-        "cut_m3_ha": 358.0,
-        "fvs_cut": 358.0,
+        "cut_m3_ha": 362.0,
+        "fvs_cut": 362.0,
         "clump_cut": 0.0,
         "kept": 921,
         "harvest": 0
       },
       {
         "entry": 5,
-        "cut_m3_ha": 372.0,
-        "fvs_cut": 372.0,
+        "cut_m3_ha": 375.0,
+        "fvs_cut": 375.0,
         "clump_cut": 0.0,
         "kept": 921,
         "harvest": 0
@@ -1683,32 +1635,32 @@
       },
       {
         "entry": 7,
-        "cut_m3_ha": 399.0,
-        "fvs_cut": 399.0,
+        "cut_m3_ha": 398.0,
+        "fvs_cut": 398.0,
         "clump_cut": 0.0,
         "kept": 921,
         "harvest": 0
       },
       {
         "entry": 8,
-        "cut_m3_ha": 412.0,
-        "fvs_cut": 412.0,
+        "cut_m3_ha": 409.0,
+        "fvs_cut": 409.0,
         "clump_cut": 0.0,
         "kept": 921,
         "harvest": 0
       },
       {
         "entry": 9,
-        "cut_m3_ha": 425.0,
-        "fvs_cut": 425.0,
+        "cut_m3_ha": 421.0,
+        "fvs_cut": 421.0,
         "clump_cut": 0.0,
         "kept": 921,
         "harvest": 0
       },
       {
         "entry": 10,
-        "cut_m3_ha": 437.0,
-        "fvs_cut": 437.0,
+        "cut_m3_ha": 431.0,
+        "fvs_cut": 431.0,
         "clump_cut": 0.0,
         "kept": 921,
         "harvest": 0
@@ -1722,80 +1674,80 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 1061.0989836191004,
-        "fvs_cut": 786.0,
-        "clump_cut": 275.09898361910035,
+        "cut_m3_ha": 1094.8758692159968,
+        "fvs_cut": 815.0,
+        "clump_cut": 279.87586921599666,
         "kept": 1003,
         "harvest": 322
       },
       {
         "entry": 2,
-        "cut_m3_ha": 571.0,
-        "fvs_cut": 571.0,
+        "cut_m3_ha": 589.0,
+        "fvs_cut": 589.0,
         "clump_cut": 0.0,
         "kept": 1003,
         "harvest": 0
       },
       {
         "entry": 3,
-        "cut_m3_ha": 597.0,
-        "fvs_cut": 597.0,
+        "cut_m3_ha": 610.0,
+        "fvs_cut": 610.0,
         "clump_cut": 0.0,
         "kept": 1003,
         "harvest": 0
       },
       {
         "entry": 4,
-        "cut_m3_ha": 622.0,
-        "fvs_cut": 622.0,
+        "cut_m3_ha": 631.0,
+        "fvs_cut": 631.0,
         "clump_cut": 0.0,
         "kept": 1003,
         "harvest": 0
       },
       {
         "entry": 5,
-        "cut_m3_ha": 646.0,
-        "fvs_cut": 646.0,
+        "cut_m3_ha": 651.0,
+        "fvs_cut": 651.0,
         "clump_cut": 0.0,
         "kept": 1003,
         "harvest": 0
       },
       {
         "entry": 6,
-        "cut_m3_ha": 669.0,
-        "fvs_cut": 669.0,
+        "cut_m3_ha": 671.0,
+        "fvs_cut": 671.0,
         "clump_cut": 0.0,
         "kept": 1003,
         "harvest": 0
       },
       {
         "entry": 7,
-        "cut_m3_ha": 692.0,
-        "fvs_cut": 692.0,
+        "cut_m3_ha": 690.0,
+        "fvs_cut": 690.0,
         "clump_cut": 0.0,
         "kept": 1003,
         "harvest": 0
       },
       {
         "entry": 8,
-        "cut_m3_ha": 715.0,
-        "fvs_cut": 715.0,
+        "cut_m3_ha": 709.0,
+        "fvs_cut": 709.0,
         "clump_cut": 0.0,
         "kept": 1003,
         "harvest": 0
       },
       {
         "entry": 9,
-        "cut_m3_ha": 737.0,
-        "fvs_cut": 737.0,
+        "cut_m3_ha": 728.0,
+        "fvs_cut": 728.0,
         "clump_cut": 0.0,
         "kept": 1003,
         "harvest": 0
       },
       {
         "entry": 10,
-        "cut_m3_ha": 758.0,
-        "fvs_cut": 758.0,
+        "cut_m3_ha": 746.0,
+        "fvs_cut": 746.0,
         "clump_cut": 0.0,
         "kept": 1003,
         "harvest": 0
@@ -2025,80 +1977,80 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 793.5732876053667,
-        "fvs_cut": 776.0,
-        "clump_cut": 17.573287605366666,
+        "cut_m3_ha": 685.0292818452165,
+        "fvs_cut": 667.0,
+        "clump_cut": 18.02928184521646,
         "kept": 663,
         "harvest": 36
       },
       {
         "entry": 2,
-        "cut_m3_ha": 704.0,
-        "fvs_cut": 704.0,
+        "cut_m3_ha": 682.0,
+        "fvs_cut": 682.0,
         "clump_cut": 0.0,
         "kept": 663,
         "harvest": 0
       },
       {
         "entry": 3,
-        "cut_m3_ha": 685.0,
-        "fvs_cut": 685.0,
+        "cut_m3_ha": 689.0,
+        "fvs_cut": 689.0,
         "clump_cut": 0.0,
         "kept": 663,
         "harvest": 0
       },
       {
         "entry": 4,
-        "cut_m3_ha": 660.0,
-        "fvs_cut": 660.0,
+        "cut_m3_ha": 646.0,
+        "fvs_cut": 646.0,
         "clump_cut": 0.0,
         "kept": 663,
         "harvest": 0
       },
       {
         "entry": 5,
-        "cut_m3_ha": 642.0,
-        "fvs_cut": 642.0,
+        "cut_m3_ha": 610.0,
+        "fvs_cut": 610.0,
         "clump_cut": 0.0,
         "kept": 663,
         "harvest": 0
       },
       {
         "entry": 6,
-        "cut_m3_ha": 605.0,
-        "fvs_cut": 605.0,
+        "cut_m3_ha": 593.0,
+        "fvs_cut": 593.0,
         "clump_cut": 0.0,
         "kept": 663,
         "harvest": 0
       },
       {
         "entry": 7,
-        "cut_m3_ha": 600.0,
-        "fvs_cut": 600.0,
+        "cut_m3_ha": 574.0,
+        "fvs_cut": 574.0,
         "clump_cut": 0.0,
         "kept": 663,
         "harvest": 0
       },
       {
         "entry": 8,
-        "cut_m3_ha": 595.0,
-        "fvs_cut": 595.0,
+        "cut_m3_ha": 545.0,
+        "fvs_cut": 545.0,
         "clump_cut": 0.0,
         "kept": 663,
         "harvest": 0
       },
       {
         "entry": 9,
-        "cut_m3_ha": 579.0,
-        "fvs_cut": 579.0,
+        "cut_m3_ha": 526.0,
+        "fvs_cut": 526.0,
         "clump_cut": 0.0,
         "kept": 663,
         "harvest": 0
       },
       {
         "entry": 10,
-        "cut_m3_ha": 579.0,
-        "fvs_cut": 579.0,
+        "cut_m3_ha": 527.0,
+        "fvs_cut": 527.0,
         "clump_cut": 0.0,
         "kept": 663,
         "harvest": 0
@@ -2126,80 +2078,80 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 332.41790129384907,
-        "fvs_cut": 299.0,
-        "clump_cut": 33.41790129384906,
+        "cut_m3_ha": 384.5879242005106,
+        "fvs_cut": 350.0,
+        "clump_cut": 34.58792420051058,
         "kept": 393,
         "harvest": 69
       },
       {
         "entry": 2,
-        "cut_m3_ha": 170.0,
-        "fvs_cut": 170.0,
+        "cut_m3_ha": 245.0,
+        "fvs_cut": 245.0,
         "clump_cut": 0.0,
         "kept": 393,
         "harvest": 0
       },
       {
         "entry": 3,
-        "cut_m3_ha": 105.0,
-        "fvs_cut": 105.0,
+        "cut_m3_ha": 142.0,
+        "fvs_cut": 142.0,
         "clump_cut": 0.0,
         "kept": 393,
         "harvest": 0
       },
       {
         "entry": 4,
-        "cut_m3_ha": 112.0,
-        "fvs_cut": 112.0,
+        "cut_m3_ha": 115.0,
+        "fvs_cut": 115.0,
         "clump_cut": 0.0,
         "kept": 393,
         "harvest": 0
       },
       {
         "entry": 5,
-        "cut_m3_ha": 77.0,
-        "fvs_cut": 77.0,
+        "cut_m3_ha": 123.0,
+        "fvs_cut": 123.0,
         "clump_cut": 0.0,
         "kept": 393,
         "harvest": 0
       },
       {
         "entry": 6,
-        "cut_m3_ha": 67.0,
-        "fvs_cut": 67.0,
+        "cut_m3_ha": 130.0,
+        "fvs_cut": 130.0,
         "clump_cut": 0.0,
         "kept": 393,
         "harvest": 0
       },
       {
         "entry": 7,
-        "cut_m3_ha": 73.0,
-        "fvs_cut": 73.0,
+        "cut_m3_ha": 138.0,
+        "fvs_cut": 138.0,
         "clump_cut": 0.0,
         "kept": 393,
         "harvest": 0
       },
       {
         "entry": 8,
-        "cut_m3_ha": 76.0,
-        "fvs_cut": 76.0,
+        "cut_m3_ha": 145.0,
+        "fvs_cut": 145.0,
         "clump_cut": 0.0,
         "kept": 393,
         "harvest": 0
       },
       {
         "entry": 9,
-        "cut_m3_ha": 68.0,
-        "fvs_cut": 68.0,
+        "cut_m3_ha": 152.0,
+        "fvs_cut": 152.0,
         "clump_cut": 0.0,
         "kept": 393,
         "harvest": 0
       },
       {
         "entry": 10,
-        "cut_m3_ha": 60.0,
-        "fvs_cut": 60.0,
+        "cut_m3_ha": 130.0,
+        "fvs_cut": 130.0,
         "clump_cut": 0.0,
         "kept": 393,
         "harvest": 0
@@ -2252,15 +2204,8 @@
     "block_id": 49,
     "area_ha": 5.9365968592387155,
     "regime": "GWM_MODERATE",
-    "cuts": [
-      {
-        "entry": 1,
-        "cut_m3_ha": 0.0,
-        "fvs_cut": 0.0,
-        "clump_cut": 0.0,
-        "kept": 1781
-      }
-    ]
+    "cuts": [],
+    "status": "failed:RuntimeError"
   },
   {
     "block_id": 50,
@@ -2283,30 +2228,46 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 252.11553046644838,
-        "fvs_cut": 238.0,
-        "clump_cut": 14.115530466448368,
+        "cut_m3_ha": 217.22709608759823,
+        "fvs_cut": 203.0,
+        "clump_cut": 14.227096087598236,
         "kept": 303,
         "harvest": 52
       },
       {
         "entry": 2,
-        "cut_m3_ha": 96.0,
-        "fvs_cut": 96.0,
+        "cut_m3_ha": 122.0,
+        "fvs_cut": 122.0,
         "clump_cut": 0.0,
         "kept": 303,
         "harvest": 0
       },
       {
         "entry": 3,
-        "cut_m3_ha": 9.0,
-        "fvs_cut": 9.0,
+        "cut_m3_ha": 92.0,
+        "fvs_cut": 92.0,
         "clump_cut": 0.0,
         "kept": 303,
         "harvest": 0
       },
       {
         "entry": 4,
+        "cut_m3_ha": 48.0,
+        "fvs_cut": 48.0,
+        "clump_cut": 0.0,
+        "kept": 303,
+        "harvest": 0
+      },
+      {
+        "entry": 5,
+        "cut_m3_ha": 22.0,
+        "fvs_cut": 22.0,
+        "clump_cut": 0.0,
+        "kept": 303,
+        "harvest": 0
+      },
+      {
+        "entry": 6,
         "cut_m3_ha": 0.0,
         "fvs_cut": 0.0,
         "clump_cut": 0.0,
@@ -2391,24 +2352,24 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 713.6233660396584,
-        "fvs_cut": 685.0,
-        "clump_cut": 28.62336603965846,
+        "cut_m3_ha": 679.6261158761966,
+        "fvs_cut": 649.0,
+        "clump_cut": 30.62611587619661,
         "kept": 633,
         "harvest": 95
       },
       {
         "entry": 2,
-        "cut_m3_ha": 582.0,
-        "fvs_cut": 582.0,
+        "cut_m3_ha": 571.0,
+        "fvs_cut": 571.0,
         "clump_cut": 0.0,
         "kept": 633,
         "harvest": 0
       },
       {
         "entry": 3,
-        "cut_m3_ha": 508.0,
-        "fvs_cut": 508.0,
+        "cut_m3_ha": 492.0,
+        "fvs_cut": 492.0,
         "clump_cut": 0.0,
         "kept": 633,
         "harvest": 0
@@ -2423,48 +2384,48 @@
       },
       {
         "entry": 5,
-        "cut_m3_ha": 481.0,
-        "fvs_cut": 481.0,
+        "cut_m3_ha": 473.0,
+        "fvs_cut": 473.0,
         "clump_cut": 0.0,
         "kept": 633,
         "harvest": 0
       },
       {
         "entry": 6,
-        "cut_m3_ha": 476.0,
-        "fvs_cut": 476.0,
+        "cut_m3_ha": 435.0,
+        "fvs_cut": 435.0,
         "clump_cut": 0.0,
         "kept": 633,
         "harvest": 0
       },
       {
         "entry": 7,
-        "cut_m3_ha": 440.0,
-        "fvs_cut": 440.0,
+        "cut_m3_ha": 417.0,
+        "fvs_cut": 417.0,
         "clump_cut": 0.0,
         "kept": 633,
         "harvest": 0
       },
       {
         "entry": 8,
-        "cut_m3_ha": 430.0,
-        "fvs_cut": 430.0,
+        "cut_m3_ha": 428.0,
+        "fvs_cut": 428.0,
         "clump_cut": 0.0,
         "kept": 633,
         "harvest": 0
       },
       {
         "entry": 9,
-        "cut_m3_ha": 421.0,
-        "fvs_cut": 421.0,
+        "cut_m3_ha": 434.0,
+        "fvs_cut": 434.0,
         "clump_cut": 0.0,
         "kept": 633,
         "harvest": 0
       },
       {
         "entry": 10,
-        "cut_m3_ha": 428.0,
-        "fvs_cut": 428.0,
+        "cut_m3_ha": 442.0,
+        "fvs_cut": 442.0,
         "clump_cut": 0.0,
         "kept": 633,
         "harvest": 0
@@ -2478,34 +2439,10 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 262.82599809928604,
-        "fvs_cut": 102.0,
-        "clump_cut": 160.82599809928607,
-        "kept": 331,
-        "harvest": 120
-      },
-      {
-        "entry": 2,
-        "cut_m3_ha": 5.0,
-        "fvs_cut": 5.0,
-        "clump_cut": 0.0,
-        "kept": 331,
-        "harvest": 0
-      },
-      {
-        "entry": 3,
-        "cut_m3_ha": 3.0,
-        "fvs_cut": 3.0,
-        "clump_cut": 0.0,
-        "kept": 331,
-        "harvest": 0
-      },
-      {
-        "entry": 4,
         "cut_m3_ha": 0.0,
         "fvs_cut": 0.0,
         "clump_cut": 0.0,
-        "kept": 331
+        "kept": 451
       }
     ]
   },
@@ -2966,15 +2903,8 @@
     "block_id": 74,
     "area_ha": 26.047320678352516,
     "regime": "GWM_MODERATE",
-    "cuts": [
-      {
-        "entry": 1,
-        "cut_m3_ha": 0.0,
-        "fvs_cut": 0.0,
-        "clump_cut": 0.0,
-        "kept": 827
-      }
-    ]
+    "cuts": [],
+    "status": "failed:RuntimeError"
   },
   {
     "block_id": 76,
@@ -3142,80 +3072,80 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 871.1158100834152,
-        "fvs_cut": 44.0,
-        "clump_cut": 827.1158100834152,
+        "cut_m3_ha": 701.1773967613154,
+        "fvs_cut": 33.0,
+        "clump_cut": 668.1773967613154,
         "kept": 523,
         "harvest": 363
       },
       {
         "entry": 2,
-        "cut_m3_ha": 8.0,
-        "fvs_cut": 8.0,
+        "cut_m3_ha": 47.0,
+        "fvs_cut": 47.0,
         "clump_cut": 0.0,
         "kept": 523,
         "harvest": 0
       },
       {
         "entry": 3,
-        "cut_m3_ha": 9.0,
-        "fvs_cut": 9.0,
+        "cut_m3_ha": 49.0,
+        "fvs_cut": 49.0,
         "clump_cut": 0.0,
         "kept": 523,
         "harvest": 0
       },
       {
         "entry": 4,
-        "cut_m3_ha": 9.0,
-        "fvs_cut": 9.0,
+        "cut_m3_ha": 51.0,
+        "fvs_cut": 51.0,
         "clump_cut": 0.0,
         "kept": 523,
         "harvest": 0
       },
       {
         "entry": 5,
-        "cut_m3_ha": 10.0,
-        "fvs_cut": 10.0,
+        "cut_m3_ha": 53.0,
+        "fvs_cut": 53.0,
         "clump_cut": 0.0,
         "kept": 523,
         "harvest": 0
       },
       {
         "entry": 6,
-        "cut_m3_ha": 10.0,
-        "fvs_cut": 10.0,
+        "cut_m3_ha": 55.0,
+        "fvs_cut": 55.0,
         "clump_cut": 0.0,
         "kept": 523,
         "harvest": 0
       },
       {
         "entry": 7,
-        "cut_m3_ha": 10.0,
-        "fvs_cut": 10.0,
+        "cut_m3_ha": 57.0,
+        "fvs_cut": 57.0,
         "clump_cut": 0.0,
         "kept": 523,
         "harvest": 0
       },
       {
         "entry": 8,
-        "cut_m3_ha": 11.0,
-        "fvs_cut": 11.0,
+        "cut_m3_ha": 59.0,
+        "fvs_cut": 59.0,
         "clump_cut": 0.0,
         "kept": 523,
         "harvest": 0
       },
       {
         "entry": 9,
-        "cut_m3_ha": 11.0,
-        "fvs_cut": 11.0,
+        "cut_m3_ha": 61.0,
+        "fvs_cut": 61.0,
         "clump_cut": 0.0,
         "kept": 523,
         "harvest": 0
       },
       {
         "entry": 10,
-        "cut_m3_ha": 12.0,
-        "fvs_cut": 12.0,
+        "cut_m3_ha": 63.0,
+        "fvs_cut": 63.0,
         "clump_cut": 0.0,
         "kept": 523,
         "harvest": 0
@@ -3352,83 +3282,10 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 621.699089093258,
-        "fvs_cut": 287.0,
-        "clump_cut": 334.69908909325795,
-        "kept": 619,
-        "harvest": 293
-      },
-      {
-        "entry": 2,
-        "cut_m3_ha": 110.0,
-        "fvs_cut": 110.0,
+        "cut_m3_ha": 0.0,
+        "fvs_cut": 0.0,
         "clump_cut": 0.0,
-        "kept": 619,
-        "harvest": 0
-      },
-      {
-        "entry": 3,
-        "cut_m3_ha": 115.0,
-        "fvs_cut": 115.0,
-        "clump_cut": 0.0,
-        "kept": 619,
-        "harvest": 0
-      },
-      {
-        "entry": 4,
-        "cut_m3_ha": 119.0,
-        "fvs_cut": 119.0,
-        "clump_cut": 0.0,
-        "kept": 619,
-        "harvest": 0
-      },
-      {
-        "entry": 5,
-        "cut_m3_ha": 124.0,
-        "fvs_cut": 124.0,
-        "clump_cut": 0.0,
-        "kept": 619,
-        "harvest": 0
-      },
-      {
-        "entry": 6,
-        "cut_m3_ha": 128.0,
-        "fvs_cut": 128.0,
-        "clump_cut": 0.0,
-        "kept": 619,
-        "harvest": 0
-      },
-      {
-        "entry": 7,
-        "cut_m3_ha": 133.0,
-        "fvs_cut": 133.0,
-        "clump_cut": 0.0,
-        "kept": 619,
-        "harvest": 0
-      },
-      {
-        "entry": 8,
-        "cut_m3_ha": 137.0,
-        "fvs_cut": 137.0,
-        "clump_cut": 0.0,
-        "kept": 619,
-        "harvest": 0
-      },
-      {
-        "entry": 9,
-        "cut_m3_ha": 141.0,
-        "fvs_cut": 141.0,
-        "clump_cut": 0.0,
-        "kept": 619,
-        "harvest": 0
-      },
-      {
-        "entry": 10,
-        "cut_m3_ha": 145.0,
-        "fvs_cut": 145.0,
-        "clump_cut": 0.0,
-        "kept": 619,
-        "harvest": 0
+        "kept": 912
       }
     ]
   },
@@ -3481,9 +3338,9 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 383.6358789116585,
+        "cut_m3_ha": 383.6989993858493,
         "fvs_cut": 370.0,
-        "clump_cut": 13.63587891165849,
+        "clump_cut": 13.698999385849266,
         "kept": 363,
         "harvest": 59
       },
@@ -3551,16 +3408,16 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 221.51246319769905,
-        "fvs_cut": 203.0,
-        "clump_cut": 18.512463197699038,
+        "cut_m3_ha": 217.73917619447082,
+        "fvs_cut": 200.0,
+        "clump_cut": 17.739176194470808,
         "kept": 303,
         "harvest": 55
       },
       {
         "entry": 2,
-        "cut_m3_ha": 50.0,
-        "fvs_cut": 50.0,
+        "cut_m3_ha": 49.0,
+        "fvs_cut": 49.0,
         "clump_cut": 0.0,
         "kept": 303,
         "harvest": 0
@@ -3839,54 +3696,46 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 769.6567345442223,
-        "fvs_cut": 680.0,
-        "clump_cut": 89.65673454422229,
+        "cut_m3_ha": 779.1459807489,
+        "fvs_cut": 689.0,
+        "clump_cut": 90.1459807489,
         "kept": 578,
         "harvest": 196
       },
       {
         "entry": 2,
-        "cut_m3_ha": 445.0,
-        "fvs_cut": 445.0,
+        "cut_m3_ha": 457.0,
+        "fvs_cut": 457.0,
         "clump_cut": 0.0,
         "kept": 578,
         "harvest": 0
       },
       {
         "entry": 3,
-        "cut_m3_ha": 449.0,
-        "fvs_cut": 449.0,
+        "cut_m3_ha": 453.0,
+        "fvs_cut": 453.0,
         "clump_cut": 0.0,
         "kept": 578,
         "harvest": 0
       },
       {
         "entry": 4,
-        "cut_m3_ha": 442.0,
-        "fvs_cut": 442.0,
+        "cut_m3_ha": 443.0,
+        "fvs_cut": 443.0,
         "clump_cut": 0.0,
         "kept": 578,
         "harvest": 0
       },
       {
         "entry": 5,
-        "cut_m3_ha": 406.0,
-        "fvs_cut": 406.0,
+        "cut_m3_ha": 405.0,
+        "fvs_cut": 405.0,
         "clump_cut": 0.0,
         "kept": 578,
         "harvest": 0
       },
       {
         "entry": 6,
-        "cut_m3_ha": 396.0,
-        "fvs_cut": 396.0,
-        "clump_cut": 0.0,
-        "kept": 578,
-        "harvest": 0
-      },
-      {
-        "entry": 7,
         "cut_m3_ha": 398.0,
         "fvs_cut": 398.0,
         "clump_cut": 0.0,
@@ -3894,25 +3743,33 @@
         "harvest": 0
       },
       {
+        "entry": 7,
+        "cut_m3_ha": 390.0,
+        "fvs_cut": 390.0,
+        "clump_cut": 0.0,
+        "kept": 578,
+        "harvest": 0
+      },
+      {
         "entry": 8,
-        "cut_m3_ha": 370.0,
-        "fvs_cut": 370.0,
+        "cut_m3_ha": 387.0,
+        "fvs_cut": 387.0,
         "clump_cut": 0.0,
         "kept": 578,
         "harvest": 0
       },
       {
         "entry": 9,
-        "cut_m3_ha": 360.0,
-        "fvs_cut": 360.0,
+        "cut_m3_ha": 387.0,
+        "fvs_cut": 387.0,
         "clump_cut": 0.0,
         "kept": 578,
         "harvest": 0
       },
       {
         "entry": 10,
-        "cut_m3_ha": 354.0,
-        "fvs_cut": 354.0,
+        "cut_m3_ha": 383.0,
+        "fvs_cut": 383.0,
         "clump_cut": 0.0,
         "kept": 578,
         "harvest": 0
@@ -3975,32 +3832,32 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 246.00090041961147,
-        "fvs_cut": 231.0,
-        "clump_cut": 15.000900419611476,
+        "cut_m3_ha": 172.76743376636844,
+        "fvs_cut": 159.0,
+        "clump_cut": 13.767433766368443,
         "kept": 333,
         "harvest": 54
       },
       {
         "entry": 2,
-        "cut_m3_ha": 101.0,
-        "fvs_cut": 101.0,
+        "cut_m3_ha": 108.0,
+        "fvs_cut": 108.0,
         "clump_cut": 0.0,
         "kept": 333,
         "harvest": 0
       },
       {
         "entry": 3,
-        "cut_m3_ha": 60.0,
-        "fvs_cut": 60.0,
+        "cut_m3_ha": 64.0,
+        "fvs_cut": 64.0,
         "clump_cut": 0.0,
         "kept": 333,
         "harvest": 0
       },
       {
         "entry": 4,
-        "cut_m3_ha": 24.0,
-        "fvs_cut": 24.0,
+        "cut_m3_ha": 13.0,
+        "fvs_cut": 13.0,
         "clump_cut": 0.0,
         "kept": 333,
         "harvest": 0
@@ -4178,10 +4035,18 @@
     "cuts": [
       {
         "entry": 1,
+        "cut_m3_ha": 22.978261534426853,
+        "fvs_cut": 1.0,
+        "clump_cut": 21.978261534426853,
+        "kept": 93,
+        "harvest": 70
+      },
+      {
+        "entry": 2,
         "cut_m3_ha": 0.0,
         "fvs_cut": 0.0,
         "clump_cut": 0.0,
-        "kept": 163
+        "kept": 93
       }
     ]
   },
@@ -4214,18 +4079,10 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 540.4653902596663,
-        "fvs_cut": 1.0,
-        "clump_cut": 539.4653902596663,
-        "kept": 502,
-        "harvest": 310
-      },
-      {
-        "entry": 2,
         "cut_m3_ha": 0.0,
         "fvs_cut": 0.0,
         "clump_cut": 0.0,
-        "kept": 502
+        "kept": 812
       }
     ]
   },
@@ -4323,80 +4180,80 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 281.40767645781887,
-        "fvs_cut": 185.0,
-        "clump_cut": 96.40767645781885,
+        "cut_m3_ha": 219.9091946686444,
+        "fvs_cut": 114.0,
+        "clump_cut": 105.9091946686444,
         "kept": 531,
         "harvest": 94
       },
       {
         "entry": 2,
-        "cut_m3_ha": 71.0,
-        "fvs_cut": 71.0,
+        "cut_m3_ha": 68.0,
+        "fvs_cut": 68.0,
         "clump_cut": 0.0,
         "kept": 531,
         "harvest": 0
       },
       {
         "entry": 3,
-        "cut_m3_ha": 76.0,
-        "fvs_cut": 76.0,
+        "cut_m3_ha": 72.0,
+        "fvs_cut": 72.0,
         "clump_cut": 0.0,
         "kept": 531,
         "harvest": 0
       },
       {
         "entry": 4,
-        "cut_m3_ha": 81.0,
-        "fvs_cut": 81.0,
+        "cut_m3_ha": 77.0,
+        "fvs_cut": 77.0,
         "clump_cut": 0.0,
         "kept": 531,
         "harvest": 0
       },
       {
         "entry": 5,
-        "cut_m3_ha": 85.0,
-        "fvs_cut": 85.0,
+        "cut_m3_ha": 80.0,
+        "fvs_cut": 80.0,
         "clump_cut": 0.0,
         "kept": 531,
         "harvest": 0
       },
       {
         "entry": 6,
-        "cut_m3_ha": 90.0,
-        "fvs_cut": 90.0,
+        "cut_m3_ha": 84.0,
+        "fvs_cut": 84.0,
         "clump_cut": 0.0,
         "kept": 531,
         "harvest": 0
       },
       {
         "entry": 7,
-        "cut_m3_ha": 94.0,
-        "fvs_cut": 94.0,
+        "cut_m3_ha": 88.0,
+        "fvs_cut": 88.0,
         "clump_cut": 0.0,
         "kept": 531,
         "harvest": 0
       },
       {
         "entry": 8,
-        "cut_m3_ha": 99.0,
-        "fvs_cut": 99.0,
+        "cut_m3_ha": 91.0,
+        "fvs_cut": 91.0,
         "clump_cut": 0.0,
         "kept": 531,
         "harvest": 0
       },
       {
         "entry": 9,
-        "cut_m3_ha": 103.0,
-        "fvs_cut": 103.0,
+        "cut_m3_ha": 95.0,
+        "fvs_cut": 95.0,
         "clump_cut": 0.0,
         "kept": 531,
         "harvest": 0
       },
       {
         "entry": 10,
-        "cut_m3_ha": 108.0,
-        "fvs_cut": 108.0,
+        "cut_m3_ha": 98.0,
+        "fvs_cut": 98.0,
         "clump_cut": 0.0,
         "kept": 531,
         "harvest": 0
@@ -4497,80 +4354,80 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 1017.1591409946658,
-        "fvs_cut": 789.0,
-        "clump_cut": 228.15914099466576,
+        "cut_m3_ha": 958.098803894421,
+        "fvs_cut": 745.0,
+        "clump_cut": 213.09880389442105,
         "kept": 691,
         "harvest": 317
       },
       {
         "entry": 2,
-        "cut_m3_ha": 431.0,
-        "fvs_cut": 431.0,
+        "cut_m3_ha": 462.0,
+        "fvs_cut": 462.0,
         "clump_cut": 0.0,
         "kept": 691,
         "harvest": 0
       },
       {
         "entry": 3,
-        "cut_m3_ha": 449.0,
-        "fvs_cut": 449.0,
+        "cut_m3_ha": 476.0,
+        "fvs_cut": 476.0,
         "clump_cut": 0.0,
         "kept": 691,
         "harvest": 0
       },
       {
         "entry": 4,
-        "cut_m3_ha": 466.0,
-        "fvs_cut": 466.0,
+        "cut_m3_ha": 489.0,
+        "fvs_cut": 489.0,
         "clump_cut": 0.0,
         "kept": 691,
         "harvest": 0
       },
       {
         "entry": 5,
-        "cut_m3_ha": 463.0,
-        "fvs_cut": 463.0,
+        "cut_m3_ha": 496.0,
+        "fvs_cut": 496.0,
         "clump_cut": 0.0,
         "kept": 691,
         "harvest": 0
       },
       {
         "entry": 6,
-        "cut_m3_ha": 478.0,
-        "fvs_cut": 478.0,
+        "cut_m3_ha": 503.0,
+        "fvs_cut": 503.0,
         "clump_cut": 0.0,
         "kept": 691,
         "harvest": 0
       },
       {
         "entry": 7,
-        "cut_m3_ha": 491.0,
-        "fvs_cut": 491.0,
+        "cut_m3_ha": 511.0,
+        "fvs_cut": 511.0,
         "clump_cut": 0.0,
         "kept": 691,
         "harvest": 0
       },
       {
         "entry": 8,
-        "cut_m3_ha": 504.0,
-        "fvs_cut": 504.0,
+        "cut_m3_ha": 521.0,
+        "fvs_cut": 521.0,
         "clump_cut": 0.0,
         "kept": 691,
         "harvest": 0
       },
       {
         "entry": 9,
-        "cut_m3_ha": 516.0,
-        "fvs_cut": 516.0,
+        "cut_m3_ha": 525.0,
+        "fvs_cut": 525.0,
         "clump_cut": 0.0,
         "kept": 691,
         "harvest": 0
       },
       {
         "entry": 10,
-        "cut_m3_ha": 514.0,
-        "fvs_cut": 514.0,
+        "cut_m3_ha": 523.0,
+        "fvs_cut": 523.0,
         "clump_cut": 0.0,
         "kept": 691,
         "harvest": 0
@@ -4584,48 +4441,48 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 653.6598529735933,
-        "fvs_cut": 615.0,
-        "clump_cut": 38.65985297359328,
+        "cut_m3_ha": 666.3016877489111,
+        "fvs_cut": 627.0,
+        "clump_cut": 39.301687748911164,
         "kept": 563,
         "harvest": 168
       },
       {
         "entry": 2,
-        "cut_m3_ha": 339.0,
-        "fvs_cut": 339.0,
+        "cut_m3_ha": 344.0,
+        "fvs_cut": 344.0,
         "clump_cut": 0.0,
         "kept": 563,
         "harvest": 0
       },
       {
         "entry": 3,
-        "cut_m3_ha": 358.0,
-        "fvs_cut": 358.0,
+        "cut_m3_ha": 362.0,
+        "fvs_cut": 362.0,
         "clump_cut": 0.0,
         "kept": 563,
         "harvest": 0
       },
       {
         "entry": 4,
-        "cut_m3_ha": 365.0,
-        "fvs_cut": 365.0,
+        "cut_m3_ha": 371.0,
+        "fvs_cut": 371.0,
         "clump_cut": 0.0,
         "kept": 563,
         "harvest": 0
       },
       {
         "entry": 5,
-        "cut_m3_ha": 340.0,
-        "fvs_cut": 340.0,
+        "cut_m3_ha": 341.0,
+        "fvs_cut": 341.0,
         "clump_cut": 0.0,
         "kept": 563,
         "harvest": 0
       },
       {
         "entry": 6,
-        "cut_m3_ha": 345.0,
-        "fvs_cut": 345.0,
+        "cut_m3_ha": 347.0,
+        "fvs_cut": 347.0,
         "clump_cut": 0.0,
         "kept": 563,
         "harvest": 0
@@ -4648,16 +4505,16 @@
       },
       {
         "entry": 9,
-        "cut_m3_ha": 367.0,
-        "fvs_cut": 367.0,
+        "cut_m3_ha": 368.0,
+        "fvs_cut": 368.0,
         "clump_cut": 0.0,
         "kept": 563,
         "harvest": 0
       },
       {
         "entry": 10,
-        "cut_m3_ha": 365.0,
-        "fvs_cut": 365.0,
+        "cut_m3_ha": 359.0,
+        "fvs_cut": 359.0,
         "clump_cut": 0.0,
         "kept": 563,
         "harvest": 0
@@ -5856,9 +5713,9 @@
     "cuts": [
       {
         "entry": 1,
-        "cut_m3_ha": 214.3121722089275,
-        "fvs_cut": 138.0,
-        "clump_cut": 76.31217220892749,
+        "cut_m3_ha": 215.90608318391682,
+        "fvs_cut": 139.0,
+        "clump_cut": 76.90608318391682,
         "kept": 273,
         "harvest": 166
       },

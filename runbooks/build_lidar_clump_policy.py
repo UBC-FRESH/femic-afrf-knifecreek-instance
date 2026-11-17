@@ -82,6 +82,15 @@ def _block_population(block: dict[str, Any], trees: pd.DataFrame) -> tuple[pd.Da
     rep = max(1, min(30, round(vri_tph / max(1, len(large)))))
     rows = []
     clump_idx = 0
+    rng = np.random.default_rng(int(block["block_id"]))
+    mix = block.get("species_mix", [("FD", 100.0)])
+    codes = [c for c, _ in mix]
+    weights = np.array([w for _, w in mix], dtype=float)
+    weights = weights / weights.sum()
+
+    def pick_species() -> str:
+        return str(rng.choice(codes, p=weights))
+
     groups = _clumps(np.column_stack([large.x, large.y]))
     for group in groups:
         for start in range(0, len(group), 10):
@@ -92,6 +101,7 @@ def _block_population(block: dict[str, Any], trees: pd.DataFrame) -> tuple[pd.Da
             stand = f"CLUMP{clump_idx:03d}"
             for i in chunk:
                 r = large.iloc[int(i)]
+                species = pick_species()
                 for _ in range(rep):
                     rows.append(
                         {
@@ -99,6 +109,7 @@ def _block_population(block: dict[str, Any], trees: pd.DataFrame) -> tuple[pd.Da
                             "dbh_cm": float(r.dbh_cm_est),
                             "height_m": float(r.height_m),
                             "crown_ratio": 0.5,
+                            "species": species,
                             "orig": f"{stand}:{i}",
                             "clump": stand,
                         }
@@ -114,6 +125,7 @@ def _block_population(block: dict[str, Any], trees: pd.DataFrame) -> tuple[pd.Da
                     "dbh_cm": float(r.dbh_cm_est),
                     "height_m": float(r.height_m),
                     "crown_ratio": 0.5,
+                    "species": pick_species(),
                     "orig": f"SMALL:{i}",
                     "clump": "SMALL",
                 }
@@ -134,7 +146,7 @@ def _run_block(block: dict[str, Any], trees: pd.DataFrame) -> dict[str, Any]:
     cur = frame.copy()
     cuts = []
     for entry in range(1, 11):
-        pop = cur[["stand_id", "dbh_cm", "height_m", "crown_ratio"]].to_dict("records")
+        pop = cur[["stand_id", "dbh_cm", "height_m", "crown_ratio", "species"]].to_dict("records")
         res = v3._run_case(
             pop,
             stand=f"LIDAR_B{block['block_id']}",
@@ -142,7 +154,7 @@ def _run_block(block: dict[str, Any], trees: pd.DataFrame) -> dict[str, Any]:
             regime=regime,
             runtime_dir=RUNTIME / f"B{block['block_id']}" / f"E{entry}",
             plot_id_offset=100,
-            species=str(block.get("species", "FD")),
+            species=None,
         )
         summary = read_table(res.database, "FVS_Summary_Metric")
         srow = summary[summary.Year == 30].iloc[0]
@@ -182,9 +194,7 @@ def _run_block(block: dict[str, Any], trees: pd.DataFrame) -> dict[str, Any]:
         # choose the three largest original trees per 4-10 clump; reserve all singletons/small
         reserve = set()
         for _clump, g in a.groupby("clump"):
-            unique = g.drop_duplicates("orig").sort_values(
-                ["height_m".replace("height_m", "Ht"), "DBH"], ascending=False
-            )
+            unique = g.drop_duplicates("orig").sort_values(["Ht", "DBH"], ascending=False)
             # columns are Ht/DBH after FVS
             if len(unique) >= 4:
                 reserve.update(unique.head(3)["orig"].tolist())
@@ -211,6 +221,7 @@ def _run_block(block: dict[str, Any], trees: pd.DataFrame) -> dict[str, Any]:
                 "dbh_cm": kept.DBH.to_numpy(),
                 "height_m": kept.Ht.to_numpy(),
                 "crown_ratio": np.clip(kept.PctCr.to_numpy() / 100.0, 0.0, 0.89),
+                "species": kept.SpeciesFVS.to_numpy(),
                 "orig": kept.orig.to_numpy(),
                 "clump": kept.clump.to_numpy(),
             }
@@ -245,23 +256,32 @@ def _load_blocks() -> tuple[list[dict[str, Any]], dict[int, pd.DataFrame]]:
         if str(r.hmz_group) == "U" or float(r.harvest_tph) <= 0:
             continue
         regime = "GWM_LOW" if str(r.hmz_group) == "L" else "GWM_MODERATE"
-        code = str(v.SPECIES_CD_1)[:2].upper()
-        species = {
-            "FD": "FD",
-            "PL": "PL",
+        code_map = {
+            "FDI": "FD",
+            "PLI": "PL",
             "AT": "AT",
             "CW": "CW",
             "HW": "HW",
             "BG": "BG",
             "SE": "SE",
-        }.get(code, "FD")
+            "LW": "LW",
+            "PY": "PY",
+        }
+        mix = []
+        for k in range(1, 7):
+            c = code_map.get(str(getattr(v, f"SPECIES_CD_{k}", "")))
+            pct = float(getattr(v, f"SPECIES_PCT_{k}", 0) or 0)
+            if c and pct > 0:
+                mix.append((c, pct))
+        if not mix:
+            mix = [("FD", 100.0)]
         blocks.append(
             {
                 "block_id": i + 1,
                 "area_ha": float(blocks_df.iloc[i].area_ha),
                 "vri_tph": float(v.VRI_LIVE_STEMS_PER_HA),
                 "vri_ba": float(v.BASAL_AREA),
-                "species": species,
+                "species_mix": mix,
                 "regime": regime,
             }
         )

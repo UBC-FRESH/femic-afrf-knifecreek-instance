@@ -189,7 +189,7 @@ def _run_case(
     regime: str,
     runtime_dir: Path,
     plot_id_offset: int = 0,
-    species: str = "FD",
+    species: str | None = "FD",
 ) -> object:
     """Run one 30-year GWM entry."""
     keywords = [
