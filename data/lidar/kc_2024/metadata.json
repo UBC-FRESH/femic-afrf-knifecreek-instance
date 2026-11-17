@@ -1,0 +1,12 @@
+{
+  "pairs": 72,
+  "resolution_m": 5.0,
+  "crs": "EPSG:6653",
+  "bbox": [
+    571907.0,
+    5760313.0,
+    587567.0,
+    5772883.0
+  ],
+  "note": "CHM = DSM - DEM; 5 m average; source LidarBC 2024"
+}

@@ -3,10 +3,9 @@
 `knife_scene.json` is the WS4 studio-3D scene pack for Knife Creek.
 
 - 183 VRI block polygons
-- SRTM 1 arc-second terrain
+- LidarBC 2024 5 m DEM/CHM terrain and canopy
 - VRI live-stems/ha density and LiDAR mean heights
 - approximately 3.0M nominal stems
-- no full-estate CHM; canopy is labelled synthetic
 - synthetic stem positions inside blocks, not a measured stem map
 
 Build command:
